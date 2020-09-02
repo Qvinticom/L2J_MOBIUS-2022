@@ -55,7 +55,7 @@
 	<skill id="13515" toLevel="1" name="Giant's Critical Damage">
 		<!-- For 5 min., P. Critical Damage +15%. -->
 		<icon>icon.skill0482</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<operateType>A2</operateType>
@@ -86,7 +86,7 @@
 	<skill id="13517" toLevel="1" name="Giant's Battle Roar">
 		<!-- Max HP/ CP +10% for 5 min. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<operateType>A2</operateType>
@@ -111,7 +111,7 @@
 	<skill id="13518" toLevel="1" name="Giant's Celestial Shield">
 		<!-- Invincible for 30 sec. Invincibility is removed when you attack. -->
 		<icon>icon.skill11758</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -147,7 +147,7 @@
 	<skill id="13519" toLevel="1" name="Giant's Undying Will">
 		<!-- Does not die for 10 sec. Can be used when HP is 20% or below. -->
 		<icon>icon.race_orc_immortality</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -190,7 +190,7 @@
 	<skill id="13520" toLevel="1" name="Giant's Silence">
 		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP Only. -->
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -220,7 +220,7 @@
 	<skill id="13521" toLevel="1" name="Giant's Sleep">
 		<!-- Sleeps target for 5 sec. PvP Only. -->
 		<icon>icon.skill1069</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -254,7 +254,7 @@
 	<skill id="13522" toLevel="1" name="Giant's Winter">
 		<!-- For 10 sec., decreases target's Atk. Spd./ Casting Spd. by 50%. -->
 		<icon>icon.skill1454</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -287,7 +287,7 @@
 	<skill id="13523" toLevel="1" name="Giant's Critical Weakness">
 		<!-- For 10 sec., increases target's Received Critical Damage and Critical Rate by 90%. -->
 		<icon>icon.skill1222</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<nextAction>ATTACK</nextAction>
@@ -447,7 +447,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<reuseDelay>7200000</reuseDelay>
@@ -914,7 +914,7 @@
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalResists>KNOCKDOWN</abnormalResists>
 		<hitTime>200</hitTime>

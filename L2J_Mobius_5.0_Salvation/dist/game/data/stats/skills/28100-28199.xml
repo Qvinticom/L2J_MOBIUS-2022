@@ -55,7 +55,7 @@
 		<effectRange>1100</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>150</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -106,7 +106,7 @@
 		<effectPoint>-707</effectPoint>
 		<abnormalTime>9</abnormalTime>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
@@ -246,7 +246,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -990,7 +990,7 @@
 			<value level="3">icon.sayhas_talisman_g_Lv3</value>
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
@@ -1036,7 +1036,7 @@
 			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">180</value>
 			<value level="2">180</value>
@@ -1096,7 +1096,7 @@
 			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>

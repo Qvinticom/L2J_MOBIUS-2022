@@ -966,7 +966,7 @@
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SEED_OF_CRITICAL" />
 		<set name="effectPoint" val="100" />
@@ -994,9 +994,9 @@
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">
 		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
-		<table name="#abnormalLvl">4 6 8</table>
+		<table name="#abnormalLevel">4 6 8</table>
 		<table name="#power">9132 12784 16436</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1016,7 +1016,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
-			<player checkAbnormal="SEED_OF_CRITICAL,#abnormalLvl" />
+			<player checkAbnormal="SEED_OF_CRITICAL,#abnormalLevel" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1030,7 +1030,7 @@
 	</skill>
 	<skill id="8241" levels="1" name="Critical Up">
 		<!-- Temporarily increases critical attack power rate. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="castRange" val="400" />
@@ -1091,7 +1091,7 @@
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
 		<!-- Transforms target into a Gatekeeper. Allows energy to be restored when Exp. Points are acquired. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1127,7 +1127,7 @@
 	</skill>
 	<skill id="8246" levels="1" name="Transform Pumpkin Ghost">
 		<!-- Transform into a Pumpkin Ghost. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1147,7 +1147,7 @@
 	</skill>
 	<skill id="8247" levels="1" name="Mount Darkmane Pacer">
 		<!-- Mounts a Light Purple Maned Horse. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1231,7 +1231,7 @@
 	</skill>
 	<skill id="8252" levels="1" name="Test - Transform Mount1">
 		<!-- Mounts a test mount. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1246,7 +1246,7 @@
 	</skill>
 	<skill id="8253" levels="1" name="Test - Transform Mount2">
 		<!-- Mounts a test mount. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1359,7 +1359,7 @@
 	</skill>
 	<skill id="8261" levels="1" name="Steam Beatle Mount">
 		<!-- Allows user to mount a Steam Beatle. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1380,7 +1380,7 @@
 	</skill>
 	<skill id="8262" levels="1" name="Tawny Maned Lion Mount">
 		<!-- Mounts a tawny maned lion. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1401,7 +1401,7 @@
 	</skill>
 	<skill id="8263" levels="1" name="Transform Snow King">
 		<!-- Transforms user into a Snow Kung. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1421,7 +1421,7 @@
 	</skill>
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
 		<!-- Transforms user into Scarecrow Jack. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1441,7 +1441,7 @@
 	</skill>
 	<skill id="8265" levels="1" name="Transform Tin Golem">
 		<!-- Transforms user into a Tin Golem. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1529,7 +1529,7 @@
 	</skill>
 	<skill id="8276" levels="1" name="Shield Branding">
 		<!-- Stuns certain monsters within the Tumor of Death and the Seed of Infinity, causing them to become immobile or lose their target. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1550,7 +1550,7 @@
 	</skill>
 	<skill id="8277" levels="1" name="Transform Native">
 		<!-- Transforms user into a Native. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1570,7 +1570,7 @@
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
 		<!-- Transforms into a Guard of the Dawn. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1590,7 +1590,7 @@
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">
 		<!-- Blessing of fire. Fire attribute is bestowed on physical attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="hitTime" val="100" />
@@ -1602,7 +1602,7 @@
 	</skill>
 	<skill id="8280" levels="1" name="Blessing of Earth">
 		<!-- Blessing of earth. Earth attribute is bestowed on physical attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="hitTime" val="100" />

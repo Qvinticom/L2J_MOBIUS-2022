@@ -33,7 +33,7 @@
 	<skill id="30603" toLevel="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate +1%. -->
 		<icon>icon.icon_lender_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_LENKER</abnormalType>
 		<affectRange>1600</affectRange>
@@ -75,7 +75,7 @@
 	<skill id="30606" toLevel="1" name="Sayha's Seer Force">
 		<!-- M. Critical Rate +1%. -->
 		<icon>icon.icon_Er_wizard_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_SEER</abnormalType>
 		<affectRange>1600</affectRange>
@@ -104,7 +104,7 @@
 	<skill id="30608" toLevel="5" name="Fury of Eviscerator">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill30509</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ALL_ATTACK_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -143,7 +143,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>32</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
@@ -178,7 +178,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>32</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
@@ -229,7 +229,7 @@
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>12</mpConsume>
 		<affectLimit>5-12</affectLimit>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<affectRange>200</affectRange>
@@ -274,7 +274,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>15</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
@@ -321,7 +321,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>5</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -395,7 +395,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>6</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -451,7 +451,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>5</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -617,7 +617,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>4</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
@@ -665,7 +665,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>5</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -738,7 +738,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-500</effectPoint>
 		<mpConsume>6</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<trait>PHYSICAL_BLOCKADE</trait>
@@ -1233,7 +1233,7 @@
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>5</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>90</activateRate>
@@ -1262,7 +1262,7 @@
 	<skill id="30640" toLevel="1" name="Novice Iron Aura">
 		<!-- P./ M. Def. +7% and P. Critical Damage/ M. Critical Damage Received -5%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -1315,7 +1315,7 @@
 		<effectPoint>-700</effectPoint>
 		<mpConsume>8</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1362,7 +1362,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>707</effectPoint>
 		<mpConsume>3</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1454,7 +1454,7 @@
 		<effectPoint>700</effectPoint>
 		<mpConsume>4</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MOVEMENT</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -1551,7 +1551,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>1</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<targetType>SELF</targetType>
@@ -1604,7 +1604,7 @@
 		<effectPoint>-687</effectPoint>
 		<affectLimit>5-12</affectLimit>
 		<mpConsume>20</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>90</activateRate>
@@ -1672,7 +1672,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -1717,7 +1717,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -1773,7 +1773,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -1818,7 +1818,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -1877,7 +1877,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
@@ -1941,7 +1941,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
@@ -1993,7 +1993,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
@@ -2067,7 +2067,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>5</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_B</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_B</abnormalType>
@@ -2105,7 +2105,7 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<mpConsume>7</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<basicProperty>NONE</basicProperty>
@@ -2202,7 +2202,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-867</effectPoint>
 		<mpConsume>8</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -2269,7 +2269,7 @@
 		<effectPoint>-507</effectPoint>
 		<mpConsume>12</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2468,7 +2468,7 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>FIRE</attributeType>
@@ -2510,7 +2510,7 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-328</effectPoint>
 		<mpConsume>7</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>EARTH</attributeType>
@@ -2593,7 +2593,7 @@
 		<effectPoint>611</effectPoint>
 		<mpConsume>17</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>HEAL_EFFECT_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -2618,7 +2618,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>13</mpConsume>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>300</abnormalTime>
 		<basicProperty>NONE</basicProperty>
@@ -2670,7 +2670,7 @@
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>300</abnormalTime>
 		<basicProperty>NONE</basicProperty>
@@ -2731,7 +2731,7 @@
 		<effectPoint>696</effectPoint>
 		<mpConsume>13</mpConsume>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>300</abnormalTime>
 		<isMagic>22</isMagic>
@@ -2812,7 +2812,7 @@
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<isMagic>22</isMagic>
 		<magicLvl>40</magicLvl>
@@ -2863,7 +2863,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -2916,7 +2916,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -3015,7 +3015,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>6</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -3077,7 +3077,7 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
@@ -3146,7 +3146,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>17</mpConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -3193,7 +3193,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -3242,7 +3242,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -3295,7 +3295,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>300</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -3349,7 +3349,7 @@
 		<reuseDelay>8000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>9</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3393,7 +3393,7 @@
 		<mpConsume>6</mpConsume>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<magicLvl>40</magicLvl>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3432,7 +3432,7 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>WIND</attributeType>
@@ -3512,7 +3512,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>303</effectPoint>
 		<mpConsume>1</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -3579,7 +3579,7 @@
 		<!-- Attacks the enemy with a devastating burst of wind and gathers Momentum while cutting their defenses. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -3624,7 +3624,7 @@
 		<mpConsume>13</mpConsume>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -3669,7 +3669,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>696</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
 		<targetType>SELF</targetType>
@@ -3716,7 +3716,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>696</effectPoint>
 		<mpConsume>13</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
 		<targetType>SELF</targetType>
@@ -3793,7 +3793,7 @@
 		<!-- Attacks the target with 3601 power ignoring 15% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10330</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3832,7 +3832,7 @@
 		<!-- Rushes forward to attack enemies at the front with 808 power. Inflicts stun for 5 sec. Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3890,7 +3890,7 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>DARK</attributeType>

@@ -82,10 +82,10 @@
 	<skill id="16707" toLevel="2" name="Horn Melody - Residence">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
@@ -134,10 +134,10 @@
 	<skill id="16708" toLevel="2" name="Guitar Melody - Residence">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -438,7 +438,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<abnormalType>KNOCKDOWN</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>200</activateRate>
@@ -472,7 +472,7 @@
 	<skill id="16731" toLevel="1" name="Leaking Magic - Attack">
 		<!-- The physical attack and magic attack of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -492,7 +492,7 @@
 	<skill id="16732" toLevel="1" name="Leaking Magic - Defense">
 		<!-- The physical defense and magic defense of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1478</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -512,7 +512,7 @@
 	<skill id="16733" toLevel="1" name="Leaking Magic - HP">
 		<!-- The HP regen of the Queen and her minions are boosted greatly by the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -528,7 +528,7 @@
 	<skill id="16734" toLevel="1" name="Leaking Magic - Eradication">
 		<!-- The Queen and her minions continuously receive massive damage fur to the magic leaking out of the disintegrating MP Control Unit. -->
 		<icon>icon.skill1108</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1058,7 +1058,7 @@
 	<skill id="16755" toLevel="1" name="Activate.Paralysis">
 		<!-- Body is paralyzed and begins to stiffen. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1087,7 +1087,7 @@
 	<skill id="16756" toLevel="1" name="Activate.Knock Down">
 		<!-- Knocked down to the ground. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1621,7 +1621,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>102</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<trait>PULL</trait>
 		<affectRange>1500</affectRange>
@@ -1662,7 +1662,7 @@
 	</skill>
 	<skill id="16797" toLevel="1" name="Curse of Silence">
 		<!-- Attacks the vicinity of the target and blocks P./ M. Skills for 10 sec. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>

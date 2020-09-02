@@ -129,7 +129,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -258,7 +258,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>100</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<trait>SHOCK</trait>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -599,7 +599,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>44</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value level="1">1800</value>
 			<value level="2">3600</value>
@@ -635,7 +635,7 @@
 			<value level="1">46</value>
 			<value level="2">64</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -689,7 +689,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>46</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
@@ -707,7 +707,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>46</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
@@ -725,7 +725,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>61</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
@@ -744,7 +744,7 @@
 			<value level="1">46</value>
 			<value level="2">61</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">7</value>
@@ -884,7 +884,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<trait>ETC</trait>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -910,7 +910,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<trait>ETC</trait>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -933,7 +933,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -967,7 +967,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1000,7 +1000,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1156,7 +1156,7 @@
 		<!-- P. Atk. +154, M. Atk. +181, P./ M. Evasion +4. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<magicLvl>55</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value> <!-- Talisman - Abundance War -->
 			<value level="2">2</value> <!-- Talisman - Abundance Tactics -->
 			<value level="3">3</value> <!-- Talisman - Abundance Morale -->
@@ -1169,7 +1169,7 @@
 			<value level="10">10</value> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
 			<value level="11">11</value> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
 			<value level="12">12</value> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
-		</abnormalLvl>
+		</abnormalLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1603,13 +1603,13 @@
 	<skill id="21365" toLevel="5" name="Talisman - Hunter">
 		<!-- The Talisman - Hunter effect has increased. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1883,13 +1883,13 @@
 	<skill id="21368" toLevel="5" name="Wondrous Slaughter Dye">
 		<!-- Received Damage -$s1 and Damage Reflect Resistance +$s2. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3600</value>
 			<value level="2">3600</value>
@@ -1975,13 +1975,13 @@
 	<skill id="21370" toLevel="5" name="Talisman - Slaughterer">
 		<!-- The Talisman - Slaughterer effect has increased. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2217,13 +2217,13 @@
 	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
 		<!-- The Talisman - Conquerer effect has increased. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2439,13 +2439,13 @@
 	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
 		<!-- The Talisman - Outlaw effect has increased. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>

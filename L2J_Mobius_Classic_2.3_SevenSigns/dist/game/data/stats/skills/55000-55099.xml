@@ -3,12 +3,12 @@
 	<skill id="55000" toLevel="4" name="XP/SP Scroll">
 		<!-- Acquired XP/ SP +30% for 20 min. Buff remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -73,7 +73,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -127,7 +127,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -324,7 +324,7 @@
 	<skill id="55031" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -417,7 +417,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -471,7 +471,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -579,7 +579,7 @@
 	<skill id="55041" toLevel="1" name="XP/SP Scroll">
 		<!-- Acquired XP/ SP +20% for 60 min. Buff remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -1116,7 +1116,7 @@
 	<skill id="55047" toLevel="1" name="Romantic Chapeau - Blessed Body">
 		<!-- For 20 min., Max HP +10%. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>418</effectPoint>
@@ -1139,7 +1139,7 @@
 	<skill id="55048" toLevel="1" name="Romantic Chapeau - Wind Walk">
 		<!-- For 5 min., Speed +20. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>SPEED_UP</abnormalType>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>219</effectPoint>
@@ -1168,7 +1168,7 @@
 	<skill id="55051" toLevel="1" name="XP/SP Scroll">
 		<!-- Acquired XP/ SP +30% for 20 min. Buff remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -1236,7 +1236,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -1290,7 +1290,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -1359,7 +1359,7 @@
 		<castRange>400</castRange>
 		<hitTime>4000</hitTime>
 		<effectPoint>204</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1413,10 +1413,10 @@
 	<skill id="55061" toLevel="2" name="Castle XP/SP Scroll - Normal">
 		<!-- Acquired XP/ SP +35% for 20 min. Buff remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -1453,10 +1453,10 @@
 	<skill id="55062" toLevel="2" name="Castle XP/SP Scroll - Medium">
 		<!-- Acquired XP/ SP +45% for 20 min. Buff remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -1527,7 +1527,7 @@
 	<skill id="55065" toLevel="1" name="Scroll: Castle Berserker Spirit">
 		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1577,7 +1577,7 @@
 	<skill id="55066" toLevel="1" name="Scroll: Castle Death Whisper">
 		<!-- For 20 min., P. Critical Damage +25%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1622,7 +1622,7 @@
 	<skill id="55068" toLevel="1" name="Scroll: Castle Blessing">
 		<!-- Maintains buffs and debuffs upon death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
 		<icon>icon.skill1323</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2290,7 +2290,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>
@@ -2344,7 +2344,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<selfEffects>

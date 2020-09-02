@@ -41,7 +41,7 @@
 		<effectPoint>-100</effectPoint>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -109,7 +109,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -374,7 +374,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -487,7 +487,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -536,7 +536,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -607,7 +607,7 @@
 		<effectPoint>-700</effectPoint>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -655,7 +655,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -719,7 +719,7 @@
 		<effectPoint>-700</effectPoint>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -923,7 +923,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -971,7 +971,7 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1007,7 +1007,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>100</activateRate>
@@ -1046,7 +1046,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>100</activateRate>
@@ -1071,7 +1071,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<affectRange>400</affectRange>
@@ -1098,7 +1098,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1168,7 +1168,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HEAL_EFFECT_UP</abnormalType>
 		<affectRange>1000</affectRange>

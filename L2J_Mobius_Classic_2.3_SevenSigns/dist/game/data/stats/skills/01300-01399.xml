@@ -67,10 +67,10 @@
 	<skill id="1303" toLevel="2" name="Wild Magic">
 		<!-- For $s1, damage rate of magic +$s2 . -->
 		<icon>icon.skill1303</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<castRange>400</castRange>
@@ -112,13 +112,13 @@
 	<skill id="1304" toLevel="5" name="Advanced Block">
 		<!-- Shield Defense +$s2 for $s1. -->
 		<icon>icon.skill1304</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SHIELD_DEFENCE_UP</abnormalType>
 		<castRange>400</castRange>
@@ -352,11 +352,11 @@
 	<skill id="1307" toLevel="3" name="Prayer">
 		<!-- For $s1, party members' HP heal amount +$s2. -->
 		<icon>icon.skill1307</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HEAL_EFFECT_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -403,11 +403,11 @@
 	<skill id="1308" toLevel="3" name="Chant of Predator">
 		<!-- All party members' Critical Rate +$s2 for $s1. -->
 		<icon>icon.skill1308</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -454,11 +454,11 @@
 	<skill id="1309" toLevel="3" name="Chant of Eagle">
 		<!-- All party members' Accuracy +$s2 for $s1. -->
 		<icon>icon.skill1309</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -505,12 +505,12 @@
 	<skill id="1310" toLevel="4" name="Chant of Vampire">
 		<!-- For all party members during $s1 recovers as HP $s2 of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1310</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<affectRange>1000</affectRange>
@@ -562,14 +562,14 @@
 	<skill id="1311" toLevel="6" name="Body of Avatar">
 		<!-- Restores HP of all party members by $s2 andMax HP +$s3 for $s1. -->
 		<icon>icon.skill1311</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -706,7 +706,7 @@
 	<skill id="1323" toLevel="1" name="Noblesse Blessing">
 		<!-- Maintains target's buff/ de-buff condition even following death and resurrection. The Noblesse Blessing and the Amulet of Luck disappear, however. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill1323</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
 		<castRange>400</castRange>
@@ -732,7 +732,7 @@
 	<skill id="1326" toLevel="1" name="Noblesse Harmony">
 		<!-- Advances to the frontline of the battleground. For 15 sec., P. Def. +3000, Speed +25%, Buff-canceling Attack Resistance +80%, Bow Resistance +10, and Crossbow Resistance +6. CP -20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<icon>icon.skill1326</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -792,7 +792,7 @@
 	<skill id="1327" toLevel="1" name="Noblesse Symphony">
 		<!-- Advances to the frontline of the battleground. For 15 sec., M. Def. +4500, Speed +25%, Buff-canceling Attack Resistance +80%, Bow Resistance +10, and Crossbow Resistance +6. CP -20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<icon>icon.skill1327</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -1409,7 +1409,7 @@
 	<skill id="1336" toLevel="1" name="Curse of Doom">
 		<!-- Blocks all the enemy's physical and magical skills for 24 sec. -->
 		<icon>icon.skill1336</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>24</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1440,7 +1440,7 @@
 	<skill id="1337" toLevel="1" name="Curse of Abyss">
 		<!-- For 30 sec., target's Speed -10%, P. Def. -30%, P. Evasion -6, M. Atk. -30%, Casting Spd. -20% and M. Critical Rate -30%. -->
 		<icon>icon.skill1337</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
@@ -1491,7 +1491,7 @@
 	<skill id="1338" toLevel="1" name="Arcane Chaos">
 		<!-- For 30 sec., Buff-canceling Attack Resistance -30%, Debuff Resistance -30% and drains 24 MP every sec. Physical skill MP Consumption -10% and magic skill MP Consumption -30%. -->
 		<icon>icon.skill1338</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>40</activateRate>
@@ -1540,7 +1540,7 @@
 	<skill id="1339" toLevel="2" name="Fire Vortex">
 		<!-- Stirs up a vortex connecting to the dimension of fire and inflicts fire damage on the enemy with 126 Power added to M. Atk. For 30 sec., Speed -5%, Atk. Spd. -5%, and Casting Spd. -5%. Consumes 12 MP every sec. Over-hit. -->
 		<icon>icon.skill1339</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_FIRE</abnormalType>
 		<activateRate>80</activateRate>
@@ -1603,7 +1603,7 @@
 	<skill id="1340" toLevel="2" name="Ice Vortex">
 		<!-- Stirs up a vortex connecting to the dimension of water and inflicts water damage on the enemy with 126 Power added to M. Atk. For 30 sec., Speed -20%. Consumes 12 MP every sec. Over-hit. -->
 		<icon>icon.skill1340</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_WATER</abnormalType>
 		<activateRate>80</activateRate>
@@ -1658,7 +1658,7 @@
 	<skill id="1341" toLevel="2" name="Wind Vortex">
 		<!-- Stirs up a vortex connecting to the dimension of wind and inflicts wind damage on the enemy with 126 Power added to M. Atk. For 30 sec., Atk. Spd. -10%, Casting Spd. -10%. Consumes 12 MP every sec. Over-hit. -->
 		<icon>icon.skill1341</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_WIND</abnormalType>
 		<activateRate>80</activateRate>
@@ -1717,7 +1717,7 @@
 	<skill id="1342" toLevel="1" name="Light Vortex">
 		<!-- Stirs up a vortex connected to the holy dimension and inflicts Holy damage on the enemy with 139 Power added to M. Atk. For 30 sec., Accuracy -6 and Holy Attack Resistance -30. Consumes 12 MP every sec. -->
 		<icon>icon.skill1342</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_HOLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -1760,7 +1760,7 @@
 	<skill id="1343" toLevel="1" name="Dark Vortex">
 		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 125 Power added to M. Atk. Absorbs 15% as HP. For 30 sec., P. Accuracy -6 and Dark Resistance -30. Consumes 12 MP every sec. -->
 		<icon>icon.skill1343</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_UNHOLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -1852,7 +1852,7 @@
 	<skill id="1346" toLevel="1" name="Warrior Servitor">
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP +10%, HP Recovery Bonus +10%, P. Def. +10%, P. Atk. +10%, Atk. Spd. +5%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1346</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1901,7 +1901,7 @@
 	<skill id="1347" toLevel="1" name="Wizard Servitor">
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient wizard. MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +20%. Skill MP Consumption -3%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1347</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1951,7 +1951,7 @@
 	<skill id="1348" toLevel="1" name="Assassin Servitor">
 		<!-- Possesses a Servitor with a spirit of ancient assassins. For 10 min. P. Evasion +3, P. Accuracy +3, P. Critical +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1348</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -2004,7 +2004,7 @@
 	<skill id="1349" toLevel="1" name="Final Servitor">
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP/ MP +10%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +10%, P./ M. Def. +10%, Atk. Spd./ Casting Spd. +5%, P./ M. Critical Rate +10%, P./ M. Critical Damage +10%, and Debuff Resistance +20. Consumes 40 Spirit Ore. -->
 		<icon>icon.skill1349</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -2143,7 +2143,7 @@
 	<skill id="1352" toLevel="1" name="Elemental Resistance">
 		<!-- For 20 min., Fire/ Water/ Wind/ Earth Resistance +20. -->
 		<icon>icon.skill1352</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP_ATTR</abnormalType>
 		<castRange>400</castRange>
@@ -2182,7 +2182,7 @@
 	<skill id="1353" toLevel="1" name="Holy Attack Resistance">
 		<!-- For 20 min., Dark Attack Resistance +30, Holy Attack Resistance +20. -->
 		<icon>icon.skill1353</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_HOLY_UNHOLY</abnormalType>
 		<castRange>400</castRange>
@@ -2213,7 +2213,7 @@
 	<skill id="1354" toLevel="1" name="Arcane Protection">
 		<!-- For 20 min., Buff-canceling Attack Resistance +30 and Debuff Resistance +20. -->
 		<icon>icon.skill1354</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_DEBUFF_DISPEL</abnormalType>
 		<castRange>400</castRange>
@@ -2244,7 +2244,7 @@
 	<skill id="1355" toLevel="2" name="Prophecy of Water">
 		<!-- For 10 min., a powerful spirit acts to get a party member's MP Recovery bonus +10%, M. Atk. +10%, M. Def +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1355</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -2339,7 +2339,7 @@
 	<skill id="1356" toLevel="2" name="Prophecy of Fire">
 		<!-- For 10 min., a powerful spirit acts to get a party member's Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. + 5%, and Debuff Resistance +10%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1356</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -2417,7 +2417,7 @@
 	<skill id="1357" toLevel="2" name="Prophecy of Wind">
 		<!-- For 10 min., party member's P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +10%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1357</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -2516,7 +2516,7 @@
 	<skill id="1358" toLevel="1" name="Block Shield">
 		<!-- For 2 min., target's P. Def. -20%, prevents receiving P. Def.-increasing buffs. -->
 		<icon>icon.skill1358</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BLOCK_SHIELD_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2553,7 +2553,7 @@
 	<skill id="1359" toLevel="1" name="Block Wind Walk">
 		<!-- For 2 min., target's Speed -20%, prevents receiving Speed-increasing buffs. -->
 		<icon>icon.skill1359</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BLOCK_SPEED_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2590,7 +2590,7 @@
 	<skill id="1360" toLevel="1" name="Mass Block Shield">
 		<!-- Cancels buffs that increase nearby enemies' P. Def. For 2 min., P. Def. -10% and prevents them from receiving P. Def.-increasing buffs. -->
 		<icon>icon.skill1360</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BLOCK_SHIELD_UP</abnormalType>
 		<activateRate>40</activateRate>
@@ -2628,7 +2628,7 @@
 	<skill id="1361" toLevel="1" name="Mass Block Wind Walk">
 		<!-- Cancels buffs that increase nearby enemies' Speed. For 2 min., Speed -10% and prevents them from receiving Speed-increasing buffs. -->
 		<icon>icon.skill1361</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BLOCK_SPEED_UP</abnormalType>
 		<activateRate>40</activateRate>
@@ -2666,7 +2666,7 @@
 	<skill id="1362" toLevel="1" name="Chant of Spirit">
 		<!-- For 20 min., all party members' Buff-canceling Attack Resistance +30 and Debuff Resistance +20. -->
 		<icon>icon.skill1362</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_DEBUFF_DISPEL</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2697,7 +2697,7 @@
 	<skill id="1363" toLevel="2" name="Chant of Victory">
 		<!-- For 10 min., a powerful spirit acts to get a party members HP/ MP Recovery bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage + 15%. Consumes 60 Spirit Ore. -->
 		<icon>icon.skill1363</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2805,7 +2805,7 @@
 	<skill id="1364" toLevel="1" name="Pa'agrio's Eye">
 		<!-- For 20 min., nearby clan members' P. Accuracy +4 and chance of receiving critical attacks -30%. -->
 		<icon>icon.skill1364</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_HIT_DEFENCE_CRT_RATE_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -2843,7 +2843,7 @@
 	<skill id="1365" toLevel="1" name="Pa'agrio's Soul">
 		<!-- For 20 min., nearby clan members' M. Atk. +75% and M. Def. +30%. -->
 		<icon>icon.skill1365</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -2881,7 +2881,7 @@
 	<skill id="1366" toLevel="1" name="Seal of Despair">
 		<!-- For 30 sec., nearby enemies' P. Accuracy -6, P. Atk. -10%, P. Critical Rate -30%, P. Critical Damage -30%, Speed -20%, M. Def. -30%, and Atk. Spd. -30%. -->
 		<icon>icon.skill1366</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>40</activateRate>
@@ -2937,7 +2937,7 @@
 	<skill id="1367" toLevel="1" name="Seal of Disease">
 		<!-- For 2 min., effect of HP recovery magic received by the nearby enemies -50%. -->
 		<icon>icon.skill1367</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3159,7 +3159,7 @@
 	<skill id="1374" toLevel="1" name="Heroic Valor">
 		<!-- For 2 min., nearby clan members' P. Atk. +250, P. Def. +500, and Buff-canceling Attack Resistance +40. Consumes 80 Spirit Ore. -->
 		<icon>icon.skill1374</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
 		<abnormalVisualEffect>DIVINITY</abnormalVisualEffect>
@@ -3201,7 +3201,7 @@
 	<skill id="1375" toLevel="1" name="Heroic Grandeur">
 		<!-- For 15 sec., nearby enemies' P. Def. -50%, M. Def. -50, P. Evasion -16, and Shield Defense -50%. Magic cancel rate +100%, and blocks all physical/ magic skills. Consumes 80 Spirit Ore. -->
 		<icon>icon.skill1375</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<abnormalVisualEffect>SU_SUMCROSS</abnormalVisualEffect>
@@ -3259,7 +3259,7 @@
 	<skill id="1376" toLevel="1" name="Heroic Dread">
 		<!-- For 8 sec., instills nearby enemies with fear and causes them to flee with Speed +66. Consumes 80 Spirit Ore. -->
 		<icon>icon.skill1376</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3316,7 +3316,7 @@
 	<skill id="1380" toLevel="10" name="Betray">
 		<!-- Cause's enemy servitor to attack its master. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1380</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DERANGEMENT</abnormalType>
 		<activateRate>80</activateRate>
@@ -3389,7 +3389,7 @@
 	<skill id="1381" toLevel="6" name="Mass Curse Fear">
 		<!-- Frightens nearby enemies into fleeing for $s1. -->
 		<icon>icon.skill1381</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3449,7 +3449,7 @@
 	<skill id="1382" toLevel="6" name="Mass Curse Gloom">
 		<!-- Imposes a Curse Gloom on surrounding targets, decreasing their M. Def. by $s1. Requires $s2 Cursed Bones. -->
 		<icon>icon.skill1382</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -3514,7 +3514,7 @@
 	<skill id="1383" toLevel="5" name="Mass Surrender to Fire">
 		<!-- Affects enemies near the servitor for $s1. Fire Resistance -$s2 and Water Resistance +$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill1383</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<activateRate>40</activateRate>
@@ -3578,7 +3578,7 @@
 	<skill id="1384" toLevel="5" name="Mass Surrender to Water">
 		<!-- Affects enemies near the servitor for $s1. Water Resistance -$s2 and Fire Resistance +$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill1384</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<activateRate>40</activateRate>
@@ -3642,7 +3642,7 @@
 	<skill id="1385" toLevel="5" name="Mass Surrender to Wind">
 		<!-- Affects enemies near the servitor for $s1. Wind Resistance -$s2 and Earth Resistance +$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill1385</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
 		<activateRate>40</activateRate>
@@ -3706,7 +3706,7 @@
 	<skill id="1386" toLevel="12" name="Arcane Disruption">
 		<!-- Enemy's Casting Spd. -$s2 for $s1. -->
 		<icon>icon.skill1386</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -3844,11 +3844,11 @@
 	<skill id="1388" toLevel="3" name="Greater Might">
 		<!-- P. Atk. +$s2 for $s1. Consumes $s3 Spirit Ore(s). -->
 		<icon>icon.skill1388</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3896,11 +3896,11 @@
 	<skill id="1389" toLevel="3" name="Greater Shield">
 		<!-- P. Def. +$s2 for $s1. Consumes $s3 Spirit Ore(s). -->
 		<icon>icon.skill1389</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3948,11 +3948,11 @@
 	<skill id="1390" toLevel="3" name="War Chant">
 		<!-- All party members' P. Atk. +$s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill1390</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4000,11 +4000,11 @@
 	<skill id="1391" toLevel="3" name="Chant of Earth">
 		<!-- All party members' P. Def. +$s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill1391</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4052,11 +4052,11 @@
 	<skill id="1392" toLevel="3" name="Holy Attack Resistance">
 		<!-- Holy Resistance +$s2 for $s1. -->
 		<icon>icon.skill1392</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<castRange>400</castRange>
@@ -4098,11 +4098,11 @@
 	<skill id="1393" toLevel="3" name="Dark Attack Resistance">
 		<!-- Dark Attack Resistance +$s2 for $s1. -->
 		<icon>icon.skill1393</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<castRange>400</castRange>
@@ -4144,7 +4144,7 @@
 	<skill id="1394" toLevel="10" name="Trance">
 		<!-- Causes the enemy to sleep for $s1. -->
 		<icon>icon.skill1394</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -4303,7 +4303,7 @@
 	<skill id="1396" toLevel="12" name="Magical Backfire">
 		<!-- Enemy's skill MP Consumption +$s2 for $s1. -->
 		<icon>icon.skill1396</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -4396,11 +4396,11 @@
 	<skill id="1397" toLevel="3" name="Clarity">
 		<!-- For $s1, physical skill MP Consumption -$s2, magic skill MP Consumption -$s3, and song/ dance skill MP Consumption -$s4. Consumes $s5 Spirit Ore(s). -->
 		<icon>icon.skill1397</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<castRange>400</castRange>

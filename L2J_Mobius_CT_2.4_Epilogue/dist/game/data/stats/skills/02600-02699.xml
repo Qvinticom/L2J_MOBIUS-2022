@@ -188,7 +188,7 @@
 	</skill>
 	<skill id="2616" levels="1" name="Bond Sealant">
 		<!-- A block is adhered to the floor and cannot move. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="hitTime" val="100" />
@@ -199,7 +199,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2617" levels="1" name="Stun Planter">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="100" />
@@ -210,7 +210,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2618" levels="1" name="Stun Land Mine">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="100" />
@@ -261,7 +261,7 @@
 	</skill>
 	<skill id="2623" levels="1" name="Alkaline Therapy">
 		<!-- User is covered in an ointment that reduces lethal de-buff effects within the Hall of Erosion. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="MULTI_BUFF_A" />
 		<set name="effectPoint" val="1" />
@@ -273,7 +273,7 @@
 	</skill>
 	<skill id="2624" levels="1" name="Life Aid Banding">
 		<!-- Confers increased resistance to bleed damage, poison and altered conditions caused by the Death Worm within the Seed of Infinity. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESIST_BLEEDING" />
 		<set name="effectPoint" val="1" />
@@ -303,7 +303,7 @@
 	</skill>
 	<skill id="2628" levels="1" name="Structure Scarab">
 		<!-- Allows user to retain buffs and de-buffs following death and resurrection. Blessing of Noblesse and Amulet of Luck disappear, however. Consumes 1 Structure Scarab. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
 		<set name="icon" val="icon.etc_beetle_i00" />
@@ -344,7 +344,7 @@
 	</skill>
 	<skill id="2631" levels="1" name="Scroll of Transformation - Frog">
 		<!-- Transformed into a frog. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -364,7 +364,7 @@
 	</skill>
 	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
 		<!-- Transformed into a young child. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -422,7 +422,7 @@
 	</skill>
 	<skill id="2635" levels="1" name="Blessing of Fire">
 		<!-- Blessing of fire. Fire attribute is bestowed on physical attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -439,7 +439,7 @@
 	</skill>
 	<skill id="2636" levels="1" name="Blessing of Earth">
 		<!-- Blessing of earth. Earth attribute is bestowed on physical attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -1154,7 +1154,7 @@
 	</skill>
 	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
 		<!-- Transforms caster into a member of the red team. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1174,7 +1174,7 @@
 	</skill>
 	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
 		<!-- Transforms caster into a member of the blue team. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1194,7 +1194,7 @@
 	</skill>
 	<skill id="2672" levels="1" name="Gludio Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1225,7 +1225,7 @@
 	</skill>
 	<skill id="2673" levels="1" name="Gludio Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1256,7 +1256,7 @@
 	</skill>
 	<skill id="2674" levels="1" name="Gludio Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1287,7 +1287,7 @@
 	</skill>
 	<skill id="2675" levels="1" name="Gludio Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1318,7 +1318,7 @@
 	</skill>
 	<skill id="2676" levels="1" name="Gludio Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1349,7 +1349,7 @@
 	</skill>
 	<skill id="2677" levels="1" name="Gludio Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1380,7 +1380,7 @@
 	</skill>
 	<skill id="2678" levels="1" name="Gludio Knight Mercenary">
 		<!-- Transforms into a Royal Guard Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1411,7 +1411,7 @@
 	</skill>
 	<skill id="2679" levels="1" name="Gludio Archer Mercenary">
 		<!-- Transforms into an Archer Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1442,7 +1442,7 @@
 	</skill>
 	<skill id="2680" levels="1" name="Gludio Wizard Mercenary">
 		<!-- Transforms into a Magic Leader. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1473,7 +1473,7 @@
 	</skill>
 	<skill id="2681" levels="1" name="Gludio Kamael Captain Mercenary">
 		<!-- Transforms into a Kamael guard captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1504,7 +1504,7 @@
 	</skill>
 	<skill id="2682" levels="1" name="Gludio Knight Captain Mercenary">
 		<!-- Transforms into a Knight of Dawn. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1535,7 +1535,7 @@
 	</skill>
 	<skill id="2683" levels="1" name="Gludio Commander Mercenary">
 		<!-- Transforms into a Fortress Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1566,7 +1566,7 @@
 	</skill>
 	<skill id="2684" levels="1" name="Dion Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1597,7 +1597,7 @@
 	</skill>
 	<skill id="2685" levels="1" name="Dion Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1628,7 +1628,7 @@
 	</skill>
 	<skill id="2686" levels="1" name="Dion Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1659,7 +1659,7 @@
 	</skill>
 	<skill id="2687" levels="1" name="Dion Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1690,7 +1690,7 @@
 	</skill>
 	<skill id="2688" levels="1" name="Dion Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1721,7 +1721,7 @@
 	</skill>
 	<skill id="2689" levels="1" name="Dion Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1752,7 +1752,7 @@
 	</skill>
 	<skill id="2690" levels="1" name="Dion Knight Mercenary">
 		<!-- Transforms into a Royal Guard Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1783,7 +1783,7 @@
 	</skill>
 	<skill id="2691" levels="1" name="Dion Archer Mercenary">
 		<!-- Transforms into an Archer Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1814,7 +1814,7 @@
 	</skill>
 	<skill id="2692" levels="1" name="Dion Wizard Mercenary">
 		<!-- Transforms into a Magic Leader. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1845,7 +1845,7 @@
 	</skill>
 	<skill id="2693" levels="1" name="Dion Kamael Captain Mercenary">
 		<!-- Transforms into a Kamael guard captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1876,7 +1876,7 @@
 	</skill>
 	<skill id="2694" levels="1" name="Dion Knight Captain Mercenary">
 		<!-- Transforms into a Knight of Dawn. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1907,7 +1907,7 @@
 	</skill>
 	<skill id="2695" levels="1" name="Dion Commander Mercenary">
 		<!-- Transforms into a Fortress Captain. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1938,7 +1938,7 @@
 	</skill>
 	<skill id="2696" levels="1" name="Giran Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1969,7 +1969,7 @@
 	</skill>
 	<skill id="2697" levels="1" name="Giran Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -2000,7 +2000,7 @@
 	</skill>
 	<skill id="2698" levels="1" name="Giran Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -2031,7 +2031,7 @@
 	</skill>
 	<skill id="2699" levels="1" name="Giran Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />

@@ -125,7 +125,7 @@
 	<skill id="39113" toLevel="1" name="Golden Mermaid's Tears">
 		<!-- Increases XP/ SP gain by 50% for 1 hours. Effect remains after death. -->
 		<icon>icon.general_fuel_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -628,7 +628,7 @@
 	<skill id="39134" toLevel="1" name="Rice Cake of Flaming Fighting Spirit - Event">
 		<!-- Increases XP/ SP gain by 30% for 20 minutes. Cooldown - 10 minutes. The effect does not disappear after character's death. -->
 		<icon>icon.bm_rice_cake_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -713,7 +713,7 @@
 	<skill id="39144" toLevel="1" name="Special Pirate Fruit">
 		<!-- For 20 minutes, P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/ SP gain by 5%. Cooldown is 1 minute. Buff remains after death. -->
 		<icon>icon.etc_codran_i09</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1039,7 +1039,7 @@
 	<skill id="39162" toLevel="1" name="Special Pirate Fruit - Attack">
 		<!-- P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Recovery Bonus +20%. With a certain chance, converts 3% of damage dealt into HP. PvP damage +5%. Cooldown is 1 min. Effect persists through death. Duration is 20 min. -->
 		<icon>icon.etc_codran_i09</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1116,7 +1116,7 @@
 	<skill id="39163" toLevel="1" name="Special Pirate Fruit - Defense">
 		<!-- P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Recovery Bonus +20%. With a certain chance, converts 3% of received damage into HP. PvP damage -5%. Cooldown is 1 min. Effect persists through death. Duration is 20 min. -->
 		<icon>icon.etc_codran_i09</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1261,7 +1261,7 @@
 		<icon>icon.ev_balthus_token</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49784</itemConsumeId>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>CHANGESHAPE_TRANSFORM</abnormalVisualEffect>

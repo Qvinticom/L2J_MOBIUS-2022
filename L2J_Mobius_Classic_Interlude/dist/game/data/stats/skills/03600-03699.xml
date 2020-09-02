@@ -1518,7 +1518,7 @@
 	<skill id="3632" toLevel="1" name="Clan Gate">
 		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<icon>icon.accessory_crown_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
@@ -1544,7 +1544,7 @@
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
 		<!-- Applied skill: Significantly increases Stun Resistance momentarily. -->
 		<icon>icon.accessory_pledge_cap1_i05</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<magicLvl>60</magicLvl>
@@ -2340,7 +2340,7 @@
 	<skill id="3664" toLevel="1" name="Red Talisman - Max CP">
 		<!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2366,7 +2366,7 @@
 	<skill id="3665" toLevel="2" name="Red Talisman - CP Regeneration">
 		<!-- Drastically increases CP regeneration with the power of the talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>

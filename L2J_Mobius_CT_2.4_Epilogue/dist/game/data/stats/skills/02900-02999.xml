@@ -3,7 +3,7 @@
 	<skill id="2900" levels="1" name="Ancient Herb - Slayer">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to strike down your enemies with the strength of a bull. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_C" />
 		<set name="effectPoint" val="100" />
@@ -23,7 +23,7 @@
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb makes you temporarily impervious to your enemy's attacks. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="effectPoint" val="100" />
@@ -43,7 +43,7 @@
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to cast as fast as the wind. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="effectPoint" val="100" />
@@ -65,7 +65,7 @@
 	<skill id="2903" levels="1" name="Ancient Herb - Guide">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to move faster than any beast on the plains. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="effectPoint" val="100" />
@@ -85,7 +85,7 @@
 		</for>
 	</skill>
 	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="effectPoint" val="100" />
@@ -1840,7 +1840,7 @@
 	</skill>
 	<skill id="2993" levels="1" name="Ancient herb - Deceiver">
 		<!-- You incur the wrath of the spirits who existed in the chaos of the beginning of the world by taking the ancient herb without permission. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -1853,7 +1853,7 @@
 	</skill>
 	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf">
 		<!-- Disguised as a half aqua elf in alluring dress. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />

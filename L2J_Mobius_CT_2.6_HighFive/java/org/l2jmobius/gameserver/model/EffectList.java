@@ -1433,7 +1433,7 @@ public class EffectList
 				{
 					BuffInfo stackedInfo = _stackedEffects.get(skill.getAbnormalType());
 					// Skills are only replaced if the incoming buff has greater or equal abnormal level.
-					if ((stackedInfo != null) && (skill.getAbnormalLvl() >= stackedInfo.getSkill().getAbnormalLvl()))
+					if ((stackedInfo != null) && (skill.getAbnormalLevel() >= stackedInfo.getSkill().getAbnormalLevel()))
 					{
 						// If it is an herb, set as not in use the lesser buff.
 						// Effect will be present in the effect list.

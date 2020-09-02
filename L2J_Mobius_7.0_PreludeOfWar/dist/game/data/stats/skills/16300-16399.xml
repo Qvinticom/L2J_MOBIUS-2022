@@ -216,7 +216,7 @@
 	<skill id="16334" toLevel="3" name="Disarm">
 		<!-- Disarmed. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -451,7 +451,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

@@ -3,7 +3,7 @@
 	<skill id="10100" toLevel="4" name="Guardian's Frenzy">
 		<!-- For $s1, P./M. Def. + $s2, Attribute Resistance + $s3, Speed + $s4. When equipped with a sword or blunt weapon, Accuracy + $s5, Atk. Spd. + $s6, Critical Rate + $s7, Critical Damage + $s8. -->
 		<icon>icon.skill10100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -174,7 +174,7 @@
 	<skill id="10101" toLevel="4" name="Templar's Frenzy">
 		<!-- For $s1, P. Skill Power + $s2, P./M. Def. + $s3, Speed + $s4. When equipped with a sword or blunt weapon, Accuracy + $s5, Atk. Spd. + $s6, Critical Rate + $s7, Critical Damage + $s8. -->
 		<icon>icon.skill10101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -300,7 +300,7 @@
 	<skill id="10102" toLevel="6" name="Shadow Slash">
 		<!-- Summons a Dark Panther to attack enemies in front of you with $s1 Power added to P. Atk. and knocks them down. Requires a shield. Consumes $s2 Soulstones. Over-hit. -->
 		<icon>icon.skill10102</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -367,7 +367,7 @@
 	<skill id="10103" toLevel="6" name="Mass Freezing Strike">
 		<!-- Freezes the air, inflicting $s1 damage to target and nearby enemies, and for 10 sec., decreases enemy Speed by $s2. Consumes $s3 Soulstones. -->
 		<icon>icon.skill10103</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -645,7 +645,7 @@
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
 		<!-- P./M. Def. +20%, Heal Received +20%; P. Critical Damage Received -20%. -->
 		<icon>icon.skill10104</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>PHOENIX_AURA</abnormalVisualEffect>
@@ -691,7 +691,7 @@
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
 		<!-- P./M. Atk. - 30%, Atk. Spd./Casting Spd. - 30%, Speed - 20, and Received Critical Damage + 15%. -->
 		<icon>icon.skill10105</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
@@ -743,7 +743,7 @@
 	<skill id="10110" toLevel="1" name="Sentinel's Aura">
 		<!-- P./M. Def. +20%, 6Attribute Def. +40, Debuff Resistance +20%. -->
 		<icon>icon.skill10106</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
@@ -816,7 +816,7 @@
 	<skill id="10111" toLevel="1" name="Templar's Aura">
 		<!-- P. Atk. + 10%, Atk. Spd. + 10%, M. Atk. + 10%, Casting Spd. + 10%, Speed + 10. -->
 		<icon>icon.skill10107</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>TEMPLAR_AURA</abnormalVisualEffect>

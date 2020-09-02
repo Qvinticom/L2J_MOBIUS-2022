@@ -517,7 +517,7 @@
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
 		<abnormalType>PUBLIC_SLOT</abnormalType> <!-- Guess -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
 		<hitTime>500</hitTime>
@@ -542,7 +542,7 @@
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
 		<abnormalType>PUBLIC_SLOT</abnormalType> <!-- Guess -->
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
 		<hitTime>500</hitTime>
@@ -572,7 +572,7 @@
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
 		<abnormalType>PUBLIC_SLOT</abnormalType> <!-- Guess -->
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
 		<hitTime>500</hitTime>
@@ -605,7 +605,7 @@
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
 		<abnormalType>PUBLIC_SLOT</abnormalType> <!-- Guess -->
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
 		<hitTime>500</hitTime>
@@ -908,14 +908,14 @@
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -940,14 +940,14 @@
 		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1018,14 +1018,14 @@
 		<!-- P. Def. and M. Def. become $s1 for 40 sec. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalTime>40</abnormalTime>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>EVAS_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1511,7 +1511,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60000</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1705,7 +1705,7 @@
 			<value level="3">icon.sayhas_talisman_g_Lv3</value>
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1751,7 +1751,7 @@
 			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">180</value>
 			<value level="2">180</value>
@@ -1811,7 +1811,7 @@
 			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1999,7 +1999,7 @@
 	<skill id="27798" toLevel="1" name="Elk's Blessing">
 		<!-- Maintains Vitality for 1 h. through the Elk's Blessing. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>

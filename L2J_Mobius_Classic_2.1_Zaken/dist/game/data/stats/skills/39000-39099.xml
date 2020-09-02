@@ -64,7 +64,7 @@
 	<skill id="39013" toLevel="1" name="Scroll: Empower">
 		<!-- Increases M. Atk. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -87,7 +87,7 @@
 	<skill id="39014" toLevel="1" name="Scroll: Might">
 		<!-- Increases P. Atk. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -110,7 +110,7 @@
 	<skill id="39015" toLevel="1" name="Scroll: Shield">
 		<!-- Increases P. Def. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -133,7 +133,7 @@
 	<skill id="39016" toLevel="1" name="Agathion - Dance of Fury">
 		<!-- For 20 minutes, Atk. Spd. + 5%. -->
 		<icon>icon.bm_agathion_fury</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -161,7 +161,7 @@
 	<skill id="39017" toLevel="1" name="Agathion - Dance of Concentration">
 		<!-- For 20 minutes, Casting Spd. + 5%. -->
 		<icon>icon.bm_agathion_concentration</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -189,7 +189,7 @@
 	<skill id="39018" toLevel="1" name="Agathion - Song of Wind">
 		<!-- For 5 minutes, Speed + 20. -->
 		<icon>icon.bm_agathion_wind</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -386,7 +386,7 @@
 	<skill id="39028" toLevel="1" name="Newbie Wind Walk Potion">
 		<!-- Increases Speed. Effect 1. -->
 		<icon>icon.etc_potion_green_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -495,7 +495,7 @@
 		<!-- Enlarges the user's head for 10 minutes. Cooldown - 30 minutes. -->
 		<icon>icon.skill2513</icon>
 		<!-- Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -576,7 +576,7 @@
 	<skill id="39047" toLevel="3" name="Fish Stew: Might">
 		<!-- For 20 min. P. Atk. +8%. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -603,7 +603,7 @@
 	<skill id="39048" toLevel="3" name="Fish Stew: Shield">
 		<!-- For 20 min. P. Def. +8%. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -630,7 +630,7 @@
 	<skill id="39049" toLevel="2" name="Fish Stew: Magic Barrier">
 		<!-- For 20 min. M. Def. +23%. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -657,7 +657,7 @@
 	<skill id="39050" toLevel="3" name="Fish Stew: Vampiric Rage">
 		<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -684,7 +684,7 @@
 	<skill id="39051" toLevel="3" name="Fish Stew: Empower">
 		<!-- For 20 min. M. Atk. +55%. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1036,7 +1036,7 @@
 	<skill id="39069" toLevel="1" name="Major Warrior Healing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 3. -->
 		<icon>icon.etc_reagent_white_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1197,7 +1197,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>-3</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -1383,7 +1383,7 @@
 	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
 		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. -->
 		<icon>icon.etc_codran_i09</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>

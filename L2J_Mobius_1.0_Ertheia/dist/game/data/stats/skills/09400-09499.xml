@@ -83,7 +83,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -105,7 +105,7 @@
 		<!-- For 1 min. 30 sec., P. Atk. + 100%. -->
 		<icon>icon.etc_warrior_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>PA_UP_HERB</abnormalType>
 		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
@@ -130,7 +130,7 @@
 		<!-- For 1 min. 30 sec., M. Atk. + 400%. -->
 		<icon>icon.etc_magic_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>MA_UP_HERB</abnormalType>
 		<abnormalVisualEffect>HERB_MA_UP</abnormalVisualEffect>
@@ -1272,7 +1272,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<magicLvl>-3</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1571,7 +1571,7 @@
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
 		<!-- Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). -->
 		<icon>icon.wizard_danger_warppow</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<operateType>A2</operateType>
@@ -1616,7 +1616,7 @@
 	<skill id="9452" toLevel="1" name="Item Skill: Dash">
 		<!-- For 10 sec., Speed + 30, P. Evasion + 7, and HP Recovery Bonus + 7. Consumes 10 Gemstones (B-grade). -->
 		<icon>icon.rogue_shadow_dash</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUPER_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -1650,7 +1650,7 @@
 	<skill id="9453" toLevel="1" name="Item Skill: Undying Will">
 		<!-- Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade). -->
 		<icon>icon.race_orc_immortality</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RACE_ORC2</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1696,7 +1696,7 @@
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
 		<!-- For 5 sec., cannot use P. Atk./M. Atk. Consumes 30 Gemstones (B-grade). -->
 		<icon>icon.song_of_silence</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1726,7 +1726,7 @@
 	<skill id="9455" toLevel="1" name="Item Skill: Disable Target">
 		<!-- For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade). -->
 		<icon>icon.notargetting</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1750,11 +1750,11 @@
 	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflect Resistance">
 		<!-- For 5 sec., Damage Reflect Resistance + 10%. -->
 		<icon>icon.active_damage_shield1</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<operateType>A2</operateType>
@@ -1789,7 +1789,7 @@
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
 		<!-- Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies. -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1835,7 +1835,7 @@
 	<skill id="9460" toLevel="1" name="Tauti's Authority">
 		<!-- Tauti's Authority. Inflicts 371 damage and Knocks Down nearby enemies. -->
 		<icon>icon.skill1181</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -4095,7 +4095,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>100</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<trait>PARALYZE</trait>
 		<isDebuff>true</isDebuff>
@@ -4199,7 +4199,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>-3</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>4</isMagic>
@@ -4219,7 +4219,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -4241,7 +4241,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -4263,7 +4263,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -4285,7 +4285,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>1500</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -4307,7 +4307,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -4327,7 +4327,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -4346,7 +4346,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -4365,7 +4365,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -4384,7 +4384,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -4403,7 +4403,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>

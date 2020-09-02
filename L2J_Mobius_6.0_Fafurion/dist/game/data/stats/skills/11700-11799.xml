@@ -54,7 +54,7 @@
 		<icon>icon.skill1543</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>5000</reuseDelay>
@@ -185,7 +185,7 @@
 		<!-- For $s1, Heals the selected party member by $s2 per second. Further increases incoming Healing power by $s3. Also increases your Healing power. -->
 		<icon>icon.skill11752</icon>
 		<abnormalTime>15</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
 		<castRange>600</castRange>
 		<reuseDelay>1000</reuseDelay>
@@ -254,7 +254,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -322,7 +322,7 @@
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill11752</icon>
 		<abnormalTime>15</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<operateType>A4</operateType>
 		<effectPoint>2</effectPoint>
@@ -352,13 +352,13 @@
 			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="4" toLevel="5" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
 		<hitTime>2200</hitTime>
 		<coolTime>300</coolTime>
@@ -734,7 +734,7 @@
 	<skill id="11758" toLevel="1" name="Celestial Protection">
 		<!-- Renders the selected party member invincible for 10 sec. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11758</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -803,7 +803,7 @@
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
 		<!-- Renders all party members invincible for 10 sec. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11759</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -865,7 +865,7 @@
 	<skill id="11760" toLevel="13" name="Radiant Recharge">
 		<!-- Instantly recovers target's MP with a maximum of $s1 Power depending on target's level. Also, for $s2, recovers $s3 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<operateType>A2</operateType>
@@ -999,7 +999,7 @@
 	<skill id="11761" toLevel="10" name="Brilliant Recharge">
 		<!-- Instantly recovers party members' MP with a maximum of $s1 Power depending on their level. Also, for $s2, recovers $s3 MP per second. -->
 		<icon>icon.skill11761</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<operateType>A2</operateType>
@@ -1137,7 +1137,7 @@
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -1211,7 +1211,7 @@
 		<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 sec. -->
 		<icon>icon.skill11764</icon>
 		<abnormalTime>7</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<affectRange>1000</affectRange>
 		<magicLvl>94</magicLvl>
@@ -1271,7 +1271,7 @@
 			<value fromLevel="1" toLevel="9">10</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -1281,7 +1281,7 @@
 			<value level="7">8</value>
 			<value level="8">9</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>TURN_CRYSTAL</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -1610,7 +1610,7 @@
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -1838,7 +1838,7 @@
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>HEAL_POWER_UP</abnormalType>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -2090,7 +2090,7 @@
 		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by $s2, and consumes $s3 HP every second for $s1. -->
 		<icon>icon.skill11777</icon>
 		<abnormalTime>60</abnormalTime>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>MARK_OF_LUMI</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="10">90</value>
@@ -2209,7 +2209,7 @@
 	<skill id="11778" toLevel="11" name="Fatal Sleep">
 		<!-- For $s1, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by $s2. -->
 		<icon>icon.skill11778</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -2295,7 +2295,7 @@
 		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by $s1. -->
 		<icon>icon.skill1394</icon>
 		<abnormalTime>10</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>100</activateRate>
@@ -2364,7 +2364,7 @@
 		<!-- Decreases target's Recovery by $s1. -->
 		<icon>icon.skill11780</icon>
 		<abnormalTime>60</abnormalTime>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">100</value>
@@ -2638,7 +2638,7 @@
 		<!-- Immune to debuffs for 5 sec. -->
 		<icon>icon.skill1411</icon>
 		<abnormalTime>5</abnormalTime>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -3084,7 +3084,7 @@
 	<skill id="11793" toLevel="3" name="Sustain">
 		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
 		<castRange>600</castRange>
@@ -3139,7 +3139,7 @@
 	<skill id="11794" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<operateType>A4</operateType>
@@ -3185,7 +3185,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3231,7 +3231,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3269,7 +3269,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3315,7 +3315,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>91</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3353,7 +3353,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>

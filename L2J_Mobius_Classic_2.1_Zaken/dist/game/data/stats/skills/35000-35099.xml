@@ -165,7 +165,7 @@
 	<skill id="35010" toLevel="1" name="Refined Romantic Chapeau">
 		<!-- STR+1, INT+1. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectRange>900</effectRange>
@@ -549,7 +549,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<buffProtectLevel>31</buffProtectLevel>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -587,7 +587,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<buffProtectLevel>31</buffProtectLevel>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -943,7 +943,7 @@
 	<skill id="35027" toLevel="4" name="Border Power - Lv. 1">
 		<!-- During an attack P. / M. Atk. +2%, P. / M. Critical Damage +10% with some probability. -->
 		<icon>icon.skill10030</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<magicLvl>55</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>

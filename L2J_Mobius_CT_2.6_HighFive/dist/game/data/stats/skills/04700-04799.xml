@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" levels="13" name="Gift of Queen">
 		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#abnormalTime">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
 		<table name="#accCombat">2 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#effectPoints">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
@@ -10,7 +10,7 @@
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#pAtk">1.06 1.08 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1</table>
 		<table name="#time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="BUFF_QUEEN_OF_CAT" />
 		<set name="affectRange" val="1000" />
@@ -53,14 +53,14 @@
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
 		<!-- Buff magic used by the Unicorn Seraphim. Party members' MP regeneration bonus temporarily increased. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#abnormalTime">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
 		<table name="#effectPoints">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
 		<table name="#magicLvl">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#regMp">1.3 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35</table>
 		<table name="#time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="BUFF_UNICORN_SERAPHIM" />
 		<set name="affectRange" val="1000" />
@@ -81,14 +81,14 @@
 	</skill>
 	<skill id="4703" levels="13" name="Gift of Seraphim">
 		<!-- Unicorn Seraphim's buff magic temporarily reduces party members' magic skill recovery time. ?? 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#abnormalTime">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
 		<table name="#effectPoints">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
 		<table name="#magicLvl">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#mReuse">0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
 		<table name="#time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="BUFF_UNICORN_SERAPHIM" />
 		<set name="affectRange" val="1000" />
@@ -130,14 +130,14 @@
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to instantly decrease their P. Def and M. Def. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#activateRates">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#effectPoints">-1621 -1831 -1975 -1997 -2007 -2017 -2026 -2035 -2043 -2051 -2059 -2066 -2074</table>
 		<table name="#magicLvl">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
 		<table name="#mpConsume">42 49 55 56 57 58 58 58 59 59 60 60 60</table>
 		<table name="#mpDef">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
 		<table name="#mpInitialConsume">11 13 14 14 15 15 15 15 15 15 15 15 15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DEBUFF_NIGHTSHADE" />
 		<set name="activateRate" val="#activateRates" />
@@ -170,14 +170,14 @@
 	</skill>
 	<skill id="4706" levels="13" name="Mass Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes nearby enemies and decreases P. Def and M. Def with curse. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormalLevels">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#activateRates">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#effectPoints">-1621 -1831 -1975 -1997 -2007 -2017 -2026 -2035 -2043 -2051 -2059 -2066 -2074</table>
 		<table name="#magicLvl">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
 		<table name="#mpConsume">63 74 83 84 85 86 87 87 88 89 89 90 90</table>
 		<table name="#mpDef">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
 		<table name="#mpInitialConsume">16 19 21 21 22 22 22 22 22 23 23 23 23</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DEBUFF_NIGHTSHADE" />
 		<set name="activateRate" val="#activateRates" />
@@ -238,7 +238,7 @@
 		<table name="#magicLvl">58 62 66 70 72 74 76 78 79 80</table>
 		<table name="#mpConsume">58 62 67 71 73 75 77 78 79 80</table>
 		<table name="#power">1046 1230 1425 1626 1727 1827 1925 2020 2067 2112</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -291,7 +291,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
 		<table name="#power">16 35 73 138 238 375 537 619 697 766 821 864</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -323,7 +323,7 @@
 		<table name="#effectPoints">138 204 285 379 477 566 635 659 676 689 700 709</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">46 76 104 139 179 220 258 275 288 298 305 309</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="activateRate" val="#activateRates" />
@@ -551,7 +551,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -580,7 +580,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -609,7 +609,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -638,7 +638,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -667,7 +667,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -966,7 +966,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -995,7 +995,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1024,7 +1024,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1053,7 +1053,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1082,7 +1082,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1291,7 +1291,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1319,7 +1319,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1347,7 +1347,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1375,7 +1375,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1403,7 +1403,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1516,7 +1516,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1544,7 +1544,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1572,7 +1572,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1600,7 +1600,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1628,7 +1628,7 @@
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1832,11 +1832,11 @@
 		</for>
 	</skill>
 	<skill id="4784" levels="12" name="BOSS Chant of Life">
-		<table name="#abnormalLvls">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormalLevels">11 12 13 14 15 16 17 17 18 18 19 19</table>
 		<table name="#hot">167 210 315 507 784 1026 1195 1283 1358 1427 951 940</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">43 69 99 134 173 207 239 250 258 262 262 263</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="700" />
@@ -1856,11 +1856,11 @@
 		</for>
 	</skill>
 	<skill id="4785" levels="12" name="BOSS Chant of Life">
-		<table name="#abnormalLvls">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormalLevels">11 12 13 14 15 16 17 17 18 18 19 19</table>
 		<table name="#hot">141 177 266 428 662 866 1009 1083 1152 1229 832 827</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">43 69 99 134 173 207 239 250 258 262 262 263</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="700" />
@@ -1880,11 +1880,11 @@
 		</for>
 	</skill>
 	<skill id="4786" levels="12" name="BOSS Chant of Life">
-		<table name="#abnormalLvls">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormalLevels">11 12 13 14 15 16 17 17 18 18 19 19</table>
 		<table name="#hot">75 94 142 229 353 463 538 576 613 654 443 440</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">43 69 99 134 173 207 239 250 258 262 262 263</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="700" />
@@ -1904,11 +1904,11 @@
 		</for>
 	</skill>
 	<skill id="4787" levels="12" name="BOSS Chant of Life">
-		<table name="#abnormalLvls">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormalLevels">11 12 13 14 15 16 17 17 18 18 19 19</table>
 		<table name="#hot">71 89 133 215 331 434 505 542 576 615 416 414</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">43 69 99 134 173 207 239 250 258 262 262 263</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="700" />
@@ -1928,11 +1928,11 @@
 		</for>
 	</skill>
 	<skill id="4788" levels="12" name="BOSS Chant of Life">
-		<table name="#abnormalLvls">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormalLevels">11 12 13 14 15 16 17 17 18 18 19 19</table>
 		<table name="#hot">66 83 125 200 309 405 472 507 539 576 389 388</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">43 69 99 134 173 207 239 250 258 262 262 263</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="700" />

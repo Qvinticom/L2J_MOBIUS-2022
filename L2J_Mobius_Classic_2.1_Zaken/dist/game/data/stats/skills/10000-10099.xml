@@ -3,7 +3,7 @@
 	<skill id="10015" toLevel="1" name="Chain Strike">
 		<!-- Pulls a selected target to you. Requires a shield. -->
 		<icon>icon.skill10015</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>100</activateRate>
@@ -41,7 +41,7 @@
 	<skill id="10094" toLevel="1" name="Mass Lightning Strike">
 		<!-- A lightning strike inflicts damage to the target and nearby enemies. Power 1997. Paralyzes enemies for 5 seconds Consumes 1 Soulstone(s). -->
 		<icon>icon.skll10094</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>

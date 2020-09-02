@@ -298,7 +298,7 @@
 	<skill id="51247" toLevel="1" name="Disarm">
 		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Atk. and Speed -30%, -1000 HP every sec. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -345,7 +345,7 @@
 	<skill id="51248" toLevel="1" name="Armor Break">
 		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Def. and Speed -30%, -1000 HP every sec. -->
 		<icon>icon.skill10703</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -427,7 +427,7 @@
 		<icon>icon.skill10274</icon>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>20</effectPoint>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>1200</castRange>

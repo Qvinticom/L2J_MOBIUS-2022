@@ -124,7 +124,7 @@ public class Amaskari extends AbstractNpcAI
 			{
 				master.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[1]);
 				final BuffInfo info = master.getEffectList().getBuffInfoBySkillId(BUFF_ID);
-				if ((info != null) && (info.getSkill().getAbnormalLvl() == 3) && master.isInvul())
+				if ((info != null) && (info.getSkill().getAbnormalLevel() == 3) && master.isInvul())
 				{
 					master.setCurrentHp(master.getCurrentHp() + (master.getCurrentHp() / 5));
 				}
@@ -136,9 +136,9 @@ public class Amaskari extends AbstractNpcAI
 					{
 						master.doCast(BUFF[0].getSkill());
 					}
-					else if (info.getSkill().getAbnormalLvl() < 3)
+					else if (info.getSkill().getAbnormalLevel() < 3)
 					{
-						master.doCast(BUFF[info.getSkill().getAbnormalLvl()].getSkill());
+						master.doCast(BUFF[info.getSkill().getAbnormalLevel()].getSkill());
 					}
 					else
 					{

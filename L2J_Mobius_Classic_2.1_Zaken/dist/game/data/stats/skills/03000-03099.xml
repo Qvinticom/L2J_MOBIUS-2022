@@ -23,7 +23,7 @@
 	<skill id="3005" toLevel="1" name="Bleed">
 		<!-- Causes a scar that decreases HP. Effect 5. -->
 		<icon>icon.skill0223</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -314,7 +314,7 @@
 	<skill id="3016" toLevel="7" name="Special Ability: Critical Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -423,14 +423,14 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">6</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -477,7 +477,7 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -605,14 +605,14 @@
 		<!-- HP cut due to Poison. $s1 power. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">6</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1201,14 +1201,14 @@
 		<!-- HP cut due to Poison. $s1 power. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">6</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1266,14 +1266,14 @@
 		<!-- HP cut due to Poison. $s1 power. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">6</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1879,7 +1879,7 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1908,7 +1908,7 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1941,7 +1941,7 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1974,7 +1974,7 @@
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2086,7 +2086,7 @@
 		<!-- HP cut due to Poison. $s1 power. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2123,7 +2123,7 @@
 		<!-- HP cut due to Poison. $s1 power. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2204,7 +2204,7 @@
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2270,7 +2270,7 @@
 		<!-- Temporarily blocks the ability to use magic skills. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2299,7 +2299,7 @@
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>20</activateRate>
@@ -2409,7 +2409,7 @@
 		<!-- Temporarily blocks the ability to use magic skills. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2442,7 +2442,7 @@
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>20</activateRate>
@@ -2638,7 +2638,7 @@
 		<!-- Chance: Momentarily decreases the target's Speed during an normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -2681,7 +2681,7 @@
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. during an normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>40</activateRate>
@@ -2719,7 +2719,7 @@
 		<!-- Chance: Momentarily inflicts Stun on the target during an normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2756,7 +2756,7 @@
 		<!-- Chance: Momentarily inflicts Hold on the target during an normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2801,7 +2801,7 @@
 		<!-- Chance: Momentarily inflicts Sleep on the target during a normal physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -2841,7 +2841,7 @@
 		<!-- Chance: Momentarily paralyzes the target during an normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>40</activateRate>
@@ -2894,7 +2894,7 @@
 		<!-- Chance: Momentarily petrifies the target during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2932,7 +2932,7 @@
 		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -2970,7 +2970,7 @@
 		<!-- Chance: Momentarily inflicts Poison on the target during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
@@ -2986,7 +2986,7 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3048,7 +3048,7 @@
 		<!-- Chance: Momentarily inflicts Bleed on the target during a normal physical attack. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
@@ -3064,7 +3064,7 @@
 			<value level="13">8</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -3127,7 +3127,7 @@
 		<!-- Chance: Momentarily blocks the target's magic skill during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -3164,7 +3164,7 @@
 		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -3246,7 +3246,7 @@
 		<!-- Chance: Momentarily decreases the target's Speed during magic use. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3290,7 +3290,7 @@
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect $s1. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>40</activateRate>
@@ -3329,7 +3329,7 @@
 		<!-- Chance: Momentarily inflicts Stun on the target during magic use. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3367,7 +3367,7 @@
 		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>

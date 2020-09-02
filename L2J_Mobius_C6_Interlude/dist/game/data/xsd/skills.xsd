@@ -350,7 +350,7 @@
 														<xs:attribute name="effectType" type="xs:string" use="optional" />
 														<xs:attribute name="abnormal" type="xs:string" use="optional" />
 														<xs:attribute name="self" type="xs:unsignedByte" use="optional" />
-														<xs:attribute name="abnormalLvl" type="xs:unsignedByte" use="optional" />
+														<xs:attribute name="abnormalLevel" type="xs:unsignedByte" use="optional" />
 														<xs:attribute name="abnormalType" type="xs:string" use="optional" />
 														<xs:attribute name="abnormalTime" type="xs:unsignedByte" use="optional" />
 													</xs:complexType>

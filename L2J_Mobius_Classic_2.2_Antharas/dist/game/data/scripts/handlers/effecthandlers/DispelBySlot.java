@@ -94,7 +94,7 @@ public class DispelBySlot extends AbstractEffect
 				}
 				
 				final Short abnormalLevel = _dispelAbnormals.get(info.getSkill().getAbnormalType());
-				return (abnormalLevel != null) && ((abnormalLevel.shortValue() < 0) || (abnormalLevel.shortValue() >= info.getSkill().getAbnormalLvl()));
+				return (abnormalLevel != null) && ((abnormalLevel.shortValue() < 0) || (abnormalLevel.shortValue() >= info.getSkill().getAbnormalLevel()));
 			}, true, true);
 		}
 	}

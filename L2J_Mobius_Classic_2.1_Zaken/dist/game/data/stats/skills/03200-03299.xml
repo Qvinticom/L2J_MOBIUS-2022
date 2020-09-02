@@ -3,7 +3,7 @@
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for magic skills. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -45,7 +45,7 @@
 	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for song/dance skills. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -87,7 +87,7 @@
 	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for all skills except for those with a fixed Cooldown time. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -139,7 +139,7 @@
 	<skill id="3203" toLevel="1" name="Item Skill: Mystery Skill">
 		<!-- Active: Increases your head size. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -159,7 +159,7 @@
 	<skill id="3204" toLevel="3" name="Item Skill: Reflect Damage">
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -2379,7 +2379,7 @@
 	</skill>
 	<skill id="3265" toLevel="1" name="Mysterious Ability">
 		<!-- The target's head is enlarged. -->
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -2718,7 +2718,7 @@
 	<skill id="3281" toLevel="1" name="Grey Talisman Box - Guard">
 		<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2763,7 +2763,7 @@
 	<skill id="3283" toLevel="1" name="Grey Talisman - Benefaction">
 		<!-- For 10 sec., P. Def. +1800 and M. Def. +1620. Buff-canceling Attack Resistance +80%. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2795,7 +2795,7 @@
 	<skill id="3284" toLevel="1" name="Grey Talisman - Block">
 		<!-- For 15 sec., restricts enemy's HP recovery up to 70%, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>
@@ -2821,7 +2821,7 @@
 	<skill id="3285" toLevel="1" name="Grey Talisman - Gravity">
 		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<castRange>600</castRange>
@@ -2851,7 +2851,7 @@
 	<skill id="3286" toLevel="1" name="Grey Talisman - Bond">
 		<!-- For 15 sec., target's Speed -30%, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>
@@ -2876,7 +2876,7 @@
 	<skill id="3287" toLevel="1" name="Yellow Talisman - Guard">
 		<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2918,7 +2918,7 @@
 	<skill id="3289" toLevel="1" name="Yellow Talisman - Benefaction">
 		<!-- For 10 seconds, P. Def. +3600 and M. Def. +3240, when used. Buff-canceling Attack Resistance +80%. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2948,7 +2948,7 @@
 	<skill id="3290" toLevel="1" name="Yellow Talisman - Block">
 		<!-- For 15 sec., restricts enemy's HP recovery up to 70%, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>-679</effectPoint>
@@ -2973,7 +2973,7 @@
 	<skill id="3291" toLevel="1" name="Yellow Talisman - Gravity">
 		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<castRange>600</castRange>
@@ -3002,7 +3002,7 @@
 	<skill id="3292" toLevel="1" name="Yellow Talisman - Bond">
 		<!-- For 15 sec., target's Speed -30%, when used. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<activateRate>70</activateRate>

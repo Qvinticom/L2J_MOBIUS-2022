@@ -1263,7 +1263,7 @@
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<effectPoint>1</effectPoint>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1305,7 +1305,7 @@
 		<!-- For 5 minutes, MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.etc_fruit_cocktail_i03</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1359,7 +1359,7 @@
 		<!-- For 5 minutes, Evasion +3, Accuracy +3, Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1404,7 +1404,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
@@ -1556,7 +1556,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>

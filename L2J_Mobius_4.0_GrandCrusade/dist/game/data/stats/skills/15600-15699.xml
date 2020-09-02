@@ -448,12 +448,12 @@
 	<skill id="15642" toLevel="4" name="Horn Melody (Adventurer)">
 		<!-- Party members' P. Atk. +$s2, P. Def. +$s3, M. Atk. +$s4, and M. Def. +$s5 up for $s1. -->
 		<icon>icon.skill11517</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
@@ -503,12 +503,12 @@
 	<skill id="15643" toLevel="4" name="Drum Melody (Adventurer)">
 		<!-- For $s1, Party Members' Max MP +$s2, HP Recovery Bonus +$s3, M. Critical Rate +$s4, P. Critical Damage +$s5, P. Atk. +$s6, P. Def. +$s7, Atk. Spd. +$s8, M. Atk. +$s9, M. Def. +$s10, Casting Spd. +$s11, Debuff Resistance +$s12, Critical Damage Received -$s13; Movement Speed -$s14 down. Additionally, for party members equipped with melee weapons, bows, or crossbows who have received attacks and suffered more than a certain amount of damage, Critical Damage is increased during normal attack. -->
 		<icon>icon.skill11522</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
@@ -599,12 +599,12 @@
 	<skill id="15644" toLevel="4" name="Pipe Organ Melody (Adventurer)">
 		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, HP Recovery Bonus +$s5. -->
 		<icon>icon.skill11519</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -659,12 +659,12 @@
 	<skill id="15645" toLevel="4" name="Guitar Melody (Adventurer)">
 		<!-- Party members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4; P. Skill MP Consumption -$s5, M. Skill MP Consumption -$s6, Iss Enchanter Enhance Skill MP Consumption -$s7 for $s1. -->
 		<icon>icon.skill11520</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -725,12 +725,12 @@
 	<skill id="15646" toLevel="4" name="Harp Melody (Adventurer)">
 		<!-- For $s1, party members' P. Accuracy +$s2, P./M. Evasion +$s3, Movement Speed +$s4, and Critical Damage Received -$s5. -->
 		<icon>icon.skill11521</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
@@ -794,12 +794,12 @@
 	<skill id="15647" toLevel="4" name="Lute Melody (Adventurer)">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, with a chance of $s4 Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -849,7 +849,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
@@ -897,7 +897,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
@@ -949,7 +949,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
@@ -1035,7 +1035,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
@@ -1084,7 +1084,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
@@ -1143,7 +1143,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
@@ -1278,7 +1278,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>300</affectRange>
 		<effectRange>300</effectRange>

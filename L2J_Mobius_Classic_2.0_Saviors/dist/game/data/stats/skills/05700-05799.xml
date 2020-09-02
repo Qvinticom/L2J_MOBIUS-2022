@@ -3,7 +3,7 @@
 	<skill id="5700" toLevel="7" name="Decrease M. Def.">
 		<!-- M. Def. is decreased. Effect $s1. -->
 		<icon>icon.skill1263</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -25,7 +25,7 @@
 	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
 		<!-- P. Atk. is decreased. Effect $s1. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -81,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="5703" toLevel="2" name="Adiantum Water Strike Deflect">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<effectPoint>-341</effectPoint>
@@ -134,7 +134,7 @@
 	<skill id="5706" toLevel="1" name="Poison">
 		<!-- HP decreases from Poison momentarily. The body is paralyzed after a set amount of time. Effect 7. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -161,7 +161,7 @@
 	<skill id="5707" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -274,7 +274,7 @@
 	</skill>
 	<skill id="5711" toLevel="1" name="Power of Rage">
 		<!-- P. Atk. is greatly increased because of rage. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -318,13 +318,13 @@
 	</skill>
 	<skill id="5713" toLevel="5" name="Energy Ditch">
 		<!-- Has been given minions' M. Atk. Recovery bonus increased. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -355,7 +355,7 @@
 	<skill id="5715" toLevel="1" name="Electric Flame">
 		<!-- Incurring continuous flame damage and has decreased Speed. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -393,7 +393,7 @@
 	<skill id="5716" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -436,7 +436,7 @@
 	<skill id="5718" toLevel="1" name="Anger">
 		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
 		<icon>icon.skill0176</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -453,7 +453,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5719" toLevel="1" name="Kanabion Susceptibility">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1023,7 +1023,7 @@
 	<skill id="5733" toLevel="6" name="Fear of Steward">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill1092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1135,7 +1135,7 @@
 	<skill id="5735" toLevel="6" name="Curse of Steward">
 		<!-- Momentarily inflicts Sleep on the target. Decrease probability of additional sleep state while effects last. -->
 		<icon>icon.skill1069</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1323,7 +1323,7 @@
 	<skill id="5739" toLevel="1" name="Invincibility">
 		<!-- Recently resurrected and temporarily immobile. -->
 		<icon>icon.skill5739</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1413,7 +1413,7 @@
 	<skill id="5744" toLevel="1" name="Invincibility">
 		<!-- Temporarily invincible. -->
 		<icon>icon.skill1418</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1590,7 +1590,7 @@
 	<skill id="5747" toLevel="12" name="Spin Attack">
 		<!-- Damages and stuns the target simultaneously. Power $s1. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2106,7 +2106,7 @@
 	</skill>
 	<skill id="5753" toLevel="1" name="Awakening">
 		<icon>icon.action117</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PET_FURY</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2195,7 +2195,7 @@
 	<skill id="5760" toLevel="9" name="Critical Blow">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1. -->
 		<icon>icon.skill5760</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -2205,7 +2205,7 @@
 			<value level="7">8</value>
 			<value level="8">9</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SEED_OF_CRITICAL</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2246,7 +2246,7 @@
 	<skill id="5762" toLevel="1" name="Blessing of Pathfinder">
 		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<icon>icon.skill5762</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2280,7 +2280,7 @@
 	<skill id="5764" toLevel="1" name="Terror of the Pumpkin Ghost">
 		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
 		<icon>icon.skill1092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -2439,7 +2439,7 @@
 	<skill id="5771" toLevel="1" name="Buff Control">
 		<!-- Limits to prevent a buff upon the master. -->
 		<icon>icon.action113</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2456,7 +2456,7 @@
 	<skill id="5772" toLevel="1" name="Surrender to Fire">
 		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
 		<icon>icon.skill4279_new</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2475,7 +2475,7 @@
 	<skill id="5773" toLevel="1" name="Surrender to Water">
 		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
 		<icon>icon.skill4280_new</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2494,7 +2494,7 @@
 	<skill id="5775" toLevel="1" name="Greater Blessing of Pathfinder">
 		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<icon>icon.skill5762</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2527,7 +2527,7 @@
 	<skill id="5778" toLevel="1" name="Invincible After-effect">
 		<!-- Temporarily unable to receive invincible effect. -->
 		<icon>icon.skill0837</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2789,7 +2789,7 @@
 	<skill id="5794" toLevel="1" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect 3. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2815,7 +2815,7 @@
 	<skill id="5795" toLevel="1" name="Poison">
 		<!-- Poisons the target, causing them to lose 66 HP every second for 30 seconds. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2841,7 +2841,7 @@
 	<skill id="5796" toLevel="1" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect 3. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2906,7 +2906,7 @@
 	<skill id="5799" toLevel="1" name="Bleed">
 		<!-- Causes the target to bleed and lose 78 HP every second for 20 seconds. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>

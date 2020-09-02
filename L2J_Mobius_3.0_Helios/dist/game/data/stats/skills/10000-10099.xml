@@ -407,7 +407,7 @@
 			<value level="2">icon.skill10007</value>
 			<value level="3">icon.skill10007</value>
 		</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<operateType>A2</operateType>
@@ -445,7 +445,7 @@
 			<value fromLevel="1" toLevel="11">80</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -457,7 +457,7 @@
 			<value level="9">3</value>
 			<value level="10">3</value>
 			<value level="11">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SHIELD_ATTACK</abnormalType>
 		<affectHeight>-100;200</affectHeight>
@@ -559,7 +559,7 @@
 	<skill id="10009" toLevel="11" name="Last Judgment">
 		<!-- Attacks target with $s1 Power added to P. Atk, and Speed - $s2. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10009</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -660,7 +660,7 @@
 	<skill id="10010" toLevel="11" name="Justice Punishment">
 		<!-- Attacks target with $s1 Power added to P. Atk, and P. Atk./M. Atk. - $s2. Blocks the use of magic skills. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10010</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
 		<activateRate>
@@ -771,7 +771,7 @@
 	<skill id="10011" toLevel="8" name="Shield Impact">
 		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. Can be used while a shield is equipped. -->
 		<icon>icon.skill10011</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -860,7 +860,7 @@
 		<icon>icon.skill10012</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1050,7 +1050,7 @@
 	<skill id="10014" toLevel="11" name="Chain Galaxy">
 		<!-- Attacks nearby targets with $s1 Power added to P. Atk. Healing Power received - $s2. -->
 		<icon>icon.skill10014</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>
@@ -1144,7 +1144,7 @@
 	<skill id="10015" toLevel="9" name="Chain Strike">
 		<!-- Pulls selected target to make them attack you. Requires a shield. -->
 		<icon>icon.skill10015</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>
@@ -1291,7 +1291,7 @@
 	<skill id="10017" toLevel="7" name="Final Ultimate Defense">
 		<!-- For $s1, P. Def. + $s2 and M. Def. + $s3. Damage received is capped at $s5 and $s6 of it is reflected back to the attacker. Additionally, + $s7 Buff-canceling Attack Resistance. -->
 		<icon>icon.skill10017</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1407,7 +1407,7 @@
 	<skill id="10018" toLevel="2" name="Noble Sacrifice">
 		<!-- For $s1, receives $s2 of the damage inflicted to the party member. -->
 		<icon>icon.skill10018</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">10</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{base + (0.5 * subIndex)}</value>
@@ -1462,7 +1462,7 @@
 		<!-- For $s1, all party members' P. Def. + $s2, M. Def. + $s3, and Debuff Resistance + $s4. Receives $s5 of the damage inflicted to each party member. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">15</value>
 			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1030">{base + (0.5 * subIndex)}</value>
@@ -1606,7 +1606,7 @@
 	<skill id="10021" toLevel="7" name="Spike Shield">
 		<!-- For $s1, reflects $s2 of received damage back to the attacker. Also has a $s3 chance of reflecting magic damage back to the attacker. Requires a shield. -->
 		<icon>icon.skill10021</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">10</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
@@ -1675,7 +1675,7 @@
 	<skill id="10022" toLevel="1" name="Ignore Death">
 		<!-- For 10 seconds, HP does not decrease below 1. -->
 		<icon>icon.skill10022</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">10</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + (0.5 * subIndex)}</value>
@@ -1778,7 +1778,7 @@
 	<skill id="10024" toLevel="1" name="Party Rescue">
 		<!-- Pulls party member to you and receive 90% of their damage for 15 seconds. Receive only 10 damage when damage to yourself and party member exceeds 10. Requires a shield. -->
 		<icon>icon.skill10024</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">15</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
@@ -1825,7 +1825,7 @@
 	<skill id="10025" toLevel="4" name="Knight Frenzy">
 		<!-- For $s1, P. Def. and M. Def. + $s2, Speed + $s3, Accuracy + $s4 and Atk. Spd. + $s5 when equipped with a sword or blunt weapon. Additionally, Critical Rate + $s6 when equipped with a sword, and Critical Damage + $s7 when equipped with a blunt weapon. -->
 		<icon>icon.skill10025</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<magicLvl>
@@ -1935,7 +1935,7 @@
 	<skill id="10026" toLevel="9" name="Superior Aggression">
 		<!-- Provokes target into attacking you. -->
 		<icon>icon.skill10026</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>
@@ -2009,7 +2009,7 @@
 	<skill id="10027" toLevel="8" name="Superior Aggression Aura">
 		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>
@@ -2128,7 +2128,7 @@
 	<skill id="10029" toLevel="1" name="Rage Aura">
 		<!-- P. Atk./M. Atk. - 20%, and Atk. Spd./Casting Spd. - 20%. -->
 		<icon>icon.skill10028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
@@ -2233,7 +2233,7 @@
 	<skill id="10031" toLevel="1" name="Challenge Aura">
 		<!-- Skill MP Consumption - 15%, Skill Cooldown - 5%. -->
 		<icon>icon.skill10030</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -2328,7 +2328,7 @@
 	<skill id="10033" toLevel="1" name="Iron Aura">
 		<!-- P. Def. + 10%, and Received Critical Damage - 10%. -->
 		<icon>icon.skill10032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -2404,7 +2404,7 @@
 	<skill id="10035" toLevel="1" name="Aura Resistance">
 		<!-- M. Def. + 10%, Attribute Resistance + 20. -->
 		<icon>icon.skill10034</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -2474,7 +2474,7 @@
 	<skill id="10037" toLevel="1" name="Recovery Aura">
 		<!-- Heal amount + 10%, Stun/Knock Back/Knock Down/Hold Resistance + 20%. -->
 		<icon>icon.skill10036</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -2533,7 +2533,7 @@
 	<skill id="10039" toLevel="1" name="Spirit Aura">
 		<!-- Heal amount + 10%, Mental/Paralysis/Aerial Yoke Resistance + 20%. -->
 		<icon>icon.skill10038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
@@ -2854,11 +2854,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>86</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -2922,11 +2922,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>88</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -2990,11 +2990,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>90</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -3058,11 +3058,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>92</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -3126,11 +3126,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>94</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -3194,11 +3194,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>96</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -3240,7 +3240,7 @@
 	<skill id="10051" toLevel="6" name="Lion Roar">
 		<!-- Attack the nearby enemies and block the physical skills. -->
 		<icon>icon.skill0217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3339,7 +3339,7 @@
 	<skill id="10053" toLevel="6" name="Lion Dash">
 		<!-- Dashes to the enemy to inflict damage and shock. -->
 		<icon>icon.skill0217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3440,7 +3440,7 @@
 	<skill id="10055" toLevel="1" name="Cubic Attack">
 		<!-- Momentarily decreases P. Atk. Effect 3. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -3475,7 +3475,7 @@
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<hitCancelTime>0</hitCancelTime>
 		<basicProperty>NONE</basicProperty>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value fromLevel="2" toLevel="8">6</value>
@@ -3521,7 +3521,7 @@
 	<skill id="10057" toLevel="1" name="Cubic Curse">
 		<!-- Inflicted with poison and HP is momentarily decreased. Effect 5. -->
 		<icon>icon.skill1168</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -3547,7 +3547,7 @@
 	<skill id="10058" toLevel="1" name="Blessing of Protection">
 		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
 		<icon>icon.skill0755</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3616,11 +3616,11 @@
 		<effectRange>400</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>98</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
@@ -3662,7 +3662,7 @@
 	<skill id="10060" toLevel="1" name="Aggression Attack">
 		<!-- Provokes. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>2</effectPoint>
@@ -3692,7 +3692,7 @@
 	<skill id="10061" toLevel="1" name="Price of Summoning">
 		<!-- P. Def. is intentionally decreased as price for summoning a lion. -->
 		<icon>icon.skill1100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<activateRate>100</activateRate>
@@ -3803,7 +3803,7 @@
 	<skill id="10063" toLevel="10" name="Phoenix Spirit">
 		<!-- For $s1, all party members' P. Def./ M. Def. + $s2. -->
 		<icon>icon.skill11829</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -3814,7 +3814,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -4007,7 +4007,7 @@
 	<skill id="10067" toLevel="10" name="Spirit of Revenge">
 		<!-- For $s1, all party members' P. Atk./ M. Atk. + $s2. -->
 		<icon>icon.skill11830</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4018,7 +4018,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -4249,7 +4249,7 @@
 	<skill id="10072" toLevel="10" name="Eva's Presence">
 		<!-- For $s1, all party members' P./M. Def. +$s2. -->
 		<icon>icon.skill10071</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4260,7 +4260,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>450</affectRange> <!-- Unconfirmed -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -4484,7 +4484,7 @@
 	<skill id="10078" toLevel="10" name="Shilen's Presence">
 		<!-- For $s1, all party members' P. Atk./ M. Atk. + $s2. -->
 		<icon>icon.skill11832</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4495,7 +4495,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>450</affectRange> <!-- Unconfirmed -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -4630,7 +4630,7 @@
 	<skill id="10081" toLevel="4" name="Lightning Root">
 		<!-- With lightning, inflicts non-attribute damage on target with $s1 Power added to M. Atk. Instantly becomes stunned for $s2. Requires a shield. -->
 		<icon>icon.skill0279</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>40</activateRate>
@@ -4800,7 +4800,7 @@
 			<value level="6">103</value>
 			<value level="7">105</value>
 		</magicLvl>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -4831,7 +4831,7 @@
 	<skill id="10086" toLevel="7" name="Cubic Hex">
 		<!-- For $s1, P. Def./ M. Def. - $s2. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<magicLvl>
@@ -4877,7 +4877,7 @@
 	<skill id="10087" toLevel="7" name="Blood Panther Roar">
 		<!-- Inflicts $s1 damage onto nearby enemies, and has a chance of restraining their P. Atk. for $s2. -->
 		<icon>icon.skill1336</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4885,7 +4885,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<activateRate>80</activateRate>
@@ -4937,7 +4937,7 @@
 	<skill id="10088" toLevel="7" name="Blood Panther Rush">
 		<!-- Rush toward the enemy to inflict $s1 damage and inflict Shock for $s2. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4945,7 +4945,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -5023,12 +5023,12 @@
 	<skill id="10090" toLevel="4" name="Provoking Shackle">
 		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
 		<icon>icon.skill10090new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -5232,7 +5232,7 @@
 	<skill id="10093" toLevel="7" name="Guardian Cubic">
 		<!-- Increases Shield P. Def. and Shield Defense. Spd. + $s1. -->
 		<icon>icon.skll10093</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -5240,7 +5240,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -5278,7 +5278,7 @@
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
 		<!-- Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with $s1 Power. Paralyzes for $s2. Consumes $s3 Soulstone. -->
 		<icon>icon.skll10094</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -5385,7 +5385,7 @@
 	<skill id="10096" toLevel="1" name="Death Touch">
 		<!-- Increases target's Received Critical Damage by 35%. -->
 		<icon>icon.skll10091</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime> <!-- Guessed -->
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
 		<activateRate>90</activateRate> <!-- Guessed -->
@@ -5412,7 +5412,7 @@
 	<skill id="10097" toLevel="6" name="Riot Shield">
 		<!-- Attacks nearby targets with $s1 Power added to P. Atk., and forces them to target you. Requires a shield. Consumes $s2 Soulstones. Over-hit. Critical. -->
 		<icon>icon.skill10097</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectLimit>10-10</affectLimit>
@@ -5482,7 +5482,7 @@
 	<skill id="10098" toLevel="4" name="Paladin's Frenzy">
 		<!-- For $s1, P./M. Def. + $s2, Debuff Resistance + $s3, Speed + $s4. When equipped with a sword or blunt weapon, Accuracy + $s5, Atk. Spd. + $s6, Critical Rate + $s7, Critical Damage + $s8. -->
 		<icon>icon.skill10098</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -5608,7 +5608,7 @@
 	<skill id="10099" toLevel="4" name="Avenger's Frenzy">
 		<!-- For $s1, P. Atk. + $s2, P./M. Def. + $s3, Speed + $s4. When equipped with a sword or blunt weapon, Accuracy + $s5, Atk. Spd. + $s6, Critical Rate + $s7, Critical Damage + $s8. -->
 		<icon>icon.skill10099</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>

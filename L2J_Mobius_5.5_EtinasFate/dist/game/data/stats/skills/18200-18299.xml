@@ -30,7 +30,7 @@
 	<skill id="18209" toLevel="1" name="Dandy's Home Run Ball">
 		<!-- For 1 hr., acquired XP/ SP +100%. Changes the appearance of your armor into that of a Lineage II Uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. Buff remains after death. -->
 		<icon>BranchIcon.icon.g_ev_homerunball</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_DINOS</abnormalVisualEffect>
@@ -80,7 +80,7 @@
 	<skill id="18214" toLevel="1" name="Transformation Potion: L2B2">
 		<!-- Transforms into the very fast L2B2 for 10 min. -->
 		<icon>Icon.ev_invasion_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<operateType>A2</operateType>

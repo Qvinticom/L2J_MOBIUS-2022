@@ -52,7 +52,7 @@
 	<skill id="501" toLevel="12" name="Violent Temper">
 		<!-- Decreases the enemy's P. Def. by $s2 and Casting Spd. by $s3 for $s1. -->
 		<icon>icon.skill0501</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -931,7 +931,7 @@
 	<skill id="509" toLevel="34" name="Bleeding Shot">
 		<!-- Fires a specially crafted bolt at the enemy with $s1 Power added to P. Atk., causing $s3 HP of bleeding damage per second for up to $s2. Increases Power upon the consumption of up to $s4 souls. Requires a crossbow. Consumes $s5 Special Bolt. Over-hit. -->
 		<icon>icon.skill0509</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1682,7 +1682,7 @@
 	<skill id="521" toLevel="8" name="Sharpshooting">
 		<!-- For $s1, when using a crossbow, P. Atk. +$s2, Critical Rate +$s3, Accuracy +$s4, and Range +$s5. User cannot move while skill is in effect. Requires a crossbow. -->
 		<icon>icon.skill0521</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1691,7 +1691,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<effectPoint>
@@ -1805,12 +1805,12 @@
 	<skill id="522" toLevel="4" name="Real Target">
 		<!-- Decreases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1. -->
 		<icon>icon.skill0522</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -1878,7 +1878,7 @@
 	<skill id="523" toLevel="7" name="Imbue Dark Seed">
 		<!-- Plants a Seed of Darkness in the enemy's body. For $s1, $s2 HP is consumed per second. Once fully grown, the seed paralyzes the host body. -->
 		<icon>icon.skill0523</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DARK_SEED</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2044,7 +2044,7 @@
 	<skill id="527" toLevel="1" name="Iron Shield">
 		<!-- Increases Shield Defense with a certain chance when attacked. -->
 		<icon>icon.skill0527</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IRON_SHIELD</abnormalType>
 		<effectPoint>673</effectPoint>
@@ -2077,7 +2077,7 @@
 	<skill id="528" toLevel="1" name="Shield of Faith">
 		<!-- For 15 seconds, party members' P. Def. +3600 and M. Def. +2700. For the duration, absorbs 90% of any damage received by a party member. -->
 		<icon>icon.skill0528</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2109,7 +2109,7 @@
 	<skill id="529" toLevel="1" name="Elemental Song">
 		<!-- Increases all party members' Fire/ Water/ Wind/ Earth Resistance by 30 for 2 minutes. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0529</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_ELEMENTAL</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2147,7 +2147,7 @@
 	<skill id="530" toLevel="1" name="Dance of Alignment">
 		<!-- Increases all party members' Holy/ Dark Attack Resistance by 30 for 2 minutes. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0530</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_ALIGNMENT</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2185,7 +2185,7 @@
 	<skill id="531" toLevel="8" name="Critical Wound">
 		<!-- Increases a target's P. Critical Damage Received by $s2 for $s1 by giving painful wounds. Requires a dagger/ dual dagger. -->
 		<icon>icon.skill0531</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
@@ -2336,7 +2336,7 @@
 	<skill id="536" toLevel="1" name="Over the Body">
 		<!-- Expends spirit points so that for 60 seconds, Increases Max HP by 35%, HP Recovery Bonus by 15%, P. Atk. by 25%, P. Def. by 30%, Atk. Spd. 10%, and Speed by 10%. Can be used when CP is more than 80%. -->
 		<icon>icon.skill0536</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>673</effectPoint>
@@ -2389,7 +2389,7 @@
 	<skill id="537" toLevel="1" name="Spoil Bomb">
 		<!-- Puts nearby enemies into a spoil state, exploding and inflicting damage after a set time. -->
 		<icon>icon.skill0537</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPOIL_BOMB</abnormalType>
 		<activateRate>80</activateRate>
@@ -2425,7 +2425,7 @@
 	<skill id="538" toLevel="1" name="Final Form">
 		<!-- Transform into a final battle form. Consumes 20 souls. -->
 		<icon>icon.skill0538</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2545,7 +2545,7 @@
 	<skill id="541" toLevel="1" name="Transform Grail Apostle">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2578,7 +2578,7 @@
 	<skill id="542" toLevel="1" name="Transform Grail Apostle">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2611,7 +2611,7 @@
 	<skill id="543" toLevel="1" name="Transform Grail Apostle">
 		<!-- Transform into a Grail Apostle. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2644,7 +2644,7 @@
 	<skill id="544" toLevel="1" name="Transform Unicorn">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2677,7 +2677,7 @@
 	<skill id="545" toLevel="1" name="Transform Unicorn">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2710,7 +2710,7 @@
 	<skill id="546" toLevel="1" name="Transform Unicorn">
 		<!-- Transform into a Unicorn. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2743,7 +2743,7 @@
 	<skill id="547" toLevel="1" name="Transform Lilim Knight">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2776,7 +2776,7 @@
 	<skill id="548" toLevel="1" name="Transform Lilim Knight">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2809,7 +2809,7 @@
 	<skill id="549" toLevel="1" name="Transform Lilim Knight">
 		<!-- Transform into a Lilim Knight. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2842,7 +2842,7 @@
 	<skill id="550" toLevel="1" name="Transform Golem Guardian">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2875,7 +2875,7 @@
 	<skill id="551" toLevel="1" name="Transform Golem Guardian">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2908,7 +2908,7 @@
 	<skill id="552" toLevel="1" name="Transform Golem Guardian">
 		<!-- Transform into a Golem Guardian. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2941,7 +2941,7 @@
 	<skill id="553" toLevel="1" name="Transform Inferno Drake">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2974,7 +2974,7 @@
 	<skill id="554" toLevel="1" name="Transform Inferno Drake">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3007,7 +3007,7 @@
 	<skill id="555" toLevel="1" name="Transform Inferno Drake">
 		<!-- Transform into a Inferno Drake. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3040,7 +3040,7 @@
 	<skill id="556" toLevel="1" name="Transform Dragon Bomber">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3073,7 +3073,7 @@
 	<skill id="557" toLevel="1" name="Transform Dragon Bomber">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3106,7 +3106,7 @@
 	<skill id="558" toLevel="1" name="Transform Dragon Bomber">
 		<!-- Transform into a Dragon Bomber. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3139,12 +3139,12 @@
 	<skill id="559" toLevel="4" name="Spear">
 		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -3246,7 +3246,7 @@
 	<skill id="561" toLevel="4" name="Angel's Blessing">
 		<!-- A divine blessing that increases P. Atk. of all party members. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
 		<affectRange>400</affectRange>
@@ -3286,7 +3286,7 @@
 	<skill id="562" toLevel="4" name="Wind of Angel">
 		<!-- A divine Wind that increases Evasion of all party members. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_WATER</abnormalType>
 		<affectRange>400</affectRange>
@@ -3369,7 +3369,7 @@
 	<skill id="564" toLevel="4" name="Gravity Control">
 		<!-- Uses the horn to decrease speed and Atk. Spd. of nearby enemies. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -3652,12 +3652,12 @@
 	<skill id="571" toLevel="4" name="Poison Dust">
 		<!-- Sprays a poisonous powder all over nearby enemies. Effect $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3753,7 +3753,7 @@
 	<skill id="573" toLevel="4" name="Earthquake">
 		<!-- Makes the Earth shake and stuns nearby enemies. Over-hit. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3973,12 +3973,12 @@
 	<skill id="578" toLevel="4" name="Blaze Quake">
 		<!-- Inflict a burning Fire attack on nearby enemies. Over-hit. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<activateRate>60</activateRate>
@@ -4039,12 +4039,12 @@
 	<skill id="579" toLevel="4" name="Fire Armor">
 		<!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -4151,7 +4151,7 @@
 	<skill id="581" toLevel="4" name="Sand Cloud">
 		<!-- Uses blinding sand to decrease nearby enemies' Accuracy. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -4196,12 +4196,12 @@
 	<skill id="582" toLevel="4" name="Scope Bleed">
 		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -4260,7 +4260,7 @@
 	<skill id="583" toLevel="4" name="Assimilation">
 		<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
 		<icon>icon.skill_transform_etc</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -4353,7 +4353,7 @@
 	<skill id="585" toLevel="1" name="Fast Moving">
 		<!-- Momentarily increases Speed greatly. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>477</effectPoint>
@@ -4442,7 +4442,7 @@
 	<skill id="588" toLevel="2" name="Curse of Darkness">
 		<!-- Casts a powerful curse on your enemy. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>

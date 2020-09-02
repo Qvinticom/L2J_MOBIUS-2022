@@ -435,7 +435,7 @@
 		<icon>icon.skill30505</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -476,7 +476,7 @@
 	<skill id="16843" toLevel="1" name="Spallation">
 		<!-- Forms a circular area which nullifies attack flown from afar and debuff attacks for 30 seconds. -->
 		<icon>icon.skill30515</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -796,7 +796,7 @@
 	<skill id="16869" toLevel="1" name="Horseshoe Tramping">
 		<!-- Uses the front feet of the holy beast to kick and know down enemies in front. -->
 		<icon>icon.skill16869</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -831,7 +831,7 @@
 	<skill id="16870" toLevel="1" name="Gigantic Horse Kick">
 		<!-- Uses the hind feet of the holy beast to kick away the enemies in the back. -->
 		<icon>icon.skill16870</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FLY_AWAY</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

@@ -3,7 +3,7 @@
 	<skill id="1201" toLevel="41" name="Dryad Root">
 		<!-- For $s1, immobilizes the enemy. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -203,14 +203,14 @@
 	<skill id="1204" toLevel="6" name="Wind Walk">
 		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -272,7 +272,7 @@
 	<skill id="1206" toLevel="27" name="Wind Shackle">
 		<!-- Enemy's Atk. Spd. -$s2 for $s1. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -300,7 +300,7 @@
 			<value level="25">3</value>
 			<value level="26">3</value>
 			<value level="27">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -470,7 +470,7 @@
 	<skill id="1208" toLevel="25" name="Seal of Binding">
 		<!-- For $s1 inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon>icon.skill1208</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -607,14 +607,14 @@
 	<skill id="1209" toLevel="6" name="Seal of Poison">
 		<!-- Poisons nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1209</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
 			<value level="5">7</value>
 			<value level="6">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -683,12 +683,12 @@
 	<skill id="1210" toLevel="4" name="Seal of Gloom">
 		<!-- For $s2, nearby enemies' MP -$s3 with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1210</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1749,7 +1749,7 @@
 	<skill id="1222" toLevel="17" name="Curse Chaos">
 		<!-- For $s1, enemy's P. Accuracy -$s2. -->
 		<icon>icon.skill1222</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -1767,7 +1767,7 @@
 			<value level="15">3</value>
 			<value level="16">3</value>
 			<value level="17">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1887,7 +1887,7 @@
 	<skill id="1223" toLevel="15" name="Surrender to Earth">
 		<!-- For $s1, enemy's Earth Resistance -$s2 and Wind Resistance +$s3. -->
 		<icon>icon.skill1223</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">4</value>
@@ -1903,7 +1903,7 @@
 			<value level="13">4</value>
 			<value level="14">4</value>
 			<value level="15">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
 		<activateRate>80</activateRate>
@@ -2035,7 +2035,7 @@
 	<skill id="1224" toLevel="17" name="Surrender to Poison">
 		<!-- Enemy's Poison Resistance -$s2 for $s1. -->
 		<icon>icon.skill1224</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -2053,7 +2053,7 @@
 			<value level="15">4</value>
 			<value level="16">4</value>
 			<value level="17">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>RESIST_POISON</abnormalType>
 		<activateRate>80</activateRate>
@@ -2837,7 +2837,7 @@
 	<skill id="1229" toLevel="23" name="Chant of Life">
 		<!-- Recovers $s2 HP per sec. for all party members for $s1. -->
 		<icon>icon.skill1229</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2861,7 +2861,7 @@
 			<value level="21">21</value>
 			<value level="22">22</value>
 			<value level="23">23</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<affectRange>1000</affectRange>
@@ -3403,11 +3403,11 @@
 	<skill id="1232" toLevel="3" name="Blazing Skin">
 		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<icon>icon.skill1232</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<castRange>400</castRange>
@@ -3458,12 +3458,12 @@
 	<skill id="1233" toLevel="4" name="Decay">
 		<!-- For $s1, rots the enemy, causing loss of $s2 HP per sec. -->
 		<icon>icon.skill1233</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -3943,7 +3943,7 @@
 	<skill id="1236" toLevel="21" name="Frost Bolt">
 		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
 		<icon>icon.skill1236</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -4089,7 +4089,7 @@
 	<skill id="1237" toLevel="19" name="Ice Dagger">
 		<!-- Hurls a blade of ice with $s1 Power added to M. Atk., inflicting water damage and causing loss of $s3 HP per sec. for $s2. -->
 		<icon>icon.skill1237</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">5</value>
 			<value level="3">5</value>
@@ -4109,7 +4109,7 @@
 			<value level="17">8</value>
 			<value level="18">8</value>
 			<value level="19">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -4267,11 +4267,11 @@
 	<skill id="1238" toLevel="3" name="Freezing Skin">
 		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<icon>icon.skill1238</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<castRange>400</castRange>
@@ -4534,14 +4534,14 @@
 	<skill id="1240" toLevel="6" name="Guidance">
 		<!-- For $s1, P. Accuracy +$s2. -->
 		<icon>icon.skill1240</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
@@ -4603,14 +4603,14 @@
 	<skill id="1242" toLevel="6" name="Death Whisper">
 		<!-- For $s1, P. Critical Damage +$s2. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -4672,14 +4672,14 @@
 	<skill id="1243" toLevel="6" name="Blessed Shield">
 		<!-- For $s1, Shield Defense +$s2. -->
 		<icon>icon.skill1243</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -4741,7 +4741,7 @@
 	<skill id="1244" toLevel="17" name="Freezing Flame">
 		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1244</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
@@ -4759,7 +4759,7 @@
 			<value level="15">19</value>
 			<value level="16">20</value>
 			<value level="17">21</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -4998,7 +4998,7 @@
 	<skill id="1246" toLevel="20" name="Seal of Silence">
 		<!-- Blocks nearby enemies' use of magic for $s1. -->
 		<icon>icon.skill1246</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -5112,7 +5112,7 @@
 	<skill id="1247" toLevel="16" name="Seal of Scourge">
 		<!-- Nearby enemies' HP Recovery Bonus -$s2 for $s1 -->
 		<icon>icon.skill1247</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -5212,7 +5212,7 @@
 	<skill id="1248" toLevel="20" name="Seal of Suspension">
 		<!-- Nearby enemies' P./ M. Skill Cooldown -$s2 for $s1 -->
 		<icon>icon.skill1248</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>REUSE_DELAY_UP</abnormalType>
 		<activateRate>60</activateRate>
@@ -5333,11 +5333,11 @@
 	<skill id="1249" toLevel="3" name="Pa'agrio's Vision">
 		<!-- P. Accuracy of nearby clan members +$s2 for $s1 -->
 		<icon>icon.skill1249</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -5385,11 +5385,11 @@
 	<skill id="1250" toLevel="3" name="Pa'agrio's Protection">
 		<!-- Shield Defense of clan member +$s2 for $s1 -->
 		<icon>icon.skill1250</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SHIELD_DEFENCE_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -5437,10 +5437,10 @@
 	<skill id="1251" toLevel="2" name="Chant of Fury">
 		<!-- All party members' Atk. Spd. +$s2 for $s1. -->
 		<icon>icon.skill1251</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>1000</affectRange>
@@ -5482,11 +5482,11 @@
 	<skill id="1252" toLevel="3" name="Chant of Evasion">
 		<!-- All party members' P. Evasion +$s2 for $s1 -->
 		<icon>icon.skill1252</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -5533,11 +5533,11 @@
 	<skill id="1253" toLevel="3" name="Chant of Rage">
 		<!-- P. Critical Damage of all party members +$s2 for $s1 -->
 		<icon>icon.skill1253</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -5685,7 +5685,7 @@
 	<skill id="1256" toLevel="18" name="Pa'agrio's Heart">
 		<!-- Restores a clan member's HP with $s1 Power and recovers $s3 HP per sec. for $s2. -->
 		<icon>icon.skill1256</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">7</value>
 			<value level="3">8</value>
@@ -5704,7 +5704,7 @@
 			<value level="16">21</value>
 			<value level="17">22</value>
 			<value level="18">23</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -5849,11 +5849,11 @@
 	<skill id="1257" toLevel="3" name="Decrease Weight">
 		<!-- For $s1 Weight limit +$s2. -->
 		<icon>icon.skill1257</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<castRange>400</castRange>
@@ -5946,12 +5946,12 @@
 	<skill id="1259" toLevel="4" name="Stun Resistance">
 		<!-- Stun Resistance +$s2 for $s1. -->
 		<icon>icon.skill1259</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<castRange>400</castRange>
@@ -6002,11 +6002,11 @@
 	<skill id="1260" toLevel="3" name="Pa'agrio's Tact">
 		<!-- P. Evasion of nearby clan members +$s2 for $s1 -->
 		<icon>icon.skill1260</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -6054,10 +6054,10 @@
 	<skill id="1261" toLevel="2" name="Pa'agrio's Rage">
 		<!-- Nearby clan members' P. Def. -$s2, M. Def. -$s3, and P. Evasion -$s4, and P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, and Speed +$s9 for $s1. -->
 		<icon>icon.skill1261</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -6185,7 +6185,7 @@
 	<skill id="1263" toLevel="20" name="Curse Gloom">
 		<!-- Curses the enemy, momentarily reducing their M. Def. by $s1. -->
 		<icon>icon.skill1263</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -6591,12 +6591,12 @@
 	<skill id="1268" toLevel="4" name="Vampiric Rage">
 		<!-- For $s1 recovers as HP $s2 of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -6648,7 +6648,7 @@
 	<skill id="1269" toLevel="16" name="Curse Disease">
 		<!-- For $s1, power of HP recovery magic received by the enemy -$s2. -->
 		<icon>icon.skill1269</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -6787,7 +6787,7 @@
 	<skill id="1272" toLevel="15" name="Word of Fear">
 		<!-- For $s1, frightens nearby enemies into fleeing. -->
 		<icon>icon.skill1272</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -7708,10 +7708,10 @@
 	<skill id="1282" toLevel="2" name="Pa'agrio's Haste">
 		<!-- Speed of nearby clan members +$s2 for $s1. -->
 		<icon>icon.skill1282</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -7829,11 +7829,11 @@
 	<skill id="1284" toLevel="3" name="Chant of Revenge">
 		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<icon>icon.skill1284</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<affectRange>1000</affectRange>
@@ -7879,7 +7879,7 @@
 	<skill id="1285" toLevel="1" name="Seed of Fire">
 		<!-- Uses energy of fire to ??? Fire attack level +20. -->
 		<icon>icon.skill1285</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -7905,7 +7905,7 @@
 	<skill id="1286" toLevel="1" name="Seed of Water">
 		<!-- Uses energy of Water to ??? Water attack level +20. -->
 		<icon>icon.skill1286</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -7931,7 +7931,7 @@
 	<skill id="1287" toLevel="1" name="Seed of Wind">
 		<!-- Uses energy of wind to ??? Wind attack level +20. -->
 		<icon>icon.skill1287</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -7979,7 +7979,7 @@
 	<skill id="1289" toLevel="6" name="Inferno">
 		<!-- By the power of fire inflicts Fire damage on the enemy with $s1 Power added to M. Atk. and burns $s2 MP of enemy, also causing loss of $s4 HP per sec. for $s3 -->
 		<icon>icon.skill1289</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -8067,7 +8067,7 @@
 	<skill id="1290" toLevel="6" name="Blizzard">
 		<!-- By the power of water inflicts Water damage on the enemy with $s1 Power added to M. Atk. For $s2 Speed -$s3. -->
 		<icon>icon.skill1290</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -8137,7 +8137,7 @@
 	<skill id="1291" toLevel="6" name="Demon Wind">
 		<!-- By the power of wind inflicts Wind damage on the enemy with $s1 Power added to M. Atk. For $s2 Received Healing -$s3. -->
 		<icon>icon.skill1291</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<castRange>900</castRange>
@@ -8554,7 +8554,7 @@
 	<skill id="1298" toLevel="17" name="Mass Slow">
 		<!-- For $s1, Speed near the enemy -$s2. -->
 		<icon>icon.skill1298</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -8572,7 +8572,7 @@
 			<value level="15">3</value>
 			<value level="16">3</value>
 			<value level="17">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -8658,10 +8658,10 @@
 	<skill id="1299" toLevel="2" name="Servitor Empowerment">
 		<!-- For $s1, servitor's P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4. -->
 		<icon>icon.skill1299</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<castRange>400</castRange>

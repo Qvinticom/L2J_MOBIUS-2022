@@ -3,7 +3,7 @@
 	<skill id="32001" toLevel="1" name="Apocalypse Fire">
 		<!-- Inflicts great magic damage on the enemies near the target and decreases their P. Def and M. Def for 5 seconds. -->
 		<icon>icon.skill1487</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>80</activateRate>
@@ -40,7 +40,7 @@
 	<skill id="32002" toLevel="1" name="Demolish Ground">
 		<!-- Inflicts great physical damage on the enemies near the target and stuns them for 5 seconds. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -72,7 +72,7 @@
 	<skill id="32003" toLevel="1" name="Wall of Void">
 		<!-- For 15 seconds, reduces all damage received by 30% and applies the Blood Siphon effect to you. -->
 		<icon>icon.skill1310</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<hitTime>3000</hitTime>
@@ -116,7 +116,7 @@
 	<skill id="32005" toLevel="1" name="Cyclone Blade">
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def and M. Def for 7 seconds. -->
 		<icon>icon.skill10318new</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
@@ -152,7 +152,7 @@
 	<skill id="32006" toLevel="1" name="Wing of Screaming">
 		<!-- Deals great physical damage in the front and decreases P. Atk., M. Atk. and Speed for 10 seconds. -->
 		<icon>icon.skill0492</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<activateRate>80</activateRate>
 		<affectLimit>5-12</affectLimit>
@@ -190,7 +190,7 @@
 	<skill id="32007" toLevel="1" name="Flash of Darkness">
 		<!-- Deals great physical damage in the front and knocks down enemies. -->
 		<icon>icon.skill10267</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;180</fanRange>
@@ -266,7 +266,7 @@
 	<skill id="32010" toLevel="1" name="Bane Blade">
 		<!-- Inflicts great physical damage on the enemies near the target and decreases their P. Def and M. Def for 5 seconds. -->
 		<icon>icon.skill11513</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
@@ -302,7 +302,7 @@
 	<skill id="32011" toLevel="1" name="Spinning Shadow">
 		<!-- Inflicts great physical damage on all nearby enemies and bleeds them for 15 seconds. -->
 		<icon>icon.skill6816</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -333,7 +333,7 @@
 	<skill id="32012" toLevel="1" name="Destruction of Fate">
 		<!-- Inflicts great physical damage on all nearby enemies and decreases their P. Def and M. Def for 15 seconds. -->
 		<icon>icon.skill0190</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
@@ -386,7 +386,7 @@
 	<skill id="32014" toLevel="2" name="Etina's Revelation">
 		<!-- For $s1, reduces all damage received by $s2 and increases Atk. Spd, Casting Spd, and Speed. -->
 		<icon>icon.skill11506</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<hitTime>
@@ -420,7 +420,7 @@
 	<skill id="32015" toLevel="1" name="Stigma of Revelation">
 		<!-- Makes the caster the primary attack target of all monsters in the Etina Great Temple for 30 seconds. This stigma cannot be removed. -->
 		<icon>icon.skill32015</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<activateRate>100</activateRate>
 		<castRange>3000</castRange>
@@ -451,7 +451,7 @@
 	<skill id="32017" toLevel="2" name="Cry of Holy War">
 		<!-- Increases P. Atk. and M. Atk. for $s1. -->
 		<icon>icon.skill10325</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -480,7 +480,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<trait>BLEED</trait>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -503,7 +503,7 @@
 	<skill id="32020" toLevel="2" name="Undead Creature">
 		<!-- Recovers your HP repeatedly for $s1. -->
 		<icon>icon.skill1310</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -521,7 +521,7 @@
 	<skill id="32021" toLevel="2" name="Distorted Avarice">
 		<!-- Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. significantly for $s1. -->
 		<icon>icon.skill32021</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -557,7 +557,7 @@
 	<skill id="32023" toLevel="2" name="Etina's Divine Punishment">
 		<!-- For $s1 reflects all damage received by 20%. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<operateType>A2</operateType>
@@ -574,7 +574,7 @@
 	<skill id="32024" toLevel="2" name="Etina's Observation">
 		<!-- Decreases MP over $s1 and significantly slows Casting Spd. -->
 		<icon>icon.skill32024</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -604,7 +604,7 @@
 	<skill id="32026" toLevel="2" name="Rage of the Open Eye">
 		<!-- Prevents death for $s1 even if HP drops to 0. -->
 		<icon>icon.skill10022</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>STEEL_MIND</abnormalType>
 		<operateType>A2</operateType>
@@ -741,7 +741,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>90</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<trait>SHOCK</trait>
 		<affectRange>400</affectRange>
@@ -819,7 +819,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>90</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<trait>SHOCK</trait>
 		<affectRange>400</affectRange>
@@ -969,7 +969,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<activateRate>90</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<isMagic>2</isMagic>
 		<trait>KNOCKDOWN</trait>
@@ -1011,7 +1011,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -1040,7 +1040,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectRange>1500</affectRange>
 		<fanRange>0;0;600;0</fanRange>
@@ -1081,7 +1081,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>50</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<trait>SHOCK</trait>
 		<isMagic>2</isMagic>
@@ -1114,7 +1114,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<isMagic>2</isMagic>
 		<trait>KNOCKDOWN</trait>
@@ -1153,7 +1153,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<isMagic>2</isMagic>
 		<trait>PULL</trait>
@@ -1182,7 +1182,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -1211,7 +1211,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectRange>1500</affectRange>
 		<fanRange>0;0;600;0</fanRange>
@@ -1365,7 +1365,7 @@
 	<skill id="32077" toLevel="1" name="Rage of Pirate King">
 		<!-- Expresses the king's rage, which knocks down all nearby enemies. -->
 		<icon>icon.skill10262</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1465,7 +1465,7 @@
 	<skill id="32084" toLevel="2" name="Mass Fear">
 		<!-- Puts all enemies in a wide area into Fear. -->
 		<icon>icon.skill1169</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1496,7 +1496,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>

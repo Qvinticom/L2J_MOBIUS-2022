@@ -318,7 +318,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<effectPoint>1</effectPoint>
 		<abnormalTime>1800</abnormalTime>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -377,7 +377,7 @@
 		<!-- Increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack Attribute/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 30 min.0 and Skill MP Consumption by 30 min.1 for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_freya_ice_rose</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -536,7 +536,7 @@
 		<!-- Increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack Attribute/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 30 min.0 and Skill MP Consumption by 30 min.1 for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_freya_ice_rose</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -683,7 +683,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<effectPoint>1</effectPoint>
 		<abnormalTime>1800</abnormalTime>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -813,7 +813,7 @@
 	<skill id="39370" toLevel="2" name="Gale Scroll">
 		<!-- A scroll to level-up as fast as the wind. Acquired XP/ SP +$s1. Remains active after death. Duration 10 min. Cooldown 9 min. -->
 		<icon>icon.scrl_of_storm</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<reuseDelay>540000</reuseDelay>
 		<operateType>A2</operateType>

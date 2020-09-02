@@ -22,7 +22,7 @@
 	<skill id="13901" toLevel="1" name="Shadow Blue">
 		<!-- Mount the Shadow Blue. -->
 		<icon>icon.skill8601</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -145,7 +145,7 @@
 		<!-- Dispels debuffs of all party members, and grants 7-second debuff immunity. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalTime>7</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<affectRange>1000</affectRange>
 		<magicLvl>85</magicLvl>
@@ -174,7 +174,7 @@
 	<skill id="13908" toLevel="1" name="Red Libra Talisman - Teleport">
 		<!-- Increases the speed of all party members by 70 for 10 seconds. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2153,7 +2153,7 @@
 	<skill id="13956" toLevel="10" name="Activate.Stun">
 		<!-- Stun makes movement temporarily impossible. Ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2201,7 +2201,7 @@
 	<skill id="13957" toLevel="10" name="Activate.Silence">
 		<!-- Silence has temporarily restrained skills. Ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2248,7 +2248,7 @@
 	<skill id="13958" toLevel="10" name="Activate.Hold">
 		<!-- Hold has made movement temporarily impossible. Ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2622,7 +2622,7 @@
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
 		<abnormalType>TALISMAN_SPECIAL</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2668,7 +2668,7 @@
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
 		<abnormalType>TALISMAN_SPECIAL</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2723,7 +2723,7 @@
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
 		<abnormalType>TALISMAN_SPECIAL</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>

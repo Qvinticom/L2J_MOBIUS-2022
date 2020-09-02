@@ -61,7 +61,7 @@
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -80,7 +80,7 @@
 	</skill>
 	<skill id="21005" levels="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -107,7 +107,7 @@
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
 		<!-- Increases the size of your head. -->
-		<set name="abnormalLvl" val="0" />
+		<set name="abnormalLevel" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -164,7 +164,7 @@
 	</skill>
 	<skill id="21011" levels="1" name="Energy Recovery">
 		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -184,7 +184,7 @@
 	</skill>
 	<skill id="21012" levels="1" name="Energy Recovery">
 		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -204,7 +204,7 @@
 	</skill>
 	<skill id="21013" levels="1" name="Energy Recovery">
 		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -767,7 +767,7 @@
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
 		<!-- Mounts a Steam Beetle. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="icon" val="icon.skilltransform3" />
@@ -786,7 +786,7 @@
 	</skill>
 	<skill id="21052" levels="1" name="Bless the Body">
 		<!-- Increases Max HP by 25% for 30 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -804,7 +804,7 @@
 	</skill>
 	<skill id="21053" levels="1" name="Bless the Soul">
 		<!-- Increases Max MP by 25% for 30 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -844,7 +844,7 @@
 	</skill>
 	<skill id="21055" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -863,7 +863,7 @@
 	</skill>
 	<skill id="21056" levels="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -881,7 +881,7 @@
 	</skill>
 	<skill id="21057" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="activateRate" val="0" />
@@ -902,7 +902,7 @@
 	</skill>
 	<skill id="21058" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3% for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
 		<set name="activateRate" val="0" />
@@ -923,7 +923,7 @@
 	</skill>
 	<skill id="21059" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="activateRate" val="0" />
@@ -947,7 +947,7 @@
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -966,7 +966,7 @@
 	</skill>
 	<skill id="21061" levels="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -984,7 +984,7 @@
 	</skill>
 	<skill id="21062" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1003,7 +1003,7 @@
 	</skill>
 	<skill id="21063" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1022,7 +1022,7 @@
 	</skill>
 	<skill id="21064" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
 		<set name="activateRate" val="0" />
@@ -1043,7 +1043,7 @@
 	</skill>
 	<skill id="21065" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="activateRate" val="0" />
@@ -1064,7 +1064,7 @@
 	</skill>
 	<skill id="21066" levels="1" name="Energy Recovery">
 		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="activateRate" val="0" />
@@ -1109,7 +1109,7 @@
 	</skill>
 	<skill id="21068" levels="1" name="Resist Unholy">
 		<!-- Increases Resistance to Dark by 30 for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="0" />
@@ -1130,7 +1130,7 @@
 	</skill>
 	<skill id="21069" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1149,7 +1149,7 @@
 	</skill>
 	<skill id="21070" levels="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1168,7 +1168,7 @@
 	</skill>
 	<skill id="21071" levels="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1186,7 +1186,7 @@
 	</skill>
 	<skill id="21072" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1205,7 +1205,7 @@
 	</skill>
 	<skill id="21073" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
 		<set name="activateRate" val="0" />
@@ -1226,7 +1226,7 @@
 	</skill>
 	<skill id="21074" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="activateRate" val="0" />
@@ -1247,7 +1247,7 @@
 	</skill>
 	<skill id="21075" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="activateRate" val="0" />
@@ -1271,7 +1271,7 @@
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
 		<!-- Increases Resistance to Dark by 30 for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="0" />
@@ -1292,7 +1292,7 @@
 	</skill>
 	<skill id="21077" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1311,7 +1311,7 @@
 	</skill>
 	<skill id="21078" levels="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1330,7 +1330,7 @@
 	</skill>
 	<skill id="21079" levels="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1348,7 +1348,7 @@
 	</skill>
 	<skill id="21080" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1367,7 +1367,7 @@
 	</skill>
 	<skill id="21081" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
 		<set name="activateRate" val="0" />
@@ -1388,7 +1388,7 @@
 	</skill>
 	<skill id="21082" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="activateRate" val="0" />
@@ -1409,7 +1409,7 @@
 	</skill>
 	<skill id="21083" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="activateRate" val="0" />
@@ -1433,7 +1433,7 @@
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">
 		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="activateRate" val="0" />
@@ -1468,7 +1468,7 @@
 	</skill>
 	<skill id="21086" levels="1" name="Blessing of Love">
 		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -1488,7 +1488,7 @@
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16% and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1544,7 +1544,7 @@
 	</skill>
 	<skill id="21089" levels="1" name="Dance of Shadows">
 		<!-- Receives the soul's help, and for 2 minutes, decreases one's own Speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_SHADOW" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -1565,7 +1565,7 @@
 	</skill>
 	<skill id="21090" levels="1" name="Soul of Phoenix">
 		<!-- Receives the soul's help, and revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1643,7 +1643,7 @@
 	</skill>
 	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
 		<!-- For 30 minutes, increases critical rate by 30% and Critical Damage by 35%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1693,7 +1693,7 @@
 	</skill>
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1715,7 +1715,7 @@
 	</skill>
 	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />

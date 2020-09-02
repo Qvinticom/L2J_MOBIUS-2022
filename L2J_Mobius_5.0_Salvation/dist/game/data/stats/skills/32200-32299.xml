@@ -37,7 +37,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>INFINITE_SHIELD4_AVE_2</abnormalVisualEffect>
@@ -244,7 +244,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -423,7 +423,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -498,7 +498,7 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<effectPoint>-523</effectPoint>
@@ -553,7 +553,7 @@
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -596,7 +596,7 @@
 		<effectPoint>-183</effectPoint>
 		<isMagic>1</isMagic>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -850,7 +850,7 @@
 	</skill>
 	<skill id="32252" toLevel="1" name="Lithra Fatal Slash">
 		<!-- Attacks enemies in the front and knocks them back with a certain probability. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -882,7 +882,7 @@
 	</skill>
 	<skill id="32253" toLevel="1" name="Lithra Blow Up">
 		<!-- Attacks nearby enemies and blows them away. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -926,7 +926,7 @@
 	<skill id="32254" toLevel="1" name="Lithra Leash Net">
 		<!-- Attacks nearby enemies and puts them into Immobile and Action Prohibit states. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -979,7 +979,7 @@
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>CHANGEBODY</trait>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -1009,7 +1009,7 @@
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

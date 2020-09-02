@@ -324,7 +324,7 @@ public class BabyPetInstance extends PetInstance
 						
 						// If owner already have the buff, continue.
 						final BuffInfo buffInfo = owner.getEffectList().getBuffInfoByAbnormalType(skill.getAbnormalType());
-						if ((buffInfo != null) && (skill.getAbnormalLvl() <= buffInfo.getSkill().getAbnormalLvl()))
+						if ((buffInfo != null) && (skill.getAbnormalLevel() <= buffInfo.getSkill().getAbnormalLevel()))
 						{
 							continue;
 						}

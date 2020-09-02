@@ -19,7 +19,7 @@
 	<skill id="11101" toLevel="1" name="Elemental Destruction: Fire">
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<operateType>A2</operateType>
@@ -32,7 +32,7 @@
 	<skill id="11102" toLevel="1" name="Elemental Destruction: Water">
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
@@ -46,7 +46,7 @@
 	<skill id="11103" toLevel="1" name="Elemental Destruction: Wind">
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
@@ -60,7 +60,7 @@
 	<skill id="11104" toLevel="1" name="Elemental Destruction: Earth">
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
@@ -74,7 +74,7 @@
 	<skill id="11105" toLevel="1" name="Elemental Destruction: 4 Attributes">
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
@@ -1842,7 +1842,7 @@
 	</skill>
 	<skill id="11126" toLevel="3" name="Fire Destruction">
 		<!-- Inflicts $s1 magical damage on target, and inflicts Fear. Over-hit. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1910,11 +1910,11 @@
 	</skill>
 	<skill id="11128" toLevel="3" name="Water Destruction">
 		<!-- Inflicts $s1 magical damage on target, and decreases their Speed by $s2. Over-hit. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime> <!-- Guessed -->
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -1953,7 +1953,7 @@
 	</skill>
 	<skill id="11129" toLevel="3" name="Wind Destruction">
 		<!-- Inflicts $s1 magical damage on target, and inflicts Knock Back. Over-hit. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -1995,7 +1995,7 @@
 	</skill>
 	<skill id="11130" toLevel="3" name="Soul Destruction">
 		<!-- Inflicts $s1 magical damage on target, and inflicts Hold. Over-hit. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2066,11 +2066,11 @@
 	<skill id="11132" toLevel="3" name="Lightning Shield">
 		<!-- Spreads lightning's defensive barrier for $s1. Paralyzes the target that attacked you. -->
 		<icon>icon.skill1515</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType> <!-- Guessed -->
 		<operateType>A2</operateType>
@@ -2105,11 +2105,11 @@
 	<skill id="11133" toLevel="3" name="Lightning Shield: Paralyze">
 		<!-- Momentarily stiffened. -->
 		<icon>icon.skill1515</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -2233,7 +2233,7 @@
 		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
@@ -2383,11 +2383,11 @@
 	<skill id="11139" toLevel="3" name="Ignite">
 		<!-- Engulfed in flames. -->
 		<icon>icon.skill11134</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2414,13 +2414,13 @@
 	<skill id="11140" toLevel="5" name="Black Shackle">
 		<!-- Bound to dark power. -->
 		<icon>icon.skill11135</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -2448,13 +2448,13 @@
 	<skill id="11141" toLevel="5" name="Freezing Slow">
 		<!-- The cold is creeping up from your feet. -->
 		<icon>icon.skill11136</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<abnormalVisualEffect>
@@ -2489,7 +2489,7 @@
 	<skill id="11142" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2528,7 +2528,7 @@
 	<skill id="11143" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2567,13 +2567,13 @@
 	<skill id="11144" toLevel="5" name="Wind Binding">
 		<!-- Speed has decreased due to the gust. -->
 		<icon>icon.skill11137</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime> <!-- Guessed -->
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<abnormalVisualEffect>
@@ -2608,13 +2608,13 @@
 	<skill id="11145" toLevel="5" name="Soul Weakness">
 		<!-- Cursed by a soul. -->
 		<icon>icon.skill11138</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime> <!-- Guessed -->
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
@@ -2659,7 +2659,7 @@
 	<skill id="11150" toLevel="1" name="Dark Curse">
 		<!-- For 10 sec., decreases target's M. Def. by 50% and Attribute Resistance by 50. -->
 		<icon>icon.skill11867</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -2752,7 +2752,7 @@
 	<skill id="11152" toLevel="1" name="Sacrificial Soul">
 		<!-- Sacrifice your servitor to become immune to debuffs for 3 seconds. -->
 		<icon>icon.skill1395</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -2879,7 +2879,7 @@
 	<skill id="11174" toLevel="5" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>100</activateRate>
@@ -2913,7 +2913,7 @@
 	<skill id="11175" toLevel="6" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>100</activateRate>
@@ -3036,7 +3036,7 @@
 	<skill id="11179" toLevel="1" name="Yoke Status">
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -3078,7 +3078,7 @@
 	<skill id="11180" toLevel="1" name="Yoke Status">
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -3120,7 +3120,7 @@
 	<skill id="11181" toLevel="1" name="Yoke Status">
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -3162,7 +3162,7 @@
 	<skill id="11182" toLevel="4" name="Yoke Status">
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -3389,13 +3389,13 @@
 	<skill id="11188" toLevel="5" name="Frozen">
 		<!-- The cold is creeping up from your feet. -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>2</abnormalTime> <!-- Guessed -->
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -3513,7 +3513,7 @@
 	<skill id="11196" toLevel="1" name="Frozen">
 		<!-- Frozen. -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZING</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>FREEZING2</abnormalVisualEffect> <!-- Guessed -->

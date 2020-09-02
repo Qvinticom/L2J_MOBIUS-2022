@@ -376,7 +376,7 @@
 	<skill id="8308" toLevel="1" name="Red Talisman - Territory Guardian">
 		<!-- Instantly recovers 1200 CP and increases Max CP to 1200. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -405,7 +405,7 @@
 	<skill id="8309" toLevel="1" name="Red Talisman - Territory Escort">
 		<!-- Instantly recovers 800 CP and increases Max CP to 800. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -781,7 +781,7 @@
 	<skill id="8325" toLevel="1" name="Wild Rose Pig Candy">
 		<!-- Head is enlarged. -->
 		<icon>icon.etc_pig_candy_i00</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -933,7 +933,7 @@
 	<skill id="8333" toLevel="1" name="Red Talisman - Territory Royal Guard">
 		<!-- Increases Max CP 1500 and recovers CP by the increased amount with the power of Talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -962,7 +962,7 @@
 	<skill id="8334" toLevel="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Decreases damage received during PvP by 75% with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -992,7 +992,7 @@
 	<skill id="8335" toLevel="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 sec., increases Attribute Resistance by 15 with the power of Talisman. -->
 		<icon>icon.etc_talisman_i06</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -1038,7 +1038,7 @@
 	<skill id="8336" toLevel="1" name="Ride Guardian's Strider">
 		<!-- Ride a Guardian's Strider. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1631,7 +1631,7 @@
 	<skill id="8360" toLevel="1" name="Vitality Maintenance Effect">
 		<!-- Maintains Vitality for 30 min. -->
 		<icon>icon.event_energy_belt_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -1785,7 +1785,7 @@
 	<skill id="8371" toLevel="1" name="Transform Halloween Pumpkin">
 		<!-- Transforms into a pumpkin ghost. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1809,7 +1809,7 @@
 	<skill id="8372" toLevel="1" name="Shiny Reanimated Corpse Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, P. Atk. by 5%, and Earth Resistance by 5. -->
 		<icon>icon.ev_frankenstein_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1846,7 +1846,7 @@
 	<skill id="8373" toLevel="1" name="Shriek Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, Critical rate by 5%, and Wind Resistance by 5. -->
 		<icon>icon.ev_scream_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1887,7 +1887,7 @@
 	<skill id="8374" toLevel="1" name="Red Devil Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, Speed by 5%, and Fire Resistance by 5. -->
 		<icon>icon.ev_doccabi_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1924,7 +1924,7 @@
 	<skill id="8375" toLevel="1" name="Mummy Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, skill's MP Consumption by 5%, and Dark Resistance by 5. -->
 		<icon>icon.ev_mummy_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1972,7 +1972,7 @@
 	<skill id="8376" toLevel="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, magic damage's Prominent Damage occurrence by 2, and Water Resistance by 5. -->
 		<icon>icon.ev_alien_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2013,7 +2013,7 @@
 	<skill id="8377" toLevel="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 20%, Speed by 20, and Debuff Resistance by 10%. -->
 		<icon>icon.ev_golden_jack0_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

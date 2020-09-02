@@ -256,7 +256,7 @@
 	<skill id="30502" toLevel="24" name="Chin Strike">
 		<!-- Knocks down target for 3 sec. Requires a fist weapon. -->
 		<icon>icon.skill30502</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -493,7 +493,7 @@
 	<skill id="30505" toLevel="10" name="Pressure Punch">
 		<!-- Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
 		<icon>icon.skill30505</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<affectRange>200</affectRange>
@@ -566,7 +566,7 @@
 	<skill id="30506" toLevel="14" name="Distant Kick">
 		<!-- Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
 		<icon>icon.skill30506</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -658,7 +658,7 @@
 	<skill id="30507" toLevel="24" name="Left Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon. -->
 		<icon>icon.skill30507</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -850,13 +850,13 @@
 	<skill id="30511" toLevel="5" name="Air Light">
 		<!-- For 10 min., you're less bound by gravity and P. Atk. + 10%. -->
 		<icon>icon.skill30511</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>NONE</abnormalType>
 		<operateType>A2</operateType>
@@ -926,11 +926,11 @@
 	<skill id="30512" toLevel="3" name="Distortion">
 		<!-- For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
 		<icon>icon.skill30512</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -978,11 +978,11 @@
 	<skill id="30514" toLevel="3" name="Fluid Weave">
 		<!-- For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon. -->
 		<icon>icon.skill30514</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1043,7 +1043,7 @@
 	<skill id="30515" toLevel="1" name="Spallation">
 		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon. -->
 		<icon>icon.skill30515</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>NONE</abnormalType>
 		<abnormalVisualEffect>SPACEREF</abnormalVisualEffect>
@@ -1071,7 +1071,7 @@
 	<skill id="30516" toLevel="1" name="Gravity Barrier">
 		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
 		<icon>icon.skill30516</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1108,7 +1108,7 @@
 	<skill id="30517" toLevel="11" name="Heavy Hand">
 		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
 		<icon>icon.skill30517</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -1508,11 +1508,11 @@
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- Increases P. Critical Rate by 10. -->
 		<icon>icon.skill30510</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>INSIDE_POSITION</abnormalType>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<operateType>A2</operateType>

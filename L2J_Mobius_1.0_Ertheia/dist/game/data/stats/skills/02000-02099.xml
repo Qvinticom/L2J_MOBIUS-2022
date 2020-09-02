@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2001" toLevel="1" name="Red Potion">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -20,7 +20,7 @@
 		</effects>
 	</skill>
 	<skill id="2002" toLevel="1" name="Healing Drug">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -137,7 +137,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2010" toLevel="1" name="Endeavor Potion">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -159,7 +159,7 @@
 	<skill id="2011" toLevel="1" name="Wind Walk Potion">
 		<!-- Increases Speed. Effect 1. -->
 		<icon>icon.etc_potion_green_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -181,7 +181,7 @@
 	<skill id="2012" toLevel="1" name="Haste Potion">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<icon>icon.etc_reagent_green_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -396,7 +396,7 @@
 	<skill id="2031" toLevel="1" name="Healing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 1. -->
 		<icon>icon.etc_lesser_potion_red_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -418,7 +418,7 @@
 	<skill id="2032" toLevel="1" name="Greater Healing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 2. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -449,7 +449,7 @@
 	<skill id="2034" toLevel="1" name="Greater Wind Walk Potion">
 		<!-- Increases Speed. Effect 2. -->
 		<icon>icon.etc_lesser_potion_green_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -470,7 +470,7 @@
 	<skill id="2035" toLevel="1" name="Greater Haste Potion">
 		<!-- Increases Atk. Spd. Effect 2. -->
 		<icon>icon.etc_lesser_potion_purple_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -514,7 +514,7 @@
 	<skill id="2037" toLevel="1" name="Major Healing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 3. -->
 		<icon>icon.etc_reagent_white_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -735,7 +735,7 @@
 	<skill id="2050" toLevel="1" name="Scroll: Guidance">
 		<!-- Increases Accuracy. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -758,7 +758,7 @@
 	<skill id="2051" toLevel="1" name="Scroll: Death Whisper">
 		<!-- Increases Critical Damage. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -781,7 +781,7 @@
 	<skill id="2052" toLevel="1" name="Scroll: Focus">
 		<!-- Increases Critical Rate. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -804,7 +804,7 @@
 	<skill id="2053" toLevel="1" name="Scroll: Acumen">
 		<!-- Increases Casting Spd. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<hitTime>4000</hitTime>
@@ -827,7 +827,7 @@
 	<skill id="2054" toLevel="1" name="Scroll: Haste">
 		<!-- Increases Atk. Spd. Effect 2. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<hitTime>4000</hitTime>
@@ -850,7 +850,7 @@
 	<skill id="2055" toLevel="1" name="Scroll: Agility">
 		<!-- Increases Evasion. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -873,7 +873,7 @@
 	<skill id="2056" toLevel="1" name="Scroll: Empower">
 		<!-- Increases M. Atk. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -896,7 +896,7 @@
 	<skill id="2057" toLevel="1" name="Scroll: Might">
 		<!-- Increases P. Atk. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -919,7 +919,7 @@
 	<skill id="2058" toLevel="1" name="Scroll: Wind Walk">
 		<!-- Increases Speed. Effect 2. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -942,7 +942,7 @@
 	<skill id="2059" toLevel="1" name="Scroll: Shield">
 		<!-- Increases P. Def. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -1027,7 +1027,7 @@
 	<skill id="2064" toLevel="1" name="Scroll: Mana Regeneration">
 		<!-- Greatly increases MP Recovery Bonus. Effect 4. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -1156,7 +1156,7 @@
 	<skill id="2074" toLevel="1" name="Potion of Critical Escape">
 		<!-- Misdirects enemy attacks and decreases your Speed. -->
 		<icon>icon.etc_potion_red_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>9-10</affectLimit>
@@ -1200,7 +1200,7 @@
 	<skill id="2076" toLevel="1" name="Eva's Blessing">
 		<!-- Increase lung capacity. Effect 1. -->
 		<icon>icon.etc_bless_of_eva_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>400</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1221,7 +1221,7 @@
 	<skill id="2077" toLevel="1" name="Potion of Revenge">
 		<!-- Decreases P. Def. and reflects a certain amount of damage back to the enemy. Effect 3. -->
 		<icon>icon.etc_potion_blue_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->

@@ -149,7 +149,7 @@ public class CabaleBuffer extends AbstractNpcAI
 					{
 						if (handleCast(player, ORATOR_FIGTER))
 						{
-							if (getAbnormalLvl(player, ORATOR_FIGTER) == 2)
+							if (getAbnormalLevel(player, ORATOR_FIGTER) == 2)
 							{
 								broadcastSay(_npc, NpcStringId.S1_I_GIVE_YOU_THE_BLESSING_OF_PROPHECY, player.getName(), 500);
 							}
@@ -165,7 +165,7 @@ public class CabaleBuffer extends AbstractNpcAI
 					{
 						if (handleCast(player, ORATOR_MAGE))
 						{
-							if (getAbnormalLvl(player, ORATOR_MAGE) == 2)
+							if (getAbnormalLevel(player, ORATOR_MAGE) == 2)
 							{
 								broadcastSay(_npc, NpcStringId.S1_I_BESTOW_UPON_YOU_THE_AUTHORITY_OF_THE_ABYSS, player.getName(), 500);
 							}
@@ -184,7 +184,7 @@ public class CabaleBuffer extends AbstractNpcAI
 					{
 						if (handleCast(player, PREACHER_FIGTER))
 						{
-							if (getAbnormalLvl(player, PREACHER_FIGTER) == 2)
+							if (getAbnormalLevel(player, PREACHER_FIGTER) == 2)
 							{
 								broadcastSay(_npc, NpcStringId.A_CURSE_UPON_YOU, player.getName(), 500);
 							}
@@ -200,7 +200,7 @@ public class CabaleBuffer extends AbstractNpcAI
 					{
 						if (handleCast(player, PREACHER_MAGE))
 						{
-							if (getAbnormalLvl(player, PREACHER_MAGE) == 2)
+							if (getAbnormalLevel(player, PREACHER_MAGE) == 2)
 							{
 								broadcastSay(_npc, NpcStringId.S1_YOU_MIGHT_AS_WELL_GIVE_UP, player.getName(), 500);
 							}
@@ -248,7 +248,7 @@ public class CabaleBuffer extends AbstractNpcAI
 			boolean doCast = false;
 			int skillLevel = 1;
 			
-			final int level = getAbnormalLvl(player, skillId);
+			final int level = getAbnormalLevel(player, skillId);
 			if (level == 0)
 			{
 				doCast = true;
@@ -282,10 +282,10 @@ public class CabaleBuffer extends AbstractNpcAI
 		}
 	}
 	
-	public int getAbnormalLvl(PlayerInstance player, int skillId)
+	public int getAbnormalLevel(PlayerInstance player, int skillId)
 	{
 		final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(skillId);
-		return (info != null) ? info.getSkill().getAbnormalLvl() : 0;
+		return (info != null) ? info.getSkill().getAbnormalLevel() : 0;
 	}
 	
 	public static void main(String[] args)

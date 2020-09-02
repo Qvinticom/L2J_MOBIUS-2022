@@ -110,7 +110,7 @@
 	<skill id="4515" toLevel="2" name="Raid Curse">
 		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill4111</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -242,7 +242,7 @@
 	<skill id="4522" toLevel="1" name="Eye of Assassin">
 		<!-- Greatly increases the critical success rate of dagger and rapier skills. -->
 		<icon>icon.skill0016</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<castRange>400</castRange>
@@ -265,7 +265,7 @@
 		</effects>
 	</skill>
 	<skill id="4523" toLevel="1" name="Ultimate Evasion">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<hitTime>10000</hitTime>
@@ -286,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="4524" toLevel="1" name="Bluff">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<hitTime>10000</hitTime>
@@ -335,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="4527" toLevel="1" name="Restore">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<castRange>600</castRange>
@@ -359,7 +359,7 @@
 		</effects>
 	</skill>
 	<skill id="4528" toLevel="1" name="Wind Walk">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<castRange>400</castRange>
@@ -452,7 +452,7 @@
 	<skill id="4533" toLevel="1" name="Dance of Resistance">
 		<!-- Momentarily decreases Speed and Accuracy significantly. Dance of Inspiration can remove the curse. -->
 		<icon>icon.skill0272</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_INSPIRATION</abnormalType>
 		<castRange>400</castRange>
@@ -480,7 +480,7 @@
 	<skill id="4534" toLevel="1" name="Nihilistic Dance">
 		<!-- Atk. Spd. decreases momentarily. and Evasion significantly. Dance of Fury can remove the curse. -->
 		<icon>icon.skill0275</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<castRange>400</castRange>
@@ -508,7 +508,7 @@
 	<skill id="4535" toLevel="1" name="Dance of Weakness">
 		<!-- P. Def. decreases momentarily. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
 		<icon>icon.skill0310</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
 		<castRange>400</castRange>
@@ -536,7 +536,7 @@
 	<skill id="4536" toLevel="1" name="Song of Seduction">
 		<!-- Momentarily decreases Speed and Accuracy significantly. Song of Wind can remove the curse. -->
 		<icon>icon.skill0268</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
 		<castRange>400</castRange>
@@ -564,7 +564,7 @@
 	<skill id="4537" toLevel="1" name="Song of Sweet Whispers">
 		<!-- Atk. Spd. decreases momentarily. and Evasion significantly. Song of Water can remove the curse. -->
 		<icon>icon.skill0266</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_WATER</abnormalType>
 		<castRange>400</castRange>
@@ -592,7 +592,7 @@
 	<skill id="4538" toLevel="1" name="Song of Temptation">
 		<!-- P. Def. decreases momentarily. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
 		<icon>icon.skill0305</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
 		<castRange>400</castRange>
@@ -620,7 +620,7 @@
 	<skill id="4539" toLevel="1" name="Vague Curse">
 		<!-- Momentarily decreases Speed and Accuracy significantly. Guidance spell can remove the curse. -->
 		<icon>icon.skill1240</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
@@ -649,7 +649,7 @@
 	<skill id="4540" toLevel="1" name="Curse of Weakness">
 		<!-- P. Def. decreases momentarily. and Speed significantly. Shield spell can remove the curse. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -678,7 +678,7 @@
 	<skill id="4541" toLevel="1" name="Nihilistic Curse">
 		<!-- P. Atk. decreases momentarily., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -730,11 +730,11 @@
 		</effects>
 	</skill>
 	<skill id="4544" toLevel="3" name="Weakness">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -806,7 +806,7 @@
 	</skill>
 	<skill id="4547" toLevel="1" name="Watchman's Gaze">
 		<icon>icon.skill0131</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>WATCHER_GAZE</abnormalType>
 		<castRange>1000</castRange>
@@ -859,7 +859,7 @@
 	<skill id="4551" toLevel="10" name="Hot Springs Rheumatism">
 		<!-- Infected with Hot Springs Rheumatism. While afflicted, Critical Rate increases temporarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -870,7 +870,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPA_DISEASE_A</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -924,7 +924,7 @@
 	<skill id="4552" toLevel="10" name="Hot Springs Cholera">
 		<!-- Infected with Hot Springs Cholera. While afflicted, Accuracy increases temporarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -935,7 +935,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPA_DISEASE_B</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -989,7 +989,7 @@
 	<skill id="4553" toLevel="10" name="Hot Springs Flu">
 		<!-- Infected with Hot Springs Flu. While afflicted, Atk. Spd. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1000,7 +1000,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPA_DISEASE_C</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1054,7 +1054,7 @@
 	<skill id="4554" toLevel="10" name="Hot Spring Malaria">
 		<!-- Infected with Hot Springs Malaria. While afflicted, Casting Spd. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1065,7 +1065,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPA_DISEASE_D</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1183,7 +1183,7 @@
 	</skill>
 	<skill id="4559" toLevel="1" name="Hot Spring Illusion">
 		<!-- Temporary optical illusion caused by the Hot Spring. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -2197,10 +2197,10 @@
 	<skill id="4575" toLevel="2" name="Haste">
 		<!-- Atk. Spd. is increased by $s1. Effect $s2. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>900</affectRange>
@@ -2239,11 +2239,11 @@
 	<skill id="4576" toLevel="3" name="Reflect Damage">
 		<!-- Reflects $s1 of received damage. Effect $s2. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<affectRange>900</affectRange>
@@ -2285,7 +2285,7 @@
 	<skill id="4577" toLevel="12" name="Decrease Accuracy">
 		<!-- Accuracy decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1222</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -2298,7 +2298,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -2368,7 +2368,7 @@
 	<skill id="4578" toLevel="1" name="Petrify">
 		<!-- Petrified and unable to move momentarily. -->
 		<icon>icon.skill4111</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2408,7 +2408,7 @@
 	<skill id="4579" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -2421,7 +2421,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2508,7 +2508,7 @@
 	<skill id="4580" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -2521,7 +2521,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2588,7 +2588,7 @@
 	<skill id="4581" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2641,7 +2641,7 @@
 	<skill id="4582" toLevel="12" name="Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -2654,7 +2654,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2724,7 +2724,7 @@
 	<skill id="4583" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -2737,7 +2737,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2804,7 +2804,7 @@
 	<skill id="4584" toLevel="12" name="P. Def.-decreasing Stun">
 		<!-- State of momentarily decreased defense and immobility due to the Stun effect. Effect $s1 -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">12</value>
@@ -2817,7 +2817,7 @@
 			<value level="10">13</value>
 			<value level="11">13</value>
 			<value level="12">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">9</value>
 			<value level="2">9</value>
@@ -2903,11 +2903,11 @@
 	<skill id="4585" toLevel="3" name="Berserker Spirit">
 		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -3001,7 +3001,7 @@
 	<skill id="4586" toLevel="12" name="Decrease Evasion">
 		<!-- Evasion decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1222</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3014,7 +3014,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -3082,7 +3082,7 @@
 	<skill id="4587" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3095,7 +3095,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3163,10 +3163,10 @@
 		</effects>
 	</skill>
 	<skill id="4588" toLevel="2" name="Berserker Haste">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectRange>900</affectRange>
@@ -3247,7 +3247,7 @@
 	<skill id="4589" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3260,7 +3260,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3332,7 +3332,7 @@
 	<skill id="4590" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3345,7 +3345,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3417,7 +3417,7 @@
 	<skill id="4591" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3430,7 +3430,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3502,7 +3502,7 @@
 	<skill id="4592" toLevel="12" name="Decrease P. Def.">
 		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3515,7 +3515,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -3585,7 +3585,7 @@
 	<skill id="4593" toLevel="12" name="Decrease P. Def.">
 		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3598,7 +3598,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -3668,7 +3668,7 @@
 	<skill id="4594" toLevel="12" name="Decrease P. Def.">
 		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3681,7 +3681,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -3749,11 +3749,11 @@
 		</effects>
 	</skill>
 	<skill id="4595" toLevel="3" name="Acumen Shield">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectRange>900</affectRange>
@@ -3804,7 +3804,7 @@
 	<skill id="4596" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -3817,7 +3817,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -3888,7 +3888,7 @@
 	<skill id="4597" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -3901,7 +3901,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -3972,7 +3972,7 @@
 	<skill id="4598" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -3985,7 +3985,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -4056,7 +4056,7 @@
 	<skill id="4599" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -4069,7 +4069,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>

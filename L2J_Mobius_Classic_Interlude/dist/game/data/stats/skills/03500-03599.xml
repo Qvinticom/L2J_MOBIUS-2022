@@ -1567,7 +1567,7 @@
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1700,7 +1700,7 @@
 	<skill id="3574" toLevel="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -1835,7 +1835,7 @@
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1905,7 +1905,7 @@
 	<skill id="3579" toLevel="1" name="Decrease P. Def.">
 		<!-- Temporarily decreases P. Def. Effect 3 -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>4</activateRate>
@@ -2070,7 +2070,7 @@
 	<skill id="3584" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2141,7 +2141,7 @@
 	<skill id="3586" toLevel="1" name="Restrain Physical Skills">
 		<!-- Temporarily blocks opponent's ability to use physical skills. -->
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2210,7 +2210,7 @@
 	<skill id="3588" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2280,7 +2280,7 @@
 	<skill id="3590" toLevel="1" name="Restrain Magic Skills">
 		<!-- Magic skills are blocked momentarily. -->
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2401,7 +2401,7 @@
 	<skill id="3594" toLevel="1" name="Decrease Speed">
 		<!-- Temporarily decreases Speed. Effect 3. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>7</activateRate>

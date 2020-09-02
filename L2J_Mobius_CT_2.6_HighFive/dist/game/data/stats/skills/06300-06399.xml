@@ -21,9 +21,9 @@
 	</skill>
 	<skill id="6301" levels="2" name="Cold Mana's Fragment">
 		<!-- Recovers MP by 60 per second. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#mdot">60 30</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
 		<set name="affectRange" val="350" />
@@ -43,7 +43,7 @@
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
 		<!-- Increase P. Def. and M. Def by 15%. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="effectPoint" val="1" />
@@ -80,7 +80,7 @@
 	</skill>
 	<skill id="6304" levels="1" name="Shock">
 		<!-- Momentarily causes shock and stuns the enemy for 2 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -125,7 +125,7 @@
 	</skill>
 	<skill id="6306" levels="1" name="Solina Strike">
 		<!-- Causes profuse bleeding for 10 seconds, causing 139 HP damage per second. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -275,7 +275,7 @@
 		</for>
 	</skill>
 	<skill id="6313" levels="1" name="Solina Bless">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -379,7 +379,7 @@
 	</skill>
 	<skill id="6318" levels="1" name="Divine Shield Protection">
 		<!-- Increases P. Def. by 10% for 3 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="affectRange" val="200" />
@@ -401,7 +401,7 @@
 	</skill>
 	<skill id="6319" levels="1" name="Sacred Magic Protection">
 		<!-- Increases M. Def. by 10% for 3 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="affectRange" val="200" />
@@ -423,7 +423,7 @@
 	</skill>
 	<skill id="6320" levels="1" name="Summon Sacred Magic Force">
 		<!-- Decreases enemy's P.Def. by 23% for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
@@ -633,7 +633,7 @@
 		</for>
 	</skill>
 	<skill id="6331" levels="1" name="Camp Fire Tired">
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="basicProperty" val="MEN" />
@@ -652,7 +652,7 @@
 		</for>
 	</skill>
 	<skill id="6332" levels="1" name="Camp Fire Full">
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="basicProperty" val="MEN" />
@@ -673,7 +673,7 @@
 	</skill>
 	<skill id="6333" levels="1" name="Electric Bolt 1">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -704,7 +704,7 @@
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
 		<!-- Momentarily causes shock and stuns the enemy for 4 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -796,7 +796,7 @@
 	</skill>
 	<skill id="6339" levels="1" name="Sacred Hammer Attack">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -828,7 +828,7 @@
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
 		<!-- Momentarily causes shock and stuns the enemy for 4 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -890,7 +890,7 @@
 		<table name="#icons">icon.skill6343_1 icon.skill6343_2</table>
 		<table name="#mAtk">1.08 1.15</table>
 		<table name="#pAtk">1.02 1.03</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
@@ -918,7 +918,7 @@
 		<table name="#icons">icon.skill6365_1 icon.skill6365_2</table>
 		<table name="#pmAtkSpd">1.04 1.08</table>
 		<table name="#runSpd">5 10</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
@@ -948,7 +948,7 @@
 		<table name="#icons">icon.skill6366_1 icon.skill6366_2</table>
 		<table name="#mCritPower">1.02 1.04</table>
 		<table name="#rCrit">1.04 1.08</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
@@ -974,9 +974,9 @@
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
 		<!-- Level 1: The energy of Bistakon surrounds you. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#icons">icon.skill6367_1 icon.skill6367_2 icon.skill6367_3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF1" />
 		<set name="castRange" val="400" />
@@ -996,9 +996,9 @@
 	</skill>
 	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
 		<!-- Level 1: The energy of Cokrakon surrounds you. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#icons">icon.skill6368_1 icon.skill6368_2 icon.skill6368_3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF2" />
 		<set name="castRange" val="400" />
@@ -1018,9 +1018,9 @@
 	</skill>
 	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
 		<!-- Level 1: The energy of Reptilikon surrounds you. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#icons">icon.skill6369_1 icon.skill6369_2 icon.skill6369_3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF3" />
 		<set name="castRange" val="400" />
@@ -1040,7 +1040,7 @@
 	</skill>
 	<skill id="6370" levels="1" name="Thunderbolt">
 		<!-- Receive 8 times the normal damage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="basicProperty" val="CON" />
@@ -1055,7 +1055,7 @@
 	</skill>
 	<skill id="6371" levels="1" name="Invincibility">
 		<!-- Invincible against standard targets, skills and buffs/debuffs. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -1067,8 +1067,8 @@
 	</skill>
 	<skill id="6372" levels="10" name="Power Up">
 		<!-- 2% of Atk. Spd. And 100% of Physical Skill Damage are increased. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="effectPoint" val="1" />
@@ -1080,7 +1080,7 @@
 	</skill>
 	<skill id="6373" levels="1" name="Thunderbolt">
 		<!-- Receive 8 times the normal damage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="basicProperty" val="CON" />
@@ -1111,8 +1111,8 @@
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
 		<!-- For 5 minutes, 10% of max HP, 10% of max MP and 20 HP per second decrease from Dopagen's Sonic Strike. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
 		<set name="effectPoint" val="-100" />
@@ -1124,8 +1124,8 @@
 	</skill>
 	<skill id="6377" levels="10" name="Assault Boost">
 		<!-- Atk. Spd. Increases by 5%. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -1137,7 +1137,7 @@
 	</skill>
 	<skill id="6378" levels="1" name="Earth Shift">
 		<!-- The ground below your feet shakes, making concentration difficult. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="VIBRATION" />
 		<set name="activateRate" val="50" />
@@ -1151,7 +1151,7 @@
 	</skill>
 	<skill id="6379" levels="1" name="Blood Spurt">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1172,7 +1172,7 @@
 	</skill>
 	<skill id="6380" levels="1" name="Bistakon Roar">
 		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1199,8 +1199,8 @@
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
 		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
-		<table name="#abnormalLvls">1 2</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1227,7 +1227,7 @@
 	</skill>
 	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1256,7 +1256,7 @@
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
 		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1300,7 +1300,7 @@
 	</skill>
 	<skill id="6385" levels="1" name="Bistakon Critical Claw">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1330,7 +1330,7 @@
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
 		<!-- Momentarily causes shock and stuns the enemy for 3 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1392,7 +1392,7 @@
 	</skill>
 	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
 		<!-- Speed is decreased by 50%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="700" />
@@ -1414,7 +1414,7 @@
 	</skill>
 	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
 		<!-- Casting Speed is decreased by 50%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="affectRange" val="300" />
@@ -1438,7 +1438,7 @@
 	</skill>
 	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
 		<!-- Momentarily causes shock and stuns the enemy for 5 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1466,7 +1466,7 @@
 	</skill>
 	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
 		<!-- Attack Speed is decreased by 50%. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1524,7 +1524,7 @@
 	</skill>
 	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1553,7 +1553,7 @@
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">
 		<!-- Frightens the enemy and causes him to flee for 6 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -1580,7 +1580,7 @@
 	</skill>
 	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
 		<!-- Momentarily causes shock and stuns the enemy for 3 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1608,7 +1608,7 @@
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
 		<!-- Frightens the enemy and causes him to flee for 3 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />

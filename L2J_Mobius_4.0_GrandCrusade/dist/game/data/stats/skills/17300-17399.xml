@@ -27,7 +27,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -81,7 +81,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -141,7 +141,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -310,7 +310,7 @@
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<reuseDelay>1800000</reuseDelay>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -625,7 +625,7 @@
 	<skill id="17387" toLevel="1" name="Fish Stew: WIT">
 		<!-- For 30min./ WIT + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>
@@ -645,7 +645,7 @@
 	<skill id="17388" toLevel="1" name="Fish Stew: INT">
 		<!-- For 30min./ INT + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>
@@ -665,7 +665,7 @@
 	<skill id="17389" toLevel="1" name="Fish Stew: MEN">
 		<!-- For 30min./ MEN + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>
@@ -685,7 +685,7 @@
 	<skill id="17390" toLevel="1" name="Fish Stew: DEX">
 		<!-- For 30min./ DEX + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>
@@ -705,7 +705,7 @@
 	<skill id="17391" toLevel="1" name="Fish Stew: STR">
 		<!-- For 30min./ STR + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>
@@ -725,7 +725,7 @@
 	<skill id="17392" toLevel="1" name="Fish Stew: CON">
 		<!-- For 30min./ CON + 3. Effect does not stack. Cooldown is 5min. -->
 		<icon>icon.fish_stew_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<operateType>A2</operateType>

@@ -39,7 +39,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6706" levels="1" name="Piercing Attack">
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" /> <!-- FIXME: Base Land Rate unconformed -->
@@ -92,7 +92,7 @@
 	</skill>
 	<skill id="6714" levels="1" name="Wind Walk of Elcadia">
 		<!-- Increases Speed by 33 for 10 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -112,7 +112,7 @@
 	</skill>
 	<skill id="6715" levels="1" name="Haste of Elcadia">
 		<!-- Increases Atk. Spd. by 33% for 10 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -132,7 +132,7 @@
 	</skill>
 	<skill id="6716" levels="1" name="Might of Elcadia">
 		<!-- Increases P. Atk. by 15% for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -152,7 +152,7 @@
 	</skill>
 	<skill id="6717" levels="1" name="Berserker Spirit of Elcadia">
 		<!-- For 10 minutes, reduces party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="blockedInOlympiad" val="true" />
@@ -179,7 +179,7 @@
 	</skill>
 	<skill id="6718" levels="1" name="Death Whisper of Elcadia">
 		<!-- Increases critical attack effect by 35% for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -199,7 +199,7 @@
 	</skill>
 	<skill id="6719" levels="1" name="Guidance of Elcadia">
 		<!-- Increases accuracy by 4 for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -219,7 +219,7 @@
 	</skill>
 	<skill id="6720" levels="1" name="Focus of Elcadia">
 		<!-- Increases critical attack rate by 30% for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -239,7 +239,7 @@
 	</skill>
 	<skill id="6721" levels="1" name="Empower of Elcadia">
 		<!-- Increases M. Atk. by 75% for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -259,7 +259,7 @@
 	</skill>
 	<skill id="6722" levels="1" name="Acumen of Elcadia">
 		<!-- Increases Casting Spd. by 30% for 10 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -279,7 +279,7 @@
 	</skill>
 	<skill id="6723" levels="1" name="Concentration of Elcadia">
 		<!-- Decreases magic cancel damage by 53 for 20 minutes. -->
-		<set name="abnormalLvl" val="6" />
+		<set name="abnormalLevel" val="6" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -299,7 +299,7 @@
 	</skill>
 	<skill id="6724" levels="1" name="Greater Heal of Elcadia">
 		<!-- Recovers the target's HP by 450 power and recovers 30 HP per second for 15 seconds. -->
-		<set name="abnormalLvl" val="6" />
+		<set name="abnormalLevel" val="6" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="activateRate" val="0" />
@@ -323,7 +323,7 @@
 	</skill>
 	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
 		<!-- For 15 seconds, bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLESS_THE_BLOOD" />
 		<set name="blockedInOlympiad" val="true" />
@@ -362,7 +362,7 @@
 	</skill>
 	<skill id="6727" levels="1" name="Vampiric Rage of Elcadia">
 		<!-- For 10 minutes, recovers as HP 9% of general physical damage inflicted on the enemy. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="blockedInOlympiad" val="true" />
@@ -399,7 +399,7 @@
 	</skill>
 	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
 		<!-- Increases Resistance to Holy by 30 for 10 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="blockedInOlympiad" val="true" />
@@ -516,7 +516,7 @@
 	</skill>
 	<skill id="6743" levels="1" name="Dark Wind">
 		<!-- Dark attribute is weakened -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -566,7 +566,7 @@
 	</skill>
 	<skill id="6748" levels="1" name="Stun Attack">
 		<!-- Inflicts stun for 5 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
@@ -668,7 +668,7 @@
 	</skill>
 	<skill id="6754" levels="1" name="Bleed">
 		<!-- Inflicted with bleed and 200 HP decreases every second. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -729,7 +729,7 @@
 	</skill>
 	<skill id="6757" levels="1" name="Slow">
 		<!-- Decreases the enemy's Speed by 30% for 15 seconds. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
@@ -754,7 +754,7 @@
 		</for>
 	</skill>
 	<skill id="6758" levels="1" name="Rage">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="100" />
@@ -812,7 +812,7 @@
 		</for>
 	</skill>
 	<skill id="6762" levels="1" name="Rage">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="100" />
@@ -908,7 +908,7 @@
 	</skill>
 	<skill id="6768" levels="1" name="Stun Attack">
 		<!-- Inflicts stun for 5 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
@@ -934,7 +934,7 @@
 	</skill>
 	<skill id="6769" levels="1" name="Petrify">
 		<!-- Inflicted with petrification, the body is rigid like stone. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="activateRate" val="40" />
@@ -1008,7 +1008,7 @@
 		</for>
 	</skill>
 	<skill id="6773" levels="1" name="Rage">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="100" />
@@ -1031,7 +1031,7 @@
 	</skill>
 	<skill id="6774" levels="1" name="Stun Attack">
 		<!-- Inflicts stun for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
@@ -1106,7 +1106,7 @@
 	</skill>
 	<skill id="6777" levels="1" name="Bleeding Gash">
 		<!-- For 20 seconds, slows down Speed and inflicts bleed so that 200 HP is decreased every second. Inflicted with paralysis for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1152,7 +1152,7 @@
 	</skill>
 	<skill id="6779" levels="1" name="Paralysis">
 		<!-- Body is rigid and paralyzed. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" /> <!-- FIXME: value unconfirmed -->
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />

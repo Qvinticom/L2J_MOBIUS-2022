@@ -161,7 +161,7 @@
 	<skill id="4315" toLevel="12" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -273,13 +273,13 @@
 		</effects>
 	</skill>
 	<skill id="4317" toLevel="5" name="Increase Rage Might">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>RAGE_MIGHT</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -311,7 +311,7 @@
 			<value level="1">icon.skill0755</value>
 			<value level="2">icon.skill0757</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -369,7 +369,7 @@
 	<skill id="4319" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -394,7 +394,7 @@
 	<skill id="4320" toLevel="12" name="Poison">
 		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -407,7 +407,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -475,7 +475,7 @@
 	<skill id="4321" toLevel="1" name="Decrease P. Def.">
 		<!-- P. Def. greatly decreases temporarily. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<castRange>1500</castRange>
@@ -501,7 +501,7 @@
 	<skill id="4322" toLevel="1" name="Adventurer's Wind Walk">
 		<!-- Speed increases temporarily. Effect 2. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -524,7 +524,7 @@
 	<skill id="4323" toLevel="1" name="Adventurer's Shield">
 		<!-- For 60 min., P. Def. +15% -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -547,7 +547,7 @@
 	<skill id="4324" toLevel="1" name="Adventurer's Blessed Body">
 		<!-- For 60 min., Max HP +35%. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -570,7 +570,7 @@
 	<skill id="4325" toLevel="1" name="Adventurer's Vampiric Rage">
 		<!-- For 60 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -593,7 +593,7 @@
 	<skill id="4326" toLevel="1" name="Adventurer's Regeneration">
 		<!-- For 60 min., HP Recovery Bonus +20%. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
@@ -616,7 +616,7 @@
 	<skill id="4327" toLevel="1" name="Adventurer's Haste">
 		<!-- Atk. Spd. +15% for 60 min. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -639,7 +639,7 @@
 	<skill id="4328" toLevel="1" name="Adventurer's Blessed Soul">
 		<!-- For 60 min., Max HP +35%. -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -662,7 +662,7 @@
 	<skill id="4329" toLevel="1" name="Adventurer's Acumen">
 		<!-- For 60 min., Casting Spd. +30% -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -685,7 +685,7 @@
 	<skill id="4330" toLevel="1" name="Adventurer's Concentration">
 		<!-- For 60 min., magic cancel rate -18. -->
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -708,7 +708,7 @@
 	<skill id="4331" toLevel="1" name="Adventurer's Empower">
 		<!-- For 60 min., M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -855,7 +855,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4340" toLevel="1" name="Ultimate Buff">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -878,7 +878,7 @@
 		</effects>
 	</skill>
 	<skill id="4341" toLevel="1" name="Ultimate Buff">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -907,10 +907,10 @@
 	<skill id="4342" toLevel="2" name="Wind Walk">
 		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -940,11 +940,11 @@
 	<skill id="4343" toLevel="3" name="Decrease Weight">
 		<!-- Temporarily reduces current weight. -->
 		<icon>icon.skill1257</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<castRange>400</castRange>
@@ -975,11 +975,11 @@
 	<skill id="4344" toLevel="3" name="Shield">
 		<!-- Temporarily P. Def. +8%. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1015,11 +1015,11 @@
 	<skill id="4345" toLevel="3" name="Might">
 		<!-- Temporarily P. Atk. +8%. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1051,12 +1051,12 @@
 	<skill id="4346" toLevel="4" name="Mental Shield">
 		<!-- Temporarily Hold/ Sleep/ Mental Resistance +$s1. -->
 		<icon>icon.skill1035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<castRange>400</castRange>
@@ -1101,14 +1101,14 @@
 	<skill id="4347" toLevel="6" name="Blessed Body">
 		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1146,14 +1146,14 @@
 	<skill id="4348" toLevel="6" name="Blessed Soul">
 		<!-- Max MP +10% for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1191,10 +1191,10 @@
 	<skill id="4349" toLevel="2" name="Magic Barrier">
 		<!-- Temporarily M. Def. +23%. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1224,12 +1224,12 @@
 	<skill id="4350" toLevel="4" name="Stun Resistance">
 		<!-- Temporarily Stun Resistance +15. -->
 		<icon>icon.skill1259</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<castRange>400</castRange>
@@ -1262,14 +1262,14 @@
 	<skill id="4351" toLevel="6" name="Concentration">
 		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. -->
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1307,10 +1307,10 @@
 	<skill id="4352" toLevel="2" name="Soul of Berserker">
 		<!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
@@ -1389,14 +1389,14 @@
 	<skill id="4353" toLevel="6" name="Blessed Shield">
 		<!-- Temporarily Shield Defense Rate +30%. -->
 		<icon>icon.skill1243</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1434,12 +1434,12 @@
 	<skill id="4354" toLevel="4" name="Vampiric Rage">
 		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -1473,11 +1473,11 @@
 	<skill id="4355" toLevel="3" name="Acumen">
 		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1509,11 +1509,11 @@
 	<skill id="4356" toLevel="3" name="Empower">
 		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1545,10 +1545,10 @@
 	<skill id="4357" toLevel="2" name="Haste">
 		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1578,11 +1578,11 @@
 	<skill id="4358" toLevel="3" name="Guidance">
 		<!-- Temporarily P. Accuracy +2. -->
 		<icon>icon.skill1240</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1614,11 +1614,11 @@
 	<skill id="4359" toLevel="3" name="Focus">
 		<!-- Increases P. Critical Rate for a certain amount of time. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1650,11 +1650,11 @@
 	<skill id="4360" toLevel="3" name="Death Whisper">
 		<!-- Increases P. Critical Damage for a certain amount of time. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1686,10 +1686,10 @@
 	<skill id="4361" toLevel="2" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily P. Accuracy -12. -->
 		<icon>icon.skill0046</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SSQ_TOWN_CURSE</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -1729,10 +1729,10 @@
 	<skill id="4362" toLevel="2" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily Casting Spd. -30%. -->
 		<icon>icon.skill0046</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SSQ_TOWN_CURSE</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -1772,7 +1772,7 @@
 	<skill id="4363" toLevel="1" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily P. Accuracy -12. -->
 		<icon>icon.skill0046</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<castRange>600</castRange>
@@ -1797,10 +1797,10 @@
 	<skill id="4364" toLevel="2" name="Blessing of Revelations">
 		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SSQ_TOWN_BLESSING</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -1841,10 +1841,10 @@
 	<skill id="4365" toLevel="2" name="Blessing of Revelations">
 		<!-- Blessing of the Orator of Revelations. Temporarily increases Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SSQ_TOWN_BLESSING</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -1881,7 +1881,7 @@
 	<skill id="4366" toLevel="1" name="Blessing of Revelations">
 		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -1910,7 +1910,7 @@
 	<skill id="4367" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1929,7 +1929,7 @@
 	<skill id="4368" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1952,7 +1952,7 @@
 	<skill id="4369" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1975,7 +1975,7 @@
 	<skill id="4370" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1998,7 +1998,7 @@
 	<skill id="4371" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2021,7 +2021,7 @@
 	<skill id="4372" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2044,7 +2044,7 @@
 	<skill id="4373" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2067,7 +2067,7 @@
 	<skill id="4374" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2090,7 +2090,7 @@
 	<skill id="4375" toLevel="1" name="Clan Hall Blessing">
 		<!-- Receiving the fortress blessing. -->
 		<icon>icon.skill11756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2184,7 +2184,7 @@
 	<skill id="4378" toLevel="12" name="Personal Damage Shield">
 		<!-- Temporarily returns some of the received damage back to the enemy. -->
 		<icon>icon.action105</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2275,7 +2275,7 @@
 	</skill>
 	<skill id="4382" toLevel="12" name="Curse of Lake Ghost">
 		<!-- The Lake Ghost hexes you, temporarily increasing the size of your head. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -2339,7 +2339,7 @@
 		</effects>
 	</skill>
 	<skill id="4383" toLevel="1" name="Aggression Stone">
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2366,7 +2366,7 @@
 	<skill id="4384" toLevel="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Def. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<castRange>600</castRange>
@@ -2384,7 +2384,7 @@
 	<skill id="4385" toLevel="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Atk. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<castRange>600</castRange>
@@ -2402,7 +2402,7 @@
 	<skill id="4386" toLevel="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against poison. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2422,7 +2422,7 @@
 	<skill id="4387" toLevel="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that diminishes the effect of HP recovery magic. -->
 		<icon>icon.skill1269</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<castRange>600</castRange>
@@ -2485,10 +2485,10 @@
 	<skill id="4391" toLevel="2" name="Wind Walk">
 		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2514,11 +2514,11 @@
 	<skill id="4392" toLevel="3" name="Shield">
 		<!-- Temporarily P. Def. +8%. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2545,11 +2545,11 @@
 	<skill id="4393" toLevel="3" name="Might">
 		<!-- Temporarily P. Atk. +8%. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2576,14 +2576,14 @@
 	<skill id="4394" toLevel="6" name="Blessed Body">
 		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2613,14 +2613,14 @@
 	<skill id="4395" toLevel="6" name="Blessed Soul">
 		<!-- Max MP +10% for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2650,10 +2650,10 @@
 	<skill id="4396" toLevel="2" name="Magic Barrier">
 		<!-- Temporarily M. Def. +23%. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2679,10 +2679,10 @@
 	<skill id="4397" toLevel="2" name="Soul of Berserker">
 		<!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
@@ -2757,14 +2757,14 @@
 	<skill id="4398" toLevel="6" name="Blessed Shield">
 		<!-- Temporarily Shield Defense Rate +30%. -->
 		<icon>icon.skill1243</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2794,12 +2794,12 @@
 	<skill id="4399" toLevel="4" name="Vampiric Rage">
 		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>

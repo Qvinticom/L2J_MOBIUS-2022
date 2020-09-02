@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2800" levels="1" name="Stone of Ease">
 		<!-- Max HP is temporarily increased. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="effectPoint" val="1" />
@@ -19,7 +19,7 @@
 	</skill>
 	<skill id="2801" levels="1" name="Stone of Abundance">
 		<!-- Max MP is temporarily increased. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="effectPoint" val="1" />
@@ -848,7 +848,7 @@
 	</skill>
 	<skill id="2839" levels="1" name="Sacred Light Fragment">
 		<!-- Decreases Resistance to Holy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
 		<set name="effectPoint" val="-100" />
@@ -1190,7 +1190,7 @@
 	</skill>
 	<skill id="2856" levels="1" name="Santa's Buff Gift Set">
 		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
@@ -1224,7 +1224,7 @@
 	</skill>
 	<skill id="2857" levels="1" name="Christmas Event - Magic Use Enhancement Scroll">
 		<!-- For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
@@ -1342,7 +1342,7 @@
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
 		<!-- Sharp increase in HP recovery bonus. Effect 4. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="icon" val="icon.etc_reagent_white_i00" />
@@ -1499,7 +1499,7 @@
 	</skill>
 	<skill id="2873" levels="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="1" />
@@ -1516,7 +1516,7 @@
 	</skill>
 	<skill id="2874" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 60 for 33 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="effectPoint" val="1" />
@@ -1533,7 +1533,7 @@
 	</skill>
 	<skill id="2875" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -1550,7 +1550,7 @@
 	</skill>
 	<skill id="2876" levels="1" name="Vampiric Rage">
 		<!-- For 60 minutes, 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="effectPoint" val="1" />
@@ -1567,7 +1567,7 @@
 	</skill>
 	<skill id="2877" levels="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="effectPoint" val="1" />
@@ -1591,7 +1591,7 @@
 	</skill>
 	<skill id="2878" levels="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="effectPoint" val="1" />
@@ -1608,7 +1608,7 @@
 	</skill>
 	<skill id="2879" levels="1" name="Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -1679,7 +1679,7 @@
 	</skill>
 	<skill id="2883" levels="1" name="Energy Replenishing Herb Tea">
 		<!-- Recovers Vitality upon acquiring Exp. points for 10 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -1696,7 +1696,7 @@
 	</skill>
 	<skill id="2884" levels="1" name="Energy Replenishing Herb Tea">
 		<!-- Recovers Vitality upon acquiring Exp. points for 20 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -1713,7 +1713,7 @@
 	</skill>
 	<skill id="2885" levels="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="effectPoint" val="1" />
@@ -1730,7 +1730,7 @@
 	</skill>
 	<skill id="2886" levels="1" name="Focus">
 		<!-- Increases Critical attack rate by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="effectPoint" val="1" />
@@ -1747,7 +1747,7 @@
 	</skill>
 	<skill id="2887" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="1" />
@@ -1764,7 +1764,7 @@
 	</skill>
 	<skill id="2888" levels="1" name="Guidance">
 		<!-- Increases accuracy by 4 for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="effectPoint" val="1" />
@@ -1781,7 +1781,7 @@
 	</skill>
 	<skill id="2889" levels="1" name="Clarity">
 		<!-- For 60 minutes, it decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="effectPoint" val="1" />
@@ -1800,7 +1800,7 @@
 	</skill>
 	<skill id="2890" levels="1" name="Wild Magic">
 		<!-- For 60 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="effectPoint" val="1" />
@@ -1817,7 +1817,7 @@
 	</skill>
 	<skill id="2891" levels="6" name="Concentration">
 		<!-- Decreases magic cancel damage by 53 for 60 minute. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -1841,7 +1841,7 @@
 	</skill>
 	<skill id="2893" levels="1" name="Solo Escape Petition">
 		<!-- Vitality is maintained for 10 minutes. Solo escape petition containing the wish for a solo player's escape -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
@@ -1915,7 +1915,7 @@
 	<skill id="2897" levels="1" name="Baguette's Herb">
 		<!-- In 10 minutes, HP recovery bonus is increased by 20% and the maximum HP is increased by 10%. Also, the outward appearance of your hair and weapon are changed by the hallucinatory effects of the crocodile tears sprinkled by Pierre Baguette. However, the capabilities of your weapon stay the same. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
 		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_B" />
@@ -1937,7 +1937,7 @@
 	<skill id="2898" levels="1" name="Fresh Cream Herb">
 		<!-- For 10 minutes, increases Maximum HP/Maximum HP/Casting Spd./P. Def./M. Def. and Resistance to debuff by 10%. Increases Atk. Spd. by 15% and Moving Spd. by 10. Weapon and hair appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
 		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_G" />
@@ -1964,7 +1964,7 @@
 	<skill id="2899" levels="1" name="Cheesecake Herb">
 		<!-- In 10 minutes, MP recovery bonus is increased by 20% and the maximum MP is increased by 10%. Also, the outward appearance of your hair and weapon is changed by the hallucinatory effects of the crocodile tears sprinkled by Pierre Baguette. However, the capabilities of your weapon stay the same. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
 		<set name="abnormalVisualEffect" val="CHANGE_WP;CHANGE_HAIR_P" />

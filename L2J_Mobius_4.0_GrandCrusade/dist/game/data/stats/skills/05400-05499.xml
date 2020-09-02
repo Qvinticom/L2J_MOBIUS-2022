@@ -16,7 +16,7 @@
 	<skill id="5401" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>FLY_AWAY</abnormalType>
 		<affectRange>300</affectRange>
@@ -211,7 +211,7 @@
 		</conditions>
 	</skill>
 	<skill id="5416" toLevel="1" name="Dark Cloud Mansion">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -290,7 +290,7 @@
 	<skill id="5422" toLevel="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->
 		<icon>icon.skill1101</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
 		<activateRate>80</activateRate>
@@ -366,7 +366,7 @@
 	<skill id="5423" toLevel="12" name="Poison">
 		<!-- HP decreases from poison momentarily. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -426,7 +426,7 @@
 	<skill id="5424" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -486,7 +486,7 @@
 	<skill id="5425" toLevel="1" name="Iron Shield">
 		<!-- Condition causing target to increase Shield Defense. -->
 		<icon>icon.skill0527</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>IRON_SHIELD_I</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -510,7 +510,7 @@
 	<skill id="5426" toLevel="1" name="Counter Chance">
 		<!-- Condition causing target to decrease skill Casting Spd. and MP consumption. -->
 		<icon>icon.skill0532</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -541,7 +541,7 @@
 	<skill id="5427" toLevel="1" name="Counter Rapid Shot">
 		<!-- Bow/Crossbow Atk. Spd. has been increased. -->
 		<icon>icon.skill0533</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
@@ -572,7 +572,7 @@
 	<skill id="5428" toLevel="1" name="Counter Dash">
 		<!-- Condition causing target to increase speed. -->
 		<icon>icon.skill0534</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL_I</abnormalType>
 		<affectRange>1000</affectRange>
@@ -630,7 +630,7 @@
 	</skill>
 	<skill id="5431" toLevel="1" name="Decrease Speed">
 		<!-- Atk. Spd. and Casting Spd. decreases temporarily. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<activateRate>80</activateRate>
@@ -668,7 +668,7 @@
 	<skill id="5434" toLevel="1" name="Gust">
 		<!-- Inflicted with gust and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -703,7 +703,7 @@
 	<skill id="5435" toLevel="1" name="Gust">
 		<!-- Inflicted with gust and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -737,7 +737,7 @@
 	</skill>
 	<skill id="5436" toLevel="1" name="Increase Recovery Rate">
 		<!-- HP and MP recovery bonus are increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ALL_REGEN_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -973,7 +973,7 @@
 	<skill id="5443" toLevel="4" name="Cry of the Wolf">
 		<!-- Dominate nearby enemies with a mighty roar. -->
 		<icon>icon.action109</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -1012,7 +1012,7 @@
 	<skill id="5444" toLevel="2" name="Maul">
 		<!-- Attacks with fore-claws to create wound. Power $s1. Effect $s2. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1060,7 +1060,7 @@
 	<skill id="5445" toLevel="1" name="Awakening">
 		<!-- Brings out the instinct of the wolf. -->
 		<icon>icon.action105</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>303</effectPoint>
@@ -1164,7 +1164,7 @@
 	<skill id="5447" toLevel="7" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill0523</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1209,7 +1209,7 @@
 	</skill>
 	<skill id="5449" toLevel="1" name="Weak Constitution">
 		<!-- Momentarily immobile due to the Stun effect. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1229,7 +1229,7 @@
 	</skill>
 	<skill id="5450" toLevel="7" name="Thin Skin">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
 			<value level="3">5</value>
@@ -1237,7 +1237,7 @@
 			<value level="5">7</value>
 			<value level="6">8</value>
 			<value level="7">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1286,7 +1286,7 @@
 	</skill>
 	<skill id="5451" toLevel="1" name="Enervation">
 		<!-- Decreases attack and Casting Spd. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1315,7 +1315,7 @@
 	</skill>
 	<skill id="5452" toLevel="3" name="Spite">
 		<!-- Greatly increases the amount of Critical Damage received -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1374,7 +1374,7 @@
 	</skill>
 	<skill id="5454" toLevel="1" name="Shadow Bind">
 		<!-- Immobilized. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>25</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1389,7 +1389,7 @@
 	</skill>
 	<skill id="5455" toLevel="1" name="Voice Bind">
 		<!-- Silenced. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>25</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1404,7 +1404,7 @@
 	</skill>
 	<skill id="5456" toLevel="1" name="Stubborn Resistance">
 		<!-- Atk. Spd. and Speed decreases momentarily due to stubborn resistance. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -1460,7 +1460,7 @@
 	<skill id="5459" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1480,7 +1480,7 @@
 	<skill id="5460" toLevel="1" name="Fear">
 		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
 		<icon>icon.skill1092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1794,7 +1794,7 @@
 	<skill id="5481" toLevel="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1812,7 +1812,7 @@
 	<skill id="5482" toLevel="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>480</abnormalTime>
 		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1840,7 +1840,7 @@
 	</skill>
 	<skill id="5484" toLevel="1" name="Endurance Defense Up">
 		<!-- Increases P. Def. Effect 1. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1855,7 +1855,7 @@
 	</skill>
 	<skill id="5485" toLevel="1" name="Endurance Defense Up">
 		<!-- M. Def. is increased. Effect 1. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1870,7 +1870,7 @@
 	</skill>
 	<skill id="5486" toLevel="1" name="Endurance Offense Up">
 		<!-- P. Atk. is increased. Effect 1. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1896,7 +1896,7 @@
 	</skill>
 	<skill id="5488" toLevel="1" name="Counter Critical Damage Up">
 		<!-- Increases critical P. Atk. Effect 1. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1913,7 +1913,7 @@
 	</skill>
 	<skill id="5489" toLevel="1" name="Counter Critical Rate Up">
 		<!-- Increases critical attack rate. Effect 1. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1930,7 +1930,7 @@
 	</skill>
 	<skill id="5490" toLevel="1" name="Weakened Life">
 		<!-- You have been infected by a fatal poison. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>FATAL_POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -2071,7 +2071,7 @@
 	<skill id="5495" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 10. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2126,7 +2126,7 @@
 	<skill id="5497" toLevel="1" name="Horn of Rising Darkness">
 		<!-- Temporarily immobile due to the Stun and Bleed effect and your HP is draining. Effect 1 -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

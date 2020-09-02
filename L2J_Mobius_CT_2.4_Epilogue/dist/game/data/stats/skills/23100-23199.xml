@@ -167,7 +167,7 @@
 	</skill>
 	<skill id="23118" levels="1" name="Zombie Agathion Special Skill - Escape from Death">
 		<!-- Resurrect on current place. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -238,7 +238,7 @@
 	</skill>
 	<skill id="23124" levels="1" name="Gwangong Agathion Special Skill - Aura of Fury">
 		<!-- Stimulates the enemy's attack by 6983 Power. Cooldown of 1 minute. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="0" />
@@ -358,7 +358,7 @@
 	</skill>
 	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill - Decrease Weight">
 		<!-- For 1 hour, increases the weight penalty interval by 9000. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
 		<set name="activateRate" val="0" />
@@ -393,7 +393,7 @@
 	</skill>
 	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="activateRate" val="0" />
@@ -428,7 +428,7 @@
 	</skill>
 	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
 		<!-- Increases Casting Spd. by 30% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="activateRate" val="0" />
@@ -463,7 +463,7 @@
 	</skill>
 	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="activateRate" val="0" />
@@ -631,7 +631,7 @@
 	</skill>
 	<skill id="23153" levels="1" name="Prominent Outsider Adventurer's Ability">
 		<!-- For 20 minutes, raises HP by 20%, Max MP by 20%, and moving speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. Increases resistance to de-buffs by 10%. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -654,7 +654,7 @@
 	</skill>
 	<skill id="23155" levels="1" name="Reindeer Scratch">
 		<!-- Raises affection level. For 10 minutes, raises physical critical rate by 30% and chance of magical critical rate by 2. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF3" />
 		<set name="blockedInOlympiad" val="true" />
@@ -666,7 +666,7 @@
 	</skill>
 	<skill id="23156" levels="1" name="Gift of Thanks">
 		<!-- Energy level is maintained for 10 minutes. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -680,7 +680,7 @@
 	</skill>
 	<skill id="23157" levels="1" name="Donateloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases physical Atk. Spd. by 20%. Bestows the ability to recover as HP 10% of the standard short-range physical damage inflicted on the enemy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -692,7 +692,7 @@
 	</skill>
 	<skill id="23158" levels="1" name="Raphaeloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increasesw physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases the rate of Critical attack by 30%. Increases the power of Critical attack by 10%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -704,7 +704,7 @@
 	</skill>
 	<skill id="23159" levels="1" name="Leonardoph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magic M. Atk. by 10%. Increases magic Casting Spd. by 20%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -716,7 +716,7 @@
 	</skill>
 	<skill id="23160" levels="1" name="Michelangeloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magical critical power by 20% and the chance of magical critical rate by 2. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -728,7 +728,7 @@
 	</skill>
 	<skill id="23161" levels="1" name="Rudolphina's Blessing - Maintain Vitality">
 		<!-- While this buff is active, Vitality won't be consumed while hunting. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -754,7 +754,7 @@
 	</skill>
 	<skill id="23163" levels="1" name="Turkey's Big Mistake">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 50%. Increases physical P. Atk., magic M. Atk., physical P. Def., and magic M. Def. by 20%. Increases moving speed by 30%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -780,7 +780,7 @@
 	</skill>
 	<skill id="23165" levels="1" name="Inadequate Affection">
 		<!-- For 10 seconds, moving speed decreases by 2%, and your head gets bigger. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -810,7 +810,7 @@
 	</skill>
 	<skill id="23167" levels="1" name="Rosy Seduction">
 		<!-- Increases Max HP by 20%, Max MP by 20%, and the moving speed by 20% for 5 minutes. Increases the resistance to de-buffs by 10%. Reuse delay 10 minutes. Consumes 3 Rose Essence during skill use. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="blockedInOlympiad" val="true" />
@@ -823,7 +823,7 @@
 	</skill>
 	<skill id="23168" levels="1" name="Critical Seduction">
 		<!-- Increases party members' Max HP by 30%, Max MP by 30%, Max CP by 30%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20%, and physical P. Atk. by 10%, and decreases MP consumption during skill use by 15% for 20 minutes. Reuse delay 40 minutes. Consumes 10 Rose Essence during skill use. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="blockedInOlympiad" val="true" />
@@ -837,7 +837,7 @@
 	</skill>
 	<skill id="23169" levels="1" name="Mesmerized">
 		<!-- Critical Seduction has left you mesmerized. You cannot be buffed with Critical Seduction again during the next 40 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
 		<set name="effectPoint" val="1" />
@@ -851,7 +851,7 @@
 	</skill>
 	<skill id="23170" levels="1" name="Mesmerized">
 		<!-- Rosy Seduction has left you mesmerized. You cannot be buffed with Rosy Seduction again during the next 10 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF7" />
 		<set name="effectPoint" val="1" />
@@ -877,7 +877,7 @@
 	</skill>
 	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill - Nirvana Rebirth">
 		<!-- All HP, MP, CP are recovered, and becomes invincible for 5 seconds with the power of Phoenix. Possible to use under HP 30% only. Cooldown of 12 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -932,7 +932,7 @@
 	</skill>
 	<skill id="23174" levels="1" name="Narrow Escape from Death">
 		<!-- Revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained, though the Blessing of Noblesse and the Amulet of Luck will both be lost. Cooldown of 12 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
 		<set name="blockedInOlympiad" val="true" />
@@ -951,7 +951,7 @@
 	</skill>
 	<skill id="23175" levels="1" name="Soul Stealth">
 		<!-- Hides for 5 seconds, then bestows the ability not to provoke preemptive attacks from monsters for 2 minutes. Decreases moving speed by 50% while the skill is in effect. Reuse delay is 12 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="HIDE" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -966,7 +966,7 @@
 	</skill>
 	<skill id="23176" levels="1" name="Hide">
 		<!-- Hides for 5 seconds. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="HIDE" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -981,7 +981,7 @@
 	</skill>
 	<skill id="23177" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -996,7 +996,7 @@
 	</skill>
 	<skill id="23178" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -1012,7 +1012,7 @@
 	</skill>
 	<skill id="23179" levels="1" name="Blessing of Vitality">
 		<!-- Your Vitality level is maintained for 2 hours thanks to an old magic unsealed by the Magic Research Institute. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="castRange" val="600" />

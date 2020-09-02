@@ -325,13 +325,13 @@
 			<value level="5">icon.skill50036_5</value>
 		</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<activateRate>100</activateRate>
 		<abnormalType>FREEZING</abnormalType>
@@ -397,7 +397,7 @@
 	<skill id="50039" toLevel="1" name="Aqua Destruction">
 		<!-- 50% chance to cancel Aqua Rage. -->
 		<operateType>A2</operateType>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<activateRate>500</activateRate>
 		<abnormalType>FREEZING</abnormalType>
@@ -451,7 +451,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<trait>PARALYZE</trait>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -538,7 +538,7 @@
 			<value level="9">icon.skill50050_9</value>
 			<value level="10">icon.skill50050_10</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -549,7 +549,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>

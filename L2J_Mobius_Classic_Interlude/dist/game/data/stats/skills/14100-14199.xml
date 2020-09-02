@@ -75,7 +75,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>
@@ -144,7 +144,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>460</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -194,7 +194,7 @@
 			<value level="5">89</value>
 			<value level="6">90</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<fanRange>0;0;120;200</fanRange>
 		<isDebuff>true</isDebuff>
@@ -249,7 +249,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>3.5</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -377,7 +377,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>200</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -452,7 +452,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>90</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>POISON</trait>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -488,7 +488,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>90</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>150</affectRange>
@@ -568,13 +568,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>90</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
@@ -615,7 +615,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -645,7 +645,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>300</affectRange>
@@ -680,11 +680,11 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>90</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
@@ -722,7 +722,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -749,7 +749,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -776,7 +776,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -803,7 +803,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -830,7 +830,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -857,7 +857,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -884,7 +884,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -911,7 +911,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -938,7 +938,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
@@ -1039,7 +1039,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>400</affectRange>
@@ -1213,7 +1213,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>200</affectRange>
@@ -1307,7 +1307,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1344,7 +1344,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>SLEEP</trait>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1385,7 +1385,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1487,7 +1487,7 @@
 			<value level="2">93</value>
 			<value level="3">94</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectRange>250</affectRange>
 		<isDebuff>true</isDebuff>
@@ -1985,7 +1985,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>16</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2015,7 +2015,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>70</activateRate>
 		<magicLvl>16</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>300</affectRange>
 		<isDebuff>true</isDebuff>
@@ -2095,7 +2095,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>14</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>POISON</trait>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -2191,7 +2191,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>18</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2244,7 +2244,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>20</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>300</affectRange>
 		<isDebuff>true</isDebuff>
@@ -2363,7 +2363,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>200</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<trait>KNOCKDOWN</trait>
 		<affectRange>300</affectRange>
@@ -2483,7 +2483,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -2521,7 +2521,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
@@ -2603,7 +2603,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>60</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2629,7 +2629,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>360000</abnormalTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<hitTime>500</hitTime>
@@ -2676,7 +2676,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
@@ -2709,7 +2709,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2733,7 +2733,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>SHOCK</trait>
 		<affectRange>400</affectRange>
@@ -2764,7 +2764,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>90</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2795,7 +2795,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>
@@ -2830,7 +2830,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectRange>600</affectRange>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -2858,7 +2858,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>200</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<trait>KNOCKDOWN</trait>
 		<affectRange>300</affectRange>
@@ -2893,7 +2893,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<affectRange>300</affectRange>
 		<hitTime>1500</hitTime>

@@ -22,7 +22,7 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="abnormalLvl">
+								<xs:element name="abnormalLevel">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
 											<xs:element maxOccurs="unbounded" name="value">
@@ -348,7 +348,7 @@
 														<xs:element minOccurs="0" maxOccurs="unbounded" name="npcId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="instanceId" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" name="socialClass" type="xs:int" />
+														<xs:element minOccurs="0" name="socialClass" type="xs:byte" />
 														<xs:element minOccurs="0" name="teleportBookmarkSlots" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
@@ -929,6 +929,21 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="CROSSBOW">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:byte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="TWOHANDCROSSBOW">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
@@ -1563,21 +1578,6 @@
 																			<xs:complexType>
 																				<xs:simpleContent>
 																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
-															<xs:element name="TWOHANDCROSSBOW">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:byte">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -2327,6 +2327,7 @@
 														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
+														<xs:element minOccurs="0" name="socialClass" type="xs:byte" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
 														<xs:element minOccurs="0" name="level" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
@@ -2366,7 +2367,6 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
-														<xs:element minOccurs="0" name="socialClass" type="xs:int" />
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>
@@ -2915,8 +2915,6 @@
 								<xs:element name="reuseDelayGroup" type="xs:unsignedShort" />
 								<xs:element name="displayInList" type="xs:boolean" />
 								<xs:element name="isSuicideAttack" type="xs:boolean" />
-								<xs:element name="abnormallVL" type="xs:unsignedByte" />
-								<xs:element name="staticDelay" type="xs:boolean" />
 								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="power">
 									<xs:complexType>
@@ -2951,7 +2949,6 @@
 								<xs:element name="abnormalResists" type="xs:string" />
 								<xs:element name="isTriggeredSkill" type="xs:boolean" />
 								<xs:element name="deleteAbnormalOnLeave" type="xs:boolean" />
-								<xs:element name="abnormalLevel" type="xs:unsignedByte" />
 								<xs:element name="reuseDelayType" type="xs:string" />
 								<xs:element name="withoutAction" type="xs:boolean" />
 								<xs:element name="isMentoring" type="xs:boolean" />

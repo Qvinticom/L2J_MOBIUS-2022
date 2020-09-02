@@ -3,7 +3,7 @@
 	<skill id="22000" levels="1" name="Spicy Kimchee">
 		<!-- Regeneration is temporarily increased. Effectiveness 1. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -19,7 +19,7 @@
 	<skill id="22001" levels="1" name="Spicy Kimchee">
 		<!-- Regeneration and power are temporarily increased. Effectiveness 2. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -35,7 +35,7 @@
 	<skill id="22002" levels="1" name="Spicy Kimchee">
 		<!-- Regeneration, power, and power speed are temporarily increased. Effectiveness 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -64,7 +64,7 @@
 	<skill id="22004" levels="1" name="Energy Ginseng">
 		<!-- Recovers energy upon acquiring Exp. points. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -241,7 +241,7 @@
 	</skill>
 	<skill id="22013" levels="1" name="Holiday Festival">
 		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -272,7 +272,7 @@
 	</skill>
 	<skill id="22014" levels="1" name="Holiday Festival">
 		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -303,7 +303,7 @@
 	</skill>
 	<skill id="22015" levels="1" name="Holiday Festival">
 		<!-- Maximum HP/MP/CP, Physical/Defense Power and Speed are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -333,7 +333,7 @@
 	</skill>
 	<skill id="22016" levels="1" name="Holiday Festival">
 		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Magic Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -568,7 +568,7 @@
 	<skill id="22029" levels="1" name="Baguette Herb">
 		<!-- Increases Atk. Spd. for a certain amount of time. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_AFRO_NORMAL" />
@@ -593,7 +593,7 @@
 	<skill id="22030" levels="1" name="Cream Puff Herb">
 		<!-- Recovers Vitality upon acquiring Exp. points. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_AFRO_GOLD" />
@@ -618,7 +618,7 @@
 	<skill id="22031" levels="1" name="Cheesecake Herb">
 		<!-- Increases magic Casting Spd. for a certain amount of time. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="abnormalVisualEffect" val="BR_AFRO_PINK" />
@@ -698,7 +698,7 @@
 	</skill>
 	<skill id="22035" levels="1" name="Birthday Cake Effect">
 		<!-- Birthday Cake Vitality Buff. Increases your Vitality whenever you gain experience. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="affectRange" val="200" />
@@ -822,7 +822,7 @@
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
 		<!-- Transformed into an Onyx Beast. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -844,7 +844,7 @@
 	</skill>
 	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
 		<!-- Transformed into a Death Blader. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -866,7 +866,7 @@
 	</skill>
 	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
 		<!-- Transformed into a Grail Apostle. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -888,7 +888,7 @@
 	</skill>
 	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
 		<!-- Transformed into a Unicorn. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -910,7 +910,7 @@
 	</skill>
 	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
 		<!-- Transformed into a Lilim Knight. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -932,7 +932,7 @@
 	</skill>
 	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
 		<!-- Transformed into a Golem Guardian. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -954,7 +954,7 @@
 	</skill>
 	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
 		<!-- Transformed into an Inferno Drake. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -976,7 +976,7 @@
 	</skill>
 	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
 		<!-- Transformed into a Dragon Bomber. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1025,7 +1025,7 @@
 	</skill>
 	<skill id="22054" levels="1" name="Potion of Energy Maintenance">
 		<!-- State in which the Vitality Stage is maintained. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -1056,7 +1056,7 @@
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
 		<!-- Increases Speed by 33 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1073,7 +1073,7 @@
 	</skill>
 	<skill id="22057" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1090,7 +1090,7 @@
 	</skill>
 	<skill id="22058" levels="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1107,7 +1107,7 @@
 	</skill>
 	<skill id="22059" levels="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1124,7 +1124,7 @@
 	</skill>
 	<skill id="22060" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1141,7 +1141,7 @@
 	</skill>
 	<skill id="22061" levels="1" name="Guidance">
 		<!-- Increases accuracy by 4 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1158,7 +1158,7 @@
 	</skill>
 	<skill id="22062" levels="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1175,7 +1175,7 @@
 	</skill>
 	<skill id="22063" levels="1" name="Greater Acumen">
 		<!-- Increases Casting Spd. by 30% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1192,7 +1192,7 @@
 	</skill>
 	<skill id="22064" levels="1" name="Vampiric Rage">
 		<!-- For 1 hour, 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1209,7 +1209,7 @@
 	</skill>
 	<skill id="22065" levels="1" name="Bless the Body">
 		<!-- Increases Max HP by 35% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1226,7 +1226,7 @@
 	</skill>
 	<skill id="22066" levels="1" name="Berserker Spirit">
 		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1250,7 +1250,7 @@
 	</skill>
 	<skill id="22067" levels="1" name="Magic Barrier">
 		<!-- Increases magic resistance by 30% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1267,7 +1267,7 @@
 	</skill>
 	<skill id="22068" levels="1" name="Bless the Soul">
 		<!-- Increases Max MP by 35% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1284,7 +1284,7 @@
 	</skill>
 	<skill id="22069" levels="1" name="Clarity">
 		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1303,7 +1303,7 @@
 	</skill>
 	<skill id="22070" levels="1" name="Wild Magic">
 		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1398,7 +1398,7 @@
 	</skill>
 	<skill id="22079" levels="1" name="Resist Aqua">
 		<!-- Increases Resistance to water by 20% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_WATER" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1413,7 +1413,7 @@
 	</skill>
 	<skill id="22080" levels="1" name="Resist Wind">
 		<!-- Increases Resistance to wind by 20% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_WIND" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1428,7 +1428,7 @@
 	</skill>
 	<skill id="22081" levels="1" name="Resist Fire">
 		<!-- Increases Resistance to fire by 20% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1443,7 +1443,7 @@
 	</skill>
 	<skill id="22082" levels="1" name="Resist Holy">
 		<!-- Increases Resistance to Holy by 23% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_HOLY" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1458,7 +1458,7 @@
 	</skill>
 	<skill id="22083" levels="1" name="Resist Unholy">
 		<!-- Increases Resistance to Dark by 23% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1473,7 +1473,7 @@
 	</skill>
 	<skill id="22084" levels="1" name="Mental Shield">
 		<!-- Increases Resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1495,7 +1495,7 @@
 	</skill>
 	<skill id="22085" levels="1" name="Focus">
 		<!-- Increases Critical attack rate by 30 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1515,7 +1515,7 @@
 	</skill>
 	<skill id="22086" levels="1" name="Concentration">
 		<!-- Decreases magic cancel damage by 36 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1535,7 +1535,7 @@
 	</skill>
 	<skill id="22087" levels="1" name="Blessing Shield">
 		<!-- Increases Shield defense rate by 15 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1555,7 +1555,7 @@
 	</skill>
 	<skill id="22088" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1575,7 +1575,7 @@
 	</skill>
 	<skill id="22089" levels="1" name="Regeneration">
 		<!-- Increases HP Regeneration by 20% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1595,7 +1595,7 @@
 	</skill>
 	<skill id="22090" levels="1" name="Advanced Block">
 		<!-- Increases Shield P. Def. by 40% for 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_DEFENCE_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1725,7 +1725,7 @@
 	<skill id="22097" levels="1" name="Girl's Gift of Gratitude">
 		<!-- A thank-you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, Speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1755,7 +1755,7 @@
 	<skill id="22098" levels="1" name="Boy's Gift of Gratitude">
 		<!-- A thank-you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, Speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1784,7 +1784,7 @@
 	</skill>
 	<skill id="22099" levels="1" name="Soul Silver Foil">
 		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, Speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
 		<set name="blockedInOlympiad" val="true" />

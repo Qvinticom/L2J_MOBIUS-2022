@@ -335,7 +335,7 @@
 	<skill id="617" toLevel="1" name="Transform Onyx Beast">
 		<!-- Transform into an Onyx Beast. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -366,7 +366,7 @@
 	<skill id="618" toLevel="1" name="Transform Doom Wraith">
 		<!-- Transform into a Doom Wraith. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -478,7 +478,7 @@
 	<skill id="622" toLevel="2" name="Ultimate Escape">
 		<!-- Increases Evasion by $s2 and Speed by $s3 for $s1. -->
 		<icon>icon.skill0622</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<effectPoint>408</effectPoint>
@@ -617,7 +617,7 @@
 	<skill id="627" toLevel="40" name="Soul Shock">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. and causes fear for $s2. Requires a crossbow. Over-hit is possible. Consumes $s3 Souls. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1526,7 +1526,7 @@
 	<skill id="656" toLevel="3" name="Transform Divine Warrior">
 		<!-- Transforms you into a Divine Warrior. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1563,7 +1563,7 @@
 	<skill id="657" toLevel="3" name="Transform Divine Knight">
 		<!-- Transforms you into a Divine Knight. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1600,7 +1600,7 @@
 	<skill id="658" toLevel="3" name="Transform Divine Rogue">
 		<!-- Transforms you into a Divine Rogue. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1637,7 +1637,7 @@
 	<skill id="659" toLevel="3" name="Transform Divine Wizard">
 		<!-- Transforms you into a Divine Wizard. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1674,7 +1674,7 @@
 	<skill id="660" toLevel="3" name="Transform Divine Summoner">
 		<!-- Transforms you into a Divine Summoner. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1711,7 +1711,7 @@
 	<skill id="661" toLevel="3" name="Transform Divine Healer">
 		<!-- Transforms you into a Divine Healer. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1748,7 +1748,7 @@
 	<skill id="662" toLevel="3" name="Transform Divine Enchanter">
 		<!-- Transforms you into a Divine Enchanter. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1785,7 +1785,7 @@
 	<skill id="663" toLevel="1" name="Transform Zaken">
 		<!-- Transforms you into Zaken. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1818,7 +1818,7 @@
 	<skill id="664" toLevel="1" name="Transform Anakim">
 		<!-- Transforms you into Anakin. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1851,7 +1851,7 @@
 	<skill id="665" toLevel="1" name="Transform Venom">
 		<!-- Transforms you into Venom. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1884,7 +1884,7 @@
 	<skill id="666" toLevel="1" name="Transform Gordon">
 		<!-- Transforms you into Gordon. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1917,7 +1917,7 @@
 	<skill id="667" toLevel="1" name="Transform Ranku">
 		<!-- Transforms you into Ranku. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1950,7 +1950,7 @@
 	<skill id="668" toLevel="1" name="Transform Kechi">
 		<!-- Transforms you into Kechi. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1983,7 +1983,7 @@
 	<skill id="669" toLevel="1" name="Transform Demon Prince">
 		<!-- Transforms you into a Demon Prince. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2016,7 +2016,7 @@
 	<skill id="670" toLevel="1" name="Transform Heretic">
 		<!-- Transforms you into a Heretic. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2049,7 +2049,7 @@
 	<skill id="671" toLevel="1" name="Transform Veil Master">
 		<!-- Transforms you into a Veil Master. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2082,7 +2082,7 @@
 	<skill id="672" toLevel="1" name="Transform Saber Tooth Tiger">
 		<!-- Transforms you into a Saber Tooth Tiger. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2115,7 +2115,7 @@
 	<skill id="673" toLevel="1" name="Transform Oel Mahum">
 		<!-- Transforms you into Oel Mahum. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2148,7 +2148,7 @@
 	<skill id="674" toLevel="1" name="Transform Doll Blader">
 		<!-- Transforms you into a Doll Blader. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2251,7 +2251,7 @@
 	<skill id="678" toLevel="1" name="Divine Warrior War Cry">
 		<!-- Increases P. Atk. by 25% for 1 minute. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>408</effectPoint>
@@ -2274,7 +2274,7 @@
 	<skill id="679" toLevel="1" name="Sacrifice Warrior">
 		<!-- Sacrifices oneself to increase P. Atk. of all party members by 20% for 30 seconds. Available only when HP is under 30%. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
 		<affectRange>300</affectRange>
@@ -2313,7 +2313,7 @@
 	<skill id="680" toLevel="1" name="Divine Knight Hate">
 		<!-- Provokes the enemy to attack with 6752 Power. -->
 		<icon>icon.skill_transform_etc</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>80</activateRate>
@@ -2340,7 +2340,7 @@
 	<skill id="681" toLevel="1" name="Divine Knight Aggression Aura">
 		<!-- Provokes nearby enemies to attack by 6752 Power. -->
 		<icon>icon.skill_transform_etc</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>40</activateRate>
@@ -2367,7 +2367,7 @@
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
 		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 1162 power. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2402,7 +2402,7 @@
 	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
 		<!-- Inflicts damage and shock on nearby enemies at once. Inflicts momentary Stun on nearby enemies. Ignores Shield Defense. Over-hit is possible. 775 power. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2438,7 +2438,7 @@
 	<skill id="684" toLevel="1" name="Divine Knight Ultimate Defense">
 		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -2471,7 +2471,7 @@
 	<skill id="685" toLevel="1" name="Sacrifice Knight">
 		<!-- Increases P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
 		<affectRange>300</affectRange>
@@ -2510,7 +2510,7 @@
 	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
 		<!-- Fires arrows canceling the target??s state by dealing damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 2323 power. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2570,7 +2570,7 @@
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
 		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit is possible. Power 1549. Effect 3. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2635,7 +2635,7 @@
 	<skill id="690" toLevel="1" name="Divine Rogue Agility">
 		<!-- Temporarily increase Evasion by 4. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2661,7 +2661,7 @@
 	<skill id="691" toLevel="1" name="Sacrifice Rogue">
 		<!-- Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
 		<affectRange>300</affectRange>
@@ -2700,7 +2700,7 @@
 	<skill id="692" toLevel="1" name="Divine Wizard Divine Flare">
 		<!-- Attacks a contacted target with non-attribute attack. Momentarily decreases your M. Atk. during PvP. Power 102. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<castRange>150</castRange>
@@ -2780,7 +2780,7 @@
 	<skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
 		<!-- Momentarily bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -2817,7 +2817,7 @@
 	<skill id="696" toLevel="1" name="Divine Wizard Surrender to Holy">
 		<!-- Momentarily decrease Holy Attack Resistance, and increase Dark Attack Resistance. Effect 3. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -2852,7 +2852,7 @@
 	<skill id="697" toLevel="1" name="Sacrifice Wizard">
 		<!-- Increase party member's M. Atk. by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
 		<affectRange>300</affectRange>

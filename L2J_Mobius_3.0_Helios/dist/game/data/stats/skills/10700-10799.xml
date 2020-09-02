@@ -178,7 +178,7 @@
 	<skill id="10703" toLevel="3" name="Armor Breaker">
 		<!-- Cancels target's armor for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. -->
 		<icon>icon.skill10703</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<activateRate>
@@ -208,7 +208,7 @@
 	<skill id="10704" toLevel="3" name="Mass Power Bluff">
 		<!-- Reveals the enemy's back and inflicts Stun for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. -->
 		<icon>icon.skill10704</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -296,7 +296,7 @@
 	<skill id="10748" toLevel="1" name="Rogue - Individual">
 		<!-- Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill. -->
 		<icon>icon.skill1543</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>130</activateRate>
@@ -830,12 +830,12 @@
 	<skill id="10757" toLevel="4" name="Dead Eye Stance">
 		<!-- For $s1, P. Atk. + $s2, and skill power + $s3 when equipped with a bow or crossbow. -->
 		<icon>icon.skill10757</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
@@ -904,12 +904,12 @@
 	<skill id="10758" toLevel="4" name="Rapid Fire Stance">
 		<!-- For $s1, P. Atk. + $s2 and P. Skill Cooldown - $s3 when a bow or crossbow is equipped. -->
 		<icon>icon.skill10758</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
@@ -993,12 +993,12 @@
 	<skill id="10759" toLevel="4" name="Sniper Stance">
 		<!-- For $s1, P. Atk. + $s2 and Atk. Spd. + $s3 when a bow or crossbow is equipped. -->
 		<icon>icon.skill10759</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
@@ -1155,7 +1155,7 @@
 	<skill id="10761" toLevel="11" name="Bow Strike">
 		<!-- Knocks back frontal enemies. Attacks target with $s1 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10761</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -1442,7 +1442,7 @@
 	<skill id="10764" toLevel="1" name="Knock Back">
 		<!-- Knock Back -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1468,7 +1468,7 @@
 	<skill id="10765" toLevel="1" name="Knock Back">
 		<!-- Knock Back -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1497,7 +1497,7 @@
 	<skill id="10766" toLevel="1" name="Additional Effect">
 		<!-- Critical Exposure -->
 		<icon>icon.skill0522</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -1573,7 +1573,7 @@
 	<skill id="10769" toLevel="9" name="Impact Shot">
 		<!-- Fires an arrow at the enemy with $s1 Power added to P. Atk. Stuns the enemy for $s2. Requires a bow or crossbow to be equipped. Over-hit. -->
 		<icon>icon.skill10769</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1665,7 +1665,7 @@
 	<skill id="10770" toLevel="11" name="Recoil Shot">
 		<!-- Shoots an arrow with $s1 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. -->
 		<icon>icon.skill10770</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -2132,7 +2132,7 @@
 	<skill id="10776" toLevel="4" name="Final Ultimate Escape">
 		<!-- For $s1, own P. Evasion +$s2, M. Def. +$s3, P. Skill Evasion +$s4, and Buff Cancel Attack Resistance +$s5. -->
 		<icon>icon.skill10776</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -2204,7 +2204,7 @@
 	<skill id="10777" toLevel="4" name="Lure Shot">
 		<!-- Draws in the enemy's attention. -->
 		<icon>icon.skill10777</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<operateType>A2</operateType>
@@ -2271,7 +2271,7 @@
 	<skill id="10779" toLevel="4" name="Quick Fire">
 		<!-- For $s1, Atk. Spd. + $s2 when equipped with a bow/crossbow. -->
 		<icon>icon.skill10779</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -2332,7 +2332,7 @@
 	<skill id="10780" toLevel="9" name="Slow Shot">
 		<!-- Attacks target with $s1 Power added to P. Atk. for $s2, Speed - $s3. Requires a bow or crossbow to be equipped. -->
 		<icon>icon.skill10780</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -2511,7 +2511,7 @@
 	<skill id="10783" toLevel="4" name="Mind's Eye">
 		<!-- For $s1, opens the eye of infinity to increase Accuracy + $s2, Critical Rate + $s3, and Critical Damage + $s4. -->
 		<icon>icon.skill10783</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -2578,7 +2578,7 @@
 	<skill id="10784" toLevel="1" name="Camouflage">
 		<!-- For 30 seconds, blends into the environment and hides. Decreases Speed by 100. -->
 		<icon>icon.skill10784</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 		</abnormalTime>
@@ -2609,7 +2609,7 @@
 	<skill id="10785" toLevel="5" name="Flare">
 		<!-- Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. -->
 		<icon>icon.skill10785</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">0</value>
 			<value level="2">0</value>
@@ -2662,7 +2662,7 @@
 	<skill id="10786" toLevel="6" name="Time Bomb">
 		<!-- Plants a bomb on target that detonates after $s1 to inflict damage with $s2 power. While the bomb is being installed, target's P. Accuracy decreases by $s3. -->
 		<icon>icon.skill10786</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TIME_BOMB</abnormalType>
 		<operateType>A2</operateType>
@@ -2915,7 +2915,7 @@
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3008,7 +3008,7 @@
 	<skill id="10796" toLevel="1" name="Hawk Gust">
 		<!-- Pushes the enemies around the master. -->
 		<icon>icon.skill0092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>5</abnormalType>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -3110,7 +3110,7 @@
 	<skill id="10798" toLevel="8" name="Thunder Sharp Claw">
 		<!-- Attacks the enemy with sharp talon to inflict bleed. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>

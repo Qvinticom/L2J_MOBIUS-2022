@@ -70,7 +70,7 @@
 	</skill>
 	<skill id="20006" levels="1" name="Soul Roar">
 		<!-- Upon use, immediately regenerates Max HP/CP by 15% and for 10 minutes, increases your Max HP/CP by 15%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_DEBUFF_G" />
 		<set name="effectPoint" val="611" />

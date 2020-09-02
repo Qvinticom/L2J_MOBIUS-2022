@@ -3,7 +3,7 @@
 	<skill id="1800" toLevel="1" name="Pirate">
 		<!-- This pirate once ruled ancient lands of Giran. His own crew excited a riot, but didn't manage to cope with their captain that became even more powerful with the dark forces. Zaken killed all the remaining rebels and disappeared. After transformation Max MP/ HP +3%, Speed +3, Atk. Spd. +2%, P./ M. Accuracy +1, M. Critical Rate +10, P./ M. Atk. +2%, P./ M. Def. +2%. (Consumes 1 Elemental Stone.) -->
 		<icon>icon.skill1800</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>PIRATE_SUIT</abnormalVisualEffect>
@@ -72,7 +72,7 @@
 	<skill id="1801" toLevel="1" name="Dark Assassin">
 		<!-- This is an organization of assassins created by Mercenary Captain Sieghardt Ein for making contract murders and carrying out secret orders. Sieghardt Ein, having become a member of Dawn, has disappeared without a trace, but the organization created by him still leads its shadowy deals. Max MP/ HP +5%, Speed +4, Atk. Spd. +3%, P./ M. Accuracy +1, M. Critical Rate +10, P./ M. Atk. +2%, P./ M. Def. +2%. (Consumes 1 Elemental Stone.) -->
 		<icon>icon.skill1801</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>DARK_ASSASSIN_SUIT</abnormalVisualEffect>
@@ -141,7 +141,7 @@
 	<skill id="1802" toLevel="1" name="White Assassin">
 		<!-- Rune noble Erica Ken Weber is the right hand of Sieghardt Ein. She wasn't influenced by the organizations of dark assassins. For her quest she created an organization of white assassins, continuing to be an informer. Max MP/ HP +7%, Speed +5, Atk. Spd. +5%, P./ M. Accuracy +2, M. Critical Rate +20, P./ M. Atk. +3%, P./ M. Def. +3%. (Consumes 2 Elemental Stones.) -->
 		<icon>icon.skill1802</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
@@ -467,7 +467,7 @@
 	<skill id="1833" toLevel="1" name="Mount - Gold Maned Lion">
 		<!-- Allows to mount a Golden Lion. -->
 		<icon>icon.skill1833</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -496,7 +496,7 @@
 	<skill id="1834" toLevel="1" name="Mount Pegasus">
 		<!-- Allows to mount a Pegasus. -->
 		<icon>icon.skill1834</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -525,7 +525,7 @@
 	<skill id="1835" toLevel="1" name="Mount Saber Tooth Cougar">
 		<!-- Allows to mount a Saber Tooth Cougar. -->
 		<icon>icon.skill1835</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -554,7 +554,7 @@
 	<skill id="1836" toLevel="1" name="Mount Kukuru">
 		<!-- Mount Kukuru -->
 		<icon>icon.skill1836</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -583,7 +583,7 @@
 	<skill id="1837" toLevel="1" name="Mount Black Bear">
 		<!-- Allows to mount a Black Bear. -->
 		<icon>icon.skill1837</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -959,11 +959,11 @@
 	<skill id="1896" toLevel="4" name="Full Knockdown">
 		<!-- Inflicts a powerful strike on target with $s1 Power added to P. Atk., knocking down for $s2 Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill1896</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -1030,7 +1030,7 @@
 	<skill id="1897" toLevel="11" name="Shilen's Cursed Field">
 		<!-- For $s1, Melee Weapon Resistance of the target and nearby enemies -$s2. -->
 		<icon>icon.skill1897</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
@@ -1223,7 +1223,7 @@
 	<skill id="1898" toLevel="9" name="Shield Charge">
 		<!-- Attacks enemies in front of character with $s1 Power added to P. Atk., stunning target for $s2 Requires a shield. Over-hit. -->
 		<icon>icon.skill1898</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

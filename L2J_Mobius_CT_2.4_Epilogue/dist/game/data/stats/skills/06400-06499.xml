@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6464" levels="1" name="Three Siblings' Trickery">
 		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />

@@ -178,7 +178,7 @@
 	</skill>
 	<skill id="4018" levels="1" name="Decrease Speed">
 		<!-- Instantly reduces Speed. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="70" />
@@ -204,7 +204,7 @@
 	</skill>
 	<skill id="4019" levels="1" name="Decrease Speed">
 		<!-- Instantly decreases speed and continually consumes HP. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
@@ -338,11 +338,11 @@
 		</for>
 	</skill>
 	<skill id="4028" levels="3" name="NPC Might">
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">10 18 33</table>
 		<table name="#pAtk">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="abnormalVisualEffect" val="BIG_BODY" />
@@ -360,11 +360,11 @@
 		</for>
 	</skill>
 	<skill id="4029" levels="3" name="NPC Shield">
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">10 18 33</table>
 		<table name="#pDef">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="effectPoint" val="100" />
@@ -381,11 +381,11 @@
 		</for>
 	</skill>
 	<skill id="4030" levels="3" name="NPC Clan Might">
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">10 18 33</table>
 		<table name="#pAtk">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
@@ -405,11 +405,11 @@
 		</for>
 	</skill>
 	<skill id="4031" levels="3" name="NPC Clan Aegis">
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">10 18 33</table>
 		<table name="#pDef">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="400" />
@@ -471,7 +471,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#power">11 16 23 31 41 51 61 66 70 73 76 78</table>
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="60" />
@@ -500,11 +500,11 @@
 	</skill>
 	<skill id="4035" levels="12" name="Poison">
 		<!-- A toxin that gradually reduces HP. Effect 2. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dmg">16 24 32 41 50 58 63 63 66 66 68 68</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 83 77 78</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -532,11 +532,11 @@
 	</skill>
 	<skill id="4036" levels="12" name="Poison">
 		<!-- A toxin that gradually reduces HP. Effect 2. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dmg">16 24 32 41 50 58 63 63 66 66 68 68</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">18 29 40 53 68 83 98 104 109 113 115 117</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -565,11 +565,11 @@
 	</skill>
 	<skill id="4037" levels="3" name="Decrease P.Atk">
 		<!-- Instantly reduces P. Atk. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">20 35 65</table>
 		<table name="#pAtk">0.83 0.8 0.77</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="70" />
@@ -595,12 +595,12 @@
 	</skill>
 	<skill id="4038" levels="5" name="Decrease Atk.Spd.">
 		<!-- Instantly reduces Atk. Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2 2 3 3</table>
+		<table name="#abnormalLevels">1 2 2 3 3</table>
 		<table name="#magicLvl">10 20 30 50 70</table>
 		<table name="#mpConsume">13 20 27 45 65</table>
 		<table name="#pAtkSpd">0.83 0.8 0.8 0.77 0.77</table>
 		<table name="#time">5 10 10 15 15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
@@ -754,7 +754,7 @@
 		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
@@ -784,7 +784,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#mpInitialConsume">3 4 6 7 9 11 13 14 15 15 16 16</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -812,7 +812,7 @@
 	<skill id="4048" levels="3" name="NPC Dash">
 		<table name="#magicLvl">10 10 10</table>
 		<table name="#runSpd">1.5 1.8 2</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="effectPoint" val="-1" />
@@ -874,11 +874,11 @@
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
 		<!-- A toxin that gradually reduces HP. Effect 5. -->
-		<table name="#abnormalLvls">5 6 7 7 7 8 8 8 8 8 8 8 8 8 8</table>
+		<table name="#abnormalLevels">5 6 7 7 7 8 8 8 8 8 8 8 8 8 8</table>
 		<table name="#dot">41 50 58 58 58 63 63 63 63 66 66 66 66 66 66</table>
 		<table name="#effectPoints">-467 -523 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLvl">49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -902,7 +902,7 @@
 		<!-- Instantly reduces P. Atk. Effect 3. -->
 		<table name="#effectPoints">-379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="80" />
@@ -925,7 +925,7 @@
 		<!-- Instantly reduces P. Def. Effect 3. -->
 		<table name="#effectPoints">-379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
@@ -948,7 +948,7 @@
 		<!-- Temporarily reduces Atk. Spd. Effect 3. -->
 		<table name="#effectPoints">-379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
@@ -1036,7 +1036,7 @@
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
 		<!-- You are stunned and temporarily prohibited from movement. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
@@ -1060,7 +1060,7 @@
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
 		<!-- You are stunned and temporarily prohibited from movement. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
@@ -1184,7 +1184,7 @@
 	</skill>
 	<skill id="4070" levels="1" name="Decrease Atk. Spd.">
 		<!-- Reduction in Atk. Spd.. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="10" />
@@ -1222,7 +1222,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1252,7 +1252,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1278,11 +1278,11 @@
 		</for>
 	</skill>
 	<skill id="4074" levels="2" name="NPC Haste">
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#magicLvl">30 70</table>
 		<table name="#mpConsume">14 33</table>
 		<table name="#pAtkSpd">1.15 1.33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -1306,7 +1306,7 @@
 		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1332,11 +1332,11 @@
 	</skill>
 	<skill id="4076" levels="3" name="Reduction in movement speed">
 		<!-- Instantly reduces Speed. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">20 35 65</table>
 		<table name="#runSpd">0.9 0.8 0.7</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
@@ -1446,7 +1446,7 @@
 	</skill>
 	<skill id="4082" levels="1" name="Poison of Death">
 		<!-- You have been infected by a fatal poison. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="4200" />
 		<set name="abnormalType" val="FATAL_POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -1543,11 +1543,11 @@
 	</skill>
 	<skill id="4088" levels="12" name="Bleed">
 		<!-- Inflicts a wound that reduces HP. Effect 2. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1575,7 +1575,7 @@
 		</for>
 	</skill>
 	<skill id="4089" levels="1" name="NPC Bear Spirit Totem">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="-100" />
@@ -1593,7 +1593,7 @@
 		</for>
 	</skill>
 	<skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="-100" />
@@ -1618,7 +1618,7 @@
 		<table name="#pDef">1.1 1.3 1.3</table>
 		<table name="#rEvas">10 10 5</table>
 		<table name="#runSpd">0.85 0.85 0.9</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="abnormalVisualEffect" val="BIG_BODY" />
@@ -1645,7 +1645,7 @@
 		</for>
 	</skill>
 	<skill id="4092" levels="1" name="NPC Puma Spirit Totem">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="-100" />
@@ -1706,11 +1706,11 @@
 		</for>
 	</skill>
 	<skill id="4096" levels="3" name="NPC Hawkeye">
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">6 8 10</table>
 		<table name="#magicLvl">20 40 70</table>
 		<table name="#mpConsume">10 18 33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="AB_HAWK_EYE" />
 		<set name="effectPoint" val="100" />
@@ -1728,12 +1728,12 @@
 		</for>
 	</skill>
 	<skill id="4097" levels="12" name="NPC Chant of Life">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8 9 10 11 12</table>
 		<table name="#hot">7 12 18 27 37 46 55 23 32 42 51 58</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">33 59 88 122 159 195 228 242 252 259 262 262</table>
 		<table name="#power">1 2 3 4 5 6 7 8 9 10 11 12</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="600" />
@@ -1758,7 +1758,7 @@
 		<!-- Instantly blocks magic skills. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1783,7 +1783,7 @@
 		</for>
 	</skill>
 	<skill id="4099" levels="2" name="NPC Berserk">
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#magicLvl">40 70</table>
 		<table name="#mAtk">1.1 1.16</table>
 		<table name="#mAtkSpd">1.05 1.08</table>
@@ -1794,7 +1794,7 @@
 		<table name="#pDef">0.95 0.92</table>
 		<table name="#rEvas">5 8</table>
 		<table name="#runSpd">5 8</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />

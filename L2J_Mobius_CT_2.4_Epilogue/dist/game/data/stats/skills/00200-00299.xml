@@ -457,7 +457,7 @@
 	</skill>
 	<skill id="223" levels="49" name="Sting" enchantGroup1="2" enchantGroup2="2">
 		<!-- Attacks the enemy with 82 Power added to P. Atk., and inflicts Bleed causing loss of 25 HP per second for 20 seconds. Requires a sword, dagger, dualsword, or dual-dagger. Over-hit is possible. -->
-		<table name="#abnormalLvls">3 3 3 3 3 3 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 8 8 8 8</table>
+		<table name="#abnormalLevels">3 3 3 3 3 3 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 8 8 8 8</table>
 		<table name="#dot">25 25 25 25 25 25 34 34 34 34 34 34 34 34 44 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67</table>
 		<table name="#effectPoints">-111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333</table>
 		<table name="#magicLvl">22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -467,7 +467,7 @@
 		<table name="#ench2MpConsume">74 72 71 70 68 67 66 64 63 62 60 59 58 56 55 54 52 51 50 48 47 46 44 43 42 41 39 38 37 35</table>
 		<table name="#ench2Power">1229 1240 1251 1262 1273 1284 1295 1306 1317 1328 1339 1350 1361 1372 1383 1394 1405 1415 1426 1437 1448 1459 1470 1481 1492 1503 1514 1525 1536 1547</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -636,7 +636,7 @@
 	</skill>
 	<skill id="230" levels="2" name="Sprint" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Increases Speed by 22 for 20 minutes. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">219 495</table>
 		<table name="#magicLvl">32 52</table>
 		<table name="#mpConsume">11 19</table>
@@ -648,7 +648,7 @@
 		<table name="#ench3rEvas">1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5</table>
 		<table name="#ench4Vuln">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.83 0.82 0.81 0.8 0.79 0.78 0.77 0.76 0.75 0.74 0.73 0.72 0.71 0.7</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1332,7 +1332,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="abnormalLvl" val="3" />
+		<enchant1 name="abnormalLevel" val="3" />
 		<enchant1 name="abnormalTime" val="30" />
 		<enchant1 name="abnormalType" val="ATTACK_TIME_UP" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
@@ -1341,7 +1341,7 @@
 		<enchant1 name="lvlBonusRate" val="1" />
 		<enchant1 name="operateType" val="A2" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="abnormalLvl" val="3" />
+		<enchant2 name="abnormalLevel" val="3" />
 		<enchant2 name="abnormalTime" val="15" />
 		<enchant2 name="abnormalType" val="DOT_ATTR" />
 		<enchant2 name="operateType" val="A2" />
@@ -1350,7 +1350,7 @@
 		<enchant2 name="isDebuff" val="true" />
 		<enchant2 name="lvlBonusRate" val="1" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="abnormalLvl" val="1" />
+		<enchant3 name="abnormalLevel" val="1" />
 		<enchant3 name="abnormalTime" val="15" />
 		<enchant3 name="abnormalType" val="HOLY_ATTACK" />
 		<enchant3 name="activateRate" val="80" />
@@ -1582,7 +1582,7 @@
 		<table name="#ench2Power">2432 2454 2476 2497 2519 2541 2563 2584 2606 2628 2650 2671 2693 2715 2737 2758 2780 2802 2823 2845 2865 2889 2910 2932 2954 2976 2997 3019 3041 3063</table>
 		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1836,7 +1836,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_EARTH" />
 		<set name="affectRange" val="1000" />
@@ -1866,7 +1866,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_LIFE" />
 		<set name="affectRange" val="1000" />
@@ -1896,7 +1896,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_WATER" />
 		<set name="affectRange" val="1000" />
@@ -1926,7 +1926,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_WARDING" />
 		<set name="affectRange" val="1000" />
@@ -1955,7 +1955,7 @@
 		<!-- Increases Speed of all party members by 20 for 2 minutes. Increases MP consumption when singing while song/dance effect lasts. -->
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_WIND" />
 		<set name="affectRange" val="1000" />
@@ -1983,7 +1983,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_HUNTER" />
 		<set name="affectRange" val="1000" />
@@ -2013,7 +2013,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_INVOCATION" />
 		<set name="affectRange" val="1000" />
@@ -2043,7 +2043,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_WARRIOR" />
 		<set name="affectRange" val="1000" />
@@ -2076,7 +2076,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_INSPIRATION" />
 		<set name="affectRange" val="1000" />
@@ -2109,7 +2109,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_MYSTIC" />
 		<set name="affectRange" val="1000" />
@@ -2142,7 +2142,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_FIRE" />
 		<set name="affectRange" val="1000" />
@@ -2175,7 +2175,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_FURY" />
 		<set name="affectRange" val="1000" />
@@ -2208,7 +2208,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_CONCENTRATION" />
 		<set name="affectRange" val="1000" />
@@ -2242,7 +2242,7 @@
 		<table name="#ench1AbnormalTimes">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_LIGHT" />
 		<set name="affectRange" val="1000" />
@@ -2409,7 +2409,7 @@
 		<table name="#ench2power">2432 2454 2476 2497 2519 2541 2563 2584 2606 2628 2650 2671 2693 2715 2737 2758 2780 2802 2823 2845 2867 2889 2910 2932 2954 2976 2997 3019 3041 3063</table>
 		<table name="#ench34pmDef">0.99 0.99 0.99 0.98 0.98 0.98 0.97 0.97 0.97 0.96 0.96 0.96 0.96 0.95 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -2467,7 +2467,7 @@
 	</skill>
 	<skill id="282" levels="1" name="Puma Spirit Totem">
 		<!-- Possessed by a Puma's soul, the user's Accuracy increases by 6 and Atk. Spd. by 20% for 5 minutes. Requires a hand-to-hand weapon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="379" />
@@ -2639,7 +2639,7 @@
 		<table name="#magicLvl">43 55 60</table>
 		<table name="#mpConsume">57 75 83</table>
 		<table name="#trait_pole">-10 -15 -20</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="REAL_TARGET" />
 		<set name="affectLimit" val="9-10" />
@@ -2660,12 +2660,12 @@
 	</skill>
 	<skill id="287" levels="3" name="Lionheart">
 		<!-- Increases Resistance to Paralysis, Hold, Sleep, Stun and buff-canceling attacks by 40% for 1 minute. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">341 467 582</table>
 		<table name="#magicLvl">36 49 62</table>
 		<table name="#mpConsume">16 22 29</table>
 		<table name="#traits">40 60 80</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="RESIST_SPIRITLESS" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2831,7 +2831,7 @@
 	</skill>
 	<skill id="292" levels="1" name="Bison Spirit Totem">
 		<!-- User is possessed by a Bison's soul, increasing Accuracy for 1 minute when using a hand-to-hand weapon and increasing P. Atk. by 10% and Critical Rate by 100 when HP is below 60%. If HP is below 30%, P. Atk. is increased by 30% and Critical Rate is increased by 300. Requires a hand-to-hand weapon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="624" />
@@ -2966,7 +2966,7 @@
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit" enchantGroup1="1" enchantGroup2="1">
 		<!-- Increases dualsword weapon Atk. Spd. by 8% for 1 minute and ordinary/skill attack damage by 5% during PvP. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">597 646</table>
 		<table name="#magicLvl">64 72</table>
 		<table name="#mpConsume">30 34</table>
@@ -2974,7 +2974,7 @@
 		<table name="#pvp">1.05 1.1</table>
 		<table name="#ench1pAtkSpd">1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 1.131 1.132 1.133 1.134 1.135 1.136 1.137 1.138 1.139 1.14 1.141 1.142 1.143 1.144 1.145 1.146 1.147 1.148 1.149 1.15</table>
 		<table name="#ench2pvpDmg">1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.18 1.19 1.19 1.2 1.2 1.21 1.21 1.22 1.22 1.23 1.23 1.24 1.24 1.25</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="DUELIST_SPIRIT" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -3015,7 +3015,7 @@
 	</skill>
 	<skill id="298" levels="1" name="Rabbit Spirit Totem">
 		<!-- Becomes possessed by a Rabbit's soul. Increases one's own Atk. Spd. by 30%, Speed by 30%, and Evasion by 12 for 5 minutes. Requires a hand-to-hand weapon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="582" />

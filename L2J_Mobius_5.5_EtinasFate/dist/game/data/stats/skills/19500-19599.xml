@@ -3,7 +3,7 @@
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
 		<!-- For 30 min., increases selected party member's P. Atk. by 22%, M. Atk. by 40%, P./ M. Critical Rate by 100%, P. Critical Damage by 70%, and Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
 		<icon>icon.skill19503</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<operateType>A2</operateType>
@@ -96,7 +96,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<effectPoint>-1371</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
@@ -156,7 +156,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -207,7 +207,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -254,7 +254,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -296,7 +296,7 @@
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def/ M. Def by $s3 and Movement Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
 		<icon>icon.skill19434</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -308,7 +308,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
@@ -397,7 +397,7 @@
 	<skill id="19526" toLevel="3" name="Limit of Sigel">
 		<!-- Decreases the duration of Protection of Faith/ Nine Aegis by $s2 that is applied within $s1. -->
 		<icon>icon.skill10019</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
@@ -411,7 +411,7 @@
 	<skill id="19527" toLevel="3" name="Limit of Iss">
 		<!-- Decreases the duration of Battle Rhapsody/ Overload's Dignity by $s2 if it is shorter than $s1. -->
 		<icon>icon.skill11544</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
@@ -428,7 +428,7 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -436,7 +436,7 @@
 			<value level="5">6</value>
 			<value level="6">7</value>
 			<value level="7">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -477,7 +477,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1167,7 +1167,7 @@
 	<skill id="19552" toLevel="9" name="Burning Chain Lash">
 		<!-- Wields the Burning Chain to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Also puts them into the Ignite state for $s2. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19556</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1246,7 +1246,7 @@
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -1313,7 +1313,7 @@
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -1380,7 +1380,7 @@
 		<icon>icon.skill19554</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -1626,7 +1626,7 @@
 		<icon>icon.skill19557</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -1711,7 +1711,7 @@
 	<skill id="19560" toLevel="9" name="Rising Tide Circle">
 		<!-- Creates a circular wave to draw enemies close and decrease Atk. Spd./ Casting Spd. by $s1 and Movement Speed by $s2. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19558</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -1721,7 +1721,7 @@
 			<value level="7">3</value>
 			<value level="8">4</value>
 			<value level="9">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1876,7 +1876,7 @@
 	<skill id="19562" toLevel="7" name="Reborn from Ashes">
 		<!-- Becomes invincible for $s1 and recovers $s2 HP under the Protection of Phoenix. -->
 		<icon>icon.skill19565</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -1920,7 +1920,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<abnormalTime>10</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="DamageShield">
 				<amount>50</amount>
@@ -1931,7 +1931,7 @@
 		<!-- For 10 sec., P. Def +50% and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -1966,7 +1966,7 @@
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
 		<reuseDelay>10000</reuseDelay>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<isDebuff>true</isDebuff>
@@ -2103,7 +2103,7 @@
 		<icon>icon.skill19558</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -2183,7 +2183,7 @@
 	<skill id="19568" toLevel="1" name="Nine Aegis">
 		<!-- P. Def/ M. Def/ Bow Resistance +50% and Reflect Magic +25% under the Protection of Barrier, and becomes immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. -->
 		<icon>icon.skill10107</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<magicLevel>99</magicLevel>
@@ -2230,7 +2230,7 @@
 	<skill id="19569" toLevel="8" name="Aggression Aura">
 		<!-- Provokes nearby enemies into attacking you and decreases their Atk. Spd. and Casting Spd. by $s1. Your P. Def. and M. Def +$s2 and Speed +$s3. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10027</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>
@@ -2331,7 +2331,7 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -2421,7 +2421,7 @@
 		<!-- Silenced by Vanishing shock for $s1. -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>30</activateRate>
 		<abnormalType>SILENCE</abnormalType>
@@ -2439,7 +2439,7 @@
 		<!-- Strikes hard to decrease P. Def by 30% for 7 sec. -->
 		<icon>icon.skill10009</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>1000</reuseDelay>

@@ -1851,7 +1851,7 @@
 	<skill id="6618" toLevel="7" name="Maguen Strike">
 		<!-- For $s1, decreases Speed by $s2. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>30</activateRate>
@@ -1906,7 +1906,7 @@
 	<skill id="6619" toLevel="7" name="Maguen Power Strike">
 		<!-- For $s1, decreases Speed by $s2. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>30</activateRate>
@@ -1960,7 +1960,7 @@
 	</skill>
 	<skill id="6620" toLevel="7" name="Maguen Plasma">
 		<!-- P. Atk. and M. Atk. are increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2007,7 +2007,7 @@
 	</skill>
 	<skill id="6621" toLevel="7" name="Maguen Plasma">
 		<!-- P. Atk. and M. Atk. are increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2055,7 +2055,7 @@
 	<skill id="6622" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 20 seconds. The chance of receiving Critical Damage +50%. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2099,7 +2099,7 @@
 	<skill id="6624" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 9 seconds. The chance of receiving Critical Damage +50%. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2227,7 +2227,7 @@
 		<!-- Increases P. Atk. temporarily. Effect 3. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>2000</castRange>
@@ -2254,7 +2254,7 @@
 		<!-- Increases M. Atk. temporarily. Effect 3. -->
 		<icon>icon.etc_herb_blue_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2275,7 +2275,7 @@
 		<!-- Increases Speed. temporarily. Effect 2. -->
 		<icon>icon.etc_attack_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>2000</castRange>
@@ -2302,7 +2302,7 @@
 		<!-- Increases Casting Spd. temporarily. Effect 3. -->
 		<icon>icon.etc_magic_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2323,7 +2323,7 @@
 		<!-- Increases Critical attack rate temporarily. Effect 3. -->
 		<icon>icon.etc_critical_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>2000</castRange>
@@ -2350,7 +2350,7 @@
 		<!-- Increases Speed. temporarily. Effect 2. -->
 		<icon>icon.etc_move_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>2000</castRange>
@@ -2377,7 +2377,7 @@
 		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
 		<icon>icon.skill6637</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>2000</castRange>
@@ -2408,7 +2408,7 @@
 		<!-- The target's head is enlarged. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -2445,7 +2445,7 @@
 		<!-- Increases Critical P. Atk. temporarily. Effect 3. -->
 		<icon>icon.skill2514</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>2000</castRange>
@@ -2548,7 +2548,7 @@
 	</skill>
 	<skill id="6645" toLevel="1" name="Cooker Invincibility On">
 		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2592,7 +2592,7 @@
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
 		<!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
 		<icon>icon.skill4111</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2611,7 +2611,7 @@
 	<skill id="6651" toLevel="1" name="Dopagen's Alienation">
 		<!-- All actions are sealed by Dopagen's special ability. Impossible to dispel. -->
 		<icon>icon.skill4111</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2714,10 +2714,10 @@
 	<skill id="6662" toLevel="2" name="Freeze">
 		<!-- All actions are prohibited for $s1, and you lose $s2 HP per second. -->
 		<icon>icon.skill6274</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">15</value>
@@ -2785,7 +2785,7 @@
 	<skill id="6666" toLevel="1" name="Feral Shield">
 		<!-- Increases P. Def. by 18% by 5 minutes. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2812,7 +2812,7 @@
 	<skill id="6667" toLevel="1" name="Feral Wind Walk">
 		<!-- For 5 minutes, Speed +33. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2839,7 +2839,7 @@
 	<skill id="6668" toLevel="1" name="Feral Death Whisper">
 		<!-- Increases critical attack effect by 35% for 5 minutes. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2866,7 +2866,7 @@
 	<skill id="6669" toLevel="1" name="Feral Blessed Body">
 		<!-- Increases Max HP by 35% for 5 minutes. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2893,7 +2893,7 @@
 	<skill id="6670" toLevel="1" name="Feral Vampiric Rage">
 		<!-- For 5 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -2920,7 +2920,7 @@
 	<skill id="6671" toLevel="1" name="Feral Berserker Spirit">
 		<!-- P. Def. decreases momentarily. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 5 minutes. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
@@ -2975,7 +2975,7 @@
 	<skill id="6672" toLevel="1" name="Feral Blessed Shield">
 		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
 		<icon>icon.skill1243</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3016,7 +3016,7 @@
 		<!-- Bow/ Crossbow range is temporarily increased by 50. -->
 		<icon>icon.etc_magic_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
 		<castRange>2000</castRange>
@@ -3077,7 +3077,7 @@
 	<skill id="6677" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3145,7 +3145,7 @@
 	<skill id="6681" toLevel="1" name="Maguen Wind Walk">
 		<!-- For 20 minutes, Speed +40. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3173,7 +3173,7 @@
 	<skill id="6682" toLevel="1" name="Elite Maguen Wind Walk">
 		<!-- For 20 minutes, Speed +45. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -3264,7 +3264,7 @@
 	<skill id="6687" toLevel="1" name="Patience">
 		<!-- Skill Power is increased. -->
 		<icon>icon.skill0983</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>PATIENCE</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -3285,7 +3285,7 @@
 	</skill>
 	<skill id="6688" toLevel="1" name="Awful Soup">
 		<!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 minutes. -->
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>350</affectRange>
@@ -3338,7 +3338,7 @@
 	<skill id="6690" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3542,7 +3542,7 @@
 	<skill id="6698" toLevel="1" name="Freeze">
 		<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>FREEZING</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>

@@ -104,7 +104,7 @@ public class Skill implements IIdentifiable
 	/** Abnormal instant, used for herbs mostly. */
 	private final boolean _isAbnormalInstant;
 	/** Abnormal level, global effect level. */
-	private final int _abnormalLvl;
+	private final int _abnormalLevel;
 	/** Abnormal type: global effect "group". */
 	private final AbnormalType _abnormalType;
 	/** Abnormal time: global effect duration time. */
@@ -234,7 +234,7 @@ public class Skill implements IIdentifiable
 		_itemConsumeId = set.getInt("itemConsumeId", 0);
 		_castRange = set.getInt("castRange", -1);
 		_effectRange = set.getInt("effectRange", -1);
-		_abnormalLvl = set.getInt("abnormalLvl", 0);
+		_abnormalLevel = set.getInt("abnormalLevel", 0);
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
 		int abnormalTime = set.getInt("abnormalTime", 0);
 		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
@@ -459,9 +459,9 @@ public class Skill implements IIdentifiable
 	 * Gets the skill abnormal level.
 	 * @return the skill abnormal level
 	 */
-	public int getAbnormalLvl()
+	public int getAbnormalLevel()
 	{
-		return _abnormalLvl;
+		return _abnormalLevel;
 	}
 	
 	/**

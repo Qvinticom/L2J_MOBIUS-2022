@@ -55,7 +55,7 @@ public class TarBeetle extends AbstractNpcAI
 		if (npc.getScriptValue() > 0)
 		{
 			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(TAR_SPITE);
-			final int level = (info != null) ? info.getSkill().getAbnormalLvl() : 0;
+			final int level = (info != null) ? info.getSkill().getAbnormalLevel() : 0;
 			if (level < 3)
 			{
 				final Skill skill = SKILLS[level].getSkill();

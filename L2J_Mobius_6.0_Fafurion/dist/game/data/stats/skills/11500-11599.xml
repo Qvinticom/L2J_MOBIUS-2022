@@ -392,7 +392,7 @@
 	<skill id="11508" toLevel="11" name="Trace of Twin Edges">
 		<!-- Rushes toward the enemy to inflict Stun for $s1 Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. -->
 		<icon>icon.skill11513</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -481,7 +481,7 @@
 	<skill id="11509" toLevel="13" name="Radiant Crash">
 		<!-- Attacks the target with $s1 Power added to P. Atk., P./ M. Def. -$s3 for $s2 Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -495,7 +495,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -607,7 +607,7 @@
 	<skill id="11510" toLevel="13" name="Resolving Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -621,7 +621,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>
@@ -733,7 +733,7 @@
 	<skill id="11511" toLevel="13" name="Phantom Slasher">
 		<!-- Attacks the target with $s1 Power added to P. Atk., P. Atk./ M. Atk./ P. Def./ M. Def. -$s3 for $s2 The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11511_2</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -859,7 +859,7 @@
 	<skill id="11513" toLevel="13" name="Radiant Crash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, target's P./ M. Def. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -873,7 +873,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -988,7 +988,7 @@
 	<skill id="11514" toLevel="13" name="Resolving Bash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1002,7 +1002,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>
@@ -1149,7 +1149,7 @@
 			<value level="4">94</value>
 			<value level="5">97</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
@@ -1251,13 +1251,13 @@
 	<skill id="11517" toLevel="5" name="Horn Melody">
 		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">1800</value>
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -1350,13 +1350,13 @@
 	<skill id="11518" toLevel="5" name="Drum Melody">
 		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">1800</value>
@@ -1460,13 +1460,13 @@
 	<skill id="11519" toLevel="5" name="Pipe Organ Melody">
 		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply the Vampiric Rage effect for $s5. -->
 		<icon>icon.skill11519</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">1800</value>
@@ -1565,13 +1565,13 @@
 	<skill id="11520" toLevel="5" name="Guitar Melody">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">1800</value>
@@ -1686,12 +1686,12 @@
 	<skill id="11521" toLevel="4" name="Harp Melody">
 		<!-- For $s1, P. Accuracy +$s2, P./ M. Evasion +$s3, and Speed +$s4. Received Critical Damage -$s5. -->
 		<icon>icon.skill11521</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -1786,12 +1786,12 @@
 	<skill id="11522" toLevel="4" name="Lute Melody">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and has a chance of applying $s4 Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -1871,10 +1871,10 @@
 			<value level="1">icon.skill11523</value>
 			<value level="2">icon.skill19500</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -1973,10 +1973,10 @@
 			<value level="1">icon.skill11524</value>
 			<value level="2">icon.skill19501</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -2059,10 +2059,10 @@
 			<value level="1">icon.skill11525</value>
 			<value level="2">icon.skill19502</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -2263,7 +2263,7 @@
 		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2318,7 +2318,7 @@
 		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2383,7 +2383,7 @@
 		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2443,7 +2443,7 @@
 	<skill id="11533" toLevel="1" name="Blood Requiem">
 		<!-- Party members receives 80% Vampiric Rage effect for 15 sec. -->
 		<icon>icon.skill11546</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RHAPSODY</abnormalType>
 		<affectRange>1000</affectRange>
@@ -2492,7 +2492,7 @@
 	<skill id="11534" toLevel="6" name="Angel's Touch">
 		<!-- For $s1, renders target immune to debuffs. -->
 		<icon>icon.skill11534</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">9</value>
@@ -2641,7 +2641,7 @@
 	<skill id="11537" toLevel="12" name="Transform">
 		<!-- Transforms target into a harmless creature and decrease its Speed by $s2 for $s1. The effect is canceled if the transformed target is attacked. -->
 		<icon>icon.skill11537</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -2752,7 +2752,7 @@
 	<skill id="11538" toLevel="9" name="Mass Giant Root">
 		<!-- Inflicts Hold on nearby enemies for $s1. -->
 		<icon>icon.skill11538</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2832,7 +2832,7 @@
 	<skill id="11539" toLevel="13" name="Petrify">
 		<!-- Petrifies target for $s1. -->
 		<icon>icon.skill11539</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2919,7 +2919,7 @@
 	<skill id="11540" toLevel="9" name="Quick Escape">
 		<!-- Transforms yourself into a cute pig for $s1. P. Def. and M. Def. +$s2, and Speed +$s3. -->
 		<icon>icon.skill11540</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -3032,7 +3032,7 @@
 	<skill id="11541" toLevel="1" name="Polymorph">
 		<!-- Transforms yourself into a stone for 15 sec. to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. -->
 		<icon>icon.skill11541</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -3112,7 +3112,7 @@
 	<skill id="11543" toLevel="8" name="Disperse">
 		<!-- For $s1, transforms yourself and nearby party members to increase P. Def. and M. Def. +$s2 and Speed +$s3. Decreases P. Atk. and M. Atk. +$s4. -->
 		<icon>icon.skill11543</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MULTI</abnormalType>
 		<affectRange>1000</affectRange>
@@ -3252,7 +3252,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
 		<abnormalType>RHAPSODY</abnormalType>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -3309,7 +3309,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -3349,7 +3349,7 @@
 		<icon>icon.skill11533</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>
@@ -3648,7 +3648,7 @@
 	<skill id="11557" toLevel="9" name="Seal of Extortion">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
 		<icon>icon.skill11559</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<activateRate>65</activateRate>
@@ -3721,7 +3721,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>60</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<trait>BOSS</trait>
 		<affectLimit>10-10</affectLimit>
 		<isDebuff>true</isDebuff>
@@ -3744,7 +3744,7 @@
 	<skill id="11560" toLevel="2" name="Celestial Aegis">
 		<!-- Makes all party members invincible for $s1. Effect is removed upon attack. -->
 		<icon>icon.skill11560</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -3873,7 +3873,7 @@
 	<skill id="11561" toLevel="9" name="Giant Root">
 		<!-- Immobilizes the enemy for $s1. -->
 		<icon>icon.skill11561</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3949,7 +3949,7 @@
 	<skill id="11562" toLevel="1" name="Devil's Movement">
 		<!-- Prevents all party members from being attacked preemptively by monsters for 2 min. But if any party member initiates an attack, the effect will be canceled. -->
 		<icon>icon.skill11562</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">120</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
@@ -4086,7 +4086,7 @@
 		<!-- For 30 min., all Defense attributes of party members +30. -->
 		<icon>icon.skill11565</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -4141,7 +4141,7 @@
 		<!-- For 30 min., party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
 		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -4192,7 +4192,7 @@
 		<!-- For 30 min., a party member's Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill11824</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -4242,7 +4242,7 @@
 	<skill id="11569" toLevel="1" name="Critical Strike">
 		<!-- Critical Damage is increased by 100% through Drum Melody. -->
 		<icon>icon.skill1542</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -4326,7 +4326,7 @@
 	<skill id="11580" toLevel="9" name="Mass Transform">
 		<!-- For $s1, mutates enemies to reduce their Speed by $s2 and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
 		<icon>icon.skill11580</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -4576,7 +4576,7 @@
 	<skill id="11584" toLevel="4" name="Mass Medusa's Dance">
 		<!-- Performs that evokes the mirage of a Medusa. For $s1, Petrifies nearby enemies. -->
 		<icon>icon.skill11840</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -4723,7 +4723,7 @@
 			<value level="6">icon.skill11587</value>
 			<value level="7">icon.skill11587</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<activateRate>80</activateRate>
@@ -4802,13 +4802,13 @@
 	<skill id="11589" toLevel="5" name="Horn Frenzy">
 		<!-- For $s1, clan members' P. Atk. +$s2, P. Def. +$s3, M. Atk. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11589</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -4892,13 +4892,13 @@
 	<skill id="11590" toLevel="5" name="Drum Frenzy">
 		<!-- For $s1, increases clan members' P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11590</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -4994,13 +4994,13 @@
 	<skill id="11591" toLevel="5" name="Pipe Organ Frenzy">
 		<!-- For $s1, Clan members' Max HP +$s2, Max MP +$s3, and Max CP +$s4. Bestows a $s5 Vampiric Rage. -->
 		<icon>icon.skill11591</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -5094,13 +5094,13 @@
 	<skill id="11592" toLevel="5" name="Guitar Frenzy">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11592</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -5190,12 +5190,12 @@
 	<skill id="11593" toLevel="4" name="Harp Frenzy">
 		<!-- For $s1, clan members' P. Accuracy and P. Evasion/ M. Evasion +$s2, and Speed +$s3. Received Critical Damage -$s4. -->
 		<icon>icon.skill11593</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -5283,12 +5283,12 @@
 	<skill id="11594" toLevel="4" name="Lute Frenzy">
 		<!-- For $s1, clan members' Atk. Spd. +$s2 and Casting Spd. +$s3. Has a chance of applying $s4 Vampiric Rage effect. -->
 		<icon>icon.skill11594</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -5357,7 +5357,7 @@
 	<skill id="11595" toLevel="1" name="Knight's Frenzied Harmony">
 		<!-- For 30 min., increases selected clan member's P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
 		<icon>icon.skill11596</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -5414,7 +5414,7 @@
 	<skill id="11596" toLevel="1" name="Warrior's Frenzied Harmony">
 		<!-- For 30 min., increases selected clan member's P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. -->
 		<icon>icon.skill11595</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -5475,7 +5475,7 @@
 	<skill id="11597" toLevel="1" name="Wizard's Frenzied Harmony">
 		<!-- For 30 min., selected clan member's M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
 		<icon>icon.skill11597</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>

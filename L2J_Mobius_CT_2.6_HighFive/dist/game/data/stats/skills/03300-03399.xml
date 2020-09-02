@@ -259,7 +259,7 @@
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
 		<!-- Use the power of the Talisman to increase the Evasion rate and decrease the chance of receiving a critical attack. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="379" />
@@ -512,7 +512,7 @@
 	</skill>
 	<skill id="3335" levels="1" name="Transform Yeti">
 		<!-- Transforms into Yeti. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -533,7 +533,7 @@
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
 		<!-- Transform into a Yeti. There is no effect from the Mystery Potion while in Yeti form. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -557,7 +557,7 @@
 	</skill>
 	<skill id="3337" levels="1" name="Transform Cutie Pig">
 		<!-- Transforms into cute pig. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -826,7 +826,7 @@
 	</skill>
 	<skill id="3359" levels="1" name="Transform Native">
 		<!-- Transforms into a Native. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />

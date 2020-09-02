@@ -3,7 +3,7 @@
 	<skill id="11800" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<magicLvl>93</magicLvl>
@@ -29,7 +29,7 @@
 	<skill id="11801" toLevel="3" name="Sustain">
 		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
 		<castRange>600</castRange>
@@ -83,7 +83,7 @@
 	<skill id="11802" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<magicLvl>95</magicLvl>
@@ -109,7 +109,7 @@
 	<skill id="11803" toLevel="3" name="Sustain">
 		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
 		<castRange>600</castRange>
@@ -163,7 +163,7 @@
 	<skill id="11804" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<magicLvl>97</magicLvl>
@@ -277,7 +277,7 @@
 	<skill id="11808" toLevel="2" name="Elegance of Light">
 		<!-- Affected by Elegance of Light. HP is decreased. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>ALL_REGEN_DOWN</abnormalType>
 		<affectRange>300</affectRange>
@@ -309,7 +309,7 @@
 	<skill id="11809" toLevel="2" name="Elegance of Light">
 		<!-- Affected by Elegance of Light. Increases HP. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_EARTH</abnormalType>
 		<affectRange>300</affectRange>
@@ -340,7 +340,7 @@
 	<skill id="11810" toLevel="1" name="Resurrection Wish">
 		<!-- Can use the Mark of Resurrection for 30 sec. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
 		<operateType>A4</operateType>
@@ -356,7 +356,7 @@
 	<skill id="11811" toLevel="1" name="Total Resurrection Wish">
 		<!-- Can use the Mark of Resurrection and Mark of Total Resurrection for 30 sec. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<operateType>A4</operateType>
@@ -372,7 +372,7 @@
 	<skill id="11812" toLevel="1" name="Mark of Resurrection">
 		<!-- Bestows the mark of resurrection that can completely resurrect party members from death for 10 min. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<icon>icon.skill1410</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -402,7 +402,7 @@
 	<skill id="11813" toLevel="1" name="Mark of Total Resurrection">
 		<!-- Bestows the mark of resurrection that can completely resurrect all party members from death for 10 min. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<icon>icon.skill1410</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
@@ -432,7 +432,7 @@
 	<skill id="11814" toLevel="13" name="Dark Force">
 		<!-- Inflicts damage on target with $s1 Power added to M. Atk. Has a chance of pushing back target. -->
 		<icon>icon.skill11814</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -544,7 +544,7 @@
 	<skill id="11815" toLevel="3" name="Sustain">
 		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
 		<castRange>600</castRange>
@@ -599,7 +599,7 @@
 	<skill id="11816" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
 		<operateType>A4</operateType>
@@ -725,7 +725,7 @@
 	<skill id="11818" toLevel="1" name="Price of Summoning">
 		<!-- Healing abilities are decreased as a price for summoning Lumi. -->
 		<icon>icon.skill1100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<operateType>A2</operateType>
@@ -776,7 +776,7 @@
 		<!-- For 30 min., party members' P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11820</icon>
 		<abnormalTime>1800</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
@@ -820,7 +820,7 @@
 	<skill id="11821" toLevel="1" name="Critical of Saha">
 		<!-- For 30 min., increases party members' P. Critical Rate by 30%, P. Critical Power by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11821</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
@@ -871,7 +871,7 @@
 	<skill id="11822" toLevel="1" name="Force of Saha">
 		<!-- For 30 min., party members' Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply the Vampiric Rage effect for 9%. -->
 		<icon>icon.skill11822</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -912,7 +912,7 @@
 	<skill id="11823" toLevel="1" name="Speed of Saha">
 		<!-- For 30 min., party members' Atk. Spd. +60%, Casting Spd. +60%, and Speed +10, and Skill MP Consumption -10%. -->
 		<icon>icon.skill11823</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -961,7 +961,7 @@
 	<skill id="11824" toLevel="1" name="Resistance of Saha">
 		<!-- For 30 min., all Defense attributes of party members +30. -->
 		<icon>icon.skill11567</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<operateType>A2</operateType>
@@ -1002,7 +1002,7 @@
 		<!-- For 30 min., a party member's Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill11825</icon>
 		<abnormalTime>1800</abnormalTime>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>17</mpConsume>
@@ -1042,7 +1042,7 @@
 	<skill id="11826" toLevel="1" name="Emblem of Salvation">
 		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon>icon.skill11826</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">3600</value>
@@ -1126,7 +1126,7 @@
 	<skill id="11830" toLevel="1" name="Blessing of Saha">
 		<!-- For 30 min., party members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
 		<icon>icon.skill11522</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
@@ -1258,7 +1258,7 @@
 	<skill id="11832" toLevel="9" name="Mass Fatal Sleep">
 		<!-- Casts Sleep on nearby enemies for $s1. -->
 		<icon>icon.skill1072</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1332,7 +1332,7 @@
 	<skill id="11833" toLevel="3" name="Limit of Aeore">
 		<!-- Reduces the duration of the Celestial Protection/ Celestial Party Protection to half if it is shorter than $s1. -->
 		<icon>icon.skill11758</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isDebuff>true</isDebuff>
@@ -1347,7 +1347,7 @@
 	<skill id="11834" toLevel="1" name="Lingering Protection">
 		<!-- Lingering Celestial Party Protection. For 1 min., HP/ MP recovery bonus increases and Spd. +5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
 		<icon>icon.skill11759</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>70</abnormalTime> <!-- Tested -->
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
@@ -1381,7 +1381,7 @@
 	<skill id="11835" toLevel="1" name="Dissolve">
 		<!-- Increases Speed. -->
 		<icon>icon.skill11770</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
@@ -1513,14 +1513,14 @@
 	<skill id="11851" toLevel="6" name="Divine Prayer">
 		<!-- For $s1, party members' HP heal amount +$s2. -->
 		<icon>icon.skill11859</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">7</value>
 			<value level="5">8</value>
 			<value level="6">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1592,14 +1592,14 @@
 	<skill id="11852" toLevel="6" name="Mass Mana Gain">
 		<!-- For $s1, party members' MP heal amount +$s2. -->
 		<icon>icon.skill11852new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1704,14 +1704,14 @@
 	<skill id="11854" toLevel="6" name="Mass Mana Gain">
 		<!-- For $s1, party members' MP heal amount +$s2. -->
 		<icon>icon.skill11852new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
 			<value level="6">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1914,7 +1914,7 @@
 	<skill id="11861" toLevel="1" name="Elemental Resistance">
 		<!-- For 30 min., increases party member's Elemental Resistance by 30. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11861</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
 		<operateType>A2</operateType>
@@ -1973,7 +1973,7 @@
 	<skill id="11862" toLevel="1" name="Melee Weapon Resistance">
 		<!-- For 30 min., increases party member's resistance to melee weapons by 5%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11862</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -2029,7 +2029,7 @@
 	<skill id="11863" toLevel="1" name="Ranged Weapon Resistance">
 		<!-- For 30 min., increases party member's resistance to ranged weapons by 5%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11863</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>

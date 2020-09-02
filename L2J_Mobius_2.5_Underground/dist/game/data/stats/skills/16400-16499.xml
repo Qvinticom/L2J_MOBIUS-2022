@@ -88,7 +88,7 @@
 	<skill id="16409" toLevel="3" name="Trap Hold">
 		<!-- Immobilized. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">8</value>
@@ -101,7 +101,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -120,7 +120,7 @@
 	<skill id="16410" toLevel="3" name="Trap Aerial Yoke">
 		<!-- Immobilized. -->
 		<icon>icon.skill11050</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">8</value>
@@ -157,7 +157,7 @@
 	<skill id="16411" toLevel="3" name="Trap Stun">
 		<!-- Immobilized. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">8</value>
@@ -191,7 +191,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -203,7 +203,7 @@
 	<skill id="16413" toLevel="3" name="Trap Poison">
 		<!-- Poisoned and losing $s1,$s2 HP/second. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">8</value>
@@ -252,12 +252,12 @@
 	<skill id="16415" toLevel="4" name="Dimensional Dark Forces">
 		<!-- P. Atk - $s1, M. Atk. - $s2, and P. Critical Rate - $s3, M. Critical Rate - $s4. -->
 		<icon>icon.skill1298</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -332,7 +332,7 @@
 		<!-- For $s1 hr., STR + $s3, INT + $s4, Speed + $s5. Can obtain item after $s6 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>XMAS_SOCKS</abnormalVisualEffect>
@@ -362,7 +362,7 @@
 		<!-- For $s1 hr., CON + $s2, MEN + $s3, P. Critical Rate + $s4, M. Critical Rate + $s5. Can obtain item after $s6 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>XMAS_TREE</abnormalVisualEffect>
@@ -396,7 +396,7 @@
 		<!-- For $s1 hr., DEX + $s2, WIT + $s3, Max HP/MP + $s4. Can obtain item after $s5 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<abnormalVisualEffect>XMAS_SNOWMAN</abnormalVisualEffect>
@@ -434,7 +434,7 @@
 		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>21600</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40311</itemConsumeId>

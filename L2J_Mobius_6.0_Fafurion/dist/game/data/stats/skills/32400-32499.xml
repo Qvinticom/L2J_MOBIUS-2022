@@ -661,7 +661,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -694,7 +694,7 @@
 			<value level="3">500</value>
 		</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -735,7 +735,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -771,7 +771,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -798,7 +798,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<activateRate>90</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -841,7 +841,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -917,7 +917,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>90</activateRate>
@@ -975,7 +975,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>BLEED</trait>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1035,7 +1035,7 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>BLEED</trait>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1063,7 +1063,7 @@
 	<skill id="32485" toLevel="1" name="Refined Energy of the Sea of Spores">
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -1146,7 +1146,7 @@
 		<!-- Momentarily immobilized due to Orfen's attack. -->
 		<castRange>700</castRange>
 		<abnormalType>STUN</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>10-25</affectLimit>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1182,7 +1182,7 @@
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<magicLvl>108</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -1215,7 +1215,7 @@
 	<skill id="32491" toLevel="1" name="Orfen Blow Up">
 		<!-- Sent flying after receiving damage from Orfen's attack. -->
 		<icon>icon.skill10263</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1260,7 +1260,7 @@
 	<skill id="32492" toLevel="1" name="Orfen Fatal Stamp">
 		<!-- Movement is restricted by Orfen. -->
 		<icon>icon.skill10266</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1286,7 +1286,7 @@
 	<skill id="32493" toLevel="1" name="Orfen Raise Spore">
 		<!-- Attacking abilities have been crippled by spores stirred up by Orfen. Decreases Atk. Spd./ Casting Spd. by 20%. -->
 		<icon>icon.skill1072</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>90</activateRate>
@@ -1323,7 +1323,7 @@
 	<skill id="32494" toLevel="1" name="Hallucinating Dust">
 		<!-- Attacking abilities have been crippled by spores stirred up by Orfen. Decreases Atk. Spd./ Casting Spd. by 500, Speed by 100. -->
 		<icon>icon.skill0412</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>90</activateRate>
@@ -1358,7 +1358,7 @@
 	<skill id="32495" toLevel="1" name="Orfen's Rage">
 		<!-- Orfen is enraged, significantly increasing her P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd. -->
 		<icon>icon.skill32495</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>1100</castRange>

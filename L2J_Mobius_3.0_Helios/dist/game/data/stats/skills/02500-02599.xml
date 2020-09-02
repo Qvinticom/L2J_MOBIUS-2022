@@ -317,7 +317,7 @@
 	<skill id="2511" toLevel="1" name="Transformation Scroll: Gatekeeper">
 		<!-- Transforms into a gatekeeper. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -346,7 +346,7 @@
 		<!-- Bestows the ability to recover HP using some of the damage inflicted on the enemy with a certain probability. Effect 4. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -370,7 +370,7 @@
 		<!-- Head is enlarged. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -404,7 +404,7 @@
 		<!-- Temporarily increases Critical Damage. Effect 3. -->
 		<icon>BranchSys2.icon.etc_crt_force_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2145,7 +2145,7 @@
 	<skill id="2577" toLevel="1" name="Instant Defense">
 		<!-- Becomes invincible momentarily. -->
 		<icon>icon.skill1418</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2207,7 +2207,7 @@
 	<skill id="2580" toLevel="1" name="Vitality Replenishing Herb">
 		<!-- Restores Vitality points as you gain XP by hunting. -->
 		<icon>icon.skilltransform4</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -2399,7 +2399,7 @@
 	<skill id="2593" toLevel="1" name="Bow/Crossbow Attack Resistance Potion">
 		<!-- Temporarily increases resistance to bow/crossbow attacks. Effect 4. -->
 		<icon>icon.etc_potion_red_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>40</effectPoint>

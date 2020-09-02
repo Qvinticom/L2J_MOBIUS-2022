@@ -582,7 +582,7 @@
 		<set name="itemConsumeId" val="7910" /> <!-- Blessing of Darkness -->
 		<set name="itemConsumeCount" val="1" />
 		<for>
-			<effect count="1" name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
+			<effect count="1" name="Buff" time="600" val="0" abnormalLevel="1" abnormalType="holy_attack">
 				<mul order="0x30" stat="pAtk-angels" val="1.2" />
 			</effect>
 		</for>
@@ -601,7 +601,7 @@
 		<set name="itemConsumeId" val="7911" /> <!-- Blessing of Sanctity -->
 		<set name="itemConsumeCount" val="1" />
 		<for>
-			<effect count="1" name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
+			<effect count="1" name="Buff" time="600" val="0" abnormalLevel="1" abnormalType="holy_attack">
 				<mul order="0x30" stat="pAtk-undead" val="1.2" />
 			</effect>
 		</for>

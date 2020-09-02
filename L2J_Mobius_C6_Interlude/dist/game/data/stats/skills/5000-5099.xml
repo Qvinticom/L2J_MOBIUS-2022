@@ -80,7 +80,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="9" val="0" abnormalLevel="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5006" levels="1" name="Frintezza's Melody">

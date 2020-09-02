@@ -103,7 +103,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6020" toLevel="1" name="Soul Retain">
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="6021" toLevel="1" name="Soul Retain">
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -173,7 +173,7 @@
 		</effects>
 	</skill>
 	<skill id="6022" toLevel="1" name="Soul Retain">
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -208,7 +208,7 @@
 		</effects>
 	</skill>
 	<skill id="6023" toLevel="1" name="Soul Retain">
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -284,7 +284,7 @@
 	</skill>
 	<skill id="6033" toLevel="1" name="Treasure Seeker's Betrayal">
 		<!-- Carrying this mark of betrayal makes one the target of nearby monsters. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>STIGMA_A</abnormalType>
 		<castRange>1500</castRange>
@@ -302,7 +302,7 @@
 	</skill>
 	<skill id="6034" toLevel="1" name="Freezing">
 		<!-- Target cannot move until the match starts. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<castRange>900</castRange>
@@ -346,7 +346,7 @@
 	<skill id="6038" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -366,7 +366,7 @@
 	<skill id="6039" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Party participation has been blocked. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -386,7 +386,7 @@
 	<skill id="6040" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You can be attacked. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -755,12 +755,12 @@
 	<skill id="6049" toLevel="4" name="Battle Cry">
 		<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
 		<icon>icon.action117</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<coolTime>500</coolTime>
@@ -1058,12 +1058,12 @@
 	<skill id="6053" toLevel="4" name="Howl">
 		<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
 		<icon>icon.action117</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<coolTime>500</coolTime>
@@ -1144,7 +1144,7 @@
 	<skill id="6055" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1166,7 +1166,7 @@
 	<skill id="6056" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1188,7 +1188,7 @@
 	<skill id="6057" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1211,7 +1211,7 @@
 	<skill id="6058" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
 		<icon>icon.skill6038</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1234,7 +1234,7 @@
 	<skill id="6059" toLevel="1" name="Counter Critical">
 		<!-- Increases P. Critical Damage. -->
 		<icon>icon.skill1542</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1268,7 +1268,7 @@
 	<skill id="6060" toLevel="1" name="Great Fury">
 		<!-- Atk. Spd. +30% for 8 sec. -->
 		<icon>icon.skill1543</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1499,7 +1499,7 @@
 	<skill id="6090" toLevel="1" name="Lightning Strike">
 		<!-- The target is paralyzed. -->
 		<icon>icon.skill0279</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1522,7 +1522,7 @@
 	<skill id="6091" toLevel="1" name="Anchor">
 		<!-- The target is paralyzed. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1544,7 +1544,7 @@
 	<skill id="6092" toLevel="1" name="Lightning Shock">
 		<!-- The target is paralyzed. -->
 		<icon>icon.skill0791</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1567,7 +1567,7 @@
 	<skill id="6093" toLevel="1" name="Panther Hide">
 		<!-- Allows one to stay hidden. Movement speed -10%. The effect is canceled if any action other than movement is initiated. -->
 		<icon>icon.skill0922</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -1628,7 +1628,7 @@
 	<skill id="6095" toLevel="15" name="Panther Dark Claw">
 		<!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
 		<icon>icon.skill1445</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>80</activateRate>

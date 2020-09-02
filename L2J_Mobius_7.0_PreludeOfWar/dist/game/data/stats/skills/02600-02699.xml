@@ -382,7 +382,7 @@
 	</skill>
 	<skill id="2616" toLevel="1" name="Bond Sealant">
 		<!-- A block is adhered to the floor and cannot move. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<hitTime>1000</hitTime>
@@ -405,7 +405,7 @@
 		</conditions>
 	</skill>
 	<skill id="2617" toLevel="1" name="Stun Planter">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<hitTime>1000</hitTime>
@@ -428,7 +428,7 @@
 		</conditions>
 	</skill>
 	<skill id="2618" toLevel="1" name="Stun Land Mine">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<hitTime>1000</hitTime>
@@ -522,7 +522,7 @@
 	<skill id="2623" toLevel="1" name="Alkaline Therapy">
 		<!-- Covers yourself in an ointment that reduces lethal de-buff effects within the Hall of Erosion. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -538,7 +538,7 @@
 	<skill id="2624" toLevel="1" name="Life Aid Banding">
 		<!-- Increases resistance to infection and altered conditions caused by the Death Worm within the Seed of Infinity. -->
 		<icon>icon.etc_piece_of_cloth_white_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESIST_BLEEDING</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -581,7 +581,7 @@
 	<skill id="2628" toLevel="1" name="Structure Scarab">
 		<!-- Allows user to retain buffs and debuffs following death and resurrection. Noblesse Blessing and Amulet of Luck disappear, however. Consumes 1 Structure Scarab. -->
 		<icon>icon.etc_beetle_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -641,7 +641,7 @@
 	<skill id="2631" toLevel="1" name="Transformation Scroll: Frog">
 		<!-- Transforms into a frog. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -669,7 +669,7 @@
 	<skill id="2632" toLevel="1" name="Transformation Scroll: Young Child">
 		<!-- Transforms into a young child. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -753,7 +753,7 @@
 	</skill>
 	<skill id="2635" toLevel="1" name="Blessing of Fire">
 		<!-- Blessing of fire. Fire attribute is bestowed on physical attacks. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>FIRE</attributeType>
@@ -775,7 +775,7 @@
 	</skill>
 	<skill id="2636" toLevel="1" name="Blessing of Earth">
 		<!-- Blessing of earth. Earth attribute is bestowed on physical attacks. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>EARTH</attributeType>
@@ -2007,7 +2007,7 @@
 	<skill id="2670" toLevel="1" name="Transformation Scroll: Red">
 		<!-- Transforms caster into a member of the red team. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2035,7 +2035,7 @@
 	<skill id="2671" toLevel="1" name="Transformation Scroll: Blue">
 		<!-- Transforms caster into a member of the blue team. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2063,7 +2063,7 @@
 	<skill id="2672" toLevel="1" name="Gludio Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2103,7 +2103,7 @@
 	<skill id="2673" toLevel="1" name="Gludio Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2143,7 +2143,7 @@
 	<skill id="2674" toLevel="1" name="Gludio Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2183,7 +2183,7 @@
 	<skill id="2675" toLevel="1" name="Gludio Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2223,7 +2223,7 @@
 	<skill id="2676" toLevel="1" name="Gludio Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2263,7 +2263,7 @@
 	<skill id="2677" toLevel="1" name="Gludio Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2303,7 +2303,7 @@
 	<skill id="2678" toLevel="1" name="Gludio Royal Guard Captain">
 		<!-- Transforms into a Royal Guard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2343,7 +2343,7 @@
 	<skill id="2679" toLevel="1" name="Gludio Archer Captain">
 		<!-- Transforms into an Archer Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2383,7 +2383,7 @@
 	<skill id="2680" toLevel="1" name="Gludio Wizard Captain">
 		<!-- Transforms into a Wizard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2423,7 +2423,7 @@
 	<skill id="2681" toLevel="1" name="Gludio Kamael Guard Captain">
 		<!-- Transforms into a Kamael Guard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2463,7 +2463,7 @@
 	<skill id="2682" toLevel="1" name="Gludio Knight of Dawn">
 		<!-- Transforms into a Knight of Dawn. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2503,7 +2503,7 @@
 	<skill id="2683" toLevel="1" name="Gludio Fortress Commander">
 		<!-- Transforms into a Fortress Commander. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2543,7 +2543,7 @@
 	<skill id="2684" toLevel="1" name="Dion Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2583,7 +2583,7 @@
 	<skill id="2685" toLevel="1" name="Dion Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2623,7 +2623,7 @@
 	<skill id="2686" toLevel="1" name="Dion Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2663,7 +2663,7 @@
 	<skill id="2687" toLevel="1" name="Dion Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2703,7 +2703,7 @@
 	<skill id="2688" toLevel="1" name="Dion Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2743,7 +2743,7 @@
 	<skill id="2689" toLevel="1" name="Dion Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2783,7 +2783,7 @@
 	<skill id="2690" toLevel="1" name="Dion Royal Guard Captain">
 		<!-- Transforms into a Royal Guard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2823,7 +2823,7 @@
 	<skill id="2691" toLevel="1" name="Dion Archer Captain">
 		<!-- Transforms into an Archer Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2863,7 +2863,7 @@
 	<skill id="2692" toLevel="1" name="Dion Wizard Captain">
 		<!-- Transforms into a Wizard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2903,7 +2903,7 @@
 	<skill id="2693" toLevel="1" name="Dion Kamael Guard Captain">
 		<!-- Transforms into a Kamael Guard Captain. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2943,7 +2943,7 @@
 	<skill id="2694" toLevel="1" name="Dion Knight of Dawn">
 		<!-- Transforms into a Knight of Dawn. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2983,7 +2983,7 @@
 	<skill id="2695" toLevel="1" name="Dion Fortress Commander">
 		<!-- Transforms into a Fortress Commander. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3023,7 +3023,7 @@
 	<skill id="2696" toLevel="1" name="Giran Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3063,7 +3063,7 @@
 	<skill id="2697" toLevel="1" name="Giran Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3103,7 +3103,7 @@
 	<skill id="2698" toLevel="1" name="Giran Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3143,7 +3143,7 @@
 	<skill id="2699" toLevel="1" name="Giran Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
 		<icon>icon.skilltransform1</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>

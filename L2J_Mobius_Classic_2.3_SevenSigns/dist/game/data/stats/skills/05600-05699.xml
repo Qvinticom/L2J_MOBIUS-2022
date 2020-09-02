@@ -159,7 +159,7 @@
 	<skill id="5602" toLevel="1" name="Transform Sacrifice">
 		<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE_P</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -187,7 +187,7 @@
 	<skill id="5603" toLevel="1" name="Dagger Mastery">
 		<!-- A state in which MP consumption of skills is greatly decreased, and the vital points attacks success rate is increased. -->
 		<icon>icon.skill0209</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -215,7 +215,7 @@
 	<skill id="5604" toLevel="1" name="Sword/Blunt Weapon Mastery">
 		<!-- A state in which MP consumption of skills is greatly decreased, and the success rate of stun attack is increased. -->
 		<icon>icon.skill0217</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -241,7 +241,7 @@
 	</skill>
 	<skill id="5605" toLevel="2" name="Power of Apella">
 		<!-- Power of Apella. Increased M. Def., increased Critical Rate, and decreased Critical Damage. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -283,7 +283,7 @@
 	</skill>
 	<skill id="5607" toLevel="2" name="Power of Apella">
 		<!-- Power of Apella. Increased Evasion, increased Atk. Spd., and decreased Critical Damage. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -325,7 +325,7 @@
 	</skill>
 	<skill id="5608" toLevel="2" name="Power of Apella">
 		<!-- Power of Apella. Increased P. Def., increased M. Atk., and decreased Speed. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -401,7 +401,7 @@
 	<skill id="5613" toLevel="4" name="Vampiric Rage">
 		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -640,7 +640,7 @@
 	</skill>
 	<skill id="5623" toLevel="1" name="Weakened Magic Circle">
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<effectPoint>-100</effectPoint>
@@ -660,7 +660,7 @@
 	<skill id="5624" toLevel="1" name="Soul Confinement">
 		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -680,7 +680,7 @@
 	<skill id="5625" toLevel="1" name="Soul Confinement">
 		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -707,7 +707,7 @@
 	<skill id="5627" toLevel="1" name="Adventurer's Wind Walk">
 		<!-- Speed increases temporarily. Effect 2. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -730,7 +730,7 @@
 	<skill id="5628" toLevel="1" name="Adventurer's Shield">
 		<!-- For 60 min., P. Def. +15% -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -753,7 +753,7 @@
 	<skill id="5629" toLevel="1" name="Adventurer's Blessed Body">
 		<!-- For 60 min., Max HP +35%. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -776,7 +776,7 @@
 	<skill id="5630" toLevel="1" name="Adventurer's Vampiric Rage">
 		<!-- For 60 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -799,7 +799,7 @@
 	<skill id="5631" toLevel="1" name="Adventurer's Regeneration">
 		<!-- For 60 min., HP Recovery Bonus +20%. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
@@ -822,7 +822,7 @@
 	<skill id="5632" toLevel="1" name="Adventurer's Haste">
 		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -845,7 +845,7 @@
 	<skill id="5633" toLevel="1" name="Adventurer's Blessed Soul">
 		<!-- For 60 min., Max HP +35%. -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -868,7 +868,7 @@
 	<skill id="5634" toLevel="1" name="Adventurer's Acumen">
 		<!-- For 60 min., Casting Spd. +30% -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -891,7 +891,7 @@
 	<skill id="5635" toLevel="1" name="Adventurer's Concentration">
 		<!-- For 60 min., magic cancel rate -18. -->
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -914,7 +914,7 @@
 	<skill id="5636" toLevel="1" name="Adventurer's Empower">
 		<!-- For 60 min., M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -937,7 +937,7 @@
 	<skill id="5637" toLevel="1" name="Adventurer's Magic Barrier">
 		<!-- M. Def. +30% for 60 min. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -960,12 +960,12 @@
 	<skill id="5638" toLevel="4" name="Feline Queen - Blessed Body">
 		<!-- Increases maximum HP temporarily. Effect $s1 -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1017,12 +1017,12 @@
 	<skill id="5639" toLevel="4" name="Feline Queen - Blessed Soul">
 		<!-- Increases maximum MP temporarily. Effect $s1 -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1074,10 +1074,10 @@
 	<skill id="5640" toLevel="2" name="Feline Queen - Haste">
 		<!-- Atk. Spd. increases temporarily. Effect $s1 -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1118,7 +1118,7 @@
 	</skill>
 	<skill id="5641" toLevel="1" name="not_used">
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>418</effectPoint>
@@ -1138,12 +1138,12 @@
 	</skill>
 	<skill id="5642" toLevel="4" name="not_used">
 		<icon>icon.skill1243</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<effectPoint>
@@ -1179,7 +1179,7 @@
 	<skill id="5643" toLevel="1" name="Seraphim the Unicorn - Acumen">
 		<!-- Increases Casting Spd. temporarily. Effect 3. -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1205,7 +1205,7 @@
 	</skill>
 	<skill id="5644" toLevel="1" name="not_used">
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>285</effectPoint>
@@ -1225,11 +1225,11 @@
 	</skill>
 	<skill id="5645" toLevel="3" name="not_used">
 		<icon>icon.skill1035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<effectPoint>
@@ -1285,11 +1285,11 @@
 			<value level="2">icon.skill1303</value>
 			<value level="3">icon.skill1240</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>
 			<value level="1">MAGIC_CRITICAL_UP</value>
@@ -1340,11 +1340,11 @@
 	<skill id="5647" toLevel="3" name="Seraphim the Unicorn - Clarity">
 		<!-- Momentarily decreases the MP consumption of skills of the target. Consumes $s1 Spirit Ore. Effect $s2 -->
 		<icon>icon.skill1397</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<castRange>400</castRange>
@@ -1416,10 +1416,10 @@
 	<skill id="5648" toLevel="2" name="Seraphim the Unicorn - Empower">
 		<!-- Increases M. Atk. power temporarily. Effect $s1 -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1460,10 +1460,10 @@
 	</skill>
 	<skill id="5649" toLevel="2" name="not_used">
 		<icon>icon.skill1087</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<effectPoint>
@@ -1491,11 +1491,11 @@
 	</skill>
 	<skill id="5650" toLevel="3" name="not_used">
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<effectPoint>
@@ -1526,7 +1526,7 @@
 	</skill>
 	<skill id="5651" toLevel="1" name="not_used">
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -1546,11 +1546,11 @@
 	<skill id="5652" toLevel="3" name="Nightshade - Death Whisper">
 		<!-- Momentarily increase the Critical P. Atk. Effect $s1 -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1597,10 +1597,10 @@
 	<skill id="5653" toLevel="2" name="Nightshade - Focus">
 		<!-- Momentarily increases critical P. Atk. rate. Effect $s1 -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1642,11 +1642,11 @@
 	<skill id="5654" toLevel="3" name="Nightshade - Guidance">
 		<!-- Increases Accuracy temporarily. Effect $s1 -->
 		<icon>icon.skill1240</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2612,10 +2612,10 @@
 	<skill id="5659" toLevel="2" name="Gatekeeper Berserker Spirit">
 		<!-- P. Def. decreases momentarily./ M. Def./ evasion and increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd./ Speed. Effectiveness $s1. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>
@@ -2706,7 +2706,7 @@
 	<skill id="5660" toLevel="5" name="Battleground Death Syndrome">
 		<!-- Combat power is decreased after death on the battleground. Condition is removed at the end of the war. Effect $s1 -->
 		<icon>icon.skill5076_a</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DEATH_PENALTY</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
@@ -2787,7 +2787,7 @@
 	<skill id="5661" toLevel="1" name="Match Participation">
 		<!-- You have already participated in a match and cannot participate in the next match. -->
 		<icon>icon.skill5661</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ENTRY_FOR_GAME</abnormalType>
 		<magicLvl>-2</magicLvl>
@@ -2853,7 +2853,7 @@
 	<skill id="5665" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2879,7 +2879,7 @@
 	<skill id="5666" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2905,7 +2905,7 @@
 	<skill id="5667" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2931,7 +2931,7 @@
 	<skill id="5668" toLevel="1" name="Poison">
 		<!-- HP decreases from Poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2962,7 +2962,7 @@
 	<skill id="5669" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2988,7 +2988,7 @@
 	<skill id="5670" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3014,7 +3014,7 @@
 	<skill id="5671" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3040,7 +3040,7 @@
 	<skill id="5672" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3065,7 +3065,7 @@
 	</skill>
 	<skill id="5673" toLevel="1" name="Evasion Counter">
 		<icon>icon.skill0818</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3092,7 +3092,7 @@
 	<skill id="5674" toLevel="1" name="Evasion Chance">
 		<!-- For 2 min., vital points attacks success rate +10%. -->
 		<icon>icon.skill0819</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>EVASION_BUFF</abnormalType>
 		<effectPoint>549</effectPoint>
@@ -3116,7 +3116,7 @@
 	<skill id="5675" toLevel="1" name="Evasion Haste">
 		<!-- Atk. Spd. +15% for 10 sec. -->
 		<icon>icon.skill0820</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>EVASION_BUFF</abnormalType>
 		<effectPoint>549</effectPoint>
@@ -3188,7 +3188,7 @@
 	<skill id="5679" toLevel="3" name="Oblivion Trap">
 		<!-- Trap of forgetfulness. when attacking, the enemy has a chance to lose their target. -->
 		<icon>icon.skill0836</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MIRAGE_TRAP</abnormalType>
 		<activateRate>80</activateRate>
@@ -3289,7 +3289,7 @@
 	<skill id="5683" toLevel="1" name="PvP Weapon - Ignore Shield Defense">
 		<!-- Shield Defense greatly decreases momentarily. -->
 		<icon>icon.skill1304</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
 		<castRange>600</castRange>
@@ -3339,7 +3339,7 @@
 	<skill id="5685" toLevel="1" name="PvP Weapon - Casting">
 		<!-- Casting Spd. increases momentarily. -->
 		<icon>icon.skill0228</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
 		<activateRate>0</activateRate>
@@ -3366,7 +3366,7 @@
 	<skill id="5686" toLevel="1" name="PvP Weapon - Rapid Fire">
 		<!-- Temporarily increases bow/ crossbow Atk. Spd. -->
 		<icon>icon.skill0413</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3392,7 +3392,7 @@
 	<skill id="5687" toLevel="1" name="PvP Weapon - Decrease Range">
 		<!-- Bow/ Crossbow range decreases momentarily. -->
 		<icon>icon.skill0486</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
 		<castRange>600</castRange>
@@ -3424,7 +3424,7 @@
 	<skill id="5688" toLevel="1" name="PvP Weapon - Decrease Resist">
 		<!-- Resistance against all attributes decreases momentarily. -->
 		<icon>icon.skill0756</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
 		<effectPoint>-1</effectPoint>
@@ -3471,7 +3471,7 @@
 	<skill id="5689" toLevel="1" name="PvP Shield - Reflect Damage">
 		<!-- Able to return some of the received damage back to the enemy momentarily. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3518,7 +3518,7 @@
 	<skill id="5696" toLevel="1" name="Dizziness">
 		<!-- Speed and Atk. Spd. decreases temporarily due to the side effect of poisoning. -->
 		<icon>icon.skill0837</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3545,7 +3545,7 @@
 	<skill id="5697" toLevel="4" name="Seal">
 		<!-- Unable to use physical/ magic skills momentarily. -->
 		<icon>icon.skill0835</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -3669,7 +3669,7 @@
 	<skill id="5699" toLevel="7" name="Decrease P. Def.">
 		<!-- P. Def. is decreased. Effect $s1 -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22200" levels="1" name="Transformation Scroll - Veil Master Event">
 		<!-- Transformed into a Veil Master. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -26,7 +26,7 @@
 	</skill>
 	<skill id="22201" levels="1" name="Transformation Scroll - Saber Tooth Tiger Event">
 		<!-- Transformed into a Saber Tooth Tiger. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -50,7 +50,7 @@
 	</skill>
 	<skill id="22202" levels="1" name="Transformation Scroll - Ol Mahum Event">
 		<!-- Transformed into an Ol Mahum. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -74,7 +74,7 @@
 	</skill>
 	<skill id="22203" levels="1" name="Transformation Scroll - Doll Blader Event">
 		<!-- Transformed into a Doll Blader. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -98,7 +98,7 @@
 	</skill>
 	<skill id="22204" levels="1" name="Transformation Scroll - Zaken Event">
 		<!-- Transformed into Zaken. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -122,7 +122,7 @@
 	</skill>
 	<skill id="22205" levels="1" name="Transformation Scroll - Anakim Event">
 		<!-- Transformed into Anakim. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -146,7 +146,7 @@
 	</skill>
 	<skill id="22206" levels="1" name="Transformation Scroll - Venom Event">
 		<!-- Transformed into Venom. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -170,7 +170,7 @@
 	</skill>
 	<skill id="22207" levels="1" name="Transformation Scroll - Gordon Event">
 		<!-- Transformed into Gordon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -194,7 +194,7 @@
 	</skill>
 	<skill id="22208" levels="1" name="Transformation Scroll - Ranku Event">
 		<!-- Transformed into Ranku. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -218,7 +218,7 @@
 	</skill>
 	<skill id="22209" levels="1" name="Transformation Scroll - Kechi Event">
 		<!-- Transformed into Kechi. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -242,7 +242,7 @@
 	</skill>
 	<skill id="22210" levels="1" name="Transformation Scroll - Demon Prince Event">
 		<!-- Transformed into Demon Prince. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -275,7 +275,7 @@
 	</skill>
 	<skill id="22213" levels="1" name="Mysterious Scroll - Prophecy of Wind">
 		<!-- For 60 minutes, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -322,7 +322,7 @@
 	</skill>
 	<skill id="22215" levels="1" name="Energy Replenishing Herb Tea">
 		<!-- For 30 minutes, Vitality is replenished when Exp. is acquired through hunting. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -345,7 +345,7 @@
 	</skill>
 	<skill id="22216" levels="1" name="Transformation Scroll - Anakim">
 		<!-- Transformed into Anakim. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -465,7 +465,7 @@
 	</skill>
 	<skill id="22223" levels="1" name="Potion of Energy Maintenance">
 		<!-- Vitality is maintained for 30 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
@@ -486,7 +486,7 @@
 	</skill>
 	<skill id="22224" levels="1" name="Potion of Energy Maintenance">
 		<!-- Vitality is maintained for 30 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
@@ -627,7 +627,7 @@
 	</skill>
 	<skill id="22250" levels="1" name="Birthday Cake Effect">
 		<!-- Birthday Cake Vitality Buff. Maintains your Vitality at its current level. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="affectRange" val="200" />

@@ -555,7 +555,7 @@
 	<skill id="26022" toLevel="1" name="Greater Haste Potion">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. -->
 		<icon>br_cashtex.item.br_cash_adv_swift_attack_potion_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -579,7 +579,7 @@
 	<skill id="26023" toLevel="1" name="Greater Wind Walk Potion">
 		<!-- Increases Speed by 33 for 20 minutes. -->
 		<icon>br_cashtex.item.br_cash_adv_quick_step_potion_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -618,7 +618,7 @@
 	<skill id="26025" toLevel="1" name="Major Healing Potion">
 		<!-- Increases HP Recovery by 50 for 15 seconds. -->
 		<icon>br_cashtex.item.br_cash_greater_healing_potion_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -642,7 +642,7 @@
 	<skill id="26026" toLevel="1" name="Major Healing Potion">
 		<!-- Increases HP Recovery by 24 for 15 seconds. -->
 		<icon>br_cashtex.item.br_cash_healing_potion_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -792,7 +792,7 @@
 	<skill id="26031" toLevel="1" name="Scroll: Wind Walk">
 		<!-- Increases Speed by 33 for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -818,7 +818,7 @@
 	<skill id="26032" toLevel="1" name="Scroll: Haste">
 		<!-- Increases Atk. Spd. by 33% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_haste_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -844,7 +844,7 @@
 	<skill id="26033" toLevel="1" name="Scroll: Might">
 		<!-- Increases P. Atk. by 15% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_might_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -870,7 +870,7 @@
 	<skill id="26034" toLevel="1" name="Scroll: Shield">
 		<!-- Increases P. Def. by 15% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_shield_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -896,7 +896,7 @@
 	<skill id="26035" toLevel="1" name="Scroll: Death Whisper">
 		<!-- Increases Critical Damage by 35% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_death_whisper_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -922,7 +922,7 @@
 	<skill id="26036" toLevel="1" name="Scroll: Guidance">
 		<!-- Increases Accuracy by 4 for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_guidance_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -948,7 +948,7 @@
 	<skill id="26037" toLevel="1" name="Scroll: Empower">
 		<!-- Increases M. Atk. by 75% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_empower_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -974,7 +974,7 @@
 	<skill id="26038" toLevel="1" name="Scroll: Greater Acumen">
 		<!-- Increases Casting Spd. by 30% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_greater_acumen_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1000,7 +1000,7 @@
 	<skill id="26039" toLevel="1" name="Scroll: Vampiric Rage">
 		<!-- For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_vampiric_rage_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1026,7 +1026,7 @@
 	<skill id="26040" toLevel="1" name="Scroll: Blessed Body">
 		<!-- Increases Max HP by 35% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_bless_the_body_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1052,7 +1052,7 @@
 	<skill id="26041" toLevel="1" name="Scroll: Berserker Spirit">
 		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_berserker_spirit_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1106,7 +1106,7 @@
 	<skill id="26042" toLevel="1" name="Scroll: Magic Barrier">
 		<!-- Increases M. Def. by 30% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_magic_barrier_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1132,7 +1132,7 @@
 	<skill id="26043" toLevel="1" name="Scroll: Blessed Soul">
 		<!-- Increases Max MP by 35% for 1 hour. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_bless_the_soul_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1158,7 +1158,7 @@
 	<skill id="26044" toLevel="1" name="Scroll: Clarity">
 		<!-- For 1 hour, decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/dance skill MP Consumption by 20%. Consumes 3 Spirit Ore. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_clarity_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1195,7 +1195,7 @@
 	<skill id="26045" toLevel="1" name="Scroll: Wild Magic">
 		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wild_magic_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

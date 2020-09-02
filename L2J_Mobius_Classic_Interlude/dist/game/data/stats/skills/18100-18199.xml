@@ -1033,7 +1033,7 @@
 		<!-- Hunting a monster increases Vitality Consumption by $s1 and XP and SP acquisition by $s2. They remain effective even after death. 10-minute duration and 9-minute cooldown. Cannot be overlapped with Freya's Scroll of Storm. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>
 			<value level="1">40227</value>
@@ -1084,7 +1084,7 @@
 		<!-- Hunting a monster increases Vitality Consumption by 100% and XP and SP acquisition by 100%. They remain effective even after death. 10-minute duration and 9-minute cooldown. Cannot be overlapped with Freya's Scroll of Storm. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>40231</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1417,7 +1417,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40253</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1451,7 +1451,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40254</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1485,7 +1485,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40255</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1519,7 +1519,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40256</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1553,7 +1553,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40257</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1587,7 +1587,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40258</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1621,7 +1621,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40259</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1655,7 +1655,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40260</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1690,7 +1690,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>40261</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1776,7 +1776,7 @@
 		<!-- For 30 min., XP/SP Gain + 10%, Attack Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Speed + 10, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Max HP/MP/CP + 10%, P./M. Def. + 10%, and Skill MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. -->
 		<icon>icon.buff_joon_power_skill</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>

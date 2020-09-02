@@ -89,7 +89,7 @@
 	</skill>
 	<skill id="6913" levels="1" name="Challenge of Faith">
 		<!-- As a result of the challenge, for 15 seconds, increases P. Def. by 360 and M. Def. by 270. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SUB_TRIGGER_DEFENCE" />
 		<set name="blockedInOlympiad" val="true" />
@@ -136,7 +136,7 @@
 	</skill>
 	<skill id="6920" levels="1" name="Collector's Fortune">
 		<!-- A collector's luck. Increases P. Atk. by 15%, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 3%, and Speed by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_BUFF_A" />
 		<set name="blockedInOlympiad" val="true" />
@@ -160,7 +160,7 @@
 	</skill>
 	<skill id="6921" levels="1" name="Penetration Attack">
 		<!-- P. Def. is decreased momentarily. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />

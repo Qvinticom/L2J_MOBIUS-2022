@@ -11,7 +11,7 @@
 		<mpConsume>6</mpConsume>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<magicLvl>40</magicLvl>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1854,7 +1854,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1950,7 +1950,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-704</effectPoint>
 		<mpConsume>3</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1995,7 +1995,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>4</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;180</fanRange>
@@ -2037,7 +2037,7 @@
 		<reuseDelay>900000</reuseDelay>
 		<effectPoint>689</effectPoint>
 		<mpConsume>5</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SIGEL_SHIELD</abnormalType>
 		<abnormalVisualEffect>RAISE_SHIELD;FOCUS_SHIELD</abnormalVisualEffect>
@@ -2096,7 +2096,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-20000</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>80</activateRate>
@@ -2139,7 +2139,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>3</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2170,7 +2170,7 @@
 		<effectPoint>-1</effectPoint>
 		<mpConsume>4</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2212,7 +2212,7 @@
 		<effectPoint>-671</effectPoint>
 		<mpConsume>4</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2285,7 +2285,7 @@
 		<effectPoint>-713</effectPoint>
 		<mpConsume>9</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2329,7 +2329,7 @@
 		<effectPoint>-689</effectPoint>
 		<mpConsume>2</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -2390,7 +2390,7 @@
 		<effectPoint>-696</effectPoint>
 		<mpConsume>19</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -2430,7 +2430,7 @@
 		<effectPoint>-700</effectPoint>
 		<mpConsume>20</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -2475,7 +2475,7 @@
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>4</mpInitialConsume> <!-- Guessing -->
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -2524,7 +2524,7 @@
 		<mpConsume>13</mpConsume>
 		<mpInitialConsume>3</mpInitialConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<effectRange>900</effectRange>
@@ -2573,7 +2573,7 @@
 		<magicLvl>76</magicLvl>
 		<mpInitialConsume>3</mpInitialConsume>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESIST_DEBUFF_DISPEL</abnormalType>
 		<effectRange>900</effectRange>
@@ -2619,7 +2619,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<mpConsume>41</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2666,7 +2666,7 @@
 		<effectPoint>-692</effectPoint>
 		<mpConsume>5</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_C</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_C</abnormalType>
@@ -2702,7 +2702,7 @@
 		<effectPoint>-692</effectPoint>
 		<mpConsume>5</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_D</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_D</abnormalType>
@@ -2768,7 +2768,7 @@
 		<effectPoint>867</effectPoint>
 		<mpConsume>17</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<effectRange>1100</effectRange>
@@ -2804,7 +2804,7 @@
 		<effectPoint>867</effectPoint>
 		<mpConsume>1</mpConsume>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -3173,7 +3173,7 @@
 		<coolTime>720</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-167</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3247,12 +3247,12 @@
 			<value level="3">38</value>
 			<value level="4">40</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
@@ -3353,13 +3353,13 @@
 			<value level="4">45</value>
 			<value level="5">50</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
 			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -3451,13 +3451,13 @@
 			<value level="4">47</value>
 			<value level="5">49</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<magicLvl>
@@ -3738,7 +3738,7 @@
 			<value level="8">91</value>
 			<value level="9">93</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<affectLimit>9-10</affectLimit>
@@ -3886,7 +3886,7 @@
 			<value level="12">79</value>
 			<value level="13">81</value>
 		</mpConsume>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
@@ -4001,7 +4001,7 @@
 			<value level="12">79</value>
 			<value level="13">81</value>
 		</mpConsume>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
@@ -4096,7 +4096,7 @@
 			<value level="8">218</value>
 			<value level="9">231</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -4181,12 +4181,12 @@
 			<value level="3">46</value>
 			<value level="4">49</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">120</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
@@ -4331,7 +4331,7 @@
 			<value level="8">218</value>
 			<value level="9">231</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4341,7 +4341,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -4392,12 +4392,12 @@
 			<value level="3">28</value>
 			<value level="4">30</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -4462,7 +4462,7 @@
 			<value level="8">65</value>
 			<value level="9">65</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -4527,7 +4527,7 @@
 			<value level="7">64</value>
 			<value level="8">67</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
 			<value fromLevel="1" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
@@ -4616,7 +4616,7 @@
 			<value level="8">107</value>
 			<value level="9">109</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<lvlBonusRate>20</lvlBonusRate>
 		<affectLimit>6-12</affectLimit>
@@ -4705,7 +4705,7 @@
 			<value level="8">134</value>
 			<value level="9">140</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4715,7 +4715,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -4868,7 +4868,7 @@
 			<value level="8">111</value>
 			<value level="9">116</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
@@ -4878,7 +4878,7 @@
 			<value level="7">11</value>
 			<value level="8">12</value>
 			<value level="9">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -5065,7 +5065,7 @@
 			<value level="4">166</value>
 			<value level="5">179</value>
 		</mpConsume>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">30</value>
 			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -5123,7 +5123,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>72</mpConsume>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + 90 * subIndex}</value>
@@ -5168,7 +5168,7 @@
 			<value level="3">34</value>
 			<value level="4">35</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -5234,7 +5234,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>14</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -5373,7 +5373,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>408</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<magicLvl>40</magicLvl>

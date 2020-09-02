@@ -39,7 +39,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>40</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>INFINITE_SHIELD4_AVE_2</abnormalVisualEffect>
@@ -246,7 +246,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -425,7 +425,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -500,7 +500,7 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<effectPoint>-100</effectPoint>
@@ -555,7 +555,7 @@
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -598,7 +598,7 @@
 		<effectPoint>-183</effectPoint>
 		<isMagic>1</isMagic>
 		<operateType>A2</operateType>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -852,7 +852,7 @@
 	</skill>
 	<skill id="32252" toLevel="1" name="Lithra Fatal Slash">
 		<!-- Attacks enemies in the front and knocks them back with a certain probability. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -884,7 +884,7 @@
 	</skill>
 	<skill id="32253" toLevel="1" name="Lithra Blow Up">
 		<!-- Attacks nearby enemies and blows them away. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -928,7 +928,7 @@
 	<skill id="32254" toLevel="1" name="Lithra Leash Net">
 		<!-- Attacks nearby enemies and immobilizes them. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -981,7 +981,7 @@
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>CHANGEBODY</trait>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
@@ -1011,7 +1011,7 @@
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1161,7 +1161,7 @@
 	<skill id="32274" toLevel="1" name="Rush Impact">
 		<!-- Rushes to the enemies in front attacking and stunning them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10267</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1314,7 +1314,7 @@
 	<skill id="32287" toLevel="1" name="Hyper Hammer Shot">
 		<!-- Paragon stuns the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill16856</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1342,7 +1342,7 @@
 	<skill id="32288" toLevel="1" name="Hammer Earthquake">
 		<!-- Paragon knocks the enemy down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1384,7 +1384,7 @@
 	<skill id="32289" toLevel="1" name="Dark Breaker">
 		<!-- Deals powerful physical damage to a single target and decreases P. Atk./ M. Atk. by 30%. -->
 		<icon>icon.skill10262</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -1413,7 +1413,7 @@
 	<skill id="32290" toLevel="1" name="Rush Assault">
 		<!-- Rushes at a single target and deals physical damage. -->
 		<icon>icon.skill0230</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1489,7 +1489,7 @@
 	<skill id="32293" toLevel="1" name="Stun Crush">
 		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect> 
@@ -1559,7 +1559,7 @@
 	<skill id="32296" toLevel="1" name="Provoke">
 		<!-- Decreases P. Atk./ P. Def./ Atk. Spd. of enemies near you. -->
 		<icon>icon.skill10271</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>60</activateRate>
@@ -1594,7 +1594,7 @@
 	<skill id="32297" toLevel="1" name="Bloody Rush">
 		<!-- Rushes and deals damage to an enemy attacking from a distance. -->
 		<icon>icon.skill0793</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1628,7 +1628,7 @@
 	<skill id="32298" toLevel="1" name="Crack of Air">
 		<!-- Pulls all enemies near the target to itself. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10015</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>90</activateRate>
@@ -1660,7 +1660,7 @@
 	<skill id="32299" toLevel="1" name="Shield Slam">
 		<!-- Swings a shield dealing damage and stunning the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10011</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

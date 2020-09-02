@@ -32,7 +32,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>408</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<magicLvl>40</magicLvl>
 		<activateRate>80</activateRate>
@@ -135,7 +135,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-167</effectPoint>
 		<mpConsume>114</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -252,7 +252,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>38</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
@@ -285,7 +285,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>8</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -338,7 +338,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>8</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -440,10 +440,10 @@
 			<value level="2">31</value>
 		</mpInitialConsume>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -618,7 +618,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>10</itemConsumeCount>
@@ -685,7 +685,7 @@
 		<effectPoint>687</effectPoint>
 		<mpConsume>181</mpConsume>
 		<abnormalTime>1800</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -748,10 +748,10 @@
 			<value level="1">140</value>
 			<value level="2">151</value>
 		</mpConsume>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
@@ -909,7 +909,7 @@
 		<abnormalVisualEffect>AVE_ABSORB2_SHIELD</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -930,7 +930,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>192</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->

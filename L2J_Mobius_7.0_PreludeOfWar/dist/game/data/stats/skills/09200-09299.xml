@@ -3,7 +3,7 @@
 	<skill id="9200" toLevel="1" name="Elixir: Lute Melody">
 		<!-- For 30 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -39,7 +39,7 @@
 	<skill id="9201" toLevel="1" name="Elixir: Pipe Organ Melody">
 		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -83,7 +83,7 @@
 	<skill id="9202" toLevel="1" name="Elixir: Guitar Melody">
 		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -139,7 +139,7 @@
 	<skill id="9203" toLevel="1" name="Elixir: Harp Melody">
 		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Critical Damage Received -30%. -->
 		<icon>icon.skill11521</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
@@ -183,7 +183,7 @@
 	<skill id="9204" toLevel="1" name="Kukuru">
 		<!-- Mounts a Kukuru. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -219,7 +219,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>58</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>45000</reuseDelay>
@@ -229,7 +229,7 @@
 	<skill id="9206" toLevel="1" name="Fast Run">
 		<!-- Speed +95 for 30 min. -->
 		<icon>icon.skill9206</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPECIAL_RIDE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -278,7 +278,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -348,7 +348,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -485,7 +485,7 @@
 	<skill id="9218" toLevel="1" name="Elixir of Blessing- Horn Melody">
 		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
 		<icon>icon.skill11517</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
@@ -527,7 +527,7 @@
 	<skill id="9219" toLevel="1" name="Elixir of Blessing - Drum Melody">
 		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
@@ -578,7 +578,7 @@
 	<skill id="9220" toLevel="1" name="Elixir of Blessing - Lute Melody">
 		<!-- For 30 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -614,7 +614,7 @@
 	<skill id="9221" toLevel="1" name="Elixir of Blessing - Pipe Organ Melody">
 		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -658,7 +658,7 @@
 	<skill id="9222" toLevel="1" name="Elixir of Blessing - Guitar Melody">
 		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
 		<icon>icon.skill11520</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -719,7 +719,7 @@
 	<skill id="9223" toLevel="1" name="Elixir of Blessing - Harp Melody">
 		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Critical Damage Received -30%. -->
 		<icon>icon.skill11521</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
@@ -837,7 +837,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -881,7 +881,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -937,7 +937,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -976,7 +976,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -1024,7 +1024,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -1089,7 +1089,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -1137,7 +1137,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<isMentoring>true</isMentoring>
@@ -1664,7 +1664,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<isMagic>2</isMagic>
@@ -1942,7 +1942,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -1987,7 +1987,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -2043,7 +2043,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -2084,7 +2084,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -2129,7 +2129,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -2195,7 +2195,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -2242,7 +2242,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
@@ -2260,7 +2260,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2315,7 +2315,7 @@
 	<skill id="9281" toLevel="4" name="Drum Melody - Heavenly Cocktail">
 		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Skill Critical Rate +$s4, Received P. Critical Damage -$s5. Also has a chance to increase Critical Damage when hit. Effect remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
@@ -2380,7 +2380,7 @@
 	<skill id="9282" toLevel="2" name="Lute Melody - Heavenly Cocktail">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3. Has a chance of applying 9% Vampiric Rage effect. Effect remains even after death, and cannot be forcefully eliminated. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -2426,7 +2426,7 @@
 	<skill id="9283" toLevel="4" name="Pipe Organ Melody - Heavenly Cocktail">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -2485,7 +2485,7 @@
 	<skill id="9284" toLevel="4" name="Guitar Melody - Heavenly Cocktail">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Movement Speed +, all Skill MP Consumption -$s4. Remains active after death and cannot be forcibly removed. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -2550,7 +2550,7 @@
 	<skill id="9285" toLevel="2" name="Harp Melody - Heavenly Cocktail">
 		<!-- For $s1, P. Accuracy +$s2, P. Evasion/ M. Evasion +$s3, Speed +$s4. Received Critical Damage -$s5. Effect remains even after death, and cannot be forcefully eliminated. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>

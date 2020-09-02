@@ -3,7 +3,7 @@
 	<skill id="9206" toLevel="1" name="Fast Run">
 		<!-- Speed +95 for 30 min. -->
 		<icon>icon.skill9206</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPECIAL_RIDE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -142,7 +142,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>

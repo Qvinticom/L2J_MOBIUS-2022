@@ -478,7 +478,7 @@
 	<skill id="55235" toLevel="1" name="Adventurer's Potion - Atk. Spd.">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.etc_reagent_green_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -503,7 +503,7 @@
 	<skill id="55236" toLevel="1" name="Adventurer's Potion - Casting Spd.">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -529,7 +529,7 @@
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectRange>900</effectRange>
@@ -579,7 +579,7 @@
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<hitTime>4000</hitTime>
@@ -601,7 +601,7 @@
 	<skill id="55242" toLevel="1" name="Scroll: Berserker Spirit">
 		<!-- For 20 minutes, P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -656,7 +656,7 @@
 	<skill id="55243" toLevel="1" name="Scroll: Dance of the Warrior">
 		<!-- For 10 minutes, P. Atk +12%. -->
 		<icon>icon.skill0271</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -681,7 +681,7 @@
 	<skill id="55244" toLevel="1" name="Scroll: Dance of the Mystic">
 		<!-- For 10 minutes, M. Atk +20%. -->
 		<icon>icon.skill0273</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1760,7 +1760,7 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1786,7 +1786,7 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1813,7 +1813,7 @@
 		<hitTime>2000</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1836,7 +1836,7 @@
 		<!-- For 10 min. XP gained through hunting +5%. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HERB_EXP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1863,7 +1863,7 @@
 		<!-- Speed +2 for 10 minutes. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HERB_SPEED</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1891,7 +1891,7 @@
 		<!-- P./ M. Accuracy +1 for 10 minutes. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i02</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HERB_ACCURANCY</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2025,7 +2025,7 @@
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

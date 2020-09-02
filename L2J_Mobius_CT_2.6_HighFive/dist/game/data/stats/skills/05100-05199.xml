@@ -35,9 +35,9 @@
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
 		<!-- Status that delivers energy to a party member. Raises P. Atk. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#pAtk">1.05 1.10 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PHYSICAL_STANCE" />
 		<set name="effectPoint" val="100" />
@@ -54,9 +54,9 @@
 	</skill>
 	<skill id="5105" levels="3" name="Spell Force">
 		<!-- Status that delivers magic power to a party member. Raises M. Atk. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mAtk">1.05 1.10 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="effectPoint" val="100" />
@@ -72,8 +72,8 @@
 		</for>
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
-		<table name="#abnormalLvls">1 2 3 4</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_A" />
 		<set name="effectPoint" val="100" />
@@ -87,8 +87,8 @@
 		</for>
 	</skill>
 	<skill id="5107" levels="4" name="Capture B State">
-		<table name="#abnormalLvls">1 2 3 4</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_B" />
 		<set name="effectPoint" val="100" />
@@ -102,8 +102,8 @@
 		</for>
 	</skill>
 	<skill id="5108" levels="4" name="Capture C State">
-		<table name="#abnormalLvls">1 2 3 4</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_C" />
 		<set name="effectPoint" val="100" />
@@ -184,7 +184,7 @@
 		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 80 90 95</table>
 		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -228,7 +228,7 @@
 		<!-- Temporarily immobilized. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">7 10 14 18 23 28 33 35 37 38 39 39</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -268,7 +268,7 @@
 	<skill id="5116" levels="12" name="Hold">
 		<!-- Temporarily immobilized. -->
 		<table name="#magicLvl">62 66 70 74 76 78 80 81 82 83 84 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -291,7 +291,7 @@
 	</skill>
 	<skill id="5117" levels="1" name="Stun">
 		<!-- Temporarily immobilized. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -354,7 +354,7 @@
 	</skill>
 	<skill id="5120" levels="1" name="Stun">
 		<!-- You are stunned and temporarily prohibited from movement. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -387,7 +387,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5122" levels="1" name="Sailren Use Might">
-		<set name="abnormalLvl" val="99" />
+		<set name="abnormalLevel" val="99" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="2500" />
@@ -403,7 +403,7 @@
 	</skill>
 	<skill id="5123" levels="1" name="Maximum Defense">
 		<!-- Temporarily maximizes P. Def./M. Def and shield defense power. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -434,7 +434,7 @@
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
 		<!-- Maximizes Resistance to all debuff attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -451,7 +451,7 @@
 	</skill>
 	<skill id="5126" levels="1" name="Maximum Recovery">
 		<!-- HP and CP recovery bonus are maximized. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -469,7 +469,7 @@
 	</skill>
 	<skill id="5127" levels="1" name="Recover Force">
 		<!-- Maximizes P. Atk. and increases force by 1 every 5 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -489,7 +489,7 @@
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
 		<!-- Maximizes bow/crossbow use abilities. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -511,7 +511,7 @@
 	</skill>
 	<skill id="5129" levels="1" name="Smokescreen">
 		<!-- Maximizes Evasion and assassination skill. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
 		<set name="affectRange" val="200" />
@@ -631,7 +631,7 @@
 		</for>
 	</skill>
 	<skill id="5137" levels="1" name="Hold of King">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -659,7 +659,7 @@
 		</for>
 	</skill>
 	<skill id="5138" levels="1" name="Whiplash">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -711,7 +711,7 @@
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
 		<!-- A curse that poisons and reduces Atk. Spd. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="60" />
@@ -803,7 +803,7 @@
 	</skill>
 	<skill id="5145" levels="1" name="Day of Doom">
 		<!-- Decreases P. Atk./P. Def./Speed/HP recovery rate/type M. Def., and increases skill/magic MP consumption. Prevents from receiving buff. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
 		<set name="affectRange" val="200" />
@@ -851,7 +851,7 @@
 		<!-- Active: Increases the maximum HP temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#maxHp">24 48 72 96 120 144 168 192 216 240</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -872,7 +872,7 @@
 		<!-- Active: Increases the effect of HP recovery magic temporarily. -->
 		<table name="#healEffect">1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07</table>
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -911,7 +911,7 @@
 		<!-- Active: Increases the maximum MP by 16 temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#maxMp">16 32 48 68 80 96 112 128 144 160</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -931,7 +931,7 @@
 	<skill id="5151" levels="10" name="Mana Gain">
 		<!-- Active: Increases MP recovery recharge rate. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -970,7 +970,7 @@
 		<!-- Active: Increases maximum CP by 24 temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#maxCp">24 48 72 96 120 144 168 192 216 240</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -991,7 +991,7 @@
 		<!-- Active: Increases P. Atk. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#pAtk">23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1012,7 +1012,7 @@
 		<!-- Active: Increases M. Atk. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mAtk">15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1032,7 +1032,7 @@
 	<skill id="5157" levels="10" name="Duel Might">
 		<!-- Active: Increases PVP P. Atk. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="1500" />
@@ -1054,7 +1054,7 @@
 		<!-- Active: Increases P. Def. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#pDef">30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1075,7 +1075,7 @@
 		<!-- Active: Increases M. Def. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mDef">37 40 44 48 52 56 61 65 70 77</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1095,7 +1095,7 @@
 	<skill id="5160" levels="10" name="Duel Weakness">
 		<!-- Active: Decreases your opponent's PVP P. Atk. temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PVP_DMG_DOWN" />
 		<set name="activateRate" val="80" />
@@ -1122,7 +1122,7 @@
 		<!-- Active: Increases Evasion temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#rEvas">1 1 1 2 2 2 3 3 3 4</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1143,7 +1143,7 @@
 		<!-- Active: Increases Accuracy temporarily. -->
 		<table name="#accCombat">1 1 1 2 2 2 3 3 3 4</table>
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1164,7 +1164,7 @@
 		<!-- Active: Increases critical attack rate temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#rCrit">1.05 1.05 1.05 1.1 1.1 1.1 1.15 1.15 1.15 1.2</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1185,7 +1185,7 @@
 		<!-- Active: Increases critical attack rate of magic attacks temporarily. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mCritRate">1 1 1 2 2 2 3 3 3 4</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="hitTime" val="4000" />
@@ -1226,7 +1226,7 @@
 	<skill id="5166" levels="10" name="Slow">
 		<!-- Active: Temporarily lowers the target's speed. Effect 3. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
@@ -1251,7 +1251,7 @@
 	<skill id="5167" levels="10" name="Winter">
 		<!-- Active: Temporarily lowers the target's Atk. Spd. Effect 3. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="40" />
@@ -1276,7 +1276,7 @@
 	<skill id="5168" levels="10" name="Stun">
 		<!-- Active: Momentarily throws the target into a state of shock. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1301,7 +1301,7 @@
 	<skill id="5169" levels="10" name="Hold">
 		<!-- Active: Instantly puts a target into hold. Additional chance to be put into hold greatly decreases while effect lasts. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -1329,7 +1329,7 @@
 	<skill id="5170" levels="10" name="Sleep">
 		<!-- Active: Instantly puts a target into sleep. Additional chance to be put into sleep greatly decreases while effect lasts. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
@@ -1357,7 +1357,7 @@
 	<skill id="5171" levels="10" name="Paralyze">
 		<!-- Active: Temporarily immobilizes the target. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
@@ -1382,7 +1382,7 @@
 	<skill id="5172" levels="10" name="Medusa">
 		<!-- Active: Temporarily renders the target rigid as if turned to stone. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="abnormalVisualEffect" val="FLESH_STONE" />
@@ -1408,7 +1408,7 @@
 	<skill id="5173" levels="10" name="Fear">
 		<!-- Active: Strikes terror into the target, causing it to flee. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -1436,10 +1436,10 @@
 	</skill>
 	<skill id="5174" levels="10" name="Poison">
 		<!-- Active: Temporarily poisons the target, weakening it. Effect 5. -->
-		<table name="#abnormalLvls">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#abnormalLevels">5 5 6 6 6 7 7 7 8 8</table>
 		<table name="#dot">41 41 50 50 50 58 58 58 63 63</table>
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -1465,10 +1465,10 @@
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
 		<!-- Active: Causes the target to bleed. Effect 5. -->
-		<table name="#abnormalLvls">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#abnormalLevels">5 5 6 6 6 7 7 7 8 8</table>
 		<table name="#dot">44 44 54 54 54 62 62 62 67 67</table>
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1496,7 +1496,7 @@
 	<skill id="5176" levels="10" name="Silence">
 		<!-- Active: Temporarily blocks the target's magic skills. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1521,7 +1521,7 @@
 	<skill id="5177" levels="10" name="Doom">
 		<!-- Active: Temporarily blocks the target's ability to use all physical or magic skills. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1582,7 +1582,7 @@
 	</skill>
 	<skill id="5182" levels="1" name="Blessing of Protection">
 		<!-- Keeps you safe from an attack by a chaotic character who is more than 10 levels apart from you. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="PK_PROTECT" />
 		<set name="canBeDispeled" val="false" />
@@ -1642,12 +1642,12 @@
 	</skill>
 	<skill id="5186" levels="2" name="Pet Haste">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#magicLvl">44 52</table>
 		<table name="#mpConsume">16 19</table>
 		<table name="#mpInitialConsume">4 5</table>
 		<table name="#pAtkSpd">1.15 1.33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -1670,12 +1670,12 @@
 	</skill>
 	<skill id="5187" levels="4" name="Pet Vampiric Rage">
 		<!-- Provides the ability to recover HP temporarily by damaging the enemy, excluding damage caused by skills and ranged attacks. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4</table>
+		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#absorbDam">6 7 8 9</table>
 		<table name="#magicLvl">30 44 58 72</table>
 		<table name="#mpConsume">11 16 22 27</table>
 		<table name="#mpInitialConsume">3 4 6 7</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
@@ -1698,13 +1698,13 @@
 	</skill>
 	<skill id="5188" levels="3" name="Pet Regeneration">
 		<!-- Increases HP recovery bonus for a fixed time. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">331 457 532</table>
 		<table name="#magicLvl">35 48 56</table>
 		<table name="#mpConsume">12 18 21</table>
 		<table name="#mpInitialConsume">3 5 6</table>
 		<table name="#rate">1.1 1.15 1.2</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="castRange" val="400" />
@@ -1727,13 +1727,13 @@
 	</skill>
 	<skill id="5189" levels="6" name="Pet Blessed Body">
 		<!-- Increases maximum HP temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#effectPoints">597 457 495 532 597 646</table>
 		<table name="#magicLvl">44 48 52 56 64 72</table>
 		<table name="#maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<table name="#mpConsume">16 18 19 21 24 27</table>
 		<table name="#mpInitialConsume">4 5 5 6 6 7</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
@@ -1756,13 +1756,13 @@
 	</skill>
 	<skill id="5190" levels="6" name="Pet Blessed Soul">
 		<!-- Increases maximum MP temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#effectPoints">418 457 495 532 582 635</table>
 		<table name="#magicLvl">44 48 52 56 62 70</table>
 		<table name="#maxMp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<table name="#mpConsume">16 18 19 21 23 26</table>
 		<table name="#mpInitialConsume">4 5 5 6 6 7</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
@@ -1785,13 +1785,13 @@
 	</skill>
 	<skill id="5191" levels="3" name="Pet Guidance">
 		<!-- Increases Accuracy temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">2 3 4</table>
 		<table name="#effectPoints">379 457 532</table>
 		<table name="#magicLvl">40 48 56</table>
 		<table name="#mpConsume">14 18 21</table>
 		<table name="#mpInitialConsume">4 5 6</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
@@ -1814,13 +1814,13 @@
 	</skill>
 	<skill id="5192" levels="2" name="Pet Wind Walk">
 		<!-- Increases Speed temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">204 285</table>
 		<table name="#magicLvl">20 30</table>
 		<table name="#mpConsume">8 11</table>
 		<table name="#mpInitialConsume">2 3</table>
 		<table name="#runSpd">20 33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
@@ -1843,13 +1843,13 @@
 	</skill>
 	<skill id="5193" levels="3" name="Pet Acumen">
 		<!-- Increases Casting Spd. temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">204 331 457</table>
 		<table name="#magicLvl">20 35 48</table>
 		<table name="#mAtkSpd">1.15 1.23 1.3</table>
 		<table name="#mpConsume">8 12 18</table>
 		<table name="#mpInitialConsume">2 3 5</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -1872,13 +1872,13 @@
 	</skill>
 	<skill id="5194" levels="3" name="Pet Empower">
 		<!-- Increases M. Atk. power temporarily. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">243 418 495</table>
 		<table name="#magicLvl">25 44 52</table>
 		<table name="#mAtk">1.55 1.65 1.75</table>
 		<table name="#mpConsume">9 16 19</table>
 		<table name="#mpInitialConsume">3 4 5</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
@@ -1901,13 +1901,13 @@
 	</skill>
 	<skill id="5195" levels="12" name="Pet Greater Heal">
 		<!-- Recovers HP and increases HP recovery bonus in an instant. Power 50. Effect 1. -->
-		<table name="#abnormalLvls">1 1 2 2 4 6 7 7 7 7 7 7</table>
+		<table name="#abnormalLevels">1 1 2 2 4 6 7 7 7 7 7 7</table>
 		<table name="#amount">58 92 148 219 299 380 450 477 500 525 542 550</table>
 		<table name="#effectPoints">83 151 245 362 494 628 743 789 826 867 895 913</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">7 12 18 25 32 39 46 49 51 52 53 53</table>
 		<table name="#mpInitialConsume">2 3 5 7 8 10 12 13 13 13 14 14</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="activateRate" val="0" />
@@ -1937,7 +1937,7 @@
 		<table name="#magicLvl">64 66 68</table>
 		<table name="#mpConsume">48 49 51</table>
 		<table name="#mpInitialConsume">12 13 13</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
@@ -1968,7 +1968,7 @@
 		<table name="#magicLvl">64 66 68</table>
 		<table name="#mpConsume">24 25 26</table>
 		<table name="#mpInitialConsume">6 7 7</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
@@ -1999,7 +1999,7 @@
 		<table name="#magicLvl">64 66 68</table>
 		<table name="#mpConsume">48 49 51</table>
 		<table name="#mpInitialConsume">12 13 13</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
@@ -2030,7 +2030,7 @@
 		<table name="#magicLvl">64 66 68</table>
 		<table name="#mpConsume">48 49 51</table>
 		<table name="#mpInitialConsume">12 13 13</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MD_DOWN" />
 		<set name="activateRate" val="80" />

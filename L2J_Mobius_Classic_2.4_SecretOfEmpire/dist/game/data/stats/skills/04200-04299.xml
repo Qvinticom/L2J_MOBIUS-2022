@@ -3,7 +3,7 @@
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Immediately decreases Atk. Spd. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -16,7 +16,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>90</activateRate>
@@ -81,7 +81,7 @@
 	<skill id="4201" toLevel="12" name="Sleep">
 		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill1069</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">10</value>
@@ -146,7 +146,7 @@
 	<skill id="4202" toLevel="12" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">10</value>
@@ -210,7 +210,7 @@
 	<skill id="4203" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -223,7 +223,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>50</activateRate>
@@ -288,7 +288,7 @@
 	<skill id="4204" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -301,7 +301,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -369,7 +369,7 @@
 	<skill id="4205" toLevel="12" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">10</value>
@@ -433,7 +433,7 @@
 	<skill id="4206" toLevel="12" name="Aura Sink">
 		<!-- MP decreases. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -446,7 +446,7 @@
 			<value level="10">7</value>
 			<value level="11">8</value>
 			<value level="12">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -568,7 +568,7 @@
 	<skill id="4208" toLevel="12" name="Stun">
 		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -705,7 +705,7 @@
 	<skill id="4210" toLevel="12" name="Chant of Life">
 		<!-- HP is recovered. -->
 		<icon>icon.skill1229</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -718,7 +718,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>
@@ -787,7 +787,7 @@
 	<skill id="4211" toLevel="12" name="Might">
 		<!-- P. Atk. +$s1 -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<affectRange>400</affectRange>
@@ -838,7 +838,7 @@
 	<skill id="4212" toLevel="12" name="Shield">
 		<!-- P. Def. +$s1 -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectRange>400</affectRange>
@@ -889,7 +889,7 @@
 	<skill id="4213" toLevel="12" name="Haste">
 		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>400</affectRange>
@@ -940,7 +940,7 @@
 	<skill id="4214" toLevel="12" name="Reflect Damage">
 		<!-- Received damage is reflected by $s1. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<affectRange>400</affectRange>
@@ -990,7 +990,7 @@
 	<skill id="4215" toLevel="1" name="Raid Curse">
 		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1067,7 +1067,7 @@
 	<skill id="4219" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1132,7 +1132,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4223" toLevel="1" name="Daytime Zaken">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>14400</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalVisualEffect>CHANGE_TEXTURE</abnormalVisualEffect>
@@ -1147,7 +1147,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4224" toLevel="1" name="Nighttime Zaken">
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<coolTime>1900</coolTime>
@@ -1190,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="4227" toLevel="1" name="Zaken Regeneration">
-		<abnormalLvl>11</abnormalLvl>
+		<abnormalLevel>11</abnormalLevel>
 		<abnormalTime>14400</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1525,7 +1525,7 @@
 	<skill id="4236" toLevel="1" name="Decrease Heal">
 		<!-- Received Healing -50%. -->
 		<icon>icon.skill1269</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -1558,7 +1558,7 @@
 	<skill id="4237" toLevel="1" name="Decrease Speed">
 		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1236</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -1592,7 +1592,7 @@
 	<skill id="4238" toLevel="1" name="Increase Cooldown">
 		<!-- P./ M. Skill Cooldown increases momentarily. -->
 		<icon>icon.skill1248</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>REUSE_DELAY_UP</abnormalType>
 		<affectRange>200</affectRange>
@@ -1623,7 +1623,7 @@
 	<skill id="4239" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas recovery stage 2. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>12</abnormalLvl>
+		<abnormalLevel>12</abnormalLevel>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1644,7 +1644,7 @@
 	<skill id="4240" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas Recovery stage 3. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>13</abnormalLvl>
+		<abnormalLevel>13</abnormalLevel>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1665,7 +1665,7 @@
 	<skill id="4241" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas Recovery stage 4. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>14</abnormalLvl>
+		<abnormalLevel>14</abnormalLevel>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1684,7 +1684,7 @@
 		</effects>
 	</skill>
 	<skill id="4242" toLevel="1" name="Zaken Regeneration">
-		<abnormalLvl>12</abnormalLvl>
+		<abnormalLevel>12</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1699,7 +1699,7 @@
 	<skill id="4243" toLevel="1" name="Venomous Poison">
 		<!-- Noxious fumes gradually decrease your HP. -->
 		<icon>icon.skill4082</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1785,7 +1785,7 @@
 		</effects>
 	</skill>
 	<skill id="4245" toLevel="1" name="Mimic of Wrath">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<magicLvl>-1</magicLvl>
@@ -1951,7 +1951,7 @@
 	<skill id="4249" toLevel="12" name="Decrease Speed">
 		<!-- Immediately target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -2455,7 +2455,7 @@
 	<skill id="4258" toLevel="1" name="Hinder Strider">
 		<!-- Slows down the speed of a user who is riding a strider. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<castRange>1000</castRange>
@@ -2482,7 +2482,7 @@
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
 		<!-- Noxious fumes gradually decrease your HP. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -2495,7 +2495,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2744,7 +2744,7 @@
 	<skill id="4262" toLevel="2" name="Holiday Wind Walk">
 		<!-- Temporarily Speed +33. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2767,7 +2767,7 @@
 	<skill id="4263" toLevel="1" name="Holiday Haste">
 		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -2791,7 +2791,7 @@
 	<skill id="4264" toLevel="1" name="Holiday Empower">
 		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2815,11 +2815,11 @@
 	<skill id="4265" toLevel="3" name="Holiday Might">
 		<!-- Temporarily P. Atk. +5%. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2843,11 +2843,11 @@
 	<skill id="4266" toLevel="3" name="Holiday Shield">
 		<!-- Temporarily P. Def. +5%. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>

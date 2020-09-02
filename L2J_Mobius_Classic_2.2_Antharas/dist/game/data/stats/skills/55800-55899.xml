@@ -1184,7 +1184,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1257,11 +1257,11 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">6</value>
 			<value level="3">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
@@ -1318,7 +1318,7 @@
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>867</effectPoint>		
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectRange>900</effectRange>
@@ -1361,7 +1361,7 @@
 		<icon>icon.skill1917</icon>
 		<hitTime>200</hitTime>
 		<reuseDelay>300000</reuseDelay>		
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1690,11 +1690,11 @@
 		<isMagic>4</isMagic>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>		
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

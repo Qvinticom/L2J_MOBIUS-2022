@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23300" levels="1" name="Ghost Piercing">
 		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="GHOST_PIERCING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -111,7 +111,7 @@
 	</skill>
 	<skill id="23312" levels="1" name="Fall of the Dragon">
 		<!-- Nevit's gift to honor those warriors who caused the evil dragon's fall. Increases Nevit's blessing by 3 hour(s). -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="VOTE" />
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
@@ -159,7 +159,7 @@
 	</skill>
 	<skill id="23319" levels="1" name="Blood Seeker">
 		<!-- HP is decreased momentarily from bleeding. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="80" />
@@ -186,7 +186,7 @@
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
 		<!-- HP is decreased momentarily from bleeding. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="80" />
@@ -211,7 +211,7 @@
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">
 		<!-- Temporarily inflicted with fear and moves regardless of your own volition. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -238,7 +238,7 @@
 	</skill>
 	<skill id="23322" levels="1" name="Demonic Desire">
 		<!-- P. Def. is temporarily decreased. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
@@ -264,7 +264,7 @@
 	</skill>
 	<skill id="23323" levels="1" name="Fury of Darkness">
 		<!-- Temporarily, P. Def. is decreased and you cannot move due to shock. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -292,7 +292,7 @@
 	</skill>
 	<skill id="23324" levels="1" name="Jet Black Typhoon">
 		<!-- Temporarily, Casting Spd. and wind type attack power are increased. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="blockedInOlympiad" val="true" />

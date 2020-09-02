@@ -3,7 +3,7 @@
 	<skill id="11600" toLevel="1" name="Frenzied Prevailing Sonata">
 		<!-- For 5 minutes, increases clan members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases MP Consumption for magic skills - 10% and the magic cancel rate. -->
 		<icon>icon.skill11600</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -60,7 +60,7 @@
 		<!-- For 5 minutes, increases clan members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<icon>icon.skill11601</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -123,7 +123,7 @@
 		<!-- For 5 minutes, increases clan members' HP Recovery Bonus + 20%, P.?Accuracy + 4, P.?Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<icon>icon.skill11602</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -194,7 +194,7 @@
 	<skill id="11603" toLevel="4" name="Mass Restriction">
 		<!-- During PvP, limits the CP, HP, and MP recovery of the target and nearby enemies to maximum $s2 for $s1. -->
 		<icon>icon.skill11603</icon>
-		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
+		<abnormalLevel>4</abnormalLevel> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
 		<activateRate>60</activateRate> <!-- Custom -->
@@ -385,7 +385,7 @@
 		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
 		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -441,7 +441,7 @@
 		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -508,7 +508,7 @@
 		<!-- Increases party members' HP Recovery Bonus by 20%, P.?Accuracy by 4, P.?Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
 		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -575,7 +575,7 @@
 		<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
 		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -631,7 +631,7 @@
 		<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -698,7 +698,7 @@
 		<!-- Increases party members' HP Recovery Bonus by 20%, P.?Accuracy by 4, P.?Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes. -->
 		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -764,7 +764,7 @@
 	<skill id="11613" toLevel="4" name="Song of Protection">
 		<!-- For $s1, increases your P. Def. + $s2 and M. Def. + $s3. Restores $s4 HP. -->
 		<icon>icon.skill11613</icon>
-		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
+		<abnormalLevel>1</abnormalLevel> <!-- Guessed -->
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -874,7 +874,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -921,7 +921,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -969,7 +969,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1014,7 +1014,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1195,7 +1195,7 @@
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
 		<!-- Protected by a divine barrier. The barrier absorbs 20000 damage for 10 seconds. -->
 		<icon>icon.skill11621</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>

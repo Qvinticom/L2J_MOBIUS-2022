@@ -80,7 +80,7 @@
 	<skill id="39205" toLevel="1" name="Dark Assassin Transformation Potion">
 		<!-- You are transformed into Dark Assassin. For 15 minutes Max HP / MP +5%, P. / M. Accuracy +1, P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +10, Speed +4. Cooldown: 10 minutes. -->
 		<icon>icon.empty_bottle</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>DARK_ASSASSIN_SUIT</abnormalVisualEffect>
@@ -285,7 +285,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP_HERB</abnormalType>
 		<magicLvl>1</magicLvl>
@@ -336,7 +336,7 @@
 		<!-- For 60 minutes, Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STRAWBERRY_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -379,7 +379,7 @@
 		<!-- For 60 minutes, MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.etc_fruit_cocktail_i03</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MONGO_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -417,7 +417,7 @@
 		<!-- For 60 minutes, P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CHERRY_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -463,7 +463,7 @@
 	<skill id="39228" toLevel="1" name="Chef's Fish Stew - Victory">
 		<!-- For 10 min., HP / MP Recovery bonus +20%, P. / M. Accuracy +4, P. / M. Evasion +4, P. /M. Atk. +15%, Casting / Atk. Spd. +10%, P. / M. Critical Rate +15%, P. / M. Critical Damage +15%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -553,7 +553,7 @@
 	<skill id="39229" toLevel="1" name="Chef's Fish Stew - Fire">
 		<!-- For 10 min., Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -609,7 +609,7 @@
 	<skill id="39230" toLevel="1" name="Chef's Fish Stew - Water">
 		<!-- For 10 min., MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -678,7 +678,7 @@
 	<skill id="39231" toLevel="1" name="Chef's Fish Stew - Wind">
 		<!-- For 10 min., P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -979,7 +979,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
@@ -1062,7 +1062,7 @@
 		<icon>icon.ev_balthus_token</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90506</itemConsumeId>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<operateType>A2</operateType>
@@ -1094,7 +1094,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>

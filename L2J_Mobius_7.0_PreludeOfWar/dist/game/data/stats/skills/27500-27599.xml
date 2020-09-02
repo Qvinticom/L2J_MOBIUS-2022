@@ -3854,7 +3854,7 @@
 	<skill id="27580" toLevel="1" name="Wind of Bard">
 		<!-- XP/ SP +100% for 1 h. Cannot be stacked with Maphr's Wind Scroll. Buff remains after death. -->
 		<icon>icon.skill_sing</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>EXP_SPECIAL</abnormalType>
 		<isMagic>4</isMagic>
@@ -4290,7 +4290,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>

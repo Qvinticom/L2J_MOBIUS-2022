@@ -24,7 +24,7 @@
 		<!-- TODO abnormalType -->
 		<!-- For 15 sec., all party members' P. Def. + 200%, P. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>PALADIN_PROTECTION</abnormalVisualEffect>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -55,7 +55,7 @@
 	<skill id="19202" toLevel="1" name="Sentinel's Protection">
 		<!-- TODO abnormalType -->
 		<!-- For 15 sec., all party members' M. Def. + 200%, M. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>SENTINEL_PROTECTION</abnormalVisualEffect>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -86,7 +86,7 @@
 	</skill>
 	<skill id="19203" toLevel="1" name="Ultimate Bullseye">
 		<!-- Decreases target's Bow/Crossbow Resistance by 60% for 7 seconds. Does not cancel when striking. Consumes 1 Soulstone. -->
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -123,7 +123,7 @@
 	</skill>
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
 		<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by 25% for 5 minutes. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -177,7 +177,7 @@
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
 		<!-- Increases Bow/Crossbow Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -206,7 +206,7 @@
 	</skill>
 	<skill id="19206" toLevel="1" name="Sage's Dance">
 		<!-- Increases M. Def. of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -234,7 +234,7 @@
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
 		<!-- Increases P. Atk./M. Atk. by 10% and P. Accuracy/M. Accuracy by 4 for all party members for 5 minutes. Consumes 10 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -645,7 +645,7 @@
 		<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. -->
 		<!-- Info: Transfers PvP/PvE attack/defense from items, just as other SAs, but not augments. -->
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SPIRIT_SHARING</abnormalType>
 		<mpConsume>77</mpConsume>
@@ -865,7 +865,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>60000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
 		<effectRange>900</effectRange>
@@ -912,10 +912,10 @@
 		<!-- For 1 hr., increases gained XP/SP by 3%. Consumes 40 Spirit Ores. -->
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<mpConsume>142</mpConsume>
 		<castRange>400</castRange>
@@ -948,10 +948,10 @@
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
 		<!-- Blends into the wind for 7 seconds. Increases Speed by 70. Canceled when using normal attacks or attack skills. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
@@ -1013,7 +1013,7 @@
 	<skill id="19228" toLevel="1" name="Song of Thief">
 		<!-- Updated to IO -->
 		<!-- Increases Dagger/Dual Dagger Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SONG_OF_THIEF</abnormalType> <!-- TODO: confirm -->
 		<affectRange>1000</affectRange>
@@ -1051,7 +1051,7 @@
 		</effects>
 	</skill>
 	<skill id="19230" toLevel="30" name="MP Recovery">
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -1062,7 +1062,7 @@
 	<skill id="19231" toLevel="1" name="Song of Wisdom">
 		<!-- Updated to IO -->
 		<!-- Party's M. Atk. + 30%% for 30 seconds. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1091,7 +1091,7 @@
 	<skill id="19232" toLevel="1" name="Crippling Dance">
 		<!-- Updated to IO -->
 		<!-- Party's P. Skill Power + 30%% for 30 seconds. Consumes 5 Spirit Ores. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>

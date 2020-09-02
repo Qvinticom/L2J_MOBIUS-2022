@@ -19,7 +19,7 @@
 	<skill id="17904" toLevel="1" name="Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -41,7 +41,7 @@
 	<skill id="17905" toLevel="1" name="Major Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -63,7 +63,7 @@
 	<skill id="17906" toLevel="1" name="Greater Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -85,7 +85,7 @@
 	<skill id="17907" toLevel="1" name="Superior Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -107,7 +107,7 @@
 	<skill id="17908" toLevel="1" name="Supreme Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -225,7 +225,7 @@
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -270,7 +270,7 @@
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -315,7 +315,7 @@
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -360,7 +360,7 @@
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1286,7 +1286,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>

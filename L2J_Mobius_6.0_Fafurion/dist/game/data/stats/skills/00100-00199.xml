@@ -3,7 +3,7 @@
 	<skill id="100" toLevel="15" name="Stun Attack">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -109,7 +109,7 @@
 	<skill id="101" toLevel="40" name="Stun Shot">
 		<!-- Fires arrows with $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Requires a bow weapon. Over-hit is possible. Cancels target. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -317,7 +317,7 @@
 	<skill id="102" toLevel="16" name="Entangle">
 		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
 		<icon>icon.skill0102</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -334,7 +334,7 @@
 			<value level="14">3</value>
 			<value level="15">3</value>
 			<value level="16">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -449,12 +449,12 @@
 	<skill id="103" toLevel="4" name="Corpse Plague">
 		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every second. -->
 		<icon>icon.skill0103</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -513,7 +513,7 @@
 	<skill id="104" toLevel="1" name="Detect Plant Weakness">
 		<!-- For 10 min., increases damage against plants +5%. -->
 		<icon>icon.skill0104</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>438</effectPoint>
@@ -535,7 +535,7 @@
 	<skill id="105" toLevel="24" name="Freezing Strike">
 		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
 		<icon>icon.skill0105</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -695,7 +695,7 @@
 	<skill id="106" toLevel="14" name="Veil">
 		<!-- Creates an illusion of nearby monsters for $s1. -->
 		<icon>icon.skill0106</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
 		<activateRate>70</activateRate>
@@ -749,7 +749,7 @@
 	<skill id="107" toLevel="9" name="Holy Aura">
 		<!-- Holds nearby undead monsters for $s1. -->
 		<icon>icon.skill0107</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -810,7 +810,7 @@
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
 		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./ P. Def./ M. Def. by 30% and Critical Damage by 10% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0109</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>438</effectPoint>
@@ -858,10 +858,10 @@
 	<skill id="110" toLevel="2" name="Ultimate Defense">
 		<!-- For $s1., increases P. Def. by $s2, M. Def. by $s3, and Buff-canceling Attack Resistance by $s4, and restricts movement. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -909,10 +909,10 @@
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
 		<!-- For $s1, increases Evasion by $s2, physical attack skill Evasion Rate by $s3, and Buff-canceling Attack Resistance by $s4. -->
 		<icon>icon.skill0111</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -958,12 +958,12 @@
 	<skill id="112" toLevel="4" name="Deflect Arrow">
 		<!-- Increases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1. -->
 		<icon>icon.skill0112</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>
@@ -1039,7 +1039,7 @@
 	<skill id="115" toLevel="17" name="Power Break">
 		<!-- Decreases the enemy's P. Atk. by $s2 for $s1. -->
 		<icon>icon.skill0115</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1057,7 +1057,7 @@
 			<value level="15">3</value>
 			<value level="16">3</value>
 			<value level="17">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1177,7 +1177,7 @@
 	<skill id="116" toLevel="14" name="Howl">
 		<!-- Decreases nearby enemies' P. Atk. by $s2 for $s1. -->
 		<icon>icon.skill0116</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -1269,7 +1269,7 @@
 	<skill id="120" toLevel="15" name="Stunning Fist">
 		<!-- Attacks the enemy with $s1 power added to P. Attack and inflicts Stun for $s2. Requires a fist weapon. Over-hit is possible. -->
 		<icon>icon.skill0120</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1375,14 +1375,14 @@
 	<skill id="121" toLevel="6" name="Battle Roar">
 		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectPoint>
@@ -1434,7 +1434,7 @@
 	<skill id="122" toLevel="15" name="Hex">
 		<!-- Decreases the enemy's P. Def. by $s2 for $s1. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1511,11 +1511,11 @@
 	<skill id="123" toLevel="3" name="Spirit Barrier">
 		<!-- Increases M. Def. by $s2 for $s1. -->
 		<icon>icon.skill0123</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<effectPoint>
@@ -1560,7 +1560,7 @@
 	<skill id="127" toLevel="14" name="Hamstring">
 		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
 		<icon>icon.skill0127</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1649,13 +1649,13 @@
 	<skill id="129" toLevel="5" name="Poison">
 		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
 		<icon>icon.skill0129</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">5</value>
 			<value level="3">6</value>
 			<value level="4">7</value>
 			<value level="5">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1718,10 +1718,10 @@
 	<skill id="130" toLevel="2" name="Thrill Fight">
 		<!-- Decreases Speed by $s2 and increases Atk. Spd. by $s3 for $s1. -->
 		<icon>icon.skill0130</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>THRILL_FIGHT</abnormalType>
 		<effectPoint>
@@ -1761,11 +1761,11 @@
 	<skill id="131" toLevel="3" name="Hawk Eye">
 		<!-- Decreases P. Def. by $s2 and increases Accuracy by $s3 for $s1. -->
 		<icon>icon.skill0131</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
 		<effectPoint>
@@ -1846,7 +1846,7 @@
 	<skill id="139" toLevel="10" name="Guts">
 		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
 		<icon>icon.skill0139</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1857,7 +1857,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="8" toLevel="10" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -2805,7 +2805,7 @@
 	<skill id="176" toLevel="10" name="Frenzy">
 		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Spd. +$s6. Additionally Accuracy +$s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt, or spear. Available when HP is $s9 or below. -->
 		<icon>icon.skill0176</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2816,7 +2816,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="8" toLevel="10" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>

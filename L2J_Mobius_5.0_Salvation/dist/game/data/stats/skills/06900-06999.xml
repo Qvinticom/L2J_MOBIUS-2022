@@ -68,7 +68,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>2500</hitTime>
 		<reuseDelay>10000</reuseDelay>
@@ -133,7 +133,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>100</affectRange>
 		<isDebuff>true</isDebuff>
@@ -147,7 +147,7 @@
 	<skill id="6913" toLevel="1" name="Challenge of Faith">
 		<!-- As a result of the challenge, for 15 seconds, increases P. Def. by 360 and M. Def. by 270. -->
 		<icon>icon.skill0985</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -184,7 +184,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -199,7 +199,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic>
@@ -259,7 +259,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>2</lvlBonusRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -276,7 +276,7 @@
 		<abnormalType>PATIENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -319,7 +319,7 @@
 		<effectRange>1000</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>80</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<castRange>500</castRange>

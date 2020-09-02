@@ -3,7 +3,7 @@
 	<skill id="4700" toLevel="13" name="Gift of Queen">
 		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1. -->
 		<icon>icon.skill1331</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -17,7 +17,7 @@
 			<value level="11">3</value>
 			<value level="12">3</value>
 			<value level="13">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">120</value>
 			<value level="2">120</value>
@@ -208,7 +208,7 @@
 	<skill id="4702" toLevel="13" name="Blessing of Seraphim">
 		<!-- Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect 1. -->
 		<icon>icon.skill1332</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -222,7 +222,7 @@
 			<value level="11">3</value>
 			<value level="12">3</value>
 			<value level="13">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">120</value>
 			<value level="2">120</value>
@@ -318,7 +318,7 @@
 	<skill id="4703" toLevel="13" name="Gift of Seraphim">
 		<!-- Seraphim the Unicorn's buff magic temporarily reduces party members' magic skill recovery time. Effect 1. -->
 		<icon>icon.skill1332</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -332,7 +332,7 @@
 			<value level="11">3</value>
 			<value level="12">3</value>
 			<value level="13">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">120</value>
 			<value level="2">120</value>
@@ -525,7 +525,7 @@
 	<skill id="4705" toLevel="13" name="Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect 1. -->
 		<icon>icon.skill1333</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -539,7 +539,7 @@
 			<value level="11">3</value>
 			<value level="12">3</value>
 			<value level="13">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEBUFF_NIGHTSHADE</abnormalType>
 		<activateRate>
@@ -676,7 +676,7 @@
 	<skill id="4706" toLevel="13" name="Mass Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect 1. -->
 		<icon>icon.skill1333</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -690,7 +690,7 @@
 			<value level="11">3</value>
 			<value level="12">3</value>
 			<value level="13">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEBUFF_NIGHTSHADE</abnormalType>
 		<activateRate>
@@ -906,7 +906,7 @@
 	<skill id="4708" toLevel="17" name="Cursed Strike">
 		<!-- Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1103,7 +1103,7 @@
 	<skill id="4710" toLevel="12" name="Wild Stun">
 		<!-- Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1188,7 +1188,7 @@
 	<skill id="4711" toLevel="12" name="Wild Defense">
 		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
 		<activateRate>
@@ -1852,7 +1852,7 @@
 	<skill id="4724" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1935,7 +1935,7 @@
 	<skill id="4725" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -2018,7 +2018,7 @@
 	<skill id="4726" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -2101,7 +2101,7 @@
 	<skill id="4727" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -2184,7 +2184,7 @@
 	<skill id="4728" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3127,7 +3127,7 @@
 	<skill id="4744" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3210,7 +3210,7 @@
 	<skill id="4745" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3293,7 +3293,7 @@
 	<skill id="4746" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3376,7 +3376,7 @@
 	<skill id="4747" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3459,7 +3459,7 @@
 	<skill id="4748" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4112,7 +4112,7 @@
 	<skill id="4759" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4194,7 +4194,7 @@
 	<skill id="4760" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4276,7 +4276,7 @@
 	<skill id="4761" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4358,7 +4358,7 @@
 	<skill id="4762" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4440,7 +4440,7 @@
 	<skill id="4763" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4802,7 +4802,7 @@
 	<skill id="4769" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4884,7 +4884,7 @@
 	<skill id="4770" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4966,7 +4966,7 @@
 	<skill id="4771" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -5048,7 +5048,7 @@
 	<skill id="4772" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -5130,7 +5130,7 @@
 	<skill id="4773" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -5775,7 +5775,7 @@
 		</effects>
 	</skill>
 	<skill id="4784" toLevel="12" name="Chant of Life">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -5788,7 +5788,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>
@@ -5852,7 +5852,7 @@
 		</effects>
 	</skill>
 	<skill id="4785" toLevel="12" name="Chant of Life">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -5865,7 +5865,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>
@@ -5929,7 +5929,7 @@
 		</effects>
 	</skill>
 	<skill id="4786" toLevel="12" name="Chant of Life">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -5942,7 +5942,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>
@@ -6006,7 +6006,7 @@
 		</effects>
 	</skill>
 	<skill id="4787" toLevel="12" name="Chant of Life">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -6019,7 +6019,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>
@@ -6083,7 +6083,7 @@
 		</effects>
 	</skill>
 	<skill id="4788" toLevel="12" name="Chant of Life">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">11</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
@@ -6096,7 +6096,7 @@
 			<value level="10">18</value>
 			<value level="11">19</value>
 			<value level="12">19</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<castRange>700</castRange>

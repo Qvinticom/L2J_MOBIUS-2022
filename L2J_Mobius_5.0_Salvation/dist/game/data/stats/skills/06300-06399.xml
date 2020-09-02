@@ -29,10 +29,10 @@
 	<skill id="6301" toLevel="2" name="Cold Mana Fragment">
 		<!-- Recovers MP by $s1 per second. -->
 		<icon>icon.skill6301</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
 		<affectRange>350</affectRange>
@@ -63,7 +63,7 @@
 	<skill id="6302" toLevel="1" name="Icy Air">
 		<!-- Increase P. Def. and M. Def. by 15%. -->
 		<icon>icon.skill6302</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -112,7 +112,7 @@
 	<skill id="6304" toLevel="1" name="Stun">
 		<!-- Stunned for 2 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -165,7 +165,7 @@
 	<skill id="6306" toLevel="1" name="Solina Strike">
 		<!-- Causes profuse bleeding for 10 seconds, causing 139 HP damage per second. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -340,7 +340,7 @@
 		</effects>
 	</skill>
 	<skill id="6313" toLevel="1" name="Solina Bless">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -464,7 +464,7 @@
 	<skill id="6318" toLevel="1" name="Holy Shield Defense">
 		<!-- Increases P. Def. by 10% for 3 seconds. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectRange>200</affectRange>
@@ -493,7 +493,7 @@
 	<skill id="6319" toLevel="1" name="Divine Magic Protection">
 		<!-- Increases M. Def. by 10% for 3 seconds. -->
 		<icon>icon.skill6319</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<affectRange>200</affectRange>
@@ -522,7 +522,7 @@
 	<skill id="6320" toLevel="1" name="Summon Holy Magic Circle">
 		<!-- Decreases enemy's P. Def. by 23% for 15 seconds. -->
 		<icon>icon.skill6320</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -779,7 +779,7 @@
 	<skill id="6331" toLevel="1" name="Campfire Tired">
 		<!-- Atk. Spd. is decreased. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -803,7 +803,7 @@
 	<skill id="6332" toLevel="1" name="Campfire Full">
 		<!-- Speed and Atk. Spd. is decreased. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
@@ -831,7 +831,7 @@
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -867,7 +867,7 @@
 	<skill id="6334" toLevel="1" name="Stun">
 		<!-- Stunned for 4 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -984,7 +984,7 @@
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1022,7 +1022,7 @@
 	<skill id="6340" toLevel="1" name="Stun">
 		<!-- Stunned for 4 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1069,7 +1069,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<activateRate>30</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1105,7 +1105,7 @@
 			<value level="1">icon.skill6343_1</value>
 			<value level="2">icon.skill6343_2</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1147,7 +1147,7 @@
 			<value level="1">icon.skill6365_1</value>
 			<value level="2">icon.skill6365_2</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1196,7 +1196,7 @@
 			<value level="1">icon.skill6366_1</value>
 			<value level="2">icon.skill6366_2</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1246,11 +1246,11 @@
 			<value level="2">icon.skill6367_2</value>
 			<value level="3">icon.skill6367_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>SOA_BUFF1</abnormalType>
 		<castRange>400</castRange>
@@ -1276,11 +1276,11 @@
 			<value level="2">icon.skill6368_2</value>
 			<value level="3">icon.skill6368_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>SOA_BUFF2</abnormalType>
 		<castRange>400</castRange>
@@ -1306,11 +1306,11 @@
 			<value level="2">icon.skill6369_2</value>
 			<value level="3">icon.skill6369_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>SOA_BUFF3</abnormalType>
 		<castRange>400</castRange>
@@ -1332,7 +1332,7 @@
 	<skill id="6370" toLevel="1" name="Thunderbolt">
 		<!-- Receive damage is amplified. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1354,7 +1354,7 @@
 	</skill>
 	<skill id="6371" toLevel="1" name="Invincibility">
 		<!-- Invincible against standard attacks, skills and buffs/ debuffs. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1372,7 +1372,7 @@
 	<skill id="6372" toLevel="10" name="Power Up">
 		<!-- $s1 of Atk. Spd. And $s2 of Physical Skill Damage are increased. -->
 		<icon>icon.skill0917</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1383,7 +1383,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1403,7 +1403,7 @@
 	<skill id="6373" toLevel="1" name="Thunderbolt">
 		<!-- Receive damage is amplified. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1452,7 +1452,7 @@
 	<skill id="6376" toLevel="9" name="Sonic Strike">
 		<!-- For $s1, 10% of max HP, $s2 of Max MP and $s3 HP per second decrease from Dopagen's Sonic Strike. -->
 		<icon>icon.skill1417</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1462,7 +1462,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAX_HP_DOWN</abnormalType>
 		<effectPoint>-100</effectPoint>
@@ -1482,7 +1482,7 @@
 	<skill id="6377" toLevel="10" name="Speed Up">
 		<!-- Increases Atk. Spd. by $s1. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1493,7 +1493,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1513,7 +1513,7 @@
 	<skill id="6378" toLevel="1" name="Earth Shift">
 		<!-- The ground below your feet shakes, making concentration difficult. -->
 		<icon>icon.skill0347</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>VIBRATION</abnormalType>
 		<activateRate>50</activateRate>
@@ -1534,7 +1534,7 @@
 	<skill id="6379" toLevel="1" name="Critical Hit">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1563,7 +1563,7 @@
 	<skill id="6380" toLevel="1" name="Bistakon Roar">
 		<!-- Blocks all the enemy's physical/ magic skills for 20 seconds. -->
 		<icon>icon.skill1336</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1593,10 +1593,10 @@
 	<skill id="6381" toLevel="2" name="Bistakon Soul Beam">
 		<!-- Blocks all the enemy's physical and magical skills for $s1. -->
 		<icon>icon.skill1336</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1627,7 +1627,7 @@
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1661,7 +1661,7 @@
 	<skill id="6383" toLevel="1" name="Bistakon Deadly Roar">
 		<!-- Blocks all the enemy's physical/ magic skills for 20 seconds. -->
 		<icon>icon.skill1336</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1713,7 +1713,7 @@
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
 		<!-- Profuse bleeding causes you to lose 95 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1748,7 +1748,7 @@
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
 		<!-- Stunned for 3 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1817,7 +1817,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -1832,7 +1832,7 @@
 	<skill id="6389" toLevel="1" name="Kokracon Sonic Cage">
 		<!-- Speed is decreased by 50%. -->
 		<icon>icon.skill0102</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<castRange>1200</castRange>
@@ -1858,7 +1858,7 @@
 	<skill id="6390" toLevel="1" name="Kokracon Sonic Explosion">
 		<!-- Casting Spd. is decreased by 50%. -->
 		<icon>icon.skill1386</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<affectRange>300</affectRange>
@@ -1887,7 +1887,7 @@
 	<skill id="6391" toLevel="1" name="Kokracon Sonic Slash">
 		<!-- Stunned for 5 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1918,7 +1918,7 @@
 	<skill id="6392" toLevel="1" name="Kokracon Sonic Shot">
 		<!-- Atk. Spd. is decreased by 50%. -->
 		<icon>icon.skill1104</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1964,7 +1964,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1998,7 +1998,7 @@
 	<skill id="6395" toLevel="1" name="Kokracon Dreadful Clow">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2031,7 +2031,7 @@
 	<skill id="6396" toLevel="1" name="Kokracon Panic">
 		<!-- Frightens the enemy and causes him to flee for 6 seconds. -->
 		<icon>icon.skill1169</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -2061,7 +2061,7 @@
 	<skill id="6397" toLevel="1" name="Kokracon Staggering Blow">
 		<!-- Stunned for 3 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2094,7 +2094,7 @@
 	<skill id="6398" toLevel="1" name="Kokracon Sonic Shout">
 		<!-- Frightens the enemy and causes him to flee for 3 seconds. -->
 		<icon>icon.skill1169</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>

@@ -74,7 +74,7 @@
 	<skill id="21004" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 min. Cooldown 18 min. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -101,7 +101,7 @@
 	<skill id="21005" toLevel="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
 		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -140,7 +140,7 @@
 	<skill id="21007" toLevel="1" name="Mysterious Ability">
 		<!-- Increases the size of your head. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -213,7 +213,7 @@
 	<skill id="21011" toLevel="1" name="Maintain Vitality">
 		<!-- Maintains Vitality when acquiring XP for 20 min. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -240,7 +240,7 @@
 	<skill id="21012" toLevel="1" name="Maintain Vitality">
 		<!-- Maintains Vitality when acquiring XP for 20 min. -->
 		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -267,7 +267,7 @@
 	<skill id="21013" toLevel="1" name="Maintain Vitality">
 		<!-- Maintains Vitality when acquiring XP for 20 min. -->
 		<icon>BranchSys.icon.br_Bamboo_Hat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -1033,7 +1033,7 @@
 	<skill id="21051" toLevel="1" name="Ride Steam Beetle">
 		<!-- Ride a Steam Beetle. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1061,7 +1061,7 @@
 	<skill id="21052" toLevel="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 30 min. -->
 		<icon>BranchSys.icon.br_people_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1087,7 +1087,7 @@
 	<skill id="21053" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 30 min. -->
 		<icon>BranchSys.icon.br_people_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1137,7 +1137,7 @@
 	<skill id="21055" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 min. Cooldown is 18 min. -->
 		<icon>BranchSys.icon.br_Bamboo_Hat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1164,7 +1164,7 @@
 	<skill id="21056" toLevel="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
 		<icon>BranchSys.icon.br_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1191,7 +1191,7 @@
 	<skill id="21057" toLevel="1" name="Reflect">
 		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_Ribbon_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<activateRate>0</activateRate>
@@ -1219,7 +1219,7 @@
 	<skill id="21058" toLevel="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3% for 5 min. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_Eye_Visor_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1248,7 +1248,7 @@
 	<skill id="21059" toLevel="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 sec. Cooldown is 4 h. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<activateRate>0</activateRate>
@@ -1280,7 +1280,7 @@
 	<skill id="21060" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_skeleton_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1306,7 +1306,7 @@
 	<skill id="21061" toLevel="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1333,7 +1333,7 @@
 	<skill id="21062" toLevel="1" name="Wild Magic">
 		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1359,7 +1359,7 @@
 	<skill id="21063" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 min. Cooldown 18 min. -->
 		<icon>BranchSys.icon.br_goggles_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1386,7 +1386,7 @@
 	<skill id="21064" toLevel="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1415,7 +1415,7 @@
 	<skill id="21065" toLevel="1" name="Reflect">
 		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_horn_hairband_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<activateRate>0</activateRate>
@@ -1443,7 +1443,7 @@
 	<skill id="21066" toLevel="1" name="Vitality Recovery">
 		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_black_gem_mask_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1493,7 +1493,7 @@
 	<skill id="21068" toLevel="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 30 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_daisy_hairpin_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>0</activateRate>
@@ -1522,7 +1522,7 @@
 	<skill id="21069" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 min. Cooldown 18 min. -->
 		<icon>icon.accessory_forget_me_not_hairpin_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1549,7 +1549,7 @@
 	<skill id="21070" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_outlaw_eyepatch_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1575,7 +1575,7 @@
 	<skill id="21071" toLevel="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
 		<icon>icon.accessory_eye_bandage_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1602,7 +1602,7 @@
 	<skill id="21072" toLevel="1" name="Wild Magic">
 		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
 		<icon>icon.accessory_glasses_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1628,7 +1628,7 @@
 	<skill id="21073" toLevel="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_worldcup_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1657,7 +1657,7 @@
 	<skill id="21074" toLevel="1" name="Reflect">
 		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 h. -->
 		<icon>icon.accessory_hair_cornu_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<activateRate>0</activateRate>
@@ -1685,7 +1685,7 @@
 	<skill id="21075" toLevel="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 sec. Cooldown is 4 h. -->
 		<icon>icon.etc_party_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<activateRate>0</activateRate>
@@ -1717,7 +1717,7 @@
 	<skill id="21076" toLevel="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 30 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.etc_party_mask_i01</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>0</activateRate>
@@ -1746,7 +1746,7 @@
 	<skill id="21077" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 20 for 2 min. Cooldown 18 min. -->
 		<icon>icon.accessory_cat_ear_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1773,7 +1773,7 @@
 	<skill id="21078" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_hairpin_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1799,7 +1799,7 @@
 	<skill id="21079" toLevel="1" name="Agility">
 		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
 		<icon>icon.accessory_racoon_ear_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1826,7 +1826,7 @@
 	<skill id="21080" toLevel="1" name="Wild Magic">
 		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1852,7 +1852,7 @@
 	<skill id="21081" toLevel="1" name="Mana Regeneration">
 		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_hair_ring_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1881,7 +1881,7 @@
 	<skill id="21082" toLevel="1" name="Reflect">
 		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 h. -->
 		<icon>icon.accessory_hair_feeler_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<activateRate>0</activateRate>
@@ -1909,7 +1909,7 @@
 	<skill id="21083" toLevel="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 sec. Cooldown is 4 h. -->
 		<icon>icon.accessory_archer_hat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<activateRate>0</activateRate>
@@ -1941,7 +1941,7 @@
 	<skill id="21084" toLevel="1" name="Vitality Recovery">
 		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<activateRate>0</activateRate>
@@ -1986,7 +1986,7 @@
 	<skill id="21086" toLevel="1" name="Blessing of Love">
 		<!-- Can feel the warm love of family. Protects the target with holy power. Makes the target invincible for 10 sec. Cooldown is 4 h. -->
 		<icon>BranchSys.icon.br_garland_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2026,7 +2026,7 @@
 	<skill id="21087" toLevel="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16% and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 20 min. -->
 		<icon>BranchSys.icon.br_circlet_of_eva_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2111,7 +2111,7 @@
 	<skill id="21089" toLevel="1" name="Dance of Shadows">
 		<!-- Receives the soul's help, and for 2 min., decreases one's own Speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
 		<icon>BranchSys.icon.br_invokespirit_stick_a_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2142,7 +2142,7 @@
 	<skill id="21090" toLevel="1" name="Soul of the Phoenix">
 		<!-- Receives the soul's help, and revives from death with completely recovered status. Buff/ de-buff doesn't disappear at death but is maintained. -->
 		<icon>BranchSys.icon.br_comfortspirit_hat_a_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2231,7 +2231,7 @@
 	<skill id="21096" toLevel="1" name="Refreshing Watermelon's Ability">
 		<!-- For 30 min., increases Critical Rate by 30% and Critical Damage by 35%. -->
 		<icon>BranchSys.icon.br_watermelon_cap_a_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2292,7 +2292,7 @@
 	<skill id="21098" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 min., receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2330,7 +2330,7 @@
 	<skill id="21099" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 min., receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>BranchSys.icon.br_tiger_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

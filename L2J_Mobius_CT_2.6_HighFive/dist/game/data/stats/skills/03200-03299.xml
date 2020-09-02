@@ -6,7 +6,7 @@
 		<table name="#magicLvl">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -31,7 +31,7 @@
 		<table name="#magicLvl">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -56,7 +56,7 @@
 		<table name="#magicLvl">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -79,7 +79,7 @@
 	</skill>
 	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
 		<!-- Active: Increases your head size. -->
-		<set name="abnormalLvl" val="0" />
+		<set name="abnormalLevel" val="0" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -95,13 +95,13 @@
 	</skill>
 	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">379 438 495</table>
 		<table name="#magicLvl">55 64 75</table>
 		<table name="#mpConsume">20 24 28</table>
 		<table name="#mpInitialConsume">5 6 7</table>
 		<table name="#reflectDam">10 15 20</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1116,7 +1116,7 @@
 	</skill>
 	<skill id="3265" levels="1" name="Mysterious Ability">
 		<!-- Increases the size of your head. -->
-		<set name="abnormalLvl" val="0" />
+		<set name="abnormalLevel" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -1195,7 +1195,7 @@
 	</skill>
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
 		<!-- Increases P. Atk with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1216,7 +1216,7 @@
 	</skill>
 	<skill id="3272" levels="1" name="Blue Talisman of Defense">
 		<!-- Increases P. Def with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1258,7 +1258,7 @@
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
 		<!-- Increases Shield Defense with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1279,7 +1279,7 @@
 	</skill>
 	<skill id="3275" levels="1" name="Blue Talisman of Protection">
 		<!-- Increases Shield Defense Rate with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1300,7 +1300,7 @@
 	</skill>
 	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
 		<!-- Increases M. Def. with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1321,7 +1321,7 @@
 	</skill>
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
 		<!-- Increases critical rate of magic attacks with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1342,7 +1342,7 @@
 	</skill>
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
 		<!-- Increases MP recovery rate with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1363,7 +1363,7 @@
 	</skill>
 	<skill id="3279" levels="1" name="Red Talisman of Meditation">
 		<!-- Greatly increases MP recovery rate with the power of Talisman. Immobilized while being healed. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1388,7 +1388,7 @@
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
 		<!-- Uses power of Talisman to disable preemptive attacks from enemies. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -1410,7 +1410,7 @@
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
 		<!-- Decreases MP consumption for a skill with the power of the Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1433,7 +1433,7 @@
 	</skill>
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
 		<!-- Decreases MP consumption for a skill with the power of the Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1456,7 +1456,7 @@
 	</skill>
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
 		<!-- Increases the power of HP recovery magic. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1477,7 +1477,7 @@
 	</skill>
 	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<!-- Significantly increases P. Def. and M. Def. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1499,7 +1499,7 @@
 	</skill>
 	<skill id="3285" levels="1" name="Blue Talisman of Defense">
 		<!-- Temporarily decrease defense ability/M. Def./dodge and increases attack power/M. Atk./Atk. Spd./Casting Spd./speed with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />

@@ -1953,7 +1953,7 @@
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1986,7 +1986,7 @@
 	<skill id="3574" toLevel="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect $s1. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -2021,7 +2021,7 @@
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2092,7 +2092,7 @@
 	<skill id="3579" toLevel="1" name="Infinity Power - Reflect">
 		<!-- For 5 minutes, returns 8% of damage received by the target back to the enemy. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -2154,7 +2154,7 @@
 	</skill>
 	<skill id="3581" toLevel="1" name="Infinity Power - Tenacity">
 		<!-- For $s1 returns $s2 of the received damage back to the enemy. Recovers $s3 HP. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -2221,7 +2221,7 @@
 	<skill id="3584" toLevel="1" name="Infinity Power - Protection">
 		<!-- For 2 minutes makes you immune to debuffs 5 times. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -2284,7 +2284,7 @@
 	<skill id="3586" toLevel="1" name="Infinity Power - Refresh">
 		<!-- For 5 min. Skill Cooldown - (except for the skills with a fixed cooldown). -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -2354,7 +2354,7 @@
 	</skill>
 	<skill id="3588" toLevel="1" name="Stun">
 		<!-- Infinity Fang Skill -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2419,7 +2419,7 @@
 	<skill id="3590" toLevel="1" name="Infinity Power - Immortal">
 		<!-- For 5 minutes increases the chance of deadly attack +20%. -->
 		<icon>icon.skill0410</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<reuseDelay>600000</reuseDelay>
 		<hitTime>1500</hitTime>
@@ -2520,7 +2520,7 @@
 	<skill id="3594" toLevel="1" name="Infinity Power - Archery">
 		<!-- For 5 min. Speed +15, the bow's range +100. -->
 		<icon>icon.skill0431</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<reuseDelay>600000</reuseDelay>
 		<hitTime>1500</hitTime>
@@ -2587,7 +2587,7 @@
 	<skill id="3596" toLevel="1" name="Infinity Power - Vampiric Mana">
 		<!-- For 5 min. recovers MP, equal to 3% of inflicted damage with a certain probability. -->
 		<icon>icon.skill1268</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<reuseDelay>600000</reuseDelay>
 		<hitTime>1500</hitTime>
@@ -2646,7 +2646,7 @@
 	</skill>
 	<skill id="3598" toLevel="1" name="Infinity Power - Mana Limit">
 		<!-- For 30 sec. magic skills don't consume MP. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>

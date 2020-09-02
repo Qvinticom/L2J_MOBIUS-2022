@@ -3,7 +3,7 @@
 	<skill id="32300" toLevel="1" name="Abyss Blast">
 		<!-- Deals magic damage to a single target. -->
 		<icon>icon.skill11780</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
@@ -73,7 +73,7 @@
 	</skill>
 	<skill id="32303" toLevel="1" name="Atelia Cannon">
 		<!-- Deals powerful magic damage to targets within range and decreases their P. Atk. and M. Atk. by 30%. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -106,7 +106,7 @@
 	<skill id="32304" toLevel="1" name="Overcharge Blast">
 		<!-- Deals powerful magic damage to targets within range and paralyzes them for 5 sec. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -157,7 +157,7 @@
 	<skill id="32306" toLevel="1" name="Empower Rush">
 		<!-- Rushes at a single target and deals physical damage. -->
 		<icon>icon.skill0230</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -703,7 +703,7 @@
 	<skill id="32348" toLevel="1" name="Atelia Chain Throw">
 		<!-- Pulled in by a monster. -->
 		<icon>icon.skill10015</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<affectRange>900</affectRange>
@@ -739,7 +739,7 @@
 		<!-- Immobilized by Dark Atelia Energy. -->
 		<icon>icon.skill1201</icon>
 		<castRange>900</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1275,7 +1275,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1305,7 +1305,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1334,7 +1334,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1360,7 +1360,7 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

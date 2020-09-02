@@ -3,7 +3,7 @@
 	<skill id="1600" toLevel="1" name="Soul Instinct">
 		<!-- For 15 sec., P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate +50%, Atk. Spd. and Casting Spd. +20%. -->
 		<icon>icon.skill1600</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<affectRange>600</affectRange>
@@ -75,11 +75,11 @@
 	<skill id="1605" toLevel="3" name="Dual Weapon Defense">
 		<!-- For $s1 P. Atk Evasion Rate +$s2. Requires a dual sword. -->
 		<icon>icon.skill1605</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<effectPoint>268</effectPoint>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
@@ -121,7 +121,7 @@
 	<skill id="1606" toLevel="10" name="Quick Spear">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Range 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1606</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -429,10 +429,10 @@
 	<skill id="1608" toLevel="2" name="Immortal Life">
 		<!-- For 5 sec., HP doesn't drop below 1. Additionally recovers 20% HP if the effect of Immortality ends. -->
 		<icon>icon.skill1608</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
 		<operateType>A2</operateType>
@@ -515,7 +515,7 @@
 	<skill id="1610" toLevel="29" name="Life Rescue">
 		<!-- For $s1 restores $s2 HP of the target each sec. -->
 		<icon>icon.skill1610</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -545,7 +545,7 @@
 			<value level="27">27</value>
 			<value level="28">28</value>
 			<value level="29">29</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -724,7 +724,7 @@
 	<skill id="1612" toLevel="1" name="Slowing Power">
 		<!-- Speed -20% for 15 sec. -->
 		<icon>icon.skill0210</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -752,7 +752,7 @@
 	<skill id="1613" toLevel="11" name="Body Impale">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicts Stun for $s2 and dispels $s3 buff(s) from a stunned target. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1613</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -852,7 +852,7 @@
 			<value level="3">18</value>
 			<value level="4">36</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -927,7 +927,7 @@
 		<operateType>A2</operateType>
 		<effectPoint>-190</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<activateRate>-1</activateRate>
 		<castRange>600</castRange>
@@ -972,7 +972,7 @@
 			<value level="3">18</value>
 			<value level="4">36</value>
 		</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>0</isMagic>
@@ -1067,13 +1067,13 @@
 	<skill id="1621" toLevel="5" name="Shield of Sacrifice">
 		<!-- Sacrifices itself, decreasing Max HP by $s1. For party members P. Def. +$s3, M. Def. +$s4, Received Healing +$s1 for $s2 Requires a shield. -->
 		<icon>icon.skill1621</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<affectRange>900</affectRange>
@@ -1145,7 +1145,7 @@
 	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
 		<!-- Sacrifices, decreasing Max HP by 20%. -->
 		<icon>icon.skill1621</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<isMagic>4</isMagic>
 		<magicLvl>80</magicLvl>
@@ -1166,7 +1166,7 @@
 	<skill id="1623" toLevel="5" name="Eva's Protection">
 		<!-- Party members' P. Def. +$s2, M. Def. +$s3 Speed +$s4 for $s1 Requires a shield. -->
 		<icon>icon.skill1623</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<effectPoint>
 			<value level="1">835</value>
@@ -1238,12 +1238,12 @@
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
 		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -$s2, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">10</value>
 			<value level="2">11</value>
 			<value level="3">12</value>
 			<value level="4">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">12</value>
@@ -1336,7 +1336,7 @@
 	<skill id="1625" toLevel="1" name="Throwing Spear">
 		<!-- Throws a spear at the enemy with 801 Power added to P. Atk., inflicting Immobilize for 10 sec. Range 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1625</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1413,7 +1413,7 @@
 	<skill id="1627" toLevel="1" name="Destroyer's Roar">
 		<!-- Inflicts Fear on nearby enemies and their Speed -90%. Requires a sword/ blunt weapon/ two-handed sword. -->
 		<icon>icon.skill1627</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1456,12 +1456,12 @@
 	<skill id="1628" toLevel="4" name="Broad Sweep">
 		<!-- For $s1 the number of attacking enemies +$s2. Requires a sword/ two-handed sword. -->
 		<icon>icon.skill1628</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">300</value>
 			<value level="2">600</value>
@@ -1512,7 +1512,7 @@
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
 		<!-- Throw Dagger in Wrist Throws a dagger at the enemy with $s1 Power added to P. Atk., and injures their wrist. Due to the wound, for $s2 there's a certain probability to interrupt target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1552,7 +1552,7 @@
 	<skill id="1630" toLevel="9" name="Throwing Blood Dagger">
 		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. For $s2, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -1673,7 +1673,7 @@
 			<value level="8">78</value>
 			<value level="9">78</value>
 		</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>

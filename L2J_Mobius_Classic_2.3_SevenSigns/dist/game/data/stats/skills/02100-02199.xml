@@ -20,7 +20,7 @@
 	</skill>
 	<skill id="2103" toLevel="1" name="Mysterious Potion">
 		<!-- The target's head is enlarged. -->
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -875,12 +875,12 @@
 	<skill id="2168" toLevel="4" name="Lucky Charm">
 		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. Effect 1. -->
 		<icon>icon.etc_orcish_talisman_i00</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>REDUCE_DROP_PENALTY</abnormalType>
 		<hitTime>2000</hitTime>
@@ -932,10 +932,10 @@
 			<value level="1">icon.etc_potion_of_acumen2_i00</value>
 			<value level="2">icon.etc_potion_of_acumen3_i00</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->

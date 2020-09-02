@@ -321,7 +321,7 @@
 		<reuseDelay>20000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>STUN</abnormalType>
@@ -360,7 +360,7 @@
 		<effectPoint>-1</effectPoint>
 		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
@@ -400,7 +400,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-111</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -435,7 +435,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -498,7 +498,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>418</effectPoint>
 		<reuseDelay>10000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -532,7 +532,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-2093</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
@@ -600,7 +600,7 @@
 		<hitTime>4000</hitTime>
 		<reuseDelay>250000</reuseDelay>
 		<effectPoint>679</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectRange>900</effectRange>
@@ -630,7 +630,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -686,7 +686,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -743,7 +743,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-200</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -833,7 +833,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-828</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -880,7 +880,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -914,7 +914,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>STUN</abnormalType>
@@ -1236,7 +1236,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>5-10</affectLimit>
 		<abnormalType>AIRBIND</abnormalType>
@@ -1387,7 +1387,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>60000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1449,7 +1449,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>10000</reuseDelay>
 		<mpConsume>1</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
@@ -1478,7 +1478,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>10000</reuseDelay>
 		<mpConsume>1</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
@@ -1551,7 +1551,7 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>10000</reuseDelay>
 		<hitTime>1500</hitTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -1664,7 +1664,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>

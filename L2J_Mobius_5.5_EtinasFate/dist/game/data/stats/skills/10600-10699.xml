@@ -3,7 +3,7 @@
 	<skill id="10606" toLevel="1" name="Gust Movement">
 		<!-- Evades all physical attack skills for 5 sec. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11862</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
@@ -46,7 +46,7 @@
 	<skill id="10607" toLevel="1" name="Maximum Mortality">
 		<!-- For 1 min., Vital Spot Attack Rate +20%. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10607</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<operateType>A2</operateType>
@@ -121,7 +121,7 @@
 	<skill id="10609" toLevel="1" name="Critical Chances">
 		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 15%, Critical Rate/ Damage from the flank and back by 65% and 50%, respectively. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10878</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
@@ -193,7 +193,7 @@
 	<skill id="10653" toLevel="1" name="Shadow Evasion">
 		<!-- For 10 sec., becomes immune from all disruption effects and evades physical and magic skills at a 50% probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
 		<icon>icon.skill5242</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<operateType>A2</operateType>
@@ -238,7 +238,7 @@
 	<skill id="10654" toLevel="1" name="Maximum Mortality">
 		<!-- For 1 min., Vital Spot Attack Rate +20%. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10607</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<operateType>A2</operateType>
@@ -303,7 +303,7 @@
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
 		<!-- For 5 min., increases Critical Damage by 608, Deadly Atk. Rate by 5%, Critical Rate/ Damage from the flank by 30%, Critical Rate from the back by 50% and Critical Damage from the back by 65%. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10656</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>

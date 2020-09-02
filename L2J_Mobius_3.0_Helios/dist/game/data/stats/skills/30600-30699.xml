@@ -37,7 +37,7 @@
 	<skill id="30603" toLevel="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate + 1%. -->
 		<icon>icon.icon_lender_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_LENKER</abnormalType>
 		<affectRange>1600</affectRange>
@@ -83,7 +83,7 @@
 	<skill id="30606" toLevel="1" name="Sayha's Seer Force">
 		<!-- M. Critical Rate + 1%. -->
 		<icon>icon.icon_Er_wizard_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_SEER</abnormalType>
 		<affectRange>1600</affectRange>
@@ -112,7 +112,7 @@
 	<skill id="30608" toLevel="5" name="Fury of Eviscerator">
 		<!-- P. Atk. + $s1. -->
 		<icon>icon.skill30509</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ALL_ATTACK_UP</abnormalType>
 		<operateType>A2</operateType>

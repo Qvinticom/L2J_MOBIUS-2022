@@ -22,7 +22,7 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="abnormalLvl">
+								<xs:element name="abnormalLevel">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
 											<xs:element maxOccurs="unbounded" name="value">

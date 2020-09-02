@@ -175,7 +175,7 @@
 		<!-- Causes target to bleed, instantly reducing HP. Effect 5. -->
 		<table name="#magicLvl">46 49 52 55 58 61</table>
 		<table name="#dmg">66 66 81 81 81 93</table>
-		<table name="#abnormalLvl">5 5 5 6 6 7</table>
+		<table name="#abnormalLevel">5 5 5 6 6 7</table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="saveVs" val="CON" />
 		<set name="target" val="TARGET_ONE" />
@@ -207,7 +207,7 @@
 	</skill>
 	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
 		<!-- Poisons target, instantly decreasing HP. Effect 5. -->
-		<table name="#abnormalLvl">5 5 6 6 6 7</table>
+		<table name="#abnormalLevel">5 5 6 6 6 7</table>
 		<table name="#dmg">92 92 114 114 114 144</table>
 		<table name="#lvl">5 5 6 6 6 7</table>
 		<table name="#magicLvl">46 49 52 55 58 61</table>
@@ -504,7 +504,7 @@
 	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
 		<table name="#magiclvl">64 67</table>
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="activateRate" val="42" />
 		<set name="magiclvl" val="#magiclvl" />
 		<set name="saveVs" val="CON" />
@@ -520,7 +520,7 @@
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
 		<table name="#magiclvl">64 67</table>
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="activateRate" val="35" />
 		<set name="magiclvl" val="#magiclvl" />
 		<set name="saveVs" val="CON" />
@@ -536,7 +536,7 @@
 	<skill id="3054" levels="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
 		<table name="#magiclvl">64 67</table>
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="activateRate" val="12" />
 		<set name="magiclvl" val="#magiclvl" />
 		<set name="saveVs" val="CON" />
@@ -552,7 +552,7 @@
 	<skill id="3055" levels="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 7. -->
 		<table name="#magiclvl">64 67</table>
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="activateRate" val="24" />
 		<set name="magiclvl" val="#magiclvl" />
 		<set name="saveVs" val="CON" />

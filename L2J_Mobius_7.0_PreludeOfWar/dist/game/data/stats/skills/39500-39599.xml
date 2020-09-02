@@ -54,7 +54,7 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -127,7 +127,7 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3600</value>
 			<value level="2">14400</value>
@@ -258,7 +258,7 @@
 			<value level="2">14400</value>
 			<value level="3">28800</value>
 		</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
@@ -354,7 +354,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<coolTime>500</coolTime>
 		<abnormalType>HONEY_BEER</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<stayAfterDeath>true</stayAfterDeath>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
@@ -399,7 +399,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<coolTime>500</coolTime>
 		<abnormalType>HONEY_BEER</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<stayAfterDeath>true</stayAfterDeath>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->

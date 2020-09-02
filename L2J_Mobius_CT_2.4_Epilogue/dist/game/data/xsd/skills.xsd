@@ -14,7 +14,7 @@
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:enumeration value="abnormalInstant" />
-							<xs:enumeration value="abnormalLvl" />
+							<xs:enumeration value="abnormalLevel" />
 							<xs:enumeration value="abnormalTime" />
 							<xs:enumeration value="abnormalType" />
 							<xs:enumeration value="abnormalVisualEffect" />

@@ -11,7 +11,7 @@
 	</skill>
 	<skill id="16201" toLevel="6" name="Ekimus' Vitality">
 		<!-- Ekimus' M. Atk. + 10%. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<icon>icon.skill1296</icon>
@@ -687,7 +687,7 @@
 	</skill>
 	<skill id="16225" toLevel="4" name="Mass Bleed">
 		<!-- Bleeding. HP momentarily decreases. Power 11. -->
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -748,7 +748,7 @@
 	</skill>
 	<skill id="16228" toLevel="5" name="Wide Stun">
 		<!-- Attacks nearby enemies and stuns them for 10 sec. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect> 
@@ -779,7 +779,7 @@
 	</skill>
 	<skill id="16229" toLevel="4" name="Mass Hold">
 		<!-- Casts Hold on target and nearby enemies for 10 sec. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -820,7 +820,7 @@
 	<skill id="16230" toLevel="4" name="Sleeping Cloud">
 		<!-- Casts Sleep on target and nearby enemies for 10 sec. -->
 		<icon>icon.skill1072</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
 		<activateRate>40</activateRate>
@@ -860,7 +860,7 @@
 	</skill>
 	<skill id="16231" toLevel="5" name="Mass Airbind">
 		<!-- Throws nearby enemies into the air and binds them for 10 sec. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -910,7 +910,7 @@
 	</skill>
 	<skill id="16232" toLevel="4" name="Mass Chain Smash">
 		<!-- Pulls nearby enemies to you. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<affectRange>900</affectRange>
@@ -952,7 +952,7 @@
 	</skill>
 	<skill id="16233" toLevel="5" name="Mass Fear">
 		<!-- Moving against your will due to Fear. -->
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>

@@ -664,7 +664,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>40</activateRate>
 		<magicLvl>110</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -678,7 +678,7 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -719,7 +719,7 @@
 	<skill id="32669" toLevel="1" name="Water Curse Scale">
 		<!-- Sticks water scales on the target, decreasing its Atk. Spd./ Casting Spd. by 20% and Speed by 50. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -764,7 +764,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -787,7 +787,7 @@
 	<skill id="32671" toLevel="1" name="Krofin Stun Slasher">
 		<!-- Attacks enemies in front, hurling them away and stunning them. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -820,7 +820,7 @@
 	<skill id="32672" toLevel="1" name="Krofin Stamp Square">
 		<!-- Energy of Water deals great damage to the target, knocking it down and prevents it from taking action. -->
 		<icon>icon.skill10262</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -872,7 +872,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -900,7 +900,7 @@
 	</skill>
 	<skill id="32674" toLevel="1" name="Water Chain">
 		<!-- Pulls a target to you. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>90</activateRate>
@@ -1038,7 +1038,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1109,7 +1109,7 @@
 		<effectPoint>-1000</effectPoint>
 		<mpConsume>8</mpConsume>		
 		<castRange>700</castRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -1117,7 +1117,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
 		<magicLvl>91</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<affectRange>900</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1170,7 +1170,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
@@ -1273,7 +1273,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1314,7 +1314,7 @@
 		<effectPoint>-1000</effectPoint>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>60</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
@@ -1378,7 +1378,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>	
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1413,7 +1413,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1510,7 +1510,7 @@
 		<effectPoint>-1000</effectPoint>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<activateRate>100</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>

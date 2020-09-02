@@ -63,7 +63,7 @@
 	</skill>
 	<skill id="2404" levels="1" name="Might">
 		<!-- Temporarily increases P. Atk. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="1" />
@@ -80,7 +80,7 @@
 	</skill>
 	<skill id="2405" levels="1" name="Shield">
 		<!-- Temporarily increases P. Def. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="effectPoint" val="1" />
@@ -97,7 +97,7 @@
 	</skill>
 	<skill id="2406" levels="1" name="Wind Walk">
 		<!-- Temporarily increases Speed. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="effectPoint" val="1" />
@@ -114,7 +114,7 @@
 	</skill>
 	<skill id="2407" levels="1" name="Focus">
 		<!-- Temporarily increases the success rate of critical attacks. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="effectPoint" val="1" />
@@ -131,7 +131,7 @@
 	</skill>
 	<skill id="2408" levels="1" name="Death Whisper">
 		<!-- Temporarily increases critical attack power. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="1" />
@@ -148,7 +148,7 @@
 	</skill>
 	<skill id="2409" levels="1" name="Guidance">
 		<!-- Temporarily increases Accuracy. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="effectPoint" val="1" />
@@ -165,7 +165,7 @@
 	</skill>
 	<skill id="2410" levels="1" name="Bless Shield">
 		<!-- Temporarily increases Shield Defense Rate. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
 		<set name="effectPoint" val="1" />
@@ -182,7 +182,7 @@
 	</skill>
 	<skill id="2411" levels="1" name="Blessed Body">
 		<!-- Temporarily increases maximum HP. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="effectPoint" val="1" />
@@ -199,7 +199,7 @@
 	</skill>
 	<skill id="2412" levels="1" name="Haste">
 		<!-- Temporarily increases Attack Speed. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -216,7 +216,7 @@
 	</skill>
 	<skill id="2413" levels="1" name="Vampiric Rage">
 		<!-- Temporarily bestows the ability to recover HP with some damage redirected to an enemy. It does not include damage from skill or ranged attacks. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="effectPoint" val="1" />
@@ -233,7 +233,7 @@
 	</skill>
 	<skill id="2414" levels="1" name="Berserker Spirit">
 		<!-- Temporarily decreases P. Def./magic resistance/evasion and increases P. Atk/M Atk/attack speed/cast speed/speed. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="effectPoint" val="1" />
@@ -257,7 +257,7 @@
 	</skill>
 	<skill id="2415" levels="1" name="Magic Barrier">
 		<!-- Temporarily increases magic resistance. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="effectPoint" val="1" />
@@ -274,7 +274,7 @@
 	</skill>
 	<skill id="2416" levels="1" name="Blessed Soul">
 		<!-- Temporarily increases maximum MP. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="effectPoint" val="1" />
@@ -291,7 +291,7 @@
 	</skill>
 	<skill id="2417" levels="1" name="Empower">
 		<!-- Temporarily increases magic power. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="effectPoint" val="1" />
@@ -308,7 +308,7 @@
 	</skill>
 	<skill id="2418" levels="1" name="Acumen">
 		<!-- Temporarily increases cast speed. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -325,7 +325,7 @@
 	</skill>
 	<skill id="2419" levels="1" name="Clarity">
 		<!-- Temporarily decreases skill consumption MP of target. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="effectPoint" val="1" />
@@ -499,7 +499,7 @@
 	</skill>
 	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
 		<!-- Transform into a cute bunny. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -521,7 +521,7 @@
 	</skill>
 	<skill id="2429" levels="1" name="Haste Juice">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -540,7 +540,7 @@
 	</skill>
 	<skill id="2430" levels="1" name="Accuracy Juice">
 		<!-- Increases accuracy by 4 for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="effectPoint" val="1" />
@@ -559,7 +559,7 @@
 	</skill>
 	<skill id="2431" levels="1" name="Critical Power Juice">
 		<!-- Increases Critical attack power by 35% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="1" />
@@ -578,7 +578,7 @@
 	</skill>
 	<skill id="2432" levels="1" name="Critical Attack Juice">
 		<!-- Increases Critical attack rate by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="effectPoint" val="1" />
@@ -597,7 +597,7 @@
 	</skill>
 	<skill id="2433" levels="1" name="Casting Speed Juice">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -616,7 +616,7 @@
 	</skill>
 	<skill id="2434" levels="1" name="Evasion Juice">
 		<!-- Increases evasion by 4 for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="effectPoint" val="1" />
@@ -635,7 +635,7 @@
 	</skill>
 	<skill id="2435" levels="1" name="Magic Power Juice">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="effectPoint" val="1" />
@@ -654,7 +654,7 @@
 	</skill>
 	<skill id="2436" levels="1" name="Power Juice">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="1" />
@@ -673,7 +673,7 @@
 	</skill>
 	<skill id="2437" levels="1" name="Speed Juice">
 		<!-- Increases moving speed by 60 for 33 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="effectPoint" val="1" />
@@ -692,7 +692,7 @@
 	</skill>
 	<skill id="2438" levels="1" name="Defense Juice">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="effectPoint" val="1" />
@@ -711,7 +711,7 @@
 	</skill>
 	<skill id="2439" levels="1" name="MP Consumption Juice">
 		<!-- For 60 minutes, it decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="effectPoint" val="1" />

@@ -675,7 +675,7 @@
 	</skill>
 	<skill id="3632" levels="1" name="Clan Gate">
 		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="abnormalVisualEffect" val="MAGIC_SQUARE" />
@@ -699,7 +699,7 @@
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
 		<!-- Active: Momentarily increases Resistance to shock attacks. -->
 		<table name="#trait_shock">80 100</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
 		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
@@ -1210,7 +1210,7 @@
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
 		<!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -1231,7 +1231,7 @@
 	</skill>
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
 		<!-- Drastically increases CP regeneration with the power of the talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />

@@ -3,7 +3,7 @@
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
 		<!-- Decreases Dark attribute defense by $s2 for $s1. -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -160,12 +160,12 @@
 	<skill id="19406" toLevel="4" name="Curse from Deadland">
 		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
 		<icon>icon.action225</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -261,7 +261,7 @@
 	<skill id="19409" toLevel="1" name="Curse Gloom">
 		<!-- Decreases M. Defense and all attribute defenses by 50% and 50, respectively, for 10 seconds. -->
 		<icon>icon.skill1263</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>100</activateRate>
@@ -304,7 +304,7 @@
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
 		<!-- Elemental Buster inflicts Knock Back. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -330,7 +330,7 @@
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
 		<!-- Elemental Crash inflicts Hold for 3 seconds. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -353,7 +353,7 @@
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
 		<!-- Elemental Crash inflicts Stun for 2 seconds. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -378,7 +378,7 @@
 	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -407,7 +407,7 @@
 	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -501,7 +501,7 @@
 	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -533,7 +533,7 @@
 	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Elemental Burst cancel target and inflicts Faint for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
@@ -564,7 +564,7 @@
 	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
 		<!-- Elemental Burst inflicts Knock Down for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -592,7 +592,7 @@
 		<!-- Constant damage is inflicted for $s1 due to powerful magic and you enter the Knock Down state. -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -753,7 +753,7 @@
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P. Def/ M. Def by $s3 for $s2. Requires a sword, blunt, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11510</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -857,7 +857,7 @@
 		<!-- For $s1, P. Atk./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
 		<icon>icon.skill19427</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -865,7 +865,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
@@ -939,11 +939,11 @@
 		<mpConsume>252</mpConsume>
 		<hitTime>7000</hitTime>
 		<effectPoint>700</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">6</value>
@@ -978,7 +978,7 @@
 	<skill id="19430" toLevel="11" name="Resonant Halo">
 		<!-- P. Atk. +$s1 and Atk. Spd. +$s2 and allows casting Radiant Crash/ Resolving Bash in AoE, which increases MP Consumption by $s3. -->
 		<icon>icon.skill19430</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -990,7 +990,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>600</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -1100,7 +1100,7 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1110,7 +1110,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -1166,7 +1166,7 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -1199,7 +1199,7 @@
 	<skill id="19433" toLevel="11" name="Alluring Conduct">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases cooldown of all skills by $s4and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
 		<icon>icon.skill19433</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1211,7 +1211,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -1353,7 +1353,7 @@
 	<skill id="19434" toLevel="11" name="Repeat Mark Somersault">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def/ M. Def by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be used in the Triad state. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
 		<icon>icon.skill19434</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1365,7 +1365,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<castRange>200</castRange>
 		<coolTime>1000</coolTime>
@@ -1491,13 +1491,13 @@
 		<isDebuff>true</isDebuff>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1544,7 +1544,7 @@
 	<skill id="19436" toLevel="11" name="Dancing Phantom Blade">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./ M. Atk./ P. Def./ M. Def./ Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 3 or higher can remove these debuffs. Requires a sword, blunt, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19436</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -1749,7 +1749,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1877,11 +1877,11 @@
 		</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalType>TRIAD</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">4</value>
 			<value level="2">4</value>
@@ -2151,10 +2151,10 @@
 			<value level="1">600000</value>
 			<value level="2">3000</value>
 		</reuseDelay>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">300</value>
 			<value level="2">1</value>		

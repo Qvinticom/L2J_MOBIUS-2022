@@ -3,11 +3,11 @@
 	<skill id="4400" toLevel="3" name="Acumen">
 		<!-- Momentarily increases Casting Spd. Effect $s1. -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -34,11 +34,11 @@
 	<skill id="4401" toLevel="3" name="Empower">
 		<!-- M. Atk. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -65,10 +65,10 @@
 	<skill id="4402" toLevel="2" name="Haste">
 		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -94,11 +94,11 @@
 	<skill id="4403" toLevel="3" name="Guidance">
 		<!-- Momentarily increases Accuracy. Effect $s1. -->
 		<icon>icon.skill1240</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
@@ -125,11 +125,11 @@
 	<skill id="4404" toLevel="3" name="Focus">
 		<!-- Momentarily increases the probability of critical attack. Effect $s1. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -156,11 +156,11 @@
 	<skill id="4405" toLevel="3" name="Death Whisper">
 		<!-- Momentarily increases critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -187,11 +187,11 @@
 	<skill id="4406" toLevel="3" name="Agility">
 		<!-- Momentarily increases evasion. Effect $s1. -->
 		<icon>icon.skill1087</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2339,11 +2339,11 @@
 	<skill id="4463" toLevel="3" name="Surrender to Water">
 		<!-- Water Resistance decreases and Fire Resistance increases momentarily. Effect $s1. -->
 		<icon>icon.skill4280_new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<activateRate>80</activateRate>
@@ -2398,11 +2398,11 @@
 	<skill id="4464" toLevel="3" name="Surrender to Wind">
 		<!-- Wind Resistance decreases and Earth Resistance increases momentarily. Effect $s1. -->
 		<icon>icon.skill4281_new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
 		<activateRate>80</activateRate>
@@ -2457,11 +2457,11 @@
 	<skill id="4465" toLevel="3" name="Surrender to Earth">
 		<!-- Earth Resistance decreases and Wind Resistance increases momentarily. Effect $s1. -->
 		<icon>icon.skill4282_new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
 		<activateRate>80</activateRate>
@@ -2516,11 +2516,11 @@
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
 		<!-- Dark Attack Resistance decreases and Holy Attack Resistance increases momentarily. Effect $s1. -->
 		<icon>icon.skill4336_new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -2575,11 +2575,11 @@
 	<skill id="4467" toLevel="3" name="Surrender to Holy">
 		<!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. Effect $s1. -->
 		<icon>icon.skill4275_new</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<activateRate>80</activateRate>
@@ -2632,10 +2632,10 @@
 		</effects>
 	</skill>
 	<skill id="4468" toLevel="2" name="Wind Walk">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2687,7 +2687,7 @@
 	</skill>
 	<skill id="4471" toLevel="12" name="Anger">
 		<!-- Increases NPC's P. Atk. and P. Def. Effect $s1. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2700,7 +2700,7 @@
 			<value level="10">10</value>
 			<value level="11">11</value>
 			<value level="12">12</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2852,7 +2852,7 @@
 	<skill id="4473" toLevel="12" name="Stun">
 		<!-- Momentarily stuns and paralyzes target. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2948,7 +2948,7 @@
 	</skill>
 	<skill id="4475" toLevel="1" name="Complete Bleed Resistance">
 		<!-- Completely resistant to Bleed. -->
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<activateRate>0</activateRate>
@@ -2975,7 +2975,7 @@
 	<skill id="4476" toLevel="5" name="Silent Move">
 		<!-- Protected from preemptive attacks from monsters. -->
 		<icon>icon.skill0221</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">60</value>
 			<value level="2">120</value>
@@ -3121,7 +3121,7 @@
 	<skill id="4479" toLevel="1" name="Ice Fairy's Blessing">
 		<!-- Increases Water Resistance. Effect 4. -->
 		<icon>icon.skill1182</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<castRange>700</castRange>
@@ -3147,7 +3147,7 @@
 		</effects>
 	</skill>
 	<skill id="4480" toLevel="1" name="Curse Gloom">
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<castRange>1000</castRange>
@@ -3173,7 +3173,7 @@
 		</effects>
 	</skill>
 	<skill id="4481" toLevel="1" name="Hex">
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<castRange>1000</castRange>
@@ -3200,7 +3200,7 @@
 	</skill>
 	<skill id="4482" toLevel="1" name="Silence">
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -3225,7 +3225,7 @@
 	<skill id="4483" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3334,7 +3334,7 @@
 	<skill id="4486" toLevel="12" name="Decrease P. Def.">
 		<!-- P. Def. decreases temporarily. Effect $s1. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3347,7 +3347,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3430,7 +3430,7 @@
 	</skill>
 	<skill id="4487" toLevel="12" name="Decrease M. Def.">
 		<!-- M. Def. decreases momentarily. Effect $s1. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -3443,7 +3443,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -3527,7 +3527,7 @@
 	<skill id="4488" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3714,7 +3714,7 @@
 	<skill id="4491" toLevel="12" name="Holy Weapon">
 		<!-- Makes Holy attacks. -->
 		<icon>icon.skill1043</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<activateRate>40</activateRate>
@@ -3776,7 +3776,7 @@
 	</skill>
 	<skill id="4492" toLevel="12" name="Enlarging Head Curse">
 		<!-- Momentarily enlarges the head. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -3842,7 +3842,7 @@
 		</effects>
 	</skill>
 	<skill id="4493" toLevel="12" name="Mystic Immunity">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEBUFF_SHIELD</abnormalType>
 		<castRange>400</castRange>
@@ -3996,7 +3996,7 @@
 	<skill id="4496" toLevel="12" name="Stun">
 		<!-- Momentarily stuns and paralyzes target. -->
 		<icon>icon.skill0101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>

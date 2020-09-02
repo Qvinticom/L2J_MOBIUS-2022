@@ -87,7 +87,7 @@
 	<skill id="10801" toLevel="8" name="Bullseye">
 		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
 		<icon>icon.skill10801</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -207,7 +207,7 @@
 	<skill id="10802" toLevel="4" name="Mass Bullseye">
 		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
 		<icon>icon.skill10782</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
@@ -378,7 +378,7 @@
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>120</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
@@ -415,7 +415,7 @@
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>120</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<trait>HOLD</trait>
 		<affectRange>300</affectRange>
@@ -448,7 +448,7 @@
 			<value level="3">103</value>
 			<value level="4">105</value>
 		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
@@ -463,7 +463,7 @@
 	<skill id="10809" toLevel="1" name="Survival Movement">
 		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
 		<icon>icon.skill1087</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPECIAL_MOVE_UP</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -487,12 +487,12 @@
 	<skill id="10810" toLevel="4" name="Sniping">
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Atk. Spd. + 5%, and P. Def./M. Def. + 5%. -->
 		<icon>icon.skill11870</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 		</abnormalTime>
@@ -622,12 +622,12 @@
 	<skill id="10856" toLevel="4" name="Rapid Fire Position">
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, chance of receiving an M. Critical Hit - 5%, and P. Skill Cooldown - 5%. -->
 		<icon>icon.skill11871</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 		</abnormalTime>

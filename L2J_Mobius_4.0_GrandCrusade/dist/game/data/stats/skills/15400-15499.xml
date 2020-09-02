@@ -3,7 +3,7 @@
 	<skill id="15400" toLevel="1" name="Shield of Darkness">
 		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -46,7 +46,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2400</abnormalTime>
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>22</isMagic>
@@ -70,7 +70,7 @@
 	<skill id="15402" toLevel="1" name="Wisp's Blessing">
 		<!-- P. Atk. And M. Atk. increases temporarily. -->
 		<icon>icon.skill11046</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>NPC_MULTI_BUFF1</abnormalType>
 		<operateType>A2</operateType>
@@ -98,7 +98,7 @@
 	<skill id="15403" toLevel="1" name="Favor Exchange">
 		<!-- For 15 sec., Speed + 30%. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<operateType>A2</operateType>
@@ -124,7 +124,7 @@
 	<skill id="15404" toLevel="1" name="Unable to Target">
 		<!-- Cannot target. -->
 		<icon>icon.notargetting</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -197,7 +197,7 @@
 	<skill id="15410" toLevel="1" name="Full Attack">
 		<!-- Pulls in PCs within range and inflicts damage. -->
 		<icon>icon.skill10015</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<operateType>A2</operateType>
@@ -235,7 +235,7 @@
 	<skill id="15411" toLevel="1" name="Soul Break">
 		<!-- Inflicts a powerful attack on a target. -->
 		<icon>icon.skill0223</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -303,7 +303,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -324,7 +324,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -345,7 +345,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -366,7 +366,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -387,7 +387,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -446,7 +446,7 @@
 		<coolTime>5000</coolTime>
 		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -506,7 +506,7 @@
 	<skill id="15433" toLevel="1" name="Surrender to Dark">
 		<!-- State of momentarily decreased Dark Resistance and increased Holy Resistance. -->
 		<icon>icon.skill4336_new</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<operateType>A2</operateType>
@@ -619,7 +619,7 @@
 	<skill id="15438" toLevel="1" name="Hold">
 		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -705,7 +705,7 @@
 	<skill id="15442" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -761,7 +761,7 @@
 	<skill id="15444" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -837,7 +837,7 @@
 	<skill id="15447" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -905,7 +905,7 @@
 	<skill id="15450" toLevel="1" name="Weakness">
 		<!-- P. Atk. decreases momentarily. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -934,7 +934,7 @@
 	<skill id="15451" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -972,7 +972,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<activateRate>90</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>
@@ -1020,7 +1020,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1058,10 +1058,10 @@
 	<skill id="15457" toLevel="2" name="Triol's Reign">
 		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1086,7 +1086,7 @@
 	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
 		<!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 min., it only receives a certain amount of damage. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -1129,7 +1129,7 @@
 	<skill id="15460" toLevel="1" name="Poison">
 		<!-- HP decreases from poison momentarily. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1359,7 +1359,7 @@
 	<skill id="15469" toLevel="1" name="Rites for Triol">
 		<!-- For 60 min., HP Recovery Bonus + 20%. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -1408,7 +1408,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -1429,7 +1429,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -1450,7 +1450,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -1471,7 +1471,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -1492,7 +1492,7 @@
 		<specialLevel>-3</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
@@ -1502,7 +1502,7 @@
 	<skill id="15476" toLevel="1" name="Spore Spray">
 		<!-- HP and Speed decreased due to spores. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1533,7 +1533,7 @@
 	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
 		<!-- P. Def. and M. Def. decreased. -->
 		<icon>icon.skill0122</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -1565,7 +1565,7 @@
 	<skill id="15478" toLevel="1" name="Spread Disease">
 		<!-- HP decreases from disease momentarily. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1596,7 +1596,7 @@
 	<skill id="15479" toLevel="1" name="Vomit Mucus">
 		<!-- P. Accuracy decreased due to mucus. -->
 		<icon>icon.skill1222</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -1621,7 +1621,7 @@
 	<skill id="15480" toLevel="1" name="Shoot Poison">
 		<!-- HP decreased due to poison. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1649,7 +1649,7 @@
 	<skill id="15481" toLevel="1" name="Shoot Spider Web">
 		<!-- The web decreases Speed by 10%. -->
 		<icon>icon.skill0102</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -1746,7 +1746,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1809,7 +1809,7 @@
 		<hitTime>750</hitTime>
 		<effectPoint>100</effectPoint>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1870,7 +1870,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -1913,7 +1913,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1935,7 +1935,7 @@
 		<hitTime>750</hitTime>
 		<effectPoint>100</effectPoint>
 		<coolTime>500</coolTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>

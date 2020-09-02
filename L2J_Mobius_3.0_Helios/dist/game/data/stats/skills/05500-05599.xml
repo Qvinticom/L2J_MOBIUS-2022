@@ -3,7 +3,7 @@
 	<skill id="5500" toLevel="1" name="Black Dragon Claw">
 		<!-- HP decreases from bleeding momentarily. Effect 10. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -39,7 +39,7 @@
 	<skill id="5501" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -72,7 +72,7 @@
 	<skill id="5502" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="5503" toLevel="1" name="Ultimate Guard">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -238,7 +238,7 @@
 	<skill id="5509" toLevel="1" name="Fire Power">
 		<!-- Fire resistance decreases. -->
 		<icon>icon.skill1083</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<activateRate>100</activateRate>
@@ -267,7 +267,7 @@
 	<skill id="5510" toLevel="1" name="Water Power">
 		<!-- Water resistance decreases. -->
 		<icon>icon.skill1071</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<activateRate>100</activateRate>
@@ -296,7 +296,7 @@
 	<skill id="5511" toLevel="1" name="Wind Power">
 		<!-- Wind resistance decreases. -->
 		<icon>icon.skill1074</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
 		<activateRate>100</activateRate>
@@ -325,7 +325,7 @@
 	<skill id="5512" toLevel="1" name="Earth Power">
 		<!-- Earth resistance decreases. -->
 		<icon>icon.skill1223</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
 		<activateRate>100</activateRate>
@@ -440,7 +440,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="5517" toLevel="1" name="Nurture">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -471,7 +471,7 @@
 	</skill>
 	<skill id="5519" toLevel="1" name="Chain Buff - Power Up">
 		<!-- Made the contract of greed with the devil. Cannot wait to take every soul. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -507,7 +507,7 @@
 	</skill>
 	<skill id="5520" toLevel="1" name="Chain Buff - Vampiric Shield">
 		<!-- Made the contract of desire with the devil. The pain feels like pleasure. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -535,7 +535,7 @@
 	</skill>
 	<skill id="5521" toLevel="1" name="Chain Buff - Critical Sense">
 		<!-- Made the contract of wrath with the devil. Every enemy will fear your wrath. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -589,7 +589,7 @@
 	<skill id="5523" toLevel="1" name="Chain Magic - Unholy Castle">
 		<!-- The devil gave you the curse of jealousy. You cannot be stronger than this. -->
 		<icon>icon.skill1056</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>100</activateRate>
@@ -623,7 +623,7 @@
 	</skill>
 	<skill id="5524" toLevel="1" name="Chain Buff - Bow/Magic Resistance">
 		<!-- You have made the contract of arrogance with the devil. No one can stop you. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -654,7 +654,7 @@
 	</skill>
 	<skill id="5525" toLevel="1" name="Chain Buff - Melee Resistance">
 		<!-- You have made the contract of gluttony with the devil. Everything you eat is good for your strength. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -689,7 +689,7 @@
 	<skill id="5526" toLevel="1" name="Challenger's Blessing">
 		<!-- P. Def., Shield Defense Probability and Dark Attack Resistance are greatly increased. -->
 		<icon>icon.skill1442</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -759,7 +759,7 @@
 	<skill id="5529" toLevel="12" name="Surrender to Dark">
 		<!-- Dark attribute weakened momentarily. Effect $s1. -->
 		<icon>icon.skill1445</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -772,7 +772,7 @@
 			<value level="10">5</value>
 			<value level="11">5</value>
 			<value level="12">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<activateRate>100</activateRate>
@@ -854,7 +854,7 @@
 	<skill id="5530" toLevel="12" name="Blood Storm">
 		<!-- Inflicts damage and Bleed on the target simultaneously. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -867,7 +867,7 @@
 			<value level="10">10</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1022,7 +1022,7 @@
 	<skill id="5539" toLevel="1" name="Little Angel Agathion Special Skill: Mysterious Power">
 		<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon>icon.skill_agathion_special</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -1107,7 +1107,7 @@
 	<skill id="5543" toLevel="1" name="Little Devil Agathion Special Skill: Mysterious Power">
 		<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon>icon.skill_agathion_special</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -1188,7 +1188,7 @@
 	</skill>
 	<skill id="5547" toLevel="1" name="Maximum Ability">
 		<!-- Increases P. Atk., M. Atk., and received heal amount. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>MAXIMUM_ABILITY</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1319,7 +1319,7 @@
 	<skill id="5551" toLevel="12" name="Stun">
 		<!-- Momentarily stuns and paralyzes target. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1509,7 +1509,7 @@
 	<skill id="5556" toLevel="1" name="Protection Power">
 		<!-- M. Def. and Attribute Resistance are maximized. -->
 		<icon>icon.skill0755</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1557,7 +1557,7 @@
 	<skill id="5557" toLevel="1" name="Blessing of Resistance">
 		<!-- M. Def. and Attribute Resistance are maximized. -->
 		<icon>icon.skill0755</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1572,7 +1572,7 @@
 	<skill id="5558" toLevel="1" name="Protection of Alignment">
 		<!-- Characteristic attack resistance maximized. -->
 		<icon>icon.skill0757</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1589,7 +1589,7 @@
 	<skill id="5559" toLevel="1" name="Physical Pose">
 		<!-- Critical rate and P. Atk. skill power are increased. -->
 		<icon>icon.skill0758</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WILL</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1616,7 +1616,7 @@
 	</skill>
 	<skill id="5560" toLevel="1" name="Archer's Will">
 		<icon>icon.skill0759</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WILL</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1637,11 +1637,11 @@
 			<value level="2">icon.skill0761_2</value>
 			<value level="3">icon.skill0761_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1703,11 +1703,11 @@
 			<value level="2">icon.skill0784_2</value>
 			<value level="3">icon.skill0784_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1777,11 +1777,11 @@
 			<value level="2">icon.skill0786_2</value>
 			<value level="3">icon.skill0786_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1843,11 +1843,11 @@
 			<value level="2">icon.skill0788_2</value>
 			<value level="3">icon.skill0788_3</value>
 		</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -1901,7 +1901,7 @@
 	<skill id="5565" toLevel="1" name="Expose Vulnerability">
 		<!-- The probability of Critical hit has been increased, and defense power has been decreased. -->
 		<icon>icon.skill0767</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>EXPOSE_WEAK_POINT</abnormalType>
 		<activateRate>80</activateRate>
@@ -1964,7 +1964,7 @@
 	<skill id="5568" toLevel="1" name="Frost Armor">
 		<!-- Speed has been slowed down. -->
 		<icon>icon.skill1493</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -1990,7 +1990,7 @@
 	<skill id="5569" toLevel="1" name="Hurricane Armor">
 		<!-- Attacking speed has been slowed down. -->
 		<icon>icon.skill1494</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>100</activateRate>
@@ -2016,7 +2016,7 @@
 	<skill id="5570" toLevel="1" name="Excessive Loyalty">
 		<!-- Summoner's Wrath. -->
 		<icon>icon.skill1497</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUMMON_CONDITION</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
@@ -2071,7 +2071,7 @@
 	<skill id="5572" toLevel="1" name="Warrior Ability: Haste">
 		<!-- Warrior's Atk. Spd. Atk. Spd increases momentarily. Excludes damage caused by a skill or ranged attack. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_HASTE</abnormalType>
 		<castRange>400</castRange>
@@ -2095,7 +2095,7 @@
 	<skill id="5573" toLevel="1" name="Knight Ability: Defense">
 		<!-- Knight's P. Def. P. Def. and M. Def. increases momentarily. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
 		<castRange>400</castRange>
@@ -2123,7 +2123,7 @@
 	<skill id="5574" toLevel="1" name="Rogue Ability: Critical Chance">
 		<!-- Rogue's Critical. Critical Rate increases momentarily. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_CRT_RATE_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2164,7 +2164,7 @@
 	<skill id="5576" toLevel="1" name="Enchanter Ability: Barrier">
 		<!-- Enchanter's Defense Barrier. Becomes invincible momentarily. -->
 		<icon>icon.skill1418</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2212,7 +2212,7 @@
 	<skill id="5578" toLevel="1" name="Summoner Ability: Spirit">
 		<!-- Summoner's Possessed Soul. Due to being possessed by the ancient summoner, P. Atk./Atk. Spd./M. Atk./Casting Spd. increase. -->
 		<icon>icon.skill1349</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_SPIRIT</abnormalType>
 		<castRange>400</castRange>
@@ -2340,7 +2340,7 @@
 	</skill>
 	<skill id="5583" toLevel="1" name="Divine Beast Roar">
 		<!-- Dominate nearby enemies with a mighty roar. -->
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -2369,7 +2369,7 @@
 	<skill id="5584" toLevel="1" name="Wolf Howl">
 		<!-- Dominate nearby enemies with a mighty roar. Decrease P. Atk. and M. Atk. -->
 		<icon>icon.action109</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -2402,7 +2402,7 @@
 	<skill id="5585" toLevel="1" name="Strider Roar">
 		<!-- Scare the enemies with a mighty roar. Decrease the attacking speed and Casting Spd. -->
 		<icon>icon.action109</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -2435,11 +2435,11 @@
 	<skill id="5586" toLevel="3" name="Pet Might">
 		<!-- Increases attacking power temporarily. Effect $s1. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2486,11 +2486,11 @@
 	<skill id="5587" toLevel="3" name="Pet Shield">
 		<!-- Increases defense power temporarily. Effect $s1. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2537,11 +2537,11 @@
 	<skill id="5588" toLevel="3" name="Pet Focus">
 		<!-- Momentarily increase the probability of Critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2588,11 +2588,11 @@
 	<skill id="5589" toLevel="3" name="Pet Death Whisper">
 		<!-- Momentarily increase the Critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2760,7 +2760,7 @@
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
 		<!-- Momentarily unable to move. -->
 		<icon>icon.skill1515</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -2849,7 +2849,7 @@
 	<skill id="5594" toLevel="1" name="Poison">
 		<!-- HP decreases from Poison momentarily. Effect 11. -->
 		<icon>icon.skill4036</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2870,7 +2870,7 @@
 	<skill id="5595" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 11. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2891,7 +2891,7 @@
 	<skill id="5596" toLevel="1" name="Flame">
 		<!-- HP decreases from flame momentarily. Effect 11. -->
 		<icon>icon.skill1100</icon>
-		<abnormalLvl>10</abnormalLvl>
+		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>

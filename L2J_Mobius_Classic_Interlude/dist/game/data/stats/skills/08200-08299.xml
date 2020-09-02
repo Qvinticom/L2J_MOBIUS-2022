@@ -1822,7 +1822,7 @@
 	<skill id="8239" toLevel="1" name="Critical Up">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. -->
 		<icon>icon.skill5760</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SEED_OF_CRITICAL</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1862,7 +1862,7 @@
 	<skill id="8240" toLevel="3" name="Obliteration Storm">
 		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
 		<icon>icon.weapon_long_spear_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1914,7 +1914,7 @@
 	<skill id="8241" toLevel="1" name="Critical Up">
 		<!-- Temporarily increases Critical Damage rate. Effect 3. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1985,7 +1985,7 @@
 	<skill id="8244" toLevel="1" name="Transform Gatekeeper">
 		<!-- Transforms target into a Gatekeeper. Allows Vitality to be restored when XP is acquired. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2035,7 +2035,7 @@
 	<skill id="8246" toLevel="1" name="Transform Pumpkin Ghost">
 		<!-- Transform into a Pumpkin Ghost. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2063,7 +2063,7 @@
 	<skill id="8247" toLevel="1" name="Ride Darkmane Pacer">
 		<!-- Ride a Darkmane Pacer. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2168,7 +2168,7 @@
 	<skill id="8252" toLevel="1" name="Test - Transform Mount1">
 		<!-- Mounts a test mount. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2191,7 +2191,7 @@
 	<skill id="8253" toLevel="1" name="Test - Transform Mount2">
 		<!-- Mounts a test mount. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2333,7 +2333,7 @@
 	<skill id="8261" toLevel="1" name="Ride Steam Beetle">
 		<!-- Ride a Steam Beetle. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2362,7 +2362,7 @@
 	<skill id="8262" toLevel="1" name="Ride Gold Maned Lion">
 		<!-- Ride a Gold Maned Lion. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2391,7 +2391,7 @@
 	<skill id="8263" toLevel="1" name="Transform Snow Kung">
 		<!-- Transforms user into a Snow Kung. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2419,7 +2419,7 @@
 	<skill id="8264" toLevel="1" name="Transform Scarecrow Jack">
 		<!-- Transforms user into Scarecrow Jack. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2447,7 +2447,7 @@
 	<skill id="8265" toLevel="1" name="Transform Tin Golem">
 		<!-- Transforms user into a Tin Golem. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2546,7 +2546,7 @@
 	<skill id="8276" toLevel="1" name="Shield Branding">
 		<!-- Works wonders on the Tumor of Death and some of the monsters inside the Seed of Infinity. Momentarily immobile due to the Stun effect and lost the target. -->
 		<icon>icon.skill0092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2587,7 +2587,7 @@
 	<skill id="8277" toLevel="1" name="Transform Native">
 		<!-- Transforms into a Native. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2614,7 +2614,7 @@
 	<skill id="8278" toLevel="1" name="Transform Guard of Down">
 		<!-- Transforms into a Guard of the Dawn. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -2640,7 +2640,7 @@
 	</skill>
 	<skill id="8279" toLevel="1" name="Blessing of Fire">
 		<!-- Blessing of fire. fire is bestowed on physical attacks. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<hitTime>1000</hitTime>
@@ -2655,7 +2655,7 @@
 	</skill>
 	<skill id="8280" toLevel="1" name="Blessing of Earth">
 		<!-- Blessing of earth. Earth is bestowed on physical attacks. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<hitTime>1000</hitTime>

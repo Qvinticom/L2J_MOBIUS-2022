@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2001" levels="1" name="Red Potion">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -15,7 +15,7 @@
 		</for>
 	</skill>
 	<skill id="2002" levels="1" name="Healing Drug">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -95,7 +95,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -110,7 +110,7 @@
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
 		<!-- Increases Speed. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="icon" val="icon.etc_potion_green_i00" />
@@ -126,7 +126,7 @@
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="icon" val="icon.etc_reagent_green_i00" />
@@ -286,7 +286,7 @@
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
 		<!-- Sharp increase in HP recovery bonus. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
@@ -303,7 +303,7 @@
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
 		<!-- Sharp increase in HP recovery bonus. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
@@ -326,7 +326,7 @@
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
 		<!-- Increases Speed. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
@@ -342,7 +342,7 @@
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
 		<!-- Increases Atk. Spd. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
@@ -381,7 +381,7 @@
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
 		<!-- Sharp increase in HP recovery bonus. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
 		<set name="icon" val="icon.etc_reagent_white_i00" />
@@ -546,7 +546,7 @@
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="hitTime" val="4000" />
@@ -565,7 +565,7 @@
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
 		<!-- Increases Critical Damage by 35% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="hitTime" val="4000" />
@@ -584,7 +584,7 @@
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="hitTime" val="4000" />
@@ -603,7 +603,7 @@
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="hitTime" val="4000" />
@@ -622,7 +622,7 @@
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="hitTime" val="4000" />
@@ -641,7 +641,7 @@
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
 		<!-- Increases Evasion by 4 for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="hitTime" val="4000" />
@@ -660,7 +660,7 @@
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="hitTime" val="4000" />
@@ -679,7 +679,7 @@
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="4000" />
@@ -698,7 +698,7 @@
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
 		<!-- Increases Speed by 33 for 60 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="hitTime" val="4000" />
@@ -717,7 +717,7 @@
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="hitTime" val="4000" />
@@ -780,7 +780,7 @@
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
 		<!-- Sharp increase in MP recovery bonus. Effect 4. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
 		<set name="hitTime" val="4000" />
@@ -864,7 +864,7 @@
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
 		<!-- Misdirects enemy attack and slows Speed of user. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectLimit" val="9-10" />
@@ -899,7 +899,7 @@
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
 		<!-- Increase lung capacity. Effect 1. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="400" />
 		<set name="abnormalType" val="MAX_BREATH_UP" />
 		<set name="icon" val="icon.etc_bless_of_eva_i00" />
@@ -915,7 +915,7 @@
 	</skill>
 	<skill id="2077" levels="1" name="Potion of Revenge">
 		<!-- Lowers user's P. Def. and reflects a certain amount of damage back to the enemy, excluding damage from skill use or remote attacks. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="icon" val="icon.etc_potion_blue_i00" />

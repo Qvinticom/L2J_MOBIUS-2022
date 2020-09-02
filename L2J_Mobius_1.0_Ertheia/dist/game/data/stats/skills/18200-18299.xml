@@ -30,7 +30,7 @@
 	<skill id="18209" toLevel="1" name="Dandy's Home Run Ball">
 		<!-- Increases XP and SP by 100% for 1 hr. The appearace of the armor will change to NC Dinos' uniform. Cannot be stacked with Fall of the Dragon. -->
 		<icon>icon.ev_dinos_baseball</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_DINOS</abnormalVisualEffect>
@@ -80,7 +80,7 @@
 	<skill id="18214" toLevel="1" name="Transformation Potion: L2B2">
 		<!-- Transforms into the very fast L2B2 for 10 minutes. -->
 		<icon>Icon.ev_invasion_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<operateType>A2</operateType>

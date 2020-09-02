@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" levels="1" name="Age of the Three Kingdoms">
 		<!-- For 20 minutes, increases Speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, physical P. Atk., and P. Def. by 15%. Reuse Delay 2 hour. Consumes 1 Proof of Friendship upon skill use. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -18,7 +18,7 @@
 	</skill>
 	<skill id="21201" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="activateRate" val="0" />
@@ -423,7 +423,7 @@
 	</skill>
 	<skill id="21237" levels="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
 		<!-- Temporarily becomes invincible for 7 seconds. Can be used every 20 hours. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="hitTime" val="1000" />

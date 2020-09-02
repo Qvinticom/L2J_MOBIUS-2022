@@ -65,7 +65,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>60000</reuseDelay>
@@ -1544,7 +1544,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1570,7 +1570,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1597,7 +1597,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1624,7 +1624,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1651,7 +1651,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1879,7 +1879,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -1921,7 +1921,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2010,7 +2010,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2048,7 +2048,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2090,7 +2090,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2148,7 +2148,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -2218,7 +2218,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>4</isMagic>
@@ -2246,7 +2246,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>SLEEP</trait>
 		<staticReuse>true</staticReuse>
@@ -2576,7 +2576,7 @@
 	<skill id="9775" toLevel="1" name="Birthday Vitality Potion">
 		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Buff is deleted when subclass is changed. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_potion_blue_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36327</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2588,7 +2588,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2601,7 +2601,7 @@
 	<skill id="9776" toLevel="1" name="Freya's Refreshing Breeze (1-hour)">
 		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_I.etc_hot_spring_mineral_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36328</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2620,7 +2620,7 @@
 	<skill id="9777" toLevel="1" name="Pa'agrio's Warm Breeze (1-hour)">
 		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>BranchSys2.Icon.pi_wind_of_paagrio</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36329</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2639,7 +2639,7 @@
 	<skill id="9778" toLevel="1" name="Sweet Chocolate (1-hour)">
 		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>BranchSys.icon.br_valentine_darkchoco_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36330</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2658,7 +2658,7 @@
 	<skill id="9779" toLevel="1" name="Returning Hero's Vitality Replenishing Juice">
 		<!-- Vitality Recovery for 1 hr. No effect when Birthday Vitality Buff is applied. Cooldown is 60 min. -->
 		<icon>BranchSys2.icon.br_breath_of_hero_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36331</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2677,7 +2677,7 @@
 	<skill id="9780" toLevel="1" name="Pirate Elixir (1-hour)">
 		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeId>36332</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>

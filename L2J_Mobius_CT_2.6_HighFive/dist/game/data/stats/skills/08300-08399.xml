@@ -193,7 +193,7 @@
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
 		<!-- Immediately recovers 1200 CP and increases Max CP to 1200. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -217,7 +217,7 @@
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
 		<!-- Immediately recovers 800 CP and increases Max CP to 800. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -457,7 +457,7 @@
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
 		<!-- Head is enlarged. -->
-		<set name="abnormalLvl" val="0" />
+		<set name="abnormalLevel" val="0" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -576,7 +576,7 @@
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<!-- Increases Max CP 1500 and recovers CP by the increased amount with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -600,7 +600,7 @@
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Decreases damage received during PVP by 75% with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -622,7 +622,7 @@
 	</skill>
 	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 seconds, increases Resistance to all attributes by 15 with the power of Talisman. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="effectPoint" val="532" />
@@ -648,7 +648,7 @@
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
 		<!-- Mounts a Guardian's Strider. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1032,7 +1032,7 @@
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
 		<!-- Maintains Vitality when aquiring Exp. for 30 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -1147,7 +1147,7 @@
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
 		<!-- Transforms into a pumpkin ghost. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1163,7 +1163,7 @@
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and Resistance to Earth by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1177,7 +1177,7 @@
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and Resistance to Wind by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1191,7 +1191,7 @@
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Speed by 5%, and Resistance to Fire by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1205,7 +1205,7 @@
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and Resistance to Dark by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1219,7 +1219,7 @@
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect: for 60 minutes, increases Max HP and Max MP by 10%, magic damage's Prominent Damage occurrence by 2, and Resistance to Water by 5. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1233,7 +1233,7 @@
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, Speed by 10%, and Resistance to debuffs by 10%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="blockedInOlympiad" val="true" />

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1500" levels="1" name="Improved Magic">
 		<!-- Increases both M. Atk. and M. Def. to have more advanced magic ability increase effect. For 40 minutes, increases M. Atk. by 75% and M. Def. by 30%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="castRange" val="400" />
@@ -32,7 +32,7 @@
 	</skill>
 	<skill id="1501" levels="1" name="Improved Condition">
 		<!-- Combines maximum HP increase and Max MP increase to have more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
 		<set name="castRange" val="400" />
@@ -62,7 +62,7 @@
 	</skill>
 	<skill id="1502" levels="1" name="Improved Critical Attack">
 		<!-- Combines Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 40 minutes, increases Critical Rate by 30% and Critical Damage by 35%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="castRange" val="400" />
@@ -92,7 +92,7 @@
 	</skill>
 	<skill id="1503" levels="1" name="Improved Shield Defense">
 		<!-- Combines shield Def. rate increase and Shield Defense. increase to have more advanced shield ability increase effect. For 40 minutes, increases Shield Defense by 30% and Shield Defense by 50%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
 		<set name="castRange" val="400" />
@@ -122,7 +122,7 @@
 	</skill>
 	<skill id="1504" levels="1" name="Improved Movement">
 		<!-- Combines Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 minutes, increases Speed by 33 and Evasion by 4. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
 		<set name="castRange" val="400" />
@@ -152,7 +152,7 @@
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
 		<!-- Sacrifices oneself to allow all other party members (excluding oneself) to fully recover their HP/MP/CP and to become invincible for 15 seconds. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -218,7 +218,7 @@
 	</skill>
 	<skill id="1507" levels="1" name="Lord of Vampire">
 		<!-- For 30 seconds, 80% of the standard melee damage inflicted on the enemy is recovered as HP. -->
-		<set name="abnormalLvl" val="5" />
+		<set name="abnormalLevel" val="5" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK_SPECIAL" />
 		<set name="castRange" val="400" />
@@ -241,7 +241,7 @@
 	</skill>
 	<skill id="1508" levels="1" name="Throne Root">
 		<!-- Holds nearby enemies for 10 seconds and makes them consume 90 HP and 30 MP every second. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -277,7 +277,7 @@
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
 		<!-- For 5 minutes, blocks CP/HP/MP recovery of nearby enemies by 70%. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="LIMIT" />
 		<set name="activateRate" val="60" />
@@ -329,7 +329,7 @@
 	</skill>
 	<skill id="1511" levels="8" name="Curse of Life Flow" enchantGroup1="1" enchantGroup2="1">
 		<!-- For 30 seconds, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8</table>
 		<table name="#effectPoints">-566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLvl">60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">27 28 29 30 31 31 32 33</table>
@@ -338,7 +338,7 @@
 		<table name="#ench1AbnormalTimes">39 48 57 66 75 84 93 102 111 120 129 138 147 156 165 174 183 192 201 210 219 228 237 246 255 264 273 282 291 300</table>
 		<table name="#ench2ActivateRates">71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CURSE_LIFE_FLOW" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -381,7 +381,7 @@
 		<table name="#ench3ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90</table>
 		<table name="#ench4Duel">114 116 118 119 121 123 124 126 128 130 131 133 135 136 138</table>
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_SOUL" />
 		<set name="activateRate" val="80" />
@@ -474,7 +474,7 @@
 		<table name="#ench1AbnormalTimes">11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40</table>
 		<table name="#ench2pDef">10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_BOW" />
 		<set name="effectPoint" val="138" />
@@ -519,7 +519,7 @@
 		<table name="#ench2Trigger">2 2 2 3 3 3 4 4 4 5 5 5 6 6 7</table>
 		<table name="#ench3Trigger">2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</table>
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ELEMENTAL_ARMOR" />
 		<set name="effectPoint" val="138" />
@@ -603,7 +603,7 @@
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
 		<!-- Combines party members' P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectRange" val="1000" />
@@ -632,7 +632,7 @@
 	</skill>
 	<skill id="1518" levels="1" name="Chant of Critical Attack">
 		<!-- Combines party members' Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. Increases Critical Rate by 30% and Critical Damage by 35% for 40 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectRange" val="1000" />
@@ -661,7 +661,7 @@
 	</skill>
 	<skill id="1519" levels="1" name="Chant of Blood Awakening">
 		<!-- Combines party members' general attack damage absorption and Atk. Spd. increase to have a more advanced blood awakening effect. For 40 minutes, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard melee damage inflicted on the enemy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
 		<set name="affectRange" val="1000" />
@@ -690,7 +690,7 @@
 	</skill>
 	<skill id="1520" levels="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -714,7 +714,7 @@
 	</skill>
 	<skill id="1521" levels="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -738,7 +738,7 @@
 	</skill>
 	<skill id="1522" levels="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -794,7 +794,7 @@
 		<table name="#magicLvl">44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
 		<table name="#mpConsume">31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60</table>
 		<table name="#mpInitialConsume">8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15</table>
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_HOLY" />
 		<set name="activateRate" val="80" />
@@ -827,7 +827,7 @@
 		<table name="#magicLvl">44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
 		<table name="#mpConsume">31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60</table>
 		<table name="#mpInitialConsume">8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
 		<set name="activateRate" val="80" />
@@ -929,7 +929,7 @@
 		<table name="#ench2ActivateRates">61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 81 82 84 85 86 88 89 90 92 93 94 96 97 98 100</table>
 		<table name="#ench3AbnormalTimes">68 76 84 92 100 108 116 124 132 140 148 156 164 172 180 188 196 204 212 220 228 236 244 252 260 268 276 284 292 300</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="60" />
@@ -1007,7 +1007,7 @@
 		<table name="#ench1triggeredLevel">8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37</table>
 		<table name="#ench2AbnormalTimes">16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLESS_THE_BLOOD" />
 		<set name="castRange" val="600" />
@@ -1049,7 +1049,7 @@
 	</skill>
 	<skill id="1532" levels="1" name="Enlightenment">
 		<!-- User receives mystical enlightenment for 20 seconds, increasing M. Atk. by 40%, Casting Spd. by 50% and magic Critical Rate by 50%, and decreasing MP consumption by 90%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="FINAL_SECRET" />
 		<set name="effectPoint" val="1" />
@@ -1073,7 +1073,7 @@
 	</skill>
 	<skill id="1533" levels="1" name="Enlightenment">
 		<!-- User receives mystical enlightenment for 20 seconds, increasing M. Atk. by 10%, Heal by 40%, Casting Spd. by 50% and magic Critical Rate by 50%, and decreasing MP consumption by 90%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="FINAL_SECRET" />
 		<set name="effectPoint" val="1" />
@@ -1098,7 +1098,7 @@
 	</skill>
 	<skill id="1534" levels="1" name="Courage of Pa'agrio">
 		<!-- Temporarily increases party and clan members' Max CP. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="affectLimit" val="50-50" />
@@ -1121,7 +1121,7 @@
 	</skill>
 	<skill id="1535" levels="1" name="Chant of Movement">
 		<!-- Combines a party member's Speed increase and Evasion increase effects for a more advanced movement increase effect. For 40 minutes, increases Speed by 33 and Evasion by 4. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
 		<set name="affectRange" val="1000" />
@@ -1150,7 +1150,7 @@
 	</skill>
 	<skill id="1536" levels="1" name="Combat of Pa'agrio">
 		<!-- Combines a party/clan member's P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectLimit" val="50-50" />
@@ -1180,7 +1180,7 @@
 	</skill>
 	<skill id="1537" levels="1" name="Critical of Pa'agrio">
 		<!-- Combines a party/clan member's Critical Rate increase and Critical Damage increase effects for a more advanced critical increase effect. For 40 minutes, increases Critical Rate by 30% and Critical Damage by 35%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectLimit" val="50-50" />
@@ -1210,7 +1210,7 @@
 	</skill>
 	<skill id="1538" levels="1" name="Condition of Pa'agrio">
 		<!-- Combines a party/clan member's maximum HP increase and Max MP increase effects for more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
 		<set name="affectLimit" val="50-50" />
@@ -1240,7 +1240,7 @@
 	</skill>
 	<skill id="1539" levels="4" name="Stigma of Shilen" enchantGroup1="1">
 		<!-- For 30 seconds, decreases Resistance to short-range weapons by 16. -->
-		<table name="#abnormalLvls">1 2 3 4</table>
+		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#castRange">600 700 800 900</table>
 		<table name="#effectRange">1100 1200 1300 1400</table>
 		<table name="#magicLvl">40 52 62 70</table>
@@ -1248,7 +1248,7 @@
 		<table name="#traits">-16 -24 -32 -40</table>
 		<table name="#ench1AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="STIGMA_OF_SILEN" />
 		<set name="abnormalVisualEffect" val="STIGMA_OF_SILEN" />
@@ -1281,7 +1281,7 @@
 	</skill>
 	<skill id="1540" levels="1" name="Turn to Stone">
 		<!-- Petrifies oneself for 8 seconds to avoid incurring damage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="abnormalVisualEffect" val="FLESH_STONE" />
@@ -1299,7 +1299,7 @@
 	</skill>
 	<skill id="1541" levels="1" name="Curse of Desparion">
 		<!-- Inflicts the Curse of Desparion, temporarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1331,7 +1331,7 @@
 	</skill>
 	<skill id="1542" levels="1" name="Counter Critical">
 		<!-- For 20 minutes, increases the target's P. Def. against Critical by 30%. When the target receives an attack above a certain amount of damage, Critical Damage of General Short-Range P. Atk. is increased for 8 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="COUNTER_CRITICAL" />
 		<set name="castRange" val="400" />
@@ -1420,7 +1420,7 @@
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
 		<!-- Frightens the enemy into fleeing for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />

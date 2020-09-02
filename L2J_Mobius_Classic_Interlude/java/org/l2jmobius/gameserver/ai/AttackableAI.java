@@ -1034,7 +1034,7 @@ public class AttackableAI extends CreatureAI
 			// Skip if target is already affected by such skill.
 			if (skill.isContinuous())
 			{
-				if (((Creature) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl())))
+				if (((Creature) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLevel() >= skill.getAbnormalLevel())))
 				{
 					return false;
 				}

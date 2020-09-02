@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" levels="10" name="Tribunal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Inflicts holy damage on the enemy with 924 Power added to P. Atk. and greatly provokes the enemy. For 30 seconds, decreases Critical Rate by 30% and Resistance to every type of close range weapon by 12. Requires a sword or blunt weapon to be equipped. Over-hit and critical hit are possible. -->
-		<table name="#abnormalLvls">1 1 1 1 1 2 2 2 2 3</table>
+		<table name="#abnormalLevels">1 1 1 1 1 2 2 2 2 3</table>
 		<table name="#effectPoints">-1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">52 56 58 60 62 64 66 68 70 72</table>
@@ -14,7 +14,7 @@
 		<table name="#ench3cAtk">0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 0.9 0.9 0.89 0.89 0.89 0.88 0.88 0.88 0.87 0.87 0.87 0.86 0.86 0.86 0.85</table>
 		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CRITICAL_PROB_DOWN" />
 		<set name="activateRate" val="80" />
@@ -106,7 +106,7 @@
 	</skill>
 	<skill id="401" levels="10" name="Judgment" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Inflicts dark damage on the enemy with 1056 Power added to P. Atk. and greatly provokes the enemy. For 30 seconds, decreases Critical Damage by 25% and Resistance to every type of close range weapon by 12. Requires a sword, blunt weapon, or dualsword. Over-hit and critical hit are possible. -->
-		<table name="#abnormalLvls">1 1 1 1 2 2 2 2 2 3</table>
+		<table name="#abnormalLevels">1 1 1 1 2 2 2 2 2 3</table>
 		<table name="#cAtk">0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65</table>
 		<table name="#effectPoints">-1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
@@ -119,7 +119,7 @@
 		<table name="#ench3rCrit">0.95 0.95 0.95 0.94 0.94 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 0.9 0.9 0.89 0.89 0.89 0.88 0.88 0.88 0.87 0.87 0.87 0.86 0.86 0.86 0.85</table>
 		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CRITICAL_DMG_DOWN" />
 		<set name="activateRate" val="80" />
@@ -200,7 +200,7 @@
 		<table name="#ench1EffectPoints">-1338 -1367 -1396 -1426 -1455 -1484 -1513 -1543 -1572 -1601 -1631 -1660 -1689 -1718 -1748 -1777 -1806 -1836 -1865 -1894 -1923 -1953 -1982 -2011 -2041 -2070 -2099 -2128 -2158 -2187</table>
 		<table name="#ench2ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -238,7 +238,7 @@
 		<table name="#ench1EffectPoints">-1338 -1367 -1396 -1426 -1455 -1484 -1513 -1543 -1572 -1601 -1631 -1660 -1689 -1718 -1748 -1777 -1806 -1836 -1865 -1894 -1923 -1953 -1982 -2011 -2041 -2070 -2099 -2128 -2158 -2187</table>
 		<table name="#ench2ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -276,7 +276,7 @@
 		<table name="#ench1EffectPoints">-1396 -1484 -1572 -1660 -1748 -1836 -1923 -2011 -2099 -2187 -2275 -2363 -2450 -2538 -2626 -2714 -2802 -2890 -2977 -3065 -3153 -3241 -3329 -3417 -3505 -3592 -3680 -3768 -3856 -3944</table>
 		<table name="#ench2ActivateRates">40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -374,7 +374,7 @@
 	</skill>
 	<skill id="406" levels="3" name="Angelic Icon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Channels the gods' strength to greatly increase user's combat effectiveness. For 1 minute, increases Resistance to de-buff attacks by 40%, P. Def. by 50%, M. Def. by 50%, Accuracy by 6 when a sword/blunt weapon is equipped, Speed by 10, Atk. Spd. by 10% when a sword/blunt weapon is equipped, Critical Rate by 33 when a sword is equipped, Critical Damage by 33% when a blunt weapon is equipped, and Resistance to buff-canceling attacks by 40%. Decreases the effect of recovery magic by 80%. Available when HP is 30% or lower. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#cAtk">1.33 1.66 2</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLvl">58 66 74</table>
@@ -388,7 +388,7 @@
 		<table name="#ench3reuseDelay">295000 290000 285000 280000 275000 270000 265000 260000 255000 250000 245000 240000 235000 230000 225000 220000 215000 210000 205000 200000 195000 190000 185000 180000 175000 170000 165000 160000 155000 150000</table>
 		<table name="#ench4AbnormalTimes">62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -456,13 +456,13 @@
 	</skill>
 	<skill id="407" levels="10" name="Psycho Symphony">
 		<!-- Attacks nearby enemies with 687 Power added to P. Atk. and decreases Speed/Atk. Spd./Casting Spd. by 10% for 10 seconds. Over-hit and Critical are possible. -->
-		<table name="#abnormalLvls">1 1 1 2 2 3 3 4 4 5</table>
+		<table name="#abnormalLevels">1 1 1 2 2 3 3 4 4 5</table>
 		<table name="#debuff">0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7</table>
 		<table name="#effectPoints">-523 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">78 84 87 90 93 96 99 102 105 107</table>
 		<table name="#power">229 262 284 308 332 357 382 407 432 457</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ALL_SPEED_DOWN" />
 		<set name="activateRate" val="50" />
@@ -493,13 +493,13 @@
 	</skill>
 	<skill id="408" levels="10" name="Demonic Blade Dance">
 		<!-- Attacks nearby enemies with 825 Power added to P. Atk. and decreases P. Atk./M. Atk. by 10% for 10 seconds. Over-hit and Critical are possible. -->
-		<table name="#abnormalLvls">1 1 1 2 2 3 3 4 4 5</table>
+		<table name="#abnormalLevels">1 1 1 2 2 3 3 4 4 5</table>
 		<table name="#debuff">0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7</table>
 		<table name="#effectPoints">-523 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">39 42 44 45 47 48 50 51 53 54</table>
 		<table name="#power">825 941 1023 1107 1194 1283 1373 1464 1554 1644</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ALL_ATTACK_DOWN" />
 		<set name="activateRate" val="50" />
@@ -532,7 +532,7 @@
 	</skill>
 	<skill id="409" levels="10" name="Critical Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Attacks the target's vital points with 1832 Power added to P. Atk. Increases the user's success rate of vital point attacks by 10% for 15 seconds. Requires a dagger. Over-hit and Half-kill are possible. -->
-		<table name="#abnormalLvls">1 1 1 2 2 3 3 4 4 5</table>
+		<table name="#abnormalLevels">1 1 1 2 2 3 3 4 4 5</table>
 		<table name="#blowRate">1.1 1.1 1.1 1.15 1.15 1.2 1.2 1.25 1.25 1.3</table>
 		<table name="#effectPoints">-266 -279 -288 -296 -304 -311 -317 -323 -328 -333</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
@@ -543,7 +543,7 @@
 		<table name="#enchDuel">3716 3780 3844 3908 3972 4036 4099 4163 4227 4291 4355 4419 4482 4546 4610 4674 4738 4802 4865 4929 4993 5057 5121 5185 5248 5312 5376 5440 5504 5568</table>
 		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="MIGHT_MORTAL" />
 		<set name="blowChance" val="25" />
@@ -596,7 +596,7 @@
 	</skill>
 	<skill id="410" levels="3" name="Mortal Strike" enchantGroup1="2" enchantGroup2="2">
 		<!-- Increases the user's success rate of vital point attacks by 10% for 2 minutes. Requires a dagger. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#blowRate">1.1 1.15 1.2</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLvl">58 66 74</table>
@@ -605,7 +605,7 @@
 		<table name="#ench2AbnormalTimes">124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240</table>
 		<table name="#ench2Chance">1.21 1.21 1.21 1.21 1.21 1.21 1.22 1.22 1.22 1.22 1.22 1.22 1.23 1.23 1.23 1.23 1.23 1.23 1.24 1.24 1.24 1.24 1.24 1.24 1.25 1.25 1.25 1.25 1.25 1.25</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MIGHT_MORTAL" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -640,7 +640,7 @@
 	</skill>
 	<skill id="411" levels="3" name="Stealth" enchantGroup1="1" enchantGroup2="1">
 		<!-- Prevents being pre-emptively attacked by monsters for 2 minutes, and decreases Evasion by 12, P. Def. by 45%, M. Def. by 45%, Accuracy by 12 and P. Atk. by 45%. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#amount">0.55 0.7 0.85</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLvl">58 66 74</table>
@@ -648,7 +648,7 @@
 		<table name="#rEvas">12 8 4</table>
 		<table name="#ench1MpConsume">33 32 32 31 31 30 30 29 28 28 27 27 26 26 25 24 24 23 23 22 22 21 20 20 19 19 18 18 17 17</table>
 		<table name="#ench2AbnormalTimes">124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -674,7 +674,7 @@
 	</skill>
 	<skill id="412" levels="10" name="Sand Bomb" enchantGroup1="1" enchantGroup2="1">
 		<!-- Detonates a sand bomb to decrease the enemy's Accuracy by 6 for 30 seconds. -->
-		<table name="#abnormalLvls">1 1 1 1 1 2 2 2 2 3</table>
+		<table name="#abnormalLevels">1 1 1 1 1 2 2 2 2 3</table>
 		<table name="#accCombat">6 6 6 6 6 9 9 9 9 12</table>
 		<table name="#effectPoints">-523 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
@@ -683,7 +683,7 @@
 		<table name="#ench1mpConsume">33 32 32 31 31 30 30 29 28 28 27 27 26 26 25 24 24 23 23 22 22 21 20 20 19 19 18 18 17 17</table>
 		<table name="#ench2ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIT_DOWN" />
 		<set name="activateRate" val="80" />
@@ -713,14 +713,14 @@
 	</skill>
 	<skill id="413" levels="8" name="Rapid Fire" enchantGroup1="1" enchantGroup2="1">
 		<!-- For 2 minutes, increases P. Atk. by 62 and Atk. Spd. by 20%. Decreases range by 50%. Requires a bow. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8</table>
 		<table name="#effectPoints">566 582 597 611 624 635 646 655</table>
 		<table name="#magicLvl">60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">28 29 30 31 32 33 34 34</table>
 		<table name="#pAtk">62 67 73 78 83 89 94 100</table>
 		<table name="#ench1pAtk">106 107 107 108 109 110 110 111 112 112 113 114 115 115 116 117 117 118 119 120 120 121 122 122 123 124 125 125 126 127</table>
 		<table name="#ench2AbnormalTimes">124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -764,14 +764,14 @@
 	</skill>
 	<skill id="414" levels="8" name="Dead Eye" enchantGroup1="1">
 		<!-- For 2 minutes, when using a bow, increases one's own Accuracy by 1, P. Atk. by 124, and Critical Damage by 20%. Decreases Atk. Spd. by 10%. Requires a bow. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6 7 8</table>
 		<table name="#accCombat">1 1 2 2 2 3 3 3</table>
 		<table name="#effectPoints">566 582 597 611 624 635 646 655</table>
 		<table name="#magicLvl">60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">28 29 30 31 32 33 34 35</table>
 		<table name="#pAtk">124 134 155 155 166 177 188 199</table>
 		<table name="#ench1pAtk">211 213 214 216 217 219 220 221 223 224 226 227 229 230 231 233 234 236 237 239 240 242 243 244 246 247 249 250 252 253</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -820,12 +820,12 @@
 	</skill>
 	<skill id="415" levels="3" name="Spirit of Sagittarius">
 		<!-- Decreases physical skill MP consumption by 10% for 20 minutes. -->
-		<table name="#abnormalLvls">2 4 6</table>
+		<table name="#abnormalLevels">2 4 6</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLvl">58 66 74</table>
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#PhysicalMpConsumeRate">0.9 0.8 0.7</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MP_COST_DOWN" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -844,12 +844,12 @@
 	</skill>
 	<skill id="416" levels="3" name="Blessing of Sagittarius">
 		<!-- Decreases physical skill re-use time by 10% for 20 minutes. -->
-		<table name="#abnormalLvls">2 4 6</table>
+		<table name="#abnormalLevels">2 4 6</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLvl">58 66 74</table>
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#pReuse">0.9 0.85 0.8</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="REUSE_DELAY_DOWN" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -938,7 +938,7 @@
 	</skill>
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
 		<!-- Channels the power of the user's guardian deity for 1 minute, increasing Resistance to de-buff attacks by 80%, Resistance to buff-canceling attacks by 40%, Speed by 10, Accuracy by 6 when using a sword, blunt weapon or spear/hand-to-hand weapon, Atk. Spd. by 10%, Critical Rate by 33 when using a sword/spear, and Critical Damage by 33% when using a blunt/hand-to-hand weapon. Decreases physical skill MP consumption by 50% and the power of received HP recovery magic by 50%. Available when HP is 30% or lower. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#cAtk">1.33 1.66 2</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#hpConsume">159 183 204</table>
@@ -950,7 +950,7 @@
 		<table name="#ench1hpConsume">200 197 193 190 187 183 180 176 173 170 166 163 159 156 153 149 146 142 139 136 132 129 125 122 119 115 112 108 105 102</table>
 		<table name="#ench1mpConsume">133 131 129 126 124 122 120 117 115 113 111 108 106 104 102 99 97 95 92 90 88 86 83 81 79 77 74 72 70 68</table>
 		<table name="#ench2AbnormalTimes">62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -992,14 +992,14 @@
 	</skill>
 	<skill id="421" levels="5" name="Fell Swoop" enchantGroup1="1" enchantGroup2="1">
 		<!-- For 2 minutes, increases the number of simultaneous targets by 1. Requires a polearm. -->
-		<table name="#abnormalLvls">1 2 3 4 5</table>
+		<table name="#abnormalLevels">1 2 3 4 5</table>
 		<table name="#atkCountMax">1 2 3 4 5</table>
 		<table name="#effectPoints">549 582 611 635 655</table>
 		<table name="#magicLvl">58 62 66 70 74</table>
 		<table name="#mpConsume">27 29 31 33 34</table>
 		<table name="#ench1atkCountMax">6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8</table>
 		<table name="#ench2AbnormalTimes">124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="POLEARM_ATTACK" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1070,7 +1070,7 @@
 		<table name="#magicLvl">58 66 74</table>
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#vuln">3 5 10</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1134,7 +1134,7 @@
 	</skill>
 	<skill id="425" levels="1" name="Hawk Spirit Totem">
 		<!-- Becomes possessed by a Hawk's soul. For 5 minutes, when using a hand-to-hand combat weapon, increases Accuracy by 6, Critical Rate by 100, and Critical Damage by 30%. Requires a hand-to-hand combat weapon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="655" />
@@ -1498,7 +1498,7 @@
 		<table name="#ench2AbnormalTimes">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
 		<table name="#ench2EffectPoints">-250 -257 -264 -271 -279 -286 -293 -301 -308 -315 -323 -330 -338 -345 -352</table>
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
@@ -1531,7 +1531,7 @@
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
 		<!-- Maintains buffs and de-buffs even after death. The Blessing of Noblesse and the Amulet of Luck disappear, however. Consumes 1 Blood of the Phoenix. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
 		<set name="effectPoint" val="673" />
@@ -1555,7 +1555,7 @@
 	</skill>
 	<skill id="439" levels="1" name="Shield of Revenge">
 		<!-- For 5 minutes, returns damage from close range physical attacks and skills back to the opponent at a fixed rate. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
 		<set name="effectPoint" val="669" />
@@ -1596,7 +1596,7 @@
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
 		<!-- Uses chi energy to recover 60 HP and 10 MP per second for 1 minute. While skill is in effect, user is unable to move, and P. Def. is decreased by 80%. The effect is canceled if user is stunned. Must recharge 3rd energy stage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
 		<set name="chargeConsume" val="3" />
@@ -1625,7 +1625,7 @@
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
 		<!-- Uses sword energy make user invincible against standard targets, skills and de-buffs for 10 seconds. Requires a dualsword. Requires 5th stage Sword Energy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -1655,7 +1655,7 @@
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
 		<!-- Makes user invincible against standard targets, skills and de-buffs for 10 seconds. Requires a hand-to-hand weapon. Requires 4th stage Energy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -1701,7 +1701,7 @@
 	</skill>
 	<skill id="445" levels="1" name="Mirage">
 		<!-- For 1 minute, provides a chance to cancel the target of an attacking enemy. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MIRAGE" />
 		<set name="effectPoint" val="673" />
@@ -1724,7 +1724,7 @@
 	</skill>
 	<skill id="446" levels="1" name="Dodge">
 		<!-- Allows user to evade short-range and long-range physical attack skills for 10 seconds. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="AVOID_SKILL" />
 		<set name="effectPoint" val="337" />
@@ -1743,7 +1743,7 @@
 	</skill>
 	<skill id="447" levels="1" name="Counterattack">
 		<!-- For 10 seconds, transfers damage from close range physical attacks and skills back to the opponent. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
 		<set name="effectPoint" val="337" />
@@ -1900,7 +1900,7 @@
 		<table name="#magicLvl">62 68</table>
 		<table name="#mpConsume">29 32</table>
 		<table name="#runSpd">40 66</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="chargeConsume" val="#chargeConsume" />
@@ -1930,7 +1930,7 @@
 		<table name="#magicLvl">55 60 64 68 72</table>
 		<table name="#ench1Chance">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -2344,7 +2344,7 @@
 	</skill>
 	<skill id="469" levels="1" name="Rapid Attack">
 		<!-- Increases the user's Atk. Spd. by 15% for 20 minutes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="1" />
@@ -2687,13 +2687,13 @@
 	</skill>
 	<skill id="482" levels="2" name="Furious Soul">
 		<!-- For 1 minute 30 seconds, increases the user's Critical Rate by 20% and Critical Damage by 25%. Decreases P. Def. by 5%. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#cAtk">1.25 1.3</table>
 		<table name="#effectPoints">235 523</table>
 		<table name="#magicLvl">24 55</table>
 		<table name="#mpConsume">11 25</table>
 		<table name="#rCrit">1.2 1.3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2714,7 +2714,7 @@
 	</skill>
 	<skill id="483" levels="2" name="Sword Shield" enchantGroup1="1" enchantGroup2="1">
 		<!-- For 30 seconds, increases P. Def. by 1600 and decreases Speed by 40%. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">204 438</table>
 		<table name="#magicLvl">36 52</table>
 		<table name="#mpConsume">16 24</table>
@@ -2722,7 +2722,7 @@
 		<table name="#ench1pDef">3240 3280 3320 3360 3400 3440 3480 3520 3560 3600 3640 3680 3720 3760 3800 3840 3880 3920 3960 4000 4040 4080 4120 4160 4200 4240 4280 4320 4360 4400</table>
 		<table name="#ench2runSpd">0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.7 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2786,7 +2786,7 @@
 		<table name="#ench1ActivateRates">70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90</table>
 		<table name="#ench2AbnormalTimes">5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -2886,7 +2886,7 @@
 	</skill>
 	<skill id="490" levels="2" name="Fast Shot" enchantGroup1="1" enchantGroup2="1">
 		<!-- Increases the user's crossbow Atk. Spd. by 8% for 20 minutes. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">303 549</table>
 		<table name="#magicLvl">32 55</table>
 		<table name="#mpConsume">14 25</table>
@@ -2894,7 +2894,7 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2MpConsume">24 24 23 23 22 22 21 21 21 20 20 19 19 18 18 18 17 17 16 16 15 15 15 14 14 13 13 12 12 12</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_SPEED_UP_BOW" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -3043,7 +3043,7 @@
 		<table name="#ench7Duel">17 25 33 40 48 56 63 71 79 86 94 102 109 117 125 132 140 148 155 163 171 178 186 194 201 209 217 224 232 240</table>
 		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -3105,20 +3105,20 @@
 	</skill>
 	<skill id="495" levels="10" name="Blade Rush" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for 20 seconds. Makes them consume 107 HP every second. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword to be equipped. Over-hit is possible. -->
-		<table name="#abnormalLvls">6 6 7 7 7 7 8 8 8 8</table>
+		<table name="#abnormalLevels">6 6 7 7 7 7 8 8 8 8</table>
 		<table name="#castRange">400 500 500 500 500 500 600 600 600 600</table>
 		<table name="#dot">107 107 123 123 123 123 123 134 134 134</table>
 		<table name="#effectPoints">-266 -279 -288 -296 -304 -311 -317 -323 -328 -333</table>
 		<table name="#effectRange">600 700 700 700 700 700 800 800 800 800</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpInitialConsume">65 70 73 75 77 80 83 85 88 90</table>
-		<table name="#ench1AbnormalLvl">8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11</table>
+		<table name="#ench1abnormalLevel">8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11</table>
 		<table name="#ench1Power">134 135 135 135 135 135 135 136 136 136 136 136 136 137 137 137 137 137 137 138 138 138 138 138 138 139 139 139 139 139</table>
 		<table name="#ench2ActivateRates">51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90</table>
 		<table name="#ench3Cost">88 87 85 84 82 81 79 78 76 75 73 72 70 69 67 66 64 63 61 60 58 57 55 54 52 51 49 48 46 45</table>
 		<table name="#ench4Duel">16 22 29 35 41 48 54 60 67 73 79 86 92 98 105 111 117 124 130 136 143 149 155 162 168 174 181 187 193 200</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -3328,12 +3328,12 @@
 	</skill>
 	<skill id="499" levels="3" name="Courage">
 		<!-- Increases Resistance to Mental attacks by 40 for 1 minute. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">341 467 582</table>
 		<table name="#magicLvl">36 49 62</table>
 		<table name="#mpConsume">16 22 29</table>
 		<table name="#trait_derangement">40 60 100</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="RESIST_SPIRITLESS" />
 		<set name="effectPoint" val="#effectPoints" />

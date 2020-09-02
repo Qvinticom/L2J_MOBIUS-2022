@@ -160,7 +160,7 @@
 		<basicProperty>NONE</basicProperty>
 		<activateRate>0</activateRate>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<reuseDelay>
@@ -329,7 +329,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -379,7 +379,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -415,7 +415,7 @@
 	<skill id="22930" toLevel="2" name="Drum Melody - Heavenly Cocktail">
 		<!-- For 60 min., Max MP +20%, HP Recovery Rate +20%, M. Critical Rate +2, P. Critical Damage +20%, P. Atk. +10%, P. Def./ Atk. Spd./ M. Atk./ M. Def./ Casting Spd. +20%, and Debuff Resistance +10%. Received P. Critical Damage -30%, Speed -10%. Additionally increases P. Critical Damage if the character has received a certain amount of damage. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<operateType>A2</operateType>
@@ -485,7 +485,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -532,7 +532,7 @@
 	<skill id="22932" toLevel="2" name="Lute Melody - Heavenly Cocktail">
 		<!-- For 60 min., Atk. Spd. +35%, Casting Spd. +32%. Has a chance of applying 9% Vampiric Rage effect. Effect remains even after death, and cannot be forcefully eliminated. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -587,7 +587,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -619,7 +619,7 @@
 	<skill id="22934" toLevel="2" name="Pipe Organ Melody - Heavenly Cocktail">
 		<!-- For 60 min., Max HP/ Max MP/ Max CP +39% and HP Recovery Rate +20%. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -685,7 +685,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -725,7 +725,7 @@
 	<skill id="22936" toLevel="2" name="Guitar Melody - Heavenly Cocktail">
 		<!-- For 60 min., P. Critical Rate by 34%, P. Critical Damage +35% and M. Critical Rate by +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and MP Consumption for Iss Enchanter's Skills -20%. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -803,7 +803,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -855,7 +855,7 @@
 	<skill id="22938" toLevel="2" name="Harp Melody - Heavenly Cocktail">
 		<!-- For 60 min., P. Accuracy +6, P. Evasion/ M. Evasion +6, Speed +35. Received Critical Damage -30%. Effect remains even after death, and cannot be forcefully eliminated. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<operateType>A2</operateType>
@@ -924,7 +924,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -973,7 +973,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<trait>ETC</trait>
 		<irreplacableBuff>true</irreplacableBuff>

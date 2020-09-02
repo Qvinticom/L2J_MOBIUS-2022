@@ -1860,7 +1860,7 @@
 	<skill id="2231" toLevel="1" name="Amulet: Protection of Valakas">
 		<!-- Amulet: Protection of Valakas. Increases one's P. Def. when Valakas attacks with its front claws. -->
 		<icon>icon.etc_blesscharm_ward_val_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VALAKAS_ITEM</abnormalType>
 		<hitTime>1000</hitTime>
@@ -1883,7 +1883,7 @@
 	<skill id="2232" toLevel="1" name="Amulet: Slay Valakas">
 		<!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
 		<icon>icon.etc_blesscharm_slay_val_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VALAKAS_ITEM</abnormalType>
 		<hitTime>1000</hitTime>
@@ -1923,7 +1923,7 @@
 	<skill id="2234" toLevel="1" name="Soul Breaking Arrow">
 		<!-- Momentarily immobile due to the short Stun. -->
 		<icon>icon.etc_destory_soul_arrow_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2095,7 +2095,7 @@
 	<skill id="2239" toLevel="1" name="Scroll: Petrifaction">
 		<!-- Momentarily petrified. -->
 		<icon>icon.ect_piece_of_paper_white_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
@@ -2248,7 +2248,7 @@
 	<skill id="2246" toLevel="1" name="Herb of Power">
 		<!-- Herb increases P. Atk. -->
 		<icon>icon.etc_herb_red_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP_HERB</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2293,7 +2293,7 @@
 	<skill id="2247" toLevel="1" name="Herb of Magic">
 		<!-- Herb increases M. Atk. -->
 		<icon>icon.etc_herb_blue_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MA_UP_HERB</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2316,7 +2316,7 @@
 	<skill id="2248" toLevel="1" name="Blessing of Fire">
 		<!-- Turns normal physical attacks into fire attacks. -->
 		<icon>icon.etc_fire_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>FIRE</attributeType>
@@ -2341,7 +2341,7 @@
 	<skill id="2249" toLevel="1" name="Blessing of Water">
 		<!-- Turns normal physical attacks into water attacks. -->
 		<icon>icon.etc_water_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>WATER</attributeType>
@@ -2366,7 +2366,7 @@
 	<skill id="2250" toLevel="1" name="Blessing of Wind">
 		<!-- Turns normal physical attacks into wind attacks. -->
 		<icon>icon.etc_wind_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>WIND</attributeType>
@@ -2391,7 +2391,7 @@
 	<skill id="2251" toLevel="1" name="Blessing of Earth">
 		<!-- Turns normal physical attacks into earth attacks. -->
 		<icon>icon.etc_earth_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>EARTH</attributeType>
@@ -2416,7 +2416,7 @@
 	<skill id="2252" toLevel="1" name="Blessing of Dark">
 		<!-- Turns normal physical attacks into dark attacks. -->
 		<icon>icon.etc_unholy_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>DARK</attributeType>
@@ -2441,7 +2441,7 @@
 	<skill id="2253" toLevel="1" name="Holy Blessing">
 		<!-- Turns normal physical attacks into holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<attributeType>HOLY</attributeType>
@@ -4041,7 +4041,7 @@
 			<value level="7">icon.etc_oblivion_red_i00</value>
 			<value level="8">icon.etc_oblivion_white_i00</value>
 		</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>FISHING_MASTERY_DOWN</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4299,7 +4299,7 @@
 		<!-- Temporarily increases P. Atk. Effect 3. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4323,7 +4323,7 @@
 		<!-- Temporarily increases M. Atk. Effect 3. -->
 		<icon>icon.etc_herb_blue_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4347,7 +4347,7 @@
 		<!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<icon>BranchSys2.icon.etc_attack_sp_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4371,7 +4371,7 @@
 		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<icon>icon.etc_magic_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4395,7 +4395,7 @@
 		<!-- Temporarily increases Critical Rate. Effect 3. -->
 		<icon>icon.etc_critical_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4419,7 +4419,7 @@
 		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>BranchSys2.icon.etc_move_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>100</effectPoint>

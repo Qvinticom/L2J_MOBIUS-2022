@@ -3,7 +3,7 @@
 	<skill id="11600" toLevel="1" name="Combat Frenzy">
 		<!-- For 5 min., clan members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and Magic Cancel Rate -40. A chance to add 8% Vampiric Rage effect. -->
 		<icon>icon.skill11600_2</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -64,7 +64,7 @@
 		<!-- For 5 min., clan members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -122,7 +122,7 @@
 		<!-- For 5 min., clan members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -201,7 +201,7 @@
 			<value level="6">icon.skill1509</value>
 			<value level="7">icon.skill1509</value>
 		</icon>
-		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
+		<abnormalLevel>4</abnormalLevel> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
 		<activateRate>60</activateRate> <!-- Custom -->
@@ -436,7 +436,7 @@
 		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -496,7 +496,7 @@
 		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -557,7 +557,7 @@
 		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -614,7 +614,7 @@
 		<!-- For 5 min., party members' Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -674,7 +674,7 @@
 		<!-- For 5 min., party members' Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -735,7 +735,7 @@
 		<!-- For 5 min., party members' HP Recovery +75%, MP Recovery +50%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. -->
 		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -791,7 +791,7 @@
 	<skill id="11613" toLevel="4" name="Song of Protection">
 		<!-- For $s1, increases your P. Def. +$s2 and M. Def. +$s3. Restores $s4 HP. -->
 		<icon>icon.skill11613</icon>
-		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
+		<abnormalLevel>1</abnormalLevel> <!-- Guessed -->
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -901,7 +901,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -948,7 +948,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -996,7 +996,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1041,7 +1041,7 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1189,7 +1189,7 @@
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
 		<!-- Creates a defense barrier that absorbs damage as much as 200% of your P. Def. for 10 sec. -->
 		<icon>icon.skill11621</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
@@ -1209,7 +1209,7 @@
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
 		<!-- The barrier absorbs 20000 damage for 10 sec. -->
 		<icon>icon.skill11621</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>

@@ -109,7 +109,7 @@
 	<skill id="807" toLevel="1" name="Over-hit">
 		<!-- Increases the golem's power more by filling him up with special fuel. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>99</abnormalLvl>
+		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -132,7 +132,7 @@
 	<skill id="808" toLevel="1" name="Golem Punch">
 		<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1100,7 +1100,7 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1163,7 +1163,7 @@
 	<skill id="823" toLevel="3" name="Strengthen Golem">
 		<!-- Increases the summoned golem's P. Atk. by $s2 and Atk. Spd. by $s3 for $s1. -->
 		<icon>icon.skill0823</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>40</castRange>
@@ -1218,7 +1218,7 @@
 	<skill id="824" toLevel="3" name="Golem Reinforcement">
 		<!-- For $s1, equips a summoned golem with an additional armor plate to increase P. Def. by $s2 and Max HP by $s3. -->
 		<icon>icon.skill0824</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>40</castRange>
@@ -1273,7 +1273,7 @@
 	<skill id="825" toLevel="1" name="Sharpen Edge">
 		<!-- Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 20 minutes. -->
 		<icon>icon.skill0825</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1323,7 +1323,7 @@
 	<skill id="826" toLevel="1" name="Spike">
 		<!-- Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 20 minute(s). -->
 		<icon>icon.skill0826</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1355,7 +1355,7 @@
 	<skill id="827" toLevel="1" name="Bowstring">
 		<!-- Enhances the string of a bow to increase P. Atk. by 5% and range by 100 for 20 minutes. -->
 		<icon>icon.skill0827</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1393,7 +1393,7 @@
 	<skill id="828" toLevel="1" name="Encase Armor">
 		<!-- Thickens the surface of heavy armor to increase P. Def. by 10% for 20 minute(s). -->
 		<icon>icon.skill0828</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1422,7 +1422,7 @@
 	<skill id="829" toLevel="1" name="Hard Tanning">
 		<!-- Tans light armor to increase P. Def. by 5% and Evasion by 2 for 20 minutes. Cannot be used on pets. -->
 		<icon>icon.skill0829</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1458,7 +1458,7 @@
 	<skill id="830" toLevel="1" name="Embroider">
 		<!-- Embroiders a robe to increase P. Def. by 5% and MP Recovery Bonus by 2 for 20 minutes. -->
 		<icon>icon.skill0830</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>400</castRange>
@@ -1545,7 +1545,7 @@
 	<skill id="834" toLevel="1" name="Blood Pact">
 		<!-- Through a blood contract, increases party members' Max HP by 10% and HP Recovery Bonus by 10 for 2 minutes. -->
 		<icon>icon.skill0834</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BLOOD_CONSTRACT</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1574,7 +1574,7 @@
 	<skill id="835" toLevel="4" name="Imbue Seed of Destruction">
 		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the body, sucking up the enemy's mana, and blocks the enemy's skill use when it becomes fully grown. Consumes $s1 Dark Seed. -->
 		<icon>icon.skill0835</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DARK_SEED</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1634,7 +1634,7 @@
 	<skill id="837" toLevel="1" name="Painkiller">
 		<!-- For 8 seconds, becomes invincible, suppressing pain and not incurring damage. -->
 		<icon>icon.skill0837</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2044,7 +2044,7 @@
 	<skill id="871" toLevel="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 20 minutes -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2120,7 +2120,7 @@
 	<skill id="873" toLevel="1" name="Rapid Shot">
 		<!-- Increases bow Atk. Spd. by 12% for 20 minutes. -->
 		<icon>icon.skill0099</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_SPEED_UP_BOW</abnormalType>
 		<effectPoint>549</effectPoint>
@@ -2209,7 +2209,7 @@
 	<skill id="875" toLevel="1" name="Empower">
 		<!-- Increases M. Atk. power by 75% for 20 minutes. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2290,7 +2290,7 @@
 	<skill id="877" toLevel="8" name="Centurion Disarm">
 		<!-- Disarms the enemy and prevents him from equipping a weapon for $s1. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2387,7 +2387,7 @@
 	<skill id="879" toLevel="7" name="Knight Captain Curse Fear">
 		<!-- Causes your enemy to flee in fear. -->
 		<icon>icon.skill1169</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -2425,7 +2425,7 @@
 	<skill id="880" toLevel="1" name="Knight Captain Ultimate Defense">
 		<!-- For 30 sec., increases P. Def. by 3600, M. Def. by 2700 and Buff-canceling Attack Resistance by 80%. The player cannot move while the effect lasts. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -2556,7 +2556,7 @@
 	<skill id="883" toLevel="7" name="Commander Seal of Binding">
 		<!-- Holds nearby enemies for $s1. -->
 		<icon>icon.skill1208</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2637,7 +2637,7 @@
 	<skill id="886" toLevel="11" name="Air Shock Bomb">
 		<!-- Damages and stuns the target with $s1 Power, momentarily preventing movement. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>AIR_BATTLE_SLOW</abnormalVisualEffect>
@@ -2717,7 +2717,7 @@
 	<skill id="887" toLevel="11" name="Sky Clutch">
 		<!-- Inflicts damage and simultaneously holds the targeted enemy with $s1 Power. Only one root effect can be used at a time. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>AIR_BATTLE_ROOT</abnormalVisualEffect>
@@ -3207,7 +3207,7 @@
 	<skill id="894" toLevel="1" name="Exhilarate">
 		<!-- Increases your overall attack abilities. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<hitTime>1500</hitTime>
@@ -3242,7 +3242,7 @@
 	<skill id="895" toLevel="1" name="Exhilarate">
 		<!-- Increases your overall attack abilities. -->
 		<icon>icon.skill_transform_buff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<hitTime>1500</hitTime>
@@ -3471,7 +3471,7 @@
 	<skill id="899" toLevel="6" name="Cat Roar">
 		<!-- Uses the cry of danger to decrease P. Def./M. Def./Speed/Atk. Spd. of nearby enemies and decreases Magic Spd. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>

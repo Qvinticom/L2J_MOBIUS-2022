@@ -193,7 +193,7 @@
 	</skill>
 	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
 		<!-- Transformed into a gatekeeper. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -214,7 +214,7 @@
 	<skill id="2512" levels="1" name="Herb of Vampiric Rage">
 		<!-- Allows you to temporarily drain the enemy's HP and add it to your own. Cannot be used with skill-based or long-range attacks. Effect 4. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="effectPoint" val="100" />
@@ -236,7 +236,7 @@
 	<skill id="2513" levels="1" name="Herb of Doubt">
 		<!-- Head is enlarged. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -266,7 +266,7 @@
 	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
 		<!-- Critical attack power is temporarily increased. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="100" />
@@ -1441,7 +1441,7 @@
 	</skill>
 	<skill id="2577" levels="1" name="Instant Defense">
 		<!-- Becomes invincible momentarily. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="icon" val="icon.skill1418" />
@@ -1479,7 +1479,7 @@
 	</skill>
 	<skill id="2580" levels="1" name="Vitality Replenishing Herb">
 		<!-- Restores Vitality points as you gain Exp. by hunting. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
 		<set name="abnormalVisualEffect" val="VP_UP" />
@@ -1598,7 +1598,7 @@
 	</skill>
 	<skill id="2593" levels="1" name="Bow/Crossbow Attack Resistance Potion">
 		<!-- Temporarily increases your tolerance to bow/crossbow attacks. Effect 4. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="180" />
 		<set name="abnormalType" val="PD_UP_BOW" />
 		<set name="effectPoint" val="40" />

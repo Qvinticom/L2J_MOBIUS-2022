@@ -4,7 +4,7 @@
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to strike down your enemies with the strength of a bull. -->
 		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_C</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -29,7 +29,7 @@
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb makes you temporarily impervious to your enemy's attacks. -->
 		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -67,7 +67,7 @@
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to cast as fast as the wind. -->
 		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -98,7 +98,7 @@
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to move faster than any beast on the plains. -->
 		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -126,7 +126,7 @@
 		</effects>
 	</skill>
 	<skill id="2904" toLevel="1" name="Guardian Spirit's Divine Protection">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2718,7 +2718,7 @@
 	<skill id="2993" toLevel="1" name="Ancient herb - Deceiver">
 		<!-- You incur the wrath of the spirits who existed in the chaos of the beginning of the world by taking the ancient herb without permission. -->
 		<icon>icon.freed_soul_core_i00</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2745,7 +2745,7 @@
 	<skill id="2994" toLevel="1" name="Transformation Harp: Aqua Elf">
 		<!-- Transforms into an Aqua Elf in an alluring dress. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>

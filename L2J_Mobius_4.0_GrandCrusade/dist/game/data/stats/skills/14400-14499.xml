@@ -15,7 +15,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
@@ -50,7 +50,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
@@ -121,7 +121,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<attributeType>FIRE</attributeType>
@@ -149,7 +149,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>1.5</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -176,7 +176,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>1.5</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -250,7 +250,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>150</affectRange>
@@ -284,7 +284,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>90</activateRate>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<trait>POISON</trait>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -315,7 +315,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<effectRange>2500</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -363,7 +363,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>
 		<magicLvl>98</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -382,7 +382,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>
 		<magicLvl>98</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -399,7 +399,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<hitTime>2000</hitTime>
 		<targetType>SELF</targetType>
@@ -545,7 +545,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>70</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
@@ -584,7 +584,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -708,7 +708,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<activateRate>50</activateRate>
 		<magicLvl>75</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>SHOCK</trait>
 		<affectRange>300</affectRange>
@@ -737,7 +737,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>BLEED</trait>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -781,7 +781,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<effectRange>1000</effectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<castRange>1000</castRange>
 		<targetType>TARGET</targetType>
@@ -958,7 +958,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -990,7 +990,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<trait>SLEEP</trait>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1023,7 +1023,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>200</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
@@ -1134,7 +1134,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1239,7 +1239,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<hitTime>1500</hitTime>
@@ -1262,7 +1262,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<hitTime>1500</hitTime>
@@ -1288,7 +1288,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>SHOCK</trait>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1315,7 +1315,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>SLEEP</trait>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1345,7 +1345,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1374,7 +1374,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>70</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>PARALYZE</trait>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -1412,7 +1412,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>70</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>BLEED</trait>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1438,7 +1438,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1466,7 +1466,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<affectRange>1200</affectRange>
 		<fanRange>0;0;200;0</fanRange>
@@ -1500,7 +1500,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>95</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>300</affectRange>
 		<isDebuff>true</isDebuff>
@@ -1533,7 +1533,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>200</activateRate>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<affectRange>300</affectRange>
 		<trait>PULL</trait>
@@ -1586,7 +1586,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>300</affectRange>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -1689,7 +1689,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>HOLD</trait>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1707,7 +1707,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>HOLD</trait>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1762,7 +1762,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1782,7 +1782,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1806,7 +1806,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1830,7 +1830,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1854,7 +1854,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1922,7 +1922,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1945,7 +1945,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -1970,7 +1970,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>300</affectRange>
@@ -1996,7 +1996,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2041,7 +2041,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<affectRange>700</affectRange>
@@ -2065,7 +2065,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2100,7 +2100,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2131,7 +2131,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2163,7 +2163,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -2198,7 +2198,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>

@@ -23,7 +23,7 @@
 	<skill id="11224" toLevel="4" name="Gloomy Soul">
 		<!-- Instantly paralyzes nearby enemies for 3 sec. and decreases their heal amount by 20%. -->
 		<icon>icon.skill11868</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -64,7 +64,7 @@
 	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
 		<!-- For 20 sec., P. Def. + 5000. -->
 		<icon>icon.skill11869</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">20</value>
 		</abnormalTime>
@@ -158,7 +158,7 @@
 	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
 		<icon>icon.skill1469</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
 		<affectLimit>5-12</affectLimit>
@@ -187,7 +187,7 @@
 	<skill id="11245" toLevel="1" name="Sampling">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
@@ -767,7 +767,7 @@
 	<skill id="11259" toLevel="11" name="Mark of Weakness">
 		<!-- Weakens target for 10 seconds. Decreases 326 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
 		<icon>icon.skill11259</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -779,7 +779,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_B</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_B</abnormalType>
@@ -871,7 +871,7 @@
 	<skill id="11260" toLevel="8" name="Mark of Void">
 		<!-- Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 326 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
 		<icon>icon.skill11260</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -880,7 +880,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_A</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_A</abnormalType>
@@ -960,7 +960,7 @@
 	<skill id="11261" toLevel="9" name="Mark of Plague">
 		<!-- Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 326 every second and decreases the power of incoming Heals. -->
 		<icon>icon.skill11261</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -970,7 +970,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_C</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_C</abnormalType>
@@ -1050,7 +1050,7 @@
 	<skill id="11262" toLevel="9" name="Mark of Trick">
 		<!-- Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 326 every second. Has a 25% of causing target to fail to use a skill. -->
 		<icon>icon.skill11262</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1060,7 +1060,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>MARK_DEBUF_D</subordinationAbnormalType>
 		<abnormalType>MARK_DEBUF_D</abnormalType>
@@ -1361,11 +1361,11 @@
 	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
 		<!-- Transform into Naviarope. For 5 minutes, M. Def. and P. Def. + 50% -->
 		<icon>icon.skill11267</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">300</value>
 			<value level="2">420</value>
@@ -1805,7 +1805,7 @@
 	<skill id="11273" toLevel="8" name="Exile">
 		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 353 per second. -->
 		<icon>icon.skill11273</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1814,7 +1814,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DEPORT</abnormalType>
 		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
@@ -1895,12 +1895,12 @@
 	<skill id="11274" toLevel="4" name="Summon Barrier">
 		<!-- Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
 		<icon>icon.skill11274</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">6</value>
 			<value level="2">8</value>
@@ -2073,7 +2073,7 @@
 			<value fromLevel="1" toLevel="6">100</value>
 			<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -2139,12 +2139,12 @@
 	<skill id="11277" toLevel="4" name="Sense of Loyalty">
 		<!-- Servitor's Fury. P. Atk. + 35%, M. Atk. + 75%, P. Critical Rate + 30%, and P. Critical Damage by 35%. -->
 		<icon>icon.skill11277</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUMMON_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -2205,7 +2205,7 @@
 	<skill id="11278" toLevel="9" name="Bear Claw">
 		<!-- Provokes the enemy and inflicts damage. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2215,7 +2215,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>100</activateRate>
@@ -2287,7 +2287,7 @@
 	<skill id="11279" toLevel="9" name="Bear Tumbling">
 		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2297,7 +2297,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect> <!-- TODO Verify skilldata have no AVE -->
@@ -2432,7 +2432,7 @@
 	<skill id="11281" toLevel="9" name="Cougar Pounce">
 		<!-- Jumps to inflict damage on targets within a certain range. Speed - 100. Can be used when below 200 grids. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>90</activateRate>
@@ -2718,7 +2718,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>0</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -2811,12 +2811,12 @@
 	<skill id="11288" toLevel="4" name="Ultimate Servitor Share">
 		<!-- Shares the following with your servitor(s): 60% of P. Atk. and P. Def., 30% of M. Atk. and M. Def., 15% of Max HP and MP, 30% of Critical Rate, 10% of Atk. Spd. and 3% of Casting Spd. for 30 minutes. -->
 		<icon>icon.skill11288</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ABILITY_CHANGE</abnormalType>
 		<canBeDispelled>false</canBeDispelled> <!-- In retail it cannot be dispelled with alt click -->
@@ -2872,7 +2872,7 @@
 	<skill id="11289" toLevel="4" name="Gate Root">
 		<!-- Temporarily stops nearby enemies from moving. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3029,7 +3029,7 @@
 	<skill id="11294" toLevel="11" name="Cubic Root">
 		<!-- Temporarily stops the enemy from moving. -->
 		<icon>icon.skill1201</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -3118,7 +3118,7 @@
 	<skill id="11296" toLevel="9" name="Mass Exile">
 		<!-- Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
 		<icon>icon.skill11296</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -3128,7 +3128,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DEPORT</abnormalType>
 		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
@@ -3207,12 +3207,12 @@
 	<skill id="11297" toLevel="4" name="Blessing of the Giants">
 		<!-- For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
 		<icon>icon.skill11297</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<operateType>A2</operateType>

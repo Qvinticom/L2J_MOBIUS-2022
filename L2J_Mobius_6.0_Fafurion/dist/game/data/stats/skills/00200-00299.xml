@@ -918,7 +918,7 @@
 	<skill id="223" toLevel="49" name="Sting">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., and inflicts Bleed causing loss of $s3 HP per second for $s2. Requires a sword, dagger, dual sword, or dual-dagger. Over-hit is possible. -->
 		<icon>icon.skill0223</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -968,7 +968,7 @@
 			<value level="47">8</value>
 			<value level="48">8</value>
 			<value level="49">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1536,10 +1536,10 @@
 	<skill id="230" toLevel="2" name="Sprint">
 		<!-- Increases Speed by $s2 for $s1. -->
 		<icon>icon.skill0230</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>
@@ -3841,7 +3841,7 @@
 	<skill id="260" toLevel="37" name="Hammer Crush">
 		<!-- Attacks the enemy with $s1 power added to P. Attack and inflicts Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit and Critical Hit are possible. -->
 		<icon>icon.skill0260</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -4588,7 +4588,7 @@
 	<skill id="264" toLevel="1" name="Song of Earth">
 		<!-- Increases all party members' P. Def. by 25% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0264</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_EARTH</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4614,7 +4614,7 @@
 	<skill id="265" toLevel="1" name="Song of Life">
 		<!-- Increases all party members' HP Recovery Bonus by 20% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0265</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_LIFE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4640,7 +4640,7 @@
 	<skill id="266" toLevel="1" name="Song of Water">
 		<!-- Increases all party members' Evasion by 3 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0266</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_WATER</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4666,7 +4666,7 @@
 	<skill id="267" toLevel="1" name="Song of Warding">
 		<!-- Increases all party members' M. Def. by 30% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0267</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_WARDING</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4692,7 +4692,7 @@
 	<skill id="268" toLevel="1" name="Song of Wind">
 		<!-- Increases all party members' Speed by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0268</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4718,7 +4718,7 @@
 	<skill id="269" toLevel="1" name="Hunter's Song">
 		<!-- Increases all party members' Critical Rate by 100% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0269</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_HUNTER</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4744,7 +4744,7 @@
 	<skill id="270" toLevel="1" name="Song of Invocation">
 		<!-- Increases all party members' Dark Attack Resistance by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
 		<icon>icon.skill0270</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_INVOCATION</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4770,7 +4770,7 @@
 	<skill id="271" toLevel="1" name="Dance of the Warrior">
 		<!-- Increases all party members' P. Atk. by 12% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0271</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4804,7 +4804,7 @@
 	<skill id="272" toLevel="1" name="Dance of Inspiration">
 		<!-- Increases all party members' Accuracy by 4 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0272</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_INSPIRATION</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4838,7 +4838,7 @@
 	<skill id="273" toLevel="1" name="Dance of the Mystic">
 		<!-- Increases all party members' M. Atk. by 20% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0273</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4872,7 +4872,7 @@
 	<skill id="274" toLevel="1" name="Dance of Fire">
 		<!-- Increases all party members' Critical Damage by 35% for 2 min. Additionally increases MP Consumption when dancing while sing/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0274</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4906,7 +4906,7 @@
 	<skill id="275" toLevel="1" name="Dance of Fury">
 		<!-- Increases all party members' Atk. Spd. by 15% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0275</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4940,7 +4940,7 @@
 	<skill id="276" toLevel="1" name="Dance of Concentration">
 		<!-- Decreases all party members' magic cancel damage by 40 and increases Casting Spd. by 30% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0276</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
@@ -4978,7 +4978,7 @@
 	<skill id="277" toLevel="1" name="Dance of Light">
 		<!-- Increases all party members' Holy P. Atk. by 20 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0277</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_LIGHT</abnormalType>
 		<affectRange>1000</affectRange>
@@ -5073,7 +5073,7 @@
 	<skill id="279" toLevel="17" name="Lightning Strike">
 		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 Power. Paralyzes for $s2. -->
 		<icon>icon.skill0279</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -5373,7 +5373,7 @@
 	<skill id="281" toLevel="37" name="Soul Breaker">
 		<!-- Throws an Iron Fist to attack target with $s1 power added to P. Attack and inflict Stun for $s2. Requires a fist weapon. Ignores Shield Defense, Overheat, Critical. -->
 		<icon>icon.skill0281</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -5645,7 +5645,7 @@
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
 		<!-- Possessed by a Puma's soul, Accuracy +6 and Atk. Spd. +20% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0282</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -6027,7 +6027,7 @@
 	<skill id="286" toLevel="17" name="Provoke">
 		<!-- Provokes enemies within a wide range and Spear Resistance -$s2 for $s1. -->
 		<icon>icon.skill0286</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<affectLimit>9-10</affectLimit>
@@ -6117,11 +6117,11 @@
 	<skill id="287" toLevel="3" name="Lionheart">
 		<!-- Increases Paralyze/ Hold/ Sleep/ Stun/ Buff Cancellation Resistance by $s2 for $s1. -->
 		<icon>icon.skill0287</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RESIST_SPIRITLESS</abnormalType>
 		<effectPoint>
@@ -6397,7 +6397,7 @@
 	<skill id="292" toLevel="1" name="Bison Spirit Totem">
 		<!-- The player is possessed by a Bison's soul. For 1 min., Accuracy +6 when using a fist weapon, P. Atk. +10% and Critical Rate +100 when HP is 60% or below. If HP is 30% or below, P. Atk. +30% and Critical Rate +300. Requires a fist weapon. -->
 		<icon>icon.skill0292</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>624</effectPoint>
@@ -6548,10 +6548,10 @@
 	<skill id="297" toLevel="2" name="Duelist Spirit">
 		<!-- Increases dual sword weapon Atk. Spd. by $s2 for $s1 and ordinary/ skill attack damage by $s3 during PvP. -->
 		<icon>icon.skill0297</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>DUELIST_SPIRIT</abnormalType>
 		<effectPoint>
@@ -6603,7 +6603,7 @@
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
 		<!-- Becomes possessed by a Rabbit's soul. Increases Atk. Spd. by 30%, Speed by 30%, and Evasion by 12 for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0298</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>582</effectPoint>

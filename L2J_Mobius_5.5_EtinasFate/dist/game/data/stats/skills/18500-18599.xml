@@ -148,7 +148,7 @@
 		<!-- P./M. Def. is decreased by Lvl 2 - 30%. -->
 		<!-- P./M. Def. is decreased by Lvl 3 - 50%. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -197,7 +197,7 @@
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -694,10 +694,10 @@
 			<value level="1">SKILL_IGNORE</value>
 			<value level="2">ABNORMAL_INVINCIBILITY</value>
 		</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">1</value>
 			<value level="2">7</value>
@@ -1088,7 +1088,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMentoring>true</isMentoring>
 		<targetType>SELF</targetType>
@@ -1167,7 +1167,7 @@
 		<!-- For 2 hr., Max HP/ MP/ CP +15%, P. Def. +15%, M. Def. +15%, P. Atk. +10%, M. Atk. +10%, and Speed +10 for the selected mentee. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

@@ -55,7 +55,7 @@
 	<skill id="5301" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -118,7 +118,7 @@
 	<skill id="5302" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -128,7 +128,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -202,7 +202,7 @@
 	<skill id="5303" toLevel="9" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 8. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -212,7 +212,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -286,7 +286,7 @@
 	<skill id="5304" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -351,7 +351,7 @@
 	<skill id="5305" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -425,7 +425,7 @@
 	<skill id="5306" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -489,7 +489,7 @@
 	<skill id="5307" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -551,7 +551,7 @@
 	<skill id="5308" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -561,7 +561,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -634,7 +634,7 @@
 	<skill id="5309" toLevel="9" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 8. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -644,7 +644,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1763,7 +1763,7 @@
 	<skill id="5333" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -1773,7 +1773,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2808,7 +2808,7 @@
 	<skill id="5362" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2871,7 +2871,7 @@
 	<skill id="5363" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -2881,7 +2881,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -2955,7 +2955,7 @@
 	<skill id="5364" toLevel="9" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 8. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -2965,7 +2965,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -3039,7 +3039,7 @@
 	<skill id="5365" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -3081,7 +3081,7 @@
 	<skill id="5366" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3155,7 +3155,7 @@
 	<skill id="5367" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -3197,7 +3197,7 @@
 	<skill id="5368" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3230,7 +3230,7 @@
 	<skill id="5369" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -3240,7 +3240,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3313,7 +3313,7 @@
 	<skill id="5370" toLevel="9" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 8. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -3323,7 +3323,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -4302,7 +4302,7 @@
 	<skill id="5394" toLevel="9" name="Poison">
 		<!-- HP decreases from poison momentarily. Effect 8. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">9</value>
@@ -4312,7 +4312,7 @@
 			<value level="7">10</value>
 			<value level="8">10</value>
 			<value level="9">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -4385,11 +4385,11 @@
 		</effects>
 	</skill>
 	<skill id="5395" toLevel="3" name="Super Might Haste">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -4457,11 +4457,11 @@
 	</skill>
 	<skill id="5397" toLevel="3" name="Spell Force">
 		<icon>icon.skill0427</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -4500,7 +4500,7 @@
 	<skill id="5399" toLevel="1" name="Heat of Desert">
 		<!-- Condition causing target to decrease HP by heat of desert. -->
 		<icon>icon.skill1230</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HOT_GROUND</abnormalType>
 		<activateRate>10</activateRate>

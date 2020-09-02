@@ -3,7 +3,7 @@
 	<skill id="55700" toLevel="1" name="Scroll: Dance of Fire">
 		<!-- For 10 min., P. Critical Damage +35%. -->
 		<icon>icon.skill0274</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -58,7 +58,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -228,7 +228,7 @@
 		<!-- Grants the power of the Letter Collector. For 1 hour Max. HP +5%, Max. MP +5%, Max. CP +5%, Speed +10, P. Atk. +8%, M. Atk. +10%. -->
 		<icon>icon.etc_candle_yellow_i00</icon>
 		<effectPoint>1</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -311,7 +311,7 @@
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -337,7 +337,7 @@
 		<icon>icon.power_of_storm</icon>
 		<operateType>A2</operateType>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
@@ -1774,7 +1774,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1807,7 +1807,7 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<coolTime>500</coolTime>
 		<magicLvl>40</magicLvl>
@@ -1830,7 +1830,7 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<coolTime>500</coolTime>
 		<magicLvl>40</magicLvl>
@@ -1856,7 +1856,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1941,7 +1941,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<coolTime>500</coolTime>
 		<magicLvl>40</magicLvl>
@@ -1980,7 +1980,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<coolTime>500</coolTime>
 		<magicLvl>40</magicLvl>
@@ -2069,7 +2069,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>689</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>

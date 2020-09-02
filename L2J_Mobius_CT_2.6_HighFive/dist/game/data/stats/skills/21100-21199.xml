@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21100" levels="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -70,7 +70,7 @@
 	</skill>
 	<skill id="21103" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -92,7 +92,7 @@
 	</skill>
 	<skill id="21104" levels="1" name="Instinct of Destruction">
 		<!-- For 30 seconds, awakens the destructive instincts and increases P. Atk., Critical Rate and Critical Damage by 50%. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="INSTINCT" />
 		<set name="blockedInOlympiad" val="true" />
@@ -190,7 +190,7 @@
 	</skill>
 	<skill id="21111" levels="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -212,7 +212,7 @@
 	</skill>
 	<skill id="21112" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -234,7 +234,7 @@
 	</skill>
 	<skill id="21113" levels="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -256,7 +256,7 @@
 	</skill>
 	<skill id="21114" levels="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -278,7 +278,7 @@
 	</skill>
 	<skill id="21115" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -300,7 +300,7 @@
 	</skill>
 	<skill id="21116" levels="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -322,7 +322,7 @@
 	</skill>
 	<skill id="21117" levels="1" name="Great Adventurer's Soul Power : Immortality">
 		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -345,7 +345,7 @@
 	</skill>
 	<skill id="21118" levels="1" name="Great Warrior's Soul Power: Destruction">
 		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -368,7 +368,7 @@
 	</skill>
 	<skill id="21119" levels="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Increases the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -412,7 +412,7 @@
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -435,7 +435,7 @@
 	</skill>
 	<skill id="21123" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -458,7 +458,7 @@
 	</skill>
 	<skill id="21124" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -481,7 +481,7 @@
 	</skill>
 	<skill id="21125" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -504,7 +504,7 @@
 	</skill>
 	<skill id="21126" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -527,7 +527,7 @@
 	</skill>
 	<skill id="21127" levels="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -550,7 +550,7 @@
 	</skill>
 	<skill id="21128" levels="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -573,7 +573,7 @@
 	</skill>
 	<skill id="21129" levels="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -596,7 +596,7 @@
 	</skill>
 	<skill id="21130" levels="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP consumption for skill use by 5%. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -621,7 +621,7 @@
 	</skill>
 	<skill id="21131" levels="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -644,7 +644,7 @@
 	</skill>
 	<skill id="21132" levels="1" name="Ability of Shadow">
 		<!-- For 2 minutes, decreases the user's Speed by 30%, and obtains the ability to prevent a monster's preemptive attack. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -706,7 +706,7 @@
 	</skill>
 	<skill id="21136" levels="1" name="Authority of Golden Jack O'Lantern Mask">
 		<!-- For 10 minutes, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, and Speed by 30. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="blockedInOlympiad" val="true" />
@@ -732,7 +732,7 @@
 	</skill>
 	<skill id="21137" levels="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -755,7 +755,7 @@
 	</skill>
 	<skill id="21138" levels="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -778,7 +778,7 @@
 	</skill>
 	<skill id="21139" levels="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -801,7 +801,7 @@
 	</skill>
 	<skill id="21140" levels="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP consumption for skill use by 5%. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -826,7 +826,7 @@
 	</skill>
 	<skill id="21141" levels="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -998,7 +998,7 @@
 	</skill>
 	<skill id="21153" levels="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1015,7 +1015,7 @@
 	</skill>
 	<skill id="21154" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1032,7 +1032,7 @@
 	</skill>
 	<skill id="21155" levels="1" name="Scent of Flavorful Cheese">
 		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1055,7 +1055,7 @@
 	</skill>
 	<skill id="21156" levels="1" name="Scent of Sweet Cheese">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Increases the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1246,7 +1246,7 @@
 	</skill>
 	<skill id="21169" levels="1" name="Transform Kadomas">
 		<!-- Transforms into a Kadomas. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1266,7 +1266,7 @@
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1283,7 +1283,7 @@
 	</skill>
 	<skill id="21171" levels="1" name="Riding Jet Bike">
 		<!-- Mounts a jet bike. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1304,7 +1304,7 @@
 	</skill>
 	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
 		<!-- By enhance authority, CON+1 / STR+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="abnormalVisualEffect" val="BR_SOUL_AVATAR" />
@@ -1318,7 +1318,7 @@
 	</skill>
 	<skill id="21173" levels="1" name="Enhanced Authority - WIT+1 INT+1">
 		<!-- By enhance authority, WIT+1 / INT+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="abnormalVisualEffect" val="BR_SOUL_AVATAR" />
@@ -1332,7 +1332,7 @@
 	</skill>
 	<skill id="21174" levels="1" name="Enhanced Authority - WIT+1 MEN+1">
 		<!-- By enhance authority, WIT+1 / MEN+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="abnormalVisualEffect" val="BR_SOUL_AVATAR" />
@@ -1346,7 +1346,7 @@
 	</skill>
 	<skill id="21175" levels="1" name="Enhanced Authority - CON+1 DEX+1">
 		<!-- By enhance authority, CON+1 / DEX+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="abnormalVisualEffect" val="BR_SOUL_AVATAR" />
@@ -1511,7 +1511,7 @@
 	</skill>
 	<skill id="21190" levels="1" name="Soul Shield">
 		<!-- For 10 seconds, increases P. Def. and M. Def. by 60%. Consumes 500 energy. Reuse delay 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
@@ -1539,7 +1539,7 @@
 	</skill>
 	<skill id="21192" levels="1" name="Silent Move">
 		<!-- For 2 minutes, blocks receive preemptive attacks from monsters. Decreases Speed by 40%. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
@@ -1560,7 +1560,7 @@
 	</skill>
 	<skill id="21193" levels="1" name="Power of Guardian Deity">
 		<!-- Increases Critical Damage by 35% for 10 minutes. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1588,7 +1588,7 @@
 	</skill>
 	<skill id="21195" levels="1" name="Blessed Child Transformation Skill - Trejuo">
 		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers Vitality upon acquiring Exp. points. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1612,7 +1612,7 @@
 	</skill>
 	<skill id="21196" levels="1" name="Blessed Child Transformation Skill - Sujin">
 		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers Vitality upon acquiring Exp. points. Reuse delay is 4 hours. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1648,7 +1648,7 @@
 	</skill>
 	<skill id="21198" levels="1" name="Silence of Fidelity">
 		<!-- Through the power of loyalty, increases party members' P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and Speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="activateRate" val="0" />
@@ -1666,7 +1666,7 @@
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
 		<!-- Restores all Vitality using the power of Excellence, and for 5 minutes, maintains the Vitality stage. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
-		<set name="abnormalLvl" val="26" />
+		<set name="abnormalLevel" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="blockedInOlympiad" val="true" />

@@ -3,7 +3,7 @@
 	<skill id="400" toLevel="10" name="Tribunal">
 		<!-- Inflicts holy damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases Critical Rate by $s3 and Melee Weapon Resistance by $s4. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
 		<icon>icon.skill0400</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -14,7 +14,7 @@
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -225,7 +225,7 @@
 	<skill id="401" toLevel="10" name="Judgment">
 		<!-- Inflicts dark damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases the enemy's Critical Damage by $s3 and Melee Weapon Resistance by $s4. Requires a sword, blunt weapon, or dual sword. Over-hit and Critical are possible. -->
 		<icon>icon.skill0401</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -236,7 +236,7 @@
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -449,7 +449,7 @@
 	<skill id="402" toLevel="10" name="Arrest">
 		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
 		<icon>icon.skill0402</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -512,7 +512,7 @@
 	<skill id="403" toLevel="10" name="Shackle">
 		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
 		<icon>icon.skill0403</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -575,7 +575,7 @@
 	<skill id="404" toLevel="17" name="Mass Shackling">
 		<!-- Provokes nearby enemies to attack, then immobilizes them for $s1. -->
 		<icon>icon.skill0404</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -753,11 +753,11 @@
 	<skill id="406" toLevel="3" name="Angelic Archon">
 		<!-- Channels the gods' strength to greatly increase your combat effectiveness. For $s1, increases Debuff Resistance by $s2, P. Def. by $s3, M. Def. by $s4, Accuracy by $s5 when a sword/ blunt weapon is equipped, Speed by $s6, Atk. Spd. by $s7 when a sword/ blunt weapon is equipped, Critical Rate by $s8 when a sword is equipped, Critical Damage by $s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance by $s10. Decreases the effect of recovery magic by $s11. Available when HP is $s12 or lower. -->
 		<icon>icon.skill0406</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>
@@ -865,7 +865,7 @@
 	<skill id="407" toLevel="10" name="Psycho Symphony">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases Speed/ Atk. Spd./ Casting Spd. by $s3 for $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0407</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -876,7 +876,7 @@
 			<value level="8">4</value>
 			<value level="9">4</value>
 			<value level="10">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -995,7 +995,7 @@
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases P. Atk./ M. Atk. by $s3 for $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0408</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -1006,7 +1006,7 @@
 			<value level="8">4</value>
 			<value level="9">4</value>
 			<value level="10">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ALL_ATTACK_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1118,7 +1118,7 @@
 	<skill id="409" toLevel="10" name="Critical Blow">
 		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases your Vital Spot Attack Rate by $s3 for $s2. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<icon>icon.skill0409</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -1129,7 +1129,7 @@
 			<value level="8">4</value>
 			<value level="9">4</value>
 			<value level="10">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<castRange>40</castRange>
@@ -1230,7 +1230,7 @@
 	<skill id="410" toLevel="8" name="Mortal Strike">
 		<!-- Increases your Vital Spot Attack Rate by $s2 for $s1. Requires a dagger or dual dagger. -->
 		<icon>icon.skill0410</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1239,7 +1239,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">120</value>
 			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
@@ -1334,11 +1334,11 @@
 	<skill id="411" toLevel="3" name="Stealth">
 		<!-- Prevents being pre-emptively attacked by monsters for $s1, and decreases Evasion by $s2, P. Def. by $s3, M. Def. by $s4, Accuracy by $s5 and P. Atk. by $s6. -->
 		<icon>icon.skill0411</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -1405,7 +1405,7 @@
 	<skill id="412" toLevel="10" name="Sand Bomb">
 		<!-- Detonates a sand bomb to decrease the enemy's Accuracy by $s2 for $s1. -->
 		<icon>icon.skill0412</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
@@ -1416,7 +1416,7 @@
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1488,7 +1488,7 @@
 	<skill id="413" toLevel="8" name="Rapid Fire">
 		<!-- For $s1, increases P. Atk. by $s2 and Atk. Spd. by $s3. Decreases range by $s4. Requires a bow. -->
 		<icon>icon.skill0413</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1497,7 +1497,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<effectPoint>
@@ -1580,7 +1580,7 @@
 	<skill id="414" toLevel="8" name="Dead Eye">
 		<!-- For $s1, when using a bow, increases one's own Accuracy by $s2, P. Atk. by $s3, and Critical Damage by $s4. Decreases Atk. Spd. by $s5. Requires a bow. -->
 		<icon>icon.skill0414</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1589,7 +1589,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<effectPoint>
@@ -1688,11 +1688,11 @@
 	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
 		<!-- Decreases physical skill MP Consumption by $s2 for $s1. -->
 		<icon>icon.skill0415</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">4</value>
 			<value level="3">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_COST_DOWN</abnormalType>
 		<effectPoint>
@@ -1732,11 +1732,11 @@
 	<skill id="416" toLevel="3" name="Blessing of Sagittarius">
 		<!-- Decreases physical skill Cooldown by $s2 for $s1. -->
 		<icon>icon.skill0416</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">4</value>
 			<value level="3">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>REUSE_DELAY_DOWN</abnormalType>
 		<effectPoint>
@@ -1923,11 +1923,11 @@
 	<skill id="420" toLevel="3" name="Zealot">
 		<!-- Channels the power of your guardian deity for $s1, increasing Debuff Resistance by $s2, Buff-canceling Attack Resistance by $s3, Speed by $s4, Accuracy by $s5 when using a sword, blunt weapon or spear/ fist weapon, Atk. Spd. by $s6, Critical Rate by $s7 when using a sword/ spear, and Critical Damage by $s8 when using a blunt/ fist weapon. Decreases physical skill MP Consumption by $s9 and the Healing power received by $s10. Available when HP is $s11 or lower. -->
 		<icon>icon.skill0420</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -2043,13 +2043,13 @@
 	<skill id="421" toLevel="5" name="Fell Swoop">
 		<!-- For $s1, increases the number of simultaneous targets by $s2. Requires a polearm. -->
 		<icon>icon.skill0421</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
 		<effectPoint>
@@ -2137,7 +2137,7 @@
 	<skill id="423" toLevel="3" name="Dark Form">
 		<!-- For $s1, increases Fire P. Atk. by $s2 and Fire Resistance by $s3. -->
 		<icon>icon.skill0423</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<effectPoint>
@@ -2220,7 +2220,7 @@
 	<skill id="425" toLevel="1" name="Hawk Spirit Totem">
 		<!-- Becomes possessed by a Hawk's soul. For 5 min., when using a fist weapon, increases Accuracy by 6, Critical Rate by 100, and Critical Damage by 30%. Requires a fist weapon. -->
 		<icon>icon.skill0425</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>655</effectPoint>
@@ -2591,7 +2591,7 @@
 	<skill id="437" toLevel="12" name="Song of Silence">
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2604,7 +2604,7 @@
 			<value level="10">10</value>
 			<value level="11">11</value>
 			<value level="12">12</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2650,7 +2650,7 @@
 	<skill id="438" toLevel="4" name="Soul of the Phoenix">
 		<!-- Maintains buffs and debuffs even after death. The Noblesse Blessing and the Amulet of Luck disappear, however. Consumes $s1 Blood of the Phoenix. -->
 		<icon>icon.skill0438</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + (subIndex * 90)}</value>
@@ -2680,7 +2680,7 @@
 	<skill id="439" toLevel="1" name="Shield of Revenge">
 		<!-- For 5 min., has a chance of reflecting melee damage to the attacker. -->
 		<icon>icon.skill0439</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>669</effectPoint>
@@ -2721,7 +2721,7 @@
 	<skill id="441" toLevel="1" name="Force Meditation">
 		<!-- Uses Momentum to recover 60 HP and 10 MP per second for 1 min. While skill is in effect, user is unable to move, and P. Def. is decreased by 80%. The effect is canceled if user is stunned. Must recharge 3rd Momentum level. -->
 		<icon>icon.skill0441</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
 		<chargeConsume>3</chargeConsume>
@@ -2759,7 +2759,7 @@
 	<skill id="442" toLevel="1" name="Sonic Barrier">
 		<!-- Uses Momentum make user invincible against standard targets, skills and debuffs for 10 sec. Requires a dual sword. Requires 5th stage Momentum. -->
 		<icon>icon.skill0442</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2807,7 +2807,7 @@
 	<skill id="443" toLevel="1" name="Force Barrier">
 		<!-- Makes user invincible against standard targets, skills and debuffs for 10 sec. Requires a fist weapon. Requires 4th Momentum level. -->
 		<icon>icon.skill0443</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -2873,7 +2873,7 @@
 	<skill id="445" toLevel="1" name="Mirage">
 		<!-- For 1 min., provides a chance to cancel the target of an attacking enemy. -->
 		<icon>icon.skill0445</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
 		<effectPoint>673</effectPoint>
@@ -2903,7 +2903,7 @@
 	<skill id="446" toLevel="1" name="Evasion">
 		<!-- Allows user to evade short-range and long-range physical attack skills for 10 sec. -->
 		<icon>icon.skill0446</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
@@ -2926,7 +2926,7 @@
 	<skill id="447" toLevel="1" name="Counterattack">
 		<!-- For 10 sec., transfers damage from melee attacks and skills back to the enemy. -->
 		<icon>icon.skill0447</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
@@ -3098,7 +3098,7 @@
 	<skill id="451" toLevel="2" name="Sonic Move">
 		<!-- Uses Momentum to increase Speed by $s2 for $s1. Need to recharge stage $s3 of Momentum. Requires a dual sword. -->
 		<icon>icon.skill0451</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<chargeConsume>
@@ -3151,7 +3151,7 @@
 	<skill id="452" toLevel="5" name="Stun Stomp">
 		<!-- Rolls the feet to inflict Stun on nearby enemies for $s1. Requires a spear weapon. Cancels target. -->
 		<icon>icon.skill0452</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -4193,7 +4193,7 @@
 	<skill id="469" toLevel="1" name="Rapid Attack">
 		<!-- Increases Atk. Spd. by 15% for 20 min. -->
 		<icon>icon.skill0469</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -5131,10 +5131,10 @@
 	<skill id="482" toLevel="2" name="Furious Soul">
 		<!-- For $s1, increases Critical Rate by $s2 and Critical Damage by $s3. Decreases P. Def. by $s4. -->
 		<icon>icon.skill0482</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -5180,7 +5180,7 @@
 	<skill id="483" toLevel="8" name="Sword Shield">
 		<!-- For $s1, increases P. Def. by $s2 and decreases Speed by $s3. -->
 		<icon>icon.skill0483</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -5189,7 +5189,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
 			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -5299,7 +5299,7 @@
 	<skill id="485" toLevel="21" name="Disarm">
 		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -5567,10 +5567,10 @@
 	<skill id="490" toLevel="2" name="Fast Shot">
 		<!-- Increases crossbow Atk. Spd. by $s2 for $s1. -->
 		<icon>icon.skill0490</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_SPEED_UP_BOW</abnormalType>
 		<effectPoint>
@@ -5974,7 +5974,7 @@
 	<skill id="494" toLevel="37" name="Shoulder Charge">
 		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. Over-hit is possible. -->
 		<icon>icon.skill0494</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -6216,7 +6216,7 @@
 	<skill id="495" toLevel="10" name="Blade Rush">
 		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for $s1. Makes them consume $s2 HP every second. Increases Power upon the consumption of up to $s3 souls. Requires an ancient sword or sword to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0495</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
@@ -6227,7 +6227,7 @@
 			<value level="8">8</value>
 			<value level="9">8</value>
 			<value level="10">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -6708,11 +6708,11 @@
 	<skill id="499" toLevel="3" name="Courage">
 		<!-- Increases Mental Attack Resistance by $s2 for $s1. -->
 		<icon>icon.skill0499</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RESIST_SPIRITLESS</abnormalType>
 		<effectPoint>

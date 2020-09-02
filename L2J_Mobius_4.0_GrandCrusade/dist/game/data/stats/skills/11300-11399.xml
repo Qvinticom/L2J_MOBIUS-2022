@@ -3,7 +3,7 @@
 	<skill id="11300" toLevel="6" name="Yoke Status">
 		<!-- Momentarily immobilized. P./M. Def. - $s1. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -134,7 +134,7 @@
 	<skill id="11303" toLevel="1" name="Mass Servitor Magic Barrier">
 		<!-- Increases all servitors' M. Def. by 30% for 30 minutes. -->
 		<icon>icon.skill1139</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -163,7 +163,7 @@
 	<skill id="11304" toLevel="1" name="Mass Servitor Haste">
 		<!-- Increases all servitors' Atk. Spd. by 34% for 30 minutes. -->
 		<icon>icon.skill1141</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<operateType>A2</operateType>
@@ -192,7 +192,7 @@
 	<skill id="11305" toLevel="1" name="Mass Servitor Shield">
 		<!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
 		<icon>icon.skill1140</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -221,7 +221,7 @@
 	<skill id="11306" toLevel="1" name="Mass Servitor Empower">
 		<!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -250,7 +250,7 @@
 	<skill id="11307" toLevel="1" name="Mass Servitor Might">
 		<!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
 		<icon>icon.skill1146</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -279,7 +279,7 @@
 	<skill id="11308" toLevel="1" name="Mass Servitor Wind Walk">
 		<!-- Increases all servitors' Speed by 34 for 30 minutes. -->
 		<icon>icon.skill1144</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -384,7 +384,7 @@
 	<skill id="11310" toLevel="2" name="Mass Servitor Ultimate Defense">
 		<!-- Increases all servitor's P. Def. by $s2 and M. Def. by $s3 for $s1. -->
 		<icon>icon.skill1299</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">60</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -784,7 +784,7 @@
 	<skill id="11323" toLevel="8" name="Feline Aggression">
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectRange>200</affectRange> <!-- Guessed -->
@@ -819,7 +819,7 @@
 	<skill id="11324" toLevel="8" name="Feline Stun">
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -893,7 +893,7 @@
 	<skill id="11326" toLevel="8" name="Feline Pounce">
 		<!-- Inflicts damage on a target with $s1 Power added to P. Atk. Speed - $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -902,7 +902,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -1159,7 +1159,7 @@
 	<skill id="11332" toLevel="8" name="Unicorn's Aggression">
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectRange>200</affectRange> <!-- Guessed -->
@@ -1194,7 +1194,7 @@
 	<skill id="11333" toLevel="8" name="Unicorn's Stun">
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1268,7 +1268,7 @@
 	<skill id="11335" toLevel="8" name="Unicorn's Pounce">
 		<!-- Inflicts damage on a target with $s1 Power added to P. Atk. Speed - $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1277,7 +1277,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -1534,7 +1534,7 @@
 	<skill id="11341" toLevel="8" name="Phantom Aggression">
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectRange>200</affectRange> <!-- Guessed -->
@@ -1569,7 +1569,7 @@
 	<skill id="11342" toLevel="8" name="Phantom Stun">
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1643,7 +1643,7 @@
 	<skill id="11344" toLevel="8" name="Phantom Pounce">
 		<!-- Inflicts damage on a target with $s1 Power added to P. Atk. Speed - $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1652,7 +1652,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -1783,7 +1783,7 @@
 	<skill id="11347" toLevel="7" name="Greater Servitor Haste">
 		<!-- For $s1, all servitors' Atk. Spd. + $s2. -->
 		<icon>icon.skill11347</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1791,7 +1791,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
 		<operateType>A2</operateType>
@@ -1885,7 +1885,7 @@
 	<skill id="11348" toLevel="7" name="Servitor Death Whisper">
 		<!-- For $s1, all servitors' Critical Damage + $s2. -->
 		<icon>icon.skill11348</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1893,7 +1893,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
 		<operateType>A2</operateType>
@@ -1999,7 +1999,7 @@
 	<skill id="11349" toLevel="7" name="Greater Servitor Might">
 		<!-- For $s1, all servitors' P. Atk. + $s2. -->
 		<icon>icon.skill11349</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -2007,7 +2007,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
 		<operateType>A2</operateType>
@@ -2150,13 +2150,13 @@
 	<skill id="11351" toLevel="5" name="Link of Loyalty">
 		<!-- Servitor's wrath. P. Atk. + $s1, Critical Rate + $s2, and Critical Damage + $s3. -->
 		<icon>icon.skill11351</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUMMONER_LINK</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2322,13 +2322,13 @@
 	<skill id="11354" toLevel="5" name="Elemental Link">
 		<!-- Servitor's wrath. P. Atk. + $s1, Critical Rate + $s2, and Critical Damage + $s3. -->
 		<icon>icon.skill11354</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUMMONER_LINK</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2452,13 +2452,13 @@
 	<skill id="11357" toLevel="5" name="Spectral Link">
 		<!-- Servitor's wrath. P. Atk. + $s1, Critical Rate + $s2, and Critical Damage + $s3. -->
 		<icon>icon.skill11357</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUMMONER_LINK</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2580,11 +2580,11 @@
 	<skill id="11360" toLevel="3" name="Arcane Protection">
 		<!-- For $s1, Received P./M. Critical Rate - $s2, Pull Resistance and Knock Back / Knock Down Resistance - $s3. Debuff Resistance + $s4, HP/MP Recovery Bonus + $s5. -->
 		<icon>icon.skill11360</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARCANE_PROTECTION</abnormalType>
 		<affectRange>200</affectRange>
@@ -2719,7 +2719,7 @@
 	<skill id="11364" toLevel="3" name="Elemental Dash">
 		<!-- Party's Speed + $s1. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime> <!-- Guessed -->
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2743,12 +2743,12 @@
 	<skill id="11365" toLevel="4" name="Summon Demonic Crucifix">
 		<!-- Attacks target with $s1 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by $s2 and Speed by $s3. Consumes $s4 Spirit Ores. -->
 		<icon>icon.skill11365</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NONE</abnormalType>
 		<activateRate>90</activateRate> <!-- Guessed -->
@@ -2816,11 +2816,11 @@
 	<skill id="11367" toLevel="3" name="Arcane Protection">
 		<!-- For $s1, Received P./M. Critical Rate - $s2, Pull Resistance and Knock Back / Knock Down Resistance - $s3. Debuff Resistance + $s4, HP/MP Recovery Bonus + $s5. -->
 		<icon>icon.skill11360</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARCANE_PROTECTION</abnormalType>
 		<affectRange>200</affectRange>
@@ -2895,11 +2895,11 @@
 	<skill id="11368" toLevel="3" name="Arcane Protection">
 		<!-- For $s1, Debuff Resistance + $s2, Pull / Danger Zone Resistance + $s3, Knock Back / Knock Down Resistance + $s4, HP/MP Recovery Bonus + $s5. Received P./M. Critical Rate - $s6. -->
 		<icon>icon.skill11360</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARCANE_PROTECTION</abnormalType>
 		<affectRange>200</affectRange>
@@ -3253,11 +3253,11 @@
 	<skill id="11375" toLevel="3" name="Commando Jumping Attack">
 		<!-- Jumps and hulrs attack to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate> <!-- Guessed -->
@@ -3302,7 +3302,7 @@
 	<skill id="11376" toLevel="3" name="Commando Double Smash">
 		<!-- Inflicts damage with $s1 Power added to P. Atk. And knocks down for $s2. -->
 		<icon>icon.skill10546</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -3373,7 +3373,7 @@
 	<skill id="11378" toLevel="3" name="Elemental Slam">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and pushes them back. -->
 		<icon>icon.skill1171</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -3418,11 +3418,11 @@
 	<skill id="11379" toLevel="3" name="Lancer Rush">
 		<!-- Charges forward to inflict damage on the target with $s1 power added to P. Attack and inflicts Stun for $s2. -->
 		<icon>icon.skill0121</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -3473,7 +3473,7 @@
 	<skill id="11380" toLevel="3" name="Power Stump">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and blows them away. -->
 		<icon>icon.skill30006</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -3549,11 +3549,11 @@
 	<skill id="11382" toLevel="3" name="Multiple Icicles">
 		<!-- Inflicts damage to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
 		<icon>icon.skill10103</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>100</activateRate>
@@ -3715,7 +3715,7 @@
 	<skill id="11387" toLevel="1" name="Arcana's Call">
 		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, P. Accuracy +23, Knock Back/Knock Down Success Rate +60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11387</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_CAT_NPC</abnormalVisualEffect>
@@ -3777,7 +3777,7 @@
 	<skill id="11388" toLevel="1" name="Lord of Arcana">
 		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11387</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_CAT_PC</abnormalVisualEffect>
@@ -3814,7 +3814,7 @@
 	<skill id="11389" toLevel="1" name="Elemental's Call">
 		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, Atk. Spd. +10%, and Skill Cooldown -60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11388</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_UNICORN_NPC</abnormalVisualEffect>
@@ -3876,7 +3876,7 @@
 	<skill id="11390" toLevel="1" name="Lord of Elemental">
 		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11388</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_UNICORN_PC</abnormalVisualEffect>
@@ -3913,7 +3913,7 @@
 	<skill id="11391" toLevel="1" name="Spectral's Call">
 		<!-- The power of demons is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20% and P. Critical Damage +20% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ores consumed. -->
 		<icon>icon.skill11389</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_DEMON_NPC</abnormalVisualEffect>
@@ -3965,7 +3965,7 @@
 	<skill id="11392" toLevel="1" name="Lord of Spectral">
 		<!-- For 30 seconds, P. Atk./P. Def./M. Atk./M. Def. +20%. -->
 		<icon>icon.skill11389</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
 		<abnormalVisualEffect>BIG_BODY_COMBINATION_DEMON_PC</abnormalVisualEffect>
@@ -4002,12 +4002,12 @@
 	<skill id="11393" toLevel="4" name="Freezing Invoke">
 		<!-- Attacks the target and nearby enemies with M. Atk. +$s1. For $s2, P./M. Def. -$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill11393</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>SYNERGY_WYNN</abnormalType>
 		<abnormalTime>20</abnormalTime>
 		<activateRate>
@@ -4069,12 +4069,12 @@
 	<skill id="11394" toLevel="4" name="Surrender to the Elemental">
 		<!-- Attacks the target with M. Atk. +$s1. For $s2, all Attribute Def. -$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill11394</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>
@@ -4152,12 +4152,12 @@
 	<skill id="11395" toLevel="4" name="Curse Exposure">
 		<!-- Attacks the target with M. Atk. +$s1. For $s2, Deadly Attack Def. -$s3. Consumes $s4 Spirit Ore(s). -->
 		<icon>icon.skill11395</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>CURSE_EXPOSURE</abnormalType>
 		<abnormalTime>30</abnormalTime>
 		<activateRate>

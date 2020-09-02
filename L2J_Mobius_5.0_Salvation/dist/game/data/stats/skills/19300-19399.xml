@@ -20,7 +20,7 @@
 		<coolTime>500</coolTime>
 		<mpConsume>107</mpConsume>
 		<castRange>900</castRange>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -30,7 +30,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<reuseDelay>15000</reuseDelay>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -106,7 +106,7 @@
 	<skill id="19302" toLevel="9" name="Thrown Acid Swarm">
 		<!-- Poisoned. P. Def/ M. Def -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, blocks magic skills, and HP -$s3 per second. -->
 		<icon>icon.skill19301</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -116,7 +116,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -194,7 +194,7 @@
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<operateType>DA5</operateType>
@@ -267,10 +267,10 @@
 	<skill id="19304" toLevel="2" name="Easterly Wind Strike">
 		<!-- Critical rate/ critical damage inflicted from the flank +$s1 and critical rate/ critical damage inflicted from behind +$s2, and also resets cooldown of Right Angle Reverse and Easterly Wind Strike. -->
 		<icon>icon.skill10705</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>EASTERLY_WIND_STRIKE</abnormalType>
 		<effectPoint>80</effectPoint>
@@ -311,7 +311,7 @@
 	<skill id="19305" toLevel="7" name="Shadow Reverse">
 		<!-- Teleports to the back of the target and attempts Deadly Attack with $s1 power added to P. Atk. Additionally, decreases target Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19305</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -418,7 +418,7 @@
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
 		<abnormalType>DWARF_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -448,7 +448,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>DWARF_BUFF</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -521,7 +521,7 @@
 	<skill id="19311" toLevel="3" name="Dwarven Flare Bluff">
 		<!-- Fires Special Flare to inflict Bluff on enemies in front for $s1. Requires dagger/ dual dagger. Consumes $s2 Soulstones. -->
 		<icon>icon.skill0537</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>POWER_BLUFF</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -742,12 +742,12 @@
 	<skill id="19315" toLevel="4" name="Mana Burst">
 		<!-- For $s1 increases M. Atk. by $s2. Able to cast Quadruple Elemental Blast if reached level 4. -->
 		<icon>icon.skill11046</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>

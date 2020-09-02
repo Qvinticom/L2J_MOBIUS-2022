@@ -966,7 +966,7 @@ public class EffectList
 					}
 					
 					// The effect we are adding overrides the existing effect. Delete or disable the existing effect.
-					if (skill.getAbnormalLvl() >= existingSkill.getAbnormalLvl())
+					if (skill.getAbnormalLevel() >= existingSkill.getAbnormalLevel())
 					{
 						// If it is an herb, set as not in use the lesser buff, unless it is the same skill.
 						if ((skill.isAbnormalInstant() || existingSkill.isIrreplacableBuff()) && (skill.getId() != existingSkill.getId()))
@@ -1215,7 +1215,7 @@ public class EffectList
 						unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
 					}
 					// If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
-					else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl())))
+					else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLevel() <= skill.getAbnormalLevel())))
 					{
 						unhideBuffs.add(info);
 					}

@@ -3,10 +3,10 @@
 	<skill id="1100" toLevel="2" name="Chill Flame">
 		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1100</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -54,10 +54,10 @@
 	<skill id="1101" toLevel="2" name="Blaze Quake">
 		<!-- Ignites nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1101</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -106,14 +106,14 @@
 	<skill id="1102" toLevel="6" name="Aura Sink">
 		<!-- Consumes the enemy's MP with $s1 Power added to M. Atk. and additionally causes loss of $s3 MP per sec. for $s2. -->
 		<icon>icon.skill1102</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
 			<value level="5">7</value>
 			<value level="6">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -191,7 +191,7 @@
 	<skill id="1104" toLevel="22" name="Seal of Winter">
 		<!-- Atk. Spd. of nearby enemies -$s2 for $s1. -->
 		<icon>icon.skill1104</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>60</activateRate>
@@ -413,10 +413,10 @@
 	<skill id="1107" toLevel="2" name="Frost Flame">
 		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1107</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -464,12 +464,12 @@
 	<skill id="1108" toLevel="4" name="Seal of Flame">
 		<!-- Ignites nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1108</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1442,10 +1442,10 @@
 	<skill id="1139" toLevel="2" name="Servitor Magic Shield">
 		<!-- For $s1, Servitor's M. Def. +$s2. -->
 		<icon>icon.skill1139</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1487,11 +1487,11 @@
 	<skill id="1140" toLevel="3" name="Servitor Physical Shield">
 		<!-- For $s1, Servitor's P. Def. +$s2. -->
 		<icon>icon.skill1140</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1538,10 +1538,10 @@
 	<skill id="1141" toLevel="2" name="Servitor Haste">
 		<!-- For $s1, Servitor's Atk. Spd. +$s2. -->
 		<icon>icon.skill1141</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -1583,10 +1583,10 @@
 	<skill id="1144" toLevel="2" name="Servitor Wind Walk">
 		<!-- For $s1, Servitor's Speed +$s2. -->
 		<icon>icon.skill1144</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1628,11 +1628,11 @@
 	<skill id="1145" toLevel="3" name="Servitor Magic Boost">
 		<!-- Servitor's M. Atk. +$s2 for $s1. -->
 		<icon>icon.skill1145</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1679,11 +1679,11 @@
 	<skill id="1146" toLevel="3" name="Mighty Servitor">
 		<!-- Servitor's P. Atk. +$s2 for $s1. -->
 		<icon>icon.skill1146</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2543,7 +2543,7 @@
 	<skill id="1160" toLevel="17" name="Slow">
 		<!-- For $s1, enemy's Speed -$s2. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -2561,7 +2561,7 @@
 			<value level="15">3</value>
 			<value level="16">3</value>
 			<value level="17">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2765,7 +2765,7 @@
 	<skill id="1164" toLevel="26" name="Curse Weakness">
 		<!-- For $s1, enemy's P. Atk. -$s2. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -2792,7 +2792,7 @@
 			<value level="24">3</value>
 			<value level="25">3</value>
 			<value level="26">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2957,7 +2957,7 @@
 	<skill id="1167" toLevel="7" name="Poisonous Cloud">
 		<!-- Creates a venomous cloud. For $s1, poisons the target and enemies around it, taking $s2 HP every sec. -->
 		<icon>icon.skill1167</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
@@ -2965,7 +2965,7 @@
 			<value level="5">7</value>
 			<value level="6">8</value>
 			<value level="7">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3041,7 +3041,7 @@
 	<skill id="1168" toLevel="7" name="Curse Poison">
 		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
 		<icon>icon.skill1168</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -3049,7 +3049,7 @@
 			<value level="5">6</value>
 			<value level="6">7</value>
 			<value level="7">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -3122,7 +3122,7 @@
 	<skill id="1169" toLevel="16" name="Curse Fear">
 		<!-- For $s1, frightens the enemy into fleeing. -->
 		<icon>icon.skill1169</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3321,7 +3321,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4412,11 +4412,11 @@
 	<skill id="1182" toLevel="3" name="Water Resistance">
 		<!-- Water Resistance +$s2 for $s1. -->
 		<icon>icon.skill1182</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<castRange>400</castRange>
@@ -4463,12 +4463,12 @@
 	<skill id="1183" toLevel="4" name="Freezing Shackle">
 		<!-- Freezes the enemy with a powerful cold wind, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1183</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">5</value>
 			<value level="2">6</value>
 			<value level="3">7</value>
 			<value level="4">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -4526,7 +4526,7 @@
 	<skill id="1184" toLevel="6" name="Ice Bolt">
 		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
 		<icon>icon.skill1184</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -4597,11 +4597,11 @@
 	<skill id="1189" toLevel="3" name="Wind Resistance">
 		<!-- Wind Resistance +$s2 for $s1. -->
 		<icon>icon.skill1189</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
 		<castRange>400</castRange>
@@ -4648,11 +4648,11 @@
 	<skill id="1191" toLevel="3" name="Fire Resistance">
 		<!-- Fire Resistance +$s2 for $s1. -->
 		<icon>icon.skill1191</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<castRange>400</castRange>

@@ -3,12 +3,12 @@
 	<skill id="10903" toLevel="4" name="Hawk Eye">
 		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. + $s2, Skill Power + $s3, and received M. Critical Damage - $s4. -->
 		<icon>icon.skill11872</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
@@ -153,12 +153,12 @@
 	<skill id="10950" toLevel="4" name="Vengeful Sniper">
 		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. + $s2, PvP damage + $s3, received magic skill damage during PvP - $s4. -->
 		<icon>icon.skill11873</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
@@ -336,7 +336,7 @@
 	<skill id="10952" toLevel="1" name="Survival Instinct">
 		<!-- For 60 seconds, own P. Atk +20%, P. Skill Power +15%, Atk. Spd. +15%, P. Def. +20%, M. Def. +20%. 5 Soul Stones consumed. -->
 		<icon>icon.skill10952</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -385,7 +385,7 @@
 	<skill id="10953" toLevel="1" name="Hunting Instinct">
 		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Rate +15%, P. Skill Critical Damage +15%. 5 Soul Stones consumed. -->
 		<icon>icon.skill10953</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -430,7 +430,7 @@
 	<skill id="10954" toLevel="1" name="Counter Instinct">
 		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Damage +25%. 5 Soul Stones consumed. -->
 		<icon>icon.skill10954</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -471,7 +471,7 @@
 	<skill id="10955" toLevel="1" name="Bloody Instinct">
 		<!-- For 60 seconds, own PvP damage +15%, P. Atk. +10%, P. Skill Damage +15%. 5 Soul Stones consumed. -->
 		<icon>icon.skill10955</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -547,7 +547,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
 		<reuseDelayGroup>10760</reuseDelayGroup>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>

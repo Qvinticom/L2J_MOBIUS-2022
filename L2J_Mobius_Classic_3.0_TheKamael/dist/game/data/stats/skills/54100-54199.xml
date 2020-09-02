@@ -3,7 +3,7 @@
 	<skill id="54100" toLevel="1" name="Sayha's Shield">
 		<!-- For 20 min., P. Def. +300. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -25,7 +25,7 @@
 	<skill id="54101" toLevel="1" name="Sayha's Magic Barrier">
 		<!-- For 20 min., M. Def. +350. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -47,7 +47,7 @@
 	<skill id="54103" toLevel="1" name="Sayha's Decrease Weight">
 		<!-- For 20 min., Weight Limit +9000. -->
 		<icon>icon.skill1257</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -68,7 +68,7 @@
 	<skill id="54104" toLevel="1" name="Sayha's Berserker Spirit">
 		<!-- For 20 min., Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -114,7 +114,7 @@
 	<skill id="54105" toLevel="1" name="Sayha's Wind Walk">
 		<!-- For 20 min., Speed +33. -->
 		<icon>icon.skill1204</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -136,7 +136,7 @@
 	<skill id="54106" toLevel="1" name="Sayha's Might">
 		<!-- For 20 min., P. Atk. +230. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -158,7 +158,7 @@
 	<skill id="54108" toLevel="1" name="Sayha's Focus">
 		<!-- For 20 min., P. Critical Rate +40. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -180,7 +180,7 @@
 	<skill id="54109" toLevel="1" name="Sayha's Haste">
 		<!-- For 20 min., Atk. Spd. +33%. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -202,7 +202,7 @@
 	<skill id="54110" toLevel="1" name="Sayha's Death Whisper">
 		<!-- For 20 min., P. Critical Damage +35%. -->
 		<icon>icon.skill1242</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -224,7 +224,7 @@
 	<skill id="54111" toLevel="1" name="Sayha's Empower">
 		<!-- For 20 min., M. Atk. +300. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -246,7 +246,7 @@
 	<skill id="54112" toLevel="1" name="Sayha's Clarity">
 		<!-- For 20 min., MP Consumption for physical skills -20%, MP Consumption for magical skills -10%, and song/ dance skill's MP consumption -20%. -->
 		<icon>icon.skill1397</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -268,7 +268,7 @@
 	<skill id="54113" toLevel="1" name="Sayha's Wild Magic">
 		<!-- For 20 min., M. Critical Rate +20%. -->
 		<icon>icon.skill1303</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -290,7 +290,7 @@
 	<skill id="54114" toLevel="1" name="Sayha's Acumen">
 		<!-- For 20 min., Casting Spd. +30%. -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -312,7 +312,7 @@
 	<skill id="54115" toLevel="1" name="Sayha's Concentration">
 		<!-- For 20 min., Casting Interruption Rate -53%. -->
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -334,7 +334,7 @@
 	<skill id="54116" toLevel="1" name="Sayha's Victory">
 		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
 		<icon>icon.skill5074</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -396,7 +396,7 @@
 	<skill id="54117" toLevel="1" name="Sayha's Recover HP">
 		<!-- For 20 min., recovers HP. -->
 		<icon>icon.skill0211</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -418,7 +418,7 @@
 	<skill id="54118" toLevel="1" name="Sayha's Recover MP">
 		<!-- For 20 min., recovers MP. The Sayha's Effect Scroll cannot be used if the buff is active. -->
 		<icon>icon.skill0213</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -460,7 +460,7 @@
 		<!-- For 20 min., Fire Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_fire_potion_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
@@ -479,7 +479,7 @@
 		<!-- For 20 min., Water Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_water_potion_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
@@ -498,7 +498,7 @@
 		<!-- For 20 min., Wind Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_wind_potion_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
@@ -517,7 +517,7 @@
 		<!-- For 20 min., Earth Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_earth_potion_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>

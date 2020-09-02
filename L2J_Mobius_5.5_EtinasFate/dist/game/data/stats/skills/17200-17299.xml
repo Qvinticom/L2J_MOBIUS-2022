@@ -6,7 +6,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>37797</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -28,7 +28,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>37798</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -50,7 +50,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>37799</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -73,7 +73,7 @@
 		<operateType>A2</operateType>
 		<itemConsumeId>37800</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -198,7 +198,7 @@
 		<!-- Increases P. Atk. +10%, M. Atk. +21%, P. Def. +15%, M. Def. +15%, Max HP, MP, and CP +15%, and applied time +30 min. Does not disappear upon death. -->
 		<icon>icon.etc_cave_page_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<abnormalType>BR_EVENT_BUF2</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -550,7 +550,7 @@
 		<!-- Receives the following effects for 30 min.: increased Max HP/ MP/ CP by 30%, Attack by 10%, M. Atk. by 20%, and P. Def./ M. Def. by 30%. -->
 		<icon>BranchSys2.icon.br_rosalia_rose_blue_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -603,7 +603,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -661,7 +661,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -725,7 +725,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>22</isMagic>
@@ -780,7 +780,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -828,7 +828,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -884,7 +884,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -961,7 +961,7 @@
 	<skill id="17297" toLevel="1" name="Emperor's Cookie: Prevailing Sonata">
 		<!-- For 1 hr., Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. Cooldown is 1hr. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<operateType>A2</operateType>
@@ -1018,7 +1018,7 @@
 	<skill id="17298" toLevel="1" name="Daring Sonata - Emperor's Cookie">
 		<!-- For 1 hr., Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. Cooldown is 1hr. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<operateType>A2</operateType>
@@ -1079,7 +1079,7 @@
 	<skill id="17299" toLevel="1" name="Refreshing Sonata - Emperor's Cookie">
 		<!-- For 1 hr., HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. Cooldown is 1hr. Effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<operateType>A2</operateType>

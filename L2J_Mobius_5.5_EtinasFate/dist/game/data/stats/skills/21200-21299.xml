@@ -3,7 +3,7 @@
 	<skill id="21200" toLevel="1" name="Age of Three Kingdoms">
 		<!-- For 20 min., increases Speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, P. Atk., and P. Def. by 15%. Cooldown is 2 hr. Consumes 1 Proof of Friendship upon skill use. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -27,7 +27,7 @@
 	<skill id="21201" toLevel="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 min. Cooldown is 1 hr. -->
 		<icon>BranchSys2.icon.br_dragonboat_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<activateRate>0</activateRate>
@@ -387,7 +387,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>3000</hitTime>
@@ -405,7 +405,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>1000</hitTime>
@@ -423,7 +423,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -442,7 +442,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -461,7 +461,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -480,7 +480,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -499,7 +499,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -519,7 +519,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>1500</hitTime>
@@ -538,7 +538,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>3000</hitTime>
@@ -557,7 +557,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>3000</hitTime>
@@ -579,7 +579,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
 		<isMagic>2</isMagic>
@@ -672,7 +672,7 @@
 	<skill id="21237" toLevel="1" name="Power Shirt: Invincibility">
 		<!-- Momentarily becomes invincible for 7 sec. Can be used every 20 hr. -->
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<hitTime>1000</hitTime>
@@ -716,7 +716,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -874,7 +874,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>1800000</reuseDelay>
@@ -1031,7 +1031,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<hitTime>1000</hitTime>
 		<reuseDelay>1200000</reuseDelay>
@@ -1182,7 +1182,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1357,7 +1357,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
@@ -1377,7 +1377,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1404,7 +1404,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1431,7 +1431,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1571,7 +1571,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<trait>ETC</trait>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1594,7 +1594,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<trait>ETC</trait>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1679,7 +1679,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
@@ -1850,7 +1850,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>

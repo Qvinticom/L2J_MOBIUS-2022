@@ -3,7 +3,7 @@
 	<skill id="30500" toLevel="28" name="Lateral Hit">
 		<!-- Attacks target with $s1 Power added to P. Atk., and decreases their P. Def. by $s3 for $s2. $s4 more damage if target is Stunned. Requires a fist weapon. -->
 		<icon>icon.skill30500</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
@@ -269,7 +269,7 @@
 	<skill id="30502" toLevel="24" name="Chin Strike">
 		<!-- Knocks down target for $s1. Requires a fist weapon. -->
 		<icon>icon.skill30502</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -523,7 +523,7 @@
 	<skill id="30505" toLevel="10" name="Pressure Punch">
 		<!-- Attacks target with $s1 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
 		<icon>icon.skill30505</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<activateRate> <!-- Guessed -->
 			<value fromLevel="1" toLevel="10">80</value>
@@ -606,7 +606,7 @@
 	<skill id="30506" toLevel="14" name="Distant Kick">
 		<!-- Attacks frontal target with $s1 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
 		<icon>icon.skill30506</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -705,7 +705,7 @@
 	<skill id="30507" toLevel="24" name="Left Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for$s1. Requires a fist weapon. -->
 		<icon>icon.skill30507</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -912,13 +912,13 @@
 	<skill id="30511" toLevel="5" name="Air Light">
 		<!-- For $s1, you're less bound by gravity and P. Atk. + $s2. -->
 		<icon>icon.skill30511</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>NONE</abnormalType>
 		<operateType>A2</operateType>
@@ -1006,11 +1006,11 @@
 	<skill id="30512" toLevel="3" name="Distortion">
 		<!-- For $s1, distorts space to attack from behind. Increases P. Atk. by $s2, P. Critical Damage by $s3, and P. Skill Power by $s4. Requires a fist weapon. -->
 		<icon>icon.skill30512</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="3">60</value>
 			<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1068,11 +1068,11 @@
 	<skill id="30514" toLevel="3" name="Fluid Weave">
 		<!-- For $s1, P. Skill Evasion + $s2, P. Evasion + $s3, M. Evasion + $s4. Requires a fist weapon. -->
 		<icon>icon.skill30514</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1133,7 +1133,7 @@
 	<skill id="30515" toLevel="1" name="Spallation">
 		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 seconds. Damaged if attacked within the sphere. Requires a fist weapon. -->
 		<icon>icon.skill30515</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1175,7 +1175,7 @@
 	<skill id="30516" toLevel="1" name="Gravity Barrier">
 		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
 		<icon>icon.skill30516</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">10</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
@@ -1215,7 +1215,7 @@
 	<skill id="30517" toLevel="11" name="Heavy Hand">
 		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
 		<icon>icon.skill30517</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>
@@ -1345,7 +1345,7 @@
 	<skill id="30519" toLevel="1" name="Warped Space">
 		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
 		<icon>icon.skill30519</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -1383,11 +1383,11 @@
 	<skill id="30520" toLevel="3" name="Steel Mind">
 		<!-- For $s1, HP stays at $s2. Speed + $s3, P. Atk. + $s4, P. Critical Damage + $s5, Skill Critical Damage + $s6, and Knock Back / Knock Down / Pull / Danger Zone / Aerial Yoke / Aggression Resistance + $s7. Normal attacks have normal damage x $s8. When duration ends, $s9 of HP is restored. Requires a fist weapon. -->
 		<icon>icon.skill30520</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="3">30</value>
 			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1672,11 +1672,11 @@
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate + $s1, P. Skill Critical Rate + $s2. -->
 		<icon>icon.skill30510</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>INSIDE_POSITION</abnormalType>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<operateType>A2</operateType>

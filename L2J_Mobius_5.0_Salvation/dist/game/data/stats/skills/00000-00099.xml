@@ -341,10 +341,10 @@
 	<skill id="4" toLevel="2" name="Dash">
 		<!-- Increases Speed by $s2 for $s1. -->
 		<icon>icon.skill0004</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -1959,7 +1959,7 @@
 	<skill id="18" toLevel="37" name="Aggression Aura">
 		<!-- Provokes nearby enemies with $s1 Power into attacking you. -->
 		<icon>icon.skill0018</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectLimit>10-10</affectLimit>
@@ -2733,7 +2733,7 @@
 	<skill id="28" toLevel="49" name="Aggression">
 		<!-- Provokes the selected target with $s1 Power into attacking you. -->
 		<icon>icon.skill0028</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<castRange>
@@ -4056,7 +4056,7 @@
 	<skill id="48" toLevel="49" name="Thunder Storm">
 		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
 		<icon>icon.skill0048</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -5264,7 +5264,7 @@
 	<skill id="65" toLevel="13" name="Horror">
 		<!-- Frightens the enemy into fleeing for $s1. -->
 		<icon>icon.skill0065</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -5884,11 +5884,11 @@
 	<skill id="72" toLevel="3" name="Iron Will">
 		<!-- Increases M. Def. by $s2 for $s1. -->
 		<icon>icon.skill0072</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<effectPoint>
@@ -5933,7 +5933,7 @@
 	<skill id="75" toLevel="1" name="Detect Insect Weakness">
 		<!-- For 10 minutes, increases damage against insects +5%. -->
 		<icon>icon.skill0075</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>303</effectPoint>
@@ -5955,7 +5955,7 @@
 	<skill id="76" toLevel="1" name="Bear Spirit Totem">
 		<!-- Possessed by a Bear's soul, P. Atk. and Critical Damage +20%, and Speed -30% for 5 minutes. Requires a fist weapon. -->
 		<icon>icon.skill0076</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>268</effectPoint>
@@ -5999,10 +5999,10 @@
 	<skill id="77" toLevel="2" name="Attack Aura">
 		<!-- Increases P. Atk. by $s2 for $s1. -->
 		<icon>icon.skill0077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>
@@ -6042,10 +6042,10 @@
 	<skill id="78" toLevel="2" name="War Cry">
 		<!-- Increases P. Atk. by $s2 for $s1. -->
 		<icon>icon.skill0078</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -6080,7 +6080,7 @@
 	<skill id="80" toLevel="1" name="Detect Beast Weakness">
 		<!-- For 10 minutes, increases damage against monsters +5%. -->
 		<icon>icon.skill0080</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>495</effectPoint>
@@ -6102,7 +6102,7 @@
 	<skill id="81" toLevel="3" name="Punch of Doom">
 		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
 		<icon>icon.skill0081</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<castRange>40</castRange>
@@ -6155,11 +6155,11 @@
 	<skill id="82" toLevel="3" name="Majesty">
 		<!-- Increases P. Def. by $s2 and decreases Evasion by $s3 for $s1. -->
 		<icon>icon.skill0082</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAJESTY</abnormalType>
 		<effectPoint>
@@ -6206,7 +6206,7 @@
 	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
 		<!-- Possessed by a Wolf's soul, Speed +20% and Accuracy +3 for 5 minutes. Requires a fist weapon. -->
 		<icon>icon.skill0083</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>204</effectPoint>
@@ -6243,11 +6243,11 @@
 	<skill id="84" toLevel="3" name="Poison Blade Dance">
 		<!-- A sword emits a toxic cloud that momentarily damages and poisons nearby enemies. Requires a dual sword. Effect $s1. -->
 		<icon>icon.skill0084</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">6</value>
 			<value level="2">7</value>
 			<value level="3">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -6307,11 +6307,11 @@
 	<skill id="86" toLevel="3" name="Reflect Damage">
 		<!-- For $s1, returns $s2 of received damage back to the enemy. -->
 		<icon>icon.skill0086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<effectPoint>
@@ -6355,7 +6355,7 @@
 	<skill id="87" toLevel="1" name="Detect Animal Weakness">
 		<!-- For 10 minutes, increases damage against animals +5%. -->
 		<icon>icon.skill0087</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -6377,7 +6377,7 @@
 	<skill id="88" toLevel="1" name="Detect Dragon Weakness">
 		<!-- For 10 minutes, increases damage against dragons +5%. -->
 		<icon>icon.skill0088</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>549</effectPoint>
@@ -6399,10 +6399,10 @@
 	<skill id="91" toLevel="2" name="Defense Aura">
 		<!-- Increases P. Def. by $s2 for $s1. -->
 		<icon>icon.skill0091</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>
@@ -6442,7 +6442,7 @@
 	<skill id="92" toLevel="52" name="Shield Stun">
 		<!-- Uses a shield to shock the enemy. Inflicts Stun on the target for $s1. Requires a shield. -->
 		<icon>icon.skill0092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -6635,7 +6635,7 @@
 	<skill id="94" toLevel="7" name="Rage">
 		<!-- P. Atk. +$s2 for $s1. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0094</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -6643,7 +6643,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">600</value>
 			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
@@ -6742,7 +6742,7 @@
 	<skill id="95" toLevel="20" name="Cripple">
 		<!-- Decreases the enemy's Speed by $s2 for $s1. Requires a fist weapon. -->
 		<icon>icon.skill0095</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -6763,7 +6763,7 @@
 			<value level="18">3</value>
 			<value level="19">3</value>
 			<value level="20">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -6883,14 +6883,14 @@
 	<skill id="96" toLevel="6" name="Bleed">
 		<!-- Decreases the enemy's Speed by $s2 for $s1, and inflicts Bleed, causing them to lose $s3 HP every second. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
 			<value level="3">5</value>
 			<value level="4">6</value>
 			<value level="5">7</value>
 			<value level="6">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -6963,7 +6963,7 @@
 	<skill id="97" toLevel="11" name="Sanctuary">
 		<!-- Decreases P. Atk. of nearby undead monsters by $s2 for $s1. -->
 		<icon>icon.skill0097</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>40</activateRate>
@@ -7028,7 +7028,7 @@
 	<skill id="98" toLevel="5" name="Sword Symphony">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Blocks the use of magic skills for $s2. Over-hit. Critical. -->
 		<icon>icon.skill0098</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -7084,10 +7084,10 @@
 	<skill id="99" toLevel="2" name="Rapid Shot">
 		<!-- Increases bow Atk. Spd. by $s2 for $s1. -->
 		<icon>icon.skill0099</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_SPEED_UP_BOW</abnormalType>
 		<effectPoint>

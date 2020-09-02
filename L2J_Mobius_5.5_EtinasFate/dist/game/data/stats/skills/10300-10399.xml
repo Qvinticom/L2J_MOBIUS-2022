@@ -188,12 +188,12 @@
 		<icon>icon.skill11833</icon>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>900</affectRange>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<operateType>A2</operateType>
@@ -297,7 +297,7 @@
 	<skill id="10308" toLevel="1" name="Wild Roar">
 		<!-- Shouts loudly to invoke the power of the Bison. For 5 min., increases P. Atk. and Critical Damage by 45%, Critical Rate by 45, and decreases Atk. Spd. by 15%. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill11834</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
@@ -420,7 +420,7 @@
 	<skill id="10310" toLevel="1" name="Primal Rage">
 		<!-- For 10 min., P. Atk. +15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<icon>icon.skill10310</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -531,7 +531,7 @@
 	<skill id="10313" toLevel="4" name="Infinite Rush">
 		<!-- Charges forward to inflict Stun to the enemies in the front for $s1. Requires sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. -->
 		<icon>icon.skill10313</icon>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -588,7 +588,7 @@
 	<skill id="10314" toLevel="4" name="Disarmament">
 		<!-- Disarms enemies for $s1. and decreases their P./ M. Atk. by $s2. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect> <!-- Guessed -->
@@ -687,7 +687,7 @@
 	<skill id="10317" toLevel="4" name="Thunder Slasher">
 		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
 		<icon>icon.skill10317new</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -821,7 +821,7 @@
 	<skill id="10319" toLevel="3" name="Duelist's Fury">
 		<!-- PvP Damage +$s1, Speed +$s2, Debuff Resistance +$s3. -->
 		<icon>icon.skll10319</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
 		<abnormalType>DUELIST_SPIRIT</abnormalType>
@@ -869,7 +869,7 @@
 	<skill id="10320" toLevel="3" name="Faceoff">
 		<!-- Engages target in $s1:$s2 combat. Invulnerable to damage from other targets for $s3, and Duelist's Fury is applied, increasing PvP Damage by $s4, Speed by $s5, and Debuff Resistance by $s6. -->
 		<icon>icon.skll10319</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
 		<operateType>A4</operateType>
@@ -907,7 +907,7 @@
 	<skill id="10321" toLevel="7" name="Thunder Spear">
 		<!-- Throws a spear to inflict damage on the target and nearby enemies with $s1 Power added to P. Atk. Stun is inflicted for $s2. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
 		<icon>icon.skll10321</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -985,7 +985,7 @@
 	<skill id="10322" toLevel="1" name="Wolf's Cry">
 		<!-- Shouts loudly to invoke the power of the Wolf. For 5 min., P. Def. and M. Def. +50%, Max HP +25%, and Spd. +20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<icon>icon.skll10320</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
@@ -1123,11 +1123,11 @@
 	<skill id="10326" toLevel="3" name="Bloody Fury">
 		<!-- For $s1, P. Atk. +$s2, Skill Power +$s3, and HP Recovery is limited to $s4. -->
 		<icon>icon.skill10326</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">45</value>
@@ -1157,7 +1157,7 @@
 		<!-- Attacks target with $s1 Power added to P. Atk. Requires a dual sword/ sword/ blunt weapon/ fist weapon. Damage increases when using Momentum, which you can use up to $s2. Over-hit. Critical. -->
 		<icon>icon.skill10327</icon>
 		<operateType>A1</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1165,7 +1165,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<mpConsume>
 			<value level="1">98</value>
 			<value level="2">105</value>
@@ -1321,7 +1321,7 @@
 	<skill id="10330" toLevel="7" name="Power Hammer Crush">
 		<!-- Attacks target with $s1 Power added to P. Atk. while ignoring $s2 of their P. Def. Stuns for $s3. Requires a blunt weapon. Over-hit. Critical. -->
 		<icon>icon.skill10330</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1404,7 +1404,7 @@
 	<skill id="10332" toLevel="1" name="Duelist Wrath">
 		<!-- Increases P. Atk. by 20% for 60 sec. when a dual sword/ dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by 20%. Consumes 5 Soulstones. -->
 		<icon>icon.skill10332</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1450,7 +1450,7 @@
 	<skill id="10333" toLevel="1" name="Winged Spear">
 		<!-- Equipping a spear increases attack by 30% for 60 sec. Additionally, stabndard attack range +80 and the Stun state is inflicted at a 10% chance if hit. Consumes 5 Soulstones. -->
 		<icon>icon.skill10333</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1525,7 +1525,7 @@
 	<skill id="10334" toLevel="1" name="Furious Slasher">
 		<!-- For 60 sec., P. Atk. +30% when a two-handed sword or two-handed blunt is equipped. Additionally attacks 6 enemies at once with a standard attack. Consumes 5 Soulstones. -->
 		<icon>icon.skill10334</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1574,7 +1574,7 @@
 		<!-- Increases P. Atk. by 30% and P. Critical Damage by 10% for 60 sec. when a fist weapon is equipped. Has 10% chance to decrease Fist Weapon Resistance by 30% when striking. Consumes 5 Soulstones. -->
 		<icon>icon.skill10335</icon>
 		<abnormalType>SUPER_AVOID</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1664,7 +1664,7 @@
 		<!-- Decreases target's resistance to fist weapons by 30%. -->
 		<icon>icon.skill10335</icon>
 		<abnormalType>REAL_TARGET</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1685,7 +1685,7 @@
 	<skill id="10339" toLevel="1" name="Winged Spear - Stun">
 		<!-- Stuns target for 3 sec. -->
 		<icon>icon.skill10333</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

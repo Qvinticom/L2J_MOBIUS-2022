@@ -38,7 +38,7 @@
 	<skill id="5802" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -211,7 +211,7 @@
 	<skill id="5810" toLevel="1" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect 3. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -690,7 +690,7 @@
 	<skill id="5832" toLevel="1" name="Aggression Aura">
 		<!-- Your mark is fixed. -->
 		<icon>icon.skill0018</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>40</activateRate>
@@ -716,7 +716,7 @@
 	<skill id="5833" toLevel="1" name="Shield">
 		<!-- Increases defense power temporarily. Effect 3. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectLimit>10-10</affectLimit>
@@ -745,7 +745,7 @@
 	<skill id="5834" toLevel="1" name="Magic Barrier">
 		<!-- Momentarily increases M. Def. Effect 3. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<affectLimit>10-10</affectLimit>
@@ -794,7 +794,7 @@
 	<skill id="5836" toLevel="1" name="Greater Heal">
 		<!-- Recovers party member's HP and increases HP Recovery Bonus momentarily. Power 1. Effect 5. -->
 		<icon>icon.skill1219</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<activateRate>0</activateRate>
@@ -912,7 +912,7 @@
 	</skill>
 	<skill id="5841" toLevel="1" name="Multi Defense">
 		<!-- P. Def. and M. Def. are increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<affectLimit>10-10</affectLimit>
@@ -966,7 +966,7 @@
 	<skill id="5843" toLevel="1" name="Fear">
 		<!-- Afflicted with Fear and moving against own will. -->
 		<icon>icon.skill1092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -1064,7 +1064,7 @@
 	<skill id="5846" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">4</value>
@@ -1077,7 +1077,7 @@
 			<value level="10">9</value>
 			<value level="11">10</value>
 			<value level="12">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1152,7 +1152,7 @@
 	<skill id="5849" toLevel="1" name="Decrease Speed">
 		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1184,7 +1184,7 @@
 	<skill id="5851" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1241,7 +1241,7 @@
 	<skill id="5854" toLevel="1" name="Decrease Speed">
 		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<effectPoint>-100</effectPoint>
@@ -1260,7 +1260,7 @@
 	<skill id="5855" toLevel="2" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">15</value>
 			<value level="2">3</value>
@@ -1320,7 +1320,7 @@
 	<skill id="5856" toLevel="1" name="Transformation Scroll: Makeshift Bat">
 		<!-- Transforms into a Makeshift Bat. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1348,7 +1348,7 @@
 	<skill id="5857" toLevel="1" name="Transformation Scroll: Lady Tow">
 		<!-- Transforms into a Lady Tow. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1376,7 +1376,7 @@
 	<skill id="5858" toLevel="1" name="Transformation Scroll: Angry Tow">
 		<!-- Transforms into an Angry Tow. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1404,7 +1404,7 @@
 	<skill id="5859" toLevel="1" name="Transformation Scroll: Sleepy Tow">
 		<!-- Transforms into a Sleepy Tow. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1432,7 +1432,7 @@
 	<skill id="5860" toLevel="1" name="Wrath of Valakas">
 		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 seconds. -->
 		<icon>icon.skill5860</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1455,7 +1455,7 @@
 	<skill id="5861" toLevel="1" name="Authority of Valakas">
 		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 seconds. -->
 		<icon>icon.skill5861</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -1516,7 +1516,7 @@
 		</effects>
 	</skill>
 	<skill id="5864" toLevel="1" name="Decrease Valakas Defense">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1535,7 +1535,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5865" toLevel="1" name="Wide-bodied Valakas">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -1556,7 +1556,7 @@
 	<skill id="5866" toLevel="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1567,7 +1567,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1604,7 +1604,7 @@
 	<skill id="5867" toLevel="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1615,7 +1615,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1655,7 +1655,7 @@
 	<skill id="5868" toLevel="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1666,7 +1666,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1706,7 +1706,7 @@
 	<skill id="5869" toLevel="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1. -->
 		<icon>icon.skill4035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1717,7 +1717,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -1755,7 +1755,7 @@
 	<skill id="5870" toLevel="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1766,7 +1766,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1802,7 +1802,7 @@
 	<skill id="5871" toLevel="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1813,7 +1813,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1852,7 +1852,7 @@
 	<skill id="5872" toLevel="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">8</value>
 			<value level="2">8</value>
 			<value level="3">8</value>
@@ -1863,7 +1863,7 @@
 			<value level="8">10</value>
 			<value level="9">10</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1900,13 +1900,13 @@
 	<skill id="5873" toLevel="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<icon>icon.skill5873</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEATHWORM</abnormalType>
 		<activateRate>80</activateRate>
@@ -1926,13 +1926,13 @@
 	<skill id="5874" toLevel="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<icon>icon.skill5873</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEATHWORM</abnormalType>
 		<activateRate>80</activateRate>
@@ -1954,13 +1954,13 @@
 	<skill id="5875" toLevel="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<icon>icon.skill5873</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEATHWORM</abnormalType>
 		<activateRate>80</activateRate>
@@ -1986,7 +1986,7 @@
 	<skill id="5876" toLevel="1" name="Begrudged Haunting">
 		<!-- The grudge of those who didn't die. Can die by lethal malice after 5 minutes. -->
 		<icon>icon.skill5876</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEATH_CLACK</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2025,7 +2025,7 @@
 	<skill id="5878" toLevel="1" name="Cruel Puncture">
 		<!-- Life force is lost and Casting Spd. is decreased. -->
 		<icon>icon.skill1386</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2056,7 +2056,7 @@
 	<skill id="5879" toLevel="1" name="Cruel Expunge">
 		<!-- HP decreases from bleeding momentarily. Effect 9. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2087,7 +2087,7 @@
 	<skill id="5880" toLevel="2" name="Vicious Mutilation">
 		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2109,7 +2109,7 @@
 	<skill id="5881" toLevel="2" name="Vicious Mutilation">
 		<!-- P. Def., Evasion, and Speed are decreased. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2131,7 +2131,7 @@
 	<skill id="5882" toLevel="2" name="Weakened Pommel">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2170,7 +2170,7 @@
 	<skill id="5883" toLevel="1" name="Meggling Injury">
 		<!-- HP decreases from bleeding momentarily. Effect 9. -->
 		<icon>icon.skill0096</icon>
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2201,7 +2201,7 @@
 	<skill id="5884" toLevel="2" name="Weakened Sweep">
 		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<icon>icon.skill0485</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2239,7 +2239,7 @@
 	<skill id="5885" toLevel="1" name="Weakened Sweep">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2277,7 +2277,7 @@
 	<skill id="5886" toLevel="1" name="Ground Shaker">
 		<!-- Evasion and Speed are decreased. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2311,7 +2311,7 @@
 	<skill id="5887" toLevel="1" name="Howl from Beyond">
 		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are greatly decreased. -->
 		<icon>icon.skill1337</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_C</abnormalType>
 		<activateRate>80</activateRate>
@@ -2334,7 +2334,7 @@
 	<skill id="5888" toLevel="2" name="Earth Shaker">
 		<!-- Momentarily immobile due to the Stun effect and lost the target. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2372,7 +2372,7 @@
 	<skill id="5889" toLevel="3" name="Tainted Shackle">
 		<!-- Cannot act because the target is locked. -->
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2403,7 +2403,7 @@
 	<skill id="5890" toLevel="3" name="Tainted Mass Shackle">
 		<!-- Cannot move because the target is locked. -->
 		<icon>icon.skill0402</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -2449,7 +2449,7 @@
 	<skill id="5892" toLevel="2" name="Cunning Coercion">
 		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Momentarily inflicts mental shock on the enemy. -->
 		<icon>icon.skill0358</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2498,7 +2498,7 @@
 	<skill id="5894" toLevel="1" name="Mark of Despair">
 		<!-- Significantly decreases P. Def., M. Def., evasion and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Damage and critical attack rate are increased. -->
 		<icon>icon.skill1337</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_A</abnormalType>
 		<activateRate>80</activateRate>
@@ -2568,7 +2568,7 @@
 		<!-- Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
 		<icon>icon.skill1337</icon>
 	<!-- TODO JEY -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_B</abnormalType>
 		<activateRate>80</activateRate>
@@ -2615,7 +2615,7 @@
 		</effects>
 	</skill>
 	<skill id="5896" toLevel="2" name="Soulless">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -2638,7 +2638,7 @@
 	<skill id="5897" toLevel="1" name="Spike of Anchor">
 		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2678,7 +2678,7 @@
 	<skill id="5898" toLevel="2" name="Blast of Anchor">
 		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<icon>icon.skill1164</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>

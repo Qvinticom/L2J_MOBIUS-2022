@@ -3,7 +3,7 @@
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
 		<!-- Decreases Dark attribute defense by $s2 for $s1. -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -160,12 +160,12 @@
 	<skill id="19406" toLevel="4" name="Curse from Deadland">
 		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
 		<icon>icon.action225</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -261,7 +261,7 @@
 	<skill id="19409" toLevel="1" name="Curse Gloom">
 		<!-- Decreases M. Defense and all attribute defenses by 50% and 50, respectively, for 10 seconds. -->
 		<icon>icon.skill1263</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>100</activateRate>
@@ -304,7 +304,7 @@
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
 		<!-- Elemental Buster inflicts Knock Back. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -330,7 +330,7 @@
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
 		<!-- Elemental Crash inflicts Hold for 3 seconds. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -353,7 +353,7 @@
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
 		<!-- Elemental Crash inflicts Stun for 2 seconds. -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -378,7 +378,7 @@
 	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -407,7 +407,7 @@
 	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -501,7 +501,7 @@
 	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -533,7 +533,7 @@
 	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Elemental Burst release the target and inflicts Faint for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
@@ -564,7 +564,7 @@
 	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
 		<!-- Elemental Burst inflicts Knock Down for $s1. -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -592,7 +592,7 @@
 		<!-- Constant damage is inflicted for $s1 due to powerful magic and you enter the Knock Down state. -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>

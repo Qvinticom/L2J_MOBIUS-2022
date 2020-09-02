@@ -282,7 +282,7 @@
 	<skill id="3321" toLevel="1" name="Blue Talisman - Evasion">
 		<!-- Use the power of the Talisman to increase the Evasion rate and decrease the chance of receiving a critical attack. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>379</effectPoint>
@@ -468,7 +468,7 @@
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>
@@ -572,7 +572,7 @@
 	<skill id="3335" toLevel="1" name="Yeti Transformation">
 		<!-- Transforms into Yeti. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -600,7 +600,7 @@
 	<skill id="3336" toLevel="1" name="Buffalo Transformation">
 		<!-- Transform into a Yeti. There is no effect from the Mysterious Potion while in Yeti form. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -631,7 +631,7 @@
 	<skill id="3337" toLevel="1" name="Cutie Pig Transformation">
 		<!-- Transforms into cute pig. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1038,7 +1038,7 @@
 	<skill id="3359" toLevel="1" name="Native Transformation">
 		<!-- Transforms into a Native. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

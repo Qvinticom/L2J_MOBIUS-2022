@@ -167,11 +167,11 @@
 		<!-- M. Def. - 30%, Speed - 70. -->
 		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalVisualEffect>
@@ -297,7 +297,7 @@
 	<skill id="30004" toLevel="25" name="Hydro Strike">
 		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30004</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>WIND_STUN</abnormalVisualEffect>
@@ -413,7 +413,7 @@
 	<skill id="30005" toLevel="4" name="Storm Sign">
 		<!-- M. Def. - 50%, Speed - 100. -->
 		<icon>icon.skill30027</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalVisualEffect>STORM_SIGN2</abnormalVisualEffect>
@@ -437,7 +437,7 @@
 	<skill id="30006" toLevel="11" name="Storm Rage">
 		<!-- Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30006</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -608,13 +608,13 @@
 		<!-- for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30008</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>WIND_BLEND</abnormalType>
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
@@ -689,7 +689,7 @@
 	<skill id="30009" toLevel="10" name="Deceptive Blink">
 		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30009</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -700,7 +700,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>DECEPTIVE_BLINK</abnormalVisualEffect>
@@ -798,7 +798,7 @@
 	<skill id="30010" toLevel="2" name="Windy Refuge">
 		<!-- Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move. -->
 		<icon>icon.skill30010</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>WIND_HIDE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
@@ -900,7 +900,7 @@
 	<skill id="30012" toLevel="25" name="Air Rush">
 		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30012</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1095,7 +1095,7 @@
 		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
 		<icon>icon.skill30016</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<mpConsume>
@@ -1143,12 +1143,12 @@
 		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
 		<icon>icon.skill30017</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>SQUALL</abnormalVisualEffect>
 		<effectPoint>2</effectPoint>
@@ -1216,7 +1216,7 @@
 		<!-- Removes all debuffs and becomes invincible against targeting for 10 sec. -->
 		<icon>icon.skill30018</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>WIND_ILLUSION</abnormalVisualEffect>
 		<mpConsume>41</mpConsume>
@@ -1239,7 +1239,7 @@
 	<skill id="30019" toLevel="11" name="Sayha's Word">
 		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30019</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1251,7 +1251,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<effectPoint>-687</effectPoint>
 		<operateType>A2</operateType>
@@ -1336,7 +1336,7 @@
 		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>SAYHA_FURY</abnormalVisualEffect>
 		<mpConsume>40</mpConsume>
@@ -1381,7 +1381,7 @@
 		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30022</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SAYHA_BLESSING</abnormalType>
 		<effectPoint>687</effectPoint>
@@ -1455,7 +1455,7 @@
 	<skill id="30026" toLevel="4" name="Lightning Squall">
 		<!-- Attacks target with 50 Power added to M. Atk., and decreases Speed by 20. -->
 		<icon>icon.skill30026</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<effectRange>1600</effectRange>
@@ -1507,7 +1507,7 @@
 		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.iconskill30007</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">90</value>
@@ -1564,7 +1564,7 @@
 		<!-- Trapped by a storm that gives continuous damage. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<effectPoint>-707</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->

@@ -685,7 +685,7 @@
 	<skill id="18050" toLevel="1" name="Luck Potion">
 		<!-- For 15 sec., LUC +5. -->
 		<icon>icon.etc_instant_lucky_potion_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -708,7 +708,7 @@
 		<!-- For 1 hr., Atk. Spd. +15%, Casting Spd. +30%, Max HP +30%, MP Recovery Bonus +20%, and M. Skill MP Consumption -10%. Decreases chance of being interrupted mid-spell. Cooldown is 1 hr. Remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<affectRange>1000</affectRange>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>3600</abnormalTime>
 		<operateType>A2</operateType>

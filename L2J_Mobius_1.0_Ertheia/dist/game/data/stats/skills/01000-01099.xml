@@ -130,11 +130,11 @@
 	<skill id="1002" toLevel="3" name="Chant of Flame">
 		<!-- Increases all party members' Casting Spd. by 15% for 20 minutes. -->
 		<icon>icon.skill1002</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<affectRange>1000</affectRange>
@@ -181,11 +181,11 @@
 	<skill id="1003" toLevel="3" name="Pa'agrio's Gift">
 		<!-- Increases nearby clan members' P. Atk. by 8% for 20 minutes. -->
 		<icon>icon.skill1003</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -233,11 +233,11 @@
 	<skill id="1004" toLevel="3" name="Pa'agrio's Wisdom">
 		<!-- Increases nearby clan members' Casting Spd. by 15% for 20 minutes. -->
 		<icon>icon.skill1004</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -285,11 +285,11 @@
 	<skill id="1005" toLevel="3" name="Pa'agrio's Blessing">
 		<!-- Increases nearby clan members' P. Def. by 8% for 20 minutes. -->
 		<icon>icon.skill1005</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -337,11 +337,11 @@
 	<skill id="1006" toLevel="3" name="Chant of Fire">
 		<!-- Increases all party members' M. Def. by 15% for 20 minutes. -->
 		<icon>icon.skill1006</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -388,11 +388,11 @@
 	<skill id="1007" toLevel="3" name="Chant of Battle">
 		<!-- Increases all party members' P. Atk. by 8% for 20 minutes. -->
 		<icon>icon.skill1007</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -439,11 +439,11 @@
 	<skill id="1008" toLevel="3" name="Pa'agrio's Glory">
 		<!-- Increases nearby clan members' M. Def. by 15% for 20 minutes. -->
 		<icon>icon.skill1008</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<affectLimit>50-50</affectLimit>
@@ -491,11 +491,11 @@
 	<skill id="1009" toLevel="3" name="Chant of Shielding">
 		<!-- Increases all party members' P. Def. by 8% for 20 minutes. -->
 		<icon>icon.skill1009</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectRange>1000</affectRange>
@@ -542,11 +542,11 @@
 	<skill id="1010" toLevel="3" name="Soul Shield">
 		<!-- Increases P. Def. by 8% for 20 minutes. -->
 		<icon>icon.skill1010</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1646,11 +1646,11 @@
 	<skill id="1032" toLevel="3" name="Invigor">
 		<!-- Increases Bleed Resistance by 30% for 20 minutes. -->
 		<icon>icon.skill1032</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_BLEEDING</abnormalType>
 		<castRange>400</castRange>
@@ -1691,11 +1691,11 @@
 	<skill id="1033" toLevel="3" name="Poison Resistance">
 		<!-- Increases Poison Resistance by 30% for 20 minutes. -->
 		<icon>icon.skill1033</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_POISON</abnormalType>
 		<castRange>400</castRange>
@@ -1806,12 +1806,12 @@
 	<skill id="1035" toLevel="4" name="Mental Shield">
 		<!-- Increases Hold/Sleep/Mental Attack Resistance by 20 for 20 minutes. -->
 		<icon>icon.skill1035</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<castRange>400</castRange>
@@ -1874,10 +1874,10 @@
 	<skill id="1036" toLevel="2" name="Magic Barrier">
 		<!-- Increases M. Def. by 23% for 20 minutes. -->
 		<icon>icon.skill1036</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1919,11 +1919,11 @@
 	<skill id="1040" toLevel="3" name="Shield">
 		<!-- Increases P. Def. by 8% for 20 minutes. -->
 		<icon>icon.skill1040</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
@@ -1970,7 +1970,7 @@
 	<skill id="1042" toLevel="12" name="Hold Undead">
 		<!-- Paralyzes an undead monster for 30 seconds. -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -2056,7 +2056,7 @@
 	<skill id="1043" toLevel="1" name="Holy Weapon">
 		<!-- Increases a party member's holy P. Atk. by 20 for 20 minutes. -->
 		<icon>icon.skill1043</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<castRange>400</castRange>
@@ -2089,11 +2089,11 @@
 	<skill id="1044" toLevel="3" name="Regeneration">
 		<!-- Increases HP Regeneration by 10% for 20 minutes. -->
 		<icon>icon.skill1044</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2140,14 +2140,14 @@
 	<skill id="1045" toLevel="6" name="Blessed Body">
 		<!-- Increases Max HP by 10% for 20 minutes. -->
 		<icon>icon.skill1045</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2210,12 +2210,12 @@
 	<skill id="1047" toLevel="4" name="Mana Regeneration">
 		<!-- Increases MP Recovery Bonus by 1.72 for 20 minutes. Consumes 7 Spirit Ore. -->
 		<icon>icon.skill1047</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<effectPoint>
@@ -2272,14 +2272,14 @@
 	<skill id="1048" toLevel="6" name="Blessed Soul">
 		<!-- Increases Max MP by 10% for 20 minutes. -->
 		<icon>icon.skill1048</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2341,7 +2341,7 @@
 	<skill id="1049" toLevel="14" name="Requiem">
 		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for 2 minutes. -->
 		<icon>icon.skill1049</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
 		<activateRate>35</activateRate>
@@ -2525,11 +2525,11 @@
 	<skill id="1059" toLevel="3" name="Empower">
 		<!-- Increases M. Atk. by 55% for 20 minutes. -->
 		<icon>icon.skill1059</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2576,10 +2576,10 @@
 	<skill id="1062" toLevel="2" name="Berserker Spirit">
 		<!-- Decreases a party member's P. Def. by 5%, M. Def. by 10% and Evasion by 2, and increases P. Atk. by 5%, M. Atk. by 10%, Atk. Spd. by 5%, Casting Spd. by 5% and Speed by 5 for 20 minutes. -->
 		<icon>icon.skill1062</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
@@ -2675,7 +2675,7 @@
 	<skill id="1064" toLevel="14" name="Silence">
 		<!-- Blocks the enemy's use of magic for 1 minute. -->
 		<icon>icon.skill1064</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2764,11 +2764,11 @@
 	<skill id="1068" toLevel="3" name="Might">
 		<!-- Increases P. Atk. by 8% for 20 minutes. -->
 		<icon>icon.skill1068</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<castRange>400</castRange>
@@ -2815,7 +2815,7 @@
 	<skill id="1069" toLevel="42" name="Sleep">
 		<!-- Causes the enemy to sleep for 30 seconds. -->
 		<icon>icon.skill1069</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -3022,7 +3022,7 @@
 	<skill id="1071" toLevel="14" name="Surrender to Water">
 		<!-- For 30 sec., decreases the enemy's Water Resistance by 20 and increases Fire Resistance by 10. -->
 		<icon>icon.skill1071</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<activateRate>80</activateRate>
@@ -3118,7 +3118,7 @@
 	<skill id="1072" toLevel="5" name="Sleeping Cloud">
 		<!-- Casts Sleep on nearby enemies for 30 seconds. -->
 		<icon>icon.skill1072</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -3180,10 +3180,10 @@
 	<skill id="1073" toLevel="2" name="Eva's Kiss">
 		<!-- Increases lung capacity by 400% for 20 minutes. -->
 		<icon>icon.skill1073</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3221,7 +3221,7 @@
 	<skill id="1074" toLevel="14" name="Surrender to Wind">
 		<!-- For 30 sec., decreases the enemy's Wind Resistance by 20 and increases Earth Resistance by 10. -->
 		<icon>icon.skill1074</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
 		<activateRate>80</activateRate>
@@ -3370,11 +3370,11 @@
 	<skill id="1077" toLevel="3" name="Focus">
 		<!-- Increases Critical Rate by 20% for 20 minutes. -->
 		<icon>icon.skill1077</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3421,14 +3421,14 @@
 	<skill id="1078" toLevel="6" name="Concentration">
 		<!-- Decreases magic cancel damage by 18 for 20 minutes. -->
 		<icon>icon.skill1078</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -3490,7 +3490,7 @@
 	<skill id="1083" toLevel="17" name="Surrender to Fire">
 		<!-- For 30 sec., decreases the target's Fire Resistance by 20 and increases Water Resistance by 10. -->
 		<icon>icon.skill1083</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -3508,7 +3508,7 @@
 			<value level="15">4</value>
 			<value level="16">4</value>
 			<value level="17">4</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
 		<activateRate>80</activateRate>
@@ -3652,11 +3652,11 @@
 	<skill id="1085" toLevel="3" name="Acumen">
 		<!-- Increases Casting Spd. by 15% for 20 minutes. -->
 		<icon>icon.skill1085</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -3703,10 +3703,10 @@
 	<skill id="1086" toLevel="2" name="Haste">
 		<!-- Increases Atk. Spd. by 15% for 20 minutes. -->
 		<icon>icon.skill1086</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
@@ -3748,11 +3748,11 @@
 	<skill id="1087" toLevel="3" name="Agility">
 		<!-- Increases Evasion by 2 for 20 minutes. -->
 		<icon>icon.skill1087</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
 		<castRange>400</castRange>
@@ -3857,7 +3857,7 @@
 	<skill id="1092" toLevel="19" name="Fear">
 		<!-- Frightens the enemy into fleeing for 10 seconds. -->
 		<icon>icon.skill1092</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3967,13 +3967,13 @@
 	<skill id="1095" toLevel="5" name="Venom">
 		<!-- Poisons the target, causing loss of 11 HP per second for 30 seconds. -->
 		<icon>icon.skill1095</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
@@ -4036,7 +4036,7 @@
 	<skill id="1096" toLevel="16" name="Seal of Chaos">
 		<!-- Decreases Accuracy of nearby enemies by 9 for 30 seconds. -->
 		<icon>icon.skill1096</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -4053,7 +4053,7 @@
 			<value level="14">3</value>
 			<value level="15">3</value>
 			<value level="16">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<activateRate>60</activateRate>
@@ -4169,7 +4169,7 @@
 	<skill id="1097" toLevel="20" name="Dreaming Spirit">
 		<!-- Causes the enemy to sleep for 30 seconds. -->
 		<icon>icon.skill1097</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -4288,7 +4288,7 @@
 	<skill id="1099" toLevel="15" name="Seal of Slow">
 		<!-- Decreases nearby enemies' Speed by 20% for 1 minute. -->
 		<icon>icon.skill1099</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">2</value>
 			<value level="2">3</value>
 			<value level="3">3</value>
@@ -4304,7 +4304,7 @@
 			<value level="13">3</value>
 			<value level="14">3</value>
 			<value level="15">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>

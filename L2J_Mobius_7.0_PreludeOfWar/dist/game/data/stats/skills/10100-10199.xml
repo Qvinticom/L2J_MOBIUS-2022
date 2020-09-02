@@ -3,7 +3,7 @@
 	<skill id="10100" toLevel="5" name="Guardian's Frenzy">
 		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, all Attribute Resistance +$s6, and Reflect Magic rate +$s7. -->
 		<icon>icon.skill10100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -130,7 +130,7 @@
 	<skill id="10101" toLevel="5" name="Templar's Frenzy">
 		<!-- For 1 min., Shield Defense +85%, M. Def. +120%, Atk. Spd. +15%, P. Critical Rate/ Damage +60%, P. Skill Power +15%. With a certain chance, activates Lightning Strike when Vanishing Stun is applied. -->
 		<icon>icon.skill10101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -241,7 +241,7 @@
 	<skill id="10102" toLevel="8" name="Shadow Hunt">
 		<!-- Summons the Blood Panther to attack the target and enemies at the front with $s1 power. Enemies' Speed -$s3, Confusion Resistance -$s4 for $s2 Consumes $s5 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill10102</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -306,7 +306,7 @@
 	<skill id="10103" toLevel="8" name="Reversal Stream">
 		<!-- Creates a torrent to attack the target and enemies at the front with $s1 power. Pulls them to you for a short distance. Enemies' Speed -$s3 for $s2 Consumes $s4 Soulstones. Requires a sword or a blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill10103_2</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -719,7 +719,7 @@
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
 		<!-- P./ M. Def. +30%, Debuff Resistances +15%, P. Critical Damage/ M. Critical Damage Received -15%, and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10104</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>PHOENIX_AURA</abnormalVisualEffect>
@@ -786,7 +786,7 @@
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
 		<!-- P./ M. Atk. +10%, P./ M. Def. +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10105</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
@@ -857,7 +857,7 @@
 	<skill id="10110" toLevel="1" name="Guardian Aura">
 		<!-- P./ M. Def. +20%, Speed +10, all Attribute Resistance +100, P. Critical Damage/ M. Critical Damage Received -15%, all Skill Cooldown -7%, and MP Consumption -15%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10106</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
@@ -953,7 +953,7 @@
 	<skill id="10111" toLevel="1" name="Templar's Aura">
 		<!-- P./ M. Atk. +10%, P./ M. Def. +20%, Speed +10, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10107</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>TEMPLAR_AURA</abnormalVisualEffect>

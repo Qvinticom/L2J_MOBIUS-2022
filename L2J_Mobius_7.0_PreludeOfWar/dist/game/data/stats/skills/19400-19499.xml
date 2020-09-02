@@ -3,7 +3,7 @@
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
 		<!-- Decreases Dark Attribute Resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -166,14 +166,14 @@
 	<skill id="19406" toLevel="6" name="Curse from Deadland">
 		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
 		<icon>icon.action225</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
@@ -271,7 +271,7 @@
 	<skill id="19409" toLevel="1" name="Curse Gloom">
 		<!-- For 10 sec., M. Def. and Attribute Resistance -50% and -50, respectively. -->
 		<icon>icon.skill1263</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>100</activateRate>
@@ -314,7 +314,7 @@
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
 		<!-- Summons elemental power to knock the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -340,7 +340,7 @@
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
 		<!-- Summons elemental power to hold the target in place for 3 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -363,7 +363,7 @@
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
 		<!-- Summons elemental power to stun the target for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11018</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -388,7 +388,7 @@
 	<skill id="19413" toLevel="9" name="Elemental Burst: Water">
 		<!-- Summons elemental power to freeze the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -419,7 +419,7 @@
 	<skill id="19414" toLevel="9" name="Elemental Burst: Wind">
 		<!-- Summons elemental power to knock the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -519,7 +519,7 @@
 	<skill id="19417" toLevel="9" name="Elemental Burst: Water">
 		<!-- Summons elemental power to freeze the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
@@ -553,7 +553,7 @@
 	<skill id="19418" toLevel="9" name="Elemental Burst: Wind">
 		<!-- Summons elemental power to cancel the enemy's target and make them faint for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
@@ -586,7 +586,7 @@
 	<skill id="19419" toLevel="9" name="Elemental Burst: Earth">
 		<!-- Summons elemental power to knock down the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11865</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -616,7 +616,7 @@
 		<!-- Knocks the target down and deals continuous magic damage to them with $s2 power for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -777,7 +777,7 @@
 		<!-- Strikes the target with 15338 power, their P./ M. Def. -40% for 20 seconds Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11510</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -889,7 +889,7 @@
 		<!-- For 5 min., P./ M. Atk. +13%, attack range +150. Normal attacks deal additional holy damage with 50 power. -->
 		<icon>icon.skill19427</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -899,7 +899,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
@@ -981,11 +981,11 @@
 		<mpConsume>252</mpConsume>
 		<hitTime>7000</hitTime>
 		<effectPoint>700</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">6</value>
@@ -1020,7 +1020,7 @@
 	<skill id="19430" toLevel="13" name="Resonant Halo">
 		<!-- Increases P. Atk. by 300 and Atk. Spd. by 5% and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by 35%. Using the skill again cancels the effect. -->
 		<icon>icon.skill19430</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1034,7 +1034,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>600</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -1152,7 +1152,7 @@
 			<value level="10">107</value>
 			<value level="11">109</value>
 		</magicLvl>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1164,7 +1164,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -1224,10 +1224,10 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">4</value>
 			<value level="2">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -1272,7 +1272,7 @@
 	<skill id="19433" toLevel="13" name="Alluring Conduct">
 		<!-- Attacks the target and nearby enemies with 24336 power. For 12 seconds, their Atk. Spd./ Casting Spd./ P. Def./ M. Def. -50%][10%, Skill Cooldown +. Applies the Swift Praise effect. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19433</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1286,7 +1286,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>12</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -1423,7 +1423,7 @@
 	<skill id="19434" toLevel="13" name="Repeat Mark Somersault">
 		<!-- Strikes the target with 21701 power. For 8 seconds, their P./ M. Def. -20% -150 Speed. Moves the character back for 400. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19434</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1437,7 +1437,7 @@
 			<value level="11">11</value>
 			<value level="12">12</value>
 			<value level="13">13</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<castRange>200</castRange>
 		<coolTime>1000</coolTime>
@@ -1559,13 +1559,13 @@
 		<isDebuff>true</isDebuff>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1612,7 +1612,7 @@
 	<skill id="19436" toLevel="13" name="Dancing Phantom Blade">
 		<!-- Attacks the target and nearby enemies with 28631 power, making them unable to target you. For 10 seconds, enemies' P./ M. Atk., P./ M. Def., and Speed -50%. Can be used if the enemies are inflicted with Spectral Slash Lv. 2+. Requires a sword, a blunt weapon, dual swords, or dual blunt weapons. Critical. Over-hit. -->
 		<icon>icon.skill19436</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -1825,7 +1825,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1953,11 +1953,11 @@
 		</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalType>TRIAD</abnormalType>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">4</value>
 			<value level="2">4</value>
@@ -2076,7 +2076,7 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2127,7 +2127,7 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2184,7 +2184,7 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2241,10 +2241,10 @@
 			<value level="1">600000</value>
 			<value level="2">3000</value>
 		</reuseDelay>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">300</value>
 			<value level="2">1</value>		

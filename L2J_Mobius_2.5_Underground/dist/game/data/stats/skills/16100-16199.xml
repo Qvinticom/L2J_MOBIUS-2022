@@ -29,7 +29,7 @@
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<castRange>900</castRange>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>300</affectRange>
@@ -212,7 +212,7 @@
 	</skill>
 	<skill id="16109" toLevel="1" name="Heavy Armor Rise">
 		<!-- Critical Damage increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_heavy</icon>
@@ -237,7 +237,7 @@
 	</skill>
 	<skill id="16110" toLevel="1" name="Light Armor Rise">
 		<!-- P. Atk. increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_light</icon>
@@ -262,7 +262,7 @@
 	</skill>
 	<skill id="16111" toLevel="1" name="Robe Rise">
 		<!-- M. Atk. increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_robe</icon>
@@ -287,7 +287,7 @@
 	</skill>
 	<skill id="16112" toLevel="1" name="Speed Rise">
 		<!-- Atk. Spd. and Casting Spd. increased. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_mystery_brain</icon>
@@ -316,7 +316,7 @@
 	</skill>
 	<skill id="16113" toLevel="1" name="Tragic Bleed">
 		<!-- Inflicts Bleed. 12 Power. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -430,7 +430,7 @@
 		<effectPoint>-700</effectPoint>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -625,7 +625,7 @@
 	<skill id="16135" toLevel="1" name="Begin Research">
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_0</abnormalVisualEffect>
@@ -641,7 +641,7 @@
 	<skill id="16136" toLevel="1" name="Reward x 2">
 		<!-- Hero's powers give you x 2 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_1</abnormalVisualEffect>
@@ -656,7 +656,7 @@
 	<skill id="16137" toLevel="1" name="Reward x 4">
 		<!-- Hero's powers give you x 4 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_2</abnormalVisualEffect>
@@ -671,7 +671,7 @@
 	<skill id="16138" toLevel="1" name="Reward x 8">
 		<!-- Hero's powers give you x 8 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_3</abnormalVisualEffect>
@@ -686,7 +686,7 @@
 	<skill id="16139" toLevel="1" name="Reward x 16">
 		<!-- Hero's powers give you x 16 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_4</abnormalVisualEffect>
@@ -701,7 +701,7 @@
 	<skill id="16140" toLevel="1" name="Reward x 32">
 		<!-- Hero's powers give you x 32 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_5</abnormalVisualEffect>
@@ -717,7 +717,7 @@
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<abnormalTime>4</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_0</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -737,7 +737,7 @@
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<abnormalTime>4</abnormalTime>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_1</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -757,7 +757,7 @@
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<abnormalTime>4</abnormalTime>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_2</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -777,7 +777,7 @@
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<abnormalTime>4</abnormalTime>
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_3</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -797,7 +797,7 @@
 		<!-- Researching the Heroes' Power. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<abnormalTime>4</abnormalTime>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<abnormalVisualEffect>STARS_4</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -957,7 +957,7 @@
 	</skill>
 	<skill id="16153" toLevel="6" name="Power Slam">
 		<!-- Deals a powerful blow and knocks back the enemy. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1021,7 +1021,7 @@
 	</skill>
 	<skill id="16156" toLevel="8" name="Mass Droop">
 		<!-- Decreases Atk. Spd. and Speed. -->
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1030,7 +1030,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -1148,7 +1148,7 @@
 	<skill id="16160" toLevel="1" name="Beleth's Flame">
 		<!-- Powerful flames burn off HP. -->
 		<icon>icon.skill1101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1188,7 +1188,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16162" toLevel="1" name="Beleth's Meteor">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -1330,7 +1330,7 @@
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalTime>120</abnormalTime>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>EXP_HERB</abnormalType>
 		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
@@ -1357,7 +1357,7 @@
 		<icon>BranchSys2.icon.g_dawn_gem</icon>
 		<abnormalTime>600</abnormalTime>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>EXP_HERB</abnormalType>
 		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
@@ -1384,7 +1384,7 @@
 		<icon>icon.etc_str_symbol_i01</icon>
 		<abnormalTime>120</abnormalTime>
 		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>EXP_HERB</abnormalType>
 		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
@@ -1572,7 +1572,7 @@
 	</skill>
 	<skill id="16196" toLevel="1" name="Blood Shower">
 		<!-- A magical AoE attack with Bleed. -->
-		<abnormalLvl>9</abnormalLvl>
+		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>

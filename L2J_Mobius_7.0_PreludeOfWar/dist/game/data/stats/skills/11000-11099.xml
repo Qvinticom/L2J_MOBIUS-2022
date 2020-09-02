@@ -1731,7 +1731,7 @@
 	<skill id="11024" toLevel="13" name="Volcanic Destruction">
 		<!-- Inflicts M. Atk. of $s1 power added with Fire damage on the target and the enemies in the route and decreases M. Def. by $s3 for $s2 Additionally, inflicts Ignite effect. Over-hit is possible. -->
 		<icon>icon.skill11024</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>FIRE</attributeType>
@@ -1847,7 +1847,7 @@
 	<skill id="11025" toLevel="13" name="Icicle Destruction">
 		<!-- Deals M. Atk. of $s1 power added with Water damage on the target. Decreases M. Def. by $s3 and Atk.Spd./ Speed by $s4 for $s2 Over-hit is possible. -->
 		<icon>icon.skill11025</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
@@ -1963,7 +1963,7 @@
 	<skill id="11026" toLevel="13" name="Updraft Destruction">
 		<!-- Deals M. Atk. of $s1 power added with Wind damage on the target and the enemies near it. Decreases M. Def. by $s3 for $s2 Over-hit is possible. -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>WIND</attributeType>
@@ -2073,7 +2073,7 @@
 	<skill id="11027" toLevel="13" name="Bedrock Destruction">
 		<!-- Inflicts earth damage on the target with $s1 Power added to M. Atk. M. Def. -$s3 and all Attribute Resistances -$s4 for $s2 -->
 		<icon>icon.skill11027</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>EARTH</attributeType>
@@ -2204,7 +2204,7 @@
 	<skill id="11028" toLevel="13" name="Void Destruction">
 		<!-- Deals M. Atk. of $s1 power added with Dark damage on the target. Additionally, decreases M. Def. by $s3 and increases M. Critical Rate Received by $s4 for $s2 Over-hit is possible. -->
 		<icon>icon.skill19316</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>DARK</attributeType>
@@ -2315,7 +2315,7 @@
 	<skill id="11029" toLevel="5" name="Death Breath">
 		<!-- For $s1, decreases target's HP by $s2 per second. -->
 		<icon>icon.skill11029</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
@@ -2430,7 +2430,7 @@
 	<skill id="11032" toLevel="9" name="Death Howl">
 		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -2523,7 +2523,7 @@
 	<skill id="11033" toLevel="3" name="Damaged Area">
 		<!-- Damage over time, Speed is decreased. -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -3593,7 +3593,7 @@
 	<skill id="11046" toLevel="3" name="Wizard Spirit">
 		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, P./ M. Def. +$s4, and M. Skill MP Consumption -$s5. -->
 		<icon>icon.skill11046</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="3">30</value>
 			<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -3678,7 +3678,7 @@
 	<skill id="11047" toLevel="11" name="Ruin">
 		<!-- Attacks the target with $s1 Power added to M. Atk. P./ M. Skill Power -$s3, P./ M. Def. -$s4 and Speed -$s5 for $s2 -->
 		<icon>icon.skill11047</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -3690,7 +3690,7 @@
 			<value level="9">5</value>
 			<value level="10">5</value>
 			<value level="11">5</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>
@@ -3807,7 +3807,7 @@
 	<skill id="11048" toLevel="11" name="Mass Ruin">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to M. Atk. P./ M. Skill Power -$s3, P./ M. Def. -$s4 and Speed -$s5 for $s2 -->
 		<icon>icon.skill11048</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>
@@ -3972,7 +3972,7 @@
 	<skill id="11050" toLevel="9" name="Hell Binding">
 		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -4059,7 +4059,7 @@
 	<skill id="11051" toLevel="7" name="Hell Binding">
 		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11050</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -4144,7 +4144,7 @@
 			<value fromLevel="1" toLevel="9">100</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -4289,7 +4289,7 @@
 	<skill id="11054" toLevel="1" name="Yoke Status">
 		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1042</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
@@ -4344,7 +4344,7 @@
 	<skill id="11055" toLevel="12" name="Death Fear">
 		<!-- Inflicts fear on the target for $s1 Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11055</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -4455,7 +4455,7 @@
 	<skill id="11056" toLevel="13" name="Mass Death Fear">
 		<!-- Inflicts fear on the target and nearby enemies for $s1 Their speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11056</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -4573,7 +4573,7 @@
 	<skill id="11057" toLevel="11" name="Magical Evasion">
 		<!-- Attacks nearby enemies with $s1 magic power, inflicting stun and cancelling their targets. Teleports you to the back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11057</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -4729,7 +4729,7 @@
 		<!-- Pulls nearby enemies to the center. Inflicted status: Danger Zone. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DERANGEMENT</abnormalType>
 		<activateRate>50</activateRate>
 		<affectLimit>5-12</affectLimit>
@@ -4768,7 +4768,7 @@
 	<skill id="11062" toLevel="4" name="Air Rider">
 		<!-- For $s1, increases Speed by $s2. The effect disappears when attacked. -->
 		<icon>icon.skill11062</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">15</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
@@ -4931,7 +4931,7 @@
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
 		<!-- For 20 sec., reflects 10% of the received damage. Received damage -90%, blocks the rest by consuming MP. The effect is cancelled when MP drops to 0. -->
 		<icon>icon.skill11065</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">20</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
@@ -4974,7 +4974,7 @@
 	<skill id="11066" toLevel="6" name="Arcane Comet Strike">
 		<!-- Inflicts M. Atk. of $s1 power on the target and the enemies in the route. Additionally, decreases Speed by $s3 for $s2 Decreases 15 sec. from the remaining cooldown if Mana Burst level increases. Over-hit is possible. -->
 		<icon>icon.skill11066</icon>
-		<abnormalLvl>7</abnormalLvl>
+		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<activateRate>
@@ -5054,7 +5054,7 @@
 	<skill id="11067" toLevel="6" name="Quadruple Elemental Blast">
 		<!-- Attacks the target and nearby enemies with M. Atk. of $s1. And for $s2, deals damage over time with $s3 Power added to M. Atk. and inflicts Knock Down on the enemies. Over-hit is possible. Available at Mana Burst Stage 4. -->
 		<icon>icon.skill11067</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -5155,7 +5155,7 @@
 	<skill id="11068" toLevel="4" name="Burst Casting">
 		<!-- For $s1, decreases magic skill MP Consumption by $s2 and magic skill Cooldown by $s3. Eliminates magic cancel during magic use. M. Atk. and Casting Spd. increase with the level of Mana Burst. -->
 		<icon>icon.skill11068</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DC_MOD</abnormalType>
 		<operateType>A2</operateType>
@@ -5403,7 +5403,7 @@
 	<skill id="11077" toLevel="3" name="Elemental Spike - Decrease Fire Resistance">
 		<!-- Decreases Fire resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -5439,7 +5439,7 @@
 	<skill id="11078" toLevel="3" name="Elemental Spike - Decrease Water Resistance">
 		<!-- Decreases Water resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -5475,7 +5475,7 @@
 	<skill id="11079" toLevel="3" name="Elemental Spike - Decrease Wind Resistance">
 		<!-- Decreases Wind resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -5511,7 +5511,7 @@
 	<skill id="11080" toLevel="3" name="Elemental Spike - Decrease Earth Resistance">
 		<!-- Decreases Earth resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -5545,7 +5545,7 @@
 	<skill id="11081" toLevel="3" name="Elemental Spike - Decrease Holy Resistance">
 		<!-- Decreases Holy Attribute Resistance by $s2 for $s1 -->
 		<icon>icon.skill11011</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">7</value>
 			<value level="2">7</value>
@@ -5666,7 +5666,7 @@
 	<skill id="11087" toLevel="3" name="Elemental Crash (Fire)">
 		<!-- Inflicts fear on the target immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -5710,7 +5710,7 @@
 	<skill id="11088" toLevel="3" name="Elemental Crash (Water)">
 		<!-- Decreases target's Speed. -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -5742,7 +5742,7 @@
 	<skill id="11089" toLevel="3" name="Elemental Crash (Wind)">
 		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -5767,7 +5767,7 @@
 	<skill id="11090" toLevel="3" name="Elemental Crash (Earth)">
 		<!-- Holds the target with a certain chance. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -5793,7 +5793,7 @@
 	<skill id="11091" toLevel="3" name="Elemental Crash (4 Elements)">
 		<!-- Stuns the target with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11017</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -5821,7 +5821,7 @@
 	<skill id="11092" toLevel="3" name="Damaged Area">
 		<!-- Damage over time, Speed is decreased. -->
 		<icon>icon.skill11032</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -5860,7 +5860,7 @@
 	<skill id="11093" toLevel="1" name="Crystal Form">
 		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for 10 sec. and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -5903,7 +5903,7 @@
 	<skill id="11094" toLevel="11" name="Magical Charge">
 		<!-- Attacks nearby enemies with $s1 magic power, inflicting stun and cancelling their targets. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11094</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>

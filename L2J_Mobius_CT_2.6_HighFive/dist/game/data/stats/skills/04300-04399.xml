@@ -122,7 +122,7 @@
 		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
@@ -167,9 +167,9 @@
 		</for>
 	</skill>
 	<skill id="4317" levels="5" name="Increase Rage Might">
-		<table name="#abnormalLvls">1 2 3 4 5</table>
+		<table name="#abnormalLevels">1 2 3 4 5</table>
 		<table name="#pAtk">1.15 1.2 1.25 1.3 1.35</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="RAGE_MIGHT" />
 		<set name="effectPoint" val="100" />
@@ -185,7 +185,7 @@
 		</for>
 	</skill>
 	<skill id="4318" levels="1" name="Ultimate Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="abnormalVisualEffect" val="BIG_BODY" />
@@ -208,7 +208,7 @@
 	</skill>
 	<skill id="4319" levels="1" name="Paralysis">
 		<!-- Paralyzes a target, instantly immobilizing it. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
@@ -230,11 +230,11 @@
 	</skill>
 	<skill id="4320" levels="12" name="Poison">
 		<!-- A toxin that gradually reduces HP. Effect 2. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dot">16 24 32 41 50 58 63 63 66 66 68 68</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 83 77 78</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -257,7 +257,7 @@
 	</skill>
 	<skill id="4321" levels="1" name="Decrease P. Def">
 		<!-- Temporarily but significantly reduces P. Def. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="1500" />
@@ -278,7 +278,7 @@
 	</skill>
 	<skill id="4322" levels="1" name="Wind Walk for Beginners">
 		<!-- Increases movement speed by 33 for 60 minutes. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
@@ -296,7 +296,7 @@
 	</skill>
 	<skill id="4323" levels="1" name="Shield for Beginners">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="400" />
@@ -314,7 +314,7 @@
 	</skill>
 	<skill id="4324" levels="1" name="Bless the Body for Beginners">
 		<!-- Increases Max HP by 35% for 60 minutes. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
@@ -332,7 +332,7 @@
 	</skill>
 	<skill id="4325" levels="1" name="Vampiric Rage for Beginners">
 		<!-- For 60 minutes, 9% of standard short-range physical damage inflicted on the enemy is recovered as HP. -->
-		<set name="abnormalLvl" val="5" />
+		<set name="abnormalLevel" val="5" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
@@ -350,7 +350,7 @@
 	</skill>
 	<skill id="4326" levels="1" name="Regeneration for Beginners">
 		<!-- Increases HP regeneration bonus by 20% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="castRange" val="400" />
@@ -368,7 +368,7 @@
 	</skill>
 	<skill id="4327" levels="1" name="Haste for Beginners">
 		<!-- Increases Atk. Spd. by 15% for 60 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -386,7 +386,7 @@
 	</skill>
 	<skill id="4328" levels="1" name="Bless the Soul for Beginners">
 		<!-- Increases Max MP by 35% for 60 minutes. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
@@ -404,7 +404,7 @@
 	</skill>
 	<skill id="4329" levels="1" name="Acumen for Beginners">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -422,7 +422,7 @@
 	</skill>
 	<skill id="4330" levels="1" name="Concentration for Beginners">
 		<!-- Decreases magic cancel damage by 18 for 60 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
@@ -440,7 +440,7 @@
 	</skill>
 	<skill id="4331" levels="1" name="Empower for Beginners">
 		<!-- Increases M. Atk. by 55% for 60 minutes. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
@@ -554,7 +554,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4340" levels="1" name="Ultimate Buff, 2nd">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="abnormalVisualEffect" val="BIG_BODY" />
@@ -570,7 +570,7 @@
 		</for>
 	</skill>
 	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="abnormalVisualEffect" val="BIG_BODY" />
@@ -588,10 +588,10 @@
 	</skill>
 	<skill id="4342" levels="2" name="Clan Hall: Wind Walk">
 		<!-- Temporarily increases movement speed. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#mpConsume">50 100</table>
 		<table name="#runSpd">20 33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
@@ -610,10 +610,10 @@
 	</skill>
 	<skill id="4343" levels="3" name="Clan Hall: Decrease Weight">
 		<!-- Reduces current weight. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">50 0 100</table>
 		<table name="#Weight">3000 6000 9000</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
 		<set name="castRange" val="400" />
@@ -632,11 +632,11 @@
 	</skill>
 	<skill id="4344" levels="3" name="Clan Hall: Shield">
 		<!-- Temporarily increases P. Def. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLvl">7 25 44</table>
 		<table name="#mpConsume">50 0 100</table>
 		<table name="#rate">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="400" />
@@ -655,10 +655,10 @@
 	</skill>
 	<skill id="4345" levels="3" name="Clan Hall: Might">
 		<!-- Temporarily increases P. Atk. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">50 0 100</table>
 		<table name="#rate">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
@@ -677,10 +677,10 @@
 	</skill>
 	<skill id="4346" levels="4" name="Clan Hall: Mental Shield">
 		<!-- Temporarily increases Resistance to Hold, Sleep, Fear, and Mental attacks. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4</table>
+		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#mpConsume">50 0 0 100</table>
 		<table name="#traits">20 30 40 50</table> <!-- TODO: Freya retail has still old values (50 60 70 80) here, retail bug? -->
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
 		<set name="castRange" val="400" />
@@ -701,10 +701,10 @@
 	</skill>
 	<skill id="4347" levels="6" name="Clan Hall: Blessed Body">
 		<!-- Temporarily increases maximum HP. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<table name="#mpConsume">0 150 0 0 0 300</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
@@ -723,10 +723,10 @@
 	</skill>
 	<skill id="4348" levels="6" name="Clan Hall: Blessed Soul">
 		<!-- Temporarily increases maximum MP. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#maxMp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<table name="#mpConsume">0 150 0 0 0 300</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
@@ -745,10 +745,10 @@
 	</skill>
 	<skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
 		<!-- Temporarily increases M. Def. Effect 2. -->
-		<table name="#abnormalLvls">2 3</table>
+		<table name="#abnormalLevels">2 3</table>
 		<table name="#mDef">1.23 1.3</table>
 		<table name="#mpConsume">150 300</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="castRange" val="400" />
@@ -767,10 +767,10 @@
 	</skill>
 	<skill id="4350" levels="4" name="Clan Hall: Resist Shock">
 		<!-- Temporarily provides powerful resistance against Stun Attack. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4</table>
+		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#mpConsume">150 0 0 300</table>
 		<table name="#trait_shock">15 20 30 40</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_SHOCK" />
 		<set name="castRange" val="400" />
@@ -789,10 +789,10 @@
 	</skill>
 	<skill id="4351" levels="6" name="Clan Hall: Concentration">
 		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#cancel">18 25 36 42 48 53</table>
 		<table name="#mpConsume">0 200 0 0 0 400</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
@@ -811,7 +811,7 @@
 	</skill>
 	<skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
 		<!-- Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#mAtk">1.1 1.16</table>
 		<table name="#mAtkSpd">1.05 1.08</table>
 		<table name="#mDef">0.9 0.84</table>
@@ -821,7 +821,7 @@
 		<table name="#pDef">0.95 0.92</table>
 		<table name="#rEvas">2 4</table>
 		<table name="#runSpd">5 8</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />
@@ -847,10 +847,10 @@
 	</skill>
 	<skill id="4353" levels="6" name="Clan Hall: Bless Shield">
 		<!-- Temporarily increases shield defense rate. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6</table>
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#mpConsume">0 200 0 0 0 400</table>
 		<table name="#rShld">1.05 1.1 1.15 1.2 1.25 1.3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
 		<set name="castRange" val="400" />
@@ -869,10 +869,10 @@
 	</skill>
 	<skill id="4354" levels="4" name="Clan Hall: Vampiric Rage">
 		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or remote attack. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 4</table>
+		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#absorbDam">6 7 8 9</table>
 		<table name="#mpConsume">200 0 0 400</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
@@ -891,10 +891,10 @@
 	</skill>
 	<skill id="4355" levels="3" name="Clan Hall: Acumen">
 		<!-- Temporarily increases Casting Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mAtkSpd">1.15 1.23 1.3</table>
 		<table name="#mpConsume">300 0 600</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -913,10 +913,10 @@
 	</skill>
 	<skill id="4356" levels="3" name="Clan Hall: Empower">
 		<!-- Temporarily increases M. Atk. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mAtk">1.55 1.65 1.75</table>
 		<table name="#mpConsume">300 0 600</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
@@ -935,10 +935,10 @@
 	</skill>
 	<skill id="4357" levels="2" name="Clan Hall: Haste">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#mpConsume">300 600</table>
 		<table name="#pAtkSpd">1.15 1.33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
@@ -957,10 +957,10 @@
 	</skill>
 	<skill id="4358" levels="3" name="Clan Hall: Guidance">
 		<!-- Temporarily increases Accuracy. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">2 3 4</table>
 		<table name="#mpConsume">200 0 400</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
@@ -979,10 +979,10 @@
 	</skill>
 	<skill id="4359" levels="3" name="Clan Hall: Focus">
 		<!-- Temporarily increases critical attack rate. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">300 0 600</table>
 		<table name="#rCrit">1.2 1.25 1.3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="castRange" val="400" />
@@ -1001,10 +1001,10 @@
 	</skill>
 	<skill id="4360" levels="3" name="Clan Hall: Death Whisper">
 		<!-- Temporarily increases critical attack power. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#cAtk">1.25 1.3 1.35</table>
 		<table name="#mpConsume">300 0 600</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
@@ -1023,9 +1023,9 @@
 	</skill>
 	<skill id="4361" levels="2" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily decreases Accuracy. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#traits">0 50</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SSQ_TOWN_CURSE" />
 		<set name="canBeDispeled" val="false" />
@@ -1050,9 +1050,9 @@
 	</skill>
 	<skill id="4362" levels="2" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily decreases Casting Spd. Effect 2. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#traits">0 50</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SSQ_TOWN_CURSE" />
 		<set name="canBeDispeled" val="false" />
@@ -1077,7 +1077,7 @@
 	</skill>
 	<skill id="4363" levels="1" name="Curse of Destruction">
 		<!-- Curse of the Preacher of Doom. Temporarily decreases Accuracy. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_DOWN" />
 		<set name="castRange" val="600" />
@@ -1096,9 +1096,9 @@
 	</skill>
 	<skill id="4364" levels="2" name="Blessing of Revelations">
 		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Resistance to Poison/Bleed attacks. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#traits">0 25</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SSQ_TOWN_BLESSING" />
 		<set name="canBeDispeled" val="false" />
@@ -1124,9 +1124,9 @@
 	</skill>
 	<skill id="4365" levels="2" name="Blessing of Revelations">
 		<!-- Blessing of the Orator of Revelations. Temporarily increases your Resistance to Hold/Mental attacks and lessens the probability of magic cancellation due to damage. Effect 1. -->
-		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalLevels">1 2</table>
 		<table name="#traits">0 25</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SSQ_TOWN_BLESSING" />
 		<set name="canBeDispeled" val="false" />
@@ -1151,7 +1151,7 @@
 	</skill>
 	<skill id="4366" levels="1" name="Blessing of Prophecy">
 		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Resistance to Poison/Bleed attacks. Effect 1. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
 		<set name="canBeDispeled" val="false" />
@@ -1173,7 +1173,7 @@
 		</for>
 	</skill>
 	<skill id="4367" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1187,7 +1187,7 @@
 		</for>
 	</skill>
 	<skill id="4368" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1202,7 +1202,7 @@
 		</for>
 	</skill>
 	<skill id="4369" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1217,7 +1217,7 @@
 		</for>
 	</skill>
 	<skill id="4370" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1232,7 +1232,7 @@
 		</for>
 	</skill>
 	<skill id="4371" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1247,7 +1247,7 @@
 		</for>
 	</skill>
 	<skill id="4372" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1262,7 +1262,7 @@
 		</for>
 	</skill>
 	<skill id="4373" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1277,7 +1277,7 @@
 		</for>
 	</skill>
 	<skill id="4374" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1292,7 +1292,7 @@
 		</for>
 	</skill>
 	<skill id="4375" levels="1" name="Clan Hall Manager Buff">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1341,7 +1341,7 @@
 		<!-- Momentarily reflect some of the received damage back to the enemy. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="effectPoint" val="1" />
@@ -1396,7 +1396,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
@@ -1416,7 +1416,7 @@
 		</for>
 	</skill>
 	<skill id="4383" levels="1" name="NPC Hate Stone">
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="abnormalVisualEffect" val="FLESH_STONE" />
@@ -1437,7 +1437,7 @@
 	</skill>
 	<skill id="4384" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that lowers P. Def. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="600" />
@@ -1453,7 +1453,7 @@
 	</skill>
 	<skill id="4385" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that lowers P. Atk. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="castRange" val="600" />
@@ -1469,7 +1469,7 @@
 	</skill>
 	<skill id="4386" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against poison. -->
-		<set name="abnormalLvl" val="10" />
+		<set name="abnormalLevel" val="10" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
@@ -1485,7 +1485,7 @@
 	</skill>
 	<skill id="4387" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that diminishes the effect of HP recovery magic. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
 		<set name="castRange" val="600" />
@@ -1538,9 +1538,9 @@
 	</skill>
 	<skill id="4391" levels="2" name="Wind Walk">
 		<!-- Temporarily increases movement speed. Effect 1. -->
-		<table name="#abnormalLvls">2 3</table>
+		<table name="#abnormalLevels">2 3</table>
 		<table name="#runSpd">20 33</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
@@ -1559,9 +1559,9 @@
 	</skill>
 	<skill id="4392" levels="3" name="Shield">
 		<!-- Temporarily increases P. Def. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4</table>
+		<table name="#abnormalLevels">2 3 4</table>
 		<table name="#rate">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="400" />
@@ -1580,9 +1580,9 @@
 	</skill>
 	<skill id="4393" levels="3" name="Might">
 		<!-- Temporarily increases P. Atk. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4</table>
+		<table name="#abnormalLevels">2 3 4</table>
 		<table name="#pAtk">1.08 1.12 1.15</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
@@ -1600,9 +1600,9 @@
 	</skill>
 	<skill id="4394" levels="6" name="Blessed Body">
 		<!-- Temporarily increases maximum HP. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7</table>
 		<table name="#maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
@@ -1620,9 +1620,9 @@
 	</skill>
 	<skill id="4395" levels="6" name="Blessed Soul">
 		<!-- Temporarily increases maximum MP. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7</table>
 		<table name="#maxMp">1.1 1.15 1.2 1.25 1.3 1.35</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
@@ -1640,9 +1640,9 @@
 	</skill>
 	<skill id="4396" levels="2" name="Magic Barrier">
 		<!-- Temporarily increases M. Def. Effect 2. -->
-		<table name="#abnormalLvls">3 4</table>
+		<table name="#abnormalLevels">3 4</table>
 		<table name="#mDef">1.23 1.3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="castRange" val="400" />
@@ -1660,7 +1660,7 @@
 	</skill>
 	<skill id="4397" levels="2" name="Berserker Spirit">
 		<!-- Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 1. -->
-		<table name="#abnormalLvls">2 3</table>
+		<table name="#abnormalLevels">2 3</table>
 		<table name="#mAtk">1.1 1.16</table>
 		<table name="#mAtkSpd">1.05 1.08</table>
 		<table name="#mDef">0.9 0.84</table>
@@ -1669,7 +1669,7 @@
 		<table name="#pDef">0.95 0.92</table>
 		<table name="#rEvas">2 4</table>
 		<table name="#runSpd">5 8</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />
@@ -1694,9 +1694,9 @@
 	</skill>
 	<skill id="4398" levels="6" name="Bless Shield">
 		<!-- Temporarily increases the probability of shield defense. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7</table>
+		<table name="#abnormalLevels">2 3 4 5 6 7</table>
 		<table name="#rShld">1.05 1.1 1.15 1.2 1.25 1.3</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
 		<set name="castRange" val="400" />
@@ -1714,9 +1714,9 @@
 	</skill>
 	<skill id="4399" levels="4" name="Vampiric Rage">
 		<!-- Temporarily restores HP using damage inflicted upon the enemy. Excludes damage inflicted by skill or remote attack. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4 5</table>
+		<table name="#abnormalLevels">2 3 4 5</table>
 		<table name="#absorbDam">6 7 8 9</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />

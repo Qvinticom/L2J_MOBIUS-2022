@@ -58,7 +58,7 @@
 	<skill id="1904" toLevel="2" name="Unbind">
 		<!-- Cancels all debuffs and renders immune for $s1. -->
 		<icon>icon.skill1904</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">12</value>
@@ -124,7 +124,7 @@
 	<skill id="1907" toLevel="2" name="Prevision">
 		<!-- For $s1., P. Evasion/ M. Evasion + $s2, and Speed + $s3. -->
 		<icon>icon.skill1907</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RACE_ELF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -234,7 +234,7 @@
 	<skill id="1912" toLevel="2" name="Disparition">
 		<!-- Cancels all your debuffs. For $s1, you cannot be targeted. -->
 		<icon>icon.skill1912</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -281,7 +281,7 @@
 	<skill id="1914" toLevel="2" name="Savage">
 		<!-- For $s1, P. Atk. + $s2, M. Atk. + $s3, Atk. Spd., + $s4, and Casting Spd. + $s5. P. Def. / M. Def. - $s6. -->
 		<icon>icon.skill1914</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -385,7 +385,7 @@
 	<skill id="1918" toLevel="2" name="Undying Will">
 		<!-- Becomes invincible. -->
 		<icon>icon.skill1917</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RACE_ORC2</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -452,7 +452,7 @@
 	<skill id="1920" toLevel="2" name="Endurance">
 		<!-- For $s1, reflects $s2 of received damage to attacker and recovers s3 HP every second. -->
 		<icon>icon.skill1920</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">7</value>
@@ -495,7 +495,7 @@
 	<skill id="1922" toLevel="2" name="Earth Tremor">
 		<!-- Knocks Down nearby enemies for $s1, and decreases their P. Def./ M. Def. by $s2. -->
 		<icon>icon.skill1922</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">5</value>
@@ -583,7 +583,7 @@
 	<skill id="1925" toLevel="2" name="Soul Protection">
 		<!-- For $s1, blocks debuff attacks $s2. -->
 		<icon>icon.skill1925</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -653,7 +653,7 @@
 	<skill id="1926" toLevel="1" name="Body Reinforcement">
 		<!-- For 5 minutes, transforms into ultimate combat form. -->
 		<icon>icon.skill1926</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -703,7 +703,7 @@
 	<skill id="1928" toLevel="1" name="Sigel Force">
 		<!-- P. Atk. + 1%. -->
 		<icon>icon.icon_sigel_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_SIGEL</abnormalType>
 		<affectRange>1600</affectRange>
@@ -756,7 +756,7 @@
 	<skill id="1930" toLevel="1" name="Tyrr Force">
 		<!-- P. Critical Rate + 1%. -->
 		<icon>icon.icon_tir_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_TIR</abnormalType>
 		<affectRange>1600</affectRange>
@@ -800,7 +800,7 @@
 	<skill id="1932" toLevel="1" name="Othell Force">
 		<!-- Atk. Spd. + 1%. -->
 		<icon>icon.icon_othel_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_OTHEL</abnormalType>
 		<affectRange>1600</affectRange>
@@ -844,7 +844,7 @@
 	<skill id="1934" toLevel="1" name="Yul Force">
 		<!-- MP Recovery Bonus + 50%. -->
 		<icon>icon.icon_yr_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_YR</abnormalType>
 		<affectRange>1600</affectRange>
@@ -888,7 +888,7 @@
 	<skill id="1936" toLevel="1" name="Feoh Force">
 		<!-- Casting Spd. + 1%. -->
 		<icon>icon.icon_feoh_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_FEOH</abnormalType>
 		<affectRange>1600</affectRange>
@@ -932,7 +932,7 @@
 	<skill id="1938" toLevel="1" name="Wynn Force">
 		<!-- P./M. Skill MP Consumption - 3%. -->
 		<icon>icon.icon_wynn_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_WYNN</abnormalType>
 		<affectRange>1600</affectRange>
@@ -982,7 +982,7 @@
 	<skill id="1940" toLevel="1" name="Aeore Force">
 		<!-- M. Atk. + 1%. -->
 		<icon>icon.icon_eolh_01</icon>
-		<abnormallVL>1</abnormallVL>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_EOLH</abnormalType>
 		<affectRange>1600</affectRange>
@@ -1189,7 +1189,7 @@
 	<skill id="1954" toLevel="1" name="Flying Body Reinforcement">
 		<!-- Transforms into final flying combat form. -->
 		<icon>icon.skill0840</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>TRANSFORM</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
@@ -1260,11 +1260,11 @@
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1879,7 +1879,7 @@
 	<skill id="1975" toLevel="1" name="Dual - Berserker's Rage">
 		<!-- P. Atk. + 27% for 15 sec. -->
 		<icon>icon.dual_t_atkup</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_ATTACK_UP</abnormalType>
 		<magicLvl>99</magicLvl>
@@ -1919,7 +1919,7 @@
 	<skill id="1977" toLevel="1" name="Dual - Master's Rage">
 		<!-- Skill Power + 27% for 15 sec. -->
 		<icon>icon.dual_t_skup</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_SKILL_UP</abnormalType>
 		<operateType>A2</operateType>
@@ -1967,7 +1967,7 @@
 	<skill id="1979" toLevel="1" name="Dual - Light of Protection">
 		<!-- P. Def./ M. Def. + 40% for 15 sec. -->
 		<icon>icon.dual_t_dmgdef</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_DEFENCE_UP</abnormalType>
 		<magicLvl>99</magicLvl>
@@ -2030,7 +2030,7 @@
 	<skill id="1982" toLevel="1" name="Dual - Shackles of the Giants">
 		<!-- Blocks target's Physical Skills for 5 sec. Can only use on PCs. -->
 		<icon>icon.dual_a_pblock</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2071,7 +2071,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
@@ -2099,7 +2099,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>HOLD</trait>
 		<affectRange>200</affectRange>
@@ -2131,7 +2131,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -2370,10 +2370,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<isDebuff>true</isDebuff>
@@ -2395,7 +2395,7 @@
 	<skill id="1997" toLevel="2" name="Gravity Exile">
 		<!-- For $s1, blocks target from being resurrected by another character. -->
 		<icon>icon.skill1997</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
 		<operateType>A2</operateType>

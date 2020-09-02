@@ -1140,8 +1140,8 @@
 		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
 		<table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<table name="#abnormalLvl">2 3 4 5 6 7 8 8 9 9 10 10</table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<table name="#abnormalLevel">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<set name="abnormalLevel" val="#abnormalLevel" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1214,8 +1214,8 @@
 		<table name="#mpConsume">24 39 54 73 94 116 136 144 152 158 161 163</table>
 		<table name="#dmg">36 54 72 93 114 132 144 144 150 150 153 153</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<table name="#abnormalLvl">2 3 4 5 6 7 8 8 9 9 10 10</table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<table name="#abnormalLevel">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<set name="abnormalLevel" val="#abnormalLevel" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1230,7 +1230,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectType" val="POISON" />
-		<set name="effectLevel" val="#abnormalLvl" />
+		<set name="effectLevel" val="#abnormalLevel" />
 		<set name="effectRange" val="200" />
 		<for>
 			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison" />
@@ -1589,8 +1589,8 @@
 		<table name="#mpConsume">29 47 64 88 113 138 162 173 180 188 192 194</table>
 		<table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<table name="#abnormalLvl">2 3 4 5 6 7 8 8 9 9 10 10</table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<table name="#abnormalLevel">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<set name="abnormalLevel" val="#abnormalLevel" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1616,8 +1616,8 @@
 		<table name="#mpConsume">20 34 47 63 82 100 117 124 130 135 138 140</table>
 		<table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<table name="#abnormalLvl">2 3 4 5 6 7 8 8 9 9 10 10</table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<table name="#abnormalLevel">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<set name="abnormalLevel" val="#abnormalLevel" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1643,8 +1643,8 @@
 		<table name="#mpConsume">20 34 47 63 82 100 117 124 130 135 138 140</table>
 		<table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<table name="#abnormalLvl">2 3 4 5 6 7 8 8 9 9 10 10</table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<table name="#abnormalLevel">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<set name="abnormalLevel" val="#abnormalLevel" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />

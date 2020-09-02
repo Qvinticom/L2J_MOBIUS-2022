@@ -96,7 +96,7 @@
 		<icon>icon.skill0763</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>G_EV_BUFF1</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -765,7 +765,7 @@
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MULTI</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -814,7 +814,7 @@
 		<!-- For 5 min. Max HP+10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>STRAWBERRY_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -857,7 +857,7 @@
 		<!-- For 5 min. MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. -->
 		<icon>icon.etc_fruit_cocktail_i03</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MONGO_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -895,7 +895,7 @@
 		<!-- For 5 min. P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>CHERRY_FRUIT</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1115,7 +1115,7 @@
 	<skill id="55361" toLevel="1" name="Superspeed Potion">
 		<!-- Greatly increases Speed for a short period of time. -->
 		<icon>icon.etc_potion_red_i00</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

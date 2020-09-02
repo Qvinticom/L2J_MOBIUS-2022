@@ -233,7 +233,7 @@
 	</skill>
 	<skill id="617" levels="1" name="Transform Onyx Beast">
 		<!-- Transform into an Onyx Beast. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -257,7 +257,7 @@
 	</skill>
 	<skill id="618" levels="1" name="Transform Death Blader">
 		<!-- Transform into a Death Blader. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -351,7 +351,7 @@
 		<table name="#pSkillEvas">0 25</table>
 		<table name="#rEvas">20 35</table>
 		<table name="#runSpd">33 66</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="AVOID_UP_SPECIAL" />
 		<set name="effectPoint" val="408" />
@@ -482,7 +482,7 @@
 		<table name="#ench3AbnormalTimes">4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33</table>
 		<table name="#ench4ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -976,7 +976,7 @@
 	<skill id="656" levels="3" name="Transform Divine Warrior">
 		<!-- Transforms you into a Divine Warrior. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1002,7 +1002,7 @@
 	<skill id="657" levels="3" name="Transform Divine Knight">
 		<!-- Transforms you into a Divine Knight. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1028,7 +1028,7 @@
 	<skill id="658" levels="3" name="Transform Divine Rogue">
 		<!-- Transforms you into a Divine Rogue. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1054,7 +1054,7 @@
 	<skill id="659" levels="3" name="Transform Divine Wizard">
 		<!-- Transforms you into a Divine Wizard. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1080,7 +1080,7 @@
 	<skill id="660" levels="3" name="Transform Divine Summoner">
 		<!-- Transforms you into a Divine Summoner. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1106,7 +1106,7 @@
 	<skill id="661" levels="3" name="Transform Divine Healer">
 		<!-- Transforms you into a Divine Healer. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1132,7 +1132,7 @@
 	<skill id="662" levels="3" name="Transform Divine Enchanter">
 		<!-- Transforms you into a Divine Enchanter. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="effectPoint" val="1" />
@@ -1157,7 +1157,7 @@
 	</skill>
 	<skill id="663" levels="1" name="Transform Zaken">
 		<!-- Transforms you into Zaken. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1182,7 +1182,7 @@
 	</skill>
 	<skill id="664" levels="1" name="Transform Anakim">
 		<!-- Transforms you into Anakin. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1207,7 +1207,7 @@
 	</skill>
 	<skill id="665" levels="1" name="Transform Venom">
 		<!-- Transforms you into Venom. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1232,7 +1232,7 @@
 	</skill>
 	<skill id="666" levels="1" name="Transform Gordon">
 		<!-- Transforms you into Gordon. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1257,7 +1257,7 @@
 	</skill>
 	<skill id="667" levels="1" name="Transform Ranku">
 		<!-- Transforms you into Ranku. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1282,7 +1282,7 @@
 	</skill>
 	<skill id="668" levels="1" name="Transform Kechi">
 		<!-- Transforms you into Kechi. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1307,7 +1307,7 @@
 	</skill>
 	<skill id="669" levels="1" name="Transform Demon Prince">
 		<!-- Transforms you into a Demon Prince. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1332,7 +1332,7 @@
 	</skill>
 	<skill id="670" levels="1" name="Transform Heretic">
 		<!-- Transforms you into a Heretic. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1357,7 +1357,7 @@
 	</skill>
 	<skill id="671" levels="1" name="Transform Vale Master">
 		<!-- Transforms you into a Veil Master. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1382,7 +1382,7 @@
 	</skill>
 	<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
 		<!-- Transforms you into a Saber Tooth Tiger. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1407,7 +1407,7 @@
 	</skill>
 	<skill id="673" levels="1" name="Transform Oel Mahum">
 		<!-- Transforms you into Oel Mahum. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1432,7 +1432,7 @@
 	</skill>
 	<skill id="674" levels="1" name="Transform Doll Blader">
 		<!-- Transforms you into a Doll Blader. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
@@ -1517,7 +1517,7 @@
 	</skill>
 	<skill id="678" levels="1" name="Divine Warrior War Cry">
 		<!-- Increases P. Atk. by 25% for 1 minute. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />
 		<set name="effectPoint" val="408" />
@@ -1536,7 +1536,7 @@
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
 		<!-- Sacrifices oneself to increase P. Atk. of all party members by 20% for 30 seconds. Available only when HP is under 30%. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
@@ -1565,7 +1565,7 @@
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
 		<!-- Provokes the enemy to attack with 6752 Power. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="80" />
@@ -1589,7 +1589,7 @@
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
 		<!-- Provokes nearby enemies to attack by 6752 Power. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="40" />
@@ -1612,7 +1612,7 @@
 	</skill>
 	<skill id="682" levels="1" name="Divine Knight Stun Attack">
 		<!-- Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit is possible. Power 1162. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1642,7 +1642,7 @@
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
 		<!-- Inflicts shock and damage to the enemies nearby at the same time. Instantly makes nearby enemies shocked. Ignores Shield Defense. Over-hit is possible. Power 775. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1672,7 +1672,7 @@
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
 		<!-- Instantly and drastically increases Resistance to P. Def./M. Def., buff cancel attacks. The player cannot move while the effect lasts. Effect 2. -->
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
@@ -1694,7 +1694,7 @@
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
 		<!-- Increases P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
@@ -1723,7 +1723,7 @@
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
 		<!-- Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Momentarily stuns target. Over-hit is possible. Power 2323. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -1775,7 +1775,7 @@
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
 		<!-- Causes injury by deadly attacks. Instantly causes the enemies to bleed. Over-hit is possible. Power 1549. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -1831,7 +1831,7 @@
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
 		<!-- Temporarily increase Evasion by 4. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="castRange" val="400" />
@@ -1853,7 +1853,7 @@
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
 		<!-- Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
@@ -1882,7 +1882,7 @@
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
 		<!-- Attacks a contacted target with non-attribute attack. Temporarily decreases your M. Atk. during PvP. Power 102. -->
-		<set name="abnormalLvl" val="0" />
+		<set name="abnormalLevel" val="0" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MA_DOWN" />
 		<set name="castRange" val="150" />
@@ -1955,7 +1955,7 @@
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
 		<!-- Instantly bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
@@ -1987,7 +1987,7 @@
 	</skill>
 	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
 		<!-- Instantly decrease Resistance to Holy, and increase Resistance to Dark. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="80" />
@@ -2014,7 +2014,7 @@
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
 		<!-- Increase party member's M. Atk. by sacrificing yourself. Usable only when MP is under 10 percent. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />

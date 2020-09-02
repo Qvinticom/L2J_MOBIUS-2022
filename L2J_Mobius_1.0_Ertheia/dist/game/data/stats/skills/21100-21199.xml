@@ -3,7 +3,7 @@
 	<skill id="21100" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. -->
 		<icon>BranchSys.icon.br_maid_hairband_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -88,7 +88,7 @@
 	<skill id="21103" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. -->
 		<icon>BranchSys.icon.br_kungfupanda_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -126,7 +126,7 @@
 	<skill id="21104" toLevel="1" name="Appetite for Destruction">
 		<!-- For 30 seconds, awakens your destructive instincts and increases P. Atk., P. Critical Rate and P. Critical Damage by 50%. -->
 		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -249,7 +249,7 @@
 	<skill id="21111" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_headphone_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -287,7 +287,7 @@
 	<skill id="21112" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_headphone_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -325,7 +325,7 @@
 	<skill id="21113" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_headphone_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -364,7 +364,7 @@
 	<skill id="21114" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -402,7 +402,7 @@
 	<skill id="21115" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -440,7 +440,7 @@
 	<skill id="21116" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -479,7 +479,7 @@
 	<skill id="21117" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -521,7 +521,7 @@
 	<skill id="21118" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. receives the soul's help to increase Critical Damage by 20% and Critical Rate by 20%. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -563,7 +563,7 @@
 	<skill id="21119" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. receives the soul's help to increase the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Cooldown is 1 hour. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -635,7 +635,7 @@
 	<skill id="21122" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -679,7 +679,7 @@
 	<skill id="21123" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -723,7 +723,7 @@
 	<skill id="21124" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -767,7 +767,7 @@
 	<skill id="21125" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -811,7 +811,7 @@
 	<skill id="21126" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -855,7 +855,7 @@
 	<skill id="21127" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -899,7 +899,7 @@
 	<skill id="21128" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -943,7 +943,7 @@
 	<skill id="21129" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -987,7 +987,7 @@
 	<skill id="21130" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1042,7 +1042,7 @@
 	<skill id="21131" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1086,7 +1086,7 @@
 	<skill id="21132" toLevel="1" name="Shadow Ability">
 		<!-- For 2 minutes, decreases the user's Speed by 30%, and obtains the ability to prevent a monster's preemptive attack. Cooldown is 1 hour. -->
 		<icon>icon.skill5739</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -1166,7 +1166,7 @@
 	<skill id="21136" toLevel="1" name="Golden Jack O'Lantern's Authority">
 		<!-- For 10 minutes, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, and Speed by 30. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_golden_jack0_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1217,7 +1217,7 @@
 	<skill id="21137" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1261,7 +1261,7 @@
 	<skill id="21138" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1305,7 +1305,7 @@
 	<skill id="21139" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1349,7 +1349,7 @@
 	<skill id="21140" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1404,7 +1404,7 @@
 	<skill id="21141" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
 		<icon>icon.skill1528</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1631,7 +1631,7 @@
 	<skill id="21153" toLevel="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1657,7 +1657,7 @@
 	<skill id="21154" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_party_hat_mask_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1683,7 +1683,7 @@
 	<skill id="21155" toLevel="1" name="Scent of Flavorful Cheese">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases P. Critical Damage and P. Critical Rate by 20%. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_bigrat_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1725,7 +1725,7 @@
 	<skill id="21156" toLevel="1" name="Scent of Sweet Cheese">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Increases the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_goldrat_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1967,7 +1967,7 @@
 	<skill id="21169" toLevel="1" name="Transform Kadomas">
 		<!-- Transforms into a Kadomas. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -1996,7 +1996,7 @@
 	<skill id="21170" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour. -->
 		<icon>BranchSys.icon.br_party_mask_purple_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2022,7 +2022,7 @@
 	<skill id="21171" toLevel="1" name="Ride Jet Bike">
 		<!-- Ride a Jet Bike. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2052,7 +2052,7 @@
 	<skill id="21172" toLevel="1" name="Reinforced Authority - CON + 1 / STR + 1">
 		<!-- By enhance authority, CON + 1 / STR + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
 		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
@@ -2080,7 +2080,7 @@
 	<skill id="21173" toLevel="1" name="Reinforced Authority - WIT + 1 / INT + 1">
 		<!-- By enhance authority, WIT + 1 / INT + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
 		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
@@ -2108,7 +2108,7 @@
 	<skill id="21174" toLevel="1" name="Reinforced Authority - WIT + 1 / MEN + 1">
 		<!-- By enhance authority, WIT + 1 / MEN + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
 		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
@@ -2136,7 +2136,7 @@
 	<skill id="21175" toLevel="1" name="Reinforced Authority - CON + 1 / DEX + 1">
 		<!-- By enhance authority, CON + 1 / DEX + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
 		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
@@ -2413,7 +2413,7 @@
 	<skill id="21190" toLevel="1" name="Soul's Shield">
 		<!-- For 10 seconds, increases P. Def. and M. Def. by 60%. Consumes 500 energy. Cooldown 20 minutes. -->
 		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -2457,7 +2457,7 @@
 	<skill id="21192" toLevel="1" name="Silent Move">
 		<!-- For 2 minutes, blocks receive preemptive attacks from monsters. Decreases Speed by 40%. Cooldown is 4 hours. -->
 		<icon>BranchSys2.icon.br_fox_japan_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2487,7 +2487,7 @@
 	<skill id="21193" toLevel="1" name="Power of Guardian Deity">
 		<!-- Increases Critical Damage by 35% for 10 minutes. Cooldown is 1 hour. -->
 		<icon>BranchSys2.icon.br_paiwan_cap_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2525,7 +2525,7 @@
 	<skill id="21195" toLevel="1" name="Blessed Child Transformation Skill: Trejuo">
 		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2561,7 +2561,7 @@
 	<skill id="21196" toLevel="1" name="Blessed Child Transformation Skill: Sujin">
 		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
 		<icon>icon.skilltransform3</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2625,7 +2625,7 @@
 	<skill id="21198" toLevel="1" name="Silence of Loyalty">
 		<!-- Through the power of loyalty, increases party members' P. Def., M. Def. by 30%, P. Atk. by 20%, M. Atk. by 45%, and Speed by 30 for 5 minutes. Cooldown 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
 		<icon>BranchSys2.icon.br_pekingopera_mask_b_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<activateRate>0</activateRate>
@@ -2655,7 +2655,7 @@
 	<skill id="21199" toLevel="1" name="Vitality of Courage">
 		<!-- Restores Vitality by certain amount using the power of Excellence, and for 5 minutes, maintains the Vitality stage. Cooldown 30 minutes. Consumes 1 Proof of a Warrior and 2 Vitality Effects upon skill use. -->
 		<icon>BranchSys2.icon.br_pekingopera_mask_c_i00</icon>
-		<abnormalLvl>26</abnormalLvl>
+		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>

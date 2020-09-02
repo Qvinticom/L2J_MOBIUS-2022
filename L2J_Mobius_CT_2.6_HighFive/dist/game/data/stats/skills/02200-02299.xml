@@ -681,7 +681,7 @@
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
 		<!-- Amulet: Protection of Valakas. Increases one's Resistance to attack when Valakas' attacks with its front claws. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VALAKAS_ITEM" />
 		<set name="hitTime" val="1000" />
@@ -701,7 +701,7 @@
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
 		<!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VALAKAS_ITEM" />
 		<set name="hitTime" val="1000" />
@@ -736,7 +736,7 @@
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
 		<!-- Temporarily stuns and immobilizes. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -853,7 +853,7 @@
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
 		<!-- Turns target to stone. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="abnormalVisualEffect" val="FLESH_STONE" />
@@ -991,7 +991,7 @@
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
 		<!-- Herb increases P. Atk. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP_HERB" />
 		<set name="effectPoint" val="100" />
@@ -1018,7 +1018,7 @@
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
 		<!-- Herb increases M. Atk. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP_HERB" />
 		<set name="effectPoint" val="100" />
@@ -1040,7 +1040,7 @@
 	</skill>
 	<skill id="2248" levels="1" name="Bless of Fire">
 		<!-- Causes normal physical attacks to become fire attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1061,7 +1061,7 @@
 	</skill>
 	<skill id="2249" levels="1" name="Bless of Water">
 		<!-- Causes normal physical attacks to become water attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -1082,7 +1082,7 @@
 	</skill>
 	<skill id="2250" levels="1" name="Bless of Wind">
 		<!-- Causes normal physical attacks to become wind attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="2" /> <!-- Wind -->
@@ -1103,7 +1103,7 @@
 	</skill>
 	<skill id="2251" levels="1" name="Bless of Earth">
 		<!-- Causes normal physical attacks to become earth attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -1124,7 +1124,7 @@
 	</skill>
 	<skill id="2252" levels="1" name="Bless of Darkness">
 		<!-- Causes normal physical attacks to become dark attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1145,7 +1145,7 @@
 	</skill>
 	<skill id="2253" levels="1" name="Bless of Sacredness">
 		<!-- Causes normal physical attacks to become sacred attacks. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -1592,7 +1592,7 @@
 		<table name="#active_skill_id_lvl">1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25</table>
 		<table name="#icons">icon.etc_oblivion_green_i00 icon.etc_oblivion_jade_i00 icon.etc_oblivion_blue_i00 icon.etc_oblivion_yellow_i00 icon.etc_oblivion_orange_i00 icon.etc_oblivion_violet_i00 icon.etc_oblivion_red_i00 icon.etc_oblivion_white_i00</table>
 		<table name="#power">2 5 8 11 14 17 20 23</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="FISHING_MASTERY_DOWN" />
 		<set name="icon" val="#icons" />
@@ -1703,7 +1703,7 @@
 	<skill id="2280" levels="1" name="Herb of Power">
 		<!-- Temporarily increases P. Atk. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="effectPoint" val="100" />
@@ -1726,7 +1726,7 @@
 	<skill id="2281" levels="1" name="Herb of Magic">
 		<!-- Temporarily increases M. Atk. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="effectPoint" val="100" />
@@ -1749,7 +1749,7 @@
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
 		<!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="100" />
@@ -1772,7 +1772,7 @@
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
 		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="effectPoint" val="100" />
@@ -1795,7 +1795,7 @@
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
 		<!-- Temporarily increases critical attack rate. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="effectPoint" val="100" />
@@ -1818,7 +1818,7 @@
 	<skill id="2285" levels="1" name="Herb of Speed">
 		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="abnormalInstant" val="true" />
-		<set name="abnormalLvl" val="2" />
+		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="effectPoint" val="100" />

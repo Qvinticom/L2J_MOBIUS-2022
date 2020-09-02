@@ -3,7 +3,7 @@
 	<skill id="10100" toLevel="4" name="Guardian's Frenzy">
 		<!-- For $s1, Shield Def. +$s2, M. Def +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, Attribute Resistance +$s6, and Reflect Magic rate +$s7. -->
 		<icon>icon.skill10100</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -123,7 +123,7 @@
 	<skill id="10101" toLevel="4" name="Templar's Frenzy">
 		<!-- For $s1, Shield Def. +$s2, M. Def +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, and P. Skill Power +$s6. A chance to activate the Lightning Strike if the Vanishing Stun is additionally cast. -->
 		<icon>icon.skill10101</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -227,7 +227,7 @@
 	<skill id="10102" toLevel="6" name="Shadow Hunt">
 		<!-- Summons the Blood Panther to attack the target and enemies on the path with $s1 power and decrease their Movement Speed by $s3 and Pull Resistance by $s4 for $s2. Uses $s5 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10102</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -288,7 +288,7 @@
 	<skill id="10103" toLevel="6" name="Reversal Stream">
 		<!-- Creates a torrent to attack the target and enemies on the path with $s1 Power added to P and pull them up a short distance. Also reduces their Movement Speed by $s3 for $s2. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10103_2</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
@@ -695,7 +695,7 @@
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
 		<!-- P. Def/ M. Def +30%, Debuff Resistances +15%, P. Critical Damage/ M. Critical Damage Received -15%, and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10104</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>PHOENIX_AURA</abnormalVisualEffect>
@@ -762,7 +762,7 @@
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
 		<!-- P. Atk/ M. Atk +10%, P. Def/ M. Def +20%, Damage Reflection +5%, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10105</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
@@ -833,7 +833,7 @@
 	<skill id="10110" toLevel="1" name="Guardian Aura">
 		<!-- P. Def/ M. Def +20%, Speed +10, Attribute Resistance +100, P. Critical Damage/ M. Critical Damage Received -15%, all Skill Cooldown -7%, and MP Consumption -15%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10106</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
@@ -929,7 +929,7 @@
 	<skill id="10111" toLevel="1" name="Templar's Aura">
 		<!-- P. Atk/ M. Atk +10%, P. Def/ M. Def +20%, Speed +10, P. Critical Damage/ M. Critical Damage Received -15% and all Skill Cooldown -7%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10107</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>TEMPLAR_AURA</abnormalVisualEffect>

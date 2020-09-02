@@ -3,7 +3,7 @@
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for magic skills. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -50,7 +50,7 @@
 	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for song/dance skills. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -92,7 +92,7 @@
 	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for all skills except for those with a fixed Cooldown time. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -149,7 +149,7 @@
 	<skill id="3203" toLevel="1" name="Item Skill: Mystery Skill">
 		<!-- Active: Increases your head size. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -169,7 +169,7 @@
 	<skill id="3204" toLevel="3" name="Item Skill: Reflect Damage">
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. -->
 		<icon>icon.skill3123</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<effectPoint>
@@ -2466,7 +2466,7 @@
 	</skill>
 	<skill id="3265" toLevel="1" name="Mysterious Ability">
 		<!-- Increases the size of your head. -->
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
@@ -2564,7 +2564,7 @@
 	<skill id="3271" toLevel="1" name="Blue Talisman - P. Atk.">
 		<!-- Increases P. Atk with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2590,7 +2590,7 @@
 	<skill id="3272" toLevel="1" name="Blue Talisman - P. Def.">
 		<!-- Increases P. Def. with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2641,7 +2641,7 @@
 	<skill id="3274" toLevel="1" name="Blue Talisman - Shield Defense">
 		<!-- Increases Shield Defense with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2667,7 +2667,7 @@
 	<skill id="3275" toLevel="1" name="Blue Talisman - Shield Defense">
 		<!-- Increases Shield Defense Rate with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2693,7 +2693,7 @@
 	<skill id="3276" toLevel="1" name="Blue Talisman - M. Def.">
 		<!-- Increases M. Def. with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2719,7 +2719,7 @@
 	<skill id="3277" toLevel="1" name="Blue Talisman - M. Critical Rate">
 		<!-- Increases Critical Rate of magic attacks with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2745,7 +2745,7 @@
 	<skill id="3278" toLevel="1" name="Red Talisman - Mental Regeneration">
 		<!-- Increases MP Recovery Rate with the power of Talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2771,7 +2771,7 @@
 	<skill id="3279" toLevel="1" name="Red Talisman - Meditation">
 		<!-- Greatly increases MP Recovery Rate with the power of Talisman. Immobilized while being healed. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2803,7 +2803,7 @@
 	<skill id="3280" toLevel="1" name="Blue Talisman - Invisibility">
 		<!-- Uses power of Talisman to disable preemptive attacks from enemies. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
@@ -2833,7 +2833,7 @@
 	<skill id="3281" toLevel="1" name="Red Talisman - Clarity">
 		<!-- Decreases MP Consumption for a skill with the power of the Talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2870,7 +2870,7 @@
 	<skill id="3282" toLevel="1" name="Red Talisman - Maximum Clarity">
 		<!-- Decreases MP Consumption for a skill with the power of the Talisman. -->
 		<icon>icon.etc_talisman_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2907,7 +2907,7 @@
 	<skill id="3283" toLevel="1" name="Blue Talisman - Healing">
 		<!-- Increases the power of HP recovery magic. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2933,7 +2933,7 @@
 	<skill id="3284" toLevel="1" name="Blue Talisman - Divine Protection">
 		<!-- Significantly increases P. Def. and M. Def. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
@@ -2963,7 +2963,7 @@
 	<skill id="3285" toLevel="1" name="Blue Talisman - Berserker">
 		<!-- Temporarily decrease P. Def./M. Def./Evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./speed with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>

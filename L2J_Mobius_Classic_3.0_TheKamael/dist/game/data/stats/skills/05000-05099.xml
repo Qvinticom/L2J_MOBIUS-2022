@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="5002" toLevel="1" name="Giselle Vampiric Rage">
-		<abnormalLvl>4</abnormalLvl>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
@@ -92,7 +92,7 @@
 	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
 		<!-- Frintezza is in temporary state of paralysis. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<castRange>900</castRange>
@@ -222,7 +222,7 @@
 			<value level="4">10</value>
 			<value level="5">10</value>
 		</activateRate>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>DANCE_ROOT</abnormalVisualEffect>
 		<trait>
@@ -374,7 +374,7 @@
 	<skill id="5012" toLevel="1" name="Breath of Scarlet">
 		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill5012</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>GHOST_STUN</abnormalVisualEffect>
@@ -507,7 +507,7 @@
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
 		<!-- Yoked status. -->
 		<icon>icon.skill5016</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>FLOATING_ROOT</abnormalVisualEffect>
@@ -534,7 +534,7 @@
 	</skill>
 	<skill id="5017" toLevel="1" name="Demons">
 		<!-- Demon Transformation -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BIG_BODY</abnormalType>
 		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
@@ -611,7 +611,7 @@
 	</skill>
 	<skill id="5020" toLevel="1" name="Forced Action">
 		<!-- Crumples to the ground because of unknown power. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>-100</effectPoint>
@@ -632,7 +632,7 @@
 	<skill id="5021" toLevel="12" name="Inspiration of Einhasad">
 		<!-- Makes Holy attacks. -->
 		<icon>icon.skill1043</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
 		<activateRate>40</activateRate>
@@ -673,7 +673,7 @@
 	<skill id="5022" toLevel="12" name="Decrease Speed">
 		<!-- Immediately Speed -10%. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -686,7 +686,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -720,7 +720,7 @@
 	<skill id="5023" toLevel="12" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill4047</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -756,7 +756,7 @@
 	<skill id="5024" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Immediately Atk. Spd. -17%. -->
 		<icon>icon.skill4038</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
@@ -769,7 +769,7 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 			<value level="12">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -887,11 +887,11 @@
 	<skill id="5037" toLevel="3" name="Decrease Casting Spd.">
 		<!-- Immediately Casting Spd. -17%. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<activateRate>10</activateRate>
@@ -919,7 +919,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5040" toLevel="12" name="Healing Potion">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -932,7 +932,7 @@
 			<value level="10">10</value>
 			<value level="11">11</value>
 			<value level="12">12</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1138,11 +1138,11 @@
 	<skill id="5044" toLevel="3" name="Ultimate Defense">
 		<!-- Increases P. Def., M. Def., and Buff-canceling Attack Resistance. Becomes immobile. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">30</value>
 			<value level="2">30</value>
@@ -2318,7 +2318,7 @@
 	<skill id="5068" toLevel="12" name="Decrease Speed">
 		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2367,7 +2367,7 @@
 	<skill id="5069" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Immediately Atk. Spd. -23%. -->
 		<icon>icon.skill4038</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2416,7 +2416,7 @@
 	<skill id="5070" toLevel="12" name="Decrease Casting Spd.">
 		<!-- Immediately Casting Spd. -23%. -->
 		<icon>icon.skill1206</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -2465,7 +2465,7 @@
 	<skill id="5071" toLevel="12" name="P. Atk. Decrease">
 		<!-- Immediately P. Atk. -23%. -->
 		<icon>icon.skill4037</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2513,7 +2513,7 @@
 	</skill>
 	<skill id="5072" toLevel="12" name="Decrease M. Atk.">
 		<!-- Immediately M. Atk. -50%. -->
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -2859,7 +2859,7 @@
 	</skill>
 	<skill id="5079" toLevel="1" name="Haste Focus">
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>900</affectRange>
@@ -2889,7 +2889,7 @@
 	</skill>
 	<skill id="5080" toLevel="1" name="Haste Might">
 		<icon>icon.skill0100</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<affectRange>900</affectRange>
@@ -2920,7 +2920,7 @@
 	<skill id="5081" toLevel="4" name="Silence">
 		<!-- Blocks the ability to use physical skills. -->
 		<icon>icon.skill5081</icon>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
@@ -2982,7 +2982,7 @@
 	<skill id="5083" toLevel="4" name="Stun">
 		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill5083</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">9</value>
@@ -3028,7 +3028,7 @@
 		</effects>
 	</skill>
 	<skill id="5084" toLevel="4" name="Blinding Blow">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<castRange>40</castRange>
@@ -3059,7 +3059,7 @@
 	<skill id="5085" toLevel="1" name="Anesthesia">
 		<!-- Momentarily stunned and immobilized. -->
 		<icon>icon.skill5085</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ANESTHESIA</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
@@ -3084,7 +3084,7 @@
 	<skill id="5086" toLevel="1" name="Deadly Poison">
 		<!-- HP decreases from poison momentarily. If HP falls to 0, death will ensue. -->
 		<icon>icon.skill5086</icon>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CRITICAL_POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
@@ -3188,7 +3188,7 @@
 	<skill id="5092" toLevel="1" name="Antharas Fear">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill4108</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
@@ -3312,10 +3312,10 @@
 		</effects>
 	</skill>
 	<skill id="5098" toLevel="2" name="Capture Penalty">
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SEIZURE_PENALTY</abnormalType>
 		<abnormalVisualEffect>

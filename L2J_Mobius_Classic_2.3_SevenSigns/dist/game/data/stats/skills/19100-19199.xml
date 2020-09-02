@@ -3,7 +3,7 @@
 	<skill id="19113" toLevel="1" name="No Clan Return">
 		<!-- For 30 sec. prevents the chosen target from using Teleport. Needs 2 Blood Crystals. -->
 		<icon>icon.skill_recall</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<operateType>A2</operateType>
@@ -27,7 +27,7 @@
 	<skill id="19114" toLevel="1" name="No Clan Resurrection">
 		<!-- For 30 sec. prevents the chosen target from using Resurrection. Needs 1 Blood Crystal. -->
 		<icon>icon.skill_resurrection</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<operateType>A2</operateType>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5700" levels="7" name="Magic Resistance Decrease">
 		<!-- Magic resistance is decreased. Effect 3. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_DOWN" />
 		<set name="icon" val="icon.skill1263" />
@@ -19,7 +19,7 @@
 	</skill>
 	<skill id="5701" levels="7" name="Decrease P. Atk">
 		<!-- P. Atk. is decreased. Effect 2. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="icon" val="icon.skill4037" />
@@ -58,7 +58,7 @@
 		</for>
 	</skill>
 	<skill id="5703" levels="2" name="Adiantum Water Strike Deflect">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="effectPoint" val="-341" />
@@ -87,7 +87,7 @@
 	</skill>
 	<skill id="5706" levels="1" name="Poison">
 		<!-- HP decreased momentarily by poison. The body is paralyzed after a set amount of time. Effect 7. -->
-		<set name="abnormalLvl" val="7" />
+		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -107,7 +107,7 @@
 	</skill>
 	<skill id="5707" levels="1" name="Paralysis">
 		<!-- A temporary paralysis which prevents movement. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
@@ -174,7 +174,7 @@
 	</skill>
 	<skill id="5711" levels="1" name="Power of Rage">
 		<!-- Attack ability is greatly increased because of rage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="activateRate" val="0" />
@@ -208,8 +208,8 @@
 	</skill>
 	<skill id="5713" levels="5" name="Energy Ditch">
 		<!-- Has received the magical powers of a subordinate. Recovery bonus is increased. -->
-		<table name="#abnormalLvls">1 2 3 4 5</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">1 2 3 4 5</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="effectPoint" val="100" />
@@ -229,7 +229,7 @@
 	</skill>
 	<skill id="5715" levels="1" name="Electric Flame">
 		<!-- Incurring continuous flame damage and has decreased moving speed. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FIRE_DOT" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
@@ -259,7 +259,7 @@
 	</skill>
 	<skill id="5716" levels="1" name="Stun">
 		<!-- A state of instant paralysis caused by the shock -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -289,7 +289,7 @@
 	</skill>
 	<skill id="5718" levels="1" name="Anger">
 		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="activateRate" val="0" />
@@ -303,7 +303,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5719" levels="1" name="Kamabion Susceptibility">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -569,7 +569,7 @@
 		<table name="#mpConsume">44 52 55 58 60 61</table>
 		<table name="#mpInitialConsume">11 13 14 15 15 16</table>
 		<table name="#power">43 51 55 58 61 63</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -627,7 +627,7 @@
 		<table name="#mpConsume">44 52 55 58 60 61</table>
 		<table name="#mpInitialConsume">11 13 14 15 15 16</table>
 		<table name="#power">43 51 55 58 61 63</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
@@ -713,7 +713,7 @@
 	</skill>
 	<skill id="5739" levels="1" name="Invincible">
 		<!-- Recently resurrected and temporarily invincible. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -774,7 +774,7 @@
 	</skill>
 	<skill id="5744" levels="1" name="Invincible">
 		<!-- Temporarily invincible. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -843,7 +843,7 @@
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">60 136 281 530 910 1420 2012 2310 2588 2829 3018 3172</table>
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
@@ -983,7 +983,7 @@
 		</for>
 	</skill>
 	<skill id="5753" levels="1" name="Awakening">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="effectPoint" val="100" />
@@ -1046,8 +1046,8 @@
 	</skill>
 	<skill id="5760" levels="9" name="Critical Hit">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect 1. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 9 10</table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#abnormalLevels">2 3 4 5 6 7 8 9 10</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SEED_OF_CRITICAL" />
 		<set name="effectPoint" val="100" />
@@ -1076,7 +1076,7 @@
 	</skill>
 	<skill id="5762" levels="1" name="Blessing of Pathfinder">
 		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="effectPoint" val="100" />
@@ -1097,7 +1097,7 @@
 	</skill>
 	<skill id="5764" levels="1" name="Terror of the Pumpkin Ghost">
 		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
@@ -1198,7 +1198,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5771" levels="1" name="Buff Control">
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="effectPoint" val="100" />
@@ -1214,7 +1214,7 @@
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">
 		<!-- Instantly decrease resistance to fire attacks and increase resistance to water attacks. Effect 4. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="effectPoint" val="100" />
@@ -1228,7 +1228,7 @@
 	</skill>
 	<skill id="5773" levels="1" name="Surrender to Water">
 		<!-- Instantly decrease resistance to water attacks and increase resistance to fire attacks. Effect 4. -->
-		<set name="abnormalLvl" val="4" />
+		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_WATER" />
 		<set name="effectPoint" val="100" />
@@ -1257,7 +1257,7 @@
 	</skill>
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
 		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
-		<set name="abnormalLvl" val="1" />
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="effectPoint" val="100" />
@@ -1283,7 +1283,7 @@
 	</skill>
 	<skill id="5778" levels="1" name="Invincible After-effect">
 		<!-- Temporarily cannot receive invincible effect. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="effectPoint" val="1" />
@@ -1402,7 +1402,7 @@
 	</skill>
 	<skill id="5794" levels="1" name="Decrease Spd.">
 		<!-- Temporarily decreases Spd. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
@@ -1422,7 +1422,7 @@
 	</skill>
 	<skill id="5795" levels="1" name="Poison">
 		<!-- Poisons the target, causing them to lose 66 HP every second for 30 seconds. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
@@ -1442,7 +1442,7 @@
 	</skill>
 	<skill id="5796" levels="1" name="Decrease Spd.">
 		<!-- Temporarily decreases Spd. Effect 3. -->
-		<set name="abnormalLvl" val="3" />
+		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
@@ -1482,7 +1482,7 @@
 	</skill>
 	<skill id="5799" levels="1" name="Bleed">
 		<!-- Causes the target to bleed and lose 78 HP every second for 20 seconds. -->
-		<set name="abnormalLvl" val="9" />
+		<set name="abnormalLevel" val="9" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />

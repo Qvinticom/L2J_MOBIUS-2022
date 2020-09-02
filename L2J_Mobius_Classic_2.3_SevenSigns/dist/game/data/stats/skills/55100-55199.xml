@@ -1476,7 +1476,7 @@
 		<reuseDelay>90000</reuseDelay>
 		<hitTime>1000</hitTime>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
@@ -1502,7 +1502,7 @@
 		<reuseDelay>90000</reuseDelay>
 		<hitTime>1000</hitTime>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>
+		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
@@ -1513,7 +1513,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
-		</abnormalLvl>
+		</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
@@ -1683,7 +1683,7 @@
 	<skill id="55160" toLevel="1" name="Special Pirate Fruit">
 		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Acquired XP/ SP +5%. Cooldown is 1 min. Buff remains after death. -->
 		<icon>icon.etc_codran_i09</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2034,7 +2034,7 @@
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<targetType>SELF</targetType>
@@ -2053,7 +2053,7 @@
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<targetType>SELF</targetType>
@@ -2084,7 +2084,7 @@
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<targetType>SELF</targetType>
@@ -2115,7 +2115,7 @@
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
-		<abnormalLvl>2</abnormalLvl>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<targetType>SELF</targetType>

@@ -3,7 +3,7 @@
 	<skill id="14700" toLevel="1" name="Maximum Defense">
 		<!-- For 1 min., increases one's own P. Atk. by 25%, M. Atk. by 50%, P. Def. by 1800, M. Def. by 1620, HP recovery speed by 300, MP recovery speed by 300%, and Buff-canceling Attack Resistance by 80%. -->
 		<icon>icon.skill0110</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<castRange>900</castRange>
@@ -108,7 +108,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>100</activateRate>
 		<magicLvl>88</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<trait>BLEED</trait>
 		<affectRange>300</affectRange>
@@ -139,7 +139,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>140</activateRate>
 		<magicLvl>88</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
@@ -432,7 +432,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -476,7 +476,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -532,7 +532,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -580,7 +580,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -640,7 +640,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -688,7 +688,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -728,7 +728,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -780,7 +780,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -836,7 +836,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -1185,7 +1185,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1230,7 +1230,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1318,7 +1318,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1367,7 +1367,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1428,7 +1428,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1477,7 +1477,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1518,7 +1518,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1571,7 +1571,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1628,7 +1628,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1719,7 +1719,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1764,7 +1764,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1805,7 +1805,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
@@ -1845,7 +1845,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -1890,7 +1890,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -1947,7 +1947,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -1996,7 +1996,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -2057,7 +2057,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -2106,7 +2106,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -2147,7 +2147,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -2200,7 +2200,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
@@ -2257,7 +2257,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>

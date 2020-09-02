@@ -304,7 +304,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -338,7 +338,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<reuseDelay>45000</reuseDelay>
 		<isMagic>2</isMagic>
@@ -356,7 +356,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -378,7 +378,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -472,7 +472,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -510,7 +510,7 @@
 	<skill id="9332" toLevel="1" name="Drum Melody - Enhanced Cocktail">
 		<!-- For 1 h., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<operateType>A2</operateType>
@@ -567,7 +567,7 @@
 	<skill id="9333" toLevel="1" name="Lute Melody - Enhanced Cocktail">
 		<!-- For 60 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -607,7 +607,7 @@
 	<skill id="9334" toLevel="1" name="Pipe Organ Melody - Enhanced Cocktail">
 		<!-- For 1 h., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<operateType>A2</operateType>
@@ -655,7 +655,7 @@
 	<skill id="9335" toLevel="1" name="Guitar Melody - Enhanced Cocktail">
 		<!-- For 1 h., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
-		<abnormalLvl>6</abnormalLvl>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<operateType>A2</operateType>
@@ -726,7 +726,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -1245,7 +1245,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
@@ -1272,7 +1272,7 @@
 	<skill id="9350" toLevel="1" name="Fast Run">
 		<!-- For 30 sec., Black Bear runs at top speed. -->
 		<icon>icon.skill9206</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPECIAL_RIDE</abnormalType>
 		<operateType>A2</operateType>
@@ -1513,7 +1513,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<reuseDelayGroup>9367</reuseDelayGroup>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">10</value>
@@ -1588,7 +1588,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1639,7 +1639,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>8</abnormalLvl>
+		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1672,7 +1672,7 @@
 		<specialLevel>-2</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -1697,7 +1697,7 @@
 		<specialLevel>-2</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -1722,7 +1722,7 @@
 		<specialLevel>-2</specialLevel>
 		<effectRange>1100</effectRange>
 		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<isMagic>22</isMagic>
 		<reuseDelay>2000</reuseDelay>
@@ -2311,7 +2311,7 @@
 	</skill>
 	<skill id="9399" toLevel="1" name="Fearsome Firecracker">
 		<icon>icon.etc_small_ultra_bomb_i00</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<operateType>A2</operateType>

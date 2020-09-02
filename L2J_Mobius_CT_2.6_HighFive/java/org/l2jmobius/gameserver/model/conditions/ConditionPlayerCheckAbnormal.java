@@ -56,6 +56,6 @@ public class ConditionPlayerCheckAbnormal extends Condition
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final BuffInfo info = effector.getEffectList().getBuffInfoByAbnormalType(_type);
-		return (info != null) && ((_level == -1) || (_level >= info.getSkill().getAbnormalLvl()));
+		return (info != null) && ((_level == -1) || (_level >= info.getSkill().getAbnormalLevel()));
 	}
 }
