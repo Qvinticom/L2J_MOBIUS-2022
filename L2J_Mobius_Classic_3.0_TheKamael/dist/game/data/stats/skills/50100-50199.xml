@@ -255,7 +255,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -362,7 +362,7 @@
 	</skill>
 	<skill id="50151" toLevel="1" name="HP Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -378,7 +378,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91917</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -404,7 +404,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91651</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -430,7 +430,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91918</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -465,7 +465,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="50158" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -557,7 +557,7 @@
 			<value level="11">91964</value>
 			<value level="12">91965</value>
 		</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -669,7 +669,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="50178" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

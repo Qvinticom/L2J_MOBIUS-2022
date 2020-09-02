@@ -3,7 +3,7 @@
 	<skill id="8500" levels="1" name="Pink Talisman - CON">
 		<!-- Increases when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -15,7 +15,7 @@
 	<skill id="8501" levels="1" name="Pink Talisman - INT">
 		<!-- Increases INT when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -27,7 +27,7 @@
 	<skill id="8502" levels="1" name="Pink Talisman - WIT">
 		<!-- Increases WIT when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -39,7 +39,7 @@
 	<skill id="8503" levels="1" name="Pink Talisman - MEN">
 		<!-- Increases MEN when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -51,7 +51,7 @@
 	<skill id="8504" levels="1" name="Pink Talisman - Stun Resist">
 		<!-- Increases Resistance to Shock when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -63,7 +63,7 @@
 	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resist">
 		<!-- Increases Resistance to Sleep when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -75,7 +75,7 @@
 	<skill id="8506" levels="1" name="Pink Talisman - Hold Resist">
 		<!-- Increases Resistance to Hold when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -87,7 +87,7 @@
 	<skill id="8507" levels="1" name="Pink Talisman - Paralyze Resist">
 		<!-- Increases Resistance to Paralysis when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -99,7 +99,7 @@
 	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
 		<!-- Increases all stats when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -119,7 +119,7 @@
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.accessory_highangel_circlet_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
@@ -142,7 +142,7 @@
 		<set name="effectPoint" val="1000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="NONE" />
@@ -178,7 +178,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -193,7 +193,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -208,7 +208,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -236,7 +236,7 @@
 		<!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -249,7 +249,7 @@
 		<!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -262,7 +262,7 @@
 		<!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>

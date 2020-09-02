@@ -17,7 +17,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -42,7 +42,7 @@
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -71,7 +71,7 @@
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -103,7 +103,7 @@
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -129,7 +129,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -172,7 +172,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RACE_DWAF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -198,7 +198,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
@@ -224,7 +224,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -238,7 +238,7 @@
 	<skill id="21410" toLevel="1" name="Cloak of the Chosen: Blessed Escape">
 		<!-- Can use Blessed Escape every hour. -->
 		<operateType>A1</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<reuseDelay>3600000</reuseDelay>
@@ -350,7 +350,7 @@
 		<!-- Debuff Reflect +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ReflectSkill">
 				<amount>3</amount>
@@ -366,7 +366,7 @@
 		<!-- Debuff Reflect +5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ReflectSkill">
 				<amount>5</amount>
@@ -382,7 +382,7 @@
 		<!-- Debuff Reflect +10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ReflectSkill">
 				<amount>10</amount>
@@ -398,7 +398,7 @@
 		<!-- Damage Reflect Resistance +5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>5</amount>
@@ -409,7 +409,7 @@
 		<!-- Damage Reflect Resistance +7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>7</amount>
@@ -420,7 +420,7 @@
 		<!-- Damage Reflect Resistance +15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>15</amount>
@@ -431,7 +431,7 @@
 		<!-- Bow/ Crossbow Resistance +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>3</BOW>
@@ -444,7 +444,7 @@
 		<!-- Bow/ Crossbow Resistance +5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>5</BOW>
@@ -457,7 +457,7 @@
 		<!-- Bow/ Crossbow Resistance +10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>10</BOW>
@@ -470,7 +470,7 @@
 		<!-- Visual Def. +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>3</amount>
@@ -482,7 +482,7 @@
 		<!-- Visual Def. +5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>5</amount>
@@ -494,7 +494,7 @@
 		<!-- Visual Def. +10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>10</amount>
@@ -506,7 +506,7 @@
 		<!-- M. Def. +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>3</amount>
@@ -518,7 +518,7 @@
 		<!-- M. Def. +5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>5</amount>
@@ -530,7 +530,7 @@
 		<!-- M. Def. +10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>10</amount>
@@ -542,7 +542,7 @@
 		<!-- Attribute Resistance +5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>5</amount>
@@ -566,7 +566,7 @@
 		<!-- Attribute Resistance +7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>7</amount>
@@ -590,7 +590,7 @@
 		<!-- Attribute Resistance +15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>15</amount>
@@ -614,7 +614,7 @@
 		<!-- Received Heal Amount +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HealEffect">
 				<amount>3</amount>
@@ -626,7 +626,7 @@
 		<!-- Received Heal Amount +7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HealEffect">
 				<amount>7</amount>
@@ -638,7 +638,7 @@
 		<!-- Received Heal Amount +15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HealEffect">
 				<amount>15</amount>
@@ -650,7 +650,7 @@
 		<!-- Max. HP +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>3</amount>
@@ -662,7 +662,7 @@
 		<!-- Max. HP +7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>7</amount>
@@ -674,7 +674,7 @@
 		<!-- Max. HP +15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>15</amount>
@@ -686,7 +686,7 @@
 		<!-- Max. MP +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>3</amount>
@@ -698,7 +698,7 @@
 		<!-- Max. MP +5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>5</amount>
@@ -710,7 +710,7 @@
 		<!-- Max. MP +10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>10</amount>
@@ -722,7 +722,7 @@
 		<!-- Max. CP +3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>3</amount>
@@ -734,7 +734,7 @@
 		<!-- Max. CP +7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>7</amount>
@@ -746,7 +746,7 @@
 		<!-- Max. CP +15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>15</amount>
@@ -758,7 +758,7 @@
 		<!-- Max. Speed +3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>3</amount>
@@ -770,7 +770,7 @@
 		<!-- Max. Speed +7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>7</amount>
@@ -782,7 +782,7 @@
 		<!-- Max. Speed +15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>15</amount>
@@ -794,7 +794,7 @@
 		<!-- HP Recovery Bonus +5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>5</amount>
@@ -806,7 +806,7 @@
 		<!-- HP Recovery Bonus +8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>8</amount>
@@ -818,7 +818,7 @@
 		<!-- HP Recovery Bonus +16. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>16</amount>
@@ -830,7 +830,7 @@
 		<!-- MP Recovery Bonus +3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>3</amount>
@@ -842,7 +842,7 @@
 		<!-- MP Recovery Bonus +4. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>4</amount>
@@ -854,7 +854,7 @@
 		<!-- MP Recovery Bonus +8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>8</amount>
@@ -866,7 +866,7 @@
 		<!-- P./ M. Evasion +3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>3</amount>
@@ -882,7 +882,7 @@
 		<!-- P./ M. Evasion +4. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>4</amount>
@@ -898,7 +898,7 @@
 		<!-- P./ M. Evasion +8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>8</amount>
@@ -1005,7 +1005,7 @@
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DamageByAttack">
 				<amount>-15</amount>
@@ -1151,6 +1151,6 @@
 		<icon>BranchIcon.icon.weapon_g_fishing_rod</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 	</skill>
 </list>

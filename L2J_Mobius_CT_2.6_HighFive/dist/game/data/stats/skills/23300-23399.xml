@@ -10,7 +10,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -117,7 +117,7 @@
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
 		<set name="icon" val="BranchSys2.icon.the_fall_of_dragon" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="canBeDispeled" val="false" />
 		<set name="targetType" val="ONE" />
@@ -172,7 +172,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="5000" />
 		<set name="reuseDelay" val="10000" />
@@ -199,7 +199,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
@@ -227,7 +227,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
@@ -252,7 +252,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
@@ -279,7 +279,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
@@ -305,7 +305,7 @@
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />

@@ -13,7 +13,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>SHOCK</trait>
@@ -42,7 +42,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>AIRBIND</trait>
@@ -69,7 +69,7 @@
 	<skill id="7102" toLevel="1" name="Summon Clan Pet">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>5000</hitTime>
 		<targetType>SELF</targetType>
@@ -90,7 +90,7 @@
 		<effectPoint>635</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<isMagic>1</isMagic>
@@ -108,7 +108,7 @@
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -122,7 +122,7 @@
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>700</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -144,7 +144,7 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -166,7 +166,7 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -188,7 +188,7 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -213,7 +213,7 @@
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -242,7 +242,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>2</isMagic>
 		<hitTime>500</hitTime>

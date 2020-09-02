@@ -4,68 +4,68 @@
 		<icon>icon.armor_t401_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13101" toLevel="4" name="R3 2 set">
 		<icon>icon.armor_t402_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13102" toLevel="4" name="R3 2 set">
 		<icon>icon.armor_t403_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13103" toLevel="4" name="R4 2 set">
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13104" toLevel="4" name="R4 2 set">
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13105" toLevel="4" name="R4 2 set">
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13106" toLevel="4" name="R5 2 set">
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13107" toLevel="4" name="R5 2 set">
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13108" toLevel="4" name="R5 2 set">
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13109" toLevel="5" name="Special Ability: Damage Up">
 		<!-- Increases P. Atk. Enables the character to attack multiple opponents. Inflicts additional damage during PvP. -->
 		<icon>icon.skill1068</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">94</value>
 			<value level="4">97</value>
 			<value level="5">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -103,7 +103,7 @@
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -141,7 +141,7 @@
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>4</amount>
@@ -179,7 +179,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>43</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<trait>SHOCK</trait>
@@ -207,7 +207,7 @@
 		<effectRange>1500</effectRange>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>16</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<isDebuff>true</isDebuff>
@@ -235,7 +235,7 @@
 		<effectRange>1500</effectRange>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>80</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<trait>HOLD</trait>
@@ -250,7 +250,7 @@
 	<skill id="13115" toLevel="1" name="Polearm Multi-attack">
 		<!-- Enables the character to attack multiple opponents. -->
 		<icon>icon.skill0216</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -268,7 +268,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<KNOCKBACK>15</KNOCKBACK>
@@ -280,7 +280,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<KNOCKDOWN>15</KNOCKDOWN>
@@ -292,7 +292,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<HOLD>15</HOLD>
@@ -304,7 +304,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<PULL>15</PULL>
@@ -316,7 +316,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<DEPORT>15</DEPORT>
@@ -328,7 +328,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<CHANGEBODY>15</CHANGEBODY>
@@ -340,91 +340,91 @@
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 	</skill>
 	<skill id="13123" toLevel="1" name="Increased Damage Quiver">
 		<!-- Great damage occurs if critical occurs while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 	</skill>
 	<skill id="13124" toLevel="1" name="Added Bleed Quiver">
 		<!-- Chance of inflicting bleed if critical occurs while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 	</skill>
 	<skill id="13125" toLevel="1" name="Special Talisman - P. Atk.">
 		<!-- Increases P. Atk when equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="13126" toLevel="1" name="Special Talisman - M. Atk.">
 		<!-- Increases M. Atk. when equipped. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 	</skill>
 	<skill id="13127" toLevel="1" name="Special Talisman - Atk. Spd.">
 		<!-- Increases Atk. Spd. when equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 	</skill>
 	<skill id="13128" toLevel="1" name="Special Talisman - Casting Spd.">
 		<!-- Increases Casting Spd. when equipped. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 	</skill>
 	<skill id="13129" toLevel="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Defense Type)">
 		<!-- CON + $s1, STR - $s2, Atk. Spd. + $s3. HP + $s4. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13130" toLevel="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Attack Type)">
 		<!-- STR + $s1, CON - $s2, Atk. Spd. + $s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13131" toLevel="4" name="Set Effect - Twilight Light Armor 2 Piece (Assassin Type)">
 		<!-- DEX + $s1, STR -$s2, Atk. Spd. + $s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13132" toLevel="4" name="Set Effect - Twilight Light Armor 2 Piece (Enchant Type)">
 		<!-- STR + $s1, CON - $s2, P. Atk. + $s3. P. Atk. Spd. + $s4. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13133" toLevel="4" name="Set Effect - Twilight Robe 2 Piece (Magic Type)">
 		<!-- INT + $s1. MEN - $s2. Casting Spd. + $s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13134" toLevel="4" name="Set Effect - Twilight Robe 2 Piece (Recovery Type)">
 		<!-- WIT+ $s1. MEN - $s2. Casting Spd. + $s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13135" toLevel="1" name="Servitor Share">
 		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./P. Def. by 50%, M. Atk./M. Def. by 25%, Max HP/MP by 10%, Critical Rate by 20%, Atk. Spd. by 10%, and Casting Spd. by 3%. -->
@@ -453,7 +453,7 @@
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -518,7 +518,7 @@
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -583,7 +583,7 @@
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>2</amount>
@@ -596,7 +596,7 @@
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>2</amount>
@@ -609,7 +609,7 @@
 		<icon>icon.r85_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>3</amount>
@@ -622,7 +622,7 @@
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>2</amount>
@@ -635,7 +635,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>3</amount>
@@ -648,7 +648,7 @@
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>2</amount>
@@ -661,7 +661,7 @@
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -678,7 +678,7 @@
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -695,7 +695,7 @@
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -736,7 +736,7 @@
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -777,7 +777,7 @@
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -818,7 +818,7 @@
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -859,7 +859,7 @@
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -900,7 +900,7 @@
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -941,7 +941,7 @@
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -982,7 +982,7 @@
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1023,7 +1023,7 @@
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1060,7 +1060,7 @@
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1097,7 +1097,7 @@
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1134,7 +1134,7 @@
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1175,7 +1175,7 @@
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1216,7 +1216,7 @@
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
@@ -1257,7 +1257,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>1.17</amount>
@@ -1275,7 +1275,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>2.93</amount>
@@ -1293,7 +1293,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>4.1</amount>
@@ -1311,7 +1311,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>5.58</amount>
@@ -1329,7 +1329,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.45</amount>
@@ -1347,7 +1347,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>1.13</amount>
@@ -1365,7 +1365,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>1.58</amount>
@@ -1383,7 +1383,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>2.25</amount>
@@ -1401,7 +1401,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>1</amount>
@@ -1414,7 +1414,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>2.5</amount>
@@ -1427,7 +1427,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>3.5</amount>
@@ -1440,7 +1440,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>5</amount>
@@ -1453,7 +1453,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>1</amount>
@@ -1470,7 +1470,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>2.5</amount>
@@ -1487,7 +1487,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>3.5</amount>
@@ -1504,7 +1504,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>5</amount>
@@ -1521,7 +1521,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>1.2</amount>
@@ -1542,7 +1542,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>3</amount>
@@ -1563,7 +1563,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>4.2</amount>
@@ -1584,7 +1584,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>6</amount>
@@ -1605,7 +1605,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>1.41</amount>
@@ -1623,7 +1623,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>3.52</amount>
@@ -1641,7 +1641,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>4.92</amount>
@@ -1659,7 +1659,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>7.02</amount>
@@ -1677,7 +1677,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.54</amount>
@@ -1695,7 +1695,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>1.36</amount>
@@ -1713,7 +1713,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>1.9</amount>
@@ -1731,7 +1731,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>2.7</amount>
@@ -1749,7 +1749,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>1</amount>
@@ -1762,7 +1762,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>2.5</amount>
@@ -1775,7 +1775,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>3.5</amount>
@@ -1788,7 +1788,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>5</amount>
@@ -1801,7 +1801,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>1</amount>
@@ -1818,7 +1818,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>2.5</amount>
@@ -1835,7 +1835,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>3.5</amount>
@@ -1852,7 +1852,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>5</amount>
@@ -1869,7 +1869,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>1.2</amount>
@@ -1890,7 +1890,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>3</amount>
@@ -1911,7 +1911,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>4.2</amount>
@@ -1932,7 +1932,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>6</amount>

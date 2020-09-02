@@ -15,7 +15,7 @@
 		<effectPoint>-687</effectPoint>
 		<effectRange>400</effectRange> <!-- Unconfirmed -->
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">1</value>
 			<value level="2">20</value>
 			<value level="3">28</value>
@@ -46,7 +46,7 @@
 			<value level="28">105</value>
 			<value level="29">107</value>
 			<value level="30">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">8</value>
 			<value level="2">17</value>
@@ -157,7 +157,7 @@
 		<effectPoint>-687</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">28</value>
 			<value level="3">36</value>
@@ -187,7 +187,7 @@
 			<value level="27">105</value>
 			<value level="28">107</value>
 			<value level="29">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">17</value>
 			<value level="2">23</value>
@@ -295,7 +295,7 @@
 		<effectPoint>-709</effectPoint>
 		<effectRange>400</effectRange> <!-- Unconfirmed -->
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">44</value>
 			<value level="3">48</value>
@@ -322,7 +322,7 @@
 			<value level="24">105</value>
 			<value level="25">107</value>
 			<value level="26">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">34</value>
 			<value level="2">37</value>
@@ -387,7 +387,7 @@
 		<effectPoint>-687</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -401,7 +401,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">81</value>
 			<value level="2">81</value>
@@ -464,7 +464,7 @@
 		<effectPoint>-700</effectPoint>
 		<effectRange>400</effectRange> <!-- Unconfirmed -->
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">78</value>
 			<value level="3">80</value>
@@ -483,7 +483,7 @@
 			<value level="16">105</value>
 			<value level="17">107</value>
 			<value level="18">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">75</value>
 			<value level="2">77</value>
@@ -562,7 +562,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">87</value>
 			<value level="2">89</value>
 			<value level="3">91</value>
@@ -575,7 +575,7 @@
 			<value level="10">105</value>
 			<value level="11">107</value>
 			<value level="12">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">149</value>
 			<value level="2">150</value>
@@ -655,7 +655,7 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;90</fanRange>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">79</value>
 			<value level="2">81</value>
 			<value level="3">83</value>
@@ -672,7 +672,7 @@
 			<value level="14">105</value>
 			<value level="15">107</value>
 			<value level="16">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">141</value>
 			<value level="2">143</value>
@@ -937,7 +937,7 @@
 		<!-- Using Left/ Right Sidestep increases P. Critical Ability. -->
 		<icon>icon.skill30510</icon>
 		<operateType>P</operateType>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<effects>
 			<effect name="TriggerSkillBySkill">
 				<skillId>30532</skillId> <!-- Inside Position -->
@@ -1425,7 +1425,7 @@
 		<affectRange>150</affectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>98</magicLvl>
+		<magicLevel>98</magicLevel>
 		<mpConsume>772</mpConsume>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
@@ -1882,7 +1882,7 @@
 	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
 		<!-- When equipped with a fist weapon, P. Atk. +$s1 and +$s2. -->
 		<icon>icon.skill30524</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">5</value>
 			<value level="2">20</value>
 			<value level="3">40</value>
@@ -1900,7 +1900,7 @@
 			<value level="15">106</value>
 			<value level="16">108</value>
 			<value level="17">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -1997,7 +1997,7 @@
 	<skill id="30541" toLevel="17" name="Eminent Light Armor Mastery">
 		<!-- When equipped with light armor, P. Def. +$s1. -->
 		<icon>icon.skill10254</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">5</value>
 			<value level="2">20</value>
 			<value level="3">40</value>
@@ -2015,7 +2015,7 @@
 			<value level="15">106</value>
 			<value level="16">108</value>
 			<value level="17">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence" fromLevel="7" toLevel="17">
@@ -2120,7 +2120,7 @@
 	<skill id="30542" toLevel="13" name="Eminent Stability">
 		<!-- Max HP +$s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. -->
 		<icon>icon.skill11506</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">40</value>
 			<value level="3">76</value>
@@ -2134,7 +2134,7 @@
 			<value level="11">106</value>
 			<value level="12">108</value>
 			<value level="13">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -2208,7 +2208,7 @@
 	<skill id="30543" toLevel="11" name="Eminent Attribute Resistance">
 		<!-- Attack Attribute Bonus +$s1, Fire/ Water/ Wind/ Earth/ Holy Resistance +$s2. -->
 		<icon>icon.skill11006</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">85</value>
 			<value level="3">85</value>
@@ -2220,7 +2220,7 @@
 			<value level="9">85</value>
 			<value level="10">85</value>
 			<value level="11">85</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -2420,10 +2420,10 @@
 	<skill id="30544" toLevel="2" name="Eminent Trait Resistance">
 		<!-- Hold/ Mental Resistance +$s1. -->
 		<icon>icon.skill10005</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
@@ -2452,11 +2452,11 @@
 		<!-- STR +$s1. -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">76</value>
 			<value level="3">85</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="SkillCritical" fromLevel="2" toLevel="3">
 				<stat>STR</stat>
@@ -2487,7 +2487,7 @@
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">89</value>
@@ -2501,7 +2501,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">29</value>
 			<value level="2">29</value>
@@ -2556,14 +2556,14 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>85</mpConsume>
 		<castRange>80</castRange>
 		<hitTime>500</hitTime>

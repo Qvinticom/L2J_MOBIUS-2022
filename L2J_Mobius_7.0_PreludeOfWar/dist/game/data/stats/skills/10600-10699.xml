@@ -10,7 +10,7 @@
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>38</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -52,7 +52,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>38</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -80,12 +80,12 @@
 	<skill id="10608" toLevel="4" name="Superior Haste">
 		<!-- P. Skill Cooldown -5%, Infection Atk. Rate +10%. Also doubles the duration of Shadow Dash. -->
 		<icon>icon.skill10608</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
@@ -128,7 +128,7 @@
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>36</mpConsume>
 		<hitTime>2000</hitTime>
 		<effectPoint>669</effectPoint>
@@ -200,7 +200,7 @@
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>38</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -244,7 +244,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>38</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -272,12 +272,12 @@
 	<skill id="10655" toLevel="4" name="Brutal Stab Expert">
 		<!-- P. Atk. +$s1, Critical Damage +$s2. -->
 		<icon>icon.skill10655</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -309,7 +309,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>36</mpConsume>
 		<hitTime>2000</hitTime>
 		<effectPoint>669</effectPoint>

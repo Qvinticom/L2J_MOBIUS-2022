@@ -3,7 +3,7 @@
 	<skill id="16600" toLevel="1" name="Devil Swarm">
 		<!-- The energy of darkness is launched toward the enemy, causing physical damage. -->
 		<operateType>A1</operateType>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
 		<hitTime>2000</hitTime>
@@ -21,7 +21,7 @@
 	<skill id="16601" toLevel="1" name="Devil Fire">
 		<!-- The energy of darkness is launched toward the enemy, causing magic damage. -->
 		<operateType>A1</operateType>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
@@ -42,7 +42,7 @@
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
@@ -69,7 +69,7 @@
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
 		<hitTime>2000</hitTime>
@@ -94,7 +94,7 @@
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
@@ -126,7 +126,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>400</castRange>
 		<hitTime>3000</hitTime>
@@ -158,7 +158,7 @@
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>200</activateRate>
 		<affectLimit>10-10</affectLimit>
-		<magicLvl>102</magicLvl>
+		<magicLevel>102</magicLevel>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
 		<hitTime>3000</hitTime>

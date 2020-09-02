@@ -1066,7 +1066,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="castRange" val="-1" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="1.25">
@@ -1128,7 +1128,7 @@
 	</skill>
 	<skill id="3574" levels="1" name="Special Ability: Crt. Slow">
 		<!-- Temporarily decreases Speed. Effect 3. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="power" val="80" />
 		<set name="levelModifier" val="2" />
 		<set name="target" val="TARGET_ONE" />
@@ -1185,7 +1185,7 @@
 	</skill>
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
 		<!-- Decreases enemy's P. Def. during critical attacks. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1217,7 +1217,7 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
@@ -1231,7 +1231,7 @@
 	</skill>
 	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
 		<!-- Dazzles the enemy to distraction during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1261,7 +1261,7 @@
 	<skill id="3581" levels="1" name="Discord">
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
@@ -1273,7 +1273,7 @@
 	</skill>
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
 		<!-- Increases critical attack success rate/power, Max HP, Max CP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -1300,7 +1300,7 @@
 	</skill>
 	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
 		<!-- Throws enemy into a state of shock during a critical attack. Increases Max HP, Max CP, Atk. Spd. and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1332,7 +1332,7 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="STUN" />
@@ -1343,7 +1343,7 @@
 	</skill>
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1377,7 +1377,7 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
@@ -1390,7 +1390,7 @@
 	</skill>
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
 		<!-- Throws the enemy into a state of shock during a critical attack. Increases Max HP, Max MP, Max CP, Evasion and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1424,7 +1424,7 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="STUN" />
@@ -1435,7 +1435,7 @@
 	</skill>
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
 		<!-- Blocks enemy's ability to use magic skills during a critical attack. Increases Max MP, Max CP, Atk. Spd., MP regeneration rate, critical attack rate when attacking the enemy from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1473,7 +1473,7 @@
 		<set name="bestowed" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="MUTE" />
@@ -1485,7 +1485,7 @@
 	</skill>
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
 		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases the character's Maximum HP, Maximum CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on an enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1516,7 +1516,7 @@
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
 		<set name="bestowed" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="negateSkillTypes" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
@@ -1527,7 +1527,7 @@
 	</skill>
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<!-- Decreases enemy's Speed during a critical attack. Increases Max MP, Max CP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1553,7 +1553,7 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
@@ -1568,7 +1568,7 @@
 	</skill>
 	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
 		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, M. Atk., damage magic critical attack rate and damage inflicted during PvP. When casting magic, reduces MP consumption and cancel rate. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1600,7 +1600,7 @@
 	<skill id="3596" levels="1" name="Full Recover">
 		<set name="aggroPoints" val="100" />
 		<set name="bestowed" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="skillType" val="HEAL_PERCENT" />
@@ -1608,7 +1608,7 @@
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
 		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, Casting Spd., MP regeneration rate and damage inflicted during PvP. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_CHANCE" />
@@ -1636,7 +1636,7 @@
 	<skill id="3598" levels="1" name="Full Recover">
 		<set name="aggroPoints" val="100" />
 		<set name="bestowed" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="skillType" val="HEAL_PERCENT" />

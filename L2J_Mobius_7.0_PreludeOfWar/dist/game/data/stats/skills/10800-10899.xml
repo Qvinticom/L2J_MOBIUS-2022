@@ -4,7 +4,7 @@
 		<!-- Fire/ Water/ Wind/ Earth Resistance +$s1. STR +$s2. -->
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -15,7 +15,7 @@
 			<value level="8">106</value>
 			<value level="9">108</value>
 			<value level="10">110</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -96,7 +96,7 @@
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">88</value>
 			<value level="3">91</value>
@@ -107,7 +107,7 @@
 			<value level="8">105</value>
 			<value level="9">107</value>
 			<value level="10">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">20</value>
 			<value level="2">21</value>
@@ -234,14 +234,14 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>93</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>3000</hitTime>
@@ -306,7 +306,7 @@
 		</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -330,7 +330,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -350,12 +350,12 @@
 		<!-- Teleports $s1 grids forward. -->
 		<icon>icon.skill10805</icon>
 		<operateType>DA1</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">89</value>
 			<value level="2">92</value>
 			<value level="3">95</value>
 			<value level="4">98</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">41</value>
 			<value level="2">44</value>
@@ -407,14 +407,14 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>120</activateRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>300</affectRange>
@@ -473,14 +473,14 @@
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>120</activateRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<trait>HOLD</trait>
@@ -508,12 +508,12 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>300</affectRange>
@@ -565,12 +565,12 @@
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -647,12 +647,12 @@
 	<skill id="10811" toLevel="4" name="Superior Hawk Mastery">
 		<!-- P. Atk. +$s1. Requires a bow or a crossbow. -->
 		<icon>icon.skill10811</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -723,12 +723,12 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + (subIndex * 90)}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -819,12 +819,12 @@
 		<!-- Speed +$s1. -->
 		<icon>icon.skill10857</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>

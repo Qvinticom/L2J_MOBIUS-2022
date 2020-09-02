@@ -21,7 +21,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>MULTI_DEBUFF_FIRE,9;MULTI_DEBUFF_HOLY,9;MULTI_DEBUFF_WATER,9;MULTI_DEBUFF_WIND,9;MULTI_DEBUFF_EARTH,9</dispel>
@@ -122,14 +122,14 @@
 	<skill id="19405" toLevel="6" name="Discarded Wizard's Soul">
 		<!-- Summons Discarded Wizard's Soul. -->
 		<icon>icon.skill19405</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -178,14 +178,14 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
 			<value level="5">107</value>
 			<value level="6">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -326,7 +326,7 @@
 		<isDebuff>2</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -352,7 +352,7 @@
 		<isDebuff>2</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -375,7 +375,7 @@
 		<isDebuff>2</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -393,7 +393,7 @@
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -403,7 +403,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -424,7 +424,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -434,7 +434,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -459,7 +459,7 @@
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -469,7 +469,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -490,7 +490,7 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -500,7 +500,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -524,7 +524,7 @@
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -534,7 +534,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -557,7 +557,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -567,7 +567,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -591,7 +591,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>90</activateRate> <!-- Guessed -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -601,7 +601,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -641,7 +641,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -672,7 +672,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -700,7 +700,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -728,7 +728,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -756,7 +756,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>22</isMagic>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -788,7 +788,7 @@
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1010</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -802,7 +802,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">51</value>
@@ -907,7 +907,7 @@
 		<attributeValue>100</attributeValue>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">44</value>
 			<value level="2">46</value>
 			<value level="3">47</value>
@@ -917,7 +917,7 @@
 			<value level="7">53</value>
 			<value level="8">55</value>
 			<value level="9">56</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -992,7 +992,7 @@
 			<value level="3">5</value>
 		</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1040,7 +1040,7 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>566</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -1139,7 +1139,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<activateRate>99</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">90</value>
@@ -1151,7 +1151,7 @@
 			<value level="9">105</value>
 			<value level="10">107</value>
 			<value level="11">109</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1230,7 +1230,7 @@
 		</abnormalLevel>
 		<abnormalTime>4</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1297,7 +1297,7 @@
 		<coolTime>500</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -1311,7 +1311,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">146</value>
 			<value level="2">150</value>
@@ -1443,7 +1443,7 @@
 		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>700</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -1457,7 +1457,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">130</value>
 			<value level="2">132</value>
@@ -1624,7 +1624,7 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>5000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -1638,7 +1638,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">550</value>
 			<value level="2">558</value>
@@ -1793,7 +1793,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1824,7 +1824,7 @@
 		<abnormalType>RHAPSODY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>89</magicLvl>
+		<magicLevel>89</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1887,12 +1887,12 @@
 		<!-- P. Atk., P. Def, M. Atk. and M. Def. +14% and P. Skill Power +5%. Increases the chance to activate additional effect when the Rampageous Beat is cast. -->
 		<icon>icon.skill19441</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
@@ -2010,7 +2010,7 @@
 			<value level="8">375</value>
 			<value level="9">400</value>
 		</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -2020,7 +2020,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND_PC</affectObject>
@@ -2086,7 +2086,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>687</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -2137,7 +2137,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -2194,7 +2194,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -2293,7 +2293,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<castRange>40</castRange>
 		<hitTime>1410</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -2307,7 +2307,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">130</value>
 			<value level="2">132</value>

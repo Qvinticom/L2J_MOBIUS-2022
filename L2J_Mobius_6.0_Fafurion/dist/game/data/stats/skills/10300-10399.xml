@@ -4,7 +4,7 @@
 		<!-- Attacks target with $s1 Power added to P. Atk. Cuts regular monsters' HP down to $s2. Usable when target's HP is $s3 or below. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. -->
 		<icon>icon.skill10300</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">90</value>
 			<value level="2">95</value>
 			<value level="3">99</value>
@@ -13,7 +13,7 @@
 			<value level="6">105</value>
 			<value level="7">107</value>
 			<value level="8">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">276</value>
@@ -124,12 +124,12 @@
 	<skill id="10303" toLevel="4" name="Superior Combat Master">
 		<!-- Max CP/ HP +$s1. -->
 		<icon>icon.skill0430</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
@@ -155,12 +155,12 @@
 	<skill id="10304" toLevel="4" name="Superior Dual Sword Mastery">
 		<!-- When a dual sword or dual blunt is equipped, P. Atk. +$s1 and additional +$s2. -->
 		<icon>icon.skill11835</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -208,12 +208,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">62</value>
 			<value level="2">69</value>
@@ -252,12 +252,12 @@
 		<!-- When a spear is equipped, P. Atk. +$s1 and additional P. Atk. $s2. Increases the number of possible targets by $s3. -->
 		<icon>icon.skill11836</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -314,7 +314,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>40</mpConsume>
 		<hitTime>2000</hitTime>
 		<effectPoint>707</effectPoint>
@@ -391,12 +391,12 @@
 	<skill id="10309" toLevel="4" name="Superior Fist Weapon Mastery">
 		<!-- When a fist weapon is equipped, P. Atk. +$s1 and additional +$s2. -->
 		<icon>icon.skill11837</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -434,7 +434,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>38</mpConsume>
 		<hitTime>1500</hitTime>
 		<effectPoint>235</effectPoint>
@@ -469,12 +469,12 @@
 	<skill id="10311" toLevel="4" name="Superior Two-handed Weapon Mastery">
 		<!-- When a two-handed sword or two-handed blunt is equipped, increases P. Atk. by $s1 and additionally by $s2. -->
 		<icon>icon.skill11838</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TwoHandedSwordBonus">
@@ -518,12 +518,12 @@
 	<skill id="10312" toLevel="4" name="Crafting Mastery">
 		<!-- There is a small chance that the item quantity will double upon crafting. Critical level $s2. -->
 		<icon>icon.skill10312</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CraftingCritical">
@@ -549,12 +549,12 @@
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -643,10 +643,10 @@
 		<!-- When a spear is equipped, P. Atk. +$s1 and additional P. Atk. +$s2. -->
 		<icon>icon.skill11836</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -674,12 +674,12 @@
 		<!-- PvP P. Atk. +$s1. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -704,12 +704,12 @@
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>SHOCK</trait>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -760,7 +760,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -770,7 +770,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">98</value>
 			<value level="2">105</value>
@@ -841,11 +841,11 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
 		<abnormalType>DUELIST_SPIRIT</abnormalType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">90</value>
 			<value level="2">95</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -897,11 +897,11 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>-500</effectPoint>
 		<isDebuff>true</isDebuff>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">90</value>
 			<value level="2">95</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -935,7 +935,7 @@
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -945,7 +945,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>SHOCK</trait>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
@@ -1105,7 +1105,7 @@
 		<icon>icon.skill10325</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>180</affectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">97</value>
 			<value level="2">98</value>
 			<value level="3">99</value>
@@ -1114,7 +1114,7 @@
 			<value level="6">105</value>
 			<value level="7">107</value>
 			<value level="8">109</value>
-		</magicLvl>
+		</magicLevel>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A1</operateType>
@@ -1210,7 +1210,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1220,7 +1220,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<effectPoint>
 			<value level="1">-183</value>
 			<value level="2">-188</value>
@@ -1282,11 +1282,11 @@
 	<skill id="10328" toLevel="3" name="Soul Berserker">
 		<!-- When equipped with a sword or blunt weapon, P. Atk. +$s1, P. Critical Damage +$s2, and P. Skill MP Consumption +$s3. -->
 		<icon>icon.skill10328</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">97</value>
 			<value level="2">98</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1337,7 +1337,7 @@
 	<skill id="10329" toLevel="1" name="Superior Blunt Weapon Mastery">
 		<!-- When a Blunt Weapon is equipped, P. Atk. +21%, and P. Critical Rate +60. -->
 		<icon>icon.skill10329</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -1370,7 +1370,7 @@
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<trait>SHOCK</trait>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1380,7 +1380,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1771,13 +1771,13 @@
 			<value level="4">242</value>
 			<value level="5">245</value>
 		</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">101</value>
 			<value level="2">103</value>
 			<value level="3">105</value>
 			<value level="4">107</value>
 			<value level="5">109</value>
-		</magicLvl>
+		</magicLevel>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>400</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1833,12 +1833,12 @@
 			<value level="3">17371</value>
 			<value level="4">17371</value>
 		</itemConsumeId>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">173</value>
 			<value level="2">178</value>

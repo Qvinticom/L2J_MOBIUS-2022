@@ -551,7 +551,7 @@ public abstract class Skill
 		_negateEffectTypes = set.getString("negateEffectTypes", "").split(" ");
 		_negatePower = set.getFloat("negatePower", 0.f);
 		_negateId = set.getInt("negateId", 0);
-		_magicLevel = set.getInt("magicLvl", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
+		_magicLevel = set.getInt("magicLevel", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
 		_levelDepend = set.getInt("lvlDepend", 0);
 		_stat = set.getEnum("stat", Stat.class, null);
 		_skillType = set.getEnum("skillType", SkillType.class);

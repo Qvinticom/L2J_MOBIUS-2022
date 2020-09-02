@@ -459,13 +459,13 @@
 		<hitTime>100</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">15</value>
 			<value level="2">32</value>
 			<value level="3">56</value>
 			<value level="4">78</value>
 			<value level="5">85</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -520,7 +520,7 @@
 			<value level="7">66</value>
 			<value level="8">70</value>
 		</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
 			<value level="3">60</value>
@@ -529,7 +529,7 @@
 			<value level="6">80</value>
 			<value level="7">85</value>
 			<value level="8">90</value>
-		</magicLvl>
+		</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -606,14 +606,14 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;400;90</fanRange>
 		<hitTime>1200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">70</value>
 			<value level="3">75</value>
 			<value level="4">80</value>
 			<value level="5">85</value>
 			<value level="6">90</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">72</value>
 			<value level="2">82</value>
@@ -709,11 +709,11 @@
 		<fanRange>0;0;600;60</fanRange>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">70</value>
 			<value level="3">80</value>
-		</magicLvl>
+		</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -769,7 +769,7 @@
 			<value level="9">-445</value>
 			<value level="10">-470</value>
 		</effectPoint>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
@@ -780,7 +780,7 @@
 			<value level="8">80</value>
 			<value level="9">85</value>
 			<value level="10">90</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">25</value>
@@ -834,7 +834,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
 			<value level="3">60</value>
@@ -843,7 +843,7 @@
 			<value level="6">80</value>
 			<value level="7">85</value>
 			<value level="8">90</value>
-		</magicLvl>
+		</magicLevel>
 		<effectPoint>
 			<value level="1">-220</value>
 			<value level="2">-270</value>
@@ -943,7 +943,7 @@
 		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
 			<value level="3">60</value>
@@ -952,7 +952,7 @@
 			<value level="6">80</value>
 			<value level="7">85</value>
 			<value level="8">90</value>
-		</magicLvl>
+		</magicLevel>
 		<effectPoint>
 			<value level="1">-500</value>
 			<value level="2">-600</value>
@@ -1567,7 +1567,7 @@
 			<value level="99">icon.skill55463_099</value>
 			<value level="100">icon.skill55463_100</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
@@ -1675,7 +1675,7 @@
 			<value level="99">icon.skill55464_099</value>
 			<value level="100">icon.skill55464_100</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
@@ -1698,10 +1698,10 @@
 	<skill id="45178" toLevel="2" name="Light Master">
 		<!-- Allows to absorb the power of light.\n\nCollect 100 Light Souls to assume the Light Veil.\n\n<Light Veil>\nGrants Evolved Wings Lv. 1 that allows to absorb MP and increases defense. -->
 		<icon>icon.skill_jinkama_white1</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">60</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1750,7 +1750,7 @@
 	<skill id="45180" toLevel="4" name="Light Soul Absorption">
 		<!-- Activates when attacking. -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1786,7 +1786,7 @@
 		<icon>icon.skill0479</icon>
 		<castRange>300</castRange>
 		<effectRange>600</effectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>3000</reuseDelay>
@@ -1806,11 +1806,11 @@
 	<skill id="45184" toLevel="3" name="Potion Mastery">
 		<!-- HP Recovery Potions' Effect +$s1. -->
 		<icon>icon.skill19225</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
 			<value level="3">60</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<!-- Effects are hardcoded. Leave as is. -->

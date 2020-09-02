@@ -8,7 +8,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="OpAlignment">
@@ -48,12 +48,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>39514</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -78,12 +78,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>39515</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<cond msgId="113" addName="1">
 			<and>
@@ -106,12 +106,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>39516</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<cond msgId="113" addName="1">
 			<and>
@@ -133,12 +133,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>39517</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<cond msgId="113" addName="1">
 			<and>
@@ -167,7 +167,7 @@
 		<itemConsumeId>39592</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -247,7 +247,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39629</itemConsumeId> <!-- Fortune Pocket - Stage 1 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -265,7 +265,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39630</itemConsumeId> <!-- Fortune Pocket - Stage 2 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -283,7 +283,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39631</itemConsumeId> <!-- Fortune Pocket - Stage 3 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -303,7 +303,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39631</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -343,7 +343,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39632</itemConsumeId> <!-- Fortune Pocket - Stage 4 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -362,7 +362,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39633</itemConsumeId> <!-- Fortune Pocket - Stage 5 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -383,7 +383,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39633</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -714,7 +714,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -738,7 +738,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -789,7 +789,7 @@
 		<!-- Can equip 1 Talisman. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -801,7 +801,7 @@
 		<!-- Can equip 2 Talismans. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -813,7 +813,7 @@
 		<!-- Can equip 3 Talismans. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -825,7 +825,7 @@
 		<!-- Can equip 4 Talismans. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -837,7 +837,7 @@
 		<!-- Can equip 5 Talismans. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -849,7 +849,7 @@
 		<!-- Can equip 6 Talismans. -->
 		<icon>icon.dimension_bracelet_i05</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -861,7 +861,7 @@
 		<!-- STR +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -874,7 +874,7 @@
 		<!-- STR +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -887,7 +887,7 @@
 		<!-- STR +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -900,7 +900,7 @@
 		<!-- STR +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -913,7 +913,7 @@
 		<!-- STR +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -926,7 +926,7 @@
 		<!-- DEX +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -939,7 +939,7 @@
 		<!-- DEX +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -952,7 +952,7 @@
 		<!-- DEX +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -965,7 +965,7 @@
 		<!-- DEX +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -978,7 +978,7 @@
 		<!-- DEX +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -991,7 +991,7 @@
 		<!-- CON +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1004,7 +1004,7 @@
 		<!-- CON +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1017,7 +1017,7 @@
 		<!-- CON +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1030,7 +1030,7 @@
 		<!-- CON +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1043,7 +1043,7 @@
 		<!-- CON +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1056,7 +1056,7 @@
 		<!-- INT +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1069,7 +1069,7 @@
 		<!-- INT +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1082,7 +1082,7 @@
 		<!-- INT +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1095,7 +1095,7 @@
 		<!-- INT +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1108,7 +1108,7 @@
 		<!-- INT +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1121,7 +1121,7 @@
 		<!-- MEN +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1134,7 +1134,7 @@
 		<!-- MEN +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1147,7 +1147,7 @@
 		<!-- MEN +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1160,7 +1160,7 @@
 		<!-- MEN +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1173,7 +1173,7 @@
 		<!-- MEN +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1186,7 +1186,7 @@
 		<!-- WIT +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1199,7 +1199,7 @@
 		<!-- WIT +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1212,7 +1212,7 @@
 		<!-- WIT +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1225,7 +1225,7 @@
 		<!-- WIT +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1238,7 +1238,7 @@
 		<!-- WIT +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1251,7 +1251,7 @@
 		<!-- LUC +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1264,7 +1264,7 @@
 		<!-- LUC +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1277,7 +1277,7 @@
 		<!-- LUC +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1290,7 +1290,7 @@
 		<!-- LUC +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1303,7 +1303,7 @@
 		<!-- LUC +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1316,7 +1316,7 @@
 		<!-- CHA +1. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1329,7 +1329,7 @@
 		<!-- CHA +2. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1342,7 +1342,7 @@
 		<!-- CHA +3. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1355,7 +1355,7 @@
 		<!-- CHA +4. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatUp">
@@ -1368,7 +1368,7 @@
 		<!-- CHA +5. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TalismanSlot">
@@ -1388,7 +1388,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40049</itemConsumeId> <!-- Scroll: 1,000 SP -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1407,7 +1407,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>40050</itemConsumeId> <!-- Scroll: 10,000 SP -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

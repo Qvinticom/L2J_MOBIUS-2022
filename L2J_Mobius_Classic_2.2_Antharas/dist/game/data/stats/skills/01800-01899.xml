@@ -10,7 +10,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
-		<magicLvl>56</magicLvl>
+		<magicLevel>56</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -79,7 +79,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
-		<magicLvl>56</magicLvl>
+		<magicLevel>56</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
 		<hitTime>3000</hitTime>
@@ -148,7 +148,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
-		<magicLvl>56</magicLvl>
+		<magicLevel>56</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<hitTime>3000</hitTime>
@@ -403,7 +403,7 @@
 	<skill id="1829" toLevel="1" name="Spell Master">
 		<!-- Casting Spd. +10%, M. Critical Rate +10. -->
 		<icon>icon.skill1901</icon>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -419,7 +419,7 @@
 	<skill id="1830" toLevel="1" name="Spell Master">
 		<!-- Casting Spd. +13%, M. Critical Rate +10. -->
 		<icon>icon.skill1908</icon>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -435,7 +435,7 @@
 	<skill id="1831" toLevel="1" name="Spell Master">
 		<!-- Casting Spd. +9%, M. Critical Rate +10. -->
 		<icon>icon.skill1911</icon>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -451,7 +451,7 @@
 	<skill id="1832" toLevel="1" name="Spell Master">
 		<!-- Casting Spd. +5%, M. Critical Rate +10. -->
 		<icon>icon.skill1916</icon>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1090,7 +1090,7 @@
 		<!-- Unravels Cat's true potential. Damage to raid bosses +5%%, Damage received from raid bosses -10%%. -->
 		<icon>icon.skill1406</icon>
 		<operateType>P</operateType>
-		<magicLvl>81</magicLvl>
+		<magicLevel>81</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PveRaidPhysicalAttackDamageBonus">
@@ -1123,7 +1123,7 @@
 		<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%%, Damage received from raid bosses -5%%. -->
 		<icon>icon.skill1407</icon>
 		<operateType>P</operateType>
-		<magicLvl>81</magicLvl>
+		<magicLevel>81</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PveRaidPhysicalAttackDamageBonus">
@@ -1156,7 +1156,7 @@
 		<!-- Unravels true spectral potential. Damage to raid bosses +15%%. -->
 		<icon>icon.skill1408</icon>
 		<operateType>P</operateType>
-		<magicLvl>81</magicLvl>
+		<magicLevel>81</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PveRaidPhysicalAttackDamageBonus">

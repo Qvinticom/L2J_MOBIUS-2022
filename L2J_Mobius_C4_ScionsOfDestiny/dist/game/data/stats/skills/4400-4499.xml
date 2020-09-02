@@ -60,7 +60,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -112,7 +112,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -883,7 +883,7 @@
 		</for>
 	</skill>
 	<skill id="4469" levels="1" name="Potion Drinking">
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -903,8 +903,8 @@
 		<!-- Increases NPC's P. Atk. and P. Def. Effect 1. -->
 		<table name="#increase">1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -921,8 +921,8 @@
 	<skill id="4472" levels="12" name="NPC Strike Golem">
 		<!-- For powerful Golems that are 1.5x stronger -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_ONE" />
@@ -934,7 +934,7 @@
 		<!-- Shocks and instantly immobilizes. -->
 		<table name="#mpConsume">27 44 62 85 109 135 157 168 177 183 187 189</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
-		<set name="magicLvl" val="48" />
+		<set name="magicLevel" val="48" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -1011,7 +1011,7 @@
 		<set name="castRange" val="150" />
 	</skill>
 	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="element" val="3" />
 		<!-- Water -->
 		<set name="mpConsume" val="23" />
@@ -1042,7 +1042,7 @@
 		<set name="castRange" val="700" />
 	</skill>
 	<skill id="4480" levels="1" name="Ice Fairy Curse Gloom">
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="saveVs" val="MEN" />
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
@@ -1060,7 +1060,7 @@
 		</for>
 	</skill>
 	<skill id="4481" levels="1" name="Ice Fairy Hex">
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="saveVs" val="MEN" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="power" val="100" />
@@ -1139,8 +1139,8 @@
 	<skill id="4486" levels="12" name="Decrease P. Def">
 		<!-- Temporarily reduces P. Def. Effect 1. -->
 		<table name="#mpConsume">14 15 17 18 19 20 22 22 23 24 25 26</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
 		<set name="saveVs" val="MEN" />
@@ -1161,8 +1161,8 @@
 	<skill id="4487" levels="12" name="Decrease M. Def.">
 		<!-- Instantly reduces M. Def. Effect 1. -->
 		<table name="#mpConsume">14 15 17 18 19 20 22 22 23 24 25 26</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
 		<set name="saveVs" val="MEN" />
@@ -1184,8 +1184,8 @@
 		<!-- Temporarily holds and immobilizes target. -->
 		<table name="#mpConsume_Init">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<table name="#mpConsume">10 16 21 28 36 44 52 55 58 60 61 62</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume_Init" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
@@ -1205,8 +1205,8 @@
 	<skill id="4489" levels="12" name="NPC Death MP Bomb">
 		<table name="#mpConsume">21 33 47 64 82 101 118 126 133 137 140 142</table>
 		<table name="#power">18 26 38 52 68 85 102 119 136 153 170 187</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1232,8 +1232,8 @@
 	<skill id="4491" levels="12" name="Holy Weapon">
 		<!-- Makes sacred attacks. -->
 		<table name="#mpConsume">41 66 93 127 164 202 236 252 265 274 280 283</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="element" val="6" />
@@ -1245,8 +1245,8 @@
 	<skill id="4492" levels="12" name="Enlarging Head Curse">
 		<!-- Temporarily enlarges the head. -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
@@ -1260,8 +1260,8 @@
 	</skill>
 	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
-		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2000" />
@@ -1276,13 +1276,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="4495" levels="12" name="BOSS Power Shot">
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
-		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -1297,8 +1297,8 @@
 		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<table name="#power">176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895</table>
-		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -1321,7 +1321,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
 		<!-- A locked chest that could contain treasure or a nasty surprise. -->
@@ -1330,7 +1330,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
 		<!-- A locked chest that could contain treasure or a nasty surprise. -->
@@ -1339,6 +1339,6 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 </list>

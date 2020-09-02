@@ -3,7 +3,7 @@
 	<skill id="8458" levels="1" name="Bracelet Weight Gauge Add">
 		<!-- Increases the weight gauge when a bracelet is equipped. -->
 		<set name="icon" val="icon.skill0150" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -17,7 +17,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -30,7 +30,7 @@
 		<!-- It's time to return Santa Claus's gift that the Agathions gave you. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="NONE" />

@@ -3,14 +3,14 @@
 	<skill id="3600" toLevel="6" name="Special Ability: Anger">
 		<!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
 		<icon>icon.skill1062</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -74,14 +74,14 @@
 	<skill id="3601" toLevel="6" name="Special Ability: Haste">
 		<!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
 		<icon>icon.skill1086</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -130,14 +130,14 @@
 	<skill id="3602" toLevel="6" name="Special Ability: Guidance">
 		<!-- Increases Accuracy. Enables the character to attack multiple opponents. -->
 		<icon>icon.skill1240</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -197,7 +197,7 @@
 	<skill id="3603" toLevel="10" name="Demonic Sword Zariche">
 		<!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
 		<icon>icon.weapon_unique_zariche_i00</icon>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<minPledgeClass>2</minPledgeClass>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -432,7 +432,7 @@
 	<skill id="3604" toLevel="1" name="Frintezza's Necklace">
 		<!-- Increases Dark Attack/ Poison/ Bleed/ Paralysis/ Stun/ Sleep Resistance, and Poison/ Bleed/ Paralysis/ Stun/ Sleep attack bonus. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -472,7 +472,7 @@
 	<skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor">
 		<!-- HP Recovery Bonus +3%, Max HP +25, P. Def. +3%. -->
 		<icon>icon.armor_t1001_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -493,7 +493,7 @@
 	<skill id="3606" toLevel="1" name="Set Effect - Moon Light Armor">
 		<!-- MP Recovery Bonus +3%, Max MP +10, P. Atk. +2%. -->
 		<icon>icon.armor_t1002_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -514,7 +514,7 @@
 	<skill id="3607" toLevel="1" name="Set Effect - Moon Robe Armor">
 		<!-- MP Recovery Bonus +3%, Max MP +20, M. Atk. +2%. -->
 		<icon>icon.armor_t1003_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -535,7 +535,7 @@
 	<skill id="3608" toLevel="3" name="Apella Heavy Armor Set">
 		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases Critical Damage success rate. -->
 		<icon>icon.armor_t1004_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -607,7 +607,7 @@
 	<skill id="3609" toLevel="3" name="Apella Light Armor Set">
 		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Evasion when attacked. Decreases received Critical Damage. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -679,7 +679,7 @@
 	<skill id="3610" toLevel="3" name="Apella Robe Set">
 		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Speed and P. Def. when attacked. -->
 		<icon>icon.armor_t1006_ul_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -751,7 +751,7 @@
 	<skill id="3611" toLevel="1" name="Enchant Heavy Armor (D-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -777,7 +777,7 @@
 	<skill id="3612" toLevel="1" name="Enchant Light Armor (D-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -800,7 +800,7 @@
 	<skill id="3613" toLevel="1" name="Enchant Robe (D-grade)">
 		<!-- Increases M. Def. and weight limit by enchanting set items. -->
 		<icon>icon.skill0234</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -820,7 +820,7 @@
 	<skill id="3614" toLevel="1" name="Enchant Heavy Armor (C-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -846,7 +846,7 @@
 	<skill id="3615" toLevel="1" name="Enchant Light Armor (C-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -869,7 +869,7 @@
 	<skill id="3616" toLevel="1" name="Enchant Robe (C-grade)">
 		<!-- Increases M. Def. and weight limit by enchanting set items. -->
 		<icon>icon.skill0234</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -889,7 +889,7 @@
 	<skill id="3617" toLevel="1" name="Enchant Heavy Armor (B-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -915,7 +915,7 @@
 	<skill id="3618" toLevel="1" name="Enchant Light Armor (B-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -938,7 +938,7 @@
 	<skill id="3619" toLevel="1" name="Enchant Robe (B-grade)">
 		<!-- Increases M. Def. and weight limit by enchanting set items. -->
 		<icon>icon.skill0234</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -958,7 +958,7 @@
 	<skill id="3620" toLevel="1" name="Enchant Heavy Armor (A-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -984,7 +984,7 @@
 	<skill id="3621" toLevel="1" name="Enchant Light Armor (A-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1007,7 +1007,7 @@
 	<skill id="3622" toLevel="1" name="Enchant Robe (A-grade)">
 		<!-- Increases M. Def. and weight limit by enchanting set items. -->
 		<icon>icon.skill0234</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1027,7 +1027,7 @@
 	<skill id="3623" toLevel="3" name="Enchant Heavy Armor (S-grade)">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1053,7 +1053,7 @@
 	<skill id="3624" toLevel="3" name="Enchant Light Armor (S-grade)">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1076,7 +1076,7 @@
 	<skill id="3625" toLevel="3" name="Enchant Robe (S-grade)">
 		<!-- Increases M. Def. and weight limit by enchanting set items. -->
 		<icon>icon.skill0234</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1096,7 +1096,7 @@
 	<skill id="3629" toLevel="10" name="Blood Sword Akamanah">
 		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
 		<icon>icon.weapon_dual_sword_i00</icon>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<minPledgeClass>2</minPledgeClass>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1335,7 +1335,7 @@
 		<affectRange>150</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1357,7 +1357,7 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1379,7 +1379,7 @@
 		<abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1404,7 +1404,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2500" toLevel="1" name="Beast Soulshot Compressed Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -23,7 +23,7 @@
 	</skill>
 	<skill id="2501" toLevel="1" name="Beast Spiritshot Compressed Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -44,7 +44,7 @@
 	</skill>
 	<skill id="2502" toLevel="1" name="Blessed Beast Spiritshot Compressed Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -65,7 +65,7 @@
 	</skill>
 	<skill id="2504" toLevel="1" name="Old Agathion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -100,7 +100,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10608</itemConsumeId> <!-- Forgotten Scroll - Chant of Combat -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -134,7 +134,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10609</itemConsumeId> <!-- Forgotten Scroll - Chant of Critical -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -168,7 +168,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10610</itemConsumeId> <!-- Forgotten Scroll - Chant of Blood Awakening -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -202,7 +202,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10640</itemConsumeId> <!-- Cloned Squash Seed -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -225,7 +225,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10641</itemConsumeId> <!-- Cloned Large Squash Seed -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -245,7 +245,7 @@
 	</skill>
 	<skill id="2510" toLevel="1" name="Wondrous Cubic">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>-1</reuseDelay> <!-- TODO: Daily Reuse Reset ? -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -322,7 +322,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -351,7 +351,7 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -376,7 +376,7 @@
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -409,7 +409,7 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>48</magicLvl>
+		<magicLevel>48</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -426,7 +426,7 @@
 	</skill>
 	<skill id="2515" toLevel="1" name="Lucky Clover (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -435,7 +435,7 @@
 	</skill>
 	<skill id="2516" toLevel="1" name="Lucky Clover (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -444,7 +444,7 @@
 	</skill>
 	<skill id="2517" toLevel="1" name="Lucky Clover (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -453,7 +453,7 @@
 	</skill>
 	<skill id="2518" toLevel="1" name="Lucky Clover (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -462,7 +462,7 @@
 	</skill>
 	<skill id="2519" toLevel="1" name="Lucky Clover (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -471,7 +471,7 @@
 	</skill>
 	<skill id="2520" toLevel="1" name="Lucky Clover (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -480,7 +480,7 @@
 	</skill>
 	<skill id="2521" toLevel="1" name="Lucky Clover (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -489,7 +489,7 @@
 	</skill>
 	<skill id="2522" toLevel="1" name="Lucky Clover (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -498,7 +498,7 @@
 	</skill>
 	<skill id="2523" toLevel="1" name="Lucky Clover (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -507,7 +507,7 @@
 	</skill>
 	<skill id="2524" toLevel="1" name="Lucky Clover (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -519,7 +519,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12753</itemConsumeId> <!-- Kamael Village Teleportation Scroll -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -544,7 +544,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12768</itemConsumeId> <!-- Forgotten Scroll - Evasion Counter -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -578,7 +578,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12769</itemConsumeId> <!-- Forgotten Scroll - Evasion Chance -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -612,7 +612,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12770</itemConsumeId> <!-- Forgotten Scroll - Evasion Haste -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -646,7 +646,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12771</itemConsumeId> <!-- Forgotten Scroll - Shadow Step -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -686,7 +686,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12819</itemConsumeId> <!-- Recovery Spellbook for Combat Use -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -703,7 +703,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10650</itemConsumeId> <!-- Adventurer's Scroll of Escape -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -721,7 +721,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12824</itemConsumeId> <!-- Pathfinder Supplies (Level 1) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -749,7 +749,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10836</itemConsumeId> <!-- Pathfinder Supplies (Level 2) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -779,7 +779,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12825</itemConsumeId> <!-- Pathfinder Supplies (Level 3) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -807,7 +807,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10837</itemConsumeId> <!-- Pathfinder Supplies (Level 4) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -838,7 +838,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10838</itemConsumeId> <!-- Pathfinder Supplies (Level 5) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -869,7 +869,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10839</itemConsumeId> <!-- Pathfinder Supplies (Level 6) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -901,7 +901,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10840</itemConsumeId> <!-- Pathfinder Supplies (Level 7) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -929,7 +929,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10841</itemConsumeId> <!-- Pathfinder Supplies (Level 8) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -960,7 +960,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12826</itemConsumeId> <!-- Pathfinder Supplies (Level 9) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -988,7 +988,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12827</itemConsumeId> <!-- Pathfinder Supplies (Level 10) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1020,7 +1020,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10842</itemConsumeId> <!-- Pathfinder Supplies (Level 11) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1051,7 +1051,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10843</itemConsumeId> <!-- Pathfinder Supplies (Level 12) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1082,7 +1082,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10844</itemConsumeId> <!-- Pathfinder Supplies (Level 13) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1114,7 +1114,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10845</itemConsumeId> <!-- Pathfinder Supplies (Level 14) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1142,7 +1142,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10846</itemConsumeId> <!-- Pathfinder Supplies (Level 15) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1173,7 +1173,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12828</itemConsumeId> <!-- Pathfinder Supplies (Level 16) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1201,7 +1201,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12829</itemConsumeId> <!-- Pathfinder Supplies (Level 17) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1233,7 +1233,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10847</itemConsumeId> <!-- Pathfinder Supplies (Level 18) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1263,7 +1263,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10848</itemConsumeId> <!-- Pathfinder Supplies (Level 19) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1294,7 +1294,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10849</itemConsumeId> <!-- Pathfinder Supplies (Level 20) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1326,7 +1326,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10850</itemConsumeId> <!-- Pathfinder Supplies (Level 21) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1354,7 +1354,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10851</itemConsumeId> <!-- Pathfinder Supplies (Level 22) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1384,7 +1384,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12830</itemConsumeId> <!-- Pathfinder Supplies (Level 23) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1414,7 +1414,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12831</itemConsumeId> <!-- Pathfinder Supplies (Level 24) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1446,7 +1446,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10852</itemConsumeId> <!-- Pathfinder Supplies (Level 25) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1477,7 +1477,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10853</itemConsumeId> <!-- Pathfinder Supplies (Level 26) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1508,7 +1508,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10854</itemConsumeId> <!-- Pathfinder Supplies (Level 27) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1539,7 +1539,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10855</itemConsumeId> <!-- Pathfinder Supplies (Level 28) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1567,7 +1567,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10856</itemConsumeId> <!-- Pathfinder Supplies (Level 29) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1597,7 +1597,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12832</itemConsumeId> <!-- Pathfinder Supplies (Level 30) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1625,7 +1625,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12833</itemConsumeId> <!-- Pathfinder Supplies (Level 31) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1656,7 +1656,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10857</itemConsumeId> <!-- Pathfinder Supplies (Level 32) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1686,7 +1686,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10858</itemConsumeId> <!-- Pathfinder Supplies (Level 33) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1717,7 +1717,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10859</itemConsumeId> <!-- Pathfinder Supplies (Level 34) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1748,7 +1748,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10860</itemConsumeId> <!-- Pathfinder Supplies (Level 35) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1776,7 +1776,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10861</itemConsumeId> <!-- Pathfinder Supplies (Level 36) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1806,7 +1806,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>12834</itemConsumeId> <!-- Pathfinder Supplies (Level 37) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1837,7 +1837,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10862</itemConsumeId> <!-- Pathfinder Supplies (Level 38) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1867,7 +1867,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10863</itemConsumeId> <!-- Pathfinder Supplies (Level 39) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1898,7 +1898,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10864</itemConsumeId> <!-- Pathfinder Supplies (Level 40) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1929,7 +1929,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13003</itemConsumeId> <!-- Pathfinder's Reward (D-Grade) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1955,7 +1955,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13004</itemConsumeId> <!-- Pathfinder's Reward (C-Grade) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1981,7 +1981,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13005</itemConsumeId> <!-- Pathfinder's Reward (B-Grade) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2007,7 +2007,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13006</itemConsumeId> <!-- Pathfinder's Reward (A-Grade) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2084,7 +2084,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13007</itemConsumeId> <!-- Pathfinder's Reward (S-Grade) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2149,7 +2149,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2177,7 +2177,7 @@
 	<skill id="2578" toLevel="1" name="Cure Poison Paralyze">
 		<!-- Cures Poison Paralyze. -->
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2192,7 +2192,7 @@
 	<skill id="2579" toLevel="1" name="Cure Death Clock">
 		<!-- Cures the Incense of Death. -->
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2214,7 +2214,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2232,7 +2232,7 @@
 	<skill id="2581" toLevel="1" name="not_used">
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2243,7 +2243,7 @@
 	<skill id="2582" toLevel="1" name="not_used">
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2254,7 +2254,7 @@
 	<skill id="2583" toLevel="1" name="not_used">
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -2264,7 +2264,7 @@
 	</skill>
 	<skill id="2584" toLevel="1" name="Item - Special Sound Crystal">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2273,7 +2273,7 @@
 	</skill>
 	<skill id="2585" toLevel="1" name="Item - Special Sound Crystal">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2282,7 +2282,7 @@
 	</skill>
 	<skill id="2586" toLevel="2" name="Vitality Replenishing Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2308,7 +2308,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13015</itemConsumeId> <!-- My Teleport Spellbook -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2328,7 +2328,7 @@
 	<skill id="2588" toLevel="1" name="My Teleport">
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2338,7 +2338,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13010</itemConsumeId> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2354,7 +2354,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13011</itemConsumeId> <!-- Extra Entrance Pass - Near Kamaloka -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2370,7 +2370,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13012</itemConsumeId> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2384,7 +2384,7 @@
 	</skill>
 	<skill id="2592" toLevel="1" name="Quick Healing Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2403,7 +2403,7 @@
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>40</effectPoint>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2422,7 +2422,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13129</itemConsumeId> <!-- Scroll of Escape: Pailaka -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2441,7 +2441,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13258</itemConsumeId> <!-- Gran Kain's Blessed Scroll of Escape -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2464,7 +2464,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13259</itemConsumeId> <!-- Gran Kain's Blessed Scroll of Resurrection -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
@@ -2481,7 +2481,7 @@
 	</skill>
 	<skill id="2597" toLevel="1" name="Gran Kain's Echo Crystal - Theme of Journey">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2490,7 +2490,7 @@
 	</skill>
 	<skill id="2598" toLevel="1" name="Gran Kain's Echo Crystal - Theme of Battle">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2499,7 +2499,7 @@
 	</skill>
 	<skill id="2599" toLevel="1" name="Gran Kain's Echo Crystal - Theme of Love">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

@@ -10,7 +10,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -32,7 +32,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -54,7 +54,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -77,7 +77,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -209,7 +209,7 @@
 		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-3</magicLvl>
+		<magicLevel>-3</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
@@ -422,7 +422,7 @@
 	<skill id="17263" toLevel="1" name="Warrior's Quick Healing Potion">
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeId>48624</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -478,7 +478,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37904</itemConsumeId> <!-- Scroll: 1,000,000,000 SP -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -602,7 +602,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -660,7 +660,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -724,7 +724,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -779,7 +779,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
@@ -827,7 +827,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
@@ -883,7 +883,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>22</isMagic>
@@ -968,7 +968,7 @@
 		<effectPoint>687</effectPoint>
 		<affectRange>1000</affectRange>
 		<isMagic>22</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1025,7 +1025,7 @@
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
 		<isMagic>22</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1086,7 +1086,7 @@
 		<effectPoint>696</effectPoint>
 		<affectRange>1000</affectRange>
 		<isMagic>22</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>

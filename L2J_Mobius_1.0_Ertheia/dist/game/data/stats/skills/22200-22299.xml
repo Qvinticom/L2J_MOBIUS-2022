@@ -258,7 +258,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>4000</reuseDelay>
 		<isMagic>2</isMagic>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -278,7 +278,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -299,7 +299,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21200</itemConsumeId> <!-- Mysterious Scroll - Prophecy of Wind -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>100</effectPoint>
@@ -363,7 +363,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21210</itemConsumeId> <!-- MP Recovery Potion -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -390,7 +390,7 @@
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21212</itemConsumeId> <!-- Vitality Replenishing Herb Tea -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -418,7 +418,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21224</itemConsumeId> <!-- Transformation Scroll: Anakim -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -445,7 +445,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21239</itemConsumeId> <!-- Super Healthy Juice (HP) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -464,7 +464,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21240</itemConsumeId> <!-- Super Healthy Juice (HP) - Event -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -483,7 +483,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21243</itemConsumeId> <!-- Super Healthy Juice (CP) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -503,7 +503,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21244</itemConsumeId> <!-- Super Healthy Juice (CP) - Event -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -523,7 +523,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21247</itemConsumeId> <!-- Vitality Replenishing Beverage -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -547,7 +547,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>21248</itemConsumeId> <!-- Vitality Replenishing Beverage - Event -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -818,7 +818,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -873,7 +873,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -928,7 +928,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -983,7 +983,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1038,7 +1038,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1078,7 +1078,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1118,7 +1118,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1173,7 +1173,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1228,7 +1228,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1274,7 +1274,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1320,7 +1320,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1369,7 +1369,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1414,7 +1414,7 @@
 	</skill>
 	<skill id="22247" toLevel="1" name="Scroll: Enchant Power Shirt">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1423,7 +1423,7 @@
 	</skill>
 	<skill id="22248" toLevel="1" name="Blessed Scroll: Enchant Power Shirt">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1431,7 +1431,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22249" toLevel="1" name="Birthday Cake">
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1470,7 +1470,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>4</isMagic>
 		<castRange>500</castRange>
@@ -1486,7 +1486,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1498,7 +1498,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1517,7 +1517,7 @@
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1529,7 +1529,7 @@
 	</skill>
 	<skill id="22254" toLevel="1" name="Blessed Scroll: Enchant Power Shirt">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1540,7 +1540,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1555,7 +1555,7 @@
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1573,7 +1573,7 @@
 		<abnormalType>SPEED_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1591,7 +1591,7 @@
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1609,7 +1609,7 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1627,7 +1627,7 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1645,7 +1645,7 @@
 		<abnormalType>MA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1663,7 +1663,7 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1681,7 +1681,7 @@
 		<abnormalType>PD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1699,7 +1699,7 @@
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1717,7 +1717,7 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1735,7 +1735,7 @@
 		<abnormalType>HIT_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1753,7 +1753,7 @@
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1771,7 +1771,7 @@
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1789,7 +1789,7 @@
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1810,7 +1810,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
-		<magicLvl>-3</magicLvl>
+		<magicLevel>-3</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
@@ -1827,7 +1827,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1845,7 +1845,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1974,7 +1974,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2103,7 +2103,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2254,7 +2254,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2287,7 +2287,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2571,7 +2571,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2607,7 +2607,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2616,7 +2616,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2625,7 +2625,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2634,7 +2634,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2643,7 +2643,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2679,7 +2679,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2709,7 +2709,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2739,7 +2739,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2769,7 +2769,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>14400</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2796,7 +2796,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2825,7 +2825,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2982,7 +2982,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3005,7 +3005,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3026,7 +3026,7 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3049,7 +3049,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3065,7 +3065,7 @@
 	</skill>
 	<skill id="22294" toLevel="1" name="Totem of Body">
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3086,7 +3086,7 @@
 	</skill>
 	<skill id="22295" toLevel="1" name="Totem of Spirit">
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3108,7 +3108,7 @@
 	<skill id="22296" toLevel="1" name="Totem of Courage">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<despawnDelay>1800000</despawnDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3129,7 +3129,7 @@
 	</skill>
 	<skill id="22297" toLevel="1" name="Totem of Fortitude">
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3156,7 +3156,7 @@
 		<itemConsumeId>21903</itemConsumeId>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<hitTime>100</hitTime>
 		<reuseDelay>300000</reuseDelay>
@@ -3182,7 +3182,7 @@
 		<itemConsumeId>21904</itemConsumeId>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<hitTime>100</hitTime>
 		<reuseDelay>300000</reuseDelay>

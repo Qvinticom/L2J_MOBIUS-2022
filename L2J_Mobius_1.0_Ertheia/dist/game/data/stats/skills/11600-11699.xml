@@ -257,7 +257,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -265,7 +265,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">252</value>
 			<value level="2">278</value>
@@ -398,7 +398,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>687</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -454,7 +454,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -521,7 +521,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -588,7 +588,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>687</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -644,7 +644,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -711,7 +711,7 @@
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effectPoint>696</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
@@ -1131,7 +1131,7 @@
 		<!-- Updated to IO -->
 		<!-- Shield Defense Success Rate + $s1, Shield Defense + $s2. -->
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1142,7 +1142,7 @@
 			<value level="8">106</value>
 			<value level="9">108</value>
 			<value level="10">110</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="ShieldDefenceRate">
@@ -1170,7 +1170,7 @@
 		<!-- Updated to IO -->
 		<!-- Has a chance to create a barrier that absorbs damage. -->
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<minAttackerLevel>1</minAttackerLevel>
@@ -1190,7 +1190,7 @@
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelay>30000</reuseDelay>

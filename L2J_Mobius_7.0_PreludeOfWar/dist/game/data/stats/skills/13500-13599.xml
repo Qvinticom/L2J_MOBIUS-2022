@@ -205,7 +205,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-379</effectPoint>
 		<activateRate>80</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
 		<trait>DERANGEMENT</trait>
@@ -232,7 +232,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-227</effectPoint>
@@ -266,7 +266,7 @@
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-227</effectPoint>
 		<activateRate>80</activateRate>
@@ -300,7 +300,7 @@
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>4</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-711</effectPoint>
 		<activateRate>80</activateRate>
@@ -323,7 +323,7 @@
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<TURN_STONE>50</TURN_STONE>
@@ -382,7 +382,7 @@
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<TURN_STONE>50</TURN_STONE>
@@ -446,7 +446,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -920,7 +920,7 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>7200000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<skillType>BUFF</skillType>
 		<canBeDispelled>false</canBeDispelled>
 		<targetType>SELF</targetType>
@@ -2011,7 +2011,7 @@
 		<!-- Resistance for all weapons +3%. When equipped with a weapon that has an attribute, the Atk. Attribute +50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
-		<magicLvl>3</magicLvl>
+		<magicLevel>3</magicLevel>
 		<operateType>P</operateType>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2063,7 +2063,7 @@
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
-		<magicLvl>3</magicLvl>
+		<magicLevel>3</magicLevel>
 		<operateType>P</operateType>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2715,7 +2715,7 @@
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
@@ -2738,7 +2738,7 @@
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
@@ -2761,7 +2761,7 @@
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
@@ -2784,7 +2784,7 @@
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
@@ -2807,7 +2807,7 @@
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
@@ -2830,7 +2830,7 @@
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>5</slots>

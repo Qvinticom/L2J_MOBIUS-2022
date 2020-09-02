@@ -3,7 +3,7 @@
 	<skill id="10497" toLevel="1" name="Warrior - Individual Passive">
 		<icon>icon.skill0217</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10498" toLevel="1" name="Warrior - Individual">
@@ -13,7 +13,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>5000</reuseDelay>
@@ -35,7 +35,7 @@
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>

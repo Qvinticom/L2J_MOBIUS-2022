@@ -43,7 +43,7 @@
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">90</value>
@@ -55,7 +55,7 @@
 			<value level="9">105</value>
 			<value level="10">107</value>
 			<value level="11">109</value>
-		</magicLvl>
+		</magicLevel>
 		<lvlBonusRate>20</lvlBonusRate>
 		<mpConsume>1</mpConsume>
 		<effectPoint>-711</effectPoint>
@@ -133,7 +133,7 @@
 		<affectRange>300</affectRange>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">90</value>
@@ -145,7 +145,7 @@
 			<value level="9">105</value>
 			<value level="10">107</value>
 			<value level="11">109</value>
-		</magicLvl>
+		</magicLevel>
 		<lvlBonusRate>20</lvlBonusRate>
 		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -211,7 +211,7 @@
 		<abnormalType>STUN</abnormalType>
 		<operateType>DA5</operateType>
 		<castRange>80</castRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -221,7 +221,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">80</value>
 			<value level="2">85</value>
@@ -335,7 +335,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>120</castRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -345,7 +345,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">90</value>
 			<value level="2">98</value>
@@ -507,7 +507,7 @@
 			<value level="8">136</value>
 			<value level="9">142</value>
 		</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -517,7 +517,7 @@
 			<value level="7">105</value>
 			<value level="8">107</value>
 			<value level="9">109</value>
-		</magicLvl>
+		</magicLevel>
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
@@ -568,13 +568,13 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">101</value>
 			<value level="2">103</value>
 			<value level="3">105</value>
 			<value level="4">107</value>
 			<value level="5">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>155</mpConsume>
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
@@ -607,7 +607,7 @@
 		<icon>icon.skill19312</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>TG</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -663,7 +663,7 @@
 		<icon>icon.skill19313</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>TG</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -688,7 +688,7 @@
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -702,7 +702,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">37</value>
 			<value level="2">38</value>
@@ -854,7 +854,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">89</value>
@@ -863,7 +863,7 @@
 			<value level="6">95</value>
 			<value level="7">97</value>
 			<value level="8">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">264</value>
 			<value level="2">276</value>

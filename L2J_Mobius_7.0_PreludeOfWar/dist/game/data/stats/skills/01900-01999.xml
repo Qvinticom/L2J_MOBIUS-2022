@@ -4,7 +4,7 @@
 		<!-- Elemental Resistance +10. -->
 		<icon>icon.skill1901</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -29,7 +29,7 @@
 		<!-- Debuff Resistance +1%. -->
 		<icon>icon.skill1902</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ResistAbnormalByCategory">
@@ -42,7 +42,7 @@
 		<!-- Increases HP Recovery bonus by 1 and MP Recovery bonus by 1. -->
 		<icon>icon.skill1903</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HpRegen">
@@ -65,7 +65,7 @@
 		</abnormalTime>
 		<abnormalType>RACE_HUMAN1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>600000</reuseDelay>
@@ -90,7 +90,7 @@
 		<!-- Increases Atk. Spd. by 4, Casting Spd. by 3, and Speed when not in combat by 13. -->
 		<icon>icon.skill1905</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
@@ -112,7 +112,7 @@
 		<!-- Increases Water resistance by 20. -->
 		<icon>icon.skill1906</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -128,7 +128,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RACE_ELF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>600000</reuseDelay>
@@ -171,7 +171,7 @@
 		<!-- P. Critical Rate +10 and M. Critical Rate +10. -->
 		<icon>icon.skill1908</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
@@ -188,7 +188,7 @@
 		<!-- Increases P. Critical Damage and M. Critical Damage by 1%. -->
 		<icon>icon.skill1909</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
@@ -205,7 +205,7 @@
 		<!-- STR and INT +1 at night. -->
 		<icon>icon.skill1910</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
@@ -222,7 +222,7 @@
 		<!-- Increases Wind resistance by 20. -->
 		<icon>icon.skill1911</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -241,7 +241,7 @@
 		</abnormalTime>
 		<abnormalType>RACE_DARKELF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>600000</reuseDelay>
@@ -269,7 +269,7 @@
 		<!-- Absorbs 1% of the damage inflicted as HP. -->
 		<icon>icon.skill1913</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VampiricAttack">
@@ -285,7 +285,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -332,7 +332,7 @@
 		<!-- Increases Fire resistance by 20. -->
 		<icon>icon.skill1915</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -345,7 +345,7 @@
 		<!-- HP/ MP/ CP +1%. -->
 		<icon>icon.skill1916</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -366,7 +366,7 @@
 		<!-- When receiving damage while HP is below 30%, becomes invincible for 5 sec. 1 time every 5 min. only. -->
 		<icon>icon.skill1917</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -391,7 +391,7 @@
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<hitTime>200</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -429,7 +429,7 @@
 		<!-- Skill Cooldown -1%. -->
 		<icon>icon.skill1919</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Reuse">
@@ -459,7 +459,7 @@
 		</abnormalTime>
 		<abnormalType>RACE_DWAF1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -483,7 +483,7 @@
 		<!-- Increases Earth resistance by 20. -->
 		<icon>icon.skill1921</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -502,7 +502,7 @@
 		</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>300000</reuseDelay>
@@ -550,7 +550,7 @@
 		<!-- PvP Damage +1%. -->
 		<icon>icon.skill1923</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
@@ -571,7 +571,7 @@
 		<!-- Increases Dark Attack Resistance by 20. -->
 		<icon>icon.skill1924</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -587,7 +587,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
@@ -687,7 +687,7 @@
 		<icon>icon.icon_sigel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>1</amount>
@@ -704,7 +704,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -735,7 +735,7 @@
 		<icon>icon.icon_tir</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>1</amount>
@@ -752,7 +752,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -774,7 +774,7 @@
 		<icon>icon.icon_othel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>1</amount>
@@ -791,7 +791,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -813,7 +813,7 @@
 		<icon>icon.icon_yr</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MpRegen">
 				<amount>50</amount>
@@ -830,7 +830,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -852,7 +852,7 @@
 		<icon>icon.icon_feoh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>1</amount>
@@ -869,7 +869,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -891,7 +891,7 @@
 		<icon>icon.icon_wynn</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicMpCost">
 				<amount>-3</amount>
@@ -914,7 +914,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -942,7 +942,7 @@
 		<icon>icon.icon_eolh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>1</amount>
@@ -959,7 +959,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -982,7 +982,7 @@
 		<effectRange>400</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 		<hitTime>1080</hitTime>
 		<coolTime>720</coolTime>
@@ -1003,7 +1003,7 @@
 		<affectRange>150</affectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -1027,7 +1027,7 @@
 		<affectRange>150</affectRange>
 		<operateType>DA1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
 		<effectRange>600</effectRange>
@@ -1056,7 +1056,7 @@
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -1089,7 +1089,7 @@
 		<reuseDelay>4000</reuseDelay>
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -1105,56 +1105,56 @@
 		<!-- Sigel Momentum is not applied. -->
 		<icon>icon.icon_sigel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1947" toLevel="1" name="Block Tyrr Force">
 		<!-- Tyrr Momentum is not applied. -->
 		<icon>icon.icon_tir</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1948" toLevel="1" name="Block Othell Force">
 		<!-- Othell Momentum is not applied. -->
 		<icon>icon.icon_othel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1949" toLevel="1" name="Block Yul Force">
 		<!-- Yul Momentum is not applied. -->
 		<icon>icon.icon_yr</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1950" toLevel="1" name="Block Feoh Force">
 		<!-- Feoh Momentum is not applied. -->
 		<icon>icon.icon_feoh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1951" toLevel="1" name="Block Iss Force">
 		<!-- Iss Momentum is not applied. -->
 		<icon>icon.icon_is</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1952" toLevel="1" name="Block Wynn Force">
 		<!-- Wynn Momentum is not applied. -->
 		<icon>icon.icon_wynn</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1953" toLevel="1" name="Block Aeore Force">
 		<!-- Aeore Momentum is not applied. -->
 		<icon>icon.icon_eolh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1954" toLevel="1" name="Flying Body Reinforcement">
@@ -1169,7 +1169,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1219,11 +1219,11 @@
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_PARTY_BUF</abnormalType>
 		<affectRange>200</affectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A5</operateType>
 		<!-- Target ONE on retail, will be PARTY here. -->
@@ -1314,7 +1314,7 @@
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1342,7 +1342,7 @@
 		<!-- P. Def. +$s1, M. Def. +$s2. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1370,7 +1370,7 @@
 		<!-- Atk. Spd. +$s1, Casting Spd. +$s2. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1398,7 +1398,7 @@
 		<!-- P. Critical Rate/ M. Critical Rate +$s1. -->
 		<icon>icon.skill0814</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1426,7 +1426,7 @@
 		<!-- P. Accuracy +$s1, M. Accuracy +$s2. -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1454,7 +1454,7 @@
 		<!-- P. Evasion +$s1, M. Evasion +$s2. -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1482,7 +1482,7 @@
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1510,7 +1510,7 @@
 		<!-- Increases P. Def./ M. Def. by $s1. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1538,7 +1538,7 @@
 		<!-- Increases Atk. Spd./ Casting Spd. by $s1. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1567,12 +1567,12 @@
 		<icon>icon.skill1501</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1609,12 +1609,12 @@
 		<!-- Max MP +$s1. -->
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxMp">
@@ -1632,12 +1632,12 @@
 		<!-- Max CP +$s1. -->
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxCp">
@@ -1655,7 +1655,7 @@
 		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP during an attack. -->
 		<icon>icon.dual_hpsteal</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1669,7 +1669,7 @@
 		<!-- Has a chance of recovering your own MP when attacking or using a skill. -->
 		<icon>icon.dual_mpsteal</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TriggerSkillByMagicType">
@@ -1710,7 +1710,7 @@
 		<!-- Increases P. Atk. by 9%, and decreases P. Def./ M. Def. by 6%. -->
 		<icon>icon.dual_atkup</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1732,7 +1732,7 @@
 		<!-- Increases M. Atk. by 13%, and decreases P. Def./ M. Def. by 6%. -->
 		<icon>icon.dual_defup</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1754,7 +1754,7 @@
 		<!-- Increases success rate for physical attacks and physical defense by 20%. -->
 		<icon>icon.skill4084</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
@@ -1779,7 +1779,7 @@
 		<!-- Increases success rate for mental attacks and mental defense by 20%. -->
 		<icon>icon.skill4116</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1809,7 +1809,7 @@
 		<!-- Has a chance of increasing P. Atk. by 27% during an attack. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1855,7 +1855,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_ATTACK_UP</abnormalType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>20000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1875,7 +1875,7 @@
 		<!-- Has a chance of increasing Skill Power by 27% during skill use. -->
 		<icon>icon.dual_t_skup</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1896,7 +1896,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_SKILL_UP</abnormalType>
 		<operateType>A2</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1920,7 +1920,7 @@
 		<!-- Has a chance of increasing P. Def./ M. Def. by 40% when attacked. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1943,7 +1943,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_DEFENCE_UP</abnormalType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>20000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1967,7 +1967,7 @@
 		<!-- Has a chance of restoring 10 000 HP when attacked. -->
 		<icon>icon.dual_t_dmgheal</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TriggerSkillByDamage">
@@ -1986,7 +1986,7 @@
 	<skill id="1981" toLevel="1" name="Dual - Light of Blessing">
 		<!-- Restores HP. -->
 		<icon>icon.dual_t_dmgheal</icon>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>30000</reuseDelay>
 		<operateType>A1</operateType>
@@ -2016,7 +2016,7 @@
 		<effectPoint>-1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<effectRange>1100</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
 		<staticReuse>true</staticReuse>
@@ -2043,7 +2043,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>DERANGEMENT</trait>
@@ -2071,7 +2071,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<trait>HOLD</trait>
@@ -2103,7 +2103,7 @@
 		<abnormalType>DUAL_DMG_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -2123,7 +2123,7 @@
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -2131,7 +2131,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -2152,7 +2152,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2177,7 +2177,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2200,7 +2200,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2225,7 +2225,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2250,7 +2250,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2275,7 +2275,7 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2298,14 +2298,14 @@
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="1994" toLevel="1" name="Aeore Armor Limit">
 		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -2329,7 +2329,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<reuseDelay>6000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2360,7 +2360,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<excludedFromCheck>true</excludedFromCheck>
-		<magicLvl>4</magicLvl>
+		<magicLevel>4</magicLevel>
 		<effects>
 			<effect name="BlockEscape" />
 		</effects>
@@ -2385,7 +2385,7 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalTime>30</abnormalTime>
 		<isDebuff>true</isDebuff>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>

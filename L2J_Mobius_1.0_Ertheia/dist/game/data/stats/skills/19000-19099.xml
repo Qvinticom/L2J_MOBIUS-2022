@@ -16,7 +16,7 @@
 		<effectRange>400</effectRange>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>100</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
 		<trait>BLEED</trait>
@@ -40,7 +40,7 @@
 		<effectRange>900</effectRange>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>40</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
 		<trait>PARALYZE</trait>
@@ -51,7 +51,7 @@
 	<skill id="19003" toLevel="5" name="Clan Resistance Hall">
 		<!-- Increases clan members' Holy/Dark Attack Resistance by 3. Applies after the elder stage. -->
 		<icon>icon.skill19003</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -82,7 +82,7 @@
 		<icon>icon.skill19004</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<HOLD>
@@ -140,7 +140,7 @@
 	<skill id="19005" toLevel="5" name="Clan Muzzle Control">
 		<!-- Increases clan members' Paralysis Resistance by 12. Applies after the elder stage. -->
 		<icon>icon.skill19005</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -158,7 +158,7 @@
 	<skill id="19006" toLevel="5" name="Clan Mental Control">
 		<!-- Increases clan members' Mental Attack Resistance by 12. Applies after the elder stage. -->
 		<icon>icon.skill19006</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -182,7 +182,7 @@
 		<effectPoint>467</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>-2</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>1800000</reuseDelay>
 		<famePointConsume>900</famePointConsume>
@@ -209,7 +209,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -245,7 +245,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -287,7 +287,7 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>74</magicLvl>
+		<magicLevel>74</magicLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -334,7 +334,7 @@
 		<abnormalType>HIDE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -366,7 +366,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<canBeDispelled>false</canBeDispelled>
 		<affectRange>1000</affectRange>
 		<affectLimit>50-50</affectLimit>
@@ -393,7 +393,7 @@
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -435,7 +435,7 @@
 		<abnormalType>CLAN_FRIEND</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -469,7 +469,7 @@
 		<abnormalType>CLAN_BOUNDARY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -506,7 +506,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>90</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<trait>HOLD</trait>
@@ -536,7 +536,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<canBeDispelled>false</canBeDispelled>
 		<affectRange>1000</affectRange>
 		<isMagic>2</isMagic>
@@ -566,7 +566,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -589,7 +589,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;120</fanRange>
 		<isMagic>2</isMagic>
@@ -615,7 +615,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -638,7 +638,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -661,7 +661,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;900;90</fanRange>
 		<isMagic>2</isMagic>
@@ -687,7 +687,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -710,7 +710,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>6</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -733,7 +733,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>100</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<isMagic>2</isMagic>
@@ -759,7 +759,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>11</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -782,10 +782,10 @@
 		<abnormalType>MAX_HP_UP_K</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -811,7 +811,7 @@
 		<coolTime>200</coolTime>
 		<effectPoint>669</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -840,7 +840,7 @@
 		<effectPoint>669</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>6000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -867,7 +867,7 @@
 		<coolTime>200</coolTime>
 		<effectPoint>669</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>2</isMagic>
 		<reuseDelay>6000</reuseDelay>
@@ -891,7 +891,7 @@
 	<skill id="19032" toLevel="1" name="Ability of Light">
 		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -916,7 +916,7 @@
 	<skill id="19033" toLevel="1" name="Ability of Darkness">
 		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -945,7 +945,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -970,7 +970,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -996,7 +996,7 @@
 		<abnormalType>BRIGHTNESS_BLESS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -1016,7 +1016,7 @@
 	<skill id="19037" toLevel="1" name="Cloak of Radiant Light">
 		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. Ineffective in Chaotic state. -->
 		<icon>icon.vesper_cloack_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<passiveConditions>
@@ -1067,7 +1067,7 @@
 	<skill id="19038" toLevel="1" name="Cold Cloak of Darkness">
 		<!-- STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. -->
 		<icon>icon.vesper_cloack_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1112,7 +1112,7 @@
 	<skill id="19039" toLevel="1" name="Cloak of Light">
 		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state. -->
 		<icon>icon.vesper_cloack_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<passiveConditions>
@@ -1155,7 +1155,7 @@
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
 		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. -->
 		<icon>icon.vesper_cloack_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1193,7 +1193,7 @@
 		<!-- Return to Castle. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1214,7 +1214,7 @@
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1243,10 +1243,10 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>900</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
-		</magicLvl>
+		</magicLevel>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1264,13 +1264,13 @@
 		<icon>icon.skill19008</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="19076" toLevel="1" name="Clan Academy Reward"> <!-- TODO: Not Using ? -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1518,12 +1518,12 @@
 		<mpConsume>530</mpConsume>
 		<hitTime>180000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>7200000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1551,12 +1551,12 @@
 		<mpConsume>530</mpConsume>
 		<hitTime>30000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>1200000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1585,12 +1585,12 @@
 		<hitTime>10000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>7.5</hitCancelTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>7200000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1627,7 +1627,7 @@
 		<effectRange>1400</effectRange>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>100</activateRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<trait>PARALYZE</trait>
@@ -1677,7 +1677,7 @@
 		<effectRange>1400</effectRange>
 		<lvlBonusRate>20</lvlBonusRate>
 		<activateRate>100</activateRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<trait>PARALYZE</trait>
@@ -1698,7 +1698,7 @@
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>NONE</targetType>
 	</skill>
@@ -1709,7 +1709,7 @@
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>NONE</targetType>
 	</skill>
@@ -1720,7 +1720,7 @@
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>NONE</targetType>
 	</skill>
@@ -1731,7 +1731,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<castRange>900</castRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1744,7 +1744,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1762,7 +1762,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
 		<activateRate>100</activateRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<trait>BLEED</trait>
@@ -1782,7 +1782,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<trait>TURN_STONE</trait>

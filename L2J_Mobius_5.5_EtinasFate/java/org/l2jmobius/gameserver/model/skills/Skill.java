@@ -330,7 +330,7 @@ public class Skill implements IIdentifiable
 			}
 		}
 		
-		_magicLevel = set.getInt("magicLvl", 0);
+		_magicLevel = set.getInt("magicLevel", 0);
 		_lvlBonusRate = set.getInt("lvlBonusRate", 0);
 		_activateRate = set.getInt("activateRate", -1);
 		_minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);

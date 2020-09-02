@@ -5,7 +5,7 @@
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -18,7 +18,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -76,7 +76,7 @@
 			<value level="12">6</value>
 		</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -89,7 +89,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -138,7 +138,7 @@
 		</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -151,7 +151,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -195,7 +195,7 @@
 	<skill id="13703" toLevel="12" name="Item Skill: Power Eruption">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -208,7 +208,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -256,7 +256,7 @@
 	<skill id="13704" toLevel="12" name="Item Skill: Power Multi Shot">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -269,7 +269,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -328,7 +328,7 @@
 	<skill id="13705" toLevel="12" name="Item Skill: Power Shot">
 		<!-- Attacks target with $s1 Power added to P. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -341,7 +341,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -395,7 +395,7 @@
 	<skill id="13706" toLevel="12" name="Item Skill: Power Storm">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -408,7 +408,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -457,7 +457,7 @@
 	<skill id="13707" toLevel="12" name="Item Skill: Power Strike">
 		<!-- Attacks target with $s1 Power added to P. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -470,7 +470,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -548,7 +548,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>AIRBIND</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -561,7 +561,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -627,7 +627,7 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>DERANGEMENT</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -640,7 +640,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -696,7 +696,7 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>HOLD</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -709,7 +709,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -766,7 +766,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -779,7 +779,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -846,7 +846,7 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>PARALYZE</trait>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -859,7 +859,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -916,7 +916,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>DERANGEMENT</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -929,7 +929,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -983,7 +983,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>SLEEP</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -996,7 +996,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1040,7 +1040,7 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1053,7 +1053,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1123,7 +1123,7 @@
 		<activateRate>70</activateRate> <!-- Guessed -->
 		<trait>SHOCK</trait>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1136,7 +1136,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1173,12 +1173,12 @@
 		<!-- Cancels target of nearby enemies. -->
 		<icon>icon.skill3123</icon>
 		<trait>DERANGEMENT</trait>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">85</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1226,7 +1226,7 @@
 		<activateRate>80</activateRate>
 		<trait>AIRBIND</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1239,7 +1239,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1301,7 +1301,7 @@
 		<activateRate>60</activateRate>
 		<trait>DERANGEMENT</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1314,7 +1314,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1366,7 +1366,7 @@
 		<activateRate>80</activateRate>
 		<trait>DERANGEMENT</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1379,7 +1379,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1430,7 +1430,7 @@
 		<activateRate>80</activateRate>
 		<trait>SLEEP</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1443,7 +1443,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1482,7 +1482,7 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1495,7 +1495,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1563,7 +1563,7 @@
 		<activateRate>80</activateRate>
 		<trait>SHOCK</trait>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1576,7 +1576,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1629,7 +1629,7 @@
 		<activateRate>80</activateRate>
 		<trait>HOLD</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1642,7 +1642,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1696,7 +1696,7 @@
 		<activateRate>90</activateRate>
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1709,7 +1709,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1773,7 +1773,7 @@
 		<activateRate>60</activateRate>
 		<trait>PARALYZE</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1786,7 +1786,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1837,12 +1837,12 @@
 		<!-- Cancels enemy's target. -->
 		<icon>icon.skill3123</icon>
 		<trait>DERANGEMENT</trait>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">85</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1867,7 +1867,7 @@
 	<skill id="13728" toLevel="12" name="Item Skill: Wind Circle">
 		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1880,7 +1880,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -1927,7 +1927,7 @@
 	<skill id="13729" toLevel="12" name="Item Skill: Wind Flare">
 		<!-- Attacks target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1940,7 +1940,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -1986,7 +1986,7 @@
 	<skill id="13730" toLevel="12" name="Item Skill: Wind Flash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -1999,7 +1999,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -2048,7 +2048,7 @@
 	<skill id="13731" toLevel="12" name="Item Skill: Wind Storm">
 		<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -2061,7 +2061,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -2110,7 +2110,7 @@
 	<skill id="13732" toLevel="12" name="Item Skill: Wind Strike">
 		<!-- Attacks target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill3123</icon>
-		<magicLvl> <!-- Guessed -->
+		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
 			<value level="3">61</value>
@@ -2123,7 +2123,7 @@
 			<value level="10">95</value>
 			<value level="11">97</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -3249,7 +3249,7 @@
 		<icon>icon.accessory_noblesse2_tiara_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>50</amount>
@@ -3261,7 +3261,7 @@
 		<icon>icon.cloak_noblesse2_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -3302,7 +3302,7 @@
 		<icon>icon.accessory_noblesse2_tiara_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>30</amount>
@@ -3314,7 +3314,7 @@
 		<icon>icon.weapon_R99_dagger_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3335,7 +3335,7 @@
 		<icon>icon.weapon_R99_onehand_sword_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3356,7 +3356,7 @@
 		<icon>icon.weapon_R99_twohand_sword_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3377,7 +3377,7 @@
 		<icon>icon.weapon_R99_onehand_blunt_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3398,7 +3398,7 @@
 		<icon>icon.weapon_R99_fist_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3419,7 +3419,7 @@
 		<icon>icon.weapon_R99_spear_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3440,7 +3440,7 @@
 		<icon>icon.weapon_R99_bow_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3461,7 +3461,7 @@
 		<icon>icon.weapon_R99_crossbow_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3482,7 +3482,7 @@
 		<icon>icon.weapon_R99_onehand_magic_sword_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3503,7 +3503,7 @@
 		<icon>icon.weapon_R99_onehand_magic_blunt_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3524,7 +3524,7 @@
 		<icon>icon.weapon_R99_twohand_magic_blunt_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3545,7 +3545,7 @@
 		<icon>icon.weapon_R99_dual_sword_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3566,7 +3566,7 @@
 		<icon>icon.weapon_R99_dual_dagger_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3587,7 +3587,7 @@
 		<icon>icon.weapon_R99_dual_blunt_pvp_i10</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3608,7 +3608,7 @@
 		<icon>icon.weapon_R99_dagger_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3629,7 +3629,7 @@
 		<icon>icon.weapon_R99_onehand_sword_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3650,7 +3650,7 @@
 		<icon>icon.weapon_R99_twohand_sword_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3671,7 +3671,7 @@
 		<icon>icon.weapon_R99_onehand_blunt_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3692,7 +3692,7 @@
 		<icon>icon.weapon_R99_fist_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3713,7 +3713,7 @@
 		<icon>icon.weapon_R99_spear_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3734,7 +3734,7 @@
 		<icon>icon.weapon_R99_bow_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3755,7 +3755,7 @@
 		<icon>icon.weapon_R99_crossbow_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3776,7 +3776,7 @@
 		<icon>icon.weapon_R99_onehand_magic_sword_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3797,7 +3797,7 @@
 		<icon>icon.weapon_R99_onehand_magic_blunt_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3818,7 +3818,7 @@
 		<icon>icon.weapon_R99_twohand_magic_blunt_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3839,7 +3839,7 @@
 		<icon>icon.weapon_R99_dual_sword_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>
@@ -3860,7 +3860,7 @@
 		<icon>icon.weapon_R99_dual_dagger_pve_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>10</amount>

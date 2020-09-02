@@ -10,7 +10,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -46,7 +46,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -90,7 +90,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -146,7 +146,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -218,7 +218,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>58</abnormalTime>
 		<isMagic>2</isMagic>
@@ -234,7 +234,7 @@
 		<abnormalType>SPECIAL_RIDE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -254,7 +254,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -263,7 +263,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -310,7 +310,7 @@
 		<effectPoint>10</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -324,7 +324,7 @@
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="9212" toLevel="1" name="Kukuru Dismount">
 		<!-- Dismounts from a kukuru. -->
@@ -333,7 +333,7 @@
 		<effectPoint>10</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<hitTime>2500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -369,7 +369,7 @@
 	<skill id="9214" toLevel="1" name="Divine Inspiration">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
@@ -398,7 +398,7 @@
 	<skill id="9215" toLevel="1" name="Divine Inspiration">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
@@ -427,7 +427,7 @@
 	<skill id="9216" toLevel="1" name="Divine Inspiration">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
@@ -456,7 +456,7 @@
 	<skill id="9217" toLevel="1" name="Divine Inspiration">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
@@ -492,7 +492,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -534,7 +534,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -585,7 +585,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -621,7 +621,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -665,7 +665,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -726,7 +726,7 @@
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -765,7 +765,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>32226</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -791,7 +791,7 @@
 		<hitTime>1500</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -807,7 +807,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>300</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>OTHERS</targetType>
@@ -830,7 +830,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
@@ -874,7 +874,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
@@ -930,7 +930,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
@@ -969,7 +969,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
@@ -1017,7 +1017,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
@@ -1082,7 +1082,7 @@
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
@@ -1136,7 +1136,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>0</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
@@ -1157,7 +1157,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1169,7 +1169,7 @@
 		<coolTime>1000</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1191,7 +1191,7 @@
 		<coolTime>1000</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1213,7 +1213,7 @@
 		<coolTime>1000</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1235,7 +1235,7 @@
 		<coolTime>1000</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1257,7 +1257,7 @@
 		<coolTime>1000</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1280,7 +1280,7 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
@@ -1309,7 +1309,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1374,7 +1374,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1460,7 +1460,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1547,7 +1547,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1556,7 +1556,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1565,7 +1565,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1574,7 +1574,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1583,7 +1583,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1592,7 +1592,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1601,7 +1601,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1610,7 +1610,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1619,7 +1619,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1628,7 +1628,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1637,7 +1637,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1646,7 +1646,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1663,7 +1663,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
@@ -1683,7 +1683,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1692,7 +1692,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1701,7 +1701,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1710,7 +1710,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1719,7 +1719,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1728,7 +1728,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1737,7 +1737,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1746,7 +1746,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1755,7 +1755,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1764,7 +1764,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1773,7 +1773,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1782,7 +1782,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1793,7 +1793,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1828,7 +1828,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1866,7 +1866,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1910,7 +1910,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1941,7 +1941,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1986,7 +1986,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2042,7 +2042,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2083,7 +2083,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2128,7 +2128,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2194,7 +2194,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2241,7 +2241,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2259,7 +2259,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2323,7 +2323,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2388,7 +2388,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2434,7 +2434,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2493,7 +2493,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2558,7 +2558,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -2611,7 +2611,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2620,7 +2620,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2629,7 +2629,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2638,7 +2638,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2647,7 +2647,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2656,7 +2656,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2665,7 +2665,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2680,7 +2680,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2689,7 +2689,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2698,7 +2698,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2707,7 +2707,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2716,7 +2716,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2725,7 +2725,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2734,7 +2734,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

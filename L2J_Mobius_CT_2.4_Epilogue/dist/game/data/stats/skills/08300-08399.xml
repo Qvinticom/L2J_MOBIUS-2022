@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" levels="1" name="Dynasty Sigil">
 		<set name="icon" val="icon.dynasty_sigil_i01" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -14,7 +14,7 @@
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
 		<!-- Increases P. Atk./P. Def. by 5.57%, Maximum HP by 531, and resistance to sleep/hold attacks by 70%. Decreases damage received during PvP and enemy's speed. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -40,7 +40,7 @@
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
 		<!-- Increases P. Atk./P. Def. by 5.57%, Maximum HP by 540 and resistance to sleep/hold attacks by 70%. Decreases damage received during PvP and enemy's speed. A cloak can be worn. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -70,7 +70,7 @@
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
 		<!-- Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery by 5% and Max MP by 347. Decreases damage received during PvP and has a chance of canceling an enemy attacker's target. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -95,7 +95,7 @@
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
 		<!-- Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery by 5% and Max MP by 354. Decreases damage received during PvP and has a chance of canceling an enemy attacker's target. A cloak can be worn. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -123,7 +123,7 @@
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
 		<!-- Increases M. Atk. by 8.47%, casting speed by 15%, MP Recovery by 5% and resistance to stun attacks by 50%. Decreases magic canceling damage by 30. Decreases damage received during PvP, as well as enemies' critical hit rate and critical damage. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -149,7 +149,7 @@
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
 		<!-- Increases M. Atk. by 8.47%, casting speed by 15%, MP Recovery by 5% and resistance to stun attacks by 50%. Decreases magic canceling damage by 30. Decreases magic canceling damage by 30. Decreases damage received during PvP, as well as enemies' critical hit rate and critical damage. A cloak can be worn. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -178,7 +178,7 @@
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
 		<!-- Enlarges the target's head during a general attack. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -200,7 +200,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -224,7 +224,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -242,7 +242,7 @@
 	<skill id="8310" levels="1" name="Arcana Sigil">
 		<!-- Increases resistance to damage magic by 2% and decreases magic canceling damage by 13. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -255,7 +255,7 @@
 	<skill id="8311" levels="1" name="Dynasty Sigil">
 		<!-- Increases resistance to damage magic by 2% and resistance to Dark attribute by 2. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -267,10 +267,10 @@
 	</skill>
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
 		<!-- MP consumption is decreased. -->
-		<table name="#magicLvl">80 84</table>
+		<table name="#magicLevel">80 84</table>
 		<table name="#MpConsumeRate">0.96 0.92</table>
 		<set name="icon" val="icon.skill0198" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -285,7 +285,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -297,7 +297,7 @@
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="10" />
+		<set name="magicLevel" val="10" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -312,7 +312,7 @@
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="20" />
+		<set name="magicLevel" val="20" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -330,7 +330,7 @@
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="30" />
+		<set name="magicLevel" val="30" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -348,7 +348,7 @@
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="40" />
+		<set name="magicLevel" val="40" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -366,7 +366,7 @@
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="50" />
+		<set name="magicLevel" val="50" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -384,7 +384,7 @@
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -402,7 +402,7 @@
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -420,7 +420,7 @@
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
 		<!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -439,14 +439,14 @@
 		<!-- Notifies about the Agathion's New Year's gift resupply time. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
 		<!-- Maximum CP is increased. -->
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -464,7 +464,7 @@
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="NONE" />
@@ -473,7 +473,7 @@
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
 		<!-- Moving speed increases by 20. -->
 		<set name="icon" val="icon.etc_pig_candy_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -482,7 +482,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -496,7 +496,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -510,7 +510,7 @@
 		<set name="effectPoint" val="1000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="NONE" />
@@ -525,7 +525,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -542,7 +542,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -562,7 +562,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -583,7 +583,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -607,7 +607,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -629,7 +629,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -654,7 +654,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<cond>
@@ -664,7 +664,7 @@
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -678,7 +678,7 @@
 		<table name="#hp">0.4 1 1.4 2</table>
 		<table name="#hpsit">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -695,7 +695,7 @@
 		<table name="#hp">0.78 1.95 2.73 3.9</table>
 		<table name="#hpsit">0.6 1.5 2.1 3</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -712,7 +712,7 @@
 		<table name="#mp">0.14 0.35 0.49 0.7</table>
 		<table name="#mpsit">0.16 0.4 0.56 0.8</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -728,7 +728,7 @@
 		<!-- Increases MP regeneration when the belt is equipped. -->
 		<table name="#amount">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -744,7 +744,7 @@
 		<!-- Ordinary damage is increase during PVP when the belt is equipped. -->
 		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -757,7 +757,7 @@
 		<!-- Skill/magic damage is increased during PVP when the belt is equipped. -->
 		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -771,7 +771,7 @@
 		<!-- Received damage is decreased during PVP when the belt is equipped. -->
 		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -786,7 +786,7 @@
 		<!-- Ordinary damage is increase during PVP when the belt is equipped. -->
 		<table name="#pvp">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -799,7 +799,7 @@
 		<!-- Skill/magic damage is increased during PVP when the belt is equipped. -->
 		<table name="#pvp">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -813,7 +813,7 @@
 		<!-- Received damage is decreased during PVP when the belt is equipped. -->
 		<table name="#pvp">1.012 1.03 1.042 1.06</table>
 		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -829,7 +829,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -847,7 +847,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -865,7 +865,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -883,7 +883,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -901,7 +901,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -919,7 +919,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -937,7 +937,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -955,7 +955,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -973,7 +973,7 @@
 		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
 		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -997,7 +997,7 @@
 		<set name="fanRange" val="0,0,300,900" />
 		<set name="hitTime" val="1300" />
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -1012,7 +1012,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1025,7 +1025,7 @@
 		<!-- It is time to return the Proof of Time and Space that the Agathion gave you. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="NONE" />
@@ -1039,7 +1039,7 @@
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="targetType" val="SELF" />
@@ -1052,7 +1052,7 @@
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
 		<set name="icon" val="icon.event_six_party_earing_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 		<for>
@@ -1069,28 +1069,28 @@
 	<skill id="8365" levels="1" name="Dynasty Tunic">
 		<!-- Increases Magic Speed/Max. MP/Resistance to Darkness Attribute, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
 		<!-- Increases P. Atk./Max. HP/Critical Rate/Resistance to Darkness Attribute/Critical Damage. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
 		<!-- Increases P. Atk./Max. HP/Resistance to Darkness Attribute, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
 		<!-- Increases Magic Speed/Max. MP/Resistance to Darkness Attribute, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1099,7 +1099,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="NONE" />
@@ -1109,7 +1109,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="NONE" />
@@ -1122,7 +1122,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="NONE" />
@@ -1139,7 +1139,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="targetType" val="NONE" />
@@ -1153,7 +1153,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="targetType" val="NONE" />
@@ -1167,7 +1167,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="targetType" val="NONE" />
@@ -1181,7 +1181,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="targetType" val="NONE" />
@@ -1195,7 +1195,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="targetType" val="NONE" />
@@ -1209,7 +1209,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="targetType" val="NONE" />
@@ -1219,7 +1219,7 @@
 		<table name="#earthRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1233,7 +1233,7 @@
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<table name="#waterRes">12 15</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1247,7 +1247,7 @@
 		<table name="#fireRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1261,7 +1261,7 @@
 		<table name="#earthRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1275,7 +1275,7 @@
 		<table name="#holyRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1289,7 +1289,7 @@
 		<table name="#holyRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1303,7 +1303,7 @@
 		<table name="#darkRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1317,7 +1317,7 @@
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<table name="#windRes">12 15</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1331,7 +1331,7 @@
 		<table name="#darkRes">12 15</table>
 		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1345,7 +1345,7 @@
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<table name="#waterRes">26 30</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1359,7 +1359,7 @@
 		<table name="#holyRes">26 30</table>
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1373,7 +1373,7 @@
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<table name="#windRes">26 30</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1387,7 +1387,7 @@
 		<table name="#darkRes">26 30</table>
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1401,7 +1401,7 @@
 		<table name="#earthRes">26 30</table>
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1415,7 +1415,7 @@
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<table name="#waterRes">26 30</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1429,7 +1429,7 @@
 		<table name="#fireRes">26 30</table>
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1443,7 +1443,7 @@
 		<table name="#fireRes">26 30</table>
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1457,7 +1457,7 @@
 		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<table name="#windRes">26 30</table>
 		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

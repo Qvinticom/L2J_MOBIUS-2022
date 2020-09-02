@@ -3,7 +3,7 @@
 	<skill id="3500" levels="1" name="Wooden Set">
 		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t06_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -16,7 +16,7 @@
 	<skill id="3501" levels="1" name="Devotion Set">
 		<!-- Increases Casting Spd. -->
 		<set name="icon" val="icon.armor_t55_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -28,7 +28,7 @@
 	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
 		<!-- Increases resistance to poison attack. -->
 		<set name="icon" val="icon.armor_t19_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -40,7 +40,7 @@
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
 		<!-- Increases Maximum MP. -->
 		<set name="icon" val="icon.armor_t13_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -52,7 +52,7 @@
 	<skill id="3504" levels="1" name="Knowledge Set">
 		<!-- Decreases MP recovery bonus and increases M. Atk. -->
 		<set name="icon" val="icon.armor_t41_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -65,7 +65,7 @@
 	<skill id="3505" levels="1" name="Manticore Set">
 		<!-- Increases Maximum MP. -->
 		<set name="icon" val="icon.armor_t42_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -77,7 +77,7 @@
 	<skill id="3506" levels="1" name="Brigandine Set">
 		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t43_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -90,7 +90,7 @@
 	<skill id="3507" levels="1" name="Mithril Set">
 		<!-- Increases Speed. INT-1, WIT+1 -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -102,7 +102,7 @@
 	<skill id="3508" levels="1" name="Mithril Light Armor Set">
 		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t47_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -114,7 +114,7 @@
 	<skill id="3509" levels="1" name="Chain Mail Set">
 		<!-- Increases resistance to Dagger attacks. -->
 		<set name="icon" val="icon.armor_t48_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -127,7 +127,7 @@
 	<skill id="3510" levels="1" name="Karmian Set">
 		<!-- Increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -140,14 +140,14 @@
 	<skill id="3511" levels="1" name="Plated Leather Set">
 		<!-- STR+4, CON-1 -->
 		<set name="icon" val="icon.armor_t47_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
 		<!-- Increases your weight capacity. -->
 		<set name="icon" val="icon.armor_t61_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -159,7 +159,7 @@
 	<skill id="3513" levels="1" name="Demon's Set">
 		<!-- Reduces Max. HP. INT+4, WIT-1 -->
 		<set name="icon" val="icon.armor_t54_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -171,7 +171,7 @@
 	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
 		<!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_t63_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -183,7 +183,7 @@
 	<skill id="3515" levels="1" name="Drake Leather Set">
 		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.armor_t21_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -195,7 +195,7 @@
 	<skill id="3516" levels="1" name="Full Plate Set">
 		<!-- Increases Max. HP. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -207,7 +207,7 @@
 	<skill id="3517" levels="1" name="Divine Set">
 		<!-- Increases P. Def. and Max MP. INT-1, WIT+1 -->
 		<set name="icon" val="icon.armor_t57_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -220,7 +220,7 @@
 	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
 		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -233,7 +233,7 @@
 	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
 		<!-- Increases Max. HP. -->
 		<set name="icon" val="icon.armor_t66_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -245,7 +245,7 @@
 	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
 		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -257,7 +257,7 @@
 	<skill id="3521" levels="1" name="Avadon Light Armor Set">
 		<!-- Increases M. Def. and maximum weight limit. -->
 		<set name="icon" val="icon.armor_t67_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -270,7 +270,7 @@
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
 		<!-- Decreases MP recovery bonus and increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -283,7 +283,7 @@
 	<skill id="3523" levels="1" name="Avadon Robe Set">
 		<!-- Increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -296,7 +296,7 @@
 	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
 		<!-- Increases moving speed and HP recovery bonus. STR+3, CON-1, DEX-2 -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -309,7 +309,7 @@
 	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
 		<!-- Increases Max HP and lung capacity. STR-3, CON+3 -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -322,7 +322,7 @@
 	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
 		<!-- Increases P. Def. and Casting Spd. INT-2, MEN+3, WIT-1 -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -335,7 +335,7 @@
 	<skill id="3527" levels="1" name="Doom Light Armor Set">
 		<!-- Increases resistance to poison attacks and increases lung capacity, P. Atk., and MP recovery bonus. STR-1, CON-2, DEX+3 -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -352,7 +352,7 @@
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
 		<!-- Increases Max MP and MP recovery bonus. INT-2, MEN-1, WIT+3 -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -365,7 +365,7 @@
 	<skill id="3529" levels="1" name="Doom Robe Set">
 		<!-- Increases Moving Speed, Lung Capacity, and MP recovery bonus. INT+2, MEN+1, WIT-3 -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -379,7 +379,7 @@
 	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
 		<!-- Increases resistance to paralysis attacks and improves effectiveness of HP recovery magic. STR-2, CON+2 -->
 		<set name="icon" val="icon.armor_t74_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -394,7 +394,7 @@
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
 		<!-- Increases resistance to poison/bleeding attacks. Atk. Spd. and maximum weight limit are also increased. STR+2, CON-2 -->
 		<set name="icon" val="icon.armor_t77_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -411,7 +411,7 @@
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
 		<!-- Increases resistance to paralysis attacks. Atk. Spd. and P. Atk. are also increased. STR+1, CON-1 -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -427,7 +427,7 @@
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
 		<!-- Increases resistance to poison/bleeding attacks. MP recovery rate and Max MP are also increased. MEN+2, WIT-2 -->
 		<set name="icon" val="icon.armor_t78_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -444,7 +444,7 @@
 	<skill id="3534" levels="1" name="Tallum Robe Set">
 		<!-- Increases resistance to poison/bleeding attacks. Casting Spd. and M. Def. are also increased. INT-2, WIT+2 -->
 		<set name="icon" val="icon.armor_t79_u_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -461,7 +461,7 @@
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
 		<!-- Decreases magic cancel rate and increases resistance to paralysis attacks. P. Def., Casting Spd. and Speed are also increased. WIT+2, MEN-2 -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -479,7 +479,7 @@
 	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
 		<!-- Increases P. Atk. and resistance to Sleep/Hold attack.. CON+2, DEX-2 -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -495,7 +495,7 @@
 	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
 		<!-- Increases resistance to shock attacks. P. Atk. and Accuracy are also increased. STR+2. CON-2 -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -511,7 +511,7 @@
 	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
 		<!-- Increases resistance to Sleep/Hold attack and M. Def. Restores HP by using part of the damage inflicted upon the enemy, excluding damage caused by skill or remote attack. DEX+1, CON-1 -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -528,7 +528,7 @@
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
 		<!-- Increases resistance to shock attacks. P. Atk., MaxMP and maximum weight limit are also increased. DEX+1, CON-1 -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -547,7 +547,7 @@
 	<skill id="3540" levels="1" name="Nightmare Robe Set">
 		<!-- Increases MP regeneration, M. Atk. and resistance to sleep/hold attacks. INT+2, WIT-2 -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -564,7 +564,7 @@
 	<skill id="3541" levels="1" name="Majestic Robe Set">
 		<!-- Increases resistance to shock attacks and increases Max MP, Casting Spd., and MP recovery bonus. MEN+1, INT-1 -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -581,9 +581,9 @@
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
 		<!-- Inflicts additional damage during critical attacks. -->
 		<table name="#cAtkAdd">203.97 226.51 248.71 269.91 289.4 306.42</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -595,7 +595,7 @@
 	<skill id="3543" levels="1" name="Equipped with Shield">
 		<!-- Increases Max. HP. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -607,7 +607,7 @@
 	<skill id="3544" levels="1" name="Equipped with Shield">
 		<!-- Increases Max. HP. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -619,7 +619,7 @@
 	<skill id="3545" levels="1" name="Equipped with Shield">
 		<!-- Increases Max. HP. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -631,7 +631,7 @@
 	<skill id="3546" levels="1" name="Equipped with Shield">
 		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -643,7 +643,7 @@
 	<skill id="3547" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -655,7 +655,7 @@
 	<skill id="3548" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -667,7 +667,7 @@
 	<skill id="3549" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -679,7 +679,7 @@
 	<skill id="3550" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -691,7 +691,7 @@
 	<skill id="3551" levels="1" name="Equipped with Shield">
 		<!-- Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -704,9 +704,9 @@
 		<!-- Increases damage inflicted during PvP. -->
 		<table name="#atkCountMax">0 4 0 4</table>
 		<table name="#bonus">1.05 1.05 1.1 1.1</table>
-		<table name="#magicLvl">64 64 72 72</table>
+		<table name="#magicLevel">64 64 72 72</table>
 		<set name="icon" val="icon.skill0297" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -721,7 +721,7 @@
 	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
 		<!-- Increases Max HP, P. Def and resistance to sleep/hold attacks. STR+2, DEX-2 -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -738,7 +738,7 @@
 	<skill id="3554" levels="1" name="Equipped with Shield">
 		<!-- Additional resistance to Poison/Bleed. -->
 		<set name="icon" val="icon.skill0091" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -751,7 +751,7 @@
 	<skill id="3555" levels="1" name="Draconic Light Armor Set">
 		<!-- Increases Max MP, Atk. Spd, P. Atk, and maximum weight limit. DEX+1, STR+1, CON-2 -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -766,7 +766,7 @@
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
 		<!-- Decreases chance of magic casting being canceled. Increases resistance to shock attacks, M. Atk., Speed and maximum weight limit. WIT+1, INT+1, MEN-2 -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -784,7 +784,7 @@
 	<skill id="3557" levels="1" name="Necklace of Valakas">
 		<!-- Increases resistance to fire attacks, resistance to sleep attack, sleep attack bonus, MaxHP/ P. Atk./ M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Redirects some of the physical damage received back upon the enemy. Does not include damage from skill or ranged attacks. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -809,7 +809,7 @@
 	<skill id="3558" levels="1" name="Earring of Antharas">
 		<!-- Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy. Does not include damage from skill or ranged attacks. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -836,10 +836,10 @@
 		<!-- Bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic and restores HP by using some of the damage inflicted upon the enemy. Does not include damage from skill or ranged attacks. -->
 		<table name="#darkRes">0 15</table>
 		<table name="#healEffect">1.1 1.15</table>
-		<table name="#magicLvl">75 80</table>
+		<table name="#magicLevel">75 80</table>
 		<table name="#traits">20 30</table>
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -863,7 +863,7 @@
 	<skill id="3560" levels="1" name="Earring of Orfen">
 		<!-- Increases healing from heal spells, resistance to Bleed attacks, and gives a Bleed attack bonus. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -881,7 +881,7 @@
 	<skill id="3561" levels="1" name="Ring of Baium">
 		<!-- Increases resistance to poison/hold attacks, gives a poison/hold attack bonus, and increases critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -904,7 +904,7 @@
 	<skill id="3562" levels="1" name="Ring of Ant Queen">
 		<!-- Increases resistance to poison/hold attacks, gives a poison/hold attack bonus, and increases critical attack damage. Also increases Accuracy, and Attack power of critical attack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -925,7 +925,7 @@
 	<skill id="3563" levels="1" name="Ring of Core">
 		<!-- Increases Accuracy, resistance to Poison attacks, and gives a Poison attack bonus. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -942,10 +942,10 @@
 	</skill>
 	<skill id="3564" levels="3" name="Special Ability: Haste">
 		<!-- Increases Atk.Speed and enhances damage to target during PvP. -->
-		<table name="#magicLvl">75 80 84</table>
+		<table name="#magicLevel">75 80 84</table>
 		<table name="#pAtkSpd">1.07 1.1 1.11</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -959,10 +959,10 @@
 	</skill>
 	<skill id="3565" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#magicLevel">75 80 84 85 86</table>
 		<table name="#rCrit">80.6 107 123.5 129 129</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -976,10 +976,10 @@
 	</skill>
 	<skill id="3566" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#magicLevel">75 80 84 85 86</table>
 		<table name="#rCrit">84.3 111.5 133.3 134.4 134.4</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -993,10 +993,10 @@
 	</skill>
 	<skill id="3567" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#magicLevel">75 80 84 85 86</table>
 		<table name="#rCrit">88.1 116 133.9 139.9 139.9</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1011,9 +1011,9 @@
 	<skill id="3568" levels="2" name="Special Ability: HP Drain">
 		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Enhances damage to target during PvP. -->
 		<table name="#absorbDam">3 4</table>
-		<table name="#magicLvl">75 84</table>
+		<table name="#magicLevel">75 84</table>
 		<set name="icon" val="icon.skill1268" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1027,10 +1027,10 @@
 	</skill>
 	<skill id="3569" levels="4" name="Special Ability: HP Regeneration">
 		<!-- Increases HP recovery bonus. Increases damage inflicted during PvP. -->
-		<table name="#magicLvl">75 84 84 84</table>
+		<table name="#magicLevel">75 84 84 84</table>
 		<table name="#regHp">2.04 4.92 5.15 5.18</table>
 		<set name="icon" val="icon.skill1044" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1045,7 +1045,7 @@
 	<skill id="3570" levels="1" name="Special Ability: Robust Health">
 		<!-- Increases Max HP, Max MP, Max CP and enhances damage to target during PvP. -->
 		<set name="icon" val="icon.skill1311" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1062,7 +1062,7 @@
 	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
 		<!-- Temporarily stuns and paralyzes target. -->
 		<table name="#activateRates">27 43</table>
-		<table name="#magicLvl">75 84</table>
+		<table name="#magicLevel">75 84</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1073,7 +1073,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1084,9 +1084,9 @@
 	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
 		<table name="#cAtkAdd">265 906 999 1059</table>
-		<table name="#magicLvl">75 84 85 86</table>
+		<table name="#magicLevel">75 84 85 86</table>
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1101,9 +1101,9 @@
 	<skill id="3573" levels="3" name="Special Ability: Guidance">
 		<!-- Increases Accuracy and enhances damage to target during PvP. -->
 		<table name="#accCombat">5.27 5.32 7.5</table>
-		<table name="#magicLvl">75 80 84</table>
+		<table name="#magicLevel">75 80 84</table>
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1118,7 +1118,7 @@
 	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect 3. -->
 		<table name="#activateRates">16 24 33</table>
-		<table name="#magicLvl">75 84 84</table>
+		<table name="#magicLevel">75 84 84</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1130,7 +1130,7 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1141,10 +1141,10 @@
 	</skill>
 	<skill id="3575" levels="4" name="Special Ability: Empower">
 		<!-- Increases M. Atk. Enhances damage to target during PvP. -->
-		<table name="#magicLvl">75 84 85 86</table>
+		<table name="#magicLevel">75 84 85 86</table>
 		<table name="#mAtk">60.09 151.09 166.54 176.53</table>
 		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1158,10 +1158,10 @@
 	</skill>
 	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
 		<!-- Increases MP recovery bonus. Increases damage inflicted during PvP. -->
-		<table name="#magicLvl">75 84 85 86</table>
+		<table name="#magicLevel">75 84 85 86</table>
 		<table name="#regMp">0.54 1.95 2.04 2.05</table>
 		<set name="icon" val="icon.skill1047" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1188,7 +1188,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
@@ -1199,7 +1199,7 @@
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
 		<!-- Decreases enemy's P. Def. during critical attacks. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1225,7 +1225,7 @@
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1237,7 +1237,7 @@
 	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
 		<!-- Dazzles the enemy to distraction during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1254,7 +1254,7 @@
 		</for>
 	</skill>
 	<skill id="3581" levels="1" name="Discord">
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1267,7 +1267,7 @@
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
 		<!-- Increases critical attack success rate/power, Max HP, Max CP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1287,7 +1287,7 @@
 	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
 		<!-- Throws enemy into a state of shock during a critical attack. Increases Max HP, Max CP, Atk. Spd. and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1315,7 +1315,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1326,7 +1326,7 @@
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1355,7 +1355,7 @@
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1366,7 +1366,7 @@
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
 		<!-- Throws the enemy into a state of shock during a critical attack. Increases Max HP, Max MP, Max CP, Evasion and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1395,7 +1395,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -1406,7 +1406,7 @@
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
 		<!-- Blocks enemy's ability to use magic skills during a critical attack. Increases Max MP, Max CP, Atk. Spd., MP regeneration rate, critical attack rate when attacking the enemy from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1437,7 +1437,7 @@
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1448,7 +1448,7 @@
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
 		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases the character's Maximum HP, Maximum CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on an enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1467,7 +1467,7 @@
 		</for>
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1479,7 +1479,7 @@
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<!-- Decreases enemy's Speed during a critical attack. Increases Max MP, Max CP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1503,7 +1503,7 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1515,7 +1515,7 @@
 	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
 		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, M. Atk., damage magic critical attack rate and damage inflicted during PvP. When casting magic, reduces MP consumption and cancel rate. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1534,7 +1534,7 @@
 	</skill>
 	<skill id="3596" levels="1" name="Full Recover">
 		<set name="effectPoint" val="100" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
@@ -1552,7 +1552,7 @@
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
 		<!-- When good magic is cast upon a target, increases Max MP, Max CP, Casting Spd, and MP regeneration rate. During PvP the regeneration of HP is increased to 100% and enhances damage to target. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1569,7 +1569,7 @@
 	</skill>
 	<skill id="3598" levels="1" name="Full Recover">
 		<set name="effectPoint" val="100" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
@@ -1587,7 +1587,7 @@
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
 		<!-- Enables the character to attack multiple opponents. -->
 		<set name="icon" val="icon.skill0216" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

@@ -85,9 +85,9 @@
 	</skill>
 	<skill id="3013" levels="5" name="Special Ability: Health">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">1 1 64 64 70</table>
+		<table name="#magicLevel">1 1 64 64 70</table>
 		<table name="#pvpDam">1 1 1.05 1.05 1.05</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -99,8 +99,8 @@
 	</skill>
 	<skill id="3014" levels="3" name="Special Ability: Mana Up">
 		<!-- Increases Max MP. -->
-		<table name="#magicLvl">1 64 64</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">1 64 64</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<table name="#pvpBonus">1 1.05 1.05</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -115,9 +115,9 @@
 	</skill>
 	<skill id="3016" levels="6" name="Special Ability: Critical Stun">
 		<!-- Temporarily stuns and paralyzes target. -->
-		<table name="#magicLvl">46 49 52 55 58 61</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<set name="effectPoint" val="92" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="activateRate" val="27" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="STUN" />
@@ -132,8 +132,8 @@
 	<skill id="3018" levels="6" name="Special Ability: Back Blow">
 		<!-- Increases critical attack success rate when attacking a target from behind. -->
 		<table name="#rate">71 67 63 60 56 53</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -146,8 +146,8 @@
 	<skill id="3019" levels="6" name="Special Ability: Back Blow">
 		<!-- Increases critical attack success rate when attacking a target from behind. -->
 		<table name="#rate">50 47 45 42 40 37</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -160,8 +160,8 @@
 	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 5. -->
 		<table name="#dmg">66 66 81 81 81 93</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="saveVs" val="CON" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -173,10 +173,10 @@
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, instantly reducing HP. Effect 5. -->
-		<table name="#magicLvl">46 49 52 55 58 61</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<table name="#dmg">66 66 81 81 81 93</table>
 		<table name="#abnormalLevel">5 5 5 6 6 7</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="saveVs" val="CON" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BLEED" />
@@ -210,8 +210,8 @@
 		<table name="#abnormalLevel">5 5 6 6 6 7</table>
 		<table name="#dmg">92 92 114 114 114 144</table>
 		<table name="#lvl">5 5 6 6 6 7</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -224,8 +224,8 @@
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
 		<table name="#dmg">12 13 14 15 16 17</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DOT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -236,8 +236,8 @@
 	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
 		<!-- Causes additional damage during a critical attack while reducing one's own HP. -->
 		<table name="#cAtkAdd">248.56 298.04 352.73 411.98 474.82 539.9</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -304,8 +304,8 @@
 	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
 		<!-- Increases success rate of attacks targeting an enemy's vital parts. -->
 		<table name="#rate">50 48 46 44 42 40</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -337,9 +337,9 @@
 		<set name="castRange" val="-1" />
 	</skill>
 	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
-		<table name="#magicLvl">68 69 70 71 72 73 74</table>
+		<table name="#magicLevel">68 69 70 71 72 73 74</table>
 		<table name="#absorbDam">8 9 10 12 14 19 21</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
 		<set name="element" val="6" />
@@ -387,10 +387,10 @@
 	</skill>
 	<skill id="3042" levels="20" name="Critical Damage Duel 4">
 		<!-- Inflicts additional damage during a critical attack. -->
-		<table name="#magicLvl">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
 		<table name="#cAtkAdd">81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06</table>
 		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -403,8 +403,8 @@
 	<skill id="3043" levels="6" name="Special Ability: Critical Damage">
 		<!-- Causes additional damage when making a critical attack. -->
 		<table name="#cAtkAdd">106.45 118.22 129.81 140.87 151.04 159.93</table>
-		<table name="#magicLvl">46 49 52 55 58 61</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -421,10 +421,10 @@
 	</skill>
 	<skill id="3045" levels="20" name="Haste Duel 4">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
 		<table name="#val">1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.10</table>
 		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -436,10 +436,10 @@
 	</skill>
 	<skill id="3046" levels="20" name="Guidance Duel 4">
 		<!-- Increases Accuracy. -->
-		<table name="#magicLvl">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
 		<table name="#val">3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5</table>
 		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -452,7 +452,7 @@
 	<skill id="3047" levels="3" name="Special Ability: Acumen">
 		<!-- Increases Casting Spd. -->
 		<table name="#pvpBonus">1 1.05 1.1</table>
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -467,7 +467,7 @@
 	<skill id="3048" levels="3" name="Special Ability: Conversion">
 		<!-- Decreases Max HP and increases Max MP. -->
 		<table name="#pvpDam">1 1.05 1.1</table>
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -667,7 +667,7 @@
 		<set name="castRange" val="-1" />
 		<set name="condition" val="8" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -743,12 +743,12 @@
 	</skill>
 	<skill id="3070" levels="3" name="Special Ability: Critical Stun">
 		<!-- Temporarily stuns and paralyzes target. -->
-		<table name="#magicLvl">64 67 70</table>
+		<table name="#magicLevel">64 67 70</table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -788,7 +788,7 @@
 	</skill>
 	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
 		<!-- Temporarily blocks the ability to use magic skills. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="power" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MUTE" />
@@ -802,7 +802,7 @@
 	</skill>
 	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
 		<!-- Temporarily paralyzes target. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="power" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PARALYZE" />
@@ -816,24 +816,24 @@
 	</skill>
 	<skill id="3076" levels="6" name="Special Ability: Empower">
 		<!-- Increases M. Atk. -->
-		<table name="#magicLvl">46 49 52 55 58 61</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<table name="#mAtk">20.36 22.51 24.59 26.53 28.27 29.7</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
 	<skill id="3077" levels="6" name="Special Ability: Magic Power">
 		<!-- Increases MP Consumption and M. Atk. -->
-		<table name="#magicLvl">46 49 52 55 58 61</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<table name="#mAtk">75.86 87.22 99.39 112.26 125.66 139.41</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
@@ -841,7 +841,7 @@
 	</skill>
 	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
 		<!-- Temporarily blocks the ability to use magic skills. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="power" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MUTE" />
@@ -855,7 +855,7 @@
 	</skill>
 	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
 		<!-- Temporarily paralyzes target. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="power" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PARALYZE" />
@@ -871,8 +871,8 @@
 		<!-- Chance: Provokes a target to attack during an ordinary physical attack. Power 438. -->
 		<table name="#power">438 467 495 523 549 574 597 617 635 659</table>
 		<table name="#chance">2 2 2 3 3 3 4 4 5 5</table>
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 76</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 76</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="1" />
 		<set name="skillType" val="AGGDAMAGE" />
@@ -901,8 +901,8 @@
 		<!-- Chance: Burns up a target's MP during an ordinary physical attack. Power 49. -->
 		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
 		<table name="#chance">2 2 2 3 3 3 4 4 5 5</table>
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 76</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 76</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
@@ -1059,8 +1059,8 @@
 		<!-- Chance: Burns up a target's MP during magic use. Power 49. -->
 		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
 		<table name="#chance">2 2 2 3 3 3 4 4 5 5</table>
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 76</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 76</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />

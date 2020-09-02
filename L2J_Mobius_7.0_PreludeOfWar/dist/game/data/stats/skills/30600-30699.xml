@@ -22,7 +22,7 @@
 		<icon>icon.icon_lender</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>1</amount>
@@ -39,7 +39,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -64,7 +64,7 @@
 		<icon>icon.icon_Er_wizard</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>1</amount>
@@ -81,7 +81,7 @@
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A6</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -147,7 +147,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -182,7 +182,7 @@
 		<abnormalTime>60</abnormalTime>
 		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1232,7 +1232,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>5</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1269,7 +1269,7 @@
 		<affectRange>1100</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -1314,7 +1314,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<mpConsume>8</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1368,7 +1368,7 @@
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>5</amount>
@@ -1404,7 +1404,7 @@
 		<effectPoint>-700</effectPoint>
 		<mpConsume>7</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1453,7 +1453,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>700</effectPoint>
 		<mpConsume>4</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MOVEMENT</abnormalType>
@@ -1513,7 +1513,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-689</effectPoint>
 		<mpConsume>12</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<fanRange>0,0,900,90</fanRange>
@@ -1550,7 +1550,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>1</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
@@ -1594,7 +1594,7 @@
 		<icon>icon.skill11048</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
 		<effectRange>1800</effectRange>
@@ -1647,7 +1647,7 @@
 		<icon>icon.skill11034</icon>
 		<operateType>T</operateType>
 		<mpConsume>3</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>15</amount>
@@ -1676,7 +1676,7 @@
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1721,7 +1721,7 @@
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1777,7 +1777,7 @@
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1822,7 +1822,7 @@
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1881,7 +1881,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -1945,7 +1945,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -1997,7 +1997,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -2073,7 +2073,7 @@
 		<abnormalType>MARK_DEBUF_B</abnormalType>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>5</lvlBonusRate> <!-- Guessing -->
@@ -2114,7 +2114,7 @@
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>5</amount>
@@ -2183,7 +2183,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitCancelTime>1</hitCancelTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="HpCpHeal">
 				<power>297</power>
@@ -2210,7 +2210,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>3</lvlBonusRate> <!-- Guessing -->
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
@@ -2238,7 +2238,7 @@
 		<mpConsume>9</mpConsume>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -2268,7 +2268,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-507</effectPoint>
 		<mpConsume>12</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2313,7 +2313,7 @@
 		<mpConsume>3</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2337,10 +2337,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<mpConsume>15</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">76</value>		
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2479,7 +2479,7 @@
 		<fanRange>0;0;1100;50</fanRange> <!-- Guessed -->
 		<affectLimit>5-12</affectLimit>
 		<reuseDelayGroup>11023</reuseDelayGroup>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectRange>1400</effectRange>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
@@ -2515,7 +2515,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectRange>1400</effectRange>
 		<magicCriticalRate>11</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
@@ -2563,10 +2563,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">76</value>		
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2592,7 +2592,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>611</effectPoint>
 		<mpConsume>17</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>HEAL_EFFECT_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
@@ -2628,7 +2628,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -2679,7 +2679,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -2741,7 +2741,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -2789,7 +2789,7 @@
 		<mpConsume>3</mpConsume>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="CanSummonCubic" />
@@ -2815,7 +2815,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<isMagic>22</isMagic>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2868,7 +2868,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -2921,7 +2921,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectPoint>696</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -2978,7 +2978,7 @@
 		<activateRate>80</activateRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -3022,7 +3022,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -3086,7 +3086,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayGroup>11023</reuseDelayGroup>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectRange>1400</effectRange>
 		<magicCriticalRate>11</magicCriticalRate>
 		<effects>
@@ -3116,10 +3116,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">76</value>		
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3145,7 +3145,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<mpConsume>17</mpConsume>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>RECHARGE_UP</abnormalType>
 		<abnormalTime>1800</abnormalTime>
@@ -3171,7 +3171,7 @@
 		<mpConsume>3</mpConsume>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<conditions>
 			<condition name="CanSummonCubic" />
 		</conditions>
@@ -3199,7 +3199,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -3247,7 +3247,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -3300,7 +3300,7 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectPoint>696</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -3394,7 +3394,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>AB_HAWK_EYE</abnormalType>
 		<abnormalLevel>1</abnormalLevel>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3443,7 +3443,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11023</reuseDelayGroup>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<effects>
@@ -3465,10 +3465,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">76</value>		
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3895,7 +3895,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<effectRange>1800</effectRange>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>

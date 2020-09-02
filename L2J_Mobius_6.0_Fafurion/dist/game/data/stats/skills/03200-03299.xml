@@ -13,11 +13,11 @@
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">43</value>
 			<value level="2">49</value>
@@ -60,11 +60,11 @@
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">43</value>
 			<value level="2">49</value>
@@ -102,11 +102,11 @@
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">43</value>
 			<value level="2">49</value>
@@ -155,7 +155,7 @@
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>10</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -179,11 +179,11 @@
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">20</value>
 			<value level="2">24</value>
@@ -220,10 +220,10 @@
 			<value level="2">3500</value>
 		</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">48</value>
 			<value level="2">56</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">171</value>
 			<value level="2">244</value>
@@ -251,7 +251,7 @@
 		<!-- Active: Plays music. -->
 		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -262,7 +262,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>12000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -273,7 +273,7 @@
 	<skill id="3207" toLevel="10" name="Item Skill: Heal">
 		<!-- Chance: Has a chance of restoring HP when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -284,7 +284,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -315,7 +315,7 @@
 	<skill id="3208" toLevel="10" name="Item Skill: Blessed Body">
 		<!-- Chance: Has a chance of increasing Max HP for a certain amount of time when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -326,7 +326,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -357,7 +357,7 @@
 	<skill id="3209" toLevel="10" name="Item Skill: Prayer">
 		<!-- Chance: Has a chance of increasing the effect of HP recovery magic for a certain amount of time when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -368,7 +368,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -399,7 +399,7 @@
 	<skill id="3210" toLevel="10" name="Item Skill: Recharge">
 		<!-- Chance: Has a chance of restoring MP when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -410,7 +410,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -441,7 +441,7 @@
 	<skill id="3211" toLevel="10" name="Item Skill: Blessed Soul">
 		<!-- Chance: Increases Max MP for a certain amount of time when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -452,7 +452,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -483,7 +483,7 @@
 	<skill id="3212" toLevel="15" name="Item Skill: Mana Gain">
 		<!-- Chance: Increases the recharge recovery rate of MP when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -499,7 +499,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -535,7 +535,7 @@
 	<skill id="3213" toLevel="10" name="Item Skill: Ritual">
 		<!-- Chance: Restores CP when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -546,7 +546,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -577,7 +577,7 @@
 	<skill id="3214" toLevel="10" name="Item Skill: Cheer">
 		<!-- Chance: Temporarily increases Max CP when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -588,7 +588,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -619,7 +619,7 @@
 	<skill id="3215" toLevel="15" name="Item Skill: Might">
 		<!-- Chance: Temporarily increases P. Atk. when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -635,7 +635,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -671,7 +671,7 @@
 	<skill id="3216" toLevel="15" name="Item Skill: Empower">
 		<!-- Chance: Temporarily increases M. Atk. when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -687,7 +687,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -723,7 +723,7 @@
 	<skill id="3217" toLevel="10" name="Item Skill: Duel Might">
 		<!-- Chance: Temporarily increases PvP P. Atk. when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -734,7 +734,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -765,7 +765,7 @@
 	<skill id="3218" toLevel="15" name="Item Skill: Shield">
 		<!-- Chance: Temporarily increases P. Def. when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -781,7 +781,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -817,7 +817,7 @@
 	<skill id="3219" toLevel="15" name="Item Skill: Magic Barrier">
 		<!-- Chance: Temporarily increases M. Def. when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -833,7 +833,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -869,7 +869,7 @@
 	<skill id="3220" toLevel="10" name="Item Skill: Duel Weakness">
 		<!-- Chance: Temporarily decreases the opponent's PvP P. Atk. when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -880,7 +880,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -911,7 +911,7 @@
 	<skill id="3221" toLevel="15" name="Item Skill: Agility">
 		<!-- Chance: Temporarily increases Evasion when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -927,7 +927,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -963,7 +963,7 @@
 	<skill id="3222" toLevel="15" name="Item Skill: Guidance">
 		<!-- Chance: Temporarily increases Accuracy when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -979,7 +979,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1015,7 +1015,7 @@
 	<skill id="3223" toLevel="10" name="Item Skill: Focus">
 		<!-- Chance: Temporarily increases Critical Rate when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1026,7 +1026,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1057,7 +1057,7 @@
 	<skill id="3224" toLevel="10" name="Item Skill: Wild Magic">
 		<!-- Chance: Temporarily increases Critical Rate of magic attacks when attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1068,7 +1068,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1099,7 +1099,7 @@
 	<skill id="3225" toLevel="15" name="Item Skill: Charm">
 		<!-- Chance: Decreases the enemy's aggression when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1115,7 +1115,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1151,7 +1151,7 @@
 	<skill id="3226" toLevel="15" name="Item Skill: Slow">
 		<!-- Chance: Momentarily decreases the target's Speed when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1167,7 +1167,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1203,7 +1203,7 @@
 	<skill id="3227" toLevel="15" name="Item Skill: Winter">
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1219,7 +1219,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1255,7 +1255,7 @@
 	<skill id="3228" toLevel="10" name="Item Skill: Stun">
 		<!-- Activated skill: Causes a target to enter the Stun state momentarily if successfully hit. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1266,7 +1266,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1297,7 +1297,7 @@
 	<skill id="3229" toLevel="10" name="Item Skill: Hold">
 		<!-- Chance: Momentarily inflicts Hold on the target when you're attacked. Additional chance to be put into hold greatly decreases while the effect lasts. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1308,7 +1308,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1339,7 +1339,7 @@
 	<skill id="3230" toLevel="10" name="Item Skill: Sleep">
 		<!-- Chance: Momentarily inflicts Sleep on the target when you're attacked. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1350,7 +1350,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1381,7 +1381,7 @@
 	<skill id="3231" toLevel="10" name="Item Skill: Paralyze">
 		<!-- Chance: Momentarily paralyzes the target when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1392,7 +1392,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1423,7 +1423,7 @@
 	<skill id="3232" toLevel="10" name="Item Skill: Medusa">
 		<!-- Chance: Momentarily petrifies the target when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1434,7 +1434,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1465,7 +1465,7 @@
 	<skill id="3233" toLevel="10" name="Item Skill: Fear">
 		<!-- Chance: Momentarily inflicts Fear on the target and causes it to flee when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1476,7 +1476,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1507,7 +1507,7 @@
 	<skill id="3234" toLevel="15" name="Item Skill: Poison">
 		<!-- Chance: Momentarily poisons the target when you're attacked. Effect $s1. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1523,7 +1523,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1559,7 +1559,7 @@
 	<skill id="3235" toLevel="15" name="Item Skill: Bleed">
 		<!-- Chance: Momentarily inflicts Bleed on the target and causes when you're attacked. Effect $s1. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1575,7 +1575,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1611,7 +1611,7 @@
 	<skill id="3236" toLevel="10" name="Item Skill: Silence">
 		<!-- Chance: Momentarily blocks the target's magic skills when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1622,7 +1622,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1653,7 +1653,7 @@
 	<skill id="3237" toLevel="10" name="Item Skill: Doom">
 		<!-- Chance: Momentarily blocks all of the target's physical and magic skills when you're attacked. -->
 		<icon>icon.skill3080</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1664,7 +1664,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1695,7 +1695,7 @@
 	<skill id="3238" toLevel="10" name="Item Skill: Prayer">
 		<!-- Passive: Increases the effect of HP recovery magic when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1706,7 +1706,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1719,7 +1719,7 @@
 	<skill id="3239" toLevel="15" name="Item Skill: Mana Gain">
 		<!-- Passive: Increases the recharge recovery rate of MP when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1735,7 +1735,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1748,7 +1748,7 @@
 	<skill id="3240" toLevel="15" name="Item Skill: Might">
 		<!-- Passive: Increases P. Atk. when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1764,7 +1764,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1793,7 +1793,7 @@
 	<skill id="3241" toLevel="15" name="Item Skill: Empower">
 		<!-- Passive: Increases M. Atk. when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1809,7 +1809,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1822,7 +1822,7 @@
 	<skill id="3243" toLevel="10" name="Item Skill: Duel Might">
 		<!-- Passive: Increases PvP P. Atk. when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1833,7 +1833,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1850,7 +1850,7 @@
 	<skill id="3244" toLevel="15" name="Item Skill: Shield">
 		<!-- Passive: Increases P. Def. when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1866,7 +1866,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1895,7 +1895,7 @@
 	<skill id="3245" toLevel="15" name="Item Skill: Magic Barrier">
 		<!-- Passive: Increases M. Def. when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1911,7 +1911,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1940,7 +1940,7 @@
 	<skill id="3246" toLevel="10" name="Item Skill: Heal Empower">
 		<!-- Passive: Increases the power of HP recovery magic when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1951,7 +1951,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1975,7 +1975,7 @@
 	<skill id="3247" toLevel="15" name="Item Skill: Agility">
 		<!-- Passive: Increases Evasion when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1991,7 +1991,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2004,7 +2004,7 @@
 	<skill id="3248" toLevel="15" name="Item Skill: Guidance">
 		<!-- Passive: Increases Accuracy when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2020,7 +2020,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2033,7 +2033,7 @@
 	<skill id="3249" toLevel="10" name="Item Skill: Focus">
 		<!-- Passive: Increases Critical Rate when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2044,7 +2044,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2057,7 +2057,7 @@
 	<skill id="3250" toLevel="10" name="Item Skill: Wild Magic">
 		<!-- Passive: Increases Critical Rate of magic attacks when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2068,7 +2068,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2081,7 +2081,7 @@
 	<skill id="3251" toLevel="10" name="Item Skill: Weight Limit">
 		<!-- Passive: Increases weight limit by $s1 times. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2092,7 +2092,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2105,7 +2105,7 @@
 	<skill id="3252" toLevel="10" name="Item Skill: Eva's Kiss">
 		<!-- Passive: Increases lung capacity when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2116,7 +2116,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2129,7 +2129,7 @@
 	<skill id="3253" toLevel="10" name="Item Skill: Acrobatics">
 		<!-- Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2140,7 +2140,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2153,7 +2153,7 @@
 	<skill id="3254" toLevel="15" name="Item Skill: Iron Body">
 		<!-- Passive: Increases Resistance to damage from falling when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2169,7 +2169,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2181,7 +2181,7 @@
 	<skill id="3255" toLevel="8" name="Item Skill: Skill Clarity">
 		<!-- Passive: Decreases MP Consumption for physical skills when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
@@ -2190,7 +2190,7 @@
 			<value level="6">90</value>
 			<value level="7">95</value>
 			<value level="8">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2213,7 +2213,7 @@
 	<skill id="3256" toLevel="8" name="Item Skill: Spell Clarity">
 		<!-- Passive: Decreases MP Consumption for magic skills when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
@@ -2222,7 +2222,7 @@
 			<value level="6">90</value>
 			<value level="7">95</value>
 			<value level="8">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2245,11 +2245,11 @@
 	<skill id="3257" toLevel="3" name="Item Skill: Music Clarity">
 		<!-- Passive: Decreases MP Consumption for song/ dance skills when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2267,11 +2267,11 @@
 	<skill id="3258" toLevel="3" name="Item Skill: Clarity">
 		<!-- Passive: Decreases MP Consumption for all skills when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2303,11 +2303,11 @@
 	<skill id="3259" toLevel="3" name="Item Skill: Reflect Damage">
 		<!-- Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. -->
 		<icon>icon.skill3238</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">64</value>
 			<value level="3">75</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2329,7 +2329,7 @@
 		<effectRange>700</effectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2368,7 +2368,7 @@
 		<effectRange>700</effectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2386,7 +2386,7 @@
 		<effectRange>700</effectRange>
 		<hitTime>3200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>40000</reuseDelay>
@@ -2424,7 +2424,7 @@
 		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>65</mpConsume>
 		<mpInitialConsume>17</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -2446,7 +2446,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>122</mpConsume>
 		<mpInitialConsume>31</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -2472,7 +2472,7 @@
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2485,7 +2485,7 @@
 	<skill id="3266" toLevel="1" name="Large Firecracker's Ability">
 		<!-- Allows the use of Large Fireworks. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>19</mpConsume>
 		<mpInitialConsume>5</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -2500,7 +2500,7 @@
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>65</magicLvl>
+		<magicLevel>65</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2515,7 +2515,7 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2532,7 +2532,7 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>65</magicLvl>
+		<magicLevel>65</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2549,7 +2549,7 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>65</magicLvl>
+		<magicLevel>65</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2570,7 +2570,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2596,7 +2596,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2619,7 +2619,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -2647,7 +2647,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2673,7 +2673,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2699,7 +2699,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2725,7 +2725,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2751,7 +2751,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2777,7 +2777,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2810,7 +2810,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2839,7 +2839,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2876,7 +2876,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2913,7 +2913,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2939,7 +2939,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2969,7 +2969,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -3020,7 +3020,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3041,7 +3041,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3062,7 +3062,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3083,7 +3083,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3104,7 +3104,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3125,7 +3125,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3146,7 +3146,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>40</mpConsume>
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3164,7 +3164,7 @@
 	<skill id="3293" toLevel="1" name="Yellow Talisman - P. Atk.">
 		<!-- Increases P. Atk. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3177,7 +3177,7 @@
 	<skill id="3294" toLevel="1" name="Yellow Talisman - M. Atk.">
 		<!-- Increases M. Atk. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3190,7 +3190,7 @@
 	<skill id="3295" toLevel="1" name="Yellow Talisman - P. Def.">
 		<!-- Increases P. Def. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3203,7 +3203,7 @@
 	<skill id="3296" toLevel="1" name="Yellow Talisman - M. Def.">
 		<!-- Increases M. Def. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3216,7 +3216,7 @@
 	<skill id="3297" toLevel="1" name="Yellow Talisman - Accuracy">
 		<!-- Increases Accuracy when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3229,7 +3229,7 @@
 	<skill id="3298" toLevel="1" name="Yellow Talisman - Evasion">
 		<!-- Increases Evasion when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3242,7 +3242,7 @@
 	<skill id="3299" toLevel="1" name="Yellow Talisman - Critical Damage">
 		<!-- Increases Critical Damage when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>

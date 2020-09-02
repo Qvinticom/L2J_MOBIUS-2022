@@ -50,7 +50,7 @@
 		<effectPoint>-5013</effectPoint>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<reuseDelay>45000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -88,7 +88,7 @@
 		<effectPoint>-100</effectPoint>
 		<castRange>40</castRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<effectRange>200</effectRange>
 		<targetType>ENEMY</targetType>
@@ -116,7 +116,7 @@
 		<activateRate>200</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>300</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -384,7 +384,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>

@@ -5,7 +5,7 @@
 		<icon>icon.weapon_vesper_caster_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MagicCriticalDamage">
@@ -23,7 +23,7 @@
 		<icon>icon.weapon_grangkaz_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MAtk">
@@ -45,7 +45,7 @@
 		<icon>icon.weapon_herencia_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MAtk">
@@ -67,7 +67,7 @@
 		<icon>icon.weapon_rupe_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MAtk">
@@ -89,7 +89,7 @@
 		<icon>icon.weapon_shaelon_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MAtk">
@@ -111,7 +111,7 @@
 		<icon>icon.weapon_vesper_singer_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MAtk">
@@ -133,7 +133,7 @@
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -151,7 +151,7 @@
 		<icon>icon.armor_t601_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -169,7 +169,7 @@
 		<icon>icon.armor_t401_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -187,7 +187,7 @@
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -205,7 +205,7 @@
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -223,7 +223,7 @@
 		<icon>icon.armor_t502_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="PhysicalEvasion">
@@ -249,7 +249,7 @@
 		<icon>icon.armor_t503_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="MagicalEvasion">
@@ -275,7 +275,7 @@
 		<icon>icon.accessory_earring_of_antaras_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>59</amount>
@@ -338,7 +338,7 @@
 		<abnormalType>STUN</abnormalType>
 		<hitTime>200</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -360,7 +360,7 @@
 		<icon>icon.accessory_necklace_of_valakas_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>79</amount>
@@ -429,7 +429,7 @@
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<hitTime>200</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -451,7 +451,7 @@
 		<icon>icon.ring_earthworm_heart</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>38</amount>
@@ -540,7 +540,7 @@
 		<icon>icon.ring_earthworm_heart</icon>
 		<hitTime>200</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -559,7 +559,7 @@
 		<icon>icon.istina_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>37</amount>
@@ -584,7 +584,7 @@
 		<icon>icon.istina_earring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>56</amount>
@@ -611,7 +611,7 @@
 		<icon>icon.istina_necklace_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>74</amount>
@@ -635,7 +635,7 @@
 		<icon>icon.istina_belt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="HpRegen">
 				<amount>3.48</amount>
@@ -651,7 +651,7 @@
 		<icon>icon.istina_shirt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>7</amount>
@@ -691,7 +691,7 @@
 		<icon>icon.octavis_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>37</amount>
@@ -712,7 +712,7 @@
 		<icon>icon.octavis_earring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>56</amount>
@@ -737,7 +737,7 @@
 		<icon>icon.octavis_necklace_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>74</amount>
@@ -764,7 +764,7 @@
 		<icon>icon.octavis_belt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="WeightLimit">
 				<amount>13000</amount>
@@ -780,7 +780,7 @@
 		<icon>icon.skill4009</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -793,7 +793,7 @@
 		<icon>icon.skill4010</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -806,7 +806,7 @@
 		<icon>icon.skill4011</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -819,7 +819,7 @@
 		<icon>icon.skill4012</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -832,7 +832,7 @@
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -845,7 +845,7 @@
 		<icon>icon.skill4333</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>300</amount>
@@ -858,7 +858,7 @@
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>120</amount>
@@ -879,7 +879,7 @@
 		<icon>icon.skill4333</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>120</amount>
@@ -905,7 +905,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -930,7 +930,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -951,7 +951,7 @@
 		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>93</amount>
@@ -1067,7 +1067,7 @@
 		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>55</amount>
@@ -1216,7 +1216,7 @@
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>60</amount>
@@ -1367,7 +1367,7 @@
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -1384,7 +1384,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="WeightPenalty">
 				<amount>5000</amount>
@@ -1396,7 +1396,7 @@
 		<icon>icon.bracelet_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>61</magicLvl>
+		<magicLevel>61</magicLevel>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>4</slots>
@@ -1409,7 +1409,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>3000</hitTime>
 		<targetType>SELF</targetType>
@@ -1421,7 +1421,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<isMagic>2</isMagic>
 		<hitTime>3000</hitTime>
 		<targetType>SELF</targetType>
@@ -1440,7 +1440,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
@@ -1465,7 +1465,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<isMagic>2</isMagic>
 		<coolTime>200</coolTime>
 		<targetType>TARGET</targetType>
@@ -1484,7 +1484,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1508,7 +1508,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1528,7 +1528,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>15000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1542,7 +1542,7 @@
 		<icon>icon.Accessory_angel_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="WeightLimit">
 				<amount>2000</amount>
@@ -1560,7 +1560,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1580,7 +1580,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>21</amount>
@@ -1601,7 +1601,7 @@
 		<effectPoint>532</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<reuseDelay>360000</reuseDelay>
@@ -1619,7 +1619,7 @@
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>37</amount>
@@ -1637,7 +1637,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1657,7 +1657,7 @@
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>37</amount>
@@ -1675,7 +1675,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1695,7 +1695,7 @@
 		<icon>icon.r85_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>38</amount>
@@ -1713,7 +1713,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1733,7 +1733,7 @@
 		<icon>icon.r85_talisman_cp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>99</amount>
@@ -1751,7 +1751,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1771,7 +1771,7 @@
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>219</amount>
@@ -1789,7 +1789,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1809,7 +1809,7 @@
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>119</amount>
@@ -1827,7 +1827,7 @@
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -1846,7 +1846,7 @@
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="InstantKillResist">
 				<amount>10</amount>
@@ -1858,7 +1858,7 @@
 		<icon>icon.accessory_ring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>15</amount>
@@ -1875,7 +1875,7 @@
 		<icon>icon.accessory_ring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>2</amount>
@@ -1892,7 +1892,7 @@
 		<icon>icon.accessory_earring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>4</amount>
@@ -1909,7 +1909,7 @@
 		<icon>icon.accessory_earring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>4</amount>
@@ -1926,7 +1926,7 @@
 		<icon>icon.accessory_necklace_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<BLEED>20</BLEED>
@@ -1972,7 +1972,7 @@
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>60</amount>
@@ -1987,7 +1987,7 @@
 		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -2021,7 +2021,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<reuseDelay>5000</reuseDelay>
@@ -2045,7 +2045,7 @@
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>216</amount>
@@ -2069,7 +2069,7 @@
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>216</amount>
@@ -2095,7 +2095,7 @@
 		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -2106,14 +2106,14 @@
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13382" toLevel="1" name="Hair Accessory Angel Circlet - Campaign">
 		<!-- INT + 3, WIT + 1, MEN + 1, P. Def. + 1, and M. Def. + 1 when the hair accessory is equipped. -->
 		<icon>icon.Accessary_angel_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="13383" toLevel="1" name="Sealing Agathion">
 		<!-- When the Agathion Bracelet is un-equipped, the summoned Agathion is sealed, and for 10 seconds, cannot receive the XP Bottle's Divine Power. -->
@@ -2141,7 +2141,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2160,7 +2160,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2179,7 +2179,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2198,7 +2198,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2217,7 +2217,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2236,7 +2236,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -2252,7 +2252,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2270,7 +2270,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2288,7 +2288,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2306,7 +2306,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2324,7 +2324,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2342,7 +2342,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2358,7 +2358,7 @@
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2371,7 +2371,7 @@
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2384,7 +2384,7 @@
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2397,7 +2397,7 @@
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>

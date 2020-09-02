@@ -22,7 +22,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -32,7 +32,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -241,7 +241,7 @@
 		<icon>icon.rune_olympiad_legend_server</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="VitalityExpRate">
 				<amount>30</amount>
@@ -285,7 +285,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -478,7 +478,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -709,7 +709,7 @@
 	<skill id="39234" toLevel="1" name="Guard Agathion Scroll of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -719,7 +719,7 @@
 	<skill id="39235" toLevel="1" name="Ancient Guard Agathion Scroll of Growth">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -787,7 +787,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -796,7 +796,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -846,7 +846,7 @@
 	<skill id="39247" toLevel="1" name="Scroll: Enchant Angel Accessory">
 		<icon>icon.scrl_of_ench_acc</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

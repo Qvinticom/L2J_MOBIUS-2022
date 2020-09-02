@@ -344,7 +344,7 @@
 		<abnormalVisualEffect>DIVINITY</abnormalVisualEffect>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>101</magicLvl>
+		<magicLevel>101</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -364,7 +364,7 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>101</magicLvl>
+		<magicLevel>101</magicLevel>
 		<mpConsume>243</mpConsume>
 		<castRange>600</castRange>
 		<hitTime>5000</hitTime>
@@ -631,7 +631,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<isMagic>1</isMagic>
-		<magicLvl>101</magicLvl>
+		<magicLevel>101</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<affectRange>200</affectRange>
 		<effects>
@@ -658,7 +658,7 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<effectPoint>418</effectPoint>
@@ -849,7 +849,7 @@
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>100</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -883,7 +883,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>40</itemConsumeCount>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -969,10 +969,10 @@
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
 		<removedOnDamage>true</removedOnDamage>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

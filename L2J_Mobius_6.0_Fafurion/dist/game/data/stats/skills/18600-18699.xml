@@ -723,7 +723,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47126</itemConsumeId> <!-- Key Card to the Controller Room" -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -858,7 +858,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="OpAlignment">
@@ -1190,7 +1190,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47384</itemConsumeId> <!-- Express Bus Pass Card -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1524,7 +1524,7 @@
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1606,7 +1606,7 @@
 	<skill id="18663" toLevel="4" name="Blueish Box">
 		<!-- Double click to obtain a special item. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>500</hitTime>
@@ -1653,7 +1653,7 @@
 	<skill id="18670" toLevel="1" name="Gran Kain's Miraculous Medicine">
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeId>47578</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1754,7 +1754,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1763,7 +1763,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1772,7 +1772,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1781,7 +1781,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1790,7 +1790,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1799,7 +1799,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1844,7 +1844,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1878,7 +1878,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1912,7 +1912,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1946,7 +1946,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1980,7 +1980,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

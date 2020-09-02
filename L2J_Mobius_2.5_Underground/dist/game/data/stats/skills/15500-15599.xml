@@ -223,7 +223,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -241,7 +241,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -271,7 +271,7 @@
 		<isMagic>1</isMagic>
 		<attributeType>DARK</attributeType>
 		<attributeValue>450</attributeValue>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -308,7 +308,7 @@
 		<affectRange>100</affectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>450</attributeValue>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>160000</power>
@@ -329,7 +329,7 @@
 		<affectRange>100</affectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>450</attributeValue>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -363,7 +363,7 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -404,7 +404,7 @@
 		<removedOnDamage>true</removedOnDamage>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<trait>SLEEP</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -761,7 +761,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>160000</power>
@@ -778,7 +778,7 @@
 		<hitTime>3000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -861,7 +861,7 @@
 		<isMagic>1</isMagic>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

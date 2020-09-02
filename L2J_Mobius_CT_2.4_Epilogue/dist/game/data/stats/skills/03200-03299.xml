@@ -3,7 +3,7 @@
 	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
 		<!-- Active: Temporarily decreases the re-use time for magic skills. -->
 		<table name="#effectPoints">549 611 655</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
 		<set name="abnormalLevel" val="1" />
@@ -13,7 +13,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -28,7 +28,7 @@
 	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
 		<!-- Active: Temporarily decreases the re-use time for song/dance skills. -->
 		<table name="#effectPoints">549 611 655</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
 		<set name="abnormalLevel" val="1" />
@@ -38,7 +38,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -53,7 +53,7 @@
 	<skill id="3202" levels="3" name="Item Skill: Refresh">
 		<!-- Active: Temporarily decreases the re-use times for all skills. -->
 		<table name="#effectPoints">549 611 655</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#mpConsume">43 49 55</table>
 		<table name="#mpInitialConsume">11 13 14</table>
 		<set name="abnormalLevel" val="1" />
@@ -63,7 +63,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -86,7 +86,7 @@
 		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
@@ -97,7 +97,7 @@
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">379 438 495</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#mpConsume">20 24 28</table>
 		<table name="#mpInitialConsume">5 6 7</table>
 		<table name="#reflectDam">10 15 20</table>
@@ -108,7 +108,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -123,7 +123,7 @@
 	<skill id="3205" levels="2" name="Item Skill: Party Recall">
 		<!-- Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<table name="#hitTime">20000 3500</table>
-		<table name="#magicLvl">48 56</table>
+		<table name="#magicLevel">48 56</table>
 		<table name="#mpConsume">171 244</table>
 		<table name="#mpInitialConsume">43 61</table>
 		<set name="affectRange" val="1000" />
@@ -131,7 +131,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -153,20 +153,20 @@
 	</skill>
 	<skill id="3206" levels="10" name="Item Skill: Music">
 		<!-- Active: Plays music. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
 		<!-- Chance: Restores your HP by using attack rate. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -181,10 +181,10 @@
 	</skill>
 	<skill id="3208" levels="10" name="Item Skill: Blessed Body">
 		<!-- Chance: Increases Max. HP by using attack rate for a certain amount of time. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -199,10 +199,10 @@
 	</skill>
 	<skill id="3209" levels="10" name="Item Skill: Prayer">
 		<!-- Chance: Increases the effect of HP recovery magic by using attack rate for a certain amount of time. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -217,10 +217,10 @@
 	</skill>
 	<skill id="3210" levels="10" name="Item Skill: Recharge">
 		<!-- Chance: Restores your MP by using attack rate. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -235,10 +235,10 @@
 	</skill>
 	<skill id="3211" levels="10" name="Item Skill: Blessed Soul">
 		<!-- Chance: Increases maximum MP when under attack for a certain amount of time. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -253,10 +253,10 @@
 	</skill>
 	<skill id="3212" levels="10" name="Item Skill: Mana Gain">
 		<!-- Chance: Increases the recharge recovery rate of MP when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -271,10 +271,10 @@
 	</skill>
 	<skill id="3213" levels="10" name="Item Skill: Ritual">
 		<!-- Chance: Restores CP when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -289,10 +289,10 @@
 	</skill>
 	<skill id="3214" levels="10" name="Item Skill: Cheer">
 		<!-- Chance: Increases Max. CP when under attack for a certain amount of time. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -307,10 +307,10 @@
 	</skill>
 	<skill id="3215" levels="10" name="Item Skill: Might">
 		<!-- Chance: Temporarily increases P. Atk. when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -325,10 +325,10 @@
 	</skill>
 	<skill id="3216" levels="10" name="Item Skill: Empower">
 		<!-- Chance: Temporarily increases PVP M. Atk. when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -343,10 +343,10 @@
 	</skill>
 	<skill id="3217" levels="10" name="Item Skill: Duel Might">
 		<!-- Chance: Temporarily increases PVP P. Atk. when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -361,10 +361,10 @@
 	</skill>
 	<skill id="3218" levels="10" name="Item Skill: Shield">
 		<!-- Chance: Temporarily increases P. Def. when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -379,10 +379,10 @@
 	</skill>
 	<skill id="3219" levels="10" name="Item Skill: Magic Barrier">
 		<!-- Chance: Temporarily increases M. Def. when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -397,10 +397,10 @@
 	</skill>
 	<skill id="3220" levels="10" name="Item Skill: Duel Weakness">
 		<!-- Chance: Temporarily decreases the opponent's PVP P. Atk. when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -415,10 +415,10 @@
 	</skill>
 	<skill id="3221" levels="10" name="Item Skill: Agility">
 		<!-- Chance: Temporarily increases Evasion when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -433,10 +433,10 @@
 	</skill>
 	<skill id="3222" levels="10" name="Item Skill: Guidance">
 		<!-- Chance: Temporarily increases Accuracy when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -451,10 +451,10 @@
 	</skill>
 	<skill id="3223" levels="10" name="Item Skill: Focus">
 		<!-- Chance: Temporarily increases the critical attack rate when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -469,10 +469,10 @@
 	</skill>
 	<skill id="3224" levels="10" name="Item Skill: Wild Magic">
 		<!-- Chance: Temporarilty increases the critical attack rate of magic attacks when under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -487,10 +487,10 @@
 	</skill>
 	<skill id="3225" levels="10" name="Item Skill: Charm">
 		<!-- Chance: Decreases the enemy's urge to attack when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -505,10 +505,10 @@
 	</skill>
 	<skill id="3226" levels="10" name="Item Skill: Slow">
 		<!-- Chance: Momentarily decreases a target's Speed when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -523,10 +523,10 @@
 	</skill>
 	<skill id="3227" levels="10" name="Item Skill: Winter">
 		<!-- Chance: Momentarily decreases a target's Atk. Spd. when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -541,10 +541,10 @@
 	</skill>
 	<skill id="3228" levels="10" name="Item Skill: Stun">
 		<!-- Chance: Momentarily stuns the target when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -559,10 +559,10 @@
 	</skill>
 	<skill id="3229" levels="10" name="Item Skill: Hold">
 		<!-- Active: Momentarily holds the target when you are under attack. Additional chance to be put into hold greatly decreases while the effect lasts. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -577,10 +577,10 @@
 	</skill>
 	<skill id="3230" levels="10" name="Item Skill: Sleep">
 		<!-- Active: Momentarily causes the target to sleep when you are under attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -595,10 +595,10 @@
 	</skill>
 	<skill id="3231" levels="10" name="Item Skill: Paralyze">
 		<!-- Chance: Momentarily paralyzes the target when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -613,10 +613,10 @@
 	</skill>
 	<skill id="3232" levels="10" name="Item Skill: Medusa">
 		<!-- Chance: Momentarily petrifies the target when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -631,10 +631,10 @@
 	</skill>
 	<skill id="3233" levels="10" name="Item Skill: Fear">
 		<!-- Chance: Momentarily instills a feeling of fear on the target that causes it to flee when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -649,10 +649,10 @@
 	</skill>
 	<skill id="3234" levels="10" name="Item Skill: Poison">
 		<!-- Chance: Momentarily poisons the target when you are under attack. Effect 5. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -667,10 +667,10 @@
 	</skill>
 	<skill id="3235" levels="10" name="Item Skill: Bleed">
 		<!-- Chance: Momentarily causes the target to bleed when you are under attack. Effect 5. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -685,10 +685,10 @@
 	</skill>
 	<skill id="3236" levels="10" name="Item Skill: Silence">
 		<!-- Chance: Momentarily blocks the target's magic skills when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -703,10 +703,10 @@
 	</skill>
 	<skill id="3237" levels="10" name="Item Skill: Doom">
 		<!-- Chance: Momentarily blocks all of the target's physical and magic skills when you are under attack. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#triggeredLevel">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="icon" val="icon.skill3080" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -721,9 +721,9 @@
 	</skill>
 	<skill id="3238" levels="10" name="Item Skill: Prayer">
 		<!-- Passive: Increases the effect of HP recovery magic when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -734,9 +734,9 @@
 	</skill>
 	<skill id="3239" levels="10" name="Item Skill: Mana Gain">
 		<!-- Passive: Increases the recharge recovery rate of MP when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -747,10 +747,10 @@
 	</skill>
 	<skill id="3240" levels="10" name="Item Skill: Might">
 		<!-- Passive: Increases P. Atk. when equipped -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#pAtk">10.26 11.22 11.94 12.94 13.55 14.44 14.85 15.92 16.68 17.84</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -761,9 +761,9 @@
 	</skill>
 	<skill id="3241" levels="10" name="Item Skill: Empower">
 		<!-- Passive: Increases M. Atk. when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -774,9 +774,9 @@
 	</skill>
 	<skill id="3243" levels="10" name="Item Skill: Duel Might">
 		<!-- Passive: Increases PVP P. Atk. when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -788,10 +788,10 @@
 	</skill>
 	<skill id="3244" levels="10" name="Item Skill: Shield">
 		<!-- Passive: Increases P. Def. when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#pDef">12.78 13.73 14.14 15.13 16.46 17.43 17.69 18.63 19.77 20.3</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -802,10 +802,10 @@
 	</skill>
 	<skill id="3245" levels="10" name="Item Skill: Magic Barrier">
 		<!-- Passive: Increases M. Def. when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mDef">10.8 11.62 11.96 12.66 13.01 13.08 14 14.99 15.88 16.32</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -817,9 +817,9 @@
 	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
 		<!-- Passive: Increases the power of HP recovery magic when equipped. -->
 		<table name="#healEffect">10 11 12 13 14 16 17 18 19 20</table>
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -830,9 +830,9 @@
 	</skill>
 	<skill id="3247" levels="10" name="Item Skill: Agility">
 		<!-- Passive: Increases evasion when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -843,9 +843,9 @@
 	</skill>
 	<skill id="3248" levels="10" name="Item Skill: Guidance">
 		<!-- Passive: Increases accuracy when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -856,9 +856,9 @@
 	</skill>
 	<skill id="3249" levels="10" name="Item Skill: Focus">
 		<!-- Passive: Increases critical attack rate when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -869,9 +869,9 @@
 	</skill>
 	<skill id="3250" levels="10" name="Item Skill: Wild Magic">
 		<!-- Passive: Increases the critical attack rate of magic attacks when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -882,9 +882,9 @@
 	</skill>
 	<skill id="3251" levels="10" name="Item Skill: Weight Limit">
 		<!-- Passive: Increases the weapon weight limit by 2 times when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -895,9 +895,9 @@
 	</skill>
 	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
 		<!-- Passive: Increases lung capacity when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -908,9 +908,9 @@
 	</skill>
 	<skill id="3253" levels="10" name="Item Skill: Acrobatics">
 		<!-- Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -921,9 +921,9 @@
 	</skill>
 	<skill id="3254" levels="10" name="Item Skill: Iron Body">
 		<!-- Passive: Raises resistance to damage from falling when equipped. -->
-		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -934,10 +934,10 @@
 	</skill>
 	<skill id="3255" levels="3" name="Item Skill: Skill Clarity">
 		<!-- Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#PhysicalMpConsumeRate">0.96 0.93 0.9</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -949,9 +949,9 @@
 	<skill id="3256" levels="3" name="Item Skill: Spell Clarity">
 		<!-- Passive: Decreases the MP consumption rate for magic skills when equipped. -->
 		<table name="#MagicalMpConsumeRate">0.9 0.85 0.8</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -963,9 +963,9 @@
 	<skill id="3257" levels="3" name="Item Skill: Music Clarity">
 		<!-- Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
 		<table name="#DanceMpConsumeRate">0.96 0.93 0.9</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -977,10 +977,10 @@
 	<skill id="3258" levels="3" name="Item Skill: Clarity">
 		<!-- Passive: Decreases the MP consumption rate for all skills when equipped. -->
 		<table name="#MagicalMpConsumeRate">0.96 0.93 0.9</table>
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#PhysicalMpConsumeRate">0.9 0.85 0.8</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -993,10 +993,10 @@
 	</skill>
 	<skill id="3259" levels="3" name="Item Skill: Reflect Damage">
 		<!-- Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<table name="#magicLvl">55 64 75</table>
+		<table name="#magicLevel">55 64 75</table>
 		<table name="#reflectDam">10 15 20</table>
 		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1014,7 +1014,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill3260" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -1037,7 +1037,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill3260" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -1052,7 +1052,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="icon" val="icon.skill3260" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="40000" />
@@ -1074,7 +1074,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="65" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="operateType" val="A1" />
@@ -1094,7 +1094,7 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="122" />
 		<set name="mpInitialConsume" val="31" />
 		<set name="operateType" val="A1" />
@@ -1122,7 +1122,7 @@
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
@@ -1132,7 +1132,7 @@
 		<!-- Allows the use of Large Fireworks. -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="mpConsume" val="19" />
 		<set name="mpInitialConsume" val="5" />
 		<set name="operateType" val="A1" />
@@ -1144,7 +1144,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_unsummon_aga_agit_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="65" />
+		<set name="magicLevel" val="65" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1156,7 +1156,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1170,7 +1170,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="65" />
+		<set name="magicLevel" val="65" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1184,7 +1184,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="65" />
+		<set name="magicLevel" val="65" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1202,7 +1202,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1223,7 +1223,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1241,7 +1241,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1265,7 +1265,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1286,7 +1286,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1307,7 +1307,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1328,7 +1328,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1349,7 +1349,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1370,7 +1370,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1396,7 +1396,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1417,7 +1417,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1440,7 +1440,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1463,7 +1463,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1484,7 +1484,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1506,7 +1506,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
@@ -1531,7 +1531,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1549,7 +1549,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1567,7 +1567,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1585,7 +1585,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1603,7 +1603,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1621,7 +1621,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1639,7 +1639,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -1654,7 +1654,7 @@
 	<skill id="3293" levels="1" name="Yellow Talisman of Power">
 		<!-- Increase P. Atk when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1666,7 +1666,7 @@
 	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
 		<!-- Increase M. Atk when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1678,7 +1678,7 @@
 	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
 		<!-- Increase P. Def when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1690,7 +1690,7 @@
 	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
 		<!-- Increase M. Def. when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1702,7 +1702,7 @@
 	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
 		<!-- Increase Accuracy when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1714,7 +1714,7 @@
 	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
 		<!-- Increase Evasion when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1726,7 +1726,7 @@
 	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
 		<!-- Increase critical attack power when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
+		<set name="magicLevel" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

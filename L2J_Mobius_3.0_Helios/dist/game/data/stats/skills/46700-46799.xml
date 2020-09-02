@@ -3,7 +3,7 @@
 	<skill id="46715" toLevel="1" name="Pa'agrio - Real Damage">
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -1242,7 +1242,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<trait>DERANGEMENT</trait>
@@ -1273,7 +1273,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<activateRate>100</activateRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1301,7 +1301,7 @@
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>5</toggleGroupId>

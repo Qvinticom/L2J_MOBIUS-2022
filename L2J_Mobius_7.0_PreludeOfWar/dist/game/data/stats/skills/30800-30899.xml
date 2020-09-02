@@ -6,7 +6,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>408</effectPoint>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -34,7 +34,7 @@
 		<effectPoint>408</effectPoint>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<targetType>SELF</targetType>
@@ -96,7 +96,7 @@
 		<!-- You and your ally's P./M. Def. -7% and P./M. Critical Damage Received -5%. -->
 		<icon>icon.skill10032</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -257,7 +257,7 @@
 		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -375,7 +375,7 @@
 		<mpConsume>107</mpConsume>
 		<affectRange>200</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<affectLimit>10-10</affectLimit>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -396,7 +396,7 @@
 		<effectPoint>-692</effectPoint>
 		<mpConsume>13</mpConsume>
 		<effectRange>400</effectRange>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -448,10 +448,10 @@
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">103</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>22</isMagic>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>
@@ -757,10 +757,10 @@
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">103</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>22</isMagic>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>
@@ -953,7 +953,7 @@
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="PAtk">

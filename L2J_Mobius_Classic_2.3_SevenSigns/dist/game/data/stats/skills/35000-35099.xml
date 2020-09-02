@@ -49,7 +49,7 @@
 	<skill id="35006" toLevel="1" name="Fire Dragon Pendant Basic Effect">
 		<!-- M. Def. +9. -->
 		<icon>icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -62,7 +62,7 @@
 	<skill id="35007" toLevel="11" name="Fire Dragon Pendant Enchant Effect">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -177,7 +177,7 @@
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -197,7 +197,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>7200000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -269,7 +269,7 @@
 			<value level="7">icon.tallisman_baium</value>
 		</icon>
 		<operateType>P</operateType>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="PAtk">
@@ -555,7 +555,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<buffProtectLevel>31</buffProtectLevel>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -571,7 +571,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -593,7 +593,7 @@
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<buffProtectLevel>31</buffProtectLevel>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -609,7 +609,7 @@
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<trait>HOLD</trait>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -647,7 +647,7 @@
 			<value level="11">icon.bm_blessed_magic_square_talisman</value>
 		</icon>
 		<operateType>P</operateType>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -952,7 +952,7 @@
 		<icon>icon.skill10030</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<isMagic>4</isMagic>
@@ -1069,7 +1069,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>3</amount>
@@ -1120,7 +1120,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>3</amount>
@@ -1162,7 +1162,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>3</amount>
@@ -1205,7 +1205,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>1</isMagic>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>3</amount>

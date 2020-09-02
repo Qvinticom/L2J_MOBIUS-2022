@@ -6,7 +6,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -253,7 +253,7 @@
 		<icon>icon.etc_scroll_of_memory_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>5</amount>
@@ -517,7 +517,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -734,7 +734,7 @@
 	</skill>
 	<skill id="39358" toLevel="1" name="Scroll: Enchant Fallen Angel Accessory">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -805,7 +805,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -967,7 +967,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>48941</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>398</mpConsume>
 		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -997,7 +997,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>48942</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<mpConsume>398</mpConsume>
 		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1040,7 +1040,7 @@
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="ArtifactSlot">
 				<amount>2</amount>
@@ -1052,7 +1052,7 @@
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<effects>
 			<effect name="ArtifactSlot">
 				<amount>3</amount>

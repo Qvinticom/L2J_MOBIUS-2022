@@ -3,10 +3,10 @@
 	<skill id="500" toLevel="2" name="True Berserker">
 		<!-- P. Def. -$s1 and P. Evasion -$s2. P. Atk. and Atk. Spd. +$s3 and P. Accuracy +$s4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0500</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">52</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
@@ -76,7 +76,7 @@
 		<hitTime>1800</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">49</value>
 			<value level="2">52</value>
 			<value level="3">55</value>
@@ -89,7 +89,7 @@
 			<value level="10">70</value>
 			<value level="11">72</value>
 			<value level="12">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">22</value>
 			<value level="2">24</value>
@@ -132,13 +132,13 @@
 			<value level="4">311</value>
 			<value level="5">328</value>
 		</hpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">49</value>
 			<value level="3">58</value>
 			<value level="4">66</value>
 			<value level="5">72</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>11000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -174,11 +174,11 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;300</fanRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">43</value>
 			<value level="2">55</value>
 			<value level="3">64</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">21</value>
 			<value level="2">28</value>
@@ -238,7 +238,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">38</value>
 			<value level="2">39</value>
 			<value level="3">40</value>
@@ -276,7 +276,7 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">29</value>
 			<value level="2">30</value>
@@ -412,7 +412,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">47</value>
 			<value level="2">48</value>
 			<value level="3">49</value>
@@ -441,7 +441,7 @@
 			<value level="26">72</value>
 			<value level="27">73</value>
 			<value level="28">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">37</value>
 			<value level="2">38</value>
@@ -536,12 +536,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">52</value>
 			<value level="2">60</value>
 			<value level="3">66</value>
 			<value level="4">72</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">36</value>
 			<value level="2">43</value>
@@ -628,7 +628,7 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">38</value>
 			<value level="2">39</value>
 			<value level="3">40</value>
@@ -666,7 +666,7 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">65</value>
 			<value level="2">67</value>
@@ -808,7 +808,7 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">44</value>
 			<value level="2">45</value>
 			<value level="3">46</value>
@@ -840,7 +840,7 @@
 			<value level="29">72</value>
 			<value level="30">73</value>
 			<value level="31">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">112</value>
 			<value level="2">116</value>
@@ -982,7 +982,7 @@
 		<itemConsumeId>10113</itemConsumeId> <!-- Special Bolt -->
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">41</value>
 			<value level="2">42</value>
 			<value level="3">43</value>
@@ -1017,7 +1017,7 @@
 			<value level="32">72</value>
 			<value level="33">73</value>
 			<value level="34">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">56</value>
 			<value level="2">58</value>
@@ -1160,13 +1160,13 @@
 		<hitTime>3000</hitTime>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>10113</itemConsumeId> <!-- Special Bolt -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">66</value>
 			<value level="2">68</value>
 			<value level="3">70</value>
 			<value level="4">72</value>
 			<value level="5">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">100</value>
 			<value level="2">103</value>
@@ -1211,7 +1211,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>52</magicLvl>
+		<magicLevel>52</magicLevel>
 		<mpConsume>44</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -1230,7 +1230,7 @@
 		<icon>icon.skill0512</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">28</value>
 			<value level="3">36</value>
@@ -1241,7 +1241,7 @@
 			<value level="8">64</value>
 			<value level="9">68</value>
 			<value level="10">72</value>
-		</magicLvl>
+		</magicLevel>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>A1</operateType>
 		<soulMaxConsumeCount>1</soulMaxConsumeCount>
@@ -1284,7 +1284,7 @@
 			<value level="8">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">62</value>
 			<value level="3">64</value>
@@ -1293,7 +1293,7 @@
 			<value level="6">70</value>
 			<value level="7">72</value>
 			<value level="8">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">28</value>
 			<value level="2">29</value>
@@ -1399,12 +1399,12 @@
 		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">78</value>
 			<value level="2">80</value>
 			<value level="3">82</value>
 			<value level="4">84</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">55</value>
 			<value level="2">58</value>
@@ -1460,7 +1460,7 @@
 		<itemConsumeId>10112</itemConsumeId> <!-- Dark Seed -->
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">62</value>
 			<value level="2">64</value>
 			<value level="3">66</value>
@@ -1468,7 +1468,7 @@
 			<value level="5">70</value>
 			<value level="6">72</value>
 			<value level="7">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>30</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1511,7 +1511,7 @@
 		<icon>icon.skill0524</icon>
 		<effectPoint>204</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLvl>64</magicLvl>
+		<magicLevel>64</magicLevel>
 		<mpConsume>59</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -1529,14 +1529,14 @@
 		<icon>icon.skill0525</icon>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">43</value>
 			<value level="2">52</value>
 			<value level="3">60</value>
 			<value level="4">66</value>
 			<value level="5">70</value>
 			<value level="6">74</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">75</value>
@@ -1583,7 +1583,7 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;400;90</fanRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<mpConsume>78</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1608,7 +1608,7 @@
 		<abnormalType>IRON_SHIELD</abnormalType>
 		<effectPoint>673</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
@@ -1642,7 +1642,7 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>673</effectPoint>
 		<hitTime>2500</hitTime>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
@@ -1675,7 +1675,7 @@
 		<effectPoint>507</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<mpConsume>54</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
@@ -1713,7 +1713,7 @@
 		<effectPoint>507</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<mpConsume>54</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
@@ -1757,10 +1757,10 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">77</value>
 			<value level="2">81</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">47</value>
 			<value level="2">60</value>
@@ -1798,7 +1798,7 @@
 	<skill id="532" toLevel="1" name="Counter Chance">
 		<!-- When attacked, Casting Spd. -15% and MP Consumption -5% for 1 min. -->
 		<icon>icon.skill0532</icon>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1818,7 +1818,7 @@
 	<skill id="533" toLevel="1" name="Counter Rapid Shot">
 		<!-- When attacked, character's bow Atk. Spd.+ 15% for 1 min. -->
 		<icon>icon.skill0533</icon>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1838,7 +1838,7 @@
 	<skill id="534" toLevel="1" name="Counter Dash">
 		<!-- When attacked, party members' Speed +40 for 1 min. -->
 		<icon>icon.skill0534</icon>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1858,7 +1858,7 @@
 	<skill id="535" toLevel="1" name="Counter Mind">
 		<!-- When attacked, recovers MP at a certain rate. -->
 		<icon>icon.skill0535</icon>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1882,7 +1882,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>673</effectPoint>
-		<magicLvl>78</magicLvl>
+		<magicLevel>78</magicLevel>
 		<mpConsume>157</mpConsume>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1944,7 +1944,7 @@
 		<hitTime>1800</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>79</magicLvl>
+		<magicLevel>79</magicLevel>
 		<mpConsume>72</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1971,10 +1971,10 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">79</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">71</value>
 			<value level="2">72</value>
@@ -2004,10 +2004,10 @@
 		<effectPoint>-676</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">79</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">71</value>
 			<value level="2">72</value>
@@ -2059,12 +2059,12 @@
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2108,12 +2108,12 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2153,12 +2153,12 @@
 			<value level="4">630</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2193,12 +2193,12 @@
 			<value level="4">630</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2232,12 +2232,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2281,12 +2281,12 @@
 		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2333,12 +2333,12 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">56</value>
@@ -2370,12 +2370,12 @@
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">64</value>
 			<value level="2">72</value>
@@ -2417,12 +2417,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2467,12 +2467,12 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2516,12 +2516,12 @@
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<hpConsume>50</hpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>5</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2572,12 +2572,12 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">21</value>
@@ -2616,12 +2616,12 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2668,12 +2668,12 @@
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2716,12 +2716,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2759,12 +2759,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2807,12 +2807,12 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;250;60</fanRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2863,12 +2863,12 @@
 		<attributeValue>20</attributeValue>
 		<hitTime>1080</hitTime>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2921,12 +2921,12 @@
 			<value level="4">630</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -2980,12 +2980,12 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -3026,12 +3026,12 @@
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -3085,12 +3085,12 @@
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -3134,12 +3134,12 @@
 			<value level="4">630</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">63</value>
 			<value level="3">66</value>
 			<value level="4">69</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">61</value>
 			<value level="2">63</value>
@@ -3198,7 +3198,7 @@
 		<effectPoint>-475</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>55</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3221,7 +3221,7 @@
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>477</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<mpConsume>55</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -3243,10 +3243,10 @@
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">59</value>
 			<value level="2">63</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">58</value>
@@ -3278,10 +3278,10 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">59</value>
 			<value level="2">63</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">58</value>
@@ -3316,10 +3316,10 @@
 		<hitTime>1200</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">59</value>
 			<value level="2">63</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">58</value>
@@ -3345,10 +3345,10 @@
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">59</value>
 			<value level="2">63</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">58</value>
@@ -3374,7 +3374,7 @@
 	<skill id="590" toLevel="1" name="Residence Body">
 		<!-- The Max HP of clan members in residence +222. -->
 		<icon>icon.skill0370</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3387,7 +3387,7 @@
 	<skill id="591" toLevel="1" name="Residence Spirit">
 		<!-- The Max CP of clan members in residence +444. -->
 		<icon>icon.skill0371</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3400,7 +3400,7 @@
 	<skill id="592" toLevel="1" name="Residence Soul">
 		<!-- The Max MP of clan members in residence +168. -->
 		<icon>icon.skill0372</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3413,7 +3413,7 @@
 	<skill id="593" toLevel="1" name="Residence Health">
 		<!-- HP recovery bonus of clan members in residence +1.09. -->
 		<icon>icon.skill0373</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3426,7 +3426,7 @@
 	<skill id="594" toLevel="1" name="Residence Moral">
 		<!-- CP recovery bonus of clan members in residence +1.09. -->
 		<icon>icon.skill0374</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3439,7 +3439,7 @@
 	<skill id="595" toLevel="1" name="Residence Clarity">
 		<!-- MP recovery bonus of clan members in residence +0.47. -->
 		<icon>icon.skill0375</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3452,7 +3452,7 @@
 	<skill id="596" toLevel="1" name="Residence Might">
 		<!-- P. Atk. of clan members in residence +34.6. -->
 		<icon>icon.skill0376</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3465,7 +3465,7 @@
 	<skill id="597" toLevel="1" name="Residence Shield">
 		<!-- P. Def. of clan members in residence +54.7. -->
 		<icon>icon.skill0377</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3478,7 +3478,7 @@
 	<skill id="598" toLevel="1" name="Residence Empower">
 		<!-- M. Atk. of clan members in residence +40.4. -->
 		<icon>icon.skill0378</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3491,7 +3491,7 @@
 	<skill id="599" toLevel="1" name="Residence Magic Barrier">
 		<!-- The M. Def. of clan members in residence +44. -->
 		<icon>icon.skill0379</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>

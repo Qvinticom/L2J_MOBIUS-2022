@@ -595,7 +595,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>300000</power> <!-- Guessing -->
@@ -617,7 +617,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>15000</power> <!-- Guessing -->
@@ -640,10 +640,10 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>400</affectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">106</value>
 			<value level="2">107</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -672,7 +672,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -706,11 +706,11 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">106</value>
 			<value level="2">107</value>
 			<value level="3">108</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>SELF</targetType>
@@ -745,7 +745,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>107</magicLvl>
+		<magicLevel>107</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -781,7 +781,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>107</magicLvl>
+		<magicLevel>107</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -809,7 +809,7 @@
 		<trait>AIRBIND</trait>
 		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>107</magicLvl>
+		<magicLevel>107</magicLevel>
 		<affectRange>400</affectRange>
 		<affectLimit>6-12</affectLimit>
 		<isDebuff>true</isDebuff>
@@ -850,7 +850,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -883,7 +883,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>300000</power>
@@ -905,7 +905,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>800</affectRange>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>300000</power>
@@ -929,7 +929,7 @@
 		<affectRange>400</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>SELF</targetType>
@@ -1099,7 +1099,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>800</affectRange>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>300000</power>
@@ -1120,7 +1120,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>800</affectRange>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>300000</power>
@@ -1136,7 +1136,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 		<operateType>A1</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1166,7 +1166,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1187,7 +1187,7 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
@@ -1236,7 +1236,7 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
@@ -1280,7 +1280,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1304,7 +1304,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1341,7 +1341,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1371,7 +1371,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<operateType>A2</operateType>
-		<magicLvl>108</magicLvl>
+		<magicLevel>108</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>

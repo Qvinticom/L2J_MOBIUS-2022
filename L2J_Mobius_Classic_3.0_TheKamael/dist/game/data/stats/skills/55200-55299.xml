@@ -5,7 +5,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70007</itemConsumeId> <!-- Sealed Rune - Lv. 8 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -55,7 +55,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70008</itemConsumeId> <!-- Sealed Rune - Lv. 9 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -105,7 +105,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70009</itemConsumeId> <!-- Sealed Rune - Lv. 10 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -155,7 +155,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70010</itemConsumeId> <!-- Sealed Rune - Lv. 11 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -205,7 +205,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70011</itemConsumeId> <!-- Sealed Rune - Lv. 12 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -255,7 +255,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70012</itemConsumeId> <!-- Sealed Rune - Lv. 13 -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -408,7 +408,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37115</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -453,7 +453,7 @@
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<passiveConditions>
 			<condition name="CheckLevel">
@@ -485,7 +485,7 @@
 		<itemConsumeId>70102</itemConsumeId> <!-- Adventurerâ€™s Potion -->
 		<mpConsume>75</mpConsume>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -510,7 +510,7 @@
 		<itemConsumeId>70102</itemConsumeId> <!-- Adventurer's Potion -->
 		<mpConsume>75</mpConsume>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -534,7 +534,7 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -609,7 +609,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -665,7 +665,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>523</effectPoint>
 		<isMagic>3</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -690,7 +690,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>523</effectPoint>
 		<isMagic>3</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -766,7 +766,7 @@
 	<skill id="55248" toLevel="1" name="Bracelet of Duty - Lv. 1">
 		<!-- Unlocks 1 talisman slot. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_01</icon>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -778,7 +778,7 @@
 	<skill id="55249" toLevel="1" name="Bracelet of Duty - Lv. 2">
 		<!-- Activates 1 talisman slot. CON +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_02</icon>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -794,7 +794,7 @@
 	<skill id="55250" toLevel="1" name="Bracelet of Duty - Lv. 3">
 		<!-- Activates 2 talisman slots. CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_03</icon>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -814,7 +814,7 @@
 	<skill id="55251" toLevel="1" name="Bracelet of Duty - Lv. 4">
 		<!-- Activates 2 talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_04</icon>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -842,7 +842,7 @@
 	<skill id="55252" toLevel="1" name="Bracelet of Duty - Lv. 5">
 		<!-- Activates 3 talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon>BranchIcon.Icon.g_pledge_bracelet_05</icon>
-		<magicLvl>20</magicLvl>
+		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1765,7 +1765,7 @@
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1791,7 +1791,7 @@
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1819,7 +1819,7 @@
 		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1842,7 +1842,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1869,7 +1869,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1897,7 +1897,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1963,7 +1963,7 @@
 	<skill id="55290" toLevel="1" name="Devi's Ring">
 		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -1994,7 +1994,7 @@
 	<skill id="55292" toLevel="1" name="Devi's Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -2022,7 +2022,7 @@
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>

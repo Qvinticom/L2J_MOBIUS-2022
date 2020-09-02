@@ -9,7 +9,7 @@
 		<castRange>900</castRange>
 		<effectPoint>204</effectPoint>
 		<hitTime>700</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -60,7 +60,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
-		<magicLvl>88</magicLvl>
+		<magicLevel>88</magicLevel>
 		<hitTime>2000</hitTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -79,7 +79,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
-		<magicLvl>88</magicLvl>
+		<magicLevel>88</magicLevel>
 		<affectRange>300</affectRange>
 		<hitTime>3000</hitTime>
 		<targetType>ENEMY</targetType>
@@ -107,7 +107,7 @@
 		<effectRange>1000</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>100</activateRate>
-		<magicLvl>88</magicLvl>
+		<magicLevel>88</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<trait>BLEED</trait>
@@ -138,7 +138,7 @@
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>140</activateRate>
-		<magicLvl>88</magicLvl>
+		<magicLevel>88</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<trait>PULL</trait>
@@ -157,7 +157,7 @@
 		<!-- Resistant to Stun. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<SHOCK>50</SHOCK>
@@ -168,7 +168,7 @@
 		<!-- Resistant to Stun. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<SHOCK>70</SHOCK>
@@ -179,7 +179,7 @@
 		<!-- Resistant to Stun. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<SHOCK>90</SHOCK>
@@ -191,196 +191,196 @@
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14709" toLevel="1" name="Istina">
 		<!-- Istina is a Lord of destruction who caused the sprouting of the Seed of Annihilation, one of the 9 seeds sown in Gracia containing hatred toward Einhasad. She is the creator and mother of all things that live inside the Seed of Annihilation. The life energy of Gracia is the source of her power. In order to complete the resurrection of Shilen, Istina caused a deadly poison created inside the Seed of Annihilation to permeate throughout the southern region of Gracia. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14710" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- The Land Dragon whose name is synonymous with ferocity on the continent of Aden. It was buried deep underground for a long time. But after Shilen's awakening, the rain of blood permeated down and it came back to life. Now, its role is to destroy the life forms that seek the location of the Seal of Shilen. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14711" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Fused mutant created by Embryo upon capturing the power of the Seven Signs, through the authority of darkness received from Shilen. Harp is the prototype that was created after countless experiments. It's body's left side contains powerful magic and its right side physical power to make it a complete fighting machine. It protects the entrance to the Altar of Shilen. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14712" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- One of the four disciples created in Embryo by their leader Etis van Etina through the power of the Seven Signs. It is twins with another disciple, Maliss. She is a Magus with the power of the Seal of Punishment. She protects the Altar of Shilen and guards her power. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14713" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- One of the four disciples created in Embryo by their leader Etis van Etina through the power of the Seven Signs. It is twins with another disciple, Isadora. She is a dark healer with the power of the Seal of Avarice. She protects the Altar of Shilen and guards her power. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14714" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Beleth' minion. In order to block external power for attacking the Witch Parme, Beleth summoned the twin monster Veridan from the edge of hell and placed it at the Emerald Square in the Crystal Caverns. The monsters there have no sense of self. They only exist and respond. It obediently follows Beleth' command. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14715" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Beleth' minion. In order to block external power for attacking the Witch Parme, Beleth summoned the Kechi from the edge of hell and placed it above the Steam Corridor in the Crystal Caverns. Kechi freely controls fire and it has the ability to lead numerous minions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14716" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Beleth' minion. In order to block external power for attacking the Witch Parme, Beleth summoned the Michaela from the edge of hell and placed it in the Coral Garden in the Crystal Caverns. Despite her beautiful appearance, she enjoys to kill in a vicious manner. It can distinguish between good and evil. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14717" toLevel="1" name="Trasken">
 		<!-- A messenger from hell that was sent to the physical world in order to help complete the resurrection of Shilen. Hell's Gate. It kills by dazzling the life forms, then puts them into its mouth to send to Shilen in the realm of darkness. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14718" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Shilen's tenth lord. It is the leaders of the fairies that have fallen by the influence of the "Decaying Darkness." It has 80% of its sense of self, and it comes back to its senses now and again. The Fairy Settlement is filled with evil energy through its influence. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14719" toLevel="1" name="Raid Boss (Lv. 95)">
 		<!-- Shilen's tenth lord. It is the leaders of the fairies that have fallen by the influence of the "Decaying Darkness." It has 80% of its sense of self, and it comes back to its senses now and again. The Fairy Settlement is filled with evil energy through its influence. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14720" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- A follower of Shilen on the continent. She follows the traces of Shilen's blood all the way to the evil spirit's altar. She is transformed into a Banshee Queen. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14721" toLevel="1" name="Raid Boss (Lv. 94)">
 		<!-- Prison of the giants who dared to oppose the goddess Einhasad. It sleeps forever underneath the Ancient City Arcan. It was banished deep underneath the Ancient City Arcan. It makes the humans who seek it out experience its past. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14722" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Prison of the giants who dared to oppose the goddess Einhasad. It sleeps forever underneath the Ancient City Arcan. It was banished deep underneath the Ancient City Arcan. It makes the humans who seek it out experience its past. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14723" toLevel="1" name="Raid Boss (Lv. 94)">
 		<!-- Monster that holds ancient theoretical life force. It fell at the influence of the decaying darkness lords and became mutated. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14724" toLevel="1" name="Raid Boss (Lv. 43)">
 		<!-- Monster that was attracted to trade with the continent. It was influenced by the decaying darkness lords. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14725" toLevel="1" name="Raid Boss (Lv. 43)">
 		<!-- Monster that was attracted to trade with the continent. It was influenced by the decaying darkness lords. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14726" toLevel="1" name="Octavis">
 		<!-- It was originally a Human hero who followed the rebel leader Spezion. It fell to the trickery of the angel Paulina. It betrayed the rebels and came to guard Orbis Temple. It was put to sleep by the command of the gods. But after the release of Shilen's seal, it was poisoned by the decaying darkness and became reckless. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14727" toLevel="1" name="Balok">
 		<!-- This evil creature was made by Beleth in order to suppress the Isle of Prayer. Balok who can open the door to hell by using Belakia that he inherited from Beleth, gives Lunacy of Limit by summoning Hell's Disciple to those who can invade his territory. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14728" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Once a hero, Ron rebelled against the gods, was cursed, and fled to Fortuna. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14729" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Once an outstanding magician, Yui rebelled against the gods. When her lover was killed, she lost her mind and became cursed by the gods. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14730" toLevel="1" name="Raid Boss (Lv. 94)">
 		<!-- Once a great warrior, Master Kanen rebelled against the gods, became cursed, and fled to Fortuna. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14731" toLevel="1" name="Raid Boss (Lv. 95)">
 		<!-- Assault captain Lucinda followed Trone and fled to Fortuna. He was also cursed. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14732" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- Konyar used to melt his enemies with powerful flame magic. But he realized too late that the gods were not affected by his flames. He even tried the final stage 3 transformation, but he was eventually cursed and banished to Fortuna. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14733" toLevel="1" name="Raid Boss (Lv. 93)">
 		<!-- Mukshu was a great coward who used to lead the blind Hornapi. Without Hornapi, all he could do is run away. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14734" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- The great Orc lost his sight during battle. He attacks the enemy using sounds and Mukshu's instructions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14735" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- Yoentumak has the ability to momentarily disappear. He was one of Ron's followers and the most fearful assassin. He rebelled against the gods along with Ron and became cursed. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14736" toLevel="1" name="Light Heal">
 		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
@@ -390,7 +390,7 @@
 		<effectPoint>867</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>0</mpConsume>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -414,7 +414,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>1</isMagic>
@@ -432,7 +432,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -476,7 +476,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -568,7 +568,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -612,7 +612,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -672,7 +672,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -720,7 +720,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -760,7 +760,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -812,7 +812,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -868,7 +868,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<isMagic>22</isMagic>
@@ -952,133 +952,133 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14748" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Right Human hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. His contaminated soul despises all moving things. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14749" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Orc hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. His contaminated soul considers all living things to be enemies. It wields a giant mace. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14750" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Human hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. It is maddened by its contaminated soul. It hurls merciless attacks on all those who are considered to be enemies. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14751" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Human hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. After being contaminated, it tries to kill all living things. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14752" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Orc hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. Its contaminated soul keeps it trapped in madness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14753" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right elf hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. Its soul is contaminated, and it enjoys cruel killing. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14754" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Human hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. By its contaminated soul, it considers all moving things to be enemies and tries to kill them. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14755" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Human hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. Its contaminated soul keeps it trapped in madness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14756" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Orc hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. Its soul is contaminated and it considers all life forms to be enemies. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14757" toLevel="1" name="Raid Boss (Lv. 97)">
 		<!-- Right Orc hero in Orbis Temple. He would have slept deep within his honor, but he awakened due to the decaying darkness of Shilen. Its contaminated soul keeps it trapped in madness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14758" toLevel="1" name="Raid Boss (Lv. 59)">
 		<!-- This high rank sorcerer led the construction of Baium's Tower of Insolence. After the tower was collapsed, he resurrected by the dark arts that he bestowed upon himself. But due to serious side effects from the dark arts, his body became rotten and his soul was corrupted. As a high rank sorcerer, he still has the techniques but is possessed with lunacy. He kills everyone who invades the tower. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14759" toLevel="1" name="Raid Boss (Lv. 62)">
 		<!-- This high rank sorcerer led the construction of Baium's Tower of Insolence. After the tower was collapsed, he resurrected by the dark arts that he bestowed upon himself. But due to serious side effects from the dark arts, his body became rotten and his soul was corrupted. As a high rank sorcerer, he is seeking the blood from those who invade the tower in order to reproduce his rotten body. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14760" toLevel="1" name="Raid Boss (Lv. 66)">
 		<!-- This high rank sorcerer helped the construction of Baium's Tower of Insolence. After the collapse of the tower, she resurrected by consuming the blood and soul of the victims who were buried under the tower. As corrupted as she can be, she is seeking the blood from those who enter the tower in order to maintain her body. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14761" toLevel="1" name="Raid Boss (Lv. 70)">
 		<!-- This evil creature was made from the sacrifice of a high rank sorcerer's soul and blood who was killed and buried under the tower. The sorcerer gained a new body but couldn't stop the corruption of his soul during that process. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14762" toLevel="1" name="Raid Boss (Lv. 72)">
 		<!-- Baium wanted to make angels who can protect him like Einhasad. But the cruel and evil creature with black wings that was made from the high rank magic and medicine did not obey him. Even at the time of Baium's death, the creature mocked him and flew above the tower. Because of the magic that Baium bestowed, he cannot leave the tower and is dependent on the limited supply of prey. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14763" toLevel="1" name="Raid Boss (Lv. 75)">
 		<!-- Baium wanted to make angels who can protect him like Einhasad. But the evil creature that was made from the high rank magic and medicine resembled the appearance of angels. Not only it did not obey Baium but also it went on a rampage of killing regardless the target is its enemy or friend. Because of the magic that Baium bestowed, he cannot leave the tower and is dependent on the limited supply of prey. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14764" toLevel="1" name="Raid Boss (Lv. 75)">
 		<!-- Baium wanted to make angels who can protect him like Einhasad. But the evil creature that was made from the high rank magic and medicine resembled the appearance of angels. Not only it did not obey Baium but also it went on a rampage of killing regardless the target is its enemy or friend. Because of the magic that Baium bestowed, she cannot leave the tower and is dependent on the limited supply of prey. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14765" toLevel="5" name="Blood Siphon Resistance">
 		<!-- Strong against Blood Siphon. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="VampiricDefence">
 				<amount>
@@ -1099,7 +1099,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1115,7 +1115,7 @@
 		<hitTime>4600</hitTime>
 		<effectPoint>-100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<coolTime>733</coolTime>
@@ -1134,77 +1134,77 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14769" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Lord Ekimus of the Seed of Destruction was borne out of Ekidna, who was one of Shilen's nine disciples. After being selected by Shilen, it came to lead the undead as the lord of destruction. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14770" toLevel="1" name="Raid Boss (Lv. 75)">
 		<!-- High ranking demon in Shilen's dimension that haunts the castle's underground prison. It exists where material world and the realm of darkness collide. When it smells metal and blood, it rips through the dimension to appear and cause many deaths. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14771" toLevel="1" name="Raid Boss (Lv. 29)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14772" toLevel="1" name="Raid Boss (Lv. 39)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14773" toLevel="1" name="Raid Boss (Lv. 49)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14774" toLevel="1" name="Raid Boss (Lv. 59)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14775" toLevel="1" name="Raid Boss (Lv. 69)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14776" toLevel="1" name="Raid Boss (Lv. 78)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14777" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14778" toLevel="1" name="Raid Boss (Lv. 83)">
 		<!-- Demon in Shilen's dimension that floats around in "Kamaloka," the dimensional bubble that exists between the material world and the realm of darkness. When Shilen resurrects, it plans to conquer the material world and eventually cause destruction of the world. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="14779" toLevel="1" name="Master's Blessing - Horn Melody">
 		<!-- The GM is always with you. For 1 hour, increases P. Atk. + 23%, P. Def. + 15%, M. Atk. + 91%, and M. Def. + 30%. -->
@@ -1218,7 +1218,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1263,7 +1263,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1351,7 +1351,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1396,7 +1396,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1457,7 +1457,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1506,7 +1506,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1547,7 +1547,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1600,7 +1600,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1657,7 +1657,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1748,7 +1748,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1793,7 +1793,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1834,7 +1834,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<isMagic>2</isMagic>
@@ -1874,7 +1874,7 @@
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -1919,7 +1919,7 @@
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2012,7 +2012,7 @@
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2057,7 +2057,7 @@
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2118,7 +2118,7 @@
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2167,7 +2167,7 @@
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2208,7 +2208,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2261,7 +2261,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
@@ -2318,7 +2318,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>

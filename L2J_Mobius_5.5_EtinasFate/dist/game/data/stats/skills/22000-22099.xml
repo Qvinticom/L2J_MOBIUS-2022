@@ -11,7 +11,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -30,7 +30,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -50,7 +50,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -64,7 +64,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -83,7 +83,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -104,7 +104,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -119,7 +119,7 @@
 	</skill>
 	<skill id="22006" toLevel="1" name="Revita-Pop">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -136,7 +136,7 @@
 	</skill>
 	<skill id="22007" toLevel="1" name="Good Luck Bag">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -186,7 +186,7 @@
 	</skill>
 	<skill id="22008" toLevel="1" name="Lucky Four-leaf Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -237,7 +237,7 @@
 	<skill id="22009" toLevel="1" name="Holiday Miracle">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -266,7 +266,7 @@
 	</skill>
 	<skill id="22010" toLevel="1" name="Mysterious Formal Wear">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -295,7 +295,7 @@
 	</skill>
 	<skill id="22011" toLevel="1" name="Santa's Gift - Joy">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -324,7 +324,7 @@
 	</skill>
 	<skill id="22012" toLevel="1" name="Santa's Gift - Enjoyment">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -360,7 +360,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -425,7 +425,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -490,7 +490,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -551,7 +551,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -609,7 +609,7 @@
 	</skill>
 	<skill id="22017" toLevel="1" name="Santa's Gift - Luck">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -638,7 +638,7 @@
 	</skill>
 	<skill id="22018" toLevel="1" name="Santa's Gift - Luck">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -666,7 +666,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20026</itemConsumeId> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -682,7 +682,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20027</itemConsumeId> <!-- Extra Entrance Pass - Near Kamaloka -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -698,7 +698,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20028</itemConsumeId> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -714,7 +714,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20198</itemConsumeId> <!-- Decadent Valentine Cake -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -738,7 +738,7 @@
 	</skill>
 	<skill id="22023" toLevel="1" name="Simple Valentine Cake">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -776,7 +776,7 @@
 	</skill>
 	<skill id="22024" toLevel="1" name="Velvety Valentine Cake">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -817,7 +817,7 @@
 	</skill>
 	<skill id="22025" toLevel="1" name="Delicious Valentine Cake">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -852,7 +852,7 @@
 	</skill>
 	<skill id="22026" toLevel="1" name="Decadent Valentine Cake">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -887,7 +887,7 @@
 	</skill>
 	<skill id="22027" toLevel="1" name="Heavenly Valentine Cake">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -928,7 +928,7 @@
 	</skill>
 	<skill id="22028" toLevel="1" name="Chocolate Cookie">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -959,7 +959,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -985,7 +985,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1011,7 +1011,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1028,7 +1028,7 @@
 	<skill id="22032" toLevel="1" name="Baguette Legacy">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1088,7 +1088,7 @@
 	<skill id="22033" toLevel="1" name="Baguette Legacy - Kamael">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1121,7 +1121,7 @@
 	<skill id="22034" toLevel="1" name="Birthday Cake">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1149,7 +1149,7 @@
 		<affectRange>200</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -1168,7 +1168,7 @@
 	</skill>
 	<skill id="22036" toLevel="1" name="Beast Soulshot">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1177,7 +1177,7 @@
 	</skill>
 	<skill id="22037" toLevel="1" name="Beast Spiritshot">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1186,7 +1186,7 @@
 	</skill>
 	<skill id="22038" toLevel="1" name="Blessed Beast Spiritshot">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1199,7 +1199,7 @@
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_3</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_5</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1217,7 +1217,7 @@
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_3</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_sp_buff_5</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1235,7 +1235,7 @@
 			<value level="1">br_cashtex.skill.br_cash_rune_of_rp_buff_3</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_rp_buff_5</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<passiveConditions>
@@ -1253,7 +1253,7 @@
 	<skill id="22042" toLevel="1" name="Greater CP Potion">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1269,7 +1269,7 @@
 	<skill id="22043" fromLevel="2" toLevel="6" name="Elixir of CP (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1315,7 +1315,7 @@
 	<skill id="22044" fromLevel="2" toLevel="7" name="Elixir of Life (D-grade)">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>
@@ -1372,7 +1372,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20364</itemConsumeId> <!-- Transformation Scroll: Omen Beast -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1402,7 +1402,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20365</itemConsumeId> <!-- Transformation Scroll: Death Blader -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1432,7 +1432,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20366</itemConsumeId> <!-- Transformation Scroll: Grail Apostle -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1462,7 +1462,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20367</itemConsumeId> <!-- Transformation Scroll: Unicorn -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1492,7 +1492,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20368</itemConsumeId> <!-- Transformation Scroll: Lilim Knight -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1522,7 +1522,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20369</itemConsumeId> <!-- Transformation Scroll: Golem Guardian -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1552,7 +1552,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20370</itemConsumeId> <!-- Transformation Scroll: Inferno Drake -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1582,7 +1582,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20371</itemConsumeId> <!-- Transformation Scroll: Dragon Bomber -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1628,7 +1628,7 @@
 			<value level="18">20389</value>
 			<value level="19">20390</value>
 		</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1717,7 +1717,7 @@
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1736,7 +1736,7 @@
 	<skill id="22055" toLevel="1" name="Vitality Replenishing Potion">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1759,7 +1759,7 @@
 		<abnormalType>SPEED_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1782,7 +1782,7 @@
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1805,7 +1805,7 @@
 		<abnormalType>PA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1828,7 +1828,7 @@
 		<abnormalType>PD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1851,7 +1851,7 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1874,7 +1874,7 @@
 		<abnormalType>HIT_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1897,7 +1897,7 @@
 		<abnormalType>MA_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1920,7 +1920,7 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1943,7 +1943,7 @@
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1966,7 +1966,7 @@
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1989,7 +1989,7 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2040,7 +2040,7 @@
 		<abnormalType>MD_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2063,7 +2063,7 @@
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2086,7 +2086,7 @@
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2120,7 +2120,7 @@
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2137,7 +2137,7 @@
 	</skill>
 	<skill id="22071" toLevel="1" name="Huge Fortuna Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2208,7 +2208,7 @@
 	</skill>
 	<skill id="22072" toLevel="1" name="Huge Fortuna Cube">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2279,7 +2279,7 @@
 	</skill>
 	<skill id="22073" toLevel="1" name="Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2288,7 +2288,7 @@
 	</skill>
 	<skill id="22074" toLevel="1" name="Scroll: Enchant Armor (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2297,7 +2297,7 @@
 	</skill>
 	<skill id="22075" toLevel="1" name="Ancient Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2306,7 +2306,7 @@
 	</skill>
 	<skill id="22076" toLevel="1" name="Ancient Scroll: Enchant Armor (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2315,7 +2315,7 @@
 	</skill>
 	<skill id="22077" toLevel="1" name="Divine Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2324,7 +2324,7 @@
 	</skill>
 	<skill id="22078" toLevel="1" name="Divine Scroll: Enchant Armor (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2342,7 +2342,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20523</itemConsumeId> <!-- Resist Aqua Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2362,7 +2362,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20524</itemConsumeId> <!-- Resist Wind Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2382,7 +2382,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20525</itemConsumeId> <!-- Resist Fire Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2402,7 +2402,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20526</itemConsumeId> <!-- Resist Holy Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2422,7 +2422,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20527</itemConsumeId> <!-- Resist Unholy Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2442,7 +2442,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20528</itemConsumeId> <!-- Mental Shield Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2469,7 +2469,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20529</itemConsumeId> <!-- Focus Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2495,7 +2495,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20530</itemConsumeId> <!-- Concentration Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2521,7 +2521,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20531</itemConsumeId> <!-- Bless Shield Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2547,7 +2547,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20532</itemConsumeId> <!-- Agility Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2573,7 +2573,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20533</itemConsumeId> <!-- Regeneration Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2599,7 +2599,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20534</itemConsumeId> <!-- Advanced Block Scroll -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2617,7 +2617,7 @@
 	<skill id="22091" toLevel="1" name="Eva's Rune">
 		<!-- Through the power of Eva, increases Max HP by 10% and decreases Skill Cooldown by 20%. Reflects 5% of damage received back onto the enemy. -->
 		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2649,7 +2649,7 @@
 	<skill id="22092" toLevel="1" name="Small Scroll Chest">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2688,7 +2688,7 @@
 	<skill id="22093" toLevel="1" name="Large Scroll Chest">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2722,7 +2722,7 @@
 	<skill id="22094" toLevel="1" name="Chest of Experience">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2753,7 +2753,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20585</itemConsumeId> <!-- Seed of Fire (event) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2777,7 +2777,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20586</itemConsumeId> <!-- Explosive Seed of Fire (Event) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2806,7 +2806,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2872,7 +2872,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2940,7 +2940,7 @@
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20602</itemConsumeId> <!-- Soul Silver Foil (Event) -->
-		<magicLvl>-3</magicLvl>
+		<magicLevel>-3</magicLevel>
 		<operateType>A3</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<basicProperty>NONE</basicProperty>

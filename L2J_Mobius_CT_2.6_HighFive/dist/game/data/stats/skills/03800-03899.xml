@@ -3,7 +3,7 @@
 	<skill id="3800" levels="1" name="Dynasty Stockings">
 		<!-- Increases Max MP, M. Atk., and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -17,7 +17,7 @@
 	<skill id="3801" levels="1" name="Dynasty Gloves">
 		<!-- Increases Max MP, M. Atk., and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -31,7 +31,7 @@
 	<skill id="3802" levels="1" name="Dynasty Shoes">
 		<!-- Increases Max MP, M. Atk., and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -45,7 +45,7 @@
 	<skill id="3803" levels="1" name="Dynasty Circlet">
 		<!-- Increases Max MP, M. Atk., and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -59,7 +59,7 @@
 	<skill id="3804" levels="1" name="Dynasty Silver Satin Tunic">
 		<!-- Increases Casting Spd. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -71,7 +71,7 @@
 	<skill id="3805" levels="1" name="Dynasty Jewel Leather Mail">
 		<!-- Increases Accuracy/Evasion/Max MP/Atk. Spd./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -87,7 +87,7 @@
 	<skill id="3806" levels="1" name="Dynasty Platinum Plate">
 		<!-- Increases P. Def./Max HP/Resistance to Dark and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -102,7 +102,7 @@
 	<skill id="3807" levels="1" name="Adamantite Earring">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
-		<set name="magicLvl" val="58" />
+		<set name="magicLevel" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -114,7 +114,7 @@
 	<skill id="3808" levels="1" name="Adamantite Necklace">
 		<!-- Increases Resistance to shock attacks. -->
 		<set name="icon" val="icon.accessary_adamantite_necklace_i00" />
-		<set name="magicLvl" val="58" />
+		<set name="magicLevel" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -126,7 +126,7 @@
 	<skill id="3809" levels="1" name="Adamantite Ring">
 		<!-- Increases MP Recovery Bonus. -->
 		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
-		<set name="magicLvl" val="58" />
+		<set name="magicLevel" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -138,7 +138,7 @@
 	<skill id="3810" levels="1" name="Earring of Black Ore">
 		<!-- Increases Resistance to Dark. -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
-		<set name="magicLvl" val="61" />
+		<set name="magicLevel" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -150,7 +150,7 @@
 	<skill id="3811" levels="1" name="Necklace of Black Ore">
 		<!-- Increases Resistance to shock attacks. -->
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
-		<set name="magicLvl" val="61" />
+		<set name="magicLevel" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -162,7 +162,7 @@
 	<skill id="3812" levels="1" name="Ring of Black Ore">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
-		<set name="magicLvl" val="61" />
+		<set name="magicLevel" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -174,7 +174,7 @@
 	<skill id="3813" levels="1" name="Phoenix Necklace">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -186,7 +186,7 @@
 	<skill id="3814" levels="1" name="Phoenix Ring">
 		<!-- Increases MP Recovery Bonus. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -198,7 +198,7 @@
 	<skill id="3815" levels="1" name="Phoenix Earring">
 		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -210,7 +210,7 @@
 	<skill id="3816" levels="1" name="Majestic Necklace">
 		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -222,7 +222,7 @@
 	<skill id="3817" levels="1" name="Majestic Ring">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -234,7 +234,7 @@
 	<skill id="3818" levels="1" name="Majestic Earring">
 		<!-- Increases Resistance to poison attacks. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -246,7 +246,7 @@
 	<skill id="3819" levels="1" name="Tateossian Necklace">
 		<!-- Increases Resistance to bleed attacks. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -258,7 +258,7 @@
 	<skill id="3820" levels="1" name="Tateossian Ring">
 		<!-- Increases Resistance to earth. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -270,7 +270,7 @@
 	<skill id="3821" levels="1" name="Tateossian Earring">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -282,7 +282,7 @@
 	<skill id="3822" levels="1" name="Dynasty Necklace">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -294,7 +294,7 @@
 	<skill id="3823" levels="1" name="Dynasty Ring">
 		<!-- Increases Resistance to Dark. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -306,7 +306,7 @@
 	<skill id="3824" levels="1" name="Dynasty Earring">
 		<!-- Increases Resistance to sleep attacks. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -317,10 +317,10 @@
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">
 		<!-- When equipped with a sowrd, it increases P. Atk. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#pAtk">17.42 22.1 42.12</table>
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -331,10 +331,10 @@
 	</skill>
 	<skill id="3826" levels="2" name="Sword of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -346,7 +346,7 @@
 	<skill id="3827" levels="1" name="Sword of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -358,7 +358,7 @@
 	<skill id="3828" levels="1" name="Sword of Critical Chance">
 		<!-- Increases critical rate. -->
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -370,7 +370,7 @@
 	<skill id="3829" levels="1" name="Sword of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -385,10 +385,10 @@
 	</skill>
 	<skill id="3830" levels="3" name="Rapier of Might">
 		<!-- Increases P. Atk. when a short sword is equipped. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#pAtk">16.25 20.62 39.3</table>
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -399,10 +399,10 @@
 	</skill>
 	<skill id="3831" levels="2" name="Rapier of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<table name="#maxHp">319 444</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -414,7 +414,7 @@
 	<skill id="3832" levels="1" name="Rapier of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -426,7 +426,7 @@
 	<skill id="3833" levels="1" name="Rapier of Critical Chance">
 		<!-- Increases critical rate. -->
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -438,7 +438,7 @@
 	<skill id="3834" levels="1" name="Rapier of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -453,10 +453,10 @@
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
 		<!-- Increases P. Atk. when equipped with a dual-blade weapon. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#pAtk">21.2 26.9 51.26</table>
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -467,10 +467,10 @@
 	</skill>
 	<skill id="3836" levels="2" name="Dual-Blade Weapon of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<table name="#maxHp">319 444</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -482,7 +482,7 @@
 	<skill id="3837" levels="1" name="Dual-Blade Weapon of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -494,7 +494,7 @@
 	<skill id="3838" levels="1" name="Dual-Blade Weapon of Critical Chance">
 		<!-- Increases critical rate. -->
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -506,7 +506,7 @@
 	<skill id="3839" levels="1" name="Dual-Blade Weapon of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -521,9 +521,9 @@
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
 		<!-- Increases Atk. Spd. when equipped with a tow-handed sword. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -535,7 +535,7 @@
 	<skill id="3841" levels="1" name="Two-handed Sword of Guidance">
 		<!-- Increases Accuracy when a two-handed sword is equipped. -->
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -547,7 +547,7 @@
 	<skill id="3842" levels="1" name="Two-handed Sword of Vampiric Rage">
 		<!-- Recovers some HP using the damage to the enemy when a two-handed sword is equipped. -->
 		<set name="icon" val="icon.skill1268" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -559,7 +559,7 @@
 	<skill id="3843" levels="1" name="Two-handed Sword of Boost HP">
 		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -571,7 +571,7 @@
 	<skill id="3844" levels="1" name="Two-handed Sword of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -582,9 +582,9 @@
 	</skill>
 	<skill id="3845" levels="2" name="Two-handed Sword of Critical Chance">
 		<!-- Increases critical rate. -->
-		<table name="#magicLvl">58 82</table>
+		<table name="#magicLevel">58 82</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -595,9 +595,9 @@
 	</skill>
 	<skill id="3846" levels="2" name="Ancient Sword of Haste">
 		<!-- Increases Atk. Spd. when equiped with an ancient sword.. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -609,7 +609,7 @@
 	<skill id="3847" levels="1" name="Ancient Sword of Guidance">
 		<!-- Increases Accuracy when equiped with an ancient sword.. -->
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -621,7 +621,7 @@
 	<skill id="3848" levels="1" name="Ancient Sword of Vampiric Rage">
 		<!-- Recovers some HP using the damage to the enemy when equiped with an ancient sword.. -->
 		<set name="icon" val="icon.skill1268" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -633,7 +633,7 @@
 	<skill id="3849" levels="1" name="Ancient Sword of Boost HP">
 		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -645,7 +645,7 @@
 	<skill id="3850" levels="1" name="Ancient Sword of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -656,9 +656,9 @@
 	</skill>
 	<skill id="3851" levels="2" name="Ancient Sword of Critical Chance">
 		<!-- Increases critical rate. -->
-		<table name="#magicLvl">58 82</table>
+		<table name="#magicLevel">58 82</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -669,10 +669,10 @@
 	</skill>
 	<skill id="3852" levels="3" name="Sword of Mana Boost">
 		<!-- Increases Max MP. -->
-		<table name="#magicLvl">58 75 82</table>
+		<table name="#magicLevel">58 75 82</table>
 		<table name="#maxMp">187 289 334</table>
 		<set name="icon" val="icon.skill0213" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -683,9 +683,9 @@
 	</skill>
 	<skill id="3853" levels="2" name="Sword of Mana Regeneration">
 		<!-- Increases MP Recovery Bonus. -->
-		<table name="#magicLvl">61 70</table>
+		<table name="#magicLevel">61 70</table>
 		<set name="icon" val="icon.skill1047" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -697,7 +697,7 @@
 	<skill id="3854" levels="1" name="Sword of Empower">
 		<!-- Increases M. Atk. -->
 		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -707,14 +707,14 @@
 		</for>
 	</skill>
 	<skill id="3855" levels="1" name="not_used">
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3856" levels="1" name="Sword of Divine Power">
 		<!-- Increases the power of one's own recovery magic. -->
 		<set name="icon" val="icon.skill1459" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -726,7 +726,7 @@
 	<skill id="3857" levels="1" name="Sword of Clarity">
 		<!-- Decreases MP consumption. -->
 		<set name="icon" val="icon.skill1397" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -739,9 +739,9 @@
 	</skill>
 	<skill id="3858" levels="3" name="Dagger of Avoid">
 		<!-- Increases Evasion when equipped with a dagger. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<set name="icon" val="icon.skill1087" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -752,9 +752,9 @@
 	</skill>
 	<skill id="3859" levels="2" name="Dagger of Haste">
 		<!-- Increases Atk. Spd. when equipped with a dagger. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -766,7 +766,7 @@
 	<skill id="3860" levels="1" name="Dagger of Regeneration">
 		<!-- Increases HP Recovery Bonus. -->
 		<set name="icon" val="icon.skill1044" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -778,7 +778,7 @@
 	<skill id="3861" levels="1" name="Dagger of Poison">
 		<!-- Has a chance to poison the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0129" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -794,7 +794,7 @@
 	<skill id="3862" levels="1" name="Dagger of Guidance">
 		<!-- Increases Accuracy. -->
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -805,9 +805,9 @@
 	</skill>
 	<skill id="3863" levels="4" name="Bow of Guidance">
 		<!-- Increases Accuracy. -->
-		<table name="#magicLvl">58 64 70 82</table>
+		<table name="#magicLevel">58 64 70 82</table>
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -818,9 +818,9 @@
 	</skill>
 	<skill id="3864" levels="2" name="Bow of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -832,7 +832,7 @@
 	<skill id="3865" levels="1" name="Bow of Long Shot">
 		<!-- Increases the range of the bow. -->
 		<set name="icon" val="icon.skill0113" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -846,7 +846,7 @@
 	<skill id="3866" levels="1" name="Dynasty Leather Gloves">
 		<!-- Increases Accuracy/Evasion/Max HP/Atk. Spd./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -862,7 +862,7 @@
 	<skill id="3867" levels="1" name="Bow of Boost HP">
 		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -873,9 +873,9 @@
 	</skill>
 	<skill id="3868" levels="4" name="Crossbow of Guidance">
 		<!-- Increases Accuracy. -->
-		<table name="#magicLvl">58 64 70 82</table>
+		<table name="#magicLevel">58 64 70 82</table>
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -886,9 +886,9 @@
 	</skill>
 	<skill id="3869" levels="2" name="Crossbow of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -900,7 +900,7 @@
 	<skill id="3870" levels="1" name="Crossbow of Long Shot">
 		<!-- Increases the crossbow's range. -->
 		<set name="icon" val="icon.skill0486" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -912,14 +912,14 @@
 		</for>
 	</skill>
 	<skill id="3871" levels="1" name="not_used">
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3872" levels="1" name="Crossbow of Boost HP">
 		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -931,9 +931,9 @@
 	<skill id="3873" levels="2" name="Polearm of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<table name="#cAtkAdd">156 377</table>
-		<table name="#magicLvl">58 82</table>
+		<table name="#magicLevel">58 82</table>
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -945,7 +945,7 @@
 	<skill id="3874" levels="1" name="Polearm of Critical Chance">
 		<!-- Increases critical rate. -->
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLevel" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -957,7 +957,7 @@
 	<skill id="3875" levels="1" name="Polearm of Regeneration">
 		<!-- Increases HP Recovery Bonus. -->
 		<set name="icon" val="icon.skill1044" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -969,7 +969,7 @@
 	<skill id="3876" levels="1" name="Polearm of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -984,10 +984,10 @@
 	</skill>
 	<skill id="3877" levels="2" name="Polearm of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -999,7 +999,7 @@
 	<skill id="3878" levels="1" name="Polearm of Might">
 		<!-- Increases P. Atk. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1010,10 +1010,10 @@
 	</skill>
 	<skill id="3879" levels="3" name="Fist Weapon of Might">
 		<!-- Increases P. Atk. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#pAtk">21.2 26.9 51.26</table>
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1024,9 +1024,9 @@
 	</skill>
 	<skill id="3880" levels="2" name="Fist Weapon of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1038,7 +1038,7 @@
 	<skill id="3881" levels="1" name="Fist Weapon of Boost HP">
 		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1050,7 +1050,7 @@
 	<skill id="3882" levels="1" name="Fist Weapon of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -1066,7 +1066,7 @@
 	<skill id="3883" levels="1" name="Fist Weapon of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1077,10 +1077,10 @@
 	</skill>
 	<skill id="3884" levels="3" name="Blunt Weapon of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#maxHp">294 345 511</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1094,7 +1094,7 @@
 		<table name="#activationChance">5 8</table>
 		<table name="#triggeredId">5671 5672</table>
 		<set name="icon" val="icon.skill0100" />
-		<set name="magicLvl" val="61" />
+		<set name="magicLevel" val="61" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -1110,7 +1110,7 @@
 	<skill id="3886" levels="1" name="Blunt Weapon of Haste">
 		<!-- Increases Atk. Spd. -->
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="61" />
+		<set name="magicLevel" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1122,7 +1122,7 @@
 	<skill id="3887" levels="1" name="Blunt Weapon of Regeneration">
 		<!-- Increases HP Recovery Bonus. -->
 		<set name="icon" val="icon.skill1044" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1134,7 +1134,7 @@
 	<skill id="3888" levels="1" name="Blunt Weapon of Guidance">
 		<!-- Increases Accuracy. -->
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1145,10 +1145,10 @@
 	</skill>
 	<skill id="3889" levels="3" name="Blunt Weapon of Empower">
 		<!-- Increases M. Atk. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#mAtk">21.77 27.63 45.81</table>
 		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1160,7 +1160,7 @@
 	<skill id="3890" levels="1" name="Blunt Weapon of Mana Boost">
 		<!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0213" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1171,10 +1171,10 @@
 	</skill>
 	<skill id="3891" levels="2" name="Blunt Weapon of Boost HP">
 		<!-- Increases Max HP. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1186,7 +1186,7 @@
 	<skill id="3892" levels="1" name="Blunt Weapon of Clarity">
 		<!-- Decreases MP consumption. -->
 		<set name="icon" val="icon.skill1397" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1198,7 +1198,7 @@
 	<skill id="3893" levels="1" name="Blunt Weapon of Mana Regeneration">
 		<!-- Increases MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill1047" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1210,7 +1210,7 @@
 	<skill id="3894" levels="1" name="Two-handed Blunt Weapon of Critical Power">
 		<!-- Increases Critical Damage. -->
 		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="67" />
+		<set name="magicLevel" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1221,9 +1221,9 @@
 	</skill>
 	<skill id="3895" levels="3" name="Two-handed Blunt Weapon of Critical Chance">
 		<!-- Increases critical rate. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1234,9 +1234,9 @@
 	</skill>
 	<skill id="3896" levels="2" name="Two-handed Blunt Weapon of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl">61 80</table>
+		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill1086" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1248,7 +1248,7 @@
 	<skill id="3897" levels="1" name="Two-handed Blunt Weapon of Might">
 		<!-- Increases P. Atk. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="magicLvl" val="58" />
+		<set name="magicLevel" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1260,7 +1260,7 @@
 	<skill id="3898" levels="1" name="Two-handed Blunt Weapon of Guidance">
 		<!-- Increases Accuracy. -->
 		<set name="icon" val="icon.skill1240" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1271,10 +1271,10 @@
 	</skill>
 	<skill id="3899" levels="3" name="Staff of Empower">
 		<!-- Increases M. Atk. -->
-		<table name="#magicLvl">58 64 82</table>
+		<table name="#magicLevel">58 64 82</table>
 		<table name="#mAtk">21.77 27.63 45.81</table>
 		<set name="icon" val="icon.skill1059" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

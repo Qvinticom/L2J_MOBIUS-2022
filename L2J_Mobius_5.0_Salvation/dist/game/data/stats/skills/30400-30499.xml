@@ -4,10 +4,10 @@
 		<!-- Wind/ Holy Resistance +$s1. -->
 		<icon>icon.skill30400</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>
@@ -28,10 +28,10 @@
 	<skill id="30401" toLevel="2" name="Tenacity">
 		<!-- Max. HP +$s1, Speed +$s2. -->
 		<icon>icon.skill30401</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">85</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">

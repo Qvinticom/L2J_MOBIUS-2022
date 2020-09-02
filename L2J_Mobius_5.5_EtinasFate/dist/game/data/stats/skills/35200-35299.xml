@@ -5,7 +5,7 @@
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2171,7 +2171,7 @@
 		<basicProperty>NONE</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<castRange>600</castRange>
 		<effectRange>1500</effectRange>
 		<reuseDelay>30000</reuseDelay>
@@ -2191,7 +2191,7 @@
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>1</amount>
@@ -2232,7 +2232,7 @@
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>105</magicLvl>
+		<magicLevel>105</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>5</amount>
@@ -2273,7 +2273,7 @@
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>110</magicLvl>
+		<magicLevel>110</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>6</amount>
@@ -2338,7 +2338,7 @@
 		<icon>icon.artifact_b_pa</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2363,7 +2363,7 @@
 		<icon>icon.artifact_b_ma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2388,7 +2388,7 @@
 		<icon>icon.artifact_b_pa_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -2413,7 +2413,7 @@
 		<icon>icon.artifact_b_ma_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -2438,7 +2438,7 @@
 		<icon>icon.artifact_c_phy_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -2463,7 +2463,7 @@
 		<icon>icon.artifact_c_mag_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -2488,7 +2488,7 @@
 		<icon>icon.artifact_c_hp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -2513,7 +2513,7 @@
 		<icon>icon.artifact_c_mp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -2538,7 +2538,7 @@
 		<icon>icon.artifact_d_exp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="ExpModify">
 				<amount>
@@ -2577,7 +2577,7 @@
 		<icon>icon.artifact_d_vampiric_rage</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>
@@ -2602,7 +2602,7 @@
 		<icon>icon.artifact_d_move_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -2627,7 +2627,7 @@
 		<icon>icon.artifact_d_heal_effect</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="HealEffect">
 				<amount>
@@ -2652,7 +2652,7 @@
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2677,7 +2677,7 @@
 		<icon>icon.artifact_a_ma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2702,7 +2702,7 @@
 		<icon>icon.artifact_a_hit</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -2727,7 +2727,7 @@
 		<icon>icon.artifact_a_mhit</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -2752,7 +2752,7 @@
 		<icon>icon.artifact_a_crt_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -2777,7 +2777,7 @@
 		<icon>icon.artifact_a_crt_skill_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -2803,7 +2803,7 @@
 		<icon>icon.artifact_a_crt_mag_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -2829,7 +2829,7 @@
 		<icon>icon.artifact_a_hp_special</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="AdditionalPotionCp">
 				<amount>
@@ -2886,7 +2886,7 @@
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
 				<type>STUN</type>
@@ -2940,7 +2940,7 @@
 		<icon>icon.artifact_a_dmg_by_atk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="AbsorbDamage">
 				<amount>
@@ -2966,7 +2966,7 @@
 		<icon>icon.artifact_a_attribute_att_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>30</amount>
@@ -2978,7 +2978,7 @@
 		<icon>icon.artifact_a_attribute_def_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>30</amount>
@@ -3011,7 +3011,7 @@
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
 				<type>STUN</type>
@@ -3042,7 +3042,7 @@
 		<icon>icon.artifact_a_skill_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="PhysicalSkillPower">
 				<amount>11</amount>
@@ -3055,7 +3055,7 @@
 		<icon>icon.artifact_a_spell_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<effects>
 			<effect name="MagicalSkillPower">
 				<amount>11</amount>

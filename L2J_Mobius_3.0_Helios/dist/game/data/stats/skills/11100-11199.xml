@@ -4,7 +4,7 @@
 		<!-- 4 Elements -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<!-- Elemental Destruction (4 Elements) -->
@@ -23,7 +23,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<operateType>A2</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -37,7 +37,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
 		<operateType>A2</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -51,7 +51,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
 		<operateType>A2</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -65,7 +65,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
 		<operateType>A2</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -79,7 +79,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<activateRate>-1</activateRate>
 		<operateType>A2</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -109,7 +109,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -117,7 +117,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -214,7 +214,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -222,7 +222,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -319,7 +319,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -327,7 +327,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -424,7 +424,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -432,7 +432,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -529,7 +529,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -537,7 +537,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -632,7 +632,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -640,7 +640,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -728,7 +728,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -736,7 +736,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -816,7 +816,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -824,7 +824,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -904,7 +904,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -912,7 +912,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -992,7 +992,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1000,7 +1000,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1080,7 +1080,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1088,7 +1088,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1166,7 +1166,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1174,7 +1174,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1257,7 +1257,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1265,7 +1265,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1345,7 +1345,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1353,7 +1353,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1433,7 +1433,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1441,7 +1441,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1521,7 +1521,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1529,7 +1529,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1609,7 +1609,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1617,7 +1617,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1695,7 +1695,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1703,7 +1703,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">137</value>
 			<value level="2">154</value>
@@ -1777,7 +1777,7 @@
 	<skill id="11124" toLevel="10" name="Superior Wizardry">
 		<!-- M. Atk. + $s1, Max MP, MP Recovery + $s2, and debuff resistance + $s3. -->
 		<icon>icon.skill0945</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1788,7 +1788,7 @@
 			<value level="8">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="10">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1845,7 +1845,7 @@
 	<skill id="11125" toLevel="10" name="Superior Wizardry">
 		<!-- M. Atk. increases by $s1. -->
 		<icon>icon.skill0945</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -1856,7 +1856,7 @@
 			<value level="8">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="10">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -2541,7 +2541,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>100</activateRate>
-		<magicLvl>90</magicLvl>
+		<magicLevel>90</magicLevel>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2580,7 +2580,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>100</activateRate>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2748,7 +2748,7 @@
 	<skill id="11151" toLevel="10" name="Superior Wizardry">
 		<!-- M. Atk. + $s1, Max MP, and MP Recovery Rate + $s2. -->
 		<icon>icon.skill0945</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -2759,7 +2759,7 @@
 			<value level="8">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="10">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -2948,7 +2948,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>351</mpConsume>
 		<affectRange>1100</affectRange>
 		<hitTime>4780</hitTime>
@@ -3027,7 +3027,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -3062,7 +3062,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -3078,7 +3078,7 @@
 	<skill id="11176" toLevel="10" name="Superior Wizardry">
 		<!-- M. Atk. +$s1; Max MP, MP Recovery Speed +$s2 Up; M. Skill Cooldown -$s3. -->
 		<icon>icon.skill0945</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3089,7 +3089,7 @@
 			<value level="8">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="10">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -3154,7 +3154,7 @@
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3162,7 +3162,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">37</value>
 			<value level="2">37</value>
@@ -3196,7 +3196,7 @@
 	<skill id="11178" toLevel="1" name="Aqua Crash - Speed Decrease">
 		<!-- Use Aqua Crash to decrease target's Speed. -->
 		<icon>icon.skill11011</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
@@ -3223,7 +3223,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>100</activateRate>
-		<magicLvl>89</magicLvl>
+		<magicLevel>89</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -3265,7 +3265,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>100</activateRate>
-		<magicLvl>93</magicLvl>
+		<magicLevel>93</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -3307,7 +3307,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>100</activateRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -3349,7 +3349,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>100</activateRate>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -3380,7 +3380,7 @@
 	<skill id="11183" toLevel="1" name="Superior Quick Recovery">
 		<!-- Cooldown - 25% for magic skills. INT + 2. -->
 		<icon>icon.skill11004</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3398,7 +3398,7 @@
 	<skill id="11184" toLevel="1" name="Superior Arcane Lore">
 		<!-- Fire/Water/Wind/Earth Resistance + 20, and M. Def. + 5%. INT +2. -->
 		<icon>icon.skill10044</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3431,7 +3431,7 @@
 	<skill id="11185" toLevel="10" name="Superior MP Boost">
 		<!-- Max MP + $s1. INT + $s2. -->
 		<icon>icon.skill0213</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3442,7 +3442,7 @@
 			<value level="8">106</value>
 			<value level="9">108</value>
 			<value level="10">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3470,7 +3470,7 @@
 	<skill id="11186" toLevel="10" name="Superior Fast MP Recovery">
 		<!-- MP Recovery Bonus + $s1. INT + $s2. -->
 		<icon>icon.skill0229</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3481,7 +3481,7 @@
 			<value level="8">106</value>
 			<value level="9">108</value>
 			<value level="10">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3509,7 +3509,7 @@
 	<skill id="11187" toLevel="10" name="Superior Clear Mind">
 		<!-- MP Recovery Bonus + $s1 while walking and + $s2 while standing. INT + $s3. -->
 		<icon>icon.skill11187</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3520,7 +3520,7 @@
 			<value level="8">106</value>
 			<value level="9">108</value>
 			<value level="10">110</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -3599,7 +3599,7 @@
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
@@ -3607,7 +3607,7 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3668,7 +3668,7 @@
 	<skill id="11195" toLevel="1" name="Aqua Crash - Freeze">
 		<!-- Use Aqua Crash to freeze target. -->
 		<icon>icon.skill11011</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
@@ -3693,7 +3693,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZING</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>FREEZING2</abnormalVisualEffect> <!-- Guessed -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

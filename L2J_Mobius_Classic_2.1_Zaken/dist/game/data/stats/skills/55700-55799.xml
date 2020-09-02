@@ -8,7 +8,7 @@
 		<hitTime>3000</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -33,7 +33,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -53,7 +53,7 @@
 		<icon>icon.bm_jewel_red_catseye</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -72,7 +72,7 @@
 		<icon>Icon.bm_jewel_blue_catseye</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -154,7 +154,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90793</itemConsumeId> <!-- Chef's Fish Stew Box -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -210,7 +210,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -257,7 +257,7 @@
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ExpModify">
 				<amount>50</amount>
@@ -274,7 +274,7 @@
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="WeightLimit">
 				<amount>20</amount>
@@ -291,7 +291,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<reuseDelay>7200000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -317,7 +317,7 @@
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<stayAfterDeath>true</stayAfterDeath>
 		<reuseDelay>7200000</reuseDelay>
@@ -401,7 +401,7 @@
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -709,7 +709,7 @@
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
@@ -1008,7 +1008,7 @@
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
@@ -1333,7 +1333,7 @@
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ImmobileDamageResist">
 				<amount>
@@ -1755,7 +1755,7 @@
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1786,7 +1786,7 @@
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1809,7 +1809,7 @@
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1837,7 +1837,7 @@
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1920,7 +1920,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1959,7 +1959,7 @@
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<coolTime>500</coolTime>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2107,7 +2107,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2131,7 +2131,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2155,7 +2155,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -2179,7 +2179,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -2203,7 +2203,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -2220,7 +2220,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -2237,7 +2237,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -2261,7 +2261,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -2285,7 +2285,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -2309,7 +2309,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2322,7 +2322,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2335,7 +2335,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2348,7 +2348,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2361,7 +2361,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2374,7 +2374,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="StatUp">
 				<amount>1</amount>
@@ -2387,7 +2387,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -2411,7 +2411,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -2435,7 +2435,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>
@@ -2459,7 +2459,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -2483,7 +2483,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -2507,7 +2507,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -2531,7 +2531,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<SHOCK>
@@ -2553,7 +2553,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<HOLD>
@@ -2575,7 +2575,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<BLEED>
@@ -2597,7 +2597,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<PARALYZE>
@@ -2619,7 +2619,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<DERANGEMENT>
@@ -2641,7 +2641,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<SLEEP>
@@ -2663,7 +2663,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<POISON>
@@ -2685,7 +2685,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<PULL>
@@ -2707,7 +2707,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
 				<TURN_STONE>
@@ -2729,7 +2729,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -2746,7 +2746,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -2763,7 +2763,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -2780,7 +2780,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2797,7 +2797,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -2814,7 +2814,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -2831,7 +2831,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -2848,7 +2848,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2865,7 +2865,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -2882,7 +2882,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -2899,7 +2899,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
@@ -2932,7 +2932,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>
@@ -2965,7 +2965,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
@@ -2998,7 +2998,7 @@
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>

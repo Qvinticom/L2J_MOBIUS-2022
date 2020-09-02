@@ -1195,7 +1195,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>12-12</affectLimit>
 		<affectRange>150</affectRange>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>350000</power>
@@ -1215,7 +1215,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power>
@@ -1249,7 +1249,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>10000</power>
@@ -1302,7 +1302,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>600</attributeValue>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>10000</power>
@@ -1314,7 +1314,7 @@
 		<affectRange>100</affectRange>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>600</attributeValue>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<icon>icon.skill16218</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

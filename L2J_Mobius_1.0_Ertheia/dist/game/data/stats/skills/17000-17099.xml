@@ -162,7 +162,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -180,7 +180,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="OpAlignment">
@@ -200,12 +200,12 @@
 	<skill id="17050" toLevel="1" name="Scroll of Escape: Raider's Crossroads">
 		<!-- Return to Raider's Crossroads -->
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37017</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -234,7 +234,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="OpAlignment">
@@ -423,7 +423,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 		<hitCancelTime>0.5</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<isMagic>2</isMagic>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<conditions>
@@ -463,7 +463,7 @@
 		<isMentoring>true</isMentoring>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>20</amount>
@@ -516,7 +516,7 @@
 		<isMentoring>true</isMentoring>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
@@ -579,7 +579,7 @@
 		<isMentoring>true</isMentoring>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>

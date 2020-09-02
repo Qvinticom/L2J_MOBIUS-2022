@@ -10,7 +10,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -35,7 +35,7 @@
 	<skill id="19032" toLevel="1" name="Ability of Light">
 		<!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
 		<icon>icon.skill19008</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<passiveConditions>
@@ -54,7 +54,7 @@
 	<skill id="19033" toLevel="1" name="Ability of Darkness">
 		<!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
 		<icon>icon.skill19008</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -71,7 +71,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
@@ -97,7 +97,7 @@
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>
 		<reuseDelay>5000</reuseDelay>
@@ -124,7 +124,7 @@
 		<abnormalType>BRIGHTNESS_BLESS</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
@@ -144,7 +144,7 @@
 	<skill id="19039" toLevel="1" name="Cloak of Light">
 		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. Not available in a chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<passiveConditions>
@@ -200,7 +200,7 @@
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
 		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. -->
 		<icon>icon.amor_evilness_cloak</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -251,7 +251,7 @@
 		<!-- Return to Castle. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -272,7 +272,7 @@
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>

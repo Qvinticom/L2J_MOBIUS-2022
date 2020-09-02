@@ -7,7 +7,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<hitTime>10000</hitTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -17,7 +17,7 @@
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="BlockAbnormalSlot">
 				<slot>SPEED_DOWN</slot>
@@ -166,7 +166,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -448,7 +448,7 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SLEEP</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -978,7 +978,7 @@
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>101</magicLvl>
+		<magicLevel>101</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
@@ -1054,7 +1054,7 @@
 		<effectPoint>-1578</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1168,7 +1168,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1212,7 +1212,7 @@
 		<hitTime>2000</hitTime>
 		<icon>icon.skill1467</icon>
 		<isMagic>1</isMagic>
-		<magicLvl>81</magicLvl>
+		<magicLevel>81</magicLevel>
 		<mpInitialConsume>72</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
@@ -1341,7 +1341,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1368,7 +1368,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1395,7 +1395,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>

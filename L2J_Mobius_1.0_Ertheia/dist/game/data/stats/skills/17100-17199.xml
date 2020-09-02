@@ -120,7 +120,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37560</itemConsumeId> <!-- Emperor's Vitality Tonic -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -140,7 +140,7 @@
 	<skill id="17120" toLevel="1" name="Emperor's Vitality Tonic (Medium)">
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37561</itemConsumeId> <!-- Emperor's Vitality Tonic -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -160,7 +160,7 @@
 	<skill id="17121" toLevel="1" name="Emperor's Vitality Tonic (Large)">
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37562</itemConsumeId> <!-- Emperor's Vitality Tonic -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -353,7 +353,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37659</itemConsumeId> <!-- Mysterious Healthy Juice (HP/CP) -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -374,7 +374,7 @@
 	<skill id="17153" toLevel="1" name="Heavenly Recovery Potion">
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeId>37671</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -403,7 +403,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>2000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -466,7 +466,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -523,7 +523,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -561,7 +561,7 @@
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -599,7 +599,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -630,7 +630,7 @@
 		<effectRange>-2</effectRange>
 		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -713,7 +713,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -722,7 +722,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -739,7 +739,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -792,7 +792,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -849,7 +849,7 @@
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -935,7 +935,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -976,7 +976,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1027,7 +1027,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1072,7 +1072,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1143,7 +1143,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1188,7 +1188,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1243,7 +1243,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -1584,7 +1584,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1606,7 +1606,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1628,7 +1628,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1650,7 +1650,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1672,7 +1672,7 @@
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>POTION_OF_PROTECTION</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

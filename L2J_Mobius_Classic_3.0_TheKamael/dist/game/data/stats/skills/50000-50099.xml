@@ -446,7 +446,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<abnormalType>PARALYZE</abnormalType>
@@ -587,7 +587,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">82</value>
 			<value level="2">82</value>
 			<value level="3">82</value>
@@ -598,7 +598,7 @@
 			<value level="8">82</value>
 			<value level="9">82</value>
 			<value level="10">82</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -803,7 +803,7 @@
 		<attributeValue>180</attributeValue>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -826,7 +826,7 @@
 		<hitTime>4000</hitTime>
 		<icon>icon.skill50070</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>82</magicLvl>
+		<magicLevel>82</magicLevel>
 		<mpConsume>125</mpConsume>
 		<mpInitialConsume>21</mpInitialConsume>
 		<operateType>A1</operateType>

@@ -8,7 +8,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<hitTime>1000</hitTime>
 		<reuseDelay>60000</reuseDelay>
 		<castRange>40</castRange>
@@ -25,7 +25,7 @@
 		<castRange>20</castRange>
 		<effectRange>400</effectRange> <!-- FIXME: value unconfirmed -->
 		<hitTime>2000</hitTime>
-		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
+		<magicLevel>85</magicLevel> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<mpConsume>55</mpConsume>
 		<reuseDelay>7000</reuseDelay>
@@ -49,7 +49,7 @@
 		<castRange>20</castRange>
 		<effectRange>400</effectRange> <!-- FIXME: value unconfirmed -->
 		<hitTime>2000</hitTime>
-		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
+		<magicLevel>85</magicLevel> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType>
 		<mpConsume>55</mpConsume>
 		<reuseDelay>7000</reuseDelay>
@@ -77,7 +77,7 @@
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>2</abnormalLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -102,7 +102,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>900</effectRange>
-		<magicLvl>70</magicLvl>
+		<magicLevel>70</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<isMagic>1</isMagic>
 		<castRange>400</castRange>
@@ -121,7 +121,7 @@
 		<abnormalTime>600</abnormalTime>
 		<effectPoint>635</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLvl>62</magicLvl>
+		<magicLevel>62</magicLevel>
 		<mpConsume>58</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>

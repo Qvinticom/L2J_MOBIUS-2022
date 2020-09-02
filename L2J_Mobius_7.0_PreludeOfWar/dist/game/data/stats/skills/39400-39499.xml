@@ -172,7 +172,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -220,7 +220,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -279,7 +279,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -327,7 +327,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -391,7 +391,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -439,7 +439,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -483,7 +483,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -528,7 +528,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -580,7 +580,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>22</isMagic>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -638,7 +638,7 @@
 		<basicProperty>NONE</basicProperty>
 		<specialLevel>-2</specialLevel>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<effectRange>-1</effectRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -743,7 +743,7 @@
 	</skill>
 	<skill id="39428" toLevel="5" name="Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -863,7 +863,7 @@
 	</skill>
 	<skill id="39429" toLevel="2" name="+1 Attack Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -920,7 +920,7 @@
 	</skill>
 	<skill id="39430" toLevel="2" name="+1 Protection Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -977,7 +977,7 @@
 	</skill>
 	<skill id="39431" toLevel="2" name="+1 Support Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1034,7 +1034,7 @@
 	</skill>
 	<skill id="39432" toLevel="2" name="+1 Balance Artifact Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1207,7 +1207,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1520,7 +1520,7 @@
 	<skill id="39486" toLevel="4" name="Elite Monster Reward Box">
 			<!-- This Skill has no description -->
 			<isMagic>2</isMagic> <!-- Static Skill -->
-			<magicLvl>1</magicLvl>
+			<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1699,7 +1699,7 @@
 	</skill>
 	<skill id="39494" toLevel="1" name="Dye Powder">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

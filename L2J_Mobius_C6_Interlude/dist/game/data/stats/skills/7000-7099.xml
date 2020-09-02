@@ -7,7 +7,7 @@
 	</skill>
 	<skill id="7001" levels="1" name="Dispel Buff">
 		<set name="mpConsume" val="96" />
-		<set name="magicLvl" val="99" />
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="6000" />
@@ -64,7 +64,7 @@
 	</skill>
 	<skill id="7005" levels="1" name="Greater Chant of Vampire">
 		<!-- Temporarily allows party members to partially restore HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Effect 4. -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="mpInitialConsume" val="55" />
 		<set name="mpConsume" val="217" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />

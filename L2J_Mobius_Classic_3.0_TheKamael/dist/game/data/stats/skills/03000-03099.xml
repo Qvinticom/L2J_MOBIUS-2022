@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3001" toLevel="1" name="int_1">
-		<magicLvl>0</magicLvl>
+		<magicLevel>0</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3002" toLevel="1" name="int_2">
-		<magicLvl>0</magicLvl>
+		<magicLevel>0</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3003" toLevel="1" name="str_2">
-		<magicLvl>0</magicLvl>
+		<magicLevel>0</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3004" toLevel="1" name="maxmp_5">
-		<magicLvl>0</magicLvl>
+		<magicLevel>0</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
@@ -32,7 +32,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -49,7 +49,7 @@
 	<skill id="3006" toLevel="1" name="Equip Set Items">
 		<!-- Additionally enhances stats when equipped with a set item -->
 		<icon>icon.skill0042</icon>
-		<magicLvl>0</magicLvl>
+		<magicLevel>0</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
@@ -58,14 +58,14 @@
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -85,14 +85,14 @@
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -112,7 +112,7 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -121,7 +121,7 @@
 			<value level="6">61</value>
 			<value level="7">80</value>
 			<value level="8">80</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -143,7 +143,7 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -153,7 +153,7 @@
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -176,7 +176,7 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -184,7 +184,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -205,14 +205,14 @@
 		<icon>icon.skill1062</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>-15</amount>
@@ -236,10 +236,10 @@
 		<icon>icon.skill0211</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>25</amount>
@@ -283,9 +283,9 @@
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">1</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MaxMp">
 				<amount>30</amount>
@@ -331,7 +331,7 @@
 		<effectPoint>-92</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -339,7 +339,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -368,14 +368,14 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalRatePositionBonus">
 				<amount>
@@ -396,14 +396,14 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalRatePositionBonus">
 				<amount>
@@ -446,14 +446,14 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -493,14 +493,14 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -534,14 +534,14 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>3000</hitTime>
@@ -573,7 +573,7 @@
 		<icon>icon.skill1242</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -583,7 +583,7 @@
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -639,14 +639,14 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>12000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -677,14 +677,14 @@
 			<value level="5">16</value>
 			<value level="6">17</value>
 		</hpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>NONE</targetType>
@@ -693,14 +693,14 @@
 	<skill id="3026" toLevel="6" name="Special Ability: Critical Anger">
 		<!-- Inflicts additional P. Critical Damage while reducing one's own HP. -->
 		<icon>icon.skill1062</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -722,7 +722,7 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -730,7 +730,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 			<value level="7">80</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -788,14 +788,14 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -816,14 +816,14 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -844,14 +844,14 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -872,14 +872,14 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -900,14 +900,14 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -927,14 +927,14 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -954,14 +954,14 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1021,14 +1021,14 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="FatalBlowRate">
 				<amount>
@@ -1055,14 +1055,14 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1082,14 +1082,14 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1116,14 +1116,14 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1161,7 +1161,7 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1169,7 +1169,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 			<value level="7">70</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1237,14 +1237,14 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1302,14 +1302,14 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1349,7 +1349,7 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">48</value>
 			<value level="2">49</value>
 			<value level="3">50</value>
@@ -1366,7 +1366,7 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -1459,7 +1459,7 @@
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -1468,7 +1468,7 @@
 			<value level="6">61</value>
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -1490,7 +1490,7 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">48</value>
 			<value level="2">49</value>
 			<value level="3">50</value>
@@ -1507,7 +1507,7 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -1617,7 +1617,7 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">48</value>
 			<value level="2">49</value>
 			<value level="3">50</value>
@@ -1634,7 +1634,7 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1676,7 +1676,7 @@
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">48</value>
 			<value level="2">49</value>
 			<value level="3">50</value>
@@ -1693,7 +1693,7 @@
 			<value level="14">61</value>
 			<value level="15">62</value>
 			<value level="16">63</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -1786,10 +1786,10 @@
 		<icon>icon.skill1085</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">64</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>15</amount>
@@ -1823,9 +1823,9 @@
 		<icon>icon.skill1048</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MaxHp">
 				<amount>-40</amount>
@@ -1861,10 +1861,10 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1888,10 +1888,10 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -1917,10 +1917,10 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -1950,10 +1950,10 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -1983,10 +1983,10 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2008,9 +2008,9 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>11</amount>
@@ -2041,10 +2041,10 @@
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2064,10 +2064,10 @@
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2100,11 +2100,11 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
 			<value level="3">70</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2137,10 +2137,10 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2156,9 +2156,9 @@
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -2191,7 +2191,7 @@
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="PhysicalEvasion">
 				<amount>6.8</amount>
@@ -2218,12 +2218,12 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
 			<value level="3">70</value>
 			<value level="4">82</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2239,7 +2239,7 @@
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>64</magicLvl>
+		<magicLevel>64</magicLevel>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>130</amount>
@@ -2282,10 +2282,10 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2309,10 +2309,10 @@
 		<effectRange>1500</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">64</value>
 			<value level="2">67</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -2345,7 +2345,7 @@
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2355,7 +2355,7 @@
 			<value level="7">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="8">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 			<value level="9">61</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2378,14 +2378,14 @@
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">58</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -2421,14 +2421,14 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">28</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2453,14 +2453,14 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
 			<value level="4">55</value>
 			<value level="5">28</value>
 			<value level="6">61</value>
-		</magicLvl>
+		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -2511,7 +2511,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2527,7 +2527,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2546,7 +2546,7 @@
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2562,7 +2562,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2598,7 +2598,7 @@
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2609,7 +2609,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2648,7 +2648,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2664,7 +2664,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2691,7 +2691,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2702,7 +2702,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2730,7 +2730,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2741,7 +2741,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2767,7 +2767,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2783,7 +2783,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2812,7 +2812,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2823,7 +2823,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2851,7 +2851,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2862,7 +2862,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2907,7 +2907,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2918,7 +2918,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2943,7 +2943,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -2954,7 +2954,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2998,7 +2998,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3014,7 +3014,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3076,7 +3076,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3092,7 +3092,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3138,7 +3138,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3149,7 +3149,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3175,7 +3175,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3186,7 +3186,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3206,7 +3206,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3217,7 +3217,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3257,7 +3257,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3273,7 +3273,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3301,7 +3301,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3312,7 +3312,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3341,7 +3341,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3352,7 +3352,7 @@
 			<value level="8">67</value>
 			<value level="9">70</value>
 			<value level="10">75</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3379,7 +3379,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">46</value>
 			<value level="2">49</value>
 			<value level="3">52</value>
@@ -3395,7 +3395,7 @@
 			<value level="13">90</value>
 			<value level="14">95</value>
 			<value level="15">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

@@ -17,7 +17,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<for>
 			<effect name="SummonNpc">
@@ -39,7 +39,7 @@
 		<set name="abnormalTime" val="1200" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff">

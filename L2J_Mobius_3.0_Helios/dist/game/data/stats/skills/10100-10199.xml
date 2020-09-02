@@ -13,12 +13,12 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">20</value>
 			<value level="2">21</value>
@@ -184,12 +184,12 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">20</value>
 			<value level="2">21</value>
@@ -383,14 +383,14 @@
 		<itemConsumeCount>6</itemConsumeCount>
 		<lvlBonusRate>1</lvlBonusRate>
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">97</value>
 			<value level="2">98</value>
 			<value level="3">99</value>
 			<value level="4">101</value>
 			<value level="5">103</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -432,7 +432,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>PHOENIX_AURA</abnormalVisualEffect>
-		<magicLvl>101</magicLvl>
+		<magicLevel>101</magicLevel>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -479,7 +479,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -523,7 +523,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -605,7 +605,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>TEMPLAR_AURA</abnormalVisualEffect>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -652,7 +652,7 @@
 		<affectRange>1000</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -698,7 +698,7 @@
 		<affectRange>300</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -749,7 +749,7 @@
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -823,7 +823,7 @@
 		<affectRange>1000</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>

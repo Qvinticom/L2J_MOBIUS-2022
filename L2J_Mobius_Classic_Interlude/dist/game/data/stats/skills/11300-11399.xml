@@ -14,7 +14,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1000</effectRange>
 		<activateRate>100</activateRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<trait>AIRBIND</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -50,7 +50,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -59,7 +59,7 @@
 			<value level="6">94</value>
 			<value level="7">96</value>
 			<value level="8">98</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -91,7 +91,7 @@
 		<effectPoint>687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -103,7 +103,7 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
-		</magicLvl>
+		</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -147,7 +147,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -176,7 +176,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -205,7 +205,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -234,7 +234,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -263,7 +263,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -292,7 +292,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -318,7 +318,7 @@
 		<effectPoint>687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -401,7 +401,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -443,11 +443,11 @@
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">95</value>
 			<value level="2">97</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>4000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -473,11 +473,11 @@
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1500</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">95</value>
 			<value level="2">97</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>4000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -501,11 +501,11 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">95</value>
 			<value level="2">97</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<affectLimit>6-12</affectLimit>
 		<reuseDelay>4000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -534,11 +534,11 @@
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>900</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">95</value>
 			<value level="2">97</value>
 			<value level="3">99</value>
-		</magicLvl>
+		</magicLevel>
 		<affectLimit>6-12</affectLimit>
 		<isDebuff>true</isDebuff>
 		<targetType>NPC_BODY</targetType>
@@ -563,7 +563,7 @@
 		<icon>icon.skill11253</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>50</BOW>
@@ -586,7 +586,7 @@
 		<hitTime>3000</hitTime>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -625,7 +625,7 @@
 		<effectPoint>687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -634,7 +634,7 @@
 			<value level="6">94</value>
 			<value level="7">96</value>
 			<value level="8">98</value>
-		</magicLvl>
+		</magicLevel>
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
@@ -2204,12 +2204,12 @@
 		<!-- Atk. Spd., P. Def. + $s1, and PvP Damage - $s2. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -2766,12 +2766,12 @@
 			<value level="3">394</value>
 			<value level="4">394</value>
 		</mpConsume>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
@@ -2977,14 +2977,14 @@
 	<skill id="11369" toLevel="6" name="Summon Commando Cat">
 		<!-- Summons Commando Cat. Consumes $s1 summon points. -->
 		<icon>icon.skill11369</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3023,14 +3023,14 @@
 	<skill id="11370" toLevel="6" name="Summon Witch Cat">
 		<!-- Summons Witch Cat. Consumes $s1 summon points. -->
 		<icon>icon.skill11370</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3069,14 +3069,14 @@
 	<skill id="11371" toLevel="6" name="Summon Unicorn Lancer">
 		<!-- Summons Unicorn Lancer. Consumes $s1 summon points. -->
 		<icon>icon.skill11371</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3115,14 +3115,14 @@
 	<skill id="11372" toLevel="6" name="Summon Unicorn Cherub">
 		<!-- Summons Unicorn Cherub. Consumes $s1 summon points. -->
 		<icon>icon.skill11372</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3161,14 +3161,14 @@
 	<skill id="11373" toLevel="6" name="Summon Dark Crusader">
 		<!-- Summons Dark Crusader. Consumes $s1 summon points. -->
 		<icon>icon.skill11373</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3207,14 +3207,14 @@
 	<skill id="11374" toLevel="6" name="Summon Banshee Queen">
 		<!-- Summons Banshee Queen. Consumes $s1 summon points. -->
 		<icon>icon.skill11374</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">102</value>
 			<value level="4">103</value>
 			<value level="5">104</value>
 			<value level="6">105</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4018,12 +4018,12 @@
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">286</value>
 			<value level="2">301</value>
@@ -4085,12 +4085,12 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">86</value>
 			<value level="2">88</value>
@@ -4168,12 +4168,12 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">99</value>
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">86</value>
 			<value level="2">88</value>

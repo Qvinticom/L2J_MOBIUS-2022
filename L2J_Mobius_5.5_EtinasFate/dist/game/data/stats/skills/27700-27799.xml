@@ -377,7 +377,7 @@
 	<skill id="27716" toLevel="1" name="Zodiac Agathion Pack">
 		<icon>icon.etc_treasure_box_i02</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>500</hitTime>
@@ -437,7 +437,7 @@
 	<skill id="27717" toLevel="6" name="Greater Jewel's Blessing">
 		<!-- You can feel a new energy thanks to your possession of a Greater Jewel. Max CP +5%. -->
 		<icon>icon.etc_bm_brooch_lavianrose_piece</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -490,7 +490,7 @@
 		<itemConsumeId>38941</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -644,7 +644,7 @@
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -934,7 +934,7 @@
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>120</magicLvl>
+		<magicLevel>120</magicLevel>
 		<abnormalTime>30</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1030,7 +1030,7 @@
 		<activateRate>100</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<castRange>600</castRange>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-379</effectPoint>
@@ -1377,7 +1377,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1397,7 +1397,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1417,7 +1417,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1438,7 +1438,7 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalTime>10</abnormalTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>689</effectPoint>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -1460,7 +1460,7 @@
 		<hitTime>2000</hitTime>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
@@ -1484,7 +1484,7 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="WeightLimit">
 				<amount>9000</amount>
@@ -1927,7 +1927,7 @@
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2005,7 +2005,7 @@
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>43200000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2030,7 +2030,7 @@
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>

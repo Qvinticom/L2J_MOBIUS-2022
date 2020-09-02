@@ -12,7 +12,7 @@
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -33,7 +33,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<affectRange>600</affectRange>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -60,7 +60,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>300</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -99,7 +99,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>800</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -118,7 +118,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>72</magicLvl>
+		<magicLevel>72</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -146,7 +146,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -169,7 +169,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -192,7 +192,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -217,7 +217,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<activateRate>99</activateRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<isDebuff>true</isDebuff>
@@ -249,7 +249,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<isMagic>2</isMagic>
@@ -269,7 +269,7 @@
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>500</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>DOOR_TREASURE</targetType>
@@ -286,7 +286,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<targetType>SELF</targetType>
@@ -297,7 +297,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18103</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -331,7 +331,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18104</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -365,7 +365,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18105</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -399,7 +399,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18106</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -433,7 +433,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18107</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -467,7 +467,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18108</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -501,7 +501,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18109</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -535,7 +535,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18110</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -569,7 +569,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18111</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -603,7 +603,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18112</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -637,7 +637,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18113</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -671,7 +671,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18114</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -705,7 +705,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18115</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -739,7 +739,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18116</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -773,7 +773,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18117</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -807,7 +807,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18118</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -841,7 +841,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18119</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -875,7 +875,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18120</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -909,7 +909,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18121</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -943,7 +943,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18122</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -977,7 +977,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18123</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1011,7 +1011,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18124</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1045,7 +1045,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18125</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1079,7 +1079,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18126</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1113,7 +1113,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18127</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1147,7 +1147,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18128</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1181,7 +1181,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18129</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1215,7 +1215,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18130</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1249,7 +1249,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18131</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1283,7 +1283,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18132</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1317,7 +1317,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18133</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1351,7 +1351,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18134</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1385,7 +1385,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18135</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1419,7 +1419,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18136</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1453,7 +1453,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18137</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1487,7 +1487,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18138</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1521,7 +1521,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18139</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1555,7 +1555,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18140</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1589,7 +1589,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18141</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1623,7 +1623,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18142</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1657,7 +1657,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18143</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1691,7 +1691,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18144</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1725,7 +1725,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18145</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1759,7 +1759,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18146</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1793,7 +1793,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18147</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1827,7 +1827,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18148</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1861,7 +1861,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18149</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1895,7 +1895,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18150</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1929,7 +1929,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18151</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1963,7 +1963,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18152</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -1997,7 +1997,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18153</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2031,7 +2031,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18154</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2065,7 +2065,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18155</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2099,7 +2099,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18156</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2133,7 +2133,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18157</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2167,7 +2167,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18158</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2201,7 +2201,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18159</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2235,7 +2235,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18160</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2269,7 +2269,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18161</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2303,7 +2303,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18162</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2337,7 +2337,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18163</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2371,7 +2371,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18164</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2405,7 +2405,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18165</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2439,7 +2439,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18166</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2473,7 +2473,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18167</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2507,7 +2507,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18168</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2541,7 +2541,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18169</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2575,7 +2575,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18170</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2609,7 +2609,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18171</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2643,7 +2643,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18172</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2677,7 +2677,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18173</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2711,7 +2711,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18174</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2745,7 +2745,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18175</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2779,7 +2779,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18176</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2813,7 +2813,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18177</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2847,7 +2847,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18178</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2881,7 +2881,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18179</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2915,7 +2915,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18180</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2949,7 +2949,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18181</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -2983,7 +2983,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18182</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3017,7 +3017,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18183</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3051,7 +3051,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18184</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3085,7 +3085,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18185</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3119,7 +3119,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18186</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3153,7 +3153,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18187</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3187,7 +3187,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18188</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3221,7 +3221,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18189</itemConsumeId>
 		<isMagic>2</isMagic>
@@ -3255,7 +3255,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>18190</itemConsumeId>
 		<isMagic>2</isMagic>

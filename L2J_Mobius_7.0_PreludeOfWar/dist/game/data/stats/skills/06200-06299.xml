@@ -7,7 +7,7 @@
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>56</magicLvl>
+		<magicLevel>56</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -32,7 +32,7 @@
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -79,7 +79,7 @@
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -126,7 +126,7 @@
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -173,7 +173,7 @@
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -246,7 +246,7 @@
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
 			<value level="3">65</value>
@@ -266,7 +266,7 @@
 			<value level="17">88</value>
 			<value level="18">89</value>
 			<value level="19">90</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">68</value>
 			<value level="2">76</value>
@@ -381,7 +381,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
 			<value level="3">65</value>
@@ -401,7 +401,7 @@
 			<value level="17">88</value>
 			<value level="18">89</value>
 			<value level="19">90</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">40</value>
 			<value level="2">44</value>
@@ -464,7 +464,7 @@
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>56</magicLvl>
+		<magicLevel>56</magicLevel>
 		<mpConsume>55</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -486,7 +486,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -503,7 +503,7 @@
 			<value level="3">icon.skill6209_3</value>
 			<value level="4">icon.skill6209_4</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<stayAfterDeath>true</stayAfterDeath>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -548,7 +548,7 @@
 			<value level="3">icon.skill6213_3</value>
 			<value level="4">icon.skill6213_4</value>
 		</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<stayAfterDeath>true</stayAfterDeath>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -594,125 +594,125 @@
 	<skill id="6217" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6218" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6219" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6220" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6221" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6222" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6223" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6224" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6225" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6226" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6227" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Queen of the Spike Stakatos who commands and propagates the Spike Stakatos. It knows that its life is coming to an end, and it orders the nest guarded so that it is a good environment for the next Stakato Queen to grow up. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6228" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- One of the monsters born of the Goddess Shilen. When the Great Spirit Gildor is weakened, it leads the Tasaba Lizardmen into the Reed Field, but when the Tasaba Lizardmen are wiped out by the appearance of the Mucrokians, it spews tremendous anger. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6229" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Water spirit born from the powerful waters of Innadril. It is greatly beloved by the Goddess Eva. It's a trickster that does whatever it wants, like snatching babies or causing floods in the middle of the night. Eva fears retaliation one day because of Lian's severe tricks, and she puts him in the care of guardian spirits. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6230" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Because of the item that was made in the image of the giants by the Ivory Tower magicians, it believes it is a giant itself. It is controlled by Hekaton Prime, and it guards the cave that was once the fortress of the giants. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6231" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Lifeform created by the giants that were fleeing by night the wrath of Einhasad. It was improved with a Monster Eye as its foundation and it was created to exterminate the pursuers of the gods. At one time, it broke free from the control of the giants and fought against them. Its mind is now controlled by Hekaton prime, and it again protects the giants. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6232" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Last Lesser Giant hiding deep inside the Giant's Cave. Though it is physically the same as the other Lesser Giants, it contains the secret of the ancient lesser giant civilization, and it protects this secret. It is currently controlled by Hekaton Prime. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6233" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Control device created by the ancient giants civilization. It has outgrown its original research goal. It's only goal now is to protect the cave. It is transforming it into a powerful protected fortress by controlling the minds of the other races and by maintaining the Giant's Cave. -->
 		<icon>icon.skillraid</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6234" toLevel="1" name="Presentation - Adena Firecracker">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>80</magicLvl>
+		<magicLevel>80</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -725,7 +725,7 @@
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -737,7 +737,7 @@
 	</skill>
 	<skill id="6236" toLevel="1" name="Presentation - Party Return">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -757,7 +757,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -784,7 +784,7 @@
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>2000</hitTime>
@@ -813,7 +813,7 @@
 		<coolTime>1000</coolTime>
 		<hitTime>2700</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
+		<magicLevel>55</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>86400000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -844,7 +844,7 @@
 		<abnormalTime>86400</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<effectPoint>-100</effectPoint>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -872,7 +872,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -890,7 +890,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -908,7 +908,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -926,7 +926,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -944,7 +944,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -962,7 +962,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -980,7 +980,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -998,7 +998,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1016,7 +1016,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1035,7 +1035,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-1111</effectPoint>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1049,7 +1049,7 @@
 	</skill>
 	<skill id="6251" toLevel="1" name="Summon Sultriness">
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1065,7 +1065,7 @@
 	</skill>
 	<skill id="6252" toLevel="1" name="Sultriness Attack">
 		<effectPoint>-1111</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1083,7 +1083,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1102,7 +1102,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1121,7 +1121,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1140,7 +1140,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1159,7 +1159,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1178,7 +1178,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1197,7 +1197,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1216,7 +1216,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1235,7 +1235,7 @@
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1249,7 +1249,7 @@
 	<skill id="6262" toLevel="1" name="EMP Power">
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<magicLvl>76</magicLvl>
+		<magicLevel>76</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>78</mpConsume>
 		<reuseDelay>30000</reuseDelay>
@@ -1272,7 +1272,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>77</magicLvl>
+		<magicLevel>77</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>78</mpConsume>
 		<reuseDelay>30000</reuseDelay>
@@ -1288,7 +1288,7 @@
 	<skill id="6264" toLevel="1" name="Golem Boom">
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1301,7 +1301,7 @@
 	<skill id="6265" toLevel="1" name="Smokescreen">
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>
-		<magicLvl>75</magicLvl>
+		<magicLevel>75</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1323,7 +1323,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>82</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1338,7 +1338,7 @@
 		<!-- Absorbs the target's stamina and makes it your own. -->
 		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>
-		<magicLvl>90</magicLvl>
+		<magicLevel>90</magicLevel>
 		<operateType>CA2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1357,7 +1357,7 @@
 	</skill>
 	<skill id="6268" toLevel="1" name="Jump Attack">
 		<effectPoint>-273</effectPoint>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A1</operateType>
 		<mpConsume>164</mpConsume>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1390,7 +1390,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>117</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1408,7 +1408,7 @@
 		<!-- none Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<effectPoint>-100</effectPoint>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1431,7 +1431,7 @@
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1448,7 +1448,7 @@
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1458,7 +1458,7 @@
 	</skill>
 	<skill id="6273" toLevel="1" name="Underbug Self Blasting">
 		<effectPoint>-676</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1478,7 +1478,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>10000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>165</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1506,7 +1506,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>7000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>166</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1534,7 +1534,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>10000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1550,7 +1550,7 @@
 		<effectPoint>-689</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1567,7 +1567,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>168</mpConsume>
 		<operateType>A1</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1588,7 +1588,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>168</mpConsume>
 		<operateType>A1</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1616,7 +1616,7 @@
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1635,7 +1635,7 @@
 		<affectRange>300</affectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<effectPoint>
 			<value level="1">0</value>
@@ -1664,7 +1664,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<effectPoint>204</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
@@ -1693,7 +1693,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1718,7 +1718,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
@@ -1753,7 +1753,7 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
@@ -1779,7 +1779,7 @@
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -1805,7 +1805,7 @@
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1835,7 +1835,7 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
@@ -1864,7 +1864,7 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
@@ -1899,7 +1899,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1917,7 +1917,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1938,7 +1938,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpInitialConsume>20</mpInitialConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
@@ -1965,7 +1965,7 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;250;60</fanRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1991,7 +1991,7 @@
 		<effectPoint>1</effectPoint>
 		<hitTime>34400</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>66</mpConsume>
 		<mpInitialConsume>17</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2014,7 +2014,7 @@
 		<effectPoint>-689</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2028,7 +2028,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpInitialConsume>20</mpInitialConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
@@ -2054,7 +2054,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>123</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2072,7 +2072,7 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2085,7 +2085,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>

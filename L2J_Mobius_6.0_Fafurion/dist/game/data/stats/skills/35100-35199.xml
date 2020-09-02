@@ -55,7 +55,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1135,7 +1135,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeId>48214</itemConsumeId> <!-- Reconstruction Society's Enchantment Pack -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1173,7 +1173,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>48216</itemConsumeId> <!-- Circlet Upgrade Stone Pack -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1546,7 +1546,7 @@
 	<skill id="35182" toLevel="1" name="Dragon Shirt">
 		<!-- Acquired XP/ SP +3%, P. Def./ M. Def. +5%, Speed +7, Received P./ M. Critical Damage -5%. -->
 		<icon>icon.bm_dragon_shirt</icon>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1581,7 +1581,7 @@
 	<skill id="35183" toLevel="1" name="Dragon Leather Shirt">
 		<!-- Acquired XP/ SP +6%, P. Def./ M. Def. +10%, Speed +7, Received P./ M. Critical Damage -10%, Skill Cooldown -3%. -->
 		<icon>icon.bm_dragon_leather_shirt</icon>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1632,7 +1632,7 @@
 		<!-- Acquired XP/ SP +10%, P. Def./ M. Def. +15%, Speed +7, Received P./ M. Critical Damage -15%, Skill Cooldown -3%. -->
 		<icon>icon.bm_dragon_rind_leather_shirt</icon>
 		<operateType>P</operateType>
-		<magicLvl>105</magicLvl>
+		<magicLevel>105</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="ExpModify">
@@ -2234,7 +2234,7 @@
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2325,7 +2325,7 @@
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2416,7 +2416,7 @@
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2507,7 +2507,7 @@
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2598,7 +2598,7 @@
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2778,7 +2778,7 @@
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2958,7 +2958,7 @@
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>

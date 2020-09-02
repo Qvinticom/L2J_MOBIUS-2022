@@ -9,7 +9,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2201" levels="3" name="Item - Blue Treasue Box">
 		<table name="#itemConsumeId">6498 6499 6500</table>
@@ -20,7 +20,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2202" levels="3" name="Item - Yellow Treasue Box">
 		<table name="#itemConsumeId">6501 6502 6503</table>
@@ -31,7 +31,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2203" levels="3" name="Item - Orange Treasue Box">
 		<table name="#itemConsumeId">6504 6505 6506</table>
@@ -42,7 +42,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2204" levels="3" name="Item - Violet Treasue Box">
 		<table name="#itemConsumeId">6507 6508 6509</table>
@@ -53,7 +53,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2205" levels="3" name="Item - Red Treasue Box">
 		<table name="#itemConsumeId">6510 6511 6512</table>
@@ -64,7 +64,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2206" levels="3" name="Item - White Treasue Box">
 		<table name="#itemConsumeId">6513 6514 6515</table>
@@ -75,7 +75,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2207" levels="3" name="Item - Black Treasue Box">
 		<table name="#itemConsumeId">6516 6517 6518</table>
@@ -86,7 +86,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2208" levels="1" name="Item - Blessed Scroll of Enchant Armor">
 		<set name="target" val="TARGET_ITEM" />
@@ -94,7 +94,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
 		<set name="target" val="TARGET_ITEM" />
@@ -102,7 +102,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
 		<set name="target" val="TARGET_ITEM" />
@@ -110,7 +110,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
 		<set name="target" val="TARGET_ITEM" />
@@ -118,7 +118,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
 		<set name="target" val="TARGET_ITEM" />
@@ -126,7 +126,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2213" levels="22" name="Escape - to X Town">
 		<set name="target" val="TARGET_SELF" />
@@ -313,7 +313,7 @@
 		<set name="itemConsumeId" val="6652" /> <!-- Scroll: Protection of Valakas -->
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="BUFF" />
@@ -334,7 +334,7 @@
 		<set name="itemConsumeId" val="6655" /> <!-- Scroll: Slay Valakas -->
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="valakas_item">
 				<!-- WARNING CODER!!!! <mul order="0x30" stat="valakasVuln" val="0.89" />REQUIRE CORE SUPPORT -->
@@ -347,7 +347,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="#itemConsume" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="negateId" val="#negateId" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />

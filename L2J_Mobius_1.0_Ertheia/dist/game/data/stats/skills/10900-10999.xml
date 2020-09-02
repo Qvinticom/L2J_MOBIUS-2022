@@ -16,12 +16,12 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">62</value>
 			<value level="2">69</value>
@@ -81,12 +81,12 @@
 	<skill id="10904" toLevel="4" name="Superior Skill Mastery">
 		<!-- Skill power + 5%. -->
 		<icon>icon.skill11874</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalSkillPower">
@@ -153,12 +153,12 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">62</value>
 			<value level="2">69</value>
@@ -245,12 +245,12 @@
 	<skill id="10951" toLevel="4" name="Superior Instinct Mastery">
 		<!-- PvP damage + 5%, and P. Atk. + 5% when equipped with a crossbow. -->
 		<icon>icon.skill10951</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -470,7 +470,7 @@
 	<skill id="10956" toLevel="1" name="Divine Expansion">
 		<!-- Increases the number of buffs an individual can receive by 1. -->
 		<operateType>P</operateType>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<effects>
 			<effect name="EnlargeAbnormalSlot">
 				<slots>1</slots>
@@ -481,7 +481,7 @@
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="10998" toLevel="1" name="Archer - Individual">
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
@@ -494,7 +494,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelayGroup>10760</reuseDelayGroup>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -519,7 +519,7 @@
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1200</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

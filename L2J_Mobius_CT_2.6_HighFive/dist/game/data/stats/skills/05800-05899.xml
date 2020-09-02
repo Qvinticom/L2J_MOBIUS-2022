@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5800" levels="1" name="Self-Destruction">
 		<set name="effectPoint" val="-676" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="NONE" />
@@ -13,7 +13,7 @@
 		<set name="fanRange" val="0,0,600,45" />
 		<set name="hitTime" val="3300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -33,7 +33,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -44,7 +44,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="NONE" />
@@ -54,7 +54,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -62,7 +62,7 @@
 	<skill id="5805" levels="1" name="Air Assault">
 		<set name="effectPoint" val="-1332" />
 		<set name="hitTime" val="200" />
-		<set name="magicLvl" val="77" />
+		<set name="magicLevel" val="77" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="reuseDelay" val="1000" />
@@ -72,14 +72,14 @@
 		<set name="effectPoint" val="-659" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5807" levels="1" name="Self-destruction">
 		<set name="effectPoint" val="-676" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="NONE" />
@@ -88,7 +88,7 @@
 		<set name="effectPoint" val="-676" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -97,7 +97,7 @@
 		<set name="effectPoint" val="-659" />
 		<set name="hitTime" val="1700" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="76" />
+		<set name="magicLevel" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -117,7 +117,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLevel" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -125,7 +125,7 @@
 	<skill id="5811" levels="1" name="Sonic Bomb">
 		<set name="effectPoint" val="-635" />
 		<set name="hitTime" val="1700" />
-		<set name="magicLvl" val="78" />
+		<set name="magicLevel" val="78" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -136,7 +136,7 @@
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="hitTime" val="2400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="78" />
+		<set name="magicLevel" val="78" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -145,7 +145,7 @@
 		<set name="effectPoint" val="-676" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="74" />
+		<set name="magicLevel" val="74" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -153,7 +153,7 @@
 	<skill id="5814" levels="3" name="Self-Destruction">
 		<table name="#effectPoints">-635 -659 -676</table>
 		<set name="effectPoint" val="#effectPoints" />
-		<set name="magicLvl" val="70" />
+		<set name="magicLevel" val="70" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="NONE" />
@@ -161,48 +161,48 @@
 	<skill id="5815" levels="1" name="Presentation - Mercenary Troops Shout">
 		<set name="hitTime" val="2300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5816" levels="1" name="Presentation - Female Priest Transformation">
 		<set name="hitTime" val="7700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5817" levels="1" name="Presentation - Dragon Shout">
 		<set name="hitTime" val="3000" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5818" levels="1" name="Presentation - Repentance">
 		<set name="hitTime" val="2430" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5819" levels="1" name="Presentation - Victory">
 		<set name="hitTime" val="5930" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5820" levels="1" name="Presentation - Removal">
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5821" levels="1" name="Presentation - Female Priest Exit">
 		<set name="hitTime" val="5330" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -213,7 +213,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="13879" /> <!-- Bait for Drakes -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="ONE" />
@@ -224,26 +224,26 @@
 	<skill id="5823" levels="1" name="Presentation - District1 Boss Defeat">
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5824" levels="1" name="Presentation - District1 Boss Arise">
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5825" levels="1" name="Presentation - Algraia Exit">
 		<set name="hitTime" val="5330" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5826" levels="3" name="Fire Breath">
 		<table name="#effectPoints">-684 -687 -689</table>
-		<table name="#magicLvl">83 84 85</table>
+		<table name="#magicLevel">83 84 85</table>
 		<table name="#mpConsume">59 60 60</table>
 		<table name="#power">60 61 61</table>
 		<set name="affectLimit" val="5-15" />
@@ -256,7 +256,7 @@
 		<set name="fanRange" val="0,0,600,120" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
@@ -268,7 +268,7 @@
 		</for>
 	</skill>
 	<skill id="5827" levels="6" name="Fireball">
-		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#magicLevel">75 77 79 81 83 85</table>
 		<table name="#mpConsume">55 56 58 58 59 60</table>
 		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
 		<table name="#power">55 56 58 59 60 61</table>
@@ -281,7 +281,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -294,7 +294,7 @@
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare">
 		<table name="#effectPoints">-659 -666 -673 -681 -684 -689</table>
-		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#magicLevel">75 77 79 81 83 85</table>
 		<table name="#mpConsume">55 56 58 58 59 60</table>
 		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
 		<table name="#power">55 56 58 59 60 61</table>
@@ -305,7 +305,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -318,7 +318,7 @@
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare">
 		<table name="#effectPoints">-659 -666 -673 -681 -684 -689</table>
-		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#magicLevel">75 77 79 81 83 85</table>
 		<table name="#mpConsume">55 56 58 58 59 60</table>
 		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
 		<table name="#power">55 56 58 59 60 61</table>
@@ -329,7 +329,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -345,7 +345,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
@@ -361,7 +361,7 @@
 		<set name="effectPoint" val="-689" />
 		<set name="hitTime" val="1800" />
 		<set name="icon" val="icon.skill0096" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
@@ -389,7 +389,7 @@
 		<set name="icon" val="icon.skill0018" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
@@ -409,7 +409,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="9" />
 		<set name="operateType" val="A2" />
@@ -432,7 +432,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1036" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="9" />
 		<set name="operateType" val="A2" />
@@ -450,7 +450,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="104" />
 		<set name="mpInitialConsume" val="26" />
 		<set name="operateType" val="A1" />
@@ -474,7 +474,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1219" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="207" />
 		<set name="mpInitialConsume" val="52" />
 		<set name="operateType" val="A2" />
@@ -494,7 +494,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
@@ -509,7 +509,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
@@ -527,7 +527,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="fanRange" val="0,0,1200,30" />
 		<set name="hitTime" val="2600" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
@@ -548,7 +548,7 @@
 		<set name="elementPower" val="20" />
 		<set name="fanRange" val="0,0,1200,90" />
 		<set name="hitTime" val="2600" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
@@ -568,7 +568,7 @@
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="694" />
 		<set name="hitTime" val="2120" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
@@ -587,7 +587,7 @@
 		<set name="coolTime" val="733" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2120" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="149" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="17400" />
@@ -613,7 +613,7 @@
 		<set name="icon" val="icon.skill1092" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
@@ -630,7 +630,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="8000" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="239" />
 		<set name="mpInitialConsume" val="60" />
 		<set name="operateType" val="A1" />
@@ -641,9 +641,9 @@
 		</for>
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#skillLevel">1 2 3 4 5 6 7 8 9 10 11 12</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -660,7 +660,7 @@
 		<!-- HP is decreased momentarily from bleeding. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dot">18 25 34 44 54 62 67 67 70 70 71 71</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -674,7 +674,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
@@ -688,13 +688,13 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5848" levels="1" name="Block Trigger Slow">
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -712,7 +712,7 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -722,7 +722,7 @@
 		</for>
 	</skill>
 	<skill id="5850" levels="1" name="Block Trigger Stun">
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -740,7 +740,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -757,7 +757,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -768,7 +768,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -782,7 +782,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -797,7 +797,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -811,7 +811,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -831,7 +831,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -851,7 +851,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -871,7 +871,7 @@
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -894,7 +894,7 @@
 		<set name="icon" val="icon.skill5860" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -910,7 +910,7 @@
 		<set name="icon" val="icon.skill5861" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="-1" />
+		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -918,14 +918,14 @@
 	<skill id="5862" levels="1" name="Destruction of the Body">
 		<set name="affectLimit" val="10-10" />
 		<set name="effectPoint" val="-1000" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5863" levels="1" name="Destruction of the Soul">
 		<set name="affectLimit" val="10-10" />
 		<set name="effectPoint" val="-1000" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -936,7 +936,7 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -948,7 +948,7 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="NONE" />
@@ -956,7 +956,7 @@
 	<skill id="5866" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -968,7 +968,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
@@ -976,7 +976,7 @@
 	<skill id="5867" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -990,7 +990,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -999,7 +999,7 @@
 	<skill id="5868" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -1012,7 +1012,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
@@ -1020,7 +1020,7 @@
 	<skill id="5869" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -1033,7 +1033,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
@@ -1041,7 +1041,7 @@
 	<skill id="5870" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1052,7 +1052,7 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -1060,7 +1060,7 @@
 	<skill id="5871" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1073,7 +1073,7 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
@@ -1081,7 +1081,7 @@
 	<skill id="5872" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLevels">8 8 8 9 9 9 9 10 10 10</table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1093,7 +1093,7 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -1110,7 +1110,7 @@
 		<set name="icon" val="icon.skill5873" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1127,7 +1127,7 @@
 		<set name="icon" val="icon.skill5873" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
@@ -1145,7 +1145,7 @@
 		<set name="icon" val="icon.skill5873" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1161,14 +1161,14 @@
 		<set name="icon" val="icon.skill5876" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5877" levels="4" name="Chant of Worm Waking">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="78" />
+		<set name="magicLevel" val="78" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1186,7 +1186,7 @@
 		<set name="icon" val="icon.skill1386" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1215,7 +1215,7 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLevel" val="83" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1239,7 +1239,7 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -1256,14 +1256,14 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel">
 		<!-- A state of instant paralysis caused by the shock -->
-		<table name="#magicLvl">79 83</table>
+		<table name="#magicLevel">79 83</table>
 		<table name="#mpConsume">79 82</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1279,7 +1279,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="873" />
@@ -1306,7 +1306,7 @@
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1337,7 +1337,7 @@
 		<set name="icon" val="icon.skill0485" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
@@ -1369,7 +1369,7 @@
 		<set name="icon" val="#icons" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
@@ -1396,7 +1396,7 @@
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1421,14 +1421,14 @@
 		<set name="icon" val="icon.skill1337" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
 		<!-- Temporarily cannot move due to shock and has lost the target. -->
-		<table name="#magicLvl">83 85</table>
+		<table name="#magicLevel">83 85</table>
 		<table name="#mpConsume">82 83</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1445,7 +1445,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1470,7 +1470,7 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="76" />
+		<set name="magicLevel" val="76" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -1489,7 +1489,7 @@
 		<set name="icon" val="icon.skill0402" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -1497,7 +1497,7 @@
 	<skill id="5891" levels="1" name="Threatening Bellow">
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -1518,7 +1518,7 @@
 		<set name="icon" val="icon.skill0358" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -1533,7 +1533,7 @@
 	<skill id="5893" levels="1" name="Ritual of Cannibalism">
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="NONE" />
@@ -1553,7 +1553,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLevel" val="81" />
 		<set name="mpConsume" val="145" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -1589,7 +1589,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="150" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -1614,7 +1614,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="A3" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1633,7 +1633,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLevel" val="81" />
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -1664,7 +1664,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLevel" val="85" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -1686,7 +1686,7 @@
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="84" />
+		<set name="magicLevel" val="84" />
 		<set name="mpConsume" val="224" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />

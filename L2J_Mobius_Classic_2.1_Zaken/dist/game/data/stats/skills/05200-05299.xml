@@ -17,7 +17,7 @@
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">65</value>
 			<value level="2">67</value>
 			<value level="3">69</value>
@@ -26,7 +26,7 @@
 			<value level="6">85</value>
 			<value level="7">90</value>
 			<value level="8">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">96</value>
 			<value level="2">99</value>
@@ -92,14 +92,14 @@
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">44</value>
 			<value level="4">52</value>
 			<value level="5">60</value>
 			<value level="6">68</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">16</value>
 			<value level="2">21</value>
@@ -151,7 +151,7 @@
 		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -164,7 +164,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">10</value>
@@ -205,7 +205,7 @@
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -218,7 +218,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">10</value>
@@ -247,14 +247,14 @@
 	</skill>
 	<skill id="5204" toLevel="1" name="Presentation - First Gigantic Pig Combination">
 		<hitTime>5800</hitTime>
-		<magicLvl>76</magicLvl>
+		<magicLevel>76</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5205" toLevel="1" name="Heal">
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -281,7 +281,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<mpConsume>62</mpConsume>
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -312,7 +312,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<mpConsume>62</mpConsume>
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -336,7 +336,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -360,7 +360,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -384,7 +384,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -408,7 +408,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -432,7 +432,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -456,7 +456,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -480,7 +480,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -504,7 +504,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -528,7 +528,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -552,7 +552,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>60</magicLvl>
+		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -571,7 +571,7 @@
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<magicLvl>76</magicLvl>
+		<magicLevel>76</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -595,7 +595,7 @@
 		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -624,7 +624,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -639,7 +639,7 @@
 		</effects>
 	</skill>
 	<skill id="5221" toLevel="1" name="Baylor - Physical Close Range Vulnerability">
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -656,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="5222" toLevel="1" name="Baylor - Physical Long Range Vulnerability">
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -667,7 +667,7 @@
 		</effects>
 	</skill>
 	<skill id="5223" toLevel="1" name="Baylor - Magic Vulnerability">
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -686,7 +686,7 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>3000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>75</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -714,7 +714,7 @@
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -743,7 +743,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>60</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -766,7 +766,7 @@
 		<hitTime>5000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>195</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -795,7 +795,7 @@
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>390</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -824,7 +824,7 @@
 		<hitTime>2000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>779</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -844,7 +844,7 @@
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>5000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>149</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -862,7 +862,7 @@
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>260</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -880,7 +880,7 @@
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>445</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -900,7 +900,7 @@
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -922,7 +922,7 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -956,7 +956,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<mpConsume>89</mpConsume>
 		<mpInitialConsume>23</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -989,7 +989,7 @@
 		<canBeDispelled>false</canBeDispelled>
 		<effectPoint>100</effectPoint>
 		<hitTime>1200</hitTime>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
@@ -1015,7 +1015,7 @@
 		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<mpConsume>221</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1045,7 +1045,7 @@
 		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>84</magicLvl>
+		<magicLevel>84</magicLevel>
 		<mpConsume>368</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1075,7 +1075,7 @@
 		<hitTime>1200</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1095,7 +1095,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1110,7 +1110,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1136,7 +1136,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>MA_MD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1163,7 +1163,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3300</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">14</value>
 			<value level="2">24</value>
 			<value level="3">34</value>
@@ -1176,7 +1176,7 @@
 			<value level="10">89</value>
 			<value level="11">94</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">23</value>
 			<value level="2">32</value>
@@ -1246,7 +1246,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">14</value>
 			<value level="2">24</value>
 			<value level="3">34</value>
@@ -1259,7 +1259,7 @@
 			<value level="10">89</value>
 			<value level="11">94</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">16</value>
 			<value level="2">23</value>
@@ -1328,7 +1328,7 @@
 		<attributeValue>20</attributeValue>
 		<hitTime>500</hitTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">14</value>
 			<value level="2">24</value>
 			<value level="3">34</value>
@@ -1341,7 +1341,7 @@
 			<value level="10">89</value>
 			<value level="11">94</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1372,7 +1372,7 @@
 		<attributeValue>20</attributeValue>
 		<hitTime>3300</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">14</value>
 			<value level="2">24</value>
 			<value level="3">34</value>
@@ -1385,7 +1385,7 @@
 			<value level="10">89</value>
 			<value level="11">94</value>
 			<value level="12">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
 			<value level="2">23</value>
@@ -1455,7 +1455,7 @@
 		<hitTime>1200</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>87</magicLvl>
+		<magicLevel>87</magicLevel>
 		<mpConsume>76</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1496,7 +1496,7 @@
 		<hitTime>1800</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1509,7 +1509,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">24</value>
 			<value level="2">39</value>
@@ -1582,7 +1582,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1595,7 +1595,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
@@ -1636,7 +1636,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1649,7 +1649,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">13</value>
 			<value level="2">20</value>
@@ -1737,7 +1737,7 @@
 		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1750,7 +1750,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">17</value>
 			<value level="2">29</value>
@@ -1812,7 +1812,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1825,7 +1825,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -1867,7 +1867,7 @@
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1884,7 +1884,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1904,7 +1904,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -1917,7 +1917,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
 			<value level="2">16</value>
@@ -1989,7 +1989,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2002,7 +2002,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
 			<value level="2">16</value>
@@ -2056,7 +2056,7 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2069,7 +2069,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">13</value>
 			<value level="2">20</value>
@@ -2101,7 +2101,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2114,7 +2114,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">13</value>
 			<value level="2">20</value>
@@ -2161,7 +2161,7 @@
 		<effectRange>1000</effectRange>
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2174,7 +2174,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
 			<value level="2">23</value>
@@ -2243,7 +2243,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2256,7 +2256,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
 			<value level="2">23</value>
@@ -2301,7 +2301,7 @@
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2314,7 +2314,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
 			<value level="2">23</value>
@@ -2381,7 +2381,7 @@
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
 			<value level="3">30</value>
@@ -2394,7 +2394,7 @@
 			<value level="10">85</value>
 			<value level="11">90</value>
 			<value level="12">95</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
 			<value level="2">23</value>
@@ -2493,7 +2493,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
+		<magicLevel>
 			<value level="1">28</value>
 			<value level="2">36</value>
 			<value level="3">43</value>
@@ -2515,7 +2515,7 @@
 			<value level="19">84</value>
 			<value level="20">85</value>
 			<value level="21">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2564,7 +2564,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">49</value>
 			<value level="2">55</value>
 			<value level="3">60</value>
@@ -2582,7 +2582,7 @@
 			<value level="15">84</value>
 			<value level="16">85</value>
 			<value level="17">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2628,7 +2628,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">52</value>
 			<value level="2">58</value>
 			<value level="3">62</value>
@@ -2646,7 +2646,7 @@
 			<value level="15">84</value>
 			<value level="16">85</value>
 			<value level="17">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2682,7 +2682,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
 			<value level="3">64</value>
@@ -2699,7 +2699,7 @@
 			<value level="14">84</value>
 			<value level="15">85</value>
 			<value level="16">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2729,7 +2729,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">46</value>
 			<value level="3">52</value>
@@ -2749,7 +2749,7 @@
 			<value level="17">84</value>
 			<value level="18">85</value>
 			<value level="19">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2805,7 +2805,7 @@
 			<value level="17">-6887</value>
 		</effectPoint>
 		<hitTime>1200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">43</value>
 			<value level="2">52</value>
 			<value level="3">60</value>
@@ -2823,7 +2823,7 @@
 			<value level="15">84</value>
 			<value level="16">85</value>
 			<value level="17">86</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2842,7 +2842,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -2852,7 +2852,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -2889,7 +2889,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -2899,7 +2899,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -2936,7 +2936,7 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -2946,7 +2946,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -2986,7 +2986,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -2996,7 +2996,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3037,7 +3037,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3047,7 +3047,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3086,7 +3086,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3096,7 +3096,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -3135,7 +3135,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3145,7 +3145,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3177,7 +3177,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3187,7 +3187,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3229,7 +3229,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3239,7 +3239,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3278,7 +3278,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3288,7 +3288,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -3327,7 +3327,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3337,7 +3337,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3369,7 +3369,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3379,7 +3379,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3421,7 +3421,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3431,7 +3431,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3470,7 +3470,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3480,7 +3480,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -3519,7 +3519,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3529,7 +3529,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3561,7 +3561,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3571,7 +3571,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3613,7 +3613,7 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3623,7 +3623,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3662,7 +3662,7 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3672,7 +3672,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -3711,7 +3711,7 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3721,7 +3721,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3753,7 +3753,7 @@
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3763,7 +3763,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3805,7 +3805,7 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3815,7 +3815,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3854,7 +3854,7 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3864,7 +3864,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -3903,7 +3903,7 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3913,7 +3913,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -3945,7 +3945,7 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3200</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -3955,7 +3955,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">227</value>
 			<value level="2">234</value>
@@ -3996,7 +3996,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -4006,7 +4006,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -4045,7 +4045,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4500</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -4055,7 +4055,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">151</value>
 			<value level="2">156</value>
@@ -4094,7 +4094,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">75</value>
 			<value level="2">78</value>
 			<value level="3">81</value>
@@ -4104,7 +4104,7 @@
 			<value level="7">93</value>
 			<value level="8">96</value>
 			<value level="9">99</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
 			<value level="2">78</value>

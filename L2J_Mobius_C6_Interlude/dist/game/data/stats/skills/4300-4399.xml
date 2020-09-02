@@ -6,7 +6,7 @@
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="effectRange" val="-1" />
 	</skill>
 	<skill id="4301" levels="1" name="Race">
@@ -15,7 +15,7 @@
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="effectRange" val="-1" />
 	</skill>
 	<skill id="4302" levels="1" name="Race">
@@ -24,7 +24,7 @@
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="castRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="effectRange" val="-1" />
 	</skill>
 	<skill id="4303" levels="1" name="Strong Type">
@@ -164,8 +164,8 @@
 	<skill id="4314" levels="12" name="BOSS Holy Light Burst">
 		<table name="#power">21 31 43 58 75 92 108 115 121 125 129 132</table>
 		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
-		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -183,8 +183,8 @@
 	<skill id="4315" levels="12" name="Hold">
 		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#mpConsume">17 29 39 53 67 83 97 103 108 112 115 116</table>
-		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="70" />
@@ -224,7 +224,7 @@
 		<table name="#rEvas">3 4 5 6 7</table>
 		<table name="#pAtk">1.45 1.55 1.65 1.75 1.85</table>
 		<table name="#pDef">0.8 0.76 0.72 0.68 0.64</table>
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -244,7 +244,7 @@
 		</for>
 	</skill>
 	<skill id="4318" levels="1" name="Ultimate Buff">
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -288,8 +288,8 @@
 		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#dot">18 31 38 60 75 84 86 144 150 150 153 153</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 77 78 83</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
@@ -311,7 +311,7 @@
 	</skill>
 	<skill id="4321" levels="1" name="Decrease P. Def">
 		<!-- Temporarily but significantly reduces P. Def. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
@@ -332,7 +332,7 @@
 	</skill>
 	<skill id="4322" levels="1" name="Wind Walk for Beginners">
 		<!-- Temporarily increases Speed. Effect 2. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -348,7 +348,7 @@
 	</skill>
 	<skill id="4323" levels="1" name="Shield for Beginners">
 		<!-- Temporarily increases P. Def. Effect 3. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -364,7 +364,7 @@
 	</skill>
 	<skill id="4324" levels="1" name="Bless the Body for Beginners">
 		<!-- Temporarily increases maximum HP. Effect 6. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -380,7 +380,7 @@
 	</skill>
 	<skill id="4325" levels="1" name="Vampiric Rage for Beginners">
 		<!-- Temporarily restores HP using damage inflicted upon the enemy. Excludes damage inflicted by skill or remote attack. Effect 4. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="true" />
@@ -396,7 +396,7 @@
 	</skill>
 	<skill id="4326" levels="1" name="Regeneration for Beginners">
 		<!-- Temporarily increases ability to restore HP. Effect 3. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -412,7 +412,7 @@
 	</skill>
 	<skill id="4327" levels="1" name="Haste for Beginners">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -428,7 +428,7 @@
 	</skill>
 	<skill id="4328" levels="1" name="Bless the Soul for Beginners">
 		<!-- Temporarily increases maximum MP. Effect 6. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -444,7 +444,7 @@
 	</skill>
 	<skill id="4329" levels="1" name="Acumen for Beginners">
 		<!-- Temporarily increases Casting Spd. Effect 3. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -460,7 +460,7 @@
 	</skill>
 	<skill id="4330" levels="1" name="Concentration for Beginners">
 		<!-- Temporarily reduces the probability of damage and cancellation of magic. Effect 1. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -476,7 +476,7 @@
 	</skill>
 	<skill id="4331" levels="1" name="Empower for Beginners">
 		<!-- Temporarily increases M. Atk. Effect 1. -->
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -588,7 +588,7 @@
 		<set name="effectRange" val="900" />
 	</skill>
 	<skill id="4340" levels="1" name="Ultimate Buff, 2nd">
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -606,7 +606,7 @@
 		</for>
 	</skill>
 	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
-		<set name="magicLvl" val="60" />
+		<set name="magicLevel" val="60" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -939,7 +939,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1212,8 +1212,8 @@
 	<skill id="4377" levels="12" name="Wield Temper">
 		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -1228,8 +1228,8 @@
 	</skill>
 	<skill id="4378" levels="12" name="Self Damage Shield">
 		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -1271,7 +1271,7 @@
 		<!-- Temporarily blocks the use of magic skills. -->
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<!-- Just Boadcast -->
@@ -1299,7 +1299,7 @@
 	<skill id="4383" levels="1" name="NPC Hate Stone">
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="skillRadius" val="200" />
@@ -1311,7 +1311,7 @@
 	</skill>
 	<skill id="4384" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that lowers P. Def. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<!-- guessing -->
@@ -1326,7 +1326,7 @@
 	</skill>
 	<skill id="4385" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that lowers P. Atk. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<!-- guessing -->
@@ -1341,7 +1341,7 @@
 	</skill>
 	<skill id="4386" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against poison. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<!-- guessing -->
@@ -1356,7 +1356,7 @@
 	</skill>
 	<skill id="4387" levels="1" name="Scapegoat's Grace">
 		<!-- Scapegoat's Grace. Temporarily protects against any de-buff that diminishes the effect of HP recovery magic. -->
-		<set name="magicLvl" val="80" />
+		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<!-- guessing -->
@@ -1396,7 +1396,7 @@
 	<skill id="4390" levels="1" name="NPC Abnormal Immunity">
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
-		<set name="magicLvl" val="1" />
+		<set name="magicLevel" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />

@@ -225,7 +225,7 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="magicLvl">
+								<xs:element name="magicLevel">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
 											<xs:element maxOccurs="unbounded" name="value">

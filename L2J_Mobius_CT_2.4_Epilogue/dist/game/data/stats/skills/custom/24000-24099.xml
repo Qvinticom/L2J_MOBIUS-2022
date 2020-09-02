@@ -3,7 +3,7 @@
 	<skill id="24003" levels="1" name="Unsummon">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="65" />
+		<set name="magicLevel" val="65" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>

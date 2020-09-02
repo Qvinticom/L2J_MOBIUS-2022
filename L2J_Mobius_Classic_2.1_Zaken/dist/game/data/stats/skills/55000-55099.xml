@@ -16,7 +16,7 @@
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -75,7 +75,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -129,7 +129,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -228,7 +228,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29031</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -245,7 +245,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29032</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -328,7 +328,7 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<stayAfterDeath>True</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
@@ -419,7 +419,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -473,7 +473,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -537,7 +537,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29554</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -554,7 +554,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29555</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -587,7 +587,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -612,7 +612,7 @@
 		<icon>br_cashtex.item.br_cash_rune_of_exp_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<passiveConditions>
 			<condition name="CheckLevel">
@@ -634,7 +634,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29701</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -666,7 +666,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29581</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -837,7 +837,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29582</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -972,7 +972,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29583</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1121,7 +1121,7 @@
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>418</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>52</magicLvl>
+		<magicLevel>52</magicLevel>
 		<hitTime>4000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<operateType>A2</operateType>
@@ -1144,7 +1144,7 @@
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>219</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>30</magicLvl>
+		<magicLevel>30</magicLevel>
 		<hitTime>4000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<operateType>A2</operateType>
@@ -1176,7 +1176,7 @@
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1238,7 +1238,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -1292,7 +1292,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -1363,7 +1363,7 @@
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1381,7 +1381,7 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1396,7 +1396,7 @@
 	<skill id="55060" toLevel="1" name="Griffin's Benediction">
 		<!-- STR + 1, INT + 1. -->
 		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1424,7 +1424,7 @@
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1464,7 +1464,7 @@
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1494,7 +1494,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29671</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1511,7 +1511,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29672</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1532,7 +1532,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29673</itemConsumeId> <!-- L2Day - Guidance Scroll -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -1582,7 +1582,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29674</itemConsumeId> <!-- L2Day - Guidance Scroll -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -1601,7 +1601,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29675</itemConsumeId> <!-- Blessed Scroll of Escape: Castle -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1631,7 +1631,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29676</itemConsumeId>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -1705,7 +1705,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29692</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1876,7 +1876,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29693</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2011,7 +2011,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29694</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2244,7 +2244,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29695</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2261,7 +2261,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29696</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2292,7 +2292,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -2346,7 +2346,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<selfEffects>
 			<effect name="CallSkill"> <!-- Shield -->
 				<skillId>1040</skillId> <!-- Shield -->
@@ -2421,7 +2421,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49525</itemConsumeId>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2452,7 +2452,7 @@
 	<skill id="55090" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 1">
 		<!-- Increases P. Atk. by 4. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2465,7 +2465,7 @@
 	<skill id="55091" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 1">
 		<!-- Increases P. Atk. by 6. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2489,7 +2489,7 @@
 	<skill id="55092" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 2">
 		<!-- P. Atk. + 4 and P. Critical Damage + 26. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2506,7 +2506,7 @@
 	<skill id="55093" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 2">
 		<!-- P. Atk. + 6 and P. Critical Damage + 38. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2545,7 +2545,7 @@
 	<skill id="55094" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 3">
 		<!-- P. Atk. + 4, P. Critical Damage + 26, P. Critical Rate + 1%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2566,7 +2566,7 @@
 	<skill id="55095" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 3">
 		<!-- P. Atk. + 6, P. Critical Damage + 38, P. Critical Rate + 2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2620,7 +2620,7 @@
 	<skill id="55096" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 4">
 		<!-- P. Atk. + 4, P. Critical Damage + 26, P. Critical Rate + 1%, P. Atk. + 1%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2645,7 +2645,7 @@
 	<skill id="55097" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 4">
 		<!-- P. Atk. + 6, P. Critical Damage + 38, P. Critical Rate + 2%, P. Atk. + 1.5%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2714,7 +2714,7 @@
 	<skill id="55098" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 5">
 		<!-- P. Atk. + 4, P. Critical Damage + 26, P. Critical Rate + 1%, P. Atk. + 1%, P. Critical Damage + 1%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2743,7 +2743,7 @@
 	<skill id="55099" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 5">
 		<!-- P. Atk. + 6, P. Critical Damage + 38, P. Critical Rate + 2%, P. Atk. + 1.5%, P. Critical Damage + 2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>

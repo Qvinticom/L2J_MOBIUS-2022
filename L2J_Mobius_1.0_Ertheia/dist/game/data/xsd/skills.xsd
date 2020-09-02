@@ -259,7 +259,7 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="magicLvl">
+								<xs:element name="magicLevel">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
 											<xs:element maxOccurs="unbounded" name="value">
@@ -2694,21 +2694,6 @@
 								<xs:element name="handler" type="xs:string" />
 								<xs:element name="blockActionUseSkill" type="xs:boolean" />
 								<xs:element name="is_destroyable" type="xs:boolean" />
-								<xs:element name="magicLevel">
-									<xs:complexType mixed="true">
-										<xs:sequence minOccurs="0">
-											<xs:element maxOccurs="unbounded" name="value">
-												<xs:complexType>
-													<xs:simpleContent>
-														<xs:extension base="xs:unsignedByte">
-															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-														</xs:extension>
-													</xs:simpleContent>
-												</xs:complexType>
-											</xs:element>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
 								<xs:element name="isHate" type="xs:boolean" />
 								<xs:element name="affectRate" type="xs:unsignedByte" />
 								<xs:element name="isNecessaryToggle" type="xs:boolean" />

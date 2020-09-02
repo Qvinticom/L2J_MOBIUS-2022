@@ -153,7 +153,7 @@
 		<!-- Water Attack Defense +20. -->
 		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ElementalSpiritDefense">
 				<amount>
@@ -171,7 +171,7 @@
 		<!-- Fire Attack Defense +20. -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ElementalSpiritDefense">
 				<amount>
@@ -189,7 +189,7 @@
 		<!-- Wind Attack Defense +20. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ElementalSpiritDefense">
 				<amount>
@@ -207,7 +207,7 @@
 		<!-- Earth Attack Defense +20. -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ElementalSpiritDefense">
 				<amount>
@@ -225,7 +225,7 @@
 		<!-- Acquired attribute XP +3%. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>P</operateType>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="SpiritExpModify">
 				<amount>
@@ -247,7 +247,7 @@
 		<effectPoint>1</effectPoint>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

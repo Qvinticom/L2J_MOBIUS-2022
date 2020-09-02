@@ -36,7 +36,7 @@
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>40</magicLvl>
+		<magicLevel>40</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
 		<staticReuse>true</staticReuse>
@@ -247,7 +247,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<magicLvl>-1</magicLvl>
+		<magicLevel>-1</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -286,7 +286,7 @@
 		<effectPoint>-372</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -307,7 +307,7 @@
 		<effectPoint>-114</effectPoint>
 		<affectRange>300</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -330,7 +330,7 @@
 		<effectPoint>-372</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -351,7 +351,7 @@
 		<effectPoint>-114</effectPoint>
 		<affectRange>300</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -374,7 +374,7 @@
 		<effectPoint>-372</effectPoint>
 		<affectRange>300</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -400,7 +400,7 @@
 		<effectPoint>-114</effectPoint>
 		<affectRange>300</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -431,7 +431,7 @@
 		<activateRate>200</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -453,7 +453,7 @@
 		<effectPoint>-372</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -472,7 +472,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>175</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
@@ -504,7 +504,7 @@
 		<effectPoint>-523</effectPoint>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>80</mpConsume>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -536,7 +536,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -562,7 +562,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
@@ -605,7 +605,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>105</magicLvl>
+		<magicLevel>105</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -666,7 +666,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -687,7 +687,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -719,7 +719,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-190</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -751,7 +751,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -772,7 +772,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-114</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -793,7 +793,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -814,7 +814,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -835,7 +835,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -897,7 +897,7 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -940,7 +940,7 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
-		<magicLvl>106</magicLvl>
+		<magicLevel>106</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -978,7 +978,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>-2</magicLvl>
+		<magicLevel>-2</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<trait>CHANGEBODY</trait>
@@ -1024,7 +1024,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>100</magicLvl>
+		<magicLevel>100</magicLevel>
 		<mpConsume>80</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>

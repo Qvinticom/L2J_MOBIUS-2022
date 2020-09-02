@@ -6,7 +6,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<magicLvl>93</magicLvl>
+		<magicLevel>93</magicLevel>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -40,7 +40,7 @@
 			<value level="2">0</value>
 			<value level="3">0</value>
 		</mpConsume>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<operateType>A4</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
@@ -86,7 +86,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<magicLvl>95</magicLvl>
+		<magicLevel>95</magicLevel>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -119,7 +119,7 @@
 			<value level="2">0</value>
 			<value level="3">0</value>
 		</mpConsume>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<operateType>A4</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
@@ -166,7 +166,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -216,12 +216,12 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -245,13 +245,13 @@
 	</skill>
 	<skill id="11807" toLevel="5" name="Miracle of Fairy">
 		<icon>icon.skill11807</icon>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">87</value>
 			<value level="2">90</value>
 			<value level="3">93</value>
 			<value level="4">96</value>
 			<value level="5">99</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -288,10 +288,10 @@
 		<effectPoint>379</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">91</value>
 			<value level="2">97</value>
-		</magicLvl>
+		</magicLevel>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -319,10 +319,10 @@
 		<effectPoint>379</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">91</value>
 			<value level="2">97</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -348,7 +348,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -364,7 +364,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -387,7 +387,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>900</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -416,7 +416,7 @@
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>93</magicLvl>
+		<magicLevel>93</magicLevel>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -442,7 +442,7 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">88</value>
@@ -456,7 +456,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>
 			<value level="1">-867</value>
@@ -554,7 +554,7 @@
 			<value level="2">0</value>
 			<value level="3">0</value>
 		</mpConsume>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<operateType>A4</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
@@ -607,7 +607,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -644,7 +644,7 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<operateType>A1</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">89</value>
@@ -658,7 +658,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">282</value>
 			<value level="2">288</value>
@@ -759,7 +759,7 @@
 		<reuseDelay>150000</reuseDelay>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -787,7 +787,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -832,7 +832,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -883,7 +883,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -924,7 +924,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -973,7 +973,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1013,7 +1013,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1053,7 +1053,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>22</isMagic>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>70</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -1073,13 +1073,13 @@
 		<icon>icon.skill11827</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">88</value>
 			<value level="3">91</value>
 			<value level="4">94</value>
 			<value level="5">97</value>
-		</magicLvl>
+		</magicLevel>
 		<reuseDelay>4000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -1108,7 +1108,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<mpConsume>458</mpConsume>
 		<mpInitialConsume>115</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -1138,7 +1138,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
+		<magicLevel>85</magicLevel>
 		<isMagic>22</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1210,7 +1210,7 @@
 		<effectPoint>-655</effectPoint>
 		<effectRange>1100</effectRange>
 		<operateType>A1</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
 			<value level="3">89</value>
@@ -1224,7 +1224,7 @@
 			<value level="11">105</value>
 			<value level="12">107</value>
 			<value level="13">109</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">373</value>
 			<value level="2">377</value>
@@ -1284,7 +1284,7 @@
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
 		<trait>SLEEP</trait>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">86</value>
 			<value level="3">89</value>
@@ -1294,7 +1294,7 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">52</value>
 			<value level="2">52</value>
@@ -1358,7 +1358,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
 		<targetType>SELF</targetType>
@@ -1388,7 +1388,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>97</magicLvl>
+		<magicLevel>97</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1414,7 +1414,7 @@
 		<!-- Increases P. Atk. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -1459,12 +1459,12 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>1</isMagic>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effectPoint>560</effectPoint>
 		<conditions>
 			<condition name="RemainMpPer">
@@ -1529,14 +1529,14 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>1</isMagic>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 			<value level="5">106</value>
 			<value level="6">110</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">185</value>
 			<value level="2">205</value>
@@ -1608,14 +1608,14 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>1</isMagic>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 			<value level="5">106</value>
 			<value level="6">110</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">148</value>
 			<value level="2">164</value>
@@ -1672,12 +1672,12 @@
 		<!-- Magic skill Cooldown -$s1. -->
 		<icon>icon.skill0228</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="Reuse">
 				<amount>
@@ -1720,14 +1720,14 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>1</isMagic>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 			<value level="5">106</value>
 			<value level="6">110</value>
-		</magicLvl>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">185</value>
 			<value level="2">205</value>
@@ -1784,12 +1784,12 @@
 		<!-- M. Atk. +$s1. M. Skill MP Consumption -$s2. -->
 		<icon>icon.skill0945</icon>
 		<operateType>P</operateType>
-		<magicLvl>
+		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-		</magicLvl>
+		</magicLevel>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1981,7 +1981,7 @@
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<mpConsume>82</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
@@ -2037,7 +2037,7 @@
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<mpConsume>82</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>1000</hitTime>

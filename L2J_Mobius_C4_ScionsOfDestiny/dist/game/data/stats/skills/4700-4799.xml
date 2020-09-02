@@ -208,10 +208,10 @@
 		<!-- De-buff attack used by Hatchling of Wind/Strider. Inflicts damage and shock simultaneously. Power 16. -->
 		<table name="#mpConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
 		<table name="#power">16 35 73 138 238 375 537 619 697 766 821 864</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="overHit" val="true" />
@@ -228,10 +228,10 @@
 	<skill id="4711" levels="12" name="Wild Defense">
 		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def and M. Def significantly while greatly reducing Atk. Spd. and Speed. -->
 		<table name="#mpConsume">46 76 104 139 179 220 258 275 288 298 305 309</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#aggro">138 204 285 379 477 566 635 659 676 689 700 709</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1100" />
@@ -253,10 +253,10 @@
 		<!-- Star Hatchling/Strider's attack skill. Power 6. -->
 		<table name="#mpConsume">6 6 7 7 8 8 9 9 10 10 11 11</table>
 		<table name="#power">6 9 13 17 23 28 34 36 39 41 42 43</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="reuseDelay" val="0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
@@ -270,11 +270,11 @@
 		<!-- Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33. -->
 		<table name="#mpConsume">5 9 11 15 19 23 27 28 30 30 32 32</table>
 		<table name="#power">33 61 98 145 198 251 298 316 330 338 341 342</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#aggro">33 34 35 36 37 38 39 40 41 42 43 44</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="3000" />
@@ -310,11 +310,11 @@
 		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9. -->
 		<table name="#mpConsume">5 8 12 17 20 25 29 32 33 33 34 34</table>
 		<table name="#power">9 16 25 37 50 63 75 79 83 85 86 86</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#aggro">9 16 25 37 50 63 75 79 83 85 86 86</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />
@@ -329,10 +329,10 @@
 		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power 37. -->
 		<table name="#mpConsume">33 59 88 122 162 195 228 242 252 259 262 262</table>
 		<table name="#power">62 113 184 272 371 471 558 592 617 634 640 640</table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />

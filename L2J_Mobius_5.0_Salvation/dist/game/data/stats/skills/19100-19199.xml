@@ -5,7 +5,7 @@
 		<icon>icon.skill19100</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 	</skill>
 	<skill id="19101" toLevel="1" name="Chain Blow - Test">
 		<!-- Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed. -->
@@ -17,7 +17,7 @@
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -39,7 +39,7 @@
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
 		<coolTime>300</coolTime>
@@ -70,7 +70,7 @@
 		<icon>icon.skill0050</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>700</amount>
@@ -95,7 +95,7 @@
 		<icon>icon.skill0050</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>1000</amount>
@@ -120,7 +120,7 @@
 		<icon>icon.skill0820</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
@@ -148,7 +148,7 @@
 		<icon>icon.skill0820</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isDebuff>false</isDebuff>
 		<passiveConditions>
 			<condition name="CheckLevel">
@@ -177,7 +177,7 @@
 		<icon>icon.skill0788_3</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ExpModify">
 				<amount>3</amount>
@@ -189,7 +189,7 @@
 		<icon>icon.skill0788_5</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="ExpModify">
 				<amount>5</amount>
@@ -435,7 +435,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>1</magicLvl>
+		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
