@@ -66,14 +66,14 @@ public class GetAgro extends AbstractEffect
 			final Set<Integer> clans = template.getClans();
 			if (clans != null)
 			{
-				for (Attackable nearby : World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
+				World.getInstance().forEachVisibleObjectInRange(effected, Attackable.class, template.getClanHelpRange(), nearby ->
 				{
 					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
 					{
 						nearby.addDamageHate(effector, 1, 200);
 						nearby.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 					}
-				}
+				});
 			}
 		}
 	}

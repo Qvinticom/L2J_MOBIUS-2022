@@ -175,17 +175,17 @@ public class KnockBack extends AbstractEffect
 			effected.broadcastPacket(new ValidateLocation(effected));
 			effected.revalidateZone(true);
 			
-			for (PlayerInstance nearbyPlayer : World.getInstance().getVisibleObjectsInRange(effected, PlayerInstance.class, 1200))
+			World.getInstance().forEachVisibleObjectInRange(effected, PlayerInstance.class, 1200, nearby ->
 			{
-				if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearbyPlayer.isAlterSkillActive())
+				if ((nearby.getRace() != Race.ERTHEIA) && (nearby.getTarget() == effected) && nearby.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearby.isAlterSkillActive())
 				{
-					final int chainSkill = KNOCKBACK_SKILLS.get(nearbyPlayer.getClassId()).intValue();
-					if (nearbyPlayer.getSkillRemainingReuseTime(chainSkill) == -1)
+					final int chainSkill = KNOCKBACK_SKILLS.get(nearby.getClassId()).intValue();
+					if (nearby.getSkillRemainingReuseTime(chainSkill) == -1)
 					{
-						nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 3));
+						nearby.sendPacket(new ExAlterSkillRequest(nearby, chainSkill, chainSkill, 3));
 					}
 				}
-			}
+			});
 		}
 	}
 }

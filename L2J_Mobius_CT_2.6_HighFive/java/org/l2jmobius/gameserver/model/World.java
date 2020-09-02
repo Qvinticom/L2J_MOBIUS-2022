@@ -532,7 +532,7 @@ public class World
 			if (oldRegion.isSurroundingRegion(worldRegion))
 			{
 				continue;
-			} 
+			}
 			
 			final List<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
 			for (int j = 0; j < visibleObjects.size(); j++)
