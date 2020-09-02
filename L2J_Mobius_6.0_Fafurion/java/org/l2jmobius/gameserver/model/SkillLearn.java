@@ -35,7 +35,7 @@ public class SkillLearn
 {
 	private final String _skillName;
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	private final int _getLevel;
 	private final int _getDualClassLevel;
 	private final boolean _autoGet;
@@ -62,7 +62,7 @@ public class SkillLearn
 	{
 		_skillName = set.getString("skillName");
 		_skillId = set.getInt("skillId");
-		_skillLvl = set.getInt("skillLvl");
+		_skillLevel = set.getInt("skillLevel");
 		_getLevel = set.getInt("getLevel");
 		_getDualClassLevel = set.getInt("getDualClassLevel", 0);
 		_autoGet = set.getBoolean("autoGet", false);
@@ -97,7 +97,7 @@ public class SkillLearn
 	 */
 	public int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
 	}
 	
 	/**
@@ -277,7 +277,7 @@ public class SkillLearn
 	@Override
 	public String toString()
 	{
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		return "[" + skill + " treeId: " + _treeId + " row: " + _row + " column: " + _column + " pointsRequired:" + _pointsRequired + "]";
 	}
 }

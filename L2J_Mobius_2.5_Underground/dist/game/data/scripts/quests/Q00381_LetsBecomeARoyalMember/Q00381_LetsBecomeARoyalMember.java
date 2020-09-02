@@ -43,7 +43,7 @@ public class Q00381_LetsBecomeARoyalMember extends Quest
 	// Reward
 	private static final int ROYAL_MEMBERSHIP = 5898;
 	// Misc
-	private static final int MIN_LVL = 55;
+	private static final int MIN_LEVEL = 55;
 	
 	public Q00381_LetsBecomeARoyalMember()
 	{
@@ -100,7 +100,7 @@ public class Q00381_LetsBecomeARoyalMember extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if ((talker.getLevel() < MIN_LVL) || !hasQuestItems(talker, COLLECTOR_MEMBERSHIP_1))
+					if ((talker.getLevel() < MIN_LEVEL) || !hasQuestItems(talker, COLLECTOR_MEMBERSHIP_1))
 					{
 						htmltext = "30232-02.html";
 					}

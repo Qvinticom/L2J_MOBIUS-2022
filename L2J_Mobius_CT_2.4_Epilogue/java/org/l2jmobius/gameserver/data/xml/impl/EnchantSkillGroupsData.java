@@ -116,7 +116,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	/**
 	 * Adds the new route for skill.
 	 * @param skillId the skill id
-	 * @param maxLvL the max lvl
+	 * @param maxLvL the max level
 	 * @param route the route
 	 * @param group the group
 	 * @return the int

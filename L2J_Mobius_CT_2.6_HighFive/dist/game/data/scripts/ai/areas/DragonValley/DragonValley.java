@@ -82,8 +82,8 @@ public class DragonValley extends AbstractNpcAI
 	// Misc
 	private static final int MIN_DISTANCE = 1500;
 	private static final int MIN_MEMBERS = 3;
-	private static final int MIN_LVL = 80;
-	private static final int CLASS_LVL = 3;
+	private static final int MIN_LEVEL = 80;
+	private static final int CLASS_LEVEL = 3;
 	private static final EnumMap<ClassId, Double> CLASS_POINTS = new EnumMap<>(ClassId.class);
 	static
 	{
@@ -227,7 +227,7 @@ public class DragonValley extends AbstractNpcAI
 		{
 			for (PlayerInstance member : player.getParty().getMembers())
 			{
-				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (npc.calculateDistance3D(member) < MIN_DISTANCE))
+				if ((member.getLevel() >= MIN_LEVEL) && (member.getClassId().level() >= CLASS_LEVEL) && (npc.calculateDistance3D(member) < MIN_DISTANCE))
 				{
 					points += CLASS_POINTS.get(member.getClassId());
 				}

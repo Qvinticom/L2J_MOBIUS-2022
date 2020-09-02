@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
- * Format (ch) dd c: (id) 0xD0 h: (subid) 0x32 d: skill id d: skill lvl
+ * Format (ch) dd c: (id) 0xD0 h: (subid) 0x32 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillSafe implements IClientIncomingPacket
@@ -48,20 +48,20 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_skillLevel = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -90,7 +90,7 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 			return;
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		if (skill == null)
 		{
 			return;
@@ -103,9 +103,9 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 		{
 			return;
 		}
-		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLevel);
 		final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
+		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLevel))
 		{
 			return;
 		}

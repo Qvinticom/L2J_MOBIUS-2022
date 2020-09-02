@@ -47,7 +47,7 @@ public class Q00299_GatherIngredientsForPie extends Quest
 	// Rewards
 	private static final List<QuestItemHolder> REWARDS = new ArrayList<>(5);
 	// Misc
-	private static final int MIN_LVL = 34;
+	private static final int MIN_LEVEL = 34;
 	static
 	{
 		MONSTERS_CHANCES.put(20934, 700); // Wasp Worker
@@ -221,7 +221,7 @@ public class Q00299_GatherIngredientsForPie extends Quest
 				{
 					case State.CREATED:
 					{
-						html = (talker.getLevel() >= MIN_LVL) ? "30620-01.htm" : "30620-02.htm";
+						html = (talker.getLevel() >= MIN_LEVEL) ? "30620-01.htm" : "30620-02.htm";
 						break;
 					}
 					case State.STARTED:

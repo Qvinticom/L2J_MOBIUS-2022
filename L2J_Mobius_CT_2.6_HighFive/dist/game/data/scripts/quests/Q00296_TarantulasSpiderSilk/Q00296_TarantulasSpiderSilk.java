@@ -45,7 +45,7 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 		20508,
 	};
 	// Misc
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	
 	public Q00296_TarantulasSpiderSilk()
 	{
@@ -141,7 +141,7 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 		String html = getNoQuestMsg(talker);
 		if (qs.isCreated() && (npc.getId() == TRADER_MION))
 		{
-			html = (talker.getLevel() >= MIN_LVL ? "30519-02.htm" : "30519-01.htm");
+			html = (talker.getLevel() >= MIN_LEVEL ? "30519-02.htm" : "30519-01.htm");
 		}
 		else if (qs.isStarted())
 		{

@@ -56,8 +56,8 @@ public class Q11014_SurpriseGift extends Quest
 	private static final int GIANT_STONE_GUARDIAN = 20380;
 	private static final int DARK_HORROR = 20105;
 	// Misc
-	private static final int MIN_LVL = 11;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 11;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11014_SurpriseGift()
 	{
@@ -65,7 +65,7 @@ public class Q11014_SurpriseGift extends Quest
 		addStartNpc(TALOS);
 		addTalkId(PAYNE, TALOS);
 		addKillId(ZOMBIE_FOREST_ELF, ZOMBIE_FOREST_ELF_RESEARCHER, FESTERING_BAT, RED_EYE_BAT, GIANT_STONE_GUARDIAN, GIANT_STONE_SOLDIER, DARK_HORROR);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DARK_ELF, "no-race.html"); // Custom
 		registerQuestItems(ARMOR_DESIGN, ZOMBIE_FOREST_ELF_TOOTH, BAT_SKIN, STONE_GIANTS_SHINY_ROCK, OLD_BONE_FRAGMENT);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_SURPRISE_GIFT);

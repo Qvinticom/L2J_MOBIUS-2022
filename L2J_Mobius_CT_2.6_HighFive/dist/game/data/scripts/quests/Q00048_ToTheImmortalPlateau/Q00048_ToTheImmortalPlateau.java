@@ -48,7 +48,7 @@ public class Q00048_ToTheImmortalPlateau extends Quest
 	private static final int GEMSTONE_POWDER = 7567;
 	private static final int MAGIC_SWORD_HILT = 7568;
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	// Reward
 	private static final int SCROLL_OF_ESCAPE_ORC_VILLAGE = 7557;
 	// Get condition for each npc
@@ -197,7 +197,7 @@ public class Q00048_ToTheImmortalPlateau extends Quest
 				{
 					case State.CREATED:
 					{
-						if (talker.getLevel() < MIN_LVL)
+						if (talker.getLevel() < MIN_LEVEL)
 						{
 							htmltext = "30097-03.html";
 						}

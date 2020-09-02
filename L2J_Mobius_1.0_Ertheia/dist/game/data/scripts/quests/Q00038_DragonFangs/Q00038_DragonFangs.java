@@ -49,7 +49,7 @@ public class Q00038_DragonFangs extends Quest
 	private static final int ASPIS = 627;
 	private static final int BLUE_BUCKSKIN_BOOTS = 1123;
 	// Misc
-	private static final int MIN_LVL = 19;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00038_DragonFangs()
 	{
@@ -58,7 +58,7 @@ public class Q00038_DragonFangs extends Quest
 		addTalkId(GUARD_LUIS, IRIS, MAGISTER_ROHMER);
 		addKillId(LIZARDMAN_SENTINEL, LIZARDMAN_SHAMAN, LIZARDMAN_LEADER, LIZARDMAN_SUB_LEADER);
 		registerQuestItems(FEATHER.getId(), TOTEM_TOOTH_1ST, TOTEM_TOOTH_2ND.getId(), LETTER_1ST, LETTER_2ND);
-		addCondMinLevel(MIN_LVL, "30386-02.htm");
+		addCondMinLevel(MIN_LEVEL, "30386-02.htm");
 	}
 	
 	@Override

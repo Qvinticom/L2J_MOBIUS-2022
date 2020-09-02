@@ -239,28 +239,28 @@ public class Valakas extends AbstractNpcAI
 				
 				// Verify if "Valakas Regeneration" skill is active.
 				final BuffInfo info = npc.getEffectList().getBuffInfoBySkillId(VALAKAS_REGENERATION);
-				final int lvl = info != null ? info.getSkill().getLevel() : 0;
+				final int level = info != null ? info.getSkill().getLevel() : 0;
 				
-				// Current HPs are inferior to 25% ; apply lvl 4 of regen skill.
-				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (lvl != 4))
+				// Current HPs are inferior to 25% ; apply level 4 of regen skill.
+				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (level != 4))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 4));
 				}
-				// Current HPs are inferior to 50% ; apply lvl 3 of regen skill.
-				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 2) / 4.0)) && (lvl != 3))
+				// Current HPs are inferior to 50% ; apply level 3 of regen skill.
+				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 2) / 4.0)) && (level != 3))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 3));
 				}
-				// Current HPs are inferior to 75% ; apply lvl 2 of regen skill.
-				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)) && (lvl != 2))
+				// Current HPs are inferior to 75% ; apply level 2 of regen skill.
+				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)) && (level != 2))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 2));
 				}
-				// Apply lvl 1.
-				else if (lvl != 1)
+				// Apply level 1.
+				else if (level != 1)
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillData.getInstance().getSkill(VALAKAS_REGENERATION, 1));

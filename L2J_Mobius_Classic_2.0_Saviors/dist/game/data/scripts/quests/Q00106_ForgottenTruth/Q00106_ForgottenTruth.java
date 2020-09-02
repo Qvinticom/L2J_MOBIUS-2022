@@ -47,7 +47,7 @@ public class Q00106_ForgottenTruth extends Quest
 	// Reward
 	private static final int REWARDS = 49049; // Eldritch Dagger (Novice)
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	private static final int MAX_LEVEL = 15;
 	
 	public Q00106_ForgottenTruth()
@@ -126,7 +126,7 @@ public class Q00106_ForgottenTruth extends Quest
 					{
 						if (talker.getRace() == Race.DARK_ELF)
 						{
-							htmltext = talker.getLevel() >= MIN_LVL ? "30358-03.htm" : "30358-02.htm";
+							htmltext = talker.getLevel() >= MIN_LEVEL ? "30358-03.htm" : "30358-02.htm";
 						}
 						else
 						{

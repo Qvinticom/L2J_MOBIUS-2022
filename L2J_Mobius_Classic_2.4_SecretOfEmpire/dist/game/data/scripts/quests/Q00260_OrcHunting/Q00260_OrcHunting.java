@@ -50,7 +50,7 @@ public class Q00260_OrcHunting extends Quest
 		MONSTERS.put(20473, ORC_NECKLACE); // Kaboo Orc Fighter Lieutenant
 	}
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	
 	public Q00260_OrcHunting()
 	{
@@ -115,7 +115,7 @@ public class Q00260_OrcHunting extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
+				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
 				break;
 			}
 			case State.STARTED:

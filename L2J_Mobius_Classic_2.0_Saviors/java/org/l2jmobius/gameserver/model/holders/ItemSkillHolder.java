@@ -27,9 +27,9 @@ public class ItemSkillHolder extends SkillHolder
 	private final int _chance;
 	private final int _value;
 	
-	public ItemSkillHolder(int skillId, int skillLvl, ItemSkillType type, int chance, int value)
+	public ItemSkillHolder(int skillId, int skillLevel, ItemSkillType type, int chance, int value)
 	{
-		super(skillId, skillLvl);
+		super(skillId, skillLevel);
 		_type = type;
 		_chance = chance;
 		_value = value;

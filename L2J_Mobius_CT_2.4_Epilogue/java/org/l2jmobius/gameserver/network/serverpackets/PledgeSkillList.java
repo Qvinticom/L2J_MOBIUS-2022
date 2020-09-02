@@ -35,14 +35,14 @@ public class PledgeSkillList implements IClientOutgoingPacket
 	{
 		int _subType;
 		int _skillId;
-		int _skillLvl;
+		int _skillLevel;
 		
-		public SubPledgeSkill(int subType, int skillId, int skillLvl)
+		public SubPledgeSkill(int subType, int skillId, int skillLevel)
 		{
 			super();
 			_subType = subType;
 			_skillId = skillId;
-			_skillLvl = skillLvl;
+			_skillLevel = skillLevel;
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class PledgeSkillList implements IClientOutgoingPacket
 		{
 			packet.writeD(sk._subType); // Clan Sub-unit types
 			packet.writeD(sk._skillId);
-			packet.writeD(sk._skillLvl);
+			packet.writeD(sk._skillLevel);
 		}
 		return true;
 	}

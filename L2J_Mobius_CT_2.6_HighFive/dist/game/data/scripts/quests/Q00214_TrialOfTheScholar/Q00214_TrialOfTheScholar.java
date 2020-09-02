@@ -108,7 +108,7 @@ public class Q00214_TrialOfTheScholar extends Quest
 	private static final int ENCHANTED_GARGOYLE = 20567;
 	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	private static final int LEVEL = 36;
 	
 	public Q00214_TrialOfTheScholar()
@@ -568,7 +568,7 @@ public class Q00214_TrialOfTheScholar extends Quest
 			{
 				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || (player.getClassId() == ClassId.DARK_WIZARD))
 				{
-					if (player.getLevel() < MIN_LVL)
+					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30461-02.html";
 					}

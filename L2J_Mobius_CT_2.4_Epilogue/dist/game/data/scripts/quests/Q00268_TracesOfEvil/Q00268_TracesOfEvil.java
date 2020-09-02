@@ -41,7 +41,7 @@ public class Q00268_TracesOfEvil extends Quest
 		20478, // Kasha Blade Spider
 	};
 	// Misc
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	
 	public Q00268_TracesOfEvil()
 	{
@@ -92,7 +92,7 @@ public class Q00268_TracesOfEvil extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30559-02.htm" : "30559-01.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30559-02.htm" : "30559-01.htm";
 				break;
 			}
 			case State.STARTED:

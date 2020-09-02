@@ -408,7 +408,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
 		}
 		
-		// if is in subclass, load subclass exp, sp, lvl info
+		// if is in subclass, load subclass exp, sp, level info
 		if (baseClassId != activeClassId)
 		{
 			loadCharacterSubclassInfo(charInfopackage, objectId, activeClassId);

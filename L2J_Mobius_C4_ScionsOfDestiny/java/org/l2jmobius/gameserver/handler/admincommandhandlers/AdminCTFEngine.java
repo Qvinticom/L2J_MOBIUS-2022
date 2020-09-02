@@ -37,8 +37,8 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		"admin_ctf_join_loc",
 		"admin_ctf_edit",
 		"admin_ctf_control",
-		"admin_ctf_minlvl",
-		"admin_ctf_maxlvl",
+		"admin_ctf_minLevel",
+		"admin_ctf_maxLevel",
 		"admin_ctf_tele_npc",
 		"admin_ctf_tele_team",
 		"admin_ctf_tele_flag",
@@ -141,7 +141,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				showControlPage(activeChar);
 				return true;
 			}
-			case "admin_ctf_minlvl":
+			case "admin_ctf_minLevel":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -153,7 +153,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minlvl <min_lvl_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minLevel <min_lvl_value>");
 						return false;
 					}
 					if (!CTF.checkMinLevel(lvl))
@@ -161,7 +161,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Min lvl must be lower then Max");
 						return false;
 					}
-					if (CTF.setMinLvl(lvl))
+					if (CTF.setMinLevel(lvl))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -169,10 +169,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minlvl <min_lvl_value>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minLevel <min_lvl_value>");
 				return false;
 			}
-			case "admin_ctf_maxlvl":
+			case "admin_ctf_maxLevel":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -184,7 +184,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxlvl <max_lvl_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxLevel <max_lvl_value>");
 						return false;
 					}
 					if (!CTF.checkMaxLevel(lvl))
@@ -192,7 +192,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Max lvl must be higher then Min");
 						return false;
 					}
-					if (CTF.setMaxLvl(lvl))
+					if (CTF.setMaxLevel(lvl))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -200,7 +200,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxlvl <min_lvl_value>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxLevel <min_lvl_value>");
 				return false;
 			}
 			case "admin_ctf_tele_npc":
@@ -630,8 +630,8 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		replyMSG.append("<td width=\"100\"><button value=\"Description\" action=\"bypass -h admin_ctf_desc $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"Join Location\" action=\"bypass -h admin_ctf_join_loc $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
-		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_ctf_maxlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_ctf_minlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_ctf_maxLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_ctf_minLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"Max players\" action=\"bypass -h admin_ctf_maxplayers $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"Min players\" action=\"bypass -h admin_ctf_minplayers $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -717,8 +717,8 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			replyMSG.append("Reward Item:&nbsp;<font color=\"00FF00\">(unknown)</font><br1>");
 		}
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + CTF.getRewardAmount() + "</font><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMinLvl() + "</font><br1>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMaxLvl() + "</font><br><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMinLevel() + "</font><br1>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMaxLevel() + "</font><br><br>");
 		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + CTF.getMinPlayers() + "</font><br1>");
 		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + CTF.getMaxPlayers() + "</font><br>");
 		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + CTF.getJoinTime() + "</font><br1>");

@@ -30,14 +30,14 @@ public class RequestPartyMatchConfig extends GameClientPacket
 {
 	private int _auto;
 	private int _loc;
-	private int _lvl;
+	private int _level;
 	
 	@Override
 	protected void readImpl()
 	{
 		_auto = readD();
 		_loc = readD();
-		_lvl = readD();
+		_level = readD();
 	}
 	
 	@Override
@@ -82,7 +82,7 @@ public class RequestPartyMatchConfig extends GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(player);
 			
 			// Send Room list
-			player.sendPacket(new PartyMatchList(player, _auto, _loc, _lvl));
+			player.sendPacket(new PartyMatchList(player, _auto, _loc, _level));
 		}
 	}
 }

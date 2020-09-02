@@ -97,23 +97,23 @@
 		<effects>
 			<effect name="SetSkill" fromLevel="1" toLevel="1">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
-				<skillLvl>1</skillLvl>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="SetSkill" fromLevel="2" toLevel="2">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
-				<skillLvl>2</skillLvl>
+				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="SetSkill" fromLevel="3" toLevel="3">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
-				<skillLvl>3</skillLvl>
+				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="SetSkill" fromLevel="4" toLevel="4">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
-				<skillLvl>4</skillLvl>
+				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="SetSkill" fromLevel="5" toLevel="5">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
-				<skillLvl>5</skillLvl>
+				<skillLevel>5</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -142,7 +142,7 @@
 		<effects>
 			<effect name="SetSkill">
 				<skillId>19223</skillId> <!-- Belief of the Exalted -->
-				<skillLvl>1</skillLvl>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -171,7 +171,7 @@
 		<effects>
 			<effect name="SetSkill">
 				<skillId>19224</skillId> <!-- Blessing of the Exalted -->
-				<skillLvl>1</skillLvl>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -200,7 +200,7 @@
 		<effects>
 			<effect name="SetSkill">
 				<skillId>19225</skillId> <!-- Summon Battle Potion -->
-				<skillLvl>1</skillLvl>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -233,10 +233,10 @@
 		<effects>
 			<effect name="SetSkill">
 				<skillId>19226</skillId> <!-- Favor of the Exalted -->
-				<skillLvl>
+				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
-				</skillLvl>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>

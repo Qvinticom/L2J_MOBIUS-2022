@@ -34,8 +34,8 @@ public class MuscleBomber extends AbstractNpcAI
 	private static final int MUSCLE_BOMBER = 25724;
 	private static final int DRAKOS_ASSASSIN = 22823;
 	// Skills
-	private static final SkillHolder ENHANCE_LVL_1 = new SkillHolder(6842, 1);
-	private static final SkillHolder ENHANCE_LVL_2 = new SkillHolder(6842, 2);
+	private static final SkillHolder ENHANCE_LEVEL_1 = new SkillHolder(6842, 1);
+	private static final SkillHolder ENHANCE_LEVEL_2 = new SkillHolder(6842, 2);
 	// Variables
 	private static final String HIGH_HP_FLAG = "HIGH_HP_FLAG";
 	private static final String MED_HP_FLAG = "MED_HP_FLAG";
@@ -64,13 +64,13 @@ public class MuscleBomber extends AbstractNpcAI
 		if ((npc.getCurrentHp() < (npc.getMaxHp() * HIGH_HP_PERCENTAGE)) && !npc.getVariables().getBoolean(HIGH_HP_FLAG, false))
 		{
 			npc.getVariables().set(HIGH_HP_FLAG, true);
-			addSkillCastDesire(npc, npc, ENHANCE_LVL_1, 99999);
+			addSkillCastDesire(npc, npc, ENHANCE_LEVEL_1, 99999);
 		}
 		
 		if ((npc.getCurrentHp() < (npc.getMaxHp() * MED_HP_PERCENTAGE)) && !npc.getVariables().getBoolean(MED_HP_FLAG, false))
 		{
 			npc.getVariables().set(MED_HP_FLAG, true);
-			addSkillCastDesire(npc, npc, ENHANCE_LVL_2, 99999);
+			addSkillCastDesire(npc, npc, ENHANCE_LEVEL_2, 99999);
 			startQuestTimer(TIMER_SUMMON, 60000, npc, attacker);
 			startQuestTimer(TIMER_LIMIT, 300000, npc, attacker);
 		}

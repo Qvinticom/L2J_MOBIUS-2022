@@ -38,7 +38,7 @@ public class Q00265_BondsOfSlavery extends Quest
 	// NPC
 	private static final int KRISTIN = 30357;
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	static
@@ -110,7 +110,7 @@ public class Q00265_BondsOfSlavery extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
 				break;
 			}
 			case State.STARTED:

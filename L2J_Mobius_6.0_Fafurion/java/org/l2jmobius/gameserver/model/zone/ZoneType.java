@@ -53,8 +53,8 @@ public abstract class ZoneType extends ListenersContainer
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;
 	private String _name = null;
-	private int _minLvl;
-	private int _maxLvl;
+	private int _minLevel;
+	private int _maxLevel;
 	private int[] _race;
 	private int[] _class;
 	private char _classType;
@@ -68,8 +68,8 @@ public abstract class ZoneType extends ListenersContainer
 	protected ZoneType(int id)
 	{
 		_id = id;
-		_minLvl = 0;
-		_maxLvl = 0xFF;
+		_minLevel = 0;
+		_maxLevel = 0xFF;
 		_classType = 0;
 		_race = null;
 		_class = null;
@@ -102,12 +102,12 @@ public abstract class ZoneType extends ListenersContainer
 		// Minimum level
 		else if (name.equals("affectedLvlMin"))
 		{
-			_minLvl = Integer.parseInt(value);
+			_minLevel = Integer.parseInt(value);
 		}
 		// Maximum level
 		else if (name.equals("affectedLvlMax"))
 		{
-			_maxLvl = Integer.parseInt(value);
+			_maxLevel = Integer.parseInt(value);
 		}
 		// Affected Races
 		else if (name.equals("affectedRace"))
@@ -211,8 +211,8 @@ public abstract class ZoneType extends ListenersContainer
 			return false;
 		}
 		
-		// Check lvl
-		if ((creature.getLevel() < _minLvl) || (creature.getLevel() > _maxLvl))
+		// Check level
+		if ((creature.getLevel() < _minLevel) || (creature.getLevel() > _maxLevel))
 		{
 			return false;
 		}

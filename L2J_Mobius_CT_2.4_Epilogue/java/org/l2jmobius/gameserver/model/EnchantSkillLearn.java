@@ -25,13 +25,13 @@ import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 public class EnchantSkillLearn
 {
 	private final int _id;
-	private final int _baseLvl;
+	private final int _baseLevel;
 	private final TreeMap<Integer, Integer> _enchantRoutes = new TreeMap<>();
 	
-	public EnchantSkillLearn(int id, int baseLvl)
+	public EnchantSkillLearn(int id, int baseLevel)
 	{
 		_id = id;
-		_baseLvl = baseLvl;
+		_baseLevel = baseLevel;
 	}
 	
 	public void addNewEnchantRoute(int route, int group)
@@ -52,7 +52,7 @@ public class EnchantSkillLearn
 	 */
 	public int getBaseLevel()
 	{
-		return _baseLvl;
+		return _baseLevel;
 	}
 	
 	public static int getEnchantRoute(int level)
@@ -82,7 +82,7 @@ public class EnchantSkillLearn
 	
 	public int getMinSkillLevel(int level)
 	{
-		return (level % 100) == 1 ? _baseLvl : level - 1;
+		return (level % 100) == 1 ? _baseLevel : level - 1;
 	}
 	
 	public boolean isMaxEnchant(int level)

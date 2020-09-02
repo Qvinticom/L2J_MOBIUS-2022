@@ -44,7 +44,7 @@ public class Q00357_WarehouseKeepersAmbition extends Quest
 		DROP_DATA.put(20597, 0.062); // Valley Treant Elder
 	}
 	// Misc
-	private static final int MIN_LVL = 47;
+	private static final int MIN_LEVEL = 47;
 	
 	public Q00357_WarehouseKeepersAmbition()
 	{
@@ -126,7 +126,7 @@ public class Q00357_WarehouseKeepersAmbition extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			htmltext = ((talker.getLevel() < MIN_LVL) ? "30686-01.html" : "30686-02.htm");
+			htmltext = ((talker.getLevel() < MIN_LEVEL) ? "30686-01.html" : "30686-02.htm");
 		}
 		else if (qs.isStarted())
 		{

@@ -35,14 +35,14 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 {
 	private int _auto;
 	private int _loc;
-	private int _lvl;
+	private int _level;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_auto = packet.readD(); //
 		_loc = packet.readD(); // Location
-		_lvl = packet.readD(); // my level
+		_level = packet.readD(); // my level
 		return true;
 	}
 	
@@ -89,7 +89,7 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 			PartyMatchWaitingList.getInstance().addPlayer(player);
 			
 			// Send Room list
-			player.sendPacket(new ListPartyWating(player, _auto, _loc, _lvl));
+			player.sendPacket(new ListPartyWating(player, _auto, _loc, _level));
 		}
 	}
 }

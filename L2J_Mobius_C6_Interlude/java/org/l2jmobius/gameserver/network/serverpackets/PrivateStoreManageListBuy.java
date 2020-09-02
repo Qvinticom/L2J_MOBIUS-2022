@@ -60,7 +60,7 @@ public class PrivateStoreManageListBuy extends GameServerPacket
 		for (ItemInstance item : _itemList)
 		{
 			writeD(item.getItemId());
-			writeH(item.getEnchantLevel()); // show enchant lvl, but you can't buy enchanted weapons because of L2 Interlude Client bug
+			writeH(item.getEnchantLevel()); // show enchant level, but you can't buy enchanted weapons because of L2 Interlude Client bug
 			writeD(item.getCount());
 			writeD(item.getReferencePrice());
 			writeH(0x00);

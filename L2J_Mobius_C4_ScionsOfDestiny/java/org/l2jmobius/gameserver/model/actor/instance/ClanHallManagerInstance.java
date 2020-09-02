@@ -519,8 +519,8 @@ public class ClanHallManagerInstance extends FolkInstance
 									}
 									val = st.nextToken();
 									int fee;
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -543,7 +543,7 @@ public class ClanHallManagerInstance extends FolkInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(ClanHall.FUNC_ITEM_CREATE, lvl, fee, Config.CH_ITEM_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) == null)))
+									if (!getClanHall().updateFunctions(ClanHall.FUNC_ITEM_CREATE, level, fee, Config.CH_ITEM_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) == null)))
 									{
 										player.sendMessage("You don't have enough adena in your clan's warehouse");
 									}
@@ -559,8 +559,8 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -578,7 +578,7 @@ public class ClanHallManagerInstance extends FolkInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(ClanHall.FUNC_TELEPORT, lvl, fee, Config.CH_TELE_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) == null)))
+									if (!getClanHall().updateFunctions(ClanHall.FUNC_TELEPORT, level, fee, Config.CH_TELE_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) == null)))
 									{
 										player.sendMessage("You don't have enough adena in your clan's warehouse");
 									}
@@ -594,8 +594,8 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -643,7 +643,7 @@ public class ClanHallManagerInstance extends FolkInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(ClanHall.FUNC_SUPPORT, lvl, fee, Config.CH_SUPPORT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)))
+									if (!getClanHall().updateFunctions(ClanHall.FUNC_SUPPORT, level, fee, Config.CH_SUPPORT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)))
 									{
 										player.sendMessage("You don't have enough adena in your clan's warehouse");
 									}
@@ -716,8 +716,8 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -735,7 +735,7 @@ public class ClanHallManagerInstance extends FolkInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(ClanHall.FUNC_DECO_CURTAINS, lvl, fee, Config.CH_CURTAIN_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) == null)))
+									if (!getClanHall().updateFunctions(ClanHall.FUNC_DECO_CURTAINS, level, fee, Config.CH_CURTAIN_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) == null)))
 									{
 										player.sendMessage("You don't have enough adena in your clan's warehouse");
 									}
@@ -751,8 +751,8 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -770,7 +770,7 @@ public class ClanHallManagerInstance extends FolkInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(ClanHall.FUNC_DECO_FRONTPLATEFORM, lvl, fee, Config.CH_FRONT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM) == null)))
+									if (!getClanHall().updateFunctions(ClanHall.FUNC_DECO_FRONTPLATEFORM, level, fee, Config.CH_FRONT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM) == null)))
 									{
 										player.sendMessage("You don't have enough adena in your clan's warehouse");
 									}

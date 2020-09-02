@@ -291,7 +291,7 @@ public class Raina extends AbstractNpcAI
 			}
 			case "ertheiaDualClass":
 			{
-				// TODO: Maybe html is different when you have 85lvl but you haven't completed quest
+				// TODO: Maybe html is different when you have 85level but you haven't completed quest
 				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";

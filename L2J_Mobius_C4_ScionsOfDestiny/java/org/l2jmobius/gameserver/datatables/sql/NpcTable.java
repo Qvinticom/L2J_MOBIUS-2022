@@ -646,12 +646,12 @@ public class NpcTable
 		return null;
 	}
 	
-	public NpcTemplate[] getAllOfLevel(int lvl)
+	public NpcTemplate[] getAllOfLevel(int level)
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
 		for (NpcTemplate t : _npcs.values())
 		{
-			if (t.getLevel() == lvl)
+			if (t.getLevel() == level)
 			{
 				list.add(t);
 			}
@@ -659,12 +659,12 @@ public class NpcTable
 		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
-	public NpcTemplate[] getAllMonstersOfLevel(int lvl)
+	public NpcTemplate[] getAllMonstersOfLevel(int level)
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
 		for (NpcTemplate t : _npcs.values())
 		{
-			if ((t.getLevel() == lvl) && "Monster".equals(t.getType()))
+			if ((t.getLevel() == level) && "Monster".equals(t.getType()))
 			{
 				list.add(t);
 			}

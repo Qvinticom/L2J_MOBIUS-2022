@@ -31,15 +31,15 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 {
 	private final SkillEnchantType _type;
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
-	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLvl, int skillSubLvl, PlayerInstance player)
+	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel , PlayerInstance player)
 	{
 		_type = type;
 		_skillId = skillId;
-		_skillLvl = skillSubLvl > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLvl) : skillLvl;
-		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
+		_skillLevel = skillSubLevel  > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLevel ) : skillLevel;
+		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLevel  % 1000);
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
-		packet.writeD(_skillLvl);
+		packet.writeD(_skillLevel);
 		if ((_enchantSkillHolder != null) && (_type != SkillEnchantType.UNTRAIN))
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));

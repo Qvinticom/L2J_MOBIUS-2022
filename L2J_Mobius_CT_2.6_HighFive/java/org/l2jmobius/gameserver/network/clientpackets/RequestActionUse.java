@@ -1103,20 +1103,20 @@ public class RequestActionUse implements IClientIncomingPacket
 			return;
 		}
 		
-		int lvl = 0;
+		int level = 0;
 		if (summon.isPet())
 		{
-			lvl = PetDataTable.getInstance().getPetData(summon.getId()).getAvailableLevel(skillId, summon.getLevel());
+			level = PetDataTable.getInstance().getPetData(summon.getId()).getAvailableLevel(skillId, summon.getLevel());
 		}
 		else
 		{
-			lvl = PetSkillData.getInstance().getAvailableLevel(summon, skillId);
+			level = PetSkillData.getInstance().getAvailableLevel(summon, skillId);
 		}
 		
-		if (lvl > 0)
+		if (level > 0)
 		{
 			summon.setTarget(target);
-			summon.useMagic(SkillData.getInstance().getSkill(skillId, lvl), _ctrlPressed, _shiftPressed);
+			summon.useMagic(SkillData.getInstance().getSkill(skillId, level), _ctrlPressed, _shiftPressed);
 		}
 		
 		if (skillId == SWITCH_STANCE_ID)

@@ -65,7 +65,7 @@ public class Q00211_TrialOfTheChallenger extends Quest
 	private static final int MARK_OF_CHALLENGER = 2627;
 	private static final ItemHolder DIMENSIONAL_DIAMONDS = new ItemHolder(7562, 61);
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	
 	public Q00211_TrialOfTheChallenger()
 	{
@@ -206,7 +206,7 @@ public class Q00211_TrialOfTheChallenger extends Quest
 					{
 						htmltext = "30644-02.html";
 					}
-					else if (talker.getLevel() < MIN_LVL)
+					else if (talker.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30644-01.html";
 					}

@@ -56,7 +56,7 @@ public class Q00257_TheGuardIsBusy extends Quest
 	// NPC
 	private static final int GILBERT = 30039;
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	// Monsters
 	private static final Map<Integer, List<MobDrop>> MONSTERS = new HashMap<>();
 	// Items
@@ -150,7 +150,7 @@ public class Q00257_TheGuardIsBusy extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30039-02.htm" : "30039-01.html";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30039-02.htm" : "30039-01.html";
 				break;
 			}
 			case State.STARTED:

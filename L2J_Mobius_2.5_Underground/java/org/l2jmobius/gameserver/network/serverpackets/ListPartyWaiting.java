@@ -64,8 +64,8 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 			packet.writeD(room.getId());
 			packet.writeS(room.getTitle());
 			packet.writeD(room.getLocation());
-			packet.writeD(room.getMinLvl());
-			packet.writeD(room.getMaxLvl());
+			packet.writeD(room.getMinLevel());
+			packet.writeD(room.getMaxLevel());
 			packet.writeD(room.getMaxMembers());
 			packet.writeS(room.getLeader().getName());
 			packet.writeD(room.getMembersCount());

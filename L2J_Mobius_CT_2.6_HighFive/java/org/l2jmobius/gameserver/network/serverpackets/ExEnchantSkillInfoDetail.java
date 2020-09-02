@@ -39,22 +39,22 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private int reqCount = 0;
 	private int multi = 1;
 	private final int _type;
-	private final int _skillid;
-	private final int _skilllvl;
+	private final int _skillId;
+	private final int _skillLevel;
 	private final int _chance;
 	private int _sp;
 	private final int _adenacount;
 	
-	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, PlayerInstance ply)
+	public ExEnchantSkillInfoDetail(int type, int skillId, int skillLevel, PlayerInstance ply)
 	{
-		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
+		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillId);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
 		if (enchantLearn != null)
 		{
-			if (skilllvl > 100)
+			if (skillLevel > 100)
 			{
-				esd = enchantLearn.getEnchantSkillHolder(skilllvl);
+				esd = enchantLearn.getEnchantSkillHolder(skillLevel);
 			}
 			else
 			{
@@ -64,7 +64,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		
 		if (esd == null)
 		{
-			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + skilllvl);
+			throw new IllegalArgumentException("Skill " + skillId + " dont have enchant data for level " + skillLevel);
 		}
 		
 		if (type == 0)
@@ -83,15 +83,15 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		}
 		_adenacount = esd.getAdenaCost() * multi;
 		_type = type;
-		_skillid = skillid;
-		_skilllvl = skilllvl;
+		_skillId = skillId;
+		_skillLevel = skillLevel;
 		
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
 			{
 				bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
-				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
+				reqCount = (((_skillLevel % 100) > 1) ? 0 : 1);
 				break;
 			}
 			case TYPE_SAFE_ENCHANT:
@@ -129,8 +129,8 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
 		packet.writeD(_type);
-		packet.writeD(_skillid);
-		packet.writeD(_skilllvl);
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
 		packet.writeD(_sp * multi); // sp
 		packet.writeD(_chance); // exp
 		packet.writeD(0x02); // items count?

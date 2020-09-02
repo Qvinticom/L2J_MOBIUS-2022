@@ -24,28 +24,28 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 
 /**
- * Format (ch) ddd c: (id) 0xD0 h: (subid) 0x31 d: type d: skill id d: skill lvl
+ * Format (ch) ddd c: (id) 0xD0 h: (subid) 0x31 d: type d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 {
 	private int _type;
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_type = packet.readD();
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_skillLevel = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -56,36 +56,36 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 			return;
 		}
 		
-		int reqSkillLvl = -2;
+		int reqskillLevel = -2;
 		if ((_type == 0) || (_type == 1))
 		{
-			reqSkillLvl = _skillLvl - 1; // enchant
+			reqskillLevel = _skillLevel - 1; // enchant
 		}
 		else if (_type == 2)
 		{
-			reqSkillLvl = _skillLvl + 1; // untrain
+			reqskillLevel = _skillLevel + 1; // untrain
 		}
 		else if (_type == 3)
 		{
-			reqSkillLvl = _skillLvl; // change route
+			reqskillLevel = _skillLevel; // change route
 		}
 		
-		final int playerSkillLvl = player.getSkillLevel(_skillId);
+		final int playerskillLevel = player.getSkillLevel(_skillId);
 		
 		// dont have such skill
-		if (playerSkillLvl == 0)
+		if (playerskillLevel == 0)
 		{
 			return;
 		}
 		
-		// if reqlvl is 100,200,.. check base skill lvl enchant
-		if ((reqSkillLvl % 100) == 0)
+		// if reqlevel is 100,200,.. check base skill level enchant
+		if ((reqskillLevel % 100) == 0)
 		{
 			final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null)
 			{
 				// if player dont have min level to enchant
-				if (playerSkillLvl != esl.getBaseLevel())
+				if (playerskillLevel != esl.getBaseLevel())
 				{
 					return;
 				}
@@ -96,13 +96,13 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 				return;
 			}
 		}
-		// change route is different skill lvl but same enchant
-		else if ((playerSkillLvl != reqSkillLvl) && (_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
+		// change route is different skill level but same enchant
+		else if ((playerskillLevel != reqskillLevel) && (_type == 3) && ((playerskillLevel % 100) != (_skillLevel % 100)))
 		{
 			return;
 		}
 		
 		// send skill enchantment detail
-		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, player));
+		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLevel, player));
 	}
 }

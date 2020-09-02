@@ -68,8 +68,8 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			if ((room.getId() == _roomId) && (room.getRoomType() == MatchingRoomType.PARTY) && room.isLeader(player))
 			{
 				room.setLootType(_lootType);
-				room.setMinLvl(_minLevel);
-				room.setMaxLvl(_maxLevel);
+				room.setMinLevel(_minLevel);
+				room.setMaxLevel(_maxLevel);
 				room.setMaxMembers(_maxMembers);
 				room.setTitle(_roomTitle);
 				

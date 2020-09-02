@@ -43,7 +43,7 @@ public class Q00650_ABrokenDream extends Quest
 	// Item
 	private static final int REMNANTS_OF_OLD_DWARVES_DREAMS = 8514;
 	// Misc
-	private static final int MIN_LVL = 39;
+	private static final int MIN_LEVEL = 39;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
 	static
@@ -113,7 +113,7 @@ public class Q00650_ABrokenDream extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() < MIN_LVL)
+				if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "32054-02.htm";
 				}

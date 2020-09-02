@@ -57,8 +57,8 @@ public class Q10995_MutualBenefit extends Quest
 	private static final int GARUM_WEREWOLF = 20307;
 	private static final int GOBLIN_BRIGAND_LIEUTENANT = 20324;
 	// Misc
-	private static final int MIN_LVL = 2;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10995_MutualBenefit()
 	{
@@ -66,7 +66,7 @@ public class Q10995_MutualBenefit extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, REEP);
 		addKillId(BLACK_WOLF, GOBLIN_SNOOPER, UTUKU_ORC, UTUKU_ORC_ARCHER, GOBLIN_BRIGAND, GARUM_WEREWOLF, GOBLIN_BRIGAND_LIEUTENANT);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html");
 		addCondRace(Race.DWARF, "no-race.html");
 		registerQuestItems(BOUNTY_POSTER, BALCK_WOLF_TOOTH, GOBLINS_NAVIGATION_DEVICE, UTUKU_ORC_AMULET, GOBLIN_BRIGANDS_OLD_SWORD, GARUM_WEREWOLF_TAIL, GOBLIN_BRIGAND_LIEUTENANT_NECKLACE);
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_MUTUAL_BENEFIT);

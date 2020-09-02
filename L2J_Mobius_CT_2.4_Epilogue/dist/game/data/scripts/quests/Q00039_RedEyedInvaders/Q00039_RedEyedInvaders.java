@@ -46,7 +46,7 @@ public class Q00039_RedEyedInvaders extends Quest
 	private static final ItemHolder BABYDUCK_ROD = new ItemHolder(6529, 1);
 	private static final ItemHolder FISHING_SHOT_NONE = new ItemHolder(6535, 500);
 	// Misc
-	private static final int MIN_LVL = 20;
+	private static final int MIN_LEVEL = 20;
 	
 	public Q00039_RedEyedInvaders()
 	{
@@ -170,7 +170,7 @@ public class Q00039_RedEyedInvaders extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30334-01.htm" : "30334-02.htm";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30334-01.htm" : "30334-02.htm";
 				}
 				else if (qs.isStarted() && qs.isCond(1))
 				{

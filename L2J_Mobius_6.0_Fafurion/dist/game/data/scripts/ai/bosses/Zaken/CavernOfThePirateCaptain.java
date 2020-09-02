@@ -45,7 +45,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	// Items
 	private static final int VORPAL_RING = 15763; // Sealed Vorpal Ring
 	private static final int VORPAL_EARRING = 15764; // Sealed Vorpal Earring
-	// Reward - Zaken lvl 83 @formatter:off
+	// Reward - Zaken level 83 @formatter:off
 	private static final int[][] VORPAL_JEWELS = 
 	{
 		// Time, jewel id, chance

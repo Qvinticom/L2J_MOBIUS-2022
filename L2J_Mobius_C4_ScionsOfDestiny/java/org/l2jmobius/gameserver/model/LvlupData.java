@@ -162,11 +162,11 @@ public class LvlupData
 	}
 	
 	/**
-	 * @param lvl The _classLvl to set.
+	 * @param level The _classLvl to set.
 	 */
-	public void setClassLvl(int lvl)
+	public void setClassLvl(int level)
 	{
-		_classLvl = lvl;
+		_classLvl = level;
 	}
 	
 	/**

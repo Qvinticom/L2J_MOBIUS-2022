@@ -55,7 +55,7 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest
 	// Location
 	private static final Location ICICLE_EMPEROR_BUMBALUMP_LOC = new Location(158240, -121536, -2222);
 	// Misc
-	private static final int MIN_LVL = 73;
+	private static final int MIN_LEVEL = 73;
 	
 	public Q00625_TheFinestIngredientsPart2()
 	{
@@ -180,7 +180,7 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (talker.getLevel() >= MIN_LVL)
+					if (talker.getLevel() >= MIN_LEVEL)
 					{
 						htmltext = (hasItem(talker, SOY_SOURCE_JAR)) ? "31521-01.htm" : "31521-02.htm";
 					}

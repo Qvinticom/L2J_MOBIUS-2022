@@ -6568,12 +6568,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 	}
 	
-	public boolean isInvulAgainst(int skillId, int skillLvl)
+	public boolean isInvulAgainst(int skillId, int skillLevel)
 	{
 		if (_invulAgainst != null)
 		{
 			final SkillHolder holder = getInvulAgainstSkills().get(skillId);
-			return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLvl)));
+			return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLevel)));
 		}
 		return false;
 	}

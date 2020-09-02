@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="pledgeSkillTree">
 		<!-- Castle/Fort Skills -->
-		<skill skillName="Residence Guard" skillId="32123" skillLvl="1" getLevel="1" residenceSkill="true">
+		<skill skillName="Residence Guard" skillId="32123" skillLevel="1" getLevel="1" residenceSkill="true">
 			<socialClass>DISTINGUISHED_KING</socialClass>
 			<residenceId>112</residenceId> <!-- Floran Fortress -->
 			<residenceId>114</residenceId> <!-- Tanor Fortress -->
@@ -14,7 +14,7 @@
 			<residenceId>120</residenceId> <!-- Demon Fortress -->
 			<residenceId>121</residenceId> <!-- Monastic Fortress -->
 		</skill>
-		<skill skillName="Residence Dominion" skillId="32124" skillLvl="1" getLevel="1" residenceSkill="true">
+		<skill skillName="Residence Dominion" skillId="32124" skillLevel="1" getLevel="1" residenceSkill="true">
 			<socialClass>DISTINGUISHED_KING</socialClass>
 			<residenceId>101</residenceId> <!-- Camp Fortress -->
 			<residenceId>102</residenceId> <!-- Southern Fortress -->
@@ -29,39 +29,39 @@
 			<residenceId>111</residenceId> <!-- Archaic Fortress -->
 		</skill>
 		<!-- Territory Skills -->
-		<skill skillName="Gludio Territory Benefaction" skillId="848" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Gludio Territory Benefaction" skillId="848" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>81</residenceId>
 		</skill>
-		<skill skillName="Dion Territory Benefaction" skillId="849" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Dion Territory Benefaction" skillId="849" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>82</residenceId>
 		</skill>
-		<skill skillName="Giran Territory Benefaction" skillId="850" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Giran Territory Benefaction" skillId="850" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>83</residenceId>
 		</skill>
-		<skill skillName="Oren Territory Benefaction" skillId="851" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Oren Territory Benefaction" skillId="851" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>84</residenceId>
 		</skill>
-		<skill skillName="Aden Territory Benefaction" skillId="852" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Aden Territory Benefaction" skillId="852" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>85</residenceId>
 		</skill>
-		<skill skillName="Innadril Territory Benefaction" skillId="853" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Innadril Territory Benefaction" skillId="853" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>86</residenceId>
 		</skill>
-		<skill skillName="Goddard Territory Benefaction" skillId="854" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Goddard Territory Benefaction" skillId="854" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>87</residenceId>
 		</skill>
-		<skill skillName="Rune Territory Benefaction" skillId="855" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Rune Territory Benefaction" skillId="855" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>88</residenceId>
 		</skill>
-		<skill skillName="Schuttgart Territory Benefaction" skillId="856" skillLvl="1" getLevel="5" residenceSkill="true">
+		<skill skillName="Schuttgart Territory Benefaction" skillId="856" skillLevel="1" getLevel="5" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>
 			<residenceId>89</residenceId>
 		</skill>

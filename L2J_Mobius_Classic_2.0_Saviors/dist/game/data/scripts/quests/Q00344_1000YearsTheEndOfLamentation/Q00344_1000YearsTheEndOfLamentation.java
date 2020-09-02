@@ -72,7 +72,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 	private static final ItemHolder SCROLL_EAC = new ItemHolder(952, 5);
 	private static final ItemHolder DRAKE_LEATHER_BOOTS = new ItemHolder(2437, 1);
 	// Misc
-	private static final int MIN_LVL = 48;
+	private static final int MIN_LEVEL = 48;
 	
 	public Q00344_1000YearsTheEndOfLamentation()
 	{
@@ -214,7 +214,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30754-02.htm" : "30754-01.htm";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30754-02.htm" : "30754-01.htm";
 				}
 				else if (qs.isStarted())
 				{

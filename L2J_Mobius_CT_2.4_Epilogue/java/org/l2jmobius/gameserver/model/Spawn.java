@@ -469,7 +469,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		}
 		
 		// Set champion on next spawn
-		if (Config.CHAMPION_ENABLE && npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
+		if (Config.CHAMPION_ENABLE && npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LEVEL) && (npc.getLevel() <= Config.CHAMP_MAX_LEVEL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
 		{
 			((Attackable) npc).setChampion(true);
 		}

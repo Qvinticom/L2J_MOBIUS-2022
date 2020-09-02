@@ -52,7 +52,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		for (ItemInstance item : _itemList)
 		{
 			packet.writeD(item.getId());
-			packet.writeH(0); // show enchant lvl as 0, as you can't buy enchanted weapons
+			packet.writeH(0); // show enchant level as 0, as you can't buy enchanted weapons
 			packet.writeQ(item.getCount());
 			packet.writeQ(item.getReferencePrice());
 			packet.writeH(0x00);

@@ -47,9 +47,9 @@ public class Evolve
 {
 	protected static final Logger LOGGER = Logger.getLogger(Evolve.class.getName());
 	
-	public static boolean doEvolve(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static boolean doEvolve(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
 	{
-		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
+		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminLevel == 0))
 		{
 			return false;
 		}
@@ -79,7 +79,7 @@ public class Evolve
 		}
 		
 		final int oldnpcID = oldData.getNpcId();
-		if ((currentPet.getStat().getLevel() < petminlvl) || (currentPet.getId() != oldnpcID))
+		if ((currentPet.getStat().getLevel() < petminLevel) || (currentPet.getId() != oldnpcID))
 		{
 			return false;
 		}
@@ -111,7 +111,7 @@ public class Evolve
 		}
 		
 		// Fix for non-linear baby pet exp
-		final long _minimumexp = petSummon.getStat().getExpForLevel(petminlvl);
+		final long _minimumexp = petSummon.getStat().getExpForLevel(petminLevel);
 		if (petexp < _minimumexp)
 		{
 			petexp = _minimumexp;
@@ -148,9 +148,9 @@ public class Evolve
 		return true;
 	}
 	
-	public static boolean doRestore(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static boolean doRestore(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
 	{
-		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
+		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminLevel == 0))
 		{
 			return false;
 		}
@@ -161,7 +161,7 @@ public class Evolve
 			return false;
 		}
 		
-		final int oldpetlvl = item.getEnchantLevel() < petminlvl ? petminlvl : item.getEnchantLevel();
+		final int oldpetlvl = item.getEnchantLevel() < petminLevel ? petminLevel : item.getEnchantLevel();
 		final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 		if (oldData == null)
 		{

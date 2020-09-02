@@ -46,7 +46,7 @@ public class Q00286_FabulousFeathers extends Quest
 		MOB_DROP_CHANCES.put(22256, 0.952); // Shady Muertos Wizard
 	}
 	// Misc
-	private static final int MIN_LVL = 17;
+	private static final int MIN_LEVEL = 17;
 	
 	public Q00286_FabulousFeathers()
 	{
@@ -111,7 +111,7 @@ public class Q00286_FabulousFeathers extends Quest
 		String html = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			html = ((player.getLevel() >= MIN_LVL) ? "32164-01.htm" : "32164-02.htm");
+			html = ((player.getLevel() >= MIN_LEVEL) ? "32164-01.htm" : "32164-02.htm");
 		}
 		else if (qs.isStarted())
 		{

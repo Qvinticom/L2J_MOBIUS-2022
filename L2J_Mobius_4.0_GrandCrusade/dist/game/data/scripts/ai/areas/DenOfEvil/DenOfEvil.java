@@ -185,7 +185,7 @@ public class DenOfEvil extends AbstractNpcAI
 		{
 			for (int i = SKILL_ID; i <= (SKILL_ID + 4); i += 2)
 			{
-				// test 3 skills if some is lvl 4
+				// test 3 skills if some is level 4
 				if (_zone.getSkillLevel(i) > 3)
 				{
 					destroyZone();

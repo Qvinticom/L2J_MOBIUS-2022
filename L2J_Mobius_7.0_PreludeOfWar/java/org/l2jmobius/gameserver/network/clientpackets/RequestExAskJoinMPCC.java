@@ -138,7 +138,7 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 		boolean hasRight = false;
 		if (requestor.isClanLeader() && (requestor.getClan().getLevel() >= 5))
 		{
-			// Clan leader of lvl5 Clan or higher.
+			// Clan leader of level5 Clan or higher.
 			hasRight = true;
 		}
 		else if (requestor.getInventory().getItemByItemId(8871) != null)

@@ -173,9 +173,9 @@ public class EffectZone extends ZoneType
 		}
 	}
 	
-	protected Skill getSkill(int skillId, int skillLvl)
+	protected Skill getSkill(int skillId, int skillLevel)
 	{
-		return SkillData.getInstance().getSkill(skillId, skillLvl);
+		return SkillData.getInstance().getSkill(skillId, skillLevel);
 	}
 	
 	public int getChance()
@@ -183,9 +183,9 @@ public class EffectZone extends ZoneType
 		return _chance;
 	}
 	
-	public void addSkill(int skillId, int skillLvL)
+	public void addSkill(int skillId, int skillLevel)
 	{
-		if (skillLvL < 1) // remove skill
+		if (skillLevel < 1) // remove skill
 		{
 			removeSkill(skillId);
 			return;
@@ -198,7 +198,7 @@ public class EffectZone extends ZoneType
 				_skills = new ConcurrentHashMap<>(3);
 			}
 		}
-		_skills.put(skillId, skillLvL);
+		_skills.put(skillId, skillLevel);
 	}
 	
 	public void removeSkill(int skillId)

@@ -41,7 +41,7 @@ public class Q00152_ShardsOfGolem extends Quest
 	private static final int GOLEM_SHARD = 1010;
 	private static final int TOOL_BOX = 1011;
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	
 	public Q00152_ShardsOfGolem()
 	{
@@ -116,7 +116,7 @@ public class Q00152_ShardsOfGolem extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = player.getLevel() >= MIN_LVL ? "30035-02.htm" : "30035-01.htm";
+						htmltext = player.getLevel() >= MIN_LEVEL ? "30035-02.htm" : "30035-01.htm";
 						break;
 					}
 					case State.STARTED:

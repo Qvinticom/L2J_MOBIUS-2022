@@ -64,7 +64,7 @@ public class MercTicketManager
 		20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 // Schuttgart
 	};
 	
-	//TODO: not retail like: clan lvl 5 - 30 ticks max, lvl 7+ - 50 max
+	//TODO: not retail like: clan level 5 - 30 ticks max, level 7+ - 50 max
 	protected static final int[] MERCS_MAX_PER_CASTLE =
 	{
 		100, // Gludio

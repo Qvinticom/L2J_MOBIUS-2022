@@ -48,11 +48,11 @@ public class HeroSkillTable
 		return HERO_SKILLS;
 	}
 	
-	public static boolean isHeroSkill(int skillid)
+	public static boolean isHeroSkill(int skillId)
 	{
 		for (int id : HERO_SKILL_IDS)
 		{
-			if (id == skillid)
+			if (id == skillId)
 			{
 				return true;
 			}

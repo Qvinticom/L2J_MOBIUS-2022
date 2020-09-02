@@ -35,7 +35,7 @@ public class BleedingFly extends AbstractNpcAI
 	private static final int PARASITIC_LEECH = 25734;
 	// Skills
 	private static final SkillHolder SUMMON_PARASITE_LEECH = new SkillHolder(6832, 1);
-	private static final SkillHolder NPC_ACUMEN_LVL_3 = new SkillHolder(6915, 3);
+	private static final SkillHolder NPC_ACUMEN_LEVEL_3 = new SkillHolder(6915, 3);
 	// Variables
 	private static final String MID_HP_FLAG = "MID_HP_FLAG";
 	private static final String LOW_HP_FLAG = "LOW_HP_FLAG";
@@ -112,7 +112,7 @@ public class BleedingFly extends AbstractNpcAI
 		{
 			npc.getVariables().set(LOW_HP_MINION_COUNT, npc.getVariables().getInt(LOW_HP_MINION_COUNT) - 1);
 			addSkillCastDesire(npc, npc, SUMMON_PARASITE_LEECH, 99999);
-			addSkillCastDesire(npc, npc, NPC_ACUMEN_LVL_3, 99999);
+			addSkillCastDesire(npc, npc, NPC_ACUMEN_LEVEL_3, 99999);
 			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
 			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
 			if (npc.getVariables().getBoolean(LOW_HP_FLAG, false))

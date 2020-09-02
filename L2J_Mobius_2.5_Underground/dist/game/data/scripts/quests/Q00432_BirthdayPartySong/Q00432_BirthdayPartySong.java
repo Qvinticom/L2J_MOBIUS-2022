@@ -37,7 +37,7 @@ public class Q00432_BirthdayPartySong extends Quest
 	private static final int RED_CRYSTAL = 7541;
 	private static final int ECHO_CRYSTAL = 7061;
 	// Misc
-	private static final int MIN_LVL = 31;
+	private static final int MIN_LEVEL = 31;
 	
 	public Q00432_BirthdayPartySong()
 	{
@@ -46,7 +46,7 @@ public class Q00432_BirthdayPartySong extends Quest
 		addTalkId(OCTAVIA);
 		addKillId(GOLEM);
 		registerQuestItems(RED_CRYSTAL);
-		addCondMinLevel(MIN_LVL, "31043-00.htm");
+		addCondMinLevel(MIN_LEVEL, "31043-00.htm");
 	}
 	
 	@Override

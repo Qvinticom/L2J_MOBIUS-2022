@@ -46,7 +46,7 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 	// Items
 	private static final int SPIDER_SKIN = 1495;
 	// Misc
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	private static final int SKIN_COUNT = 10;
 	private static final int SKIN_REWARD = 25;
 	private static final int SKIN_BONUS = 250;
@@ -147,7 +147,7 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "30497-02.htm" : "30497-01.html";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30497-02.htm" : "30497-01.html";
 						break;
 					}
 					case State.STARTED:

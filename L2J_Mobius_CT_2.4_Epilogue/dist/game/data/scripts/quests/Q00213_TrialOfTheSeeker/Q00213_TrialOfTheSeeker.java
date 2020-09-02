@@ -80,7 +80,7 @@ public class Q00213_TrialOfTheSeeker extends Quest
 	private static final int TUREK_ORC_WARLORD = 20495;
 	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	private static final int LEVEL = 36;
 	
 	public Q00213_TrialOfTheSeeker()
@@ -398,7 +398,7 @@ public class Q00213_TrialOfTheSeeker extends Quest
 			{
 				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || (player.getClassId() == ClassId.ASSASSIN))
 				{
-					if (player.getLevel() < MIN_LVL)
+					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30106-02.html";
 					}

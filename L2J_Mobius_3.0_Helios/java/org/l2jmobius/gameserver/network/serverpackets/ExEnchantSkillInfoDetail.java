@@ -33,17 +33,17 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 {
 	private final SkillEnchantType _type;
 	private final int _skillId;
-	private final int _skillLvl;
-	private final int _skillSubLvl;
+	private final int _skillLevel;
+	private final int _skillSubLevel ;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
-	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLvl, int skillSubLvl, PlayerInstance player)
+	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel , PlayerInstance player)
 	{
 		_type = type;
 		_skillId = skillId;
-		_skillLvl = skillLvl;
-		_skillSubLvl = skillSubLvl;
-		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
+		_skillLevel = skillLevel;
+		_skillSubLevel  = skillSubLevel ;
+		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLevel  % 1000);
 	}
 	
 	@Override
@@ -53,8 +53,8 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
-		packet.writeH(_skillLvl);
-		packet.writeH(_skillSubLvl);
+		packet.writeH(_skillLevel);
+		packet.writeH(_skillSubLevel );
 		if (_enchantSkillHolder != null)
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));

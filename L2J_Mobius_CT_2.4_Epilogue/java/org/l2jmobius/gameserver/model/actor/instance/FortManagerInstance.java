@@ -749,8 +749,8 @@ public class FortManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -769,7 +769,7 @@ public class FortManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getFort().updateFunctions(player, Fort.FUNC_TELEPORT, lvl, fee, Config.FS_TELE_FEE_RATIO, (getFort().getFunction(Fort.FUNC_TELEPORT) == null)))
+									if (!getFort().updateFunctions(player, Fort.FUNC_TELEPORT, level, fee, Config.FS_TELE_FEE_RATIO, (getFort().getFunction(Fort.FUNC_TELEPORT) == null)))
 									{
 										html.setFile(player, "data/html/fortress/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -793,8 +793,8 @@ public class FortManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -813,7 +813,7 @@ public class FortManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getFort().updateFunctions(player, Fort.FUNC_SUPPORT, lvl, fee, Config.FS_SUPPORT_FEE_RATIO, (getFort().getFunction(Fort.FUNC_SUPPORT) == null)))
+									if (!getFort().updateFunctions(player, Fort.FUNC_SUPPORT, level, fee, Config.FS_SUPPORT_FEE_RATIO, (getFort().getFunction(Fort.FUNC_SUPPORT) == null)))
 									{
 										html.setFile(player, "data/html/fortress/low_adena.htm");
 										sendHtmlMessage(player, html);

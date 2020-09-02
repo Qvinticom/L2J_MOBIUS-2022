@@ -44,7 +44,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 	private static final int RUMIELS_3RD_POEM = 1040;
 	private static final int RUMIELS_4TH_POEM = 1041;
 	// Misc
-	private static final int MIN_LVL = 11;
+	private static final int MIN_LEVEL = 11;
 	
 	public Q00163_LegacyOfThePoet()
 	{
@@ -148,7 +148,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30220-02.htm" : "30220-01.htm" : "30220-00.htm";
+				htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30220-02.htm" : "30220-01.htm" : "30220-00.htm";
 				break;
 			}
 			case State.STARTED:

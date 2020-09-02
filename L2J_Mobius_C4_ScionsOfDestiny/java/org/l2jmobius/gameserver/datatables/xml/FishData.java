@@ -78,17 +78,17 @@ public class FishData implements IXmlReader
 	
 	/**
 	 * Get a random {@link FishData} based on level, type and group.
-	 * @param lvl : the fish level to check.
+	 * @param level : the fish level to check.
 	 * @param type : the fish type to check.
 	 * @param group : the fish group to check.
 	 * @return a Fish with good criteria.
 	 */
-	public Fish getFish(int lvl, int type, int group)
+	public Fish getFish(int level, int type, int group)
 	{
 		final List<Fish> result = new ArrayList<>();
 		for (Fish fish : _fish)
 		{
-			if ((fish.getLevel() == lvl) && (fish.getType() == type) && (fish.getGroup() == group))
+			if ((fish.getLevel() == level) && (fish.getType() == type) && (fish.getGroup() == group))
 			{
 				result.add(fish);
 			}

@@ -55,7 +55,7 @@ public class Q00382_KailsMagicCoin extends Quest
 	}
 	
 	// Misc
-	private static final int MIN_LVL = 55;
+	private static final int MIN_LEVEL = 55;
 	
 	public Q00382_KailsMagicCoin()
 	{
@@ -106,7 +106,7 @@ public class Q00382_KailsMagicCoin extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			htmltext = ((talker.getLevel() >= MIN_LVL) && hasQuestItems(talker, ROYAL_MEMBERSHIP)) ? "30687-02.htm" : "30687-01.htm";
+			htmltext = ((talker.getLevel() >= MIN_LEVEL) && hasQuestItems(talker, ROYAL_MEMBERSHIP)) ? "30687-02.htm" : "30687-01.htm";
 		}
 		else if (qs.isStarted())
 		{

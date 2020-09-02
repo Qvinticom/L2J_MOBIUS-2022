@@ -83,7 +83,7 @@ public class SystemMessage extends ServerBasePacket
 	public static final int S1_HAS_JOINED_CLAN = 222;
 	public static final int CLAN_NAME_INCORRECT = 261;
 	public static final int CLAN_NAME_TOO_LONG = 262;
-	public static final int CLAN_LVL_3_NEEDED_TO_ENDOVE_TITLE = 271;
+	public static final int CLAN_LEVEL_3_NEEDED_TO_ENDOVE_TITLE = 271;
 	public static final int ITEM_MISSING_TO_LEARN_SKILL = 276;
 	public static final int LEARNED_SKILL_S1 = 277;
 	public static final int NOT_ENOUGH_SP_TO_LEARN_SKILL = 278;

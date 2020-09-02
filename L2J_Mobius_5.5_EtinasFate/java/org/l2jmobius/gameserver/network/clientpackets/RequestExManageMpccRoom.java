@@ -65,8 +65,8 @@ public class RequestExManageMpccRoom implements IClientIncomingPacket
 		
 		room.setTitle(_title);
 		room.setMaxMembers(_maxMembers);
-		room.setMinLvl(_minLevel);
-		room.setMaxLvl(_maxLevel);
+		room.setMinLevel(_minLevel);
+		room.setMaxLevel(_maxLevel);
 		
 		room.getMembers().forEach(p -> p.sendPacket(new ExMPCCRoomInfo((CommandChannelMatchingRoom) room)));
 		player.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_INFORMATION_WAS_EDITED);

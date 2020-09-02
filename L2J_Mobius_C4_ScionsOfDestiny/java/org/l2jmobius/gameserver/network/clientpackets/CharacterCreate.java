@@ -224,9 +224,9 @@ public class CharacterCreate extends GameClientPacket
 			newChar.setXYZInvisible(template.getSpawnX(), template.getSpawnY(), template.getSpawnZ());
 		}
 		
-		if (Config.ALLOW_CREATE_LVL)
+		if (Config.ALLOW_CREATE_LEVEL)
 		{
-			newChar.getStat().addExp(ExperienceData.getInstance().getExpForLevel(Config.CHAR_CREATE_LVL));
+			newChar.getStat().addExp(ExperienceData.getInstance().getExpForLevel(Config.CHAR_CREATE_LEVEL));
 		}
 		
 		if (Config.CHAR_TITLE)

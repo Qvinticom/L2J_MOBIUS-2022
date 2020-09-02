@@ -37,7 +37,7 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	private static final int BUCKLER = 49042;
 	private static final int ADAMANTITE_ORE = 1024;
 	// Misc
-	private static final int MIN_LVL = 5;
+	private static final int MIN_LEVEL = 5;
 	
 	public Q00157_RecoverSmuggledGoods()
 	{
@@ -101,7 +101,7 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = player.getLevel() >= MIN_LVL ? "30005-02.htm" : "30005-01.htm";
+				htmltext = player.getLevel() >= MIN_LEVEL ? "30005-02.htm" : "30005-01.htm";
 				break;
 			}
 			case State.STARTED:

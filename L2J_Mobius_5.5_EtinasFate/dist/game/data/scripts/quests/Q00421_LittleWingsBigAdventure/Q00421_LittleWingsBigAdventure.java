@@ -63,8 +63,8 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 	private static final int DRAGON_BUGLE_OF_STAR = 4423;
 	private static final int DRAGON_BUGLE_OF_TWILIGHT = 4424;
 	// Misc
-	private static final int MIN_PLAYER_LVL = 45;
-	private static final int MIN_HACHLING_LVL = 55;
+	private static final int MIN_PLAYER_LEVEL = 45;
+	private static final int MIN_HACHLING_LEVEL = 55;
 	private static final Map<Integer, NpcData> NPC_DATA = new HashMap<>();
 	
 	static
@@ -104,7 +104,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 					if (getQuestItemsCount(player, DRAGONFLUTE_OF_WIND, DRAGONFLUTE_OF_STAR, DRAGONFLUTE_OF_TWILIGHT) == 1)
 					{
 						final ItemInstance flute = getFlute(player);
-						if (flute.getEnchantLevel() < MIN_HACHLING_LVL)
+						if (flute.getEnchantLevel() < MIN_HACHLING_LEVEL)
 						{
 							htmltext = "30610-06.html";
 						}
@@ -200,7 +200,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 							break; // this quest does not show up if no flute in inventory
 						}
 						
-						if (talker.getLevel() < MIN_PLAYER_LVL)
+						if (talker.getLevel() < MIN_PLAYER_LEVEL)
 						{
 							htmltext = "30610-01.htm";
 						}
@@ -208,7 +208,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 						{
 							htmltext = "30610-02.htm";
 						}
-						else if (getFlute(talker).getEnchantLevel() < MIN_HACHLING_LVL)
+						else if (getFlute(talker).getEnchantLevel() < MIN_HACHLING_LEVEL)
 						{
 							htmltext = "30610-03.html";
 						}

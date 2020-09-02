@@ -55,8 +55,8 @@ public class Q11001_TombsOfAncestors extends Quest
 	private static final int ORC_WARRIOR = 20093;
 	private static final int WEREWOLVES = 20132;
 	// Misc
-	private static final int MIN_LVL = 2;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11001_TombsOfAncestors()
 	{
@@ -64,7 +64,7 @@ public class Q11001_TombsOfAncestors extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, ALTRAN);
 		addKillId(WOLF, ELDER_WOLF, ORC, ORC_SOLDIER, ORC_ARCHER, ORC_WARRIOR, WEREWOLVES);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html");
 		addCondRace(Race.HUMAN, "no-race.html");
 		registerQuestItems(HUNTERS_MEMO, WOLF_PELT, ORC_AMULET, WEREWOLFS_FANG, BROKEN_SWORD);
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_TOMBS_OF_ANCESTORS);

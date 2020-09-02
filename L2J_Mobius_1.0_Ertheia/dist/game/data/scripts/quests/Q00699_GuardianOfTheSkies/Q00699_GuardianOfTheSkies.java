@@ -48,7 +48,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	// Item
 	private static final int VULTURES_GOLDEN_FEATHER = 13871;
 	// Misc
-	private static final int MIN_LVL = 75;
+	private static final int MIN_LEVEL = 75;
 	private static final int VULTURES_GOLDEN_FEATHER_ADENA = 1500;
 	private static final int BONUS = 8335;
 	private static final int BONUS_COUNT = 10;
@@ -146,7 +146,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 			case State.CREATED:
 			{
 				qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-				htmltext = ((qs == null) || (!qs.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
+				htmltext = ((qs == null) || (!qs.isCompleted()) || (player.getLevel() < MIN_LEVEL)) ? "32557-02.htm" : "32557-01.htm";
 				break;
 			}
 			case State.STARTED:

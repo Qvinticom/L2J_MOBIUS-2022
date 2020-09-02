@@ -50,8 +50,8 @@ public class Q11023_RedGemNecklace3 extends Quest
 	private static final int EVIL_EYE_SEER = 21257;
 	private static final int KASHA_IMP = 21117;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11023_RedGemNecklace3()
 	{
@@ -59,7 +59,7 @@ public class Q11023_RedGemNecklace3 extends Quest
 		addStartNpc(USKA);
 		addTalkId(USKA);
 		addKillId(EVIL_EYE_SEER, KASHA_IMP);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
 		addCondCompletedQuest(Q11022_RedGemNecklace2.class.getSimpleName(), "30560-06.html");
 		registerQuestItems(NECKLACE_MATERIALS_TICKET, HARD_LENS, RED_STONE);

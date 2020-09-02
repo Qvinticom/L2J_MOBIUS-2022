@@ -29,14 +29,14 @@ public class PledgeSkillLearn
 	private final String _name;
 	
 	private final int _repCost;
-	private final int _baseLvl;
+	private final int _baseLevel;
 	private final int _itemId;
 	
-	public PledgeSkillLearn(int id, int lvl, int baseLvl, String name, int cost, int itemId)
+	public PledgeSkillLearn(int id, int level, int baseLevel, String name, int cost, int itemId)
 	{
 		_id = id;
-		_level = lvl;
-		_baseLvl = baseLvl;
+		_level = level;
+		_baseLevel = baseLevel;
 		_name = name.intern();
 		_repCost = cost;
 		_itemId = itemId;
@@ -63,7 +63,7 @@ public class PledgeSkillLearn
 	 */
 	public int getBaseLevel()
 	{
-		return _baseLvl;
+		return _baseLevel;
 	}
 	
 	/**

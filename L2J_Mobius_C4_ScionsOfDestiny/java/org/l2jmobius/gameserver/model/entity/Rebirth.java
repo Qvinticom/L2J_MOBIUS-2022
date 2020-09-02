@@ -199,9 +199,9 @@ public class Rebirth
 			player.setClassId(player.getBaseClass());
 			player.broadcastUserInfo();
 			
-			final byte lvl = Byte.parseByte(returnToLevel + "");
+			final byte level = Byte.parseByte(returnToLevel + "");
 			final long pXp = player.getStat().getExp();
-			final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
+			final long tXp = ExperienceData.getInstance().getExpForLevel(level);
 			if (pXp > tXp)
 			{
 				player.getStat().removeExpAndSp(pXp - tXp, 0);

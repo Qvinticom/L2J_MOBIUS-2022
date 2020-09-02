@@ -32,7 +32,7 @@ public class DustRider extends AbstractNpcAI
 {
 	private static final int DUST_RIDER = 25719;
 	// Skills
-	private static final SkillHolder NPC_HASTE_LVL_3 = new SkillHolder(6914, 3);
+	private static final SkillHolder NPC_HASTE_LEVEL_3 = new SkillHolder(6914, 3);
 	// Variables
 	private static final String CAST_FLAG = "CAST_FLAG";
 	// Misc
@@ -55,7 +55,7 @@ public class DustRider extends AbstractNpcAI
 		if (!npc.getVariables().getBoolean(CAST_FLAG, false) && (npc.getCurrentHp() < (npc.getMaxHp() * MIN_HP_PERCENTAGE)))
 		{
 			npc.getVariables().set(CAST_FLAG, true);
-			addSkillCastDesire(npc, npc, NPC_HASTE_LVL_3, 99999);
+			addSkillCastDesire(npc, npc, NPC_HASTE_LEVEL_3, 99999);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

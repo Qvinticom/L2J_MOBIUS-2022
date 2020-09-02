@@ -56,8 +56,8 @@ public class Q11019_TribalBenefit extends Quest
 	private static final int MARAKU_WEREWOLF = 20363;
 	private static final int EYE_OF_SEER = 20426;
 	// Misc
-	private static final int MIN_LVL = 2;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11019_TribalBenefit()
 	{
@@ -65,7 +65,7 @@ public class Q11019_TribalBenefit extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, TIKU);
 		addKillId(KASHA_WOLF, KASHA_FOREST_WOLF, GOBLIN_TOMB_RAIDER, RAKECLAW_IMP_HUNTER, MOUNTAIN_FUNGUS, MARAKU_WEREWOLF, EYE_OF_SEER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html");
 		addCondRace(Race.ORC, "no-race.html");
 		registerQuestItems(TRIBAL_CHRONICLE, KASHA_WOLF_FUR, ASHES_OF_ANCESTORS, IMP_NECKLACE, MOUNTAIN_FUNGUS_SPORES, MARAKU_WEREWOLF_CLAW, EYE_OF_SEER_TEARS);
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_TRIBAL_BENEFIT);

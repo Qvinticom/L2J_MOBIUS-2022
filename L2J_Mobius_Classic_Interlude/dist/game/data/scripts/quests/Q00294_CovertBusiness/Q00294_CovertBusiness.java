@@ -49,7 +49,7 @@ public class Q00294_CovertBusiness extends Quest
 	// Reward
 	private static final int RING_OF_RACCOON = 1508;
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	
 	public Q00294_CovertBusiness()
 	{
@@ -103,7 +103,7 @@ public class Q00294_CovertBusiness extends Quest
 		String html = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			html = (talker.getRace() == Race.DWARF) ? (talker.getLevel() >= MIN_LVL) ? "30534-02.htm" : "30534-01.htm" : "30534-00.htm";
+			html = (talker.getRace() == Race.DWARF) ? (talker.getLevel() >= MIN_LEVEL) ? "30534-02.htm" : "30534-01.htm" : "30534-00.htm";
 		}
 		else if (qs.isStarted())
 		{

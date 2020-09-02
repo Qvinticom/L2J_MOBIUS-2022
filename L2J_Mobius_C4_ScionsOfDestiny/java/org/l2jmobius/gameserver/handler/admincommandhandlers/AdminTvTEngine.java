@@ -35,8 +35,8 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		"admin_tvt_name",
 		"admin_tvt_desc",
 		"admin_tvt_join_loc",
-		"admin_tvt_minlvl",
-		"admin_tvt_maxlvl",
+		"admin_tvt_minLevel",
+		"admin_tvt_maxLevel",
 		"admin_tvt_npc",
 		"admin_tvt_npc_pos",
 		"admin_tvt_reward",
@@ -93,7 +93,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
-		else if (command.startsWith("admin_tvt_minlvl "))
+		else if (command.startsWith("admin_tvt_minLevel "))
 		{
 			if (!TvT.checkMinLevel(Integer.parseInt(command.substring(17))))
 			{
@@ -109,7 +109,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
-		else if (command.startsWith("admin_tvt_maxlvl "))
+		else if (command.startsWith("admin_tvt_maxLevel "))
 		{
 			if (!TvT.checkMaxLevel(Integer.parseInt(command.substring(17))))
 			{
@@ -375,8 +375,8 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("<td width=\"100\"><button value=\"Join Location\" action=\"bypass -h admin_tvt_join_loc $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("</tr></table><br><table><tr>");
-		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_tvt_maxlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_tvt_minlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_tvt_maxLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_tvt_minLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"Max players\" action=\"bypass -h admin_tvt_maxplayers $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -424,8 +424,8 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + TvT.getRewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + TvT.getRewardAmount() + "</font><br><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMinlvl() + "</font><br>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMinLevel() + "</font><br>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMaxLevel() + "</font><br><br>");
 		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + TvT.getMinPlayers() + "</font><br>");
 		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + TvT.getMaxPlayers() + "</font><br><br>");
 		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + TvT.getJoinTime() + "</font><br>");

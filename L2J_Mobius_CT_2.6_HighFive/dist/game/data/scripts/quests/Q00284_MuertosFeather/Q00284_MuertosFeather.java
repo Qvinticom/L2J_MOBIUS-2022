@@ -46,7 +46,7 @@ public class Q00284_MuertosFeather extends Quest
 		MOB_DROP_CHANCE.put(22246, 0.633); // Muertos Commander
 	}
 	// Misc
-	private static final int MIN_LVL = 11;
+	private static final int MIN_LEVEL = 11;
 	
 	public Q00284_MuertosFeather()
 	{
@@ -121,7 +121,7 @@ public class Q00284_MuertosFeather extends Quest
 		String html = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			html = ((player.getLevel() >= MIN_LVL) ? "32166-01.htm" : "32166-02.htm");
+			html = ((player.getLevel() >= MIN_LEVEL) ? "32166-01.htm" : "32166-02.htm");
 		}
 		else if (qs.isStarted())
 		{

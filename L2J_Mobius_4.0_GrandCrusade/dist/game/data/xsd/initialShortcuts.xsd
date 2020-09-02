@@ -73,7 +73,7 @@
 															</xs:simpleType>
 														</xs:attribute>
 														<xs:attribute type="xs:positiveInteger" name="skillId" use="optional" />
-														<xs:attribute type="xs:positiveInteger" name="skillLvl" use="optional" />
+														<xs:attribute type="xs:positiveInteger" name="skillLevel" use="optional" />
 														<xs:attribute type="xs:nonNegativeInteger" name="page" use="optional" />
 														<xs:attribute type="xs:nonNegativeInteger" name="slot" use="optional" />
 														<xs:attribute type="xs:positiveInteger" name="actionId" use="optional" />

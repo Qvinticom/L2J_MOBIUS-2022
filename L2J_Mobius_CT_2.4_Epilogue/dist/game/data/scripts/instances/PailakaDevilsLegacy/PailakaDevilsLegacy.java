@@ -82,8 +82,8 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	private static final int TEMPLATE_ID = 44;
 	private static final int ZONE = 20109;
 	private static final int ZONE_EXIT = 200000;
-	private static final int TIGRESS_LVL1 = 14916;
-	private static final int TIGRESS_LVL2 = 14917;
+	private static final int TIGRESS_LEVEL1 = 14916;
+	private static final int TIGRESS_LEVEL2 = 14917;
 	
 	private PailakaDevilsLegacy()
 	{
@@ -283,7 +283,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	@Override
 	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if (creature.isPlayer() && creature.hasSummon() && ((creature.getSummon().getTemplate().getId() == TIGRESS_LVL1) || (creature.getSummon().getTemplate().getId() == TIGRESS_LVL2)))
+		if (creature.isPlayer() && creature.hasSummon() && ((creature.getSummon().getTemplate().getId() == TIGRESS_LEVEL1) || (creature.getSummon().getTemplate().getId() == TIGRESS_LEVEL2)))
 		{
 			final Summon tigress = creature.getSummon();
 			if (!tigress.isDead())

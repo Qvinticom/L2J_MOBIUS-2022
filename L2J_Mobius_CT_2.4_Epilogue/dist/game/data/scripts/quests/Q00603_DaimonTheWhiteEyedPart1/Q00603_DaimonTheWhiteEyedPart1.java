@@ -52,7 +52,7 @@ public class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 	// Reward
 	private static final int UNFINISHED_CRYSTAL = 7192;
 	// Misc
-	private static final int MIN_LVL = 73;
+	private static final int MIN_LEVEL = 73;
 	
 	public Q00603_DaimonTheWhiteEyedPart1()
 	{
@@ -147,7 +147,7 @@ public class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 			{
 				if (npc.getId() == EYE_OF_ARGOS)
 				{
-					htmltext = ((talker.getLevel() < MIN_LVL) ? "31683-02.html" : "31683-01.htm");
+					htmltext = ((talker.getLevel() < MIN_LEVEL) ? "31683-02.html" : "31683-01.htm");
 				}
 				break;
 			}

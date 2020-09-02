@@ -296,13 +296,13 @@ public class SystemMessage implements IClientOutgoingPacket
 		return addSkillName(id, 1, 0);
 	}
 	
-	public SystemMessage addSkillName(int id, int lvl, int subLvl)
+	public SystemMessage addSkillName(int id, int lvl, int subLevel)
 	{
 		append(new SMParam(TYPE_SKILL_NAME, new int[]
 		{
 			id,
 			lvl,
-			subLvl
+			subLevel
 		}));
 		return this;
 	}

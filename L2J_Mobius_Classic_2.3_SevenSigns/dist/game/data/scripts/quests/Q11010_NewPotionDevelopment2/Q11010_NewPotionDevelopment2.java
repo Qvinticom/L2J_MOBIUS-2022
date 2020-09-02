@@ -51,8 +51,8 @@ public class Q11010_NewPotionDevelopment2 extends Quest
 	private static final int RED_SCAVENGER_SPIDER = 20393;
 	private static final int MOONSTONE_BEAST = 20369;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11010_NewPotionDevelopment2()
 	{
@@ -60,7 +60,7 @@ public class Q11010_NewPotionDevelopment2 extends Quest
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL);
 		addKillId(SCAVENGER_SPIDER, RED_SCAVENGER_SPIDER, MOONSTONE_BEAST);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ELF, "no-race.html"); // Custom
 		addCondCompletedQuest(Q11009_NewPotionDevelopment1.class.getSimpleName(), "30150-06.html");
 		registerQuestItems(MEDICINE_RESEARCH, SPIDER_ICHOR, MOONSTONE_BEAST_SCALES);

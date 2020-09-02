@@ -44,7 +44,7 @@ public class Q00166_MassOfDarkness extends Quest
 	private static final int DREVIANT_WINE = 1090;
 	private static final int GARMIELS_SCRIPTURE = 1091;
 	// Misc
-	private static final int MIN_LVL = 2;
+	private static final int MIN_LEVEL = 2;
 	private static final Map<Integer, Integer> NPCs = new HashMap<>();
 	static
 	{
@@ -87,7 +87,7 @@ public class Q00166_MassOfDarkness extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
+						htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
 						break;
 					}
 					case State.STARTED:

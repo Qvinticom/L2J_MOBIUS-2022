@@ -37,8 +37,8 @@ public class PetData
 	private final int _itemId;
 	private int _load = 20000;
 	private int _hungryLimit = 1;
-	private int _minlvl = Byte.MAX_VALUE;
-	private int _maxlvl = 0;
+	private int _minLevel = Byte.MAX_VALUE;
+	private int _maxLevel = 0;
 	private boolean _syncLevel = false;
 	private final List<Integer> _food = new ArrayList<>();
 	
@@ -70,13 +70,13 @@ public class PetData
 	 */
 	public void addNewStat(int level, PetLevelData data)
 	{
-		if (_minlvl > level)
+		if (_minLevel > level)
 		{
-			_minlvl = level;
+			_minLevel = level;
 		}
-		if (_maxlvl < (level - 1))
+		if (_maxLevel < (level - 1))
 		{
-			_maxlvl = level - 1;
+			_maxLevel = level - 1;
 		}
 		_levelStats.put(level, data);
 	}
@@ -119,7 +119,7 @@ public class PetData
 	 */
 	public int getMinLevel()
 	{
-		return _minlvl;
+		return _minLevel;
 	}
 	
 	/**
@@ -127,7 +127,7 @@ public class PetData
 	 */
 	public int getMaxLevel()
 	{
-		return _maxlvl;
+		return _maxLevel;
 	}
 	
 	/**
@@ -174,12 +174,12 @@ public class PetData
 	
 	/**
 	 * @param skillId the skill Id to add.
-	 * @param skillLvl the skill level.
+	 * @param skillLevel the skill level.
 	 * @param petLvl the pet's level when this skill is available.
 	 */
-	public void addNewSkill(int skillId, int skillLvl, int petLvl)
+	public void addNewSkill(int skillId, int skillLevel, int petLvl)
 	{
-		_skills.add(new PetSkillLearn(skillId, skillLvl, petLvl));
+		_skills.add(new PetSkillLearn(skillId, skillLevel, petLvl));
 	}
 	
 	/**
@@ -215,10 +215,10 @@ public class PetData
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
-				final int maxLvl = SkillData.getInstance().getMaxLevel(temp.getSkillId());
-				if (lvl > maxLvl)
+				final int maxLevel = SkillData.getInstance().getMaxLevel(temp.getSkillId());
+				if (lvl > maxLevel)
 				{
-					lvl = maxLvl;
+					lvl = maxLevel;
 				}
 				break;
 			}
@@ -249,12 +249,12 @@ public class PetData
 		/**
 		 * @param id the skill Id.
 		 * @param lvl the skill level.
-		 * @param minLvl the minimum level when this skill is available.
+		 * @param minLevel the minimum level when this skill is available.
 		 */
-		public PetSkillLearn(int id, int lvl, int minLvl)
+		public PetSkillLearn(int id, int lvl, int minLevel)
 		{
 			super(id, lvl);
-			_minLevel = minLvl;
+			_minLevel = minLevel;
 		}
 		
 		/**

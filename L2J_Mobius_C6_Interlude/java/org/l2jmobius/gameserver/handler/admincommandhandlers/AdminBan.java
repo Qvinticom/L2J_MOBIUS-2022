@@ -384,12 +384,12 @@ public class AdminBan implements IAdminCommandHandler
 		}
 	}
 	
-	private boolean changeCharAccessLevel(PlayerInstance targetPlayer, String player, PlayerInstance activeChar, int lvl)
+	private boolean changeCharAccessLevel(PlayerInstance targetPlayer, String player, PlayerInstance activeChar, int level)
 	{
 		boolean output = false;
 		if (targetPlayer != null)
 		{
-			targetPlayer.setAccessLevel(lvl);
+			targetPlayer.setAccessLevel(level);
 			targetPlayer.sendMessage("Your character has been banned. Contact the administrator for more informations.");
 			
 			try
@@ -419,7 +419,7 @@ public class AdminBan implements IAdminCommandHandler
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE char_name=?");
-				statement.setInt(1, lvl);
+				statement.setInt(1, level);
 				statement.setString(2, player);
 				statement.execute();
 				final int count = statement.getUpdateCount();
@@ -430,7 +430,7 @@ public class AdminBan implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage(player + " now has an access level of " + lvl);
+					activeChar.sendMessage(player + " now has an access level of " + level);
 					output = true;
 				}
 			}

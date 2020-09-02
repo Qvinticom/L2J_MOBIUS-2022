@@ -241,7 +241,7 @@ public class Fafurion extends AbstractNpcAI
 					}
 					for (PlayerInstance member : members)
 					{
-						if (member.getLevel() < Config.FAFURION_MIN_PLAYER_LVL)
+						if (member.getLevel() < Config.FAFURION_MIN_PLAYER_LEVEL)
 						{
 							return "34488-01.html";
 						}

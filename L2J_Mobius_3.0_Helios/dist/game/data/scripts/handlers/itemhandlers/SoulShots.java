@@ -106,7 +106,7 @@ public class SoulShots implements IItemHandler
 			player.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
 		}
 		
-		// Visual effect change if player has equipped Ruby lvl 3 or higher
+		// Visual effect change if player has equipped Ruby level 3 or higher
 		if (player.getActiveRubyJewel() != null)
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);

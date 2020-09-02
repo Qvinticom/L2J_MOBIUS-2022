@@ -43,7 +43,7 @@ public class Q00281_HeadForTheHills extends Quest
 	// Message
 	private static final ExShowScreenMessage MESSAGE = new ExShowScreenMessage(NpcStringId.ACQUISITION_OF_SOULSHOT_FOR_BEGINNERS_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	// Rewards
@@ -173,7 +173,7 @@ public class Q00281_HeadForTheHills extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "32173-01.htm" : "32173-02.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32173-01.htm" : "32173-02.htm";
 				break;
 			}
 			case State.STARTED:

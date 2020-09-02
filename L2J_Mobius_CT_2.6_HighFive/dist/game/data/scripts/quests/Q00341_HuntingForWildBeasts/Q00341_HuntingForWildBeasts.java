@@ -46,7 +46,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	// Items
 	private static final int BEAR_SKIN = 4259;
 	// Misc
-	private static final int MIN_LVL = 20;
+	private static final int MIN_LEVEL = 20;
 	private static final int ADENA_COUNT = 3710;
 	private static final int REQUIRED_COUNT = 20;
 	
@@ -93,7 +93,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = player.getLevel() >= MIN_LVL ? "30078-01.html" : "30078-02.htm";
+				htmltext = player.getLevel() >= MIN_LEVEL ? "30078-01.html" : "30078-02.htm";
 				break;
 			}
 			case State.STARTED:

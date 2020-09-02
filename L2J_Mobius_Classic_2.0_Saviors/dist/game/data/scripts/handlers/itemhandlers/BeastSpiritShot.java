@@ -124,7 +124,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 			pet.chargeShot(shotType);
-			// Visual effect change if player has equipped Sapphire lvl 3 or higher
+			// Visual effect change if player has equipped Sapphire level 3 or higher
 			if (activeOwner.getActiveShappireJewel() != null)
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
@@ -141,7 +141,7 @@ public class BeastSpiritShot implements IItemHandler
 			{
 				activeOwner.sendMessage(isBlessed ? "Your servitor uses blessed spiritshot." : "Your servitor uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				s.chargeShot(shotType);
-				// Visual effect change if player has equipped Sapphire lvl 3 or higher
+				// Visual effect change if player has equipped Sapphire level 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
 				{
 					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);

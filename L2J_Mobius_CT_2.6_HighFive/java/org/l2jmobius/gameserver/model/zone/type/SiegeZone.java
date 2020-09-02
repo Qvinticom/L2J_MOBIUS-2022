@@ -263,14 +263,14 @@ public class SiegeZone extends ZoneType
 			return;
 		}
 		
-		int lvl = 1;
+		int level = 1;
 		final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
 		if (info != null)
 		{
-			lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
+			level = Math.min(level + info.getSkill().getLevel(), 5);
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
+		final Skill skill = SkillData.getInstance().getSkill(5660, level);
 		if (skill != null)
 		{
 			skill.applyEffects(creature, creature);

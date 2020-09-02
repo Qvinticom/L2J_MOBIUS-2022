@@ -33,7 +33,7 @@ public class SkillLearn
 {
 	private final String _skillName;
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	private final int _getLevel;
 	private final boolean _autoGet;
 	private final int _levelUpSp;
@@ -50,12 +50,12 @@ public class SkillLearn
 	public class SubClassData
 	{
 		private final int slot;
-		private final int lvl;
+		private final int level;
 		
 		public SubClassData(int pSlot, int pLvl)
 		{
 			slot = pSlot;
-			lvl = pLvl;
+			level = pLvl;
 		}
 		
 		/**
@@ -71,7 +71,7 @@ public class SkillLearn
 		 */
 		public int getLvl()
 		{
-			return lvl;
+			return level;
 		}
 	}
 	
@@ -83,7 +83,7 @@ public class SkillLearn
 	{
 		_skillName = set.getString("skillName");
 		_skillId = set.getInt("skillId");
-		_skillLvl = set.getInt("skillLvl");
+		_skillLevel = set.getInt("skillLevel");
 		_getLevel = set.getInt("getLevel");
 		_autoGet = set.getBoolean("autoGet", false);
 		_levelUpSp = set.getInt("levelUpSp", 0);
@@ -113,7 +113,7 @@ public class SkillLearn
 	 */
 	public int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
 	}
 	
 	/**
@@ -247,11 +247,11 @@ public class SkillLearn
 	/**
 	 * Adds a required residence Id.
 	 * @param slot the sub-class slot.
-	 * @param lvl the required sub-class level.
+	 * @param level the required sub-class level.
 	 */
-	public void addSubclassConditions(int slot, int lvl)
+	public void addSubclassConditions(int slot, int level)
 	{
-		_subClassLvlNumber.add(new SubClassData(slot, lvl));
+		_subClassLvlNumber.add(new SubClassData(slot, level));
 	}
 	
 	/**

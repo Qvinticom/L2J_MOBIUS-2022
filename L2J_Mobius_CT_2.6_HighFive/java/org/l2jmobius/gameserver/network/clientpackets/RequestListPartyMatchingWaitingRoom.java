@@ -27,16 +27,16 @@ import org.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaiting
 public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	private int _page;
-	private int _minlvl;
-	private int _maxlvl;
+	private int _minLevel;
+	private int _maxLevel;
 	private int _mode; // 1 - waitlist 0 - room waitlist
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_page = packet.readD();
-		_minlvl = packet.readD();
-		_maxlvl = packet.readD();
+		_minLevel = packet.readD();
+		_maxLevel = packet.readD();
 		_mode = packet.readD();
 		return true;
 	}
@@ -50,6 +50,6 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 			return;
 		}
 		
-		player.sendPacket(new ExListPartyMatchingWaitingRoom(player, _page, _minlvl, _maxlvl, _mode));
+		player.sendPacket(new ExListPartyMatchingWaitingRoom(player, _page, _minLevel, _maxLevel, _mode));
 	}
 }

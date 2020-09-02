@@ -2236,10 +2236,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public String getTitle()
 	{
 		// Custom level titles
-		if (isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
+		if (isMonster() && (Config.SHOW_NPC_LEVEL || Config.SHOW_NPC_AGGRESSION))
 		{
 			String t1 = "";
-			if (Config.SHOW_NPC_LVL)
+			if (Config.SHOW_NPC_LEVEL)
 			{
 				t1 += "Lv " + getLevel();
 			}
@@ -5178,12 +5178,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 	}
 	
-	public boolean isIgnoringSkillEffects(int skillId, int skillLvl)
+	public boolean isIgnoringSkillEffects(int skillId, int skillLevel)
 	{
 		if (_ignoreSkillEffects != null)
 		{
 			final SkillHolder holder = getIgnoreSkillEffects().get(skillId);
-			return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLvl)));
+			return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLevel)));
 		}
 		return false;
 	}

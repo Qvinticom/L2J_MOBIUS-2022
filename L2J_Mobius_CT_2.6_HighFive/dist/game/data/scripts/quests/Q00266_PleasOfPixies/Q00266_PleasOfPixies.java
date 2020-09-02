@@ -59,7 +59,7 @@ public class Q00266_PleasOfPixies extends Quest
 		REWARDS.put(3, Arrays.asList(new ItemHolder(1336, 1), new ItemHolder(1060, 1))); // Glass Shard, Lesser Healing Potion
 	}
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	
 	public Q00266_PleasOfPixies()
 	{
@@ -117,7 +117,7 @@ public class Q00266_PleasOfPixies extends Quest
 				{
 					htmltext = "31852-01.htm";
 				}
-				else if (player.getLevel() < MIN_LVL)
+				else if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "31852-02.htm";
 				}

@@ -521,22 +521,22 @@ public class RequestActionUse extends GameClientPacket
 			}
 			case 1003: // Wind Hatchling/Strider - Wild Stun
 			{
-				useSkill(4710); // TODO use correct skill lvl based on pet lvl
+				useSkill(4710); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1004: // Wind Hatchling/Strider - Wild Defense
 			{
-				useSkill(4711, player); // TODO use correct skill lvl based on pet lvl
+				useSkill(4711, player); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1005: // Star Hatchling/Strider - Bright Burst
 			{
-				useSkill(4712); // TODO use correct skill lvl based on pet lvl
+				useSkill(4712); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1006: // Star Hatchling/Strider - Bright Heal
 			{
-				useSkill(4713, player); // TODO use correct skill lvl based on pet lvl
+				useSkill(4713, player); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1007: // Cat Queen - Blessing of Queen

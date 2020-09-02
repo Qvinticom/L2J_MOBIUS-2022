@@ -33,11 +33,11 @@ public class SkillLearn
 	private final int _costid;
 	private final int _costcount;
 	
-	public SkillLearn(int id, int lvl, int minLvl, String name, int cost, int costid, int costcount)
+	public SkillLearn(int id, int level, int minLevel, String name, int cost, int costid, int costcount)
 	{
 		_id = id;
-		_level = lvl;
-		_minLevel = minLvl;
+		_level = level;
+		_minLevel = minLevel;
 		_name = name.intern();
 		_spCost = cost;
 		_costid = costid;

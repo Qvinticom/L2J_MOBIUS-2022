@@ -819,8 +819,8 @@ public class SkillTreeData implements IXmlReader
 				continue;
 			}
 			
-			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
-			final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
+			final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getSkillId());
+			final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLevel);
 			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()))
 			{
 				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -1466,8 +1466,8 @@ public class SkillTreeData implements IXmlReader
 	{
 		for (Skill skill : player.getAllSkills())
 		{
-			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
-			final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
+			final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
+			final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLevel);
 			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
 			{
 				// Do not remove equipped item skills.
@@ -1697,8 +1697,8 @@ public class SkillTreeData implements IXmlReader
 			return true;
 		}
 		
-		final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
-		final long hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
+		final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
+		final long hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLevel));
 		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0)
 		{
 			return true;
@@ -1715,13 +1715,13 @@ public class SkillTreeData implements IXmlReader
 		}
 		
 		// Exclude Transfer Skills from this check.
-		if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null)
+		if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLevel), player.getClassId()) != null)
 		{
 			return true;
 		}
 		
 		// Exclude Race skills from this check.
-		if (getRaceSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getRace()) != null)
+		if (getRaceSkill(skill.getId(), Math.min(skill.getLevel(), maxLevel), player.getRace()) != null)
 		{
 			return true;
 		}

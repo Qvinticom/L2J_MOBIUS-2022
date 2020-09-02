@@ -47,7 +47,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 		MONSTERS.put(20176, 60); // Wyrm
 	}
 	// Misc
-	private static final int MIN_LVL = 32;
+	private static final int MIN_LEVEL = 32;
 	private static final int HARPY_FEATHER_ADENA = 6;
 	private static final int MEDUSA_VENOM_ADENA = 7;
 	private static final int WYRMS_TOOTH_ADENA = 9;
@@ -103,7 +103,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = player.getLevel() < MIN_LVL ? "30125-01.htm" : "30125-02.htm";
+				htmltext = player.getLevel() < MIN_LEVEL ? "30125-01.htm" : "30125-02.htm";
 				break;
 			}
 			case State.STARTED:

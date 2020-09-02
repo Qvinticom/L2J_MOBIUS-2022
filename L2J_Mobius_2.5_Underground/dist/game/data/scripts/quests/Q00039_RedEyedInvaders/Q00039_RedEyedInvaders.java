@@ -46,7 +46,7 @@ public class Q00039_RedEyedInvaders extends Quest
 	private static final ItemHolder CORRODED_BABYDUCK_ROD = new ItemHolder(6529, 1);
 	private static final ItemHolder CORRODED_FISHING_SHOT = new ItemHolder(6535, 500);
 	// Misc
-	private static final int MIN_LVL = 20;
+	private static final int MIN_LEVEL = 20;
 	
 	public Q00039_RedEyedInvaders()
 	{
@@ -55,7 +55,7 @@ public class Q00039_RedEyedInvaders extends Quest
 		addTalkId(GUARD_BABENCO, CAPTAIN_BATHIS);
 		addKillId(MALE_LIZARDMAN_GUARD, MALE_LIZARDMAN_SCOUT, MALE_LIZARDMAN, GIANT_ARANE);
 		registerQuestItems(LIZ_NECKLACE_A.getId(), LIZ_NECKLACE_B.getId(), LIZ_PERFUME.getId(), LIZ_GEM.getId());
-		addCondMinLevel(MIN_LVL, "30334-02.htm");
+		addCondMinLevel(MIN_LEVEL, "30334-02.htm");
 	}
 	
 	@Override

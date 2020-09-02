@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
 /**
  * Limit Barrier AI
  * @author RobikBobik<br>
- *         OK - Many Raid Bosses lvl 50 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
+ *         OK - Many Raid Bosses level 50 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
  *         OK - 500 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
  *         OK - If barrier destruction is failed, Boss restores full HP.<br>
  *         OK - Death Knight, who randomly appear after boss's death, also use Limit Barrier.<br>

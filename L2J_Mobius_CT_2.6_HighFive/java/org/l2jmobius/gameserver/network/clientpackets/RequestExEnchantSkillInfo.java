@@ -25,26 +25,26 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
- * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
+ * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_skillLevel = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -60,7 +60,7 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		if ((skill == null) || (skill.getId() != _skillId))
 		{
 			return;
@@ -71,12 +71,12 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final int playerSkillLvl = player.getSkillLevel(_skillId);
-		if ((playerSkillLvl == -1) || (playerSkillLvl != _skillLvl))
+		final int playerskillLevel = player.getSkillLevel(_skillId);
+		if ((playerskillLevel == -1) || (playerskillLevel != _skillLevel))
 		{
 			return;
 		}
 		
-		player.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
+		player.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLevel));
 	}
 }

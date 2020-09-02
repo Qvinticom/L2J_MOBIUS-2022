@@ -1503,7 +1503,7 @@ public class Attackable extends Npc
 		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
-			if (isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
 				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 				{
@@ -1615,7 +1615,7 @@ public class Attackable extends Npc
 				}
 			}
 			
-			// hi-lvl mobs bonus
+			// hi-level mobs bonus
 			final int diff = getLevel() - _seed.getLevel() - 5;
 			if (diff > 0)
 			{

@@ -903,10 +903,10 @@ public class Party extends AbstractPlayerGroup
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
 		{
 			int i = 0;
-			final int lvlDiff = topLvl - player.getLevel();
+			final int levelDiff = topLvl - player.getLevel();
 			for (int[] gap : Config.PARTY_XP_CUTOFF_GAPS)
 			{
-				if ((lvlDiff >= gap[0]) && (lvlDiff <= gap[1]))
+				if ((levelDiff >= gap[0]) && (levelDiff <= gap[1]))
 				{
 					xp = (addExp * Config.PARTY_XP_CUTOFF_GAP_PERCENTS[i]) / 100;
 					sp = (addSp * Config.PARTY_XP_CUTOFF_GAP_PERCENTS[i]) / 100;

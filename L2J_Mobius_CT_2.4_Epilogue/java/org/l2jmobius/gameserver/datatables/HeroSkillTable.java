@@ -52,14 +52,14 @@ public class HeroSkillTable
 		return _heroSkills;
 	}
 	
-	public static boolean isHeroSkill(int skillid)
+	public static boolean isHeroSkill(int skillId)
 	{
 		/*
 		 * Do not perform checks directly on L2Skill array, it will cause errors due to SkillTable not initialized
 		 */
 		for (int id : _heroSkillsId)
 		{
-			if (id == skillid)
+			if (id == skillId)
 			{
 				return true;
 			}

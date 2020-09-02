@@ -448,7 +448,7 @@ public class VarkaSilenosSupport extends Quest
 					// Destroy the badge.
 					player.destroyItemByItemId("Quest", i, item.getCount(), player, true);
 					
-					// Badge lvl 1 ; no addition of badge of lower level.
+					// Badge level 1 ; no addition of badge of lower level.
 					if (i != 7221)
 					{
 						player.addItem("Quest", i - 1, 1, player, true);

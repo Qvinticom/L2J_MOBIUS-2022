@@ -38,8 +38,8 @@ public abstract class ZoneType
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected;
 	
-	private int _minLvl;
-	private int _maxLvl;
+	private int _minLevel;
+	private int _maxLevel;
 	private int[] _race;
 	private int[] _class;
 	private char _classType;
@@ -48,8 +48,8 @@ public abstract class ZoneType
 	{
 		_id = id;
 		_checkAffected = false;
-		_minLvl = 0;
-		_maxLvl = 0xFF;
+		_minLevel = 0;
+		_maxLevel = 0xFF;
 		_classType = 0;
 		_race = null;
 		_class = null;
@@ -74,13 +74,13 @@ public abstract class ZoneType
 		{
 			case "affectedLvlMin":
 			{
-				_minLvl = Integer.parseInt(value);
+				_minLevel = Integer.parseInt(value);
 				break;
 			}
 			// Maximum level
 			case "affectedLvlMax":
 			{
-				_maxLvl = Integer.parseInt(value);
+				_maxLevel = Integer.parseInt(value);
 				break;
 			}
 			// Affected Races
@@ -150,8 +150,8 @@ public abstract class ZoneType
 	 */
 	private boolean isAffected(Creature creature)
 	{
-		// Check lvl
-		if ((creature.getLevel() < _minLvl) || (creature.getLevel() > _maxLvl))
+		// Check level
+		if ((creature.getLevel() < _minLevel) || (creature.getLevel() > _maxLevel))
 		{
 			return false;
 		}

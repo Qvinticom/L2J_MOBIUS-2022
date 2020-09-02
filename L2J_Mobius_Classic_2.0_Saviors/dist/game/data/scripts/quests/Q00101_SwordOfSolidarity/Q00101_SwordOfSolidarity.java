@@ -49,8 +49,8 @@ public class Q00101_SwordOfSolidarity extends Quest
 	// Rewards
 	private static final int REWARDS = 49043; // Sword of Solidarity
 	// Misc
-	private static final int MIN_LVL = 10;
-	private static final int MAX_LVL = 16;
+	private static final int MIN_LEVEL = 10;
+	private static final int MAX_LEVEL = 16;
 	
 	public Q00101_SwordOfSolidarity()
 	{
@@ -59,7 +59,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 		addKillId(MONSTERS);
 		addTalkId(ROIEN, ALTRAN);
 		registerQuestItems(BROKEN_SWORD_HANDLE, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP, ALTRANS_NOTE, ROIENS_LETTER, DIRECTIONS_TO_RUINS);
-		addCondMaxLevel(MAX_LVL, "30008-08.htm");
+		addCondMaxLevel(MAX_LEVEL, "30008-08.htm");
 	}
 	
 	@Override
@@ -158,7 +158,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
+						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LEVEL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
 						break;
 					}
 					case State.STARTED:

@@ -77,7 +77,7 @@ public class Q00373_SupplierOfReagents extends Quest
 	private static final int MIXING_MANUAL = 6317;
 	private static final int WESLEYS_MIXING_STONE = 5904;
 	// Misc
-	private static final int MIN_LVL = 57;
+	private static final int MIN_LEVEL = 57;
 	private static final HashMap<String, Integer> HTML_TO_MEMO_STATE = new HashMap<>(20);
 	private static final HashMap<Integer, ItemHolder> MEMO_STATE_TO_ITEM = new HashMap<>(20);
 	private static final HashMap<Integer, Entry> MEMO_STATE_TO_REWARD = new HashMap<>(15);
@@ -178,7 +178,7 @@ public class Q00373_SupplierOfReagents extends Quest
 			}
 			case "30166-04.html":
 			{
-				if ((player.getLevel() >= MIN_LVL) && qs.isCreated())
+				if ((player.getLevel() >= MIN_LEVEL) && qs.isCreated())
 				{
 					giveItems(player, WESLEYS_MIXING_STONE, 1);
 					giveItems(player, MIXING_MANUAL, 1);
@@ -429,7 +429,7 @@ public class Q00373_SupplierOfReagents extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			if (talker.getLevel() < MIN_LVL)
+			if (talker.getLevel() < MIN_LEVEL)
 			{
 				htmltext = "30166-01.html";
 			}

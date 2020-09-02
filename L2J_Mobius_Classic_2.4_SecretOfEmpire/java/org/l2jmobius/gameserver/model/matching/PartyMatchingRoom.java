@@ -35,9 +35,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class PartyMatchingRoom extends MatchingRoom
 {
-	public PartyMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance leader)
+	public PartyMatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance leader)
 	{
-		super(title, loot, minlvl, maxlvl, maxmem, leader);
+		super(title, loot, minLevel, maxLevel, maxmem, leader);
 	}
 	
 	@Override

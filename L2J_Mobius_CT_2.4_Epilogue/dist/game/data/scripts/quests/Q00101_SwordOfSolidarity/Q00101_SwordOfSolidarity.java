@@ -61,7 +61,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
 	};
 	// Misc
-	private static final int MIN_LVL = 9;
+	private static final int MIN_LEVEL = 9;
 	
 	public Q00101_SwordOfSolidarity()
 	{
@@ -173,7 +173,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
+						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LEVEL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
 						break;
 					}
 					case State.STARTED:

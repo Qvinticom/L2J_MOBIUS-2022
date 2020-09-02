@@ -41,7 +41,7 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 	// Items
 	private static final int KRORINS_JOURNAL = 7252;
 	// Misc
-	private static final int MIN_LVL = 66;
+	private static final int MIN_LEVEL = 66;
 	// Monuments
 	private static final List<Integer> MONUMENTS = Arrays.asList(FORGOTTEN_MONUMENT_1, FORGOTTEN_MONUMENT_2, FORGOTTEN_MONUMENT_3, FORGOTTEN_MONUMENT_4);
 	
@@ -135,7 +135,7 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "31555-01.htm" : "31555-03.htm";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? "31555-01.htm" : "31555-03.htm";
 						break;
 					}
 					case State.STARTED:

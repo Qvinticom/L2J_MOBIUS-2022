@@ -78,7 +78,7 @@ public class AnswerJoinPartyRoom implements IClientIncomingPacket
 				return;
 			}
 			
-			if ((player.getLevel() >= room.getMinLvl()) && (player.getLevel() <= room.getMaxLvl()))
+			if ((player.getLevel() >= room.getMinLevel()) && (player.getLevel() <= room.getMaxLevel()))
 			{
 				// Remove from waiting list
 				PartyMatchWaitingList.getInstance().removePlayer(player);

@@ -153,7 +153,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	
 	// Misc
 	private static final boolean DEBUG = false;
-	private static final int MIN_LVL = 80;
+	private static final int MIN_LEVEL = 80;
 	private static final boolean CHECK_FOR_CONTRACT = true;
 	private static final long REENTER_INTERVAL = 14400000;
 	private static final long INITIAL_SPAWN_DELAY = 120000; // Spawn NPCs and 1st Wave bosses (2 min)
@@ -541,7 +541,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				return "CastleWarden-08.html";
 			}
 			
-			if (player.getLevel() >= MIN_LVL)
+			if (player.getLevel() >= MIN_LEVEL)
 			{
 				return "CastleWarden-06.htm";
 			}

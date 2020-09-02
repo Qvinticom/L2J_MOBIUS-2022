@@ -53,8 +53,8 @@ public class Q10999_LoserPriest3 extends Quest
 	private static final int KEROPE_WEREWOLF = 21126;
 	private static final int KEROPE_WEREWOLF_CHIEFTAIN = 21129;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10999_LoserPriest3()
 	{
@@ -62,7 +62,7 @@ public class Q10999_LoserPriest3 extends Quest
 		addStartNpc(GERALD);
 		addTalkId(GERALD);
 		addKillId(NORTHERN_TRIMDEN, RED_EYE_BARBED_BAT, KEROPE_WEREWOLF_CHIEFTAIN, KEROPE_WEREWOLF);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
 		addCondCompletedQuest(Q10998_LoserPriest2.class.getSimpleName(), "30650-05.html");
 		registerQuestItems(NEW_CLEANING_TOOLS_LIST, BAT_BRISTLE, TRIMDEN_WEB, KEROPE_WEREWOLF_TWIG_CHARM);

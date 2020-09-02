@@ -39,7 +39,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	private static final int HYACINTH_CHARM = 1071;
 	private static final int HYACINTH_CHARM2 = 1072;
 	// Misc
-	private static final int MIN_LVL = 12;
+	private static final int MIN_LEVEL = 12;
 	
 	public Q00159_ProtectTheWaterSource()
 	{
@@ -111,7 +111,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
+				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LEVEL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
 				break;
 			}
 			case State.STARTED:

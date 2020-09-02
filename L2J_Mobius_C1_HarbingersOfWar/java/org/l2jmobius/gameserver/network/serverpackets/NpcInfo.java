@@ -106,10 +106,10 @@ public class NpcInfo extends ServerBasePacket
 			
 			_title = _cha.getTitle();
 			// Custom level titles
-			if (_cha.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
+			if (_cha.isMonster() && (Config.SHOW_NPC_LEVEL || Config.SHOW_NPC_AGGRESSION))
 			{
 				String t1 = "";
-				if (Config.SHOW_NPC_LVL)
+				if (Config.SHOW_NPC_LEVEL)
 				{
 					t1 += "Lv " + _cha.getLevel();
 				}

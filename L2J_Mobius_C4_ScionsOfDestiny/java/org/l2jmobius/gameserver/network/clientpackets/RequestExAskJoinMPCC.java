@@ -120,7 +120,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 	private void askJoinMPCC(PlayerInstance requestor, PlayerInstance target)
 	{
 		boolean hasRight = false;
-		if ((requestor.getClan() != null) && (requestor.getClan().getLeaderId() == requestor.getObjectId()) && (requestor.getClan().getLevel() >= 5)) // Clanleader of lvl5 Clan or higher
+		if ((requestor.getClan() != null) && (requestor.getClan().getLeaderId() == requestor.getObjectId()) && (requestor.getClan().getLevel() >= 5)) // Clanleader of level5 Clan or higher
 		{
 			hasRight = true;
 		}

@@ -50,8 +50,8 @@ public class Q11011_NewPotionDevelopment3 extends Quest
 	private static final int RATMAN_SCAVENGER = 20039;
 	private static final int ARACHNID_TRACKER = 20043;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11011_NewPotionDevelopment3()
 	{
@@ -59,7 +59,7 @@ public class Q11011_NewPotionDevelopment3 extends Quest
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL);
 		addKillId(RATMAN_SCAVENGER, ARACHNID_TRACKER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ELF, "no-race.html"); // Custom
 		addCondCompletedQuest(Q11010_NewPotionDevelopment2.class.getSimpleName(), "30150-05.html");
 		registerQuestItems(MEDICATIONS_RESEARCH, ANTIDOTE, ARACHNID_TRACKER_THORN);

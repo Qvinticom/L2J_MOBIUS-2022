@@ -78,7 +78,7 @@ public class SubclassCertification extends AbstractNpcAI
 		TRANSFORMATION_SEALBOOKS.put(6, 10293); // Transformation Sealbook: Divine Enchanter
 	}
 	
-	private static final int MIN_LVL = 65;
+	private static final int MIN_LEVEL = 65;
 	
 	private SubclassCertification()
 	{
@@ -112,7 +112,7 @@ public class SubclassCertification extends AbstractNpcAI
 				{
 					htmltext = "NotSubclass.html";
 				}
-				else if (player.getLevel() < MIN_LVL)
+				else if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "NotMinLevel.html";
 				}

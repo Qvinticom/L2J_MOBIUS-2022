@@ -37,7 +37,7 @@ public class Q00633_InTheForgottenVillage extends Quest
 	private static final int RIB_BONE_OF_A_BLACK_MAGUS = 7544;
 	private static final int ZOMBIES_LIVER = 7545;
 	// Misc
-	private static final int MIN_LVL = 65;
+	private static final int MIN_LEVEL = 65;
 	private static final int RIB_BONE_REQUIRED_COUNT = 200;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
@@ -178,7 +178,7 @@ public class Q00633_InTheForgottenVillage extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = ((player.getLevel() >= MIN_LVL) ? "31388-01.htm" : "31388-02.htm");
+			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31388-01.htm" : "31388-02.htm");
 		}
 		else if (qs.isStarted())
 		{

@@ -1153,11 +1153,11 @@ public class PetInstance extends Summon
 	{
 		// TODO: Need Correct Penalty
 		
-		final int lvl = getStat().getLevel();
-		final double percentLost = (-0.07 * lvl) + 6.5;
+		final int level = getStat().getLevel();
+		final double percentLost = (-0.07 * level) + 6.5;
 		
 		// Calculate the Experience loss
-		final long lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
+		final long lostExp = Math.round(((getStat().getExpForLevel(level + 1) - getStat().getExpForLevel(level)) * percentLost) / 100);
 		
 		// Get the Experience before applying penalty
 		_expBeforeDeath = getStat().getExp();
@@ -1236,8 +1236,8 @@ public class PetInstance extends Summon
 			return 0;
 		}
 		
-		final int lvl = getLevel();
-		return lvl > 70 ? 7 + ((lvl - 70) / 5) : lvl / 10;
+		final int level = getLevel();
+		return level > 70 ? 7 + ((level - 70) / 5) : level / 10;
 	}
 	
 	public void updateRefOwner(PlayerInstance owner)

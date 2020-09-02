@@ -1903,21 +1903,6 @@
 															</xs:element>
 															<xs:element name="VALAKAS" type="xs:byte" />
 															<xs:element name="isItem" type="xs:boolean" />
-															<xs:element name="skillLvl">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="instanceId" type="xs:string" />
 															<xs:element name="GUST" type="xs:unsignedByte" />
 															<xs:element name="id" type="xs:unsignedShort" />

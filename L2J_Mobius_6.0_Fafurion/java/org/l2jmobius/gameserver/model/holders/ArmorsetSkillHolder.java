@@ -33,9 +33,9 @@ public class ArmorsetSkillHolder extends SkillHolder
 	private final int _artifactBookSlot;
 	private final boolean _isOptional;
 	
-	public ArmorsetSkillHolder(int skillId, int skillLvl, int minimumPieces, int minEnchant, boolean isOptional, int artifactSlotMask, int artifactBookSlot)
+	public ArmorsetSkillHolder(int skillId, int skillLevel, int minimumPieces, int minEnchant, boolean isOptional, int artifactSlotMask, int artifactBookSlot)
 	{
-		super(skillId, skillLvl);
+		super(skillId, skillLevel);
 		_minimumPieces = minimumPieces;
 		_minEnchant = minEnchant;
 		_isOptional = isOptional;

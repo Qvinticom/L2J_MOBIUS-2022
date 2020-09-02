@@ -50,8 +50,8 @@ public class Q10998_LoserPriest2 extends Quest
 	private static final int HUNTER_TARANTULA = 20403;
 	private static final int PLUNDER_TARANTULA = 20508;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10998_LoserPriest2()
 	{
@@ -59,7 +59,7 @@ public class Q10998_LoserPriest2 extends Quest
 		addStartNpc(GERALD);
 		addTalkId(GERALD);
 		addKillId(PLUNDER_TARANTULA, HUNTER_TARANTULA);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
 		addCondCompletedQuest(Q10997_LoserPriest1.class.getSimpleName(), "30650-06.html");
 		registerQuestItems(MAINTENANCE_REQUEST, HUNTER_TARANTULA_VENOM, PLUNDER_TARANTULA_KIDNEY);

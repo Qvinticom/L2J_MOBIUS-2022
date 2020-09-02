@@ -167,7 +167,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.NAME);
 		}
 		
-		if (npc.getTemplate().isUsingServerSideTitle() || (npc.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION)) || npc.isChampion() || npc.isTrap())
+		if (npc.getTemplate().isUsingServerSideTitle() || (npc.isMonster() && (Config.SHOW_NPC_LEVEL || Config.SHOW_NPC_AGGRESSION)) || npc.isChampion() || npc.isTrap())
 		{
 			addComponentType(NpcInfoType.TITLE);
 		}

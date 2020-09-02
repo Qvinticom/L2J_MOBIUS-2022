@@ -47,7 +47,7 @@ public class Q00043_HelpTheSister extends Quest
 	private static final int MAP = 7551;
 	private static final int PET_TICKET = 7584;
 	// Misc
-	private static final int MIN_LVL = 26;
+	private static final int MIN_LEVEL = 26;
 	
 	public Q00043_HelpTheSister()
 	{
@@ -56,7 +56,7 @@ public class Q00043_HelpTheSister extends Quest
 		addTalkId(COOPER, GALLADUCCI);
 		addKillId(DION_GRIZZLY, HOBGOBLIN, DIRE_WOLF, OL_MAHUM_RANGER, MONSTER_EYE_SEARCHER, MONSTER_EYE_GAZER, ENKU_ORC_HERO, ENKU_ORC_SHAMAN);
 		registerQuestItems(MAP, MAP_PIECE);
-		addCondMinLevel(MIN_LVL, "30829-00a.html");
+		addCondMinLevel(MIN_LEVEL, "30829-00a.html");
 	}
 	
 	@Override

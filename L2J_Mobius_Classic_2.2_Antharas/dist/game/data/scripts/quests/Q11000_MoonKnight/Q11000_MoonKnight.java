@@ -72,8 +72,8 @@ public class Q11000_MoonKnight extends Quest
 	private static final int IRON_SCALE_GUILD_CERTIFICATE = 49560;
 	// Misc
 	private static final int QUESTION_MARK_ID = 18;
-	private static final int MIN_LVL = 25;
-	private static final int MAX_LVL = 40;
+	private static final int MIN_LEVEL = 25;
+	private static final int MAX_LEVEL = 40;
 	
 	public Q11000_MoonKnight()
 	{
@@ -81,7 +81,7 @@ public class Q11000_MoonKnight extends Quest
 		addStartNpc(JONES);
 		addTalkId(JONES, DAMION, AMORA, NETI, ROLENTO, GUDZ);
 		addKillId(OL_MAHUM_THIEF, TUREK_ORC_COMMANDER, TUREK_ORC_INVADER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no_level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
 		registerQuestItems(MOLD, AMORA_RECEIPT, ARMOR_TRADE_CONTRACT, TUREK_ORC_ORDER, TUREK_ORC_INVADER_HEAD);
 		setQuestNameNpcStringId(NpcStringId.MOON_KNIGHT);
 	}

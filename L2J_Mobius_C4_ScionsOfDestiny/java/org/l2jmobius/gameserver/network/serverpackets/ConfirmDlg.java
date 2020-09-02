@@ -25,7 +25,7 @@ import java.util.List;
 public class ConfirmDlg extends GameServerPacket
 {
 	private final int _messageId;
-	private int _skillLvL = 1;
+	private int _skillLevel = 1;
 	private static final int TYPE_ZONE_NAME = 7;
 	private static final int TYPE_SKILL_NAME = 4;
 	private static final int TYPE_ITEM_NAME = 3;
@@ -88,11 +88,11 @@ public class ConfirmDlg extends GameServerPacket
 		return addSkillName(id, 1);
 	}
 	
-	public ConfirmDlg addSkillName(int id, int lvl)
+	public ConfirmDlg addSkillName(int id, int level)
 	{
 		_types.add(TYPE_SKILL_NAME);
 		_values.add(id);
-		_skillLvL = lvl;
+		_skillLevel = level;
 		return this;
 	}
 	
@@ -139,7 +139,7 @@ public class ConfirmDlg extends GameServerPacket
 					{
 						final int t1 = ((Integer) _values.get(i)).intValue();
 						writeD(t1); // Skill Id
-						writeD(_skillLvL); // Skill lvl
+						writeD(_skillLevel); // Skill level
 						break;
 					}
 					case TYPE_ZONE_NAME:

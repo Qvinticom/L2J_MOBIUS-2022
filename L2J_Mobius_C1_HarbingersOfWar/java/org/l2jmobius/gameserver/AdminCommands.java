@@ -1256,12 +1256,12 @@ public class AdminCommands extends Thread
 	public void showSkill(ClientThread client, String value)
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
-		final int skillid = Integer.parseInt(value);
-		final Skill skill = SkillTable.getInstance().getSkill(skillid, 1);
+		final int skillId = Integer.parseInt(value);
+		final Skill skill = SkillTable.getInstance().getSkill(skillId, 1);
 		if ((skill != null) && (skill.getTargetType() == 0))
 		{
 			activeChar.setTarget(activeChar);
-			final MagicSkillUser msk = new MagicSkillUser(activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay());
+			final MagicSkillUser msk = new MagicSkillUser(activeChar, skillId, 1, skill.getHitTime(), skill.getReuseDelay());
 			activeChar.sendPacket(msk);
 			activeChar.broadcastPacket(msk);
 		}

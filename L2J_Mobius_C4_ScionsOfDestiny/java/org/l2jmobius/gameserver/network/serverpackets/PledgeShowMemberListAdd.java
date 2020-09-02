@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 public class PledgeShowMemberListAdd extends GameServerPacket
 {
 	private String _name;
-	private int _lvl;
+	private int _level;
 	private int _classId;
 	private int _objectId;
 	private int _pledgeType;
@@ -33,7 +33,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 	public PledgeShowMemberListAdd(PlayerInstance player)
 	{
 		_name = player.getName();
-		_lvl = player.getLevel();
+		_level = player.getLevel();
 		_classId = player.getClassId().getId();
 		_objectId = player.isOnline() ? player.getObjectId() : 0;
 		_pledgeType = player.getPledgeType();
@@ -44,7 +44,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 		try
 		{
 			_name = cm.getName();
-			_lvl = cm.getLevel();
+			_level = cm.getLevel();
 			_classId = cm.getClassId();
 			_objectId = cm.isOnline() ? cm.getObjectId() : 0;
 			_pledgeType = cm.getPledgeType();
@@ -59,7 +59,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 	{
 		writeC(0x55);
 		writeS(_name);
-		writeD(_lvl);
+		writeD(_level);
 		writeD(_classId);
 		writeD(0);
 		writeD(1);

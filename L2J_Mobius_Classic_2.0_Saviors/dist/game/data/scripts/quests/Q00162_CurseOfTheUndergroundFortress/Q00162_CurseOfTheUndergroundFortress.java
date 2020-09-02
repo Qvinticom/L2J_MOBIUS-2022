@@ -52,7 +52,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	private static final int BONE_FRAGMENT = 1158;
 	private static final int ELF_SKULL = 1159;
 	// Misc
-	private static final int MIN_LVL = 12;
+	private static final int MIN_LEVEL = 12;
 	private static final int REQUIRED_COUNT = 13;
 	
 	public Q00162_CurseOfTheUndergroundFortress()
@@ -144,7 +144,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
+				htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
 				break;
 			}
 			case State.STARTED:

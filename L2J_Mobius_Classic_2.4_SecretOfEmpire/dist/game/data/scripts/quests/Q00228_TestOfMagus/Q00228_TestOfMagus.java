@@ -87,7 +87,7 @@ public class Q00228_TestOfMagus extends Quest
 	private static final int SINGING_FLOWER_DARKLING = 27097;
 	private static final int GHOST_FIRE = 27098;
 	// Misc
-	private static final int MIN_LVL = 39;
+	private static final int MIN_LEVEL = 39;
 	
 	public Q00228_TestOfMagus()
 	{
@@ -373,7 +373,7 @@ public class Q00228_TestOfMagus extends Quest
 			{
 				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || (player.getClassId() == ClassId.DARK_WIZARD))
 				{
-					if (player.getLevel() < MIN_LVL)
+					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30629-02.html";
 					}

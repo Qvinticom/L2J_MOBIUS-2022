@@ -52,8 +52,8 @@ public class Q11022_RedGemNecklace2 extends Quest
 	private static final int KASHA_FANG_SPIDER = 20476;
 	private static final int KASHA_BLADE_SPIDER = 20478;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11022_RedGemNecklace2()
 	{
@@ -61,7 +61,7 @@ public class Q11022_RedGemNecklace2 extends Quest
 		addStartNpc(USKA);
 		addTalkId(USKA);
 		addKillId(KASHA_BEAR, KASHA_SPIDER, KASHA_FANG_SPIDER, KASHA_BLADE_SPIDER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
 		addCondCompletedQuest(Q11021_RedGemNecklace1.class.getSimpleName(), "30560-06.html");
 		registerQuestItems(LIST_OF_MATERIALS, BEARS_SHIN_BONE, SHARP_SPIDER_LEG);

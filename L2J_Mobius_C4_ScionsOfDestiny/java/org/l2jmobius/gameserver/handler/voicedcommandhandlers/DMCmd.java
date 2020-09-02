@@ -78,12 +78,12 @@ public class DMCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are not allowed to participate to the event because you are in Olympiad.");
 			return false;
 		}
-		else if (activeChar.getLevel() < DM.getMinlvl())
+		else if (activeChar.getLevel() < DM.getMinLevel())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too low.");
 			return false;
 		}
-		else if (activeChar.getLevel() > DM.getMaxlvl())
+		else if (activeChar.getLevel() > DM.getMaxLevel())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too high.");
 			return false;
@@ -158,15 +158,15 @@ public class DMCmd implements IVoicedCommandHandler
 			{
 				activeChar.sendMessage("There is " + DM._players.size() + " player participating in this event.");
 				activeChar.sendMessage("Reward: " + DM.getRewardAmount() + " " + ItemTable.getInstance().getTemplate(DM.getRewardId()).getName() + " !");
-				activeChar.sendMessage("Player Min lvl: " + DM.getMinlvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + DM.getMaxlvl() + ".");
+				activeChar.sendMessage("Player Min lvl: " + DM.getMinLevel() + ".");
+				activeChar.sendMessage("Player Max lvl: " + DM.getMaxLevel() + ".");
 			}
 			else
 			{
 				activeChar.sendMessage("There are " + DM._players.size() + " players participating in this event.");
 				activeChar.sendMessage("Reward: " + DM.getRewardAmount() + " " + ItemTable.getInstance().getTemplate(DM.getRewardId()).getName() + " !");
-				activeChar.sendMessage("Player Min lvl: " + DM.getMinlvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + DM.getMaxlvl() + ".");
+				activeChar.sendMessage("Player Min lvl: " + DM.getMinLevel() + ".");
+				activeChar.sendMessage("Player Max lvl: " + DM.getMaxLevel() + ".");
 			}
 			return true;
 		}

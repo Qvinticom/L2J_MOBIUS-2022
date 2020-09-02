@@ -53,8 +53,8 @@ public class Q11003_PerfectLeatherArmor1 extends Quest
 	private static final int UNDINE_ELDER = 20113;
 	private static final int UNDINE_NOBLE = 20115;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11003_PerfectLeatherArmor1()
 	{
@@ -62,7 +62,7 @@ public class Q11003_PerfectLeatherArmor1 extends Quest
 		addStartNpc(HARRYS);
 		addTalkId(HARRYS, LECTOR);
 		addKillId(GIANT_SPIDER, GIANT_FANG_SPIDER, GIANT_BLADE_SPIDER, UNDINE, UNDINE_ELDER, UNDINE_NOBLE);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.HUMAN, "no-race.html"); // Custom
 		registerQuestItems(LECTORS_NOTES, COBWEB, ESSENCE_OF_WATER);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_PERFECT_LEATHER_ARMOR_1_3);

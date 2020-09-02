@@ -48,6 +48,6 @@ public class OnPlayerClanLvlUp implements IBaseEvent
 	@Override
 	public EventType getType()
 	{
-		return EventType.ON_PLAYER_CLAN_LVLUP;
+		return EventType.ON_PLAYER_CLAN_LEVELUP;
 	}
 }

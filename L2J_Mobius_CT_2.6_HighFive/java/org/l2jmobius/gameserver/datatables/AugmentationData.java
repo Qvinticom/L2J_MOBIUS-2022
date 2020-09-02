@@ -253,7 +253,7 @@ public class AugmentationData
 								NamedNodeMap attrs = d.getAttributes();
 								int skillId = 0;
 								final int augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-								int skillLvL = 0;
+								int skillLevel = 0;
 								String type = "blue";
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -265,7 +265,7 @@ public class AugmentationData
 									else if ("skillLevel".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										skillLvL = Integer.parseInt(attrs.getNamedItem("val").getNodeValue());
+										skillLevel = Integer.parseInt(attrs.getNamedItem("val").getNodeValue());
 									}
 									else if ("type".equalsIgnoreCase(cd.getNodeName()))
 									{
@@ -278,7 +278,7 @@ public class AugmentationData
 									badAugmantData++;
 									continue;
 								}
-								else if (skillLvL == 0)
+								else if (skillLevel == 0)
 								{
 									badAugmantData++;
 									continue;
@@ -297,7 +297,7 @@ public class AugmentationData
 									_redSkills.get(k).add(augmentationId);
 								}
 								
-								_allSkills.put(augmentationId, new SkillHolder(skillId, skillLvL));
+								_allSkills.put(augmentationId, new SkillHolder(skillId, skillLevel));
 							}
 						}
 					}

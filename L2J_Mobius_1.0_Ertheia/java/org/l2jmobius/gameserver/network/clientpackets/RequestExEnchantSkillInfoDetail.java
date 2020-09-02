@@ -30,8 +30,8 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 {
 	private SkillEnchantType _type;
 	private int _skillId;
-	private int _skillLvl;
-	private int _skillSubLvl;
+	private int _skillLevel;
+	private int _skillSubLevel ;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -41,13 +41,13 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 		final int level = packet.readD();
 		if (level < 100)
 		{
-			_skillLvl = level;
-			_skillSubLvl = 0;
+			_skillLevel = level;
+			_skillSubLevel  = 0;
 		}
 		else
 		{
-			_skillLvl = client.getPlayer().getKnownSkill(_skillId).getLevel();
-			_skillSubLvl = SkillEnchantConverter.levelToUnderground(level);
+			_skillLevel = client.getPlayer().getKnownSkill(_skillId).getLevel();
+			_skillSubLevel  = SkillEnchantConverter.levelToUnderground(level);
 		}
 		return true;
 	}
@@ -55,7 +55,7 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0) || (_skillSubLevel  < 0))
 		{
 			return;
 		}
@@ -65,6 +65,6 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 		{
 			return;
 		}
-		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, _skillSubLvl, player));
+		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLevel, _skillSubLevel , player));
 	}
 }

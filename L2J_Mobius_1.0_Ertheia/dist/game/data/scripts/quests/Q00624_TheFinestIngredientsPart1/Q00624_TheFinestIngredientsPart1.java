@@ -42,7 +42,7 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest
 	private static final int ICE_CRYSTAL = 7080;
 	private static final int SOY_SAUCE_JAR = 7205;
 	// Misc
-	private static final int MIN_LVL = 73;
+	private static final int MIN_LEVEL = 73;
 	private static final Map<Integer, Integer> MONSTER_DROPS = new HashMap<>();
 	static
 	{
@@ -134,7 +134,7 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-00.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "31521-01.htm" : "31521-00.htm";
 				break;
 			}
 			case State.STARTED:

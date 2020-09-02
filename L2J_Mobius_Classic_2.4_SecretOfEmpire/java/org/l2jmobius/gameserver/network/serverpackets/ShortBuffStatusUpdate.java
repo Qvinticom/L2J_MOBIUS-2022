@@ -24,15 +24,15 @@ public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 	public static final ShortBuffStatusUpdate RESET_SHORT_BUFF = new ShortBuffStatusUpdate(0, 0, 0, 0);
 	
 	private final int _skillId;
-	private final int _skillLvl;
-	private final int _skillSubLvl;
+	private final int _skillLevel;
+	private final int _skillSubLevel ;
 	private final int _duration;
 	
-	public ShortBuffStatusUpdate(int skillId, int skillLvl, int skillSubLvl, int duration)
+	public ShortBuffStatusUpdate(int skillId, int skillLevel, int skillSubLevel , int duration)
 	{
 		_skillId = skillId;
-		_skillLvl = skillLvl;
-		_skillSubLvl = skillSubLvl;
+		_skillLevel = skillLevel;
+		_skillSubLevel  = skillSubLevel ;
 		_duration = duration;
 	}
 	
@@ -42,8 +42,8 @@ public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 		OutgoingPackets.SHORT_BUFF_STATUS_UPDATE.writeId(packet);
 		
 		packet.writeD(_skillId);
-		packet.writeH(_skillLvl);
-		packet.writeH(_skillSubLvl);
+		packet.writeH(_skillLevel);
+		packet.writeH(_skillSubLevel );
 		packet.writeD(_duration);
 		return true;
 	}

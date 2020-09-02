@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
- * Format (ch) dd c: (id) 0xD0 h: (subid) 0x33 d: skill id d: skill lvl
+ * Format (ch) dd c: (id) 0xD0 h: (subid) 0x33 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
@@ -47,20 +47,20 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_skillLevel = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -95,12 +95,12 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_skillLvl % 100) == 0)
+		if ((_skillLevel % 100) == 0)
 		{
-			_skillLvl = s.getBaseLevel();
+			_skillLevel = s.getBaseLevel();
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		if (skill == null)
 		{
 			return;
@@ -108,7 +108,7 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		
 		final int reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
 		final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
-		if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel())))
+		if (((beforeUntrainSkillLevel - 1) != _skillLevel) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLevel != s.getBaseLevel())))
 		{
 			return;
 		}
@@ -154,7 +154,7 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new ExBrExtraUserInfo(player));
-		if (_skillLvl > 100)
+		if (_skillLevel > 100)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
 			sm.addSkillName(_skillId);

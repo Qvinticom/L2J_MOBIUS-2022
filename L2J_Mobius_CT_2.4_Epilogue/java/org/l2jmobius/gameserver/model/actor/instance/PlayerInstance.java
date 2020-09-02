@@ -7605,7 +7605,7 @@ public class PlayerInstance extends Playable
 						
 						statement.setInt(1, getObjectId());
 						statement.setInt(2, t.getSkillId());
-						statement.setInt(3, t.getSkillLvl());
+						statement.setInt(3, t.getSkillLevel());
 						statement.setInt(4, -1);
 						statement.setLong(5, t.getReuse());
 						statement.setLong(6, t.getStamp());
@@ -11950,13 +11950,13 @@ public class PlayerInstance extends Playable
 	
 	private int getRandomFishLvl()
 	{
-		int skilllvl = getSkillLevel(1315);
+		int skillLevel = getSkillLevel(1315);
 		final BuffInfo info = getEffectList().getBuffInfoBySkillId(2274);
 		if (info != null)
 		{
-			skilllvl = (int) info.getSkill().getPower();
+			skillLevel = (int) info.getSkill().getPower();
 		}
-		if (skilllvl <= 0)
+		if (skillLevel <= 0)
 		{
 			return 1;
 		}
@@ -11964,11 +11964,11 @@ public class PlayerInstance extends Playable
 		final int check = Rnd.get(100);
 		if (check <= 50)
 		{
-			randomlvl = skilllvl;
+			randomlvl = skillLevel;
 		}
 		else if (check <= 85)
 		{
-			randomlvl = skilllvl - 1;
+			randomlvl = skillLevel - 1;
 			if (randomlvl <= 0)
 			{
 				randomlvl = 1;
@@ -11976,7 +11976,7 @@ public class PlayerInstance extends Playable
 		}
 		else
 		{
-			randomlvl = skilllvl + 1;
+			randomlvl = skillLevel + 1;
 			if (randomlvl > 27)
 			{
 				randomlvl = 27;
@@ -13674,22 +13674,22 @@ public class PlayerInstance extends Playable
 			final SkillLearn learn = SkillTreeData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
 			if (learn != null)
 			{
-				final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
-				if (getLevel() < (learn.getGetLevel() - lvlDiff))
+				final int levelDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
+				if (getLevel() < (learn.getGetLevel() - levelDiff))
 				{
-					deacreaseSkillLevel(e.getValue(), lvlDiff);
+					deacreaseSkillLevel(e.getValue(), levelDiff);
 				}
 			}
 		}
 	}
 	
-	private void deacreaseSkillLevel(Skill skill, int lvlDiff)
+	private void deacreaseSkillLevel(Skill skill, int levelDiff)
 	{
 		int nextLevel = -1;
 		final Map<Integer, SkillLearn> skillTree = SkillTreeData.getInstance().getCompleteClassSkillTree(getClassId());
 		for (SkillLearn sl : skillTree.values())
 		{
-			if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff)))
+			if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - levelDiff)))
 			{
 				nextLevel = sl.getSkillLevel(); // next possible skill level
 			}

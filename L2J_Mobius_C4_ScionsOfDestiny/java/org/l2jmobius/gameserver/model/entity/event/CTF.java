@@ -80,8 +80,8 @@ public class CTF implements EventTask
 	protected static int _npcHeading = 0;
 	protected static int _rewardId = 0;
 	protected static int _rewardAmount = 0;
-	protected static int _minlvl = 0;
-	protected static int _maxlvl = 0;
+	protected static int _minLevel = 0;
+	protected static int _maxLevel = 0;
 	protected static int _joinTime = 0;
 	protected static int _eventTime = 0;
 	protected static int _minPlayers = 0;
@@ -286,48 +286,48 @@ public class CTF implements EventTask
 	}
 	
 	/**
-	 * Gets the _minlvl.
-	 * @return the _minlvl
+	 * Gets the _minLevel.
+	 * @return the _minLevel
 	 */
-	public static int getMinLvl()
+	public static int getMinLevel()
 	{
-		return _minlvl;
+		return _minLevel;
 	}
 	
 	/**
-	 * Set_minlvl.
-	 * @param minlvl the _minlvl to set
+	 * Set_minLevel.
+	 * @param minLevel the _minLevel to set
 	 * @return true, if successful
 	 */
-	public static boolean setMinLvl(int minlvl)
+	public static boolean setMinLevel(int minLevel)
 	{
 		if (!_inProgress)
 		{
-			CTF._minlvl = minlvl;
+			CTF._minLevel = minLevel;
 			return true;
 		}
 		return false;
 	}
 	
 	/**
-	 * Gets the _maxlvl.
-	 * @return the _maxlvl
+	 * Gets the _maxLevel.
+	 * @return the _maxLevel
 	 */
-	public static int getMaxLvl()
+	public static int getMaxLevel()
 	{
-		return _maxlvl;
+		return _maxLevel;
 	}
 	
 	/**
-	 * Set_maxlvl.
-	 * @param maxlvl the _maxlvl to set
+	 * Set_maxLevel.
+	 * @param maxLevel the _maxLevel to set
 	 * @return true, if successful
 	 */
-	public static boolean setMaxLvl(int maxlvl)
+	public static boolean setMaxLevel(int maxLevel)
 	{
 		if (!_inProgress)
 		{
-			CTF._maxlvl = maxlvl;
+			CTF._maxLevel = maxLevel;
 			return true;
 		}
 		return false;
@@ -533,22 +533,22 @@ public class CTF implements EventTask
 	
 	/**
 	 * Check max level.
-	 * @param maxlvl the maxlvl
+	 * @param maxLevel the maxLevel
 	 * @return true, if successful
 	 */
-	public static boolean checkMaxLevel(int maxlvl)
+	public static boolean checkMaxLevel(int maxLevel)
 	{
-		return _minlvl < maxlvl;
+		return _minLevel < maxLevel;
 	}
 	
 	/**
 	 * Check min level.
-	 * @param minlvl the minlvl
+	 * @param minLevel the minLevel
 	 * @return true, if successful
 	 */
-	public static boolean checkMinLevel(int minlvl)
+	public static boolean checkMinLevel(int minLevel)
 	{
-		return _maxlvl > minlvl;
+		return _maxLevel > minLevel;
 	}
 	
 	/**
@@ -746,7 +746,7 @@ public class CTF implements EventTask
 		{
 			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
 		}
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minLevel + " to " + _maxLevel);
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
 		if (Config.CTF_COMMAND)
 		{
@@ -1621,8 +1621,8 @@ public class CTF implements EventTask
 		LOGGER.info("Name: " + _eventName);
 		LOGGER.info("Desc: " + _eventDesc);
 		LOGGER.info("Join location: " + _joiningLocationName);
-		LOGGER.info("Min lvl: " + _minlvl);
-		LOGGER.info("Max lvl: " + _maxlvl);
+		LOGGER.info("Min lvl: " + _minLevel);
+		LOGGER.info("Max lvl: " + _maxLevel);
 		LOGGER.info("");
 		LOGGER.info("##########################");
 		LOGGER.info("# _teams(List<String>) #");
@@ -1744,8 +1744,8 @@ public class CTF implements EventTask
 		_rewardId = 0;
 		_rewardAmount = 0;
 		_topScore = 0;
-		_minlvl = 0;
-		_maxlvl = 0;
+		_minLevel = 0;
+		_maxLevel = 0;
 		_joinTime = 0;
 		_eventTime = 0;
 		_minPlayers = 0;
@@ -1765,8 +1765,8 @@ public class CTF implements EventTask
 				_eventName = rs.getString("eventName");
 				_eventDesc = rs.getString("eventDesc");
 				_joiningLocationName = rs.getString("joiningLocation");
-				_minlvl = rs.getInt("minlvl");
-				_maxlvl = rs.getInt("maxlvl");
+				_minLevel = rs.getInt("minLevel");
+				_maxLevel = rs.getInt("maxLevel");
 				_npcId = rs.getInt("npcId");
 				_npcX = rs.getInt("npcX");
 				_npcY = rs.getInt("npcY");
@@ -1838,12 +1838,12 @@ public class CTF implements EventTask
 			statement.execute();
 			statement.close();
 			
-			statement = con.prepareStatement("INSERT INTO ctf (eventName, eventDesc, joiningLocation, minlvl, maxlvl, npcId, npcX, npcY, npcZ, npcHeading, rewardId, rewardAmount, teamsCount, joinTime, eventTime, minPlayers, maxPlayers,delayForNextEvent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			statement = con.prepareStatement("INSERT INTO ctf (eventName, eventDesc, joiningLocation, minLevel, maxLevel, npcId, npcX, npcY, npcZ, npcHeading, rewardId, rewardAmount, teamsCount, joinTime, eventTime, minPlayers, maxPlayers,delayForNextEvent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			statement.setString(1, _eventName);
 			statement.setString(2, _eventDesc);
 			statement.setString(3, _joiningLocationName);
-			statement.setInt(4, _minlvl);
-			statement.setInt(5, _maxlvl);
+			statement.setInt(4, _minLevel);
+			statement.setInt(5, _maxLevel);
 			statement.setInt(6, _npcId);
 			statement.setInt(7, _npcX);
 			statement.setInt(8, _npcY);
@@ -1919,7 +1919,7 @@ public class CTF implements EventTask
 					replyMSG.append("<font color=\"FFFF00\">You can't participate to this event.</font><br>");
 				}
 			}
-			else if (!_started && _joining && (eventPlayer.getLevel() >= _minlvl) && (eventPlayer.getLevel() <= _maxlvl))
+			else if (!_started && _joining && (eventPlayer.getLevel() >= _minLevel) && (eventPlayer.getLevel() <= _maxLevel))
 			{
 				synchronized (_players)
 				{
@@ -1941,8 +1941,8 @@ public class CTF implements EventTask
 					else
 					{
 						replyMSG.append("<center><font color=\"3366CC\">You want to participate in the event?</font></center><br>");
-						replyMSG.append("<center><td width=\"200\">Min lvl: <font color=\"00FF00\">" + _minlvl + "</font></center></td><br>");
-						replyMSG.append("<center><td width=\"200\">Max lvl: <font color=\"00FF00\">" + _maxlvl + "</font></center></td><br><br>");
+						replyMSG.append("<center><td width=\"200\">Min lvl: <font color=\"00FF00\">" + _minLevel + "</font></center></td><br>");
+						replyMSG.append("<center><td width=\"200\">Max lvl: <font color=\"00FF00\">" + _maxLevel + "</font></center></td><br><br>");
 						replyMSG.append("<center><font color=\"3366CC\">Teams:</font></center><br>");
 						if (Config.CTF_EVEN_TEAMS.equals("NO") || Config.CTF_EVEN_TEAMS.equals("BALANCE"))
 						{
@@ -1977,11 +1977,11 @@ public class CTF implements EventTask
 			{
 				replyMSG.append("<center>" + _eventName + " match is in progress.</center>");
 			}
-			else if ((eventPlayer.getLevel() < _minlvl) || (eventPlayer.getLevel() > _maxlvl))
+			else if ((eventPlayer.getLevel() < _minLevel) || (eventPlayer.getLevel() > _maxLevel))
 			{
 				replyMSG.append("Your lvl: <font color=\"00FF00\">" + eventPlayer.getLevel() + "</font><br>");
-				replyMSG.append("Min lvl: <font color=\"00FF00\">" + _minlvl + "</font><br>");
-				replyMSG.append("Max lvl: <font color=\"00FF00\">" + _maxlvl + "</font><br><br>");
+				replyMSG.append("Min lvl: <font color=\"00FF00\">" + _minLevel + "</font><br>");
+				replyMSG.append("Max lvl: <font color=\"00FF00\">" + _maxLevel + "</font><br><br>");
 				replyMSG.append("<font color=\"FFFF00\">You can't participate to this event.</font><br>");
 			}
 			

@@ -26,7 +26,7 @@ public class EnchantSkillLearn
 	// not needed, just for easier debug
 	private final String name;
 	private final int spCost;
-	private final int baseLvl;
+	private final int baseLevel;
 	private final int minSkillLevel;
 	private final int exp;
 	private final byte rate76;
@@ -35,11 +35,11 @@ public class EnchantSkillLearn
 	private final byte rate79;
 	private final byte rate80;
 	
-	public EnchantSkillLearn(int id, int level, int minSkillLevel, int baseLvl, String name, int spCost, int exp, byte rate76, byte rate77, byte rate78, byte rate79, byte rate80)
+	public EnchantSkillLearn(int id, int level, int minSkillLevel, int baseLevel, String name, int spCost, int exp, byte rate76, byte rate77, byte rate78, byte rate79, byte rate80)
 	{
 		this.id = id;
 		this.level = level;
-		this.baseLvl = baseLvl;
+		this.baseLevel = baseLevel;
 		this.minSkillLevel = minSkillLevel;
 		this.name = name.intern();
 		this.spCost = spCost;
@@ -72,7 +72,7 @@ public class EnchantSkillLearn
 	 */
 	public int getBaseLevel()
 	{
-		return baseLvl;
+		return baseLevel;
 	}
 	
 	/**

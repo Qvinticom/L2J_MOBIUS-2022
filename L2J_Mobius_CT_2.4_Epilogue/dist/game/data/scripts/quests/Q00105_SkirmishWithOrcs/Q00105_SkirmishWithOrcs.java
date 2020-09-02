@@ -74,7 +74,7 @@ public class Q00105_SkirmishWithOrcs extends Quest
 		KENDELLS_8TH_ORDER
 	};
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	
 	public Q00105_SkirmishWithOrcs()
 	{
@@ -164,7 +164,7 @@ public class Q00105_SkirmishWithOrcs extends Quest
 			{
 				if (talker.getRace() == Race.ELF)
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30218-03.htm" : "30218-02.htm";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30218-03.htm" : "30218-02.htm";
 				}
 				else
 				{

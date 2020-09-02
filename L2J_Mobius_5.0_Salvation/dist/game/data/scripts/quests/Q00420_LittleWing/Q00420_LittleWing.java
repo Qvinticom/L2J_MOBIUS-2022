@@ -113,7 +113,7 @@ public class Q00420_LittleWing extends Quest
 		EGG_DROPS.put(LETO_WARRIOR, EXARION_EGG);
 	}
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	
 	public Q00420_LittleWing()
 	{
@@ -435,7 +435,7 @@ public class Q00420_LittleWing extends Quest
 			{
 				if (npc.getId() == COOPER)
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30829-01.htm" : "30829-03.html";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30829-01.htm" : "30829-03.html";
 				}
 				break;
 			}

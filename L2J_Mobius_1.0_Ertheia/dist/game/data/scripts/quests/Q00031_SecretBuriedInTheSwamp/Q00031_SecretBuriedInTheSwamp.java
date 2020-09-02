@@ -41,7 +41,7 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 	// Items
 	private static final int KRORINS_JOURNAL = 7252;
 	// Misc
-	private static final int MIN_LVL = 66;
+	private static final int MIN_LEVEL = 66;
 	// Monuments
 	private static final List<Integer> MONUMENTS = Arrays.asList(FORGOTTEN_MONUMENT_1, FORGOTTEN_MONUMENT_2, FORGOTTEN_MONUMENT_3, FORGOTTEN_MONUMENT_4);
 	
@@ -52,7 +52,7 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 		addTalkId(ABERCROMBIE, CORPSE_OF_DWARF);
 		addTalkId(MONUMENTS);
 		registerQuestItems(KRORINS_JOURNAL);
-		addCondMinLevel(MIN_LVL, "31555-03.htm");
+		addCondMinLevel(MIN_LEVEL, "31555-03.htm");
 	}
 	
 	@Override
@@ -110,7 +110,7 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 				if (qs.isCond(7))
 				{
 					giveAdena(player, 343430, true);
-					if (player.getLevel() >= MIN_LVL)
+					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 1_650_970, 396);
 					}

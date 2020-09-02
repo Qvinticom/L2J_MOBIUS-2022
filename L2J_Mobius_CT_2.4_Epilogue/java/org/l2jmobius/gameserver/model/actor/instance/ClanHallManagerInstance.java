@@ -1059,8 +1059,8 @@ public class ClanHallManagerInstance extends MerchantInstance
 										return;
 									}
 									int fee;
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -1084,7 +1084,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_ITEM_CREATE, lvl, fee, Config.CH_ITEM_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) == null)))
+									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_ITEM_CREATE, level, fee, Config.CH_ITEM_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) == null)))
 									{
 										html.setFile(player, "data/html/clanHallManager/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -1112,8 +1112,8 @@ public class ClanHallManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -1132,7 +1132,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_TELEPORT, lvl, fee, Config.CH_TELE_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) == null)))
+									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_TELEPORT, level, fee, Config.CH_TELE_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) == null)))
 									{
 										html.setFile(player, "data/html/clanHallManager/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -1160,8 +1160,8 @@ public class ClanHallManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -1210,7 +1210,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_SUPPORT, lvl, fee, Config.CH_SUPPORT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)))
+									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_SUPPORT, level, fee, Config.CH_SUPPORT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)))
 									{
 										html.setFile(player, "data/html/clanHallManager/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -1411,8 +1411,8 @@ public class ClanHallManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -1431,7 +1431,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_DECO_CURTAINS, lvl, fee, Config.CH_CURTAIN_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) == null)))
+									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_DECO_CURTAINS, level, fee, Config.CH_CURTAIN_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) == null)))
 									{
 										html.setFile(player, "data/html/clanHallManager/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -1459,8 +1459,8 @@ public class ClanHallManagerInstance extends MerchantInstance
 										sendHtmlMessage(player, html);
 										return;
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -1479,7 +1479,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_DECO_FRONTPLATEFORM, lvl, fee, Config.CH_FRONT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM) == null)))
+									if (!getClanHall().updateFunctions(player, ClanHall.FUNC_DECO_FRONTPLATEFORM, level, fee, Config.CH_FRONT_FEE_RATIO, (getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM) == null)))
 									{
 										html.setFile(player, "data/html/clanHallManager/low_adena.htm");
 										sendHtmlMessage(player, html);

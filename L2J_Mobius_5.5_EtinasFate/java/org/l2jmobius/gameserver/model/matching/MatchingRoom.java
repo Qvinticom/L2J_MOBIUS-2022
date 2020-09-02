@@ -36,19 +36,19 @@ public abstract class MatchingRoom implements IIdentifiable
 	private final int _id;
 	private String _title;
 	private int _loot;
-	private int _minLvl;
-	private int _maxLvl;
+	private int _minLevel;
+	private int _maxLevel;
 	private int _maxCount;
 	private Set<PlayerInstance> _members;
 	private PlayerInstance _leader;
 	
-	public MatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance leader)
+	public MatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance leader)
 	{
 		_id = MatchingRoomManager.getInstance().addMatchingRoom(this);
 		_title = title;
 		_loot = loot;
-		_minLvl = minlvl;
-		_maxLvl = maxlvl;
+		_minLevel = minLevel;
+		_maxLevel = maxLevel;
 		_maxCount = maxmem;
 		_leader = leader;
 		addMember(_leader);
@@ -72,7 +72,7 @@ public abstract class MatchingRoom implements IIdentifiable
 	
 	public void addMember(PlayerInstance player)
 	{
-		if ((player.getLevel() < _minLvl) || (player.getLevel() > _maxLvl) || ((_members != null) && (_members.size() >= _maxCount)))
+		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel) || ((_members != null) && (_members.size() >= _maxCount)))
 		{
 			notifyInvalidCondition(player);
 			return;
@@ -128,14 +128,14 @@ public abstract class MatchingRoom implements IIdentifiable
 		return _loot;
 	}
 	
-	public int getMinLvl()
+	public int getMinLevel()
 	{
-		return _minLvl;
+		return _minLevel;
 	}
 	
-	public int getMaxLvl()
+	public int getMaxLevel()
 	{
-		return _maxLvl;
+		return _maxLevel;
 	}
 	
 	public int getLocation()
@@ -168,14 +168,14 @@ public abstract class MatchingRoom implements IIdentifiable
 		return player == _leader;
 	}
 	
-	public void setMinLvl(int minLvl)
+	public void setMinLevel(int minLevel)
 	{
-		_minLvl = minLvl;
+		_minLevel = minLevel;
 	}
 	
-	public void setMaxLvl(int maxLvl)
+	public void setMaxLevel(int maxLevel)
 	{
-		_maxLvl = maxLvl;
+		_maxLevel = maxLevel;
 	}
 	
 	public void setLootType(int loot)

@@ -55,7 +55,7 @@ public class Q00292_BrigandsSweep extends Quest
 		MOB_ITEM_DROP.put(20528, GOBLIN_LORD_PENDANT); // Goblin Lord
 	}
 	// Misc
-	private static final int MIN_LVL = 5;
+	private static final int MIN_LEVEL = 5;
 	
 	public Q00292_BrigandsSweep()
 	{
@@ -154,7 +154,7 @@ public class Q00292_BrigandsSweep extends Quest
 				{
 					case State.CREATED:
 					{
-						html = (talker.getRace() == Race.DWARF) ? (talker.getLevel() >= MIN_LVL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
+						html = (talker.getRace() == Race.DWARF) ? (talker.getLevel() >= MIN_LEVEL) ? "30532-02.htm" : "30532-01.htm" : "30532-00.htm";
 						break;
 					}
 					case State.STARTED:

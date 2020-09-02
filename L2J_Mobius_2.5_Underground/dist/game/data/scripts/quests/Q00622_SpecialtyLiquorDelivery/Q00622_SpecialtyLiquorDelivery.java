@@ -48,7 +48,7 @@ public class Q00622_SpecialtyLiquorDelivery extends Quest
 	private static final int SEALED_SANDDRAGONS_EARING = 6847;
 	private static final int SEALED_DRAGON_NECKLACE = 6851;
 	// Misc
-	private static final int MIN_LVL = 68;
+	private static final int MIN_LEVEL = 68;
 	// Talkers
 	private static final List<Integer> TALKERS = Arrays.asList(KUBER, CROCUS, NAFF, PULIN);
 	
@@ -182,7 +182,7 @@ public class Q00622_SpecialtyLiquorDelivery extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (talker.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-02.htm";
+						htmltext = (talker.getLevel() >= MIN_LEVEL) ? "31521-01.htm" : "31521-02.htm";
 						break;
 					}
 					case State.STARTED:

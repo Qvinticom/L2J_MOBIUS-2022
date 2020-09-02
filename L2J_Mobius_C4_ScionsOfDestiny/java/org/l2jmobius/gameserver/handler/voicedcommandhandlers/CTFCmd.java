@@ -78,12 +78,12 @@ public class CTFCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are not allowed to participate to the event because you are in Olympiad.");
 			return false;
 		}
-		else if (activeChar.getLevel() < CTF.getMinLvl())
+		else if (activeChar.getLevel() < CTF.getMinLevel())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too low.");
 			return false;
 		}
-		else if (activeChar.getLevel() > CTF.getMaxLvl())
+		else if (activeChar.getLevel() > CTF.getMaxLevel())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too high.");
 			return false;
@@ -158,15 +158,15 @@ public class CTFCmd implements IVoicedCommandHandler
 			{
 				activeChar.sendMessage("There is " + CTF._playersShuffle.size() + " player participating in this event.");
 				activeChar.sendMessage("Reward: " + CTF.getRewardAmount() + " " + ItemTable.getInstance().getTemplate(CTF.getRewardId()).getName() + " !");
-				activeChar.sendMessage("Player Min lvl: " + CTF.getMinLvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxLvl() + ".");
+				activeChar.sendMessage("Player Min lvl: " + CTF.getMinLevel() + ".");
+				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxLevel() + ".");
 			}
 			else
 			{
 				activeChar.sendMessage("There are " + CTF._playersShuffle.size() + " players participating in this event.");
 				activeChar.sendMessage("Reward: " + CTF.getRewardAmount() + " " + ItemTable.getInstance().getTemplate(CTF.getRewardId()).getName() + " !");
-				activeChar.sendMessage("Player Min lvl: " + CTF.getMinLvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxLvl() + ".");
+				activeChar.sendMessage("Player Min lvl: " + CTF.getMinLevel() + ".");
+				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxLevel() + ".");
 			}
 			return true;
 		}

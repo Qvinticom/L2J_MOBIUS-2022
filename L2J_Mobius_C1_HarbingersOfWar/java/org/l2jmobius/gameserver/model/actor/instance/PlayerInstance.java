@@ -986,20 +986,20 @@ public class PlayerInstance extends Creature
 			pkCountMulti = 1;
 		}
 		newKarma *= pkCountMulti;
-		int lvlDiffMulti = 0;
+		int levelDiffMulti = 0;
 		if (pkLevel > level)
 		{
-			lvlDiffMulti = pkLevel / level;
+			levelDiffMulti = pkLevel / level;
 		}
 		else
 		{
-			lvlDiffMulti = 1;
+			levelDiffMulti = 1;
 		}
-		if (lvlDiffMulti < 1)
+		if (levelDiffMulti < 1)
 		{
-			lvlDiffMulti = 1;
+			levelDiffMulti = 1;
 		}
-		newKarma *= lvlDiffMulti;
+		newKarma *= levelDiffMulti;
 		if (newKarma < Config.KARMA_MIN_KARMA)
 		{
 			newKarma = Config.KARMA_MIN_KARMA;

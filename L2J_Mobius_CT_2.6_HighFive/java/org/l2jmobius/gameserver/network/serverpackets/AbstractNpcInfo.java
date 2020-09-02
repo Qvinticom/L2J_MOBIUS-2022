@@ -194,10 +194,10 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 				}
 			}
 			// Custom level titles
-			if (_npc.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
+			if (_npc.isMonster() && (Config.SHOW_NPC_LEVEL || Config.SHOW_NPC_AGGRESSION))
 			{
 				String t1 = "";
-				if (Config.SHOW_NPC_LVL)
+				if (Config.SHOW_NPC_LEVEL)
 				{
 					t1 += "Lv " + _npc.getLevel();
 				}

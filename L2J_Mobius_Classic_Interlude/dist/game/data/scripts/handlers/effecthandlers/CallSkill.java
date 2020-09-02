@@ -37,7 +37,7 @@ public class CallSkill extends AbstractEffect
 	
 	public CallSkill(StatSet params)
 	{
-		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel", 0));
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel ", 0));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 	}
 	
@@ -59,7 +59,7 @@ public class CallSkill extends AbstractEffect
 				final int knownLevel = effector.getSkillLevel(_skill.getSkillId());
 				if (knownLevel > 0)
 				{
-					triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), knownLevel, _skill.getSkillSubLevel());
+					triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), knownLevel, _skill.getSkillSubLevel ());
 				}
 				else
 				{

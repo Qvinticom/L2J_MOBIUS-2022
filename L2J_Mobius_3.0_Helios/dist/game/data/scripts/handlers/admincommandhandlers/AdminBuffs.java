@@ -89,7 +89,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
+					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", level: " + skillLevel + " not found.");
 					return false;
 				}
 				

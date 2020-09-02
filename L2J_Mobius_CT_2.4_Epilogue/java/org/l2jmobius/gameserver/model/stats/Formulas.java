@@ -575,16 +575,16 @@ public class Formulas
 		final double weaponMod = attacker.getRandomDamageMultiplier();
 		
 		double penaltyMod = 1;
-		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 		{
-			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
-			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+			final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+			if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 			{
 				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 			}
 			else
 			{
-				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 			}
 		}
 		
@@ -644,16 +644,16 @@ public class Formulas
 		final double weaponMod = attacker.getRandomDamageMultiplier();
 		
 		double penaltyMod = 1;
-		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 		{
-			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
-			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+			final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+			if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 			{
 				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 			}
 			else
 			{
-				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 			}
 		}
 		
@@ -781,40 +781,40 @@ public class Formulas
 			{
 				damage *= attacker.calcStat(Stat.PVE_PHYSICAL_DMG, 1, null, null);
 			}
-			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 				if (skill != null)
 				{
-					if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+					if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 					{
 						damage *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 					}
 					else
 					{
-						damage *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+						damage *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 					}
 				}
 				else if (crit)
 				{
-					if (lvlDiff >= Config.NPC_CRIT_DMG_PENALTY.length)
+					if (levelDiff >= Config.NPC_CRIT_DMG_PENALTY.length)
 					{
 						damage *= Config.NPC_CRIT_DMG_PENALTY[Config.NPC_CRIT_DMG_PENALTY.length - 1];
 					}
 					else
 					{
-						damage *= Config.NPC_CRIT_DMG_PENALTY[lvlDiff];
+						damage *= Config.NPC_CRIT_DMG_PENALTY[levelDiff];
 					}
 				}
 				else
 				{
-					if (lvlDiff >= Config.NPC_DMG_PENALTY.length)
+					if (levelDiff >= Config.NPC_DMG_PENALTY.length)
 					{
 						damage *= Config.NPC_DMG_PENALTY[Config.NPC_DMG_PENALTY.length - 1];
 					}
 					else
 					{
-						damage *= Config.NPC_DMG_PENALTY[lvlDiff];
+						damage *= Config.NPC_DMG_PENALTY[levelDiff];
 					}
 				}
 			}
@@ -915,16 +915,16 @@ public class Formulas
 		if (target.isAttackable())
 		{
 			damage *= attacker.calcStat(Stat.PVE_MAGICAL_DMG, 1, null, null);
-			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
-				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+				final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 				}
 				else
 				{
-					damage *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+					damage *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 				}
 			}
 		}
@@ -1005,16 +1005,16 @@ public class Formulas
 		if (target.isAttackable())
 		{
 			damage *= attacker.getOwner().calcStat(Stat.PVE_MAGICAL_DMG, 1, null, null);
-			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getOwner() != null) && ((target.getLevel() - attacker.getOwner().getLevel()) >= 2))
+			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getOwner() != null) && ((target.getLevel() - attacker.getOwner().getLevel()) >= 2))
 			{
-				final int lvlDiff = target.getLevel() - attacker.getOwner().getLevel() - 1;
-				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+				final int levelDiff = target.getLevel() - attacker.getOwner().getLevel() - 1;
+				if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 				}
 				else
 				{
-					damage *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+					damage *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 				}
 			}
 		}
@@ -1264,9 +1264,9 @@ public class Formulas
 	public static double calcLvlBonusMod(Creature attacker, Creature target, Skill skill)
 	{
 		final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
-		final double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
+		final double skillLevelBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
 		final double lvlMod = 1 + ((attackerLvl - target.getLevel()) / 100.);
-		return skillLvlBonusRateMod * lvlMod;
+		return skillLevelBonusRateMod * lvlMod;
 	}
 	
 	/**
@@ -1432,19 +1432,19 @@ public class Formulas
 		}
 		
 		// FIXME: Fix this LevelMod Formula.
-		final int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
-		final double lvlModifier = Math.pow(1.3, lvlDifference);
+		final int levelDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
+		final double lvlModifier = Math.pow(1.3, levelDifference);
 		float targetModifier = 1;
-		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
+		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
 		{
-			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
-			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.length)
+			final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
+			if (levelDiff >= Config.NPC_SKILL_CHANCE_PENALTY.length)
 			{
 				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY[Config.NPC_SKILL_CHANCE_PENALTY.length - 1];
 			}
 			else
 			{
-				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY[lvlDiff];
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY[levelDiff];
 			}
 		}
 		// general magic resist
@@ -1485,16 +1485,16 @@ public class Formulas
 		if (target.isAttackable())
 		{
 			damage *= attacker.calcStat(Stat.PVE_MAGICAL_DMG, 1, null, null);
-			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LEVEL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
-				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
+				final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				if (levelDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 				}
 				else
 				{
-					damage *= Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
+					damage *= Config.NPC_SKILL_DMG_PENALTY[levelDiff];
 				}
 			}
 		}

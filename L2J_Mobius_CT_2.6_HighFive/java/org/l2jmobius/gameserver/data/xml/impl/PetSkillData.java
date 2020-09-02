@@ -66,7 +66,7 @@ public class PetSkillData implements IXmlReader
 						final NamedNodeMap attrs = d.getAttributes();
 						final int npcId = parseInteger(attrs, "npcId");
 						final int skillId = parseInteger(attrs, "skillId");
-						final int skillLvl = parseInteger(attrs, "skillLvl");
+						final int skillLevel = parseInteger(attrs, "skillLevel");
 						Map<Long, SkillHolder> skillTree = _skillTrees.get(npcId);
 						if (skillTree == null)
 						{
@@ -74,13 +74,13 @@ public class PetSkillData implements IXmlReader
 							_skillTrees.put(npcId, skillTree);
 						}
 						
-						if (SkillData.getInstance().getSkill(skillId, skillLvl == 0 ? 1 : skillLvl) != null)
+						if (SkillData.getInstance().getSkill(skillId, skillLevel == 0 ? 1 : skillLevel) != null)
 						{
-							skillTree.put((long) SkillData.getSkillHashCode(skillId, skillLvl + 1), new SkillHolder(skillId, skillLvl));
+							skillTree.put((long) SkillData.getSkillHashCode(skillId, skillLevel + 1), new SkillHolder(skillId, skillLevel));
 						}
 						else
 						{
-							LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + skillId + ", level " + skillLvl + " for NPC " + npcId + ".");
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + skillId + ", level " + skillLevel + " for NPC " + npcId + ".");
 						}
 					}
 				}
@@ -90,11 +90,11 @@ public class PetSkillData implements IXmlReader
 	
 	public int getAvailableLevel(Summon pet, int skillId)
 	{
-		int lvl = 0;
+		int level = 0;
 		if (!_skillTrees.containsKey(pet.getId()))
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + pet.getId() + " does not have any skills assigned.");
-			return lvl;
+			return level;
 		}
 		
 		for (SkillHolder skillHolder : _skillTrees.get(pet.getId()).values())
@@ -107,32 +107,32 @@ public class PetSkillData implements IXmlReader
 			{
 				if (pet.getLevel() < 70)
 				{
-					lvl = pet.getLevel() / 10;
-					if (lvl <= 0)
+					level = pet.getLevel() / 10;
+					if (level <= 0)
 					{
-						lvl = 1;
+						level = 1;
 					}
 				}
 				else
 				{
-					lvl = 7 + ((pet.getLevel() - 70) / 5);
+					level = 7 + ((pet.getLevel() - 70) / 5);
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
-				final int maxLvl = SkillData.getInstance().getMaxLevel(skillHolder.getSkillId());
-				if (lvl > maxLvl)
+				final int maxLevel = SkillData.getInstance().getMaxLevel(skillHolder.getSkillId());
+				if (level > maxLevel)
 				{
-					lvl = maxLvl;
+					level = maxLevel;
 				}
 				break;
 			}
-			else if ((1 <= pet.getLevel()) && (skillHolder.getSkillLevel() > lvl))
+			else if ((1 <= pet.getLevel()) && (skillHolder.getSkillLevel() > level))
 			{
-				lvl = skillHolder.getSkillLevel();
+				level = skillHolder.getSkillLevel();
 			}
 		}
 		
-		return lvl;
+		return level;
 	}
 	
 	public List<Integer> getAvailableSkills(Summon pet)

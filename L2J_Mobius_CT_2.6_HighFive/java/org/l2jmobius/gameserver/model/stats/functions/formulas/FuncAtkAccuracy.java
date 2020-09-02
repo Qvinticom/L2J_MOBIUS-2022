@@ -42,7 +42,7 @@ public class FuncAtkAccuracy extends AbstractFunction
 	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		final int level = effector.getLevel();
-		// [Square(DEX)] * 6 + lvl + weapon hitbonus;
+		// [Square(DEX)] * 6 + level + weapon hitbonus;
 		double value = initVal + (Math.sqrt(effector.getDEX()) * 6) + level;
 		if (level > 77)
 		{

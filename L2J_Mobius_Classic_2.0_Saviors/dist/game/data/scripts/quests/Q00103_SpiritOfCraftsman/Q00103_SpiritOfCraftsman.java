@@ -52,7 +52,7 @@ public class Q00103_SpiritOfCraftsman extends Quest
 	// Rewards
 	private static final int REWARDS = 49050; // Blood Saber
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	private static final int MAX_LEVEL = 16;
 	
 	public Q00103_SpiritOfCraftsman()
@@ -110,7 +110,7 @@ public class Q00103_SpiritOfCraftsman extends Quest
 					{
 						htmltext = "30307-01.htm";
 					}
-					else if (talker.getLevel() < MIN_LVL)
+					else if (talker.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30307-02.htm";
 					}

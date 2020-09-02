@@ -39,7 +39,7 @@ public class Q00283_TheFewTheProudTheBrave extends Quest
 	// Misc
 	private static final int CLAW_PRICE = 45;
 	private static final int BONUS = 2187;
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	
 	public Q00283_TheFewTheProudTheBrave()
 	{
@@ -120,7 +120,7 @@ public class Q00283_TheFewTheProudTheBrave extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getLevel() >= MIN_LVL) ? "32133-01.htm" : "32133-02.htm";
+				htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32133-01.htm" : "32133-02.htm";
 				break;
 			}
 			case State.STARTED:

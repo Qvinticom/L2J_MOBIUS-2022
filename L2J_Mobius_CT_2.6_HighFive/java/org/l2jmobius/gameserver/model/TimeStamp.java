@@ -108,7 +108,7 @@ public class TimeStamp
 	 * Gets the skill level.
 	 * @return the skill level
 	 */
-	public int getSkillLvl()
+	public int getSkillLevel()
 	{
 		return _id2;
 	}

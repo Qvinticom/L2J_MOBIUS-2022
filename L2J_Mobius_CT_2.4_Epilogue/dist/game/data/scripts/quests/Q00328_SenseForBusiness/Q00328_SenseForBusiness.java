@@ -57,7 +57,7 @@ public class Q00328_SenseForBusiness extends Quest
 	private static final int BASILISK_GIZZARD_ADENA = 60;
 	private static final int BONUS = 618;
 	private static final int BONUS_COUNT = 10;
-	private static final int MIN_LVL = 21;
+	private static final int MIN_LEVEL = 21;
 	
 	public Q00328_SenseForBusiness()
 	{
@@ -104,7 +104,7 @@ public class Q00328_SenseForBusiness extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = player.getLevel() < MIN_LVL ? "30436-01.htm" : "30436-02.htm";
+				htmltext = player.getLevel() < MIN_LEVEL ? "30436-01.htm" : "30436-02.htm";
 				break;
 			}
 			case State.STARTED:

@@ -63,7 +63,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 	private static final int SEALED_REPORT_BOX = 7146;
 	private static final int REPORT_BOX = 7147;
 	// Misc
-	private static final int MIN_LVL = 63;
+	private static final int MIN_LEVEL = 63;
 	private static final Location PRIEST_LOC = new Location(38354, -49777, -1128);
 	private static final Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
 	private static int _tifarenOwner = 0;
@@ -124,7 +124,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				if (qs.isCreated())
 				{
 					final QuestState q21 = player.getQuestState(Q00021_HiddenTruth.class.getSimpleName());
-					if ((player.getLevel() >= MIN_LVL) && (q21 != null) && q21.isCompleted())
+					if ((player.getLevel() >= MIN_LEVEL) && (q21 != null) && q21.isCompleted())
 					{
 						htmltext = event;
 					}
@@ -522,7 +522,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 					{
 						addExpAndSp(talker, 345966, 31578);
 						qs.exitQuest(false, true);
-						if (talker.getLevel() >= MIN_LVL)
+						if (talker.getLevel() >= MIN_LEVEL)
 						{
 							htmltext = "31328-20.html";
 						}

@@ -545,7 +545,7 @@ public class Attackable extends NpcInstance
 		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn.
-			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
+			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
 			{
 				setChampion(true);
 			}
@@ -2697,7 +2697,7 @@ public class Attackable extends NpcInstance
 		
 		final int diff = getLevel() - (ManorSeedData.getInstance().getSeedLevel(_seedType) - 5);
 		
-		// hi-lvl mobs bonus
+		// hi-level mobs bonus
 		if (diff > 0)
 		{
 			count += diff;

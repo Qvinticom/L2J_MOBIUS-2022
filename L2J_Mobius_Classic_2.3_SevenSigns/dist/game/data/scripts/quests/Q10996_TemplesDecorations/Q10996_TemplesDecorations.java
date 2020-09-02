@@ -55,8 +55,8 @@ public class Q10996_TemplesDecorations extends Quest
 	private static final int WINSTONE_GOLEM = 20521;
 	private static final int OBSIDIAN_GOLEM = 20526;
 	// Misc
-	private static final int MIN_LVL = 11;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 11;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10996_TemplesDecorations()
 	{
@@ -64,7 +64,7 @@ public class Q10996_TemplesDecorations extends Quest
 		addStartNpc(REEP);
 		addTalkId(ZIMENF, REEP);
 		addKillId(BARBED_BATS, CRYSTAL_PUMA, GOBLIN_LORD, GOBLIN_BRIGAND_LEADER, WINSTONE_GOLEM, OBSIDIAN_GOLEM);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
 		registerQuestItems(TEMPLE_RECONSTRUCTION_REQUEST, BARBED_BAT_WING_SAC, PUMA_FUR, GOBLIN_JEWEL, GOLEM_ORE);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_TEMPLE_S_DECORATIONS);

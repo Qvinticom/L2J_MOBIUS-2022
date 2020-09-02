@@ -48,7 +48,7 @@ public class Q00107_MercilessPunishment extends Quest
 	// Rewards
 	private static final int BUTCHER = 49052;
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	
 	public Q00107_MercilessPunishment()
 	{
@@ -131,7 +131,7 @@ public class Q00107_MercilessPunishment extends Quest
 						{
 							htmltext = "30568-01.htm";
 						}
-						else if (talker.getLevel() < MIN_LVL)
+						else if (talker.getLevel() < MIN_LEVEL)
 						{
 							htmltext = "30568-02.htm";
 						}

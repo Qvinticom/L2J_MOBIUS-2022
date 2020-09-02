@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.Skill;
 public class SkillHolder
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	
-	public SkillHolder(int skillId, int skillLvl)
+	public SkillHolder(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
-		_skillLvl = skillLvl;
+		_skillLevel = skillLevel;
 	}
 	
 	public SkillHolder(Skill skill)
 	{
 		_skillId = skill.getId();
-		_skillLvl = skill.getLevel();
+		_skillLevel = skill.getLevel();
 	}
 	
 	public int getSkillId()
@@ -44,13 +44,13 @@ public class SkillHolder
 		return _skillId;
 	}
 	
-	public int getSkillLvl()
+	public int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
 	}
 	
 	public Skill getSkill()
 	{
-		return SkillTable.getInstance().getSkill(_skillId, _skillLvl);
+		return SkillTable.getInstance().getSkill(_skillId, _skillLevel);
 	}
 }

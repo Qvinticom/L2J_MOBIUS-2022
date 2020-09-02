@@ -41,7 +41,7 @@ public class Q00628_HuntGoldenRam extends Quest
 	private static final int NEEDLE_STAKATO_CHITIN = 7249;
 	// Misc
 	private static final int REQUIRED_ITEM_COUNT = 100;
-	private static final int MIN_LVL = 66;
+	private static final int MIN_LEVEL = 66;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
 	static
@@ -81,7 +81,7 @@ public class Q00628_HuntGoldenRam extends Quest
 		{
 			case "accept":
 			{
-				if (qs.isCreated() && (player.getLevel() >= MIN_LVL))
+				if (qs.isCreated() && (player.getLevel() >= MIN_LEVEL))
 				{
 					qs.startQuest();
 					if (hasQuestItems(player, GOLDEN_RAM_BADGE_SOLDIER))
@@ -158,7 +158,7 @@ public class Q00628_HuntGoldenRam extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = ((player.getLevel() >= MIN_LVL) ? "31554-01.htm" : "31554-02.htm");
+				htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31554-01.htm" : "31554-02.htm");
 				break;
 			}
 			case State.STARTED:

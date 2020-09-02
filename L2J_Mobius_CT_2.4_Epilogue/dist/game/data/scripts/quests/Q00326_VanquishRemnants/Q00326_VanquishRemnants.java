@@ -56,7 +56,7 @@ public class Q00326_VanquishRemnants extends Quest
 	}
 	//@formatter:on
 	// Misc
-	private static final int MIN_LVL = 21;
+	private static final int MIN_LEVEL = 21;
 	
 	public Q00326_VanquishRemnants()
 	{
@@ -119,7 +119,7 @@ public class Q00326_VanquishRemnants extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30435-02.htm" : "30435-01.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30435-02.htm" : "30435-01.htm";
 				break;
 			}
 			case State.STARTED:

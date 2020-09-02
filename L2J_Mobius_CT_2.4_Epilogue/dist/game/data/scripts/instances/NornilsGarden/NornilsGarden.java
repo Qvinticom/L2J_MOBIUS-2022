@@ -74,8 +74,8 @@ public class NornilsGarden extends AbstractInstance
 	private static final int TEMPLATE_ID = 11;
 	private static final int DURATION_TIME = 70;
 	private static final int EMPTY_DESTROY_TIME = 5;
-	private static final int INSTANCE_LVL_MIN = 18;
-	private static final int INSTANCE_LVL_MAX = 22;
+	private static final int INSTANCE_LEVEL_MIN = 18;
+	private static final int INSTANCE_LEVEL_MAX = 22;
 	private static final int[][] AUTO_GATES =
 	{
 		// Warriors gate
@@ -249,7 +249,7 @@ public class NornilsGarden extends AbstractInstance
 				return null;
 			}
 			// check for level difference again on reenter
-			if ((player.getLevel() > INSTANCE_LVL_MAX) || (player.getLevel() < INSTANCE_LVL_MIN))
+			if ((player.getLevel() > INSTANCE_LEVEL_MAX) || (player.getLevel() < INSTANCE_LEVEL_MIN))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(player);
@@ -400,14 +400,14 @@ public class NornilsGarden extends AbstractInstance
 		for (PlayerInstance partyMember : party.getMembers())
 		{
 			// player level must be in range
-			if (partyMember.getLevel() > INSTANCE_LVL_MAX)
+			if (partyMember.getLevel() > INSTANCE_LEVEL_MAX)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
 			}
-			if (partyMember.getLevel() < INSTANCE_LVL_MIN)
+			if (partyMember.getLevel() < INSTANCE_LEVEL_MIN)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);

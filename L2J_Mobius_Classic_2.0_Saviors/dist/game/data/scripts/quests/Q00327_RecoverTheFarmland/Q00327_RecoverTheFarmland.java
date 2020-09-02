@@ -68,7 +68,7 @@ public class Q00327_RecoverTheFarmland extends Quest
 	private static final int SPIRITSHOT_D = 2510;
 	
 	// Misc
-	private static final int MIN_LVL = 25;
+	private static final int MIN_LEVEL = 25;
 	private static final Map<String, ItemHolder> FRAGMENTS_REWARD_DATA = new HashMap<>(4);
 	private static final Map<Integer, Integer> FRAGMENTS_DROP_PROB = new HashMap<>(7);
 	private static final ItemHolder[] FULL_REWARD_DATA =
@@ -376,7 +376,7 @@ public class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (qs.isCreated())
 				{
-					html = ((player.getLevel() >= MIN_LVL) ? "30382-02.htm" : "30382-01.htm");
+					html = ((player.getLevel() >= MIN_LEVEL) ? "30382-02.htm" : "30382-01.htm");
 				}
 				else if (qs.isStarted())
 				{
@@ -396,7 +396,7 @@ public class Q00327_RecoverTheFarmland extends Quest
 			{
 				if (qs.isCreated())
 				{
-					html = ((player.getLevel() >= MIN_LVL) ? "30597-02.htm" : "30597-01.htm");
+					html = ((player.getLevel() >= MIN_LEVEL) ? "30597-02.htm" : "30597-01.htm");
 				}
 				else if (qs.isStarted())
 				{

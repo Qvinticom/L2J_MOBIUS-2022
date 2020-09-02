@@ -69,45 +69,45 @@ public class ManaHealByLevel extends AbstractEffect
 		amount = target.calcStat(Stat.MANA_CHARGE, amount, null, null);
 		if (target.getLevel() > info.getSkill().getMagicLevel())
 		{
-			final int lvlDiff = target.getLevel() - info.getSkill().getMagicLevel();
+			final int levelDiff = target.getLevel() - info.getSkill().getMagicLevel();
 			// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
-			if (lvlDiff == 6)
+			if (levelDiff == 6)
 			{
 				amount *= 0.9; // only 90% effective
 			}
-			else if (lvlDiff == 7)
+			else if (levelDiff == 7)
 			{
 				amount *= 0.8; // 80%
 			}
-			else if (lvlDiff == 8)
+			else if (levelDiff == 8)
 			{
 				amount *= 0.7; // 70%
 			}
-			else if (lvlDiff == 9)
+			else if (levelDiff == 9)
 			{
 				amount *= 0.6; // 60%
 			}
-			else if (lvlDiff == 10)
+			else if (levelDiff == 10)
 			{
 				amount *= 0.5; // 50%
 			}
-			else if (lvlDiff == 11)
+			else if (levelDiff == 11)
 			{
 				amount *= 0.4; // 40%
 			}
-			else if (lvlDiff == 12)
+			else if (levelDiff == 12)
 			{
 				amount *= 0.3; // 30%
 			}
-			else if (lvlDiff == 13)
+			else if (levelDiff == 13)
 			{
 				amount *= 0.2; // 20%
 			}
-			else if (lvlDiff == 14)
+			else if (levelDiff == 14)
 			{
 				amount *= 0.1; // 10%
 			}
-			else if (lvlDiff >= 15)
+			else if (levelDiff >= 15)
 			{
 				amount = 0; // 0mp recharged
 			}

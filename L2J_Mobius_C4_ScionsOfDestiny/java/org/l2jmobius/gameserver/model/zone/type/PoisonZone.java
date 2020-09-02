@@ -35,7 +35,7 @@ public class PoisonZone extends ZoneType
 	protected int _skillId;
 	int _chance;
 	private int _initialDelay;
-	protected int _skillLvl;
+	protected int _skillLevel;
 	private int _reuse;
 	boolean _enabled;
 	String _target;
@@ -45,7 +45,7 @@ public class PoisonZone extends ZoneType
 	{
 		super(id);
 		_skillId = 4070;
-		_skillLvl = 1;
+		_skillLevel = 1;
 		_chance = 100;
 		_initialDelay = 0;
 		_reuse = 30000;
@@ -63,9 +63,9 @@ public class PoisonZone extends ZoneType
 				_skillId = Integer.parseInt(value);
 				break;
 			}
-			case "skillLvl":
+			case "skillLevel":
 			{
-				_skillLvl = Integer.parseInt(value);
+				_skillLevel = Integer.parseInt(value);
 				break;
 			}
 			case "chance":
@@ -122,7 +122,7 @@ public class PoisonZone extends ZoneType
 	
 	public Skill getSkill()
 	{
-		return SkillTable.getInstance().getSkill(_skillId, _skillLvl);
+		return SkillTable.getInstance().getSkill(_skillId, _skillLevel);
 	}
 	
 	public String getTargetType()
@@ -160,7 +160,7 @@ public class PoisonZone extends ZoneType
 						if (skill == null)
 						{
 							LOGGER.warning("ATTENTION: error on zone with id " + getId());
-							LOGGER.warning("Skill " + _skillId + "," + _skillLvl + " not present between skills");
+							LOGGER.warning("Skill " + _skillId + "," + _skillLevel + " not present between skills");
 						}
 						else
 						{

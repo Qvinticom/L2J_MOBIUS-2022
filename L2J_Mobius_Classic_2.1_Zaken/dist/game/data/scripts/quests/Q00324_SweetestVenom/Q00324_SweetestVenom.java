@@ -45,7 +45,7 @@ public class Q00324_SweetestVenom extends Quest
 	// Items
 	private static final int VENOM_SAC = 1077;
 	// Misc
-	private static final int MIN_LVL = 18;
+	private static final int MIN_LEVEL = 18;
 	private static final int REQUIRED_COUNT = 10;
 	private static final int ADENA_COUNT = 1000;
 	
@@ -80,7 +80,7 @@ public class Q00324_SweetestVenom extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = player.getLevel() < MIN_LVL ? "30351-02.html" : "30351-03.htm";
+				htmltext = player.getLevel() < MIN_LEVEL ? "30351-02.html" : "30351-03.htm";
 				break;
 			}
 			case State.STARTED:

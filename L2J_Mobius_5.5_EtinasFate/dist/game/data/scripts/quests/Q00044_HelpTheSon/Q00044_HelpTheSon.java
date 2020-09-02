@@ -42,7 +42,7 @@ public class Q00044_HelpTheSon extends Quest
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
 	// Misc
-	private static final int MIN_LVL = 24;
+	private static final int MIN_LEVEL = 24;
 	
 	public Q00044_HelpTheSon()
 	{
@@ -51,7 +51,7 @@ public class Q00044_HelpTheSon extends Quest
 		addTalkId(LUNDY, DRIKUS);
 		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
 		registerQuestItems(GEMSTONE, GEMSTONE_FRAGMENT);
-		addCondMinLevel(MIN_LVL, "30827-00a.html");
+		addCondMinLevel(MIN_LEVEL, "30827-00a.html");
 	}
 	
 	@Override

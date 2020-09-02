@@ -59,7 +59,7 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getId());
 			packet.writeQ(item.getCount());
 			packet.writeH(0);
-			packet.writeH(item.getEnchant()); // enchant lvl
+			packet.writeH(item.getEnchant()); // enchant level
 			packet.writeH(item.getCustomType2());
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeQ(item.getPrice()); // store price
@@ -86,7 +86,7 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getId());
 			packet.writeQ(item.getCount());
 			packet.writeH(0);
-			packet.writeH(item.getEnchant()); // enchant lvl
+			packet.writeH(item.getEnchant()); // enchant level
 			packet.writeH(0x00);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeQ(item.getPrice()); // your price

@@ -43,7 +43,7 @@ public class Q00275_DarkWingedSpies extends Quest
 	private static final int DARKWING_BAT = 20316;
 	private static final int VARANGKAS_TRACKER = 27043;
 	// Misc
-	private static final int MIN_LVL = 11;
+	private static final int MIN_LEVEL = 11;
 	private static final int FANG_PRICE = 5;
 	private static final int MAX_BAT_FANG_COUNT = 70;
 	
@@ -131,7 +131,7 @@ public class Q00275_DarkWingedSpies extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getRace() == Race.ORC) ? (talker.getLevel() >= MIN_LVL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
+				htmltext = (talker.getRace() == Race.ORC) ? (talker.getLevel() >= MIN_LEVEL) ? "30567-02.htm" : "30567-01.htm" : "30567-00.htm";
 				break;
 			}
 			case State.STARTED:

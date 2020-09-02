@@ -108,9 +108,9 @@ public class Elementals
 		
 		public int _maxLevel;
 		
-		ElementalItemType(int maxLvl)
+		ElementalItemType(int maxLevel)
 		{
-			_maxLevel = maxLvl;
+			_maxLevel = maxLevel;
 		}
 	}
 	

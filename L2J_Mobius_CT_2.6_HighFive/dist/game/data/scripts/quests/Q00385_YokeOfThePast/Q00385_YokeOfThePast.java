@@ -94,7 +94,7 @@ public class Q00385_YokeOfThePast extends Quest
 		MONSTER_CHANCES.put(21255, 0.250); // Tomb Preacher
 	}
 	// Misc
-	private static final int MIN_LVL = 20;
+	private static final int MIN_LEVEL = 20;
 	
 	public Q00385_YokeOfThePast()
 	{
@@ -151,7 +151,7 @@ public class Q00385_YokeOfThePast extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getLevel() >= MIN_LVL) ? "ziggurat-01.htm" : "ziggurat-02.htm";
+				htmltext = (talker.getLevel() >= MIN_LEVEL) ? "ziggurat-01.htm" : "ziggurat-02.htm";
 				break;
 			}
 			case State.STARTED:

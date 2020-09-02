@@ -118,9 +118,9 @@ public class Selina extends AbstractNpcAI
 	{
 		private final int _cost;
 		
-		public BuffHolder(int skillId, int skillLvl, int cost)
+		public BuffHolder(int skillId, int skillLevel, int cost)
 		{
-			super(skillId, skillLvl);
+			super(skillId, skillLevel);
 			_cost = cost;
 		}
 		

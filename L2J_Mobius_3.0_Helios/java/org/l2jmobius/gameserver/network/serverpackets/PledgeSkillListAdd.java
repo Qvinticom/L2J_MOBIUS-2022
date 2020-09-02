@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class PledgeSkillListAdd implements IClientOutgoingPacket
 {
 	private final int _id;
-	private final int _lvl;
+	private final int _level;
 	
-	public PledgeSkillListAdd(int id, int lvl)
+	public PledgeSkillListAdd(int id, int level)
 	{
 		_id = id;
-		_lvl = lvl;
+		_level = level;
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class PledgeSkillListAdd implements IClientOutgoingPacket
 		OutgoingPackets.PLEDGE_SKILL_LIST_ADD.writeId(packet);
 		
 		packet.writeD(_id);
-		packet.writeD(_lvl);
+		packet.writeD(_level);
 		return true;
 	}
 }

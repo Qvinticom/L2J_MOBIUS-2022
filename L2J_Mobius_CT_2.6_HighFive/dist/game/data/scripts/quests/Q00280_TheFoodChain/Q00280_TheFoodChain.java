@@ -67,7 +67,7 @@ public class Q00280_TheFoodChain extends Quest
 		116,
 	};
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	private static final int TEETH_COUNT = 25;
 	
 	public Q00280_TheFoodChain()
@@ -181,7 +181,7 @@ public class Q00280_TheFoodChain extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getLevel() >= MIN_LVL) ? "32175-01.htm" : "32175-02.htm";
+				htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32175-01.htm" : "32175-02.htm";
 				break;
 			}
 			case State.STARTED:

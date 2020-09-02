@@ -166,9 +166,9 @@ public class EffectZone extends ZoneType
 		}
 	}
 	
-	protected Skill getSkill(int skillId, int skillLvl)
+	protected Skill getSkill(int skillId, int skillLevel)
 	{
-		return SkillTable.getInstance().getSkill(skillId, skillLvl);
+		return SkillTable.getInstance().getSkill(skillId, skillLevel);
 	}
 	
 	public int getChance()
@@ -181,9 +181,9 @@ public class EffectZone extends ZoneType
 		return _enabled;
 	}
 	
-	public void addSkill(int skillId, int skillLvL)
+	public void addSkill(int skillId, int skillLevel)
 	{
-		if (skillLvL < 1) // remove skill
+		if (skillLevel < 1) // remove skill
 		{
 			removeSkill(skillId);
 			return;
@@ -199,7 +199,7 @@ public class EffectZone extends ZoneType
 				}
 			}
 		}
-		_skills.put(skillId, skillLvL);
+		_skills.put(skillId, skillLevel);
 	}
 	
 	public void removeSkill(int skillId)

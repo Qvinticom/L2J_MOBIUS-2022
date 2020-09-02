@@ -23,12 +23,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 public class PledgeSkillListAdd extends GameServerPacket
 {
 	private final int _id;
-	private final int _lvl;
+	private final int _level;
 	
-	public PledgeSkillListAdd(int id, int lvl)
+	public PledgeSkillListAdd(int id, int level)
 	{
 		_id = id;
-		_lvl = lvl;
+		_level = level;
 	}
 	
 	@Override
@@ -38,6 +38,6 @@ public class PledgeSkillListAdd extends GameServerPacket
 		writeH(0x3a);
 		
 		writeD(_id);
-		writeD(_lvl);
+		writeD(_level);
 	}
 }

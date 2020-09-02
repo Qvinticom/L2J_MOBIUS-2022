@@ -54,8 +54,8 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 	private static final int STONE_GOLEM = 20016;
 	private static final int CRASHER = 20101;
 	// Misc
-	private static final int MIN_LVL = 11;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 11;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11002_HelpWithTempleRestoration()
 	{
@@ -63,7 +63,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 		addStartNpc(ALTRAN);
 		addTalkId(HARRYS, ALTRAN);
 		addKillId(ORC_CAPTAIN, ORC_LIEUTENANT, WEREWOLF_HUMTER, WEREWOLF_CHIEFTAIN, STONE_GOLEM, CRASHER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.HUMAN, "no-race.html"); // Custom
 		registerQuestItems(INVENTORY_BOOK, WOODEN_POLE, WOODEN_DOOR_PANEL, STONE_POWDER);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_HELP_WITH_TEMPLE_RESTORATION);

@@ -40,7 +40,7 @@ public class Q00271_ProofOfValor extends Quest
 	private static final int HEALING_POTION = 1539;
 	private static final int NECKLACE_OF_VALOR = 1507;
 	// Misc
-	private static final int MIN_LVL = 4;
+	private static final int MIN_LEVEL = 4;
 	private static final int MAX_LEVEL = 8;
 	
 	public Q00271_ProofOfValor()
@@ -95,7 +95,7 @@ public class Q00271_ProofOfValor extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LEVEL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
 				break;
 			}
 			case State.STARTED:

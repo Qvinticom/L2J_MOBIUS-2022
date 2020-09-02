@@ -101,7 +101,7 @@ public class PetDataTable implements IXmlReader
 							if (s.getNodeName().equals("skill"))
 							{
 								attrs = s.getAttributes();
-								data.addNewSkill(parseInteger(attrs, "skillId"), parseInteger(attrs, "skillLvl"), parseInteger(attrs, "minLvl"));
+								data.addNewSkill(parseInteger(attrs, "skillId"), parseInteger(attrs, "skillLevel"), parseInteger(attrs, "minLevel"));
 							}
 						}
 					}

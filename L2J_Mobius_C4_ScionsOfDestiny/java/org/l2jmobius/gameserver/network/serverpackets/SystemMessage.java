@@ -34,7 +34,7 @@ public class SystemMessage extends GameServerPacket
 	private final int _messageId;
 	private final List<Integer> _types = new ArrayList<>();
 	private final List<Object> _values = new ArrayList<>();
-	private int _skillLvL = 1;
+	private int _skillLevel = 1;
 	
 	public SystemMessage(SystemMessageId messageId)
 	{
@@ -104,7 +104,7 @@ public class SystemMessage extends GameServerPacket
 	{
 		_types.add(TYPE_SKILL_NAME);
 		_values.add(id);
-		_skillLvL = lvl;
+		_skillLevel = lvl;
 		return this;
 	}
 	
@@ -112,7 +112,7 @@ public class SystemMessage extends GameServerPacket
 	{
 		_types.add(TYPE_SKILL_NAME);
 		_values.add(skill.getId());
-		_skillLvL = skill.getLevel();
+		_skillLevel = skill.getLevel();
 		return this;
 	}
 	
@@ -148,7 +148,7 @@ public class SystemMessage extends GameServerPacket
 				{
 					final int t1 = ((Integer) _values.get(i)).intValue();
 					writeD(t1); // Skill Id
-					writeD(_skillLvL); // Skill lvl
+					writeD(_skillLevel); // Skill lvl
 					break;
 				}
 				case TYPE_ZONE_NAME:

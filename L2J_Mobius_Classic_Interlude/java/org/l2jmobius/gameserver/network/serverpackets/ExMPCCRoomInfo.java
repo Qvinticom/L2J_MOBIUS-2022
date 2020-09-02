@@ -39,8 +39,8 @@ public class ExMPCCRoomInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_room.getId());
 		packet.writeD(_room.getMaxMembers());
-		packet.writeD(_room.getMinLvl());
-		packet.writeD(_room.getMaxLvl());
+		packet.writeD(_room.getMinLevel());
+		packet.writeD(_room.getMaxLevel());
 		packet.writeD(_room.getLootType());
 		packet.writeD(_room.getLocation());
 		packet.writeS(_room.getTitle());

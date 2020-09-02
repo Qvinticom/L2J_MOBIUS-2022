@@ -37,7 +37,7 @@ public class Q00644_GraveRobberAnnihilation extends Quest
 	// Item
 	private static final int ORC_GOODS = 8088;
 	// Misc
-	private static final int MIN_LVL = 20;
+	private static final int MIN_LEVEL = 20;
 	private static final int ORC_GOODS_REQUIRED_COUNT = 120;
 	// Monsters
 	private static final Map<Integer, Double> MONSTER_DROP_CHANCES = new HashMap<>();
@@ -137,7 +137,7 @@ public class Q00644_GraveRobberAnnihilation extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = ((player.getLevel() >= MIN_LVL) ? "32017-01.htm" : "32017-02.htm");
+				htmltext = ((player.getLevel() >= MIN_LEVEL) ? "32017-01.htm" : "32017-02.htm");
 				break;
 			}
 			case State.STARTED:

@@ -32,17 +32,17 @@ public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 	private final PlayerInstance _player;
 	@SuppressWarnings("unused")
 	private final int _page;
-	private final int _minlvl;
-	private final int _maxlvl;
+	private final int _minLevel;
+	private final int _maxLevel;
 	private final int _mode;
 	private final List<PlayerInstance> _members;
 	
-	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minlvl, int maxlvl, int mode)
+	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minLevel, int maxLevel, int mode)
 	{
 		_player = player;
 		_page = page;
-		_minlvl = minlvl;
-		_maxlvl = maxlvl;
+		_minLevel = minLevel;
+		_maxLevel = maxLevel;
 		_mode = mode;
 		_members = new ArrayList<>();
 	}
@@ -80,7 +80,7 @@ public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 				continue;
 			}
 			
-			if ((cha.getLevel() < _minlvl) || (cha.getLevel() > _maxlvl))
+			if ((cha.getLevel() < _minLevel) || (cha.getLevel() > _maxLevel))
 			{
 				continue;
 			}

@@ -69,7 +69,7 @@ public class Config
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	// Npc
-	public static boolean SHOW_NPC_LVL;
+	public static boolean SHOW_NPC_LEVEL;
 	public static boolean SHOW_NPC_AGGRESSION;
 	
 	public static void load()
@@ -120,7 +120,7 @@ public class Config
 		
 		// Load NPC config file (if exists)
 		final PropertiesParser npcSettings = new PropertiesParser(NPC_CONFIG_FILE);
-		SHOW_NPC_LVL = npcSettings.getBoolean("ShowNpcLevel", false);
+		SHOW_NPC_LEVEL = npcSettings.getBoolean("ShowNpcLevel", false);
 		SHOW_NPC_AGGRESSION = npcSettings.getBoolean("ShowNpcAggression", false);
 	}
 }

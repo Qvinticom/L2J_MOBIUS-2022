@@ -73,8 +73,8 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 	private static final ItemHolder SCROLL_EAC = new ItemHolder(952, 5);
 	private static final ItemHolder DRAKE_LEATHER_BOOTS = new ItemHolder(2437, 1);
 	// Misc
-	private static final int MIN_LVL = 48;
-	private static final int MAX_LVL = 55;
+	private static final int MIN_LEVEL = 48;
+	private static final int MAX_LEVEL = 55;
 	
 	public Q00344_1000YearsTheEndOfLamentation()
 	{
@@ -82,7 +82,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 		addStartNpc(GILMORE);
 		addTalkId(KAIEN, GARVARENTZ, GILMORE, RODEMAI, ORVEN);
 		addKillId(MONSTER_CHANCES.keySet());
-		addCondLevel(MIN_LVL, MAX_LVL, "nolevel.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "nolevel.html");
 		registerQuestItems(ARTICLES, OLD_KEY.getId(), OLD_HILT.getId(), TOTEM_NECKLACE.getId(), CRUCIFIX.getId());
 	}
 	
@@ -217,7 +217,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = ((talker.getLevel() >= MIN_LVL) && (talker.getLevel() <= MAX_LVL)) ? "30754-02.htm" : "30754-01.htm";
+					htmltext = ((talker.getLevel() >= MIN_LEVEL) && (talker.getLevel() <= MAX_LEVEL)) ? "30754-02.htm" : "30754-01.htm";
 				}
 				else if (qs.isStarted())
 				{

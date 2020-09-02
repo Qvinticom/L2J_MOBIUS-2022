@@ -39,7 +39,7 @@ public class Q00267_WrathOfVerdure extends Quest
 	// Reward
 	private static final int SILVERY_LEAF = 1340;
 	// Misc
-	private static final int MIN_LVL = 4;
+	private static final int MIN_LEVEL = 4;
 	
 	public Q00267_WrathOfVerdure()
 	{
@@ -102,7 +102,7 @@ public class Q00267_WrathOfVerdure extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
+				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
 				break;
 			}
 			case State.STARTED:

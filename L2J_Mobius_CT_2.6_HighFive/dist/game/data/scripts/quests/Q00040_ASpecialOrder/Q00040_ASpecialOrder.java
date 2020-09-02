@@ -44,7 +44,7 @@ public class Q00040_ASpecialOrder extends Quest
 	private static final int BOX_OF_FISH = 12764;
 	private static final int BOX_OF_SEED = 12765;
 	// Misc
-	private static final int MIN_LVL = 40;
+	private static final int MIN_LEVEL = 40;
 	
 	public Q00040_ASpecialOrder()
 	{
@@ -142,7 +142,7 @@ public class Q00040_ASpecialOrder extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "30081-01.htm" : "30081-02.htm";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30081-01.htm" : "30081-02.htm";
 						break;
 					}
 					case State.STARTED:

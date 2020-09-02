@@ -39,7 +39,7 @@ public class Q00164_BloodFiend extends Quest
 	// Item
 	private static final int KIRUNAK_SKULL = 1044;
 	// Misc
-	private static final int MIN_LVL = 21;
+	private static final int MIN_LEVEL = 21;
 	
 	public Q00164_BloodFiend()
 	{
@@ -84,7 +84,7 @@ public class Q00164_BloodFiend extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() != Race.DARK_ELF) ? player.getLevel() >= MIN_LVL ? "30149-03.htm" : "30149-02.htm" : "30149-00.htm";
+				htmltext = (player.getRace() != Race.DARK_ELF) ? player.getLevel() >= MIN_LEVEL ? "30149-03.htm" : "30149-02.htm" : "30149-00.htm";
 				break;
 			}
 			case State.STARTED:

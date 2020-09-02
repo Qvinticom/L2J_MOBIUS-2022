@@ -64,7 +64,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 	private static final int ECHO_CRYSTAL_THEME_OF_FEAST = 4415;
 	private static final int ECHO_CRYSTAL_THEME_OF_CELEBRATION = 4416;
 	// Misc
-	private static final int MIN_LVL = 12;
+	private static final int MIN_LEVEL = 12;
 	private static final Map<Integer, Integer> SENTINELS = new HashMap<>();
 	static
 	{
@@ -129,7 +129,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = player.getRace() == Race.ELF ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
+						htmltext = player.getRace() == Race.ELF ? player.getLevel() >= MIN_LEVEL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
 						break;
 					}
 					case State.STARTED:

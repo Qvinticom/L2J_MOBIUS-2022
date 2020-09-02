@@ -42,7 +42,7 @@ public class Q00154_SacrificeToTheSea extends Quest
 	// Reward
 	private static final int MAGE_EARING = 49040;
 	// Misc
-	private static final int MIN_LVL = 2;
+	private static final int MIN_LEVEL = 2;
 	
 	public Q00154_SacrificeToTheSea()
 	{
@@ -77,7 +77,7 @@ public class Q00154_SacrificeToTheSea extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = ((talker.getLevel() >= MIN_LVL) ? "30312-01.htm" : "30312-02.htm");
+					htmltext = ((talker.getLevel() >= MIN_LEVEL) ? "30312-01.htm" : "30312-02.htm");
 				}
 				else if (qs.isStarted())
 				{

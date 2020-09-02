@@ -34,18 +34,18 @@ public class PartyMatchRoom implements IIdentifiable
 	private final int _id;
 	private String _title;
 	private int _loot;
-	private int _minlvl;
-	private int _maxlvl;
+	private int _minLevel;
+	private int _maxLevel;
 	private int _maxmem;
 	private final List<PlayerInstance> _members = new ArrayList<>();
 	
-	public PartyMatchRoom(int id, String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance owner)
+	public PartyMatchRoom(int id, String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance owner)
 	{
 		_id = id;
 		_title = title;
 		_loot = loot;
-		_minlvl = minlvl;
-		_maxlvl = maxlvl;
+		_minLevel = minLevel;
+		_maxLevel = maxLevel;
 		_maxmem = maxmem;
 		_members.add(owner);
 	}
@@ -119,14 +119,14 @@ public class PartyMatchRoom implements IIdentifiable
 		return _loot;
 	}
 	
-	public int getMinLvl()
+	public int getMinLevel()
 	{
-		return _minlvl;
+		return _minLevel;
 	}
 	
-	public int getMaxLvl()
+	public int getMaxLevel()
 	{
-		return _maxlvl;
+		return _maxLevel;
 	}
 	
 	/**
@@ -176,14 +176,14 @@ public class PartyMatchRoom implements IIdentifiable
 	
 	/* SET */
 	
-	public void setMinLvl(int minlvl)
+	public void setMinLevel(int minLevel)
 	{
-		_minlvl = minlvl;
+		_minLevel = minLevel;
 	}
 	
-	public void setMaxLvl(int maxlvl)
+	public void setMaxLevel(int maxLevel)
 	{
-		_maxlvl = maxlvl;
+		_maxLevel = maxLevel;
 	}
 	
 	public void setLootType(int loot)

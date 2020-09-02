@@ -42,8 +42,8 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 	{
 		OutgoingPackets.ETC_STATUS_UPDATE.writeId(packet);
 		
-		packet.writeC(_player.getCharges()); // 1-7 increase force, lvl
-		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		packet.writeC(_player.getCharges()); // 1-7 increase force, level
+		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, level (1=50%, 2=66.6%, 3=80%, 4=100%)
 		packet.writeC(0); // Weapon Grade Penalty [1-4]
 		packet.writeC(0); // Armor Grade Penalty [1-4]
 		packet.writeC(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia

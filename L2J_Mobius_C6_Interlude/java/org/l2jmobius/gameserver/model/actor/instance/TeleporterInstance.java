@@ -258,11 +258,11 @@ public class TeleporterInstance extends FolkInstance
 			else if ((list.getTeleId() == 9982) && (list.getTeleId() == 9983) && (list.getTeleId() == 9984) && (getNpcId() == 30483) && (player.getLevel() >= Config.CRUMA_TOWER_LEVEL_RESTRICT))
 			{
 				// Chars level XX can't enter in Cruma Tower. Retail: level 56 and above
-				final int maxlvl = Config.CRUMA_TOWER_LEVEL_RESTRICT;
+				final int maxLevel = Config.CRUMA_TOWER_LEVEL_RESTRICT;
 				final String filename = "data/html/teleporter/30483-biglvl.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(filename);
-				html.replace("%allowedmaxlvl%", "" + maxlvl + "");
+				html.replace("%allowedmaxLevel%", "" + maxLevel + "");
 				player.sendPacket(html);
 				return;
 			}

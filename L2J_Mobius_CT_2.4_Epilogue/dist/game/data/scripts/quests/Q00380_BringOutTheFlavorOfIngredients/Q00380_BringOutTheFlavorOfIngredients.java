@@ -52,7 +52,7 @@ public class Q00380_BringOutTheFlavorOfIngredients extends Quest
 	private static final int RITRON_RECIPE = 5959;
 	private static final int RITRON_DESSERT = 5960;
 	// Misc
-	private static final int MIN_LVL = 24;
+	private static final int MIN_LEVEL = 24;
 	
 	public Q00380_BringOutTheFlavorOfIngredients()
 	{
@@ -112,7 +112,7 @@ public class Q00380_BringOutTheFlavorOfIngredients extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getLevel() >= MIN_LVL) ? "30069-02.htm" : "30069-01.htm";
+				htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30069-02.htm" : "30069-01.htm";
 				break;
 			}
 			case State.STARTED:

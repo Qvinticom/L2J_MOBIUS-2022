@@ -49,7 +49,7 @@ public class Q00038_DragonFangs extends Quest
 	private static final int ASPIS = 627;
 	private static final int BLUE_BUCKSKIN_BOOTS = 1123;
 	// Misc
-	private static final int MIN_LVL = 19;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00038_DragonFangs()
 	{
@@ -251,7 +251,7 @@ public class Q00038_DragonFangs extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30386-01.htm" : "30386-02.htm";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30386-01.htm" : "30386-02.htm";
 				}
 				else if (qs.isStarted())
 				{

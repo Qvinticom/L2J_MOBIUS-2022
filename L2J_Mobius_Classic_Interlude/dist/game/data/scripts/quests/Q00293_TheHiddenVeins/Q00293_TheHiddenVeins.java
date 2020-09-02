@@ -45,7 +45,7 @@ public class Q00293_TheHiddenVeins extends Quest
 		20448,
 	};
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	private static final int REQUIRED_TORN_MAP_FRAGMENT = 4;
 	
 	public Q00293_TheHiddenVeins()
@@ -137,7 +137,7 @@ public class Q00293_TheHiddenVeins extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.DWARF) ? (player.getLevel() >= MIN_LVL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
+						htmltext = (player.getRace() == Race.DWARF) ? (player.getLevel() >= MIN_LEVEL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
 						break;
 					}
 					case State.STARTED:

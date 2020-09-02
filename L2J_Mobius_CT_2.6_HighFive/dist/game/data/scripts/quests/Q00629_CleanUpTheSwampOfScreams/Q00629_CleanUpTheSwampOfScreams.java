@@ -37,7 +37,7 @@ public class Q00629_CleanUpTheSwampOfScreams extends Quest
 	private static final int GOLDEN_RAM_COIN = 7251;
 	// Misc
 	private static final int REQUIRED_TALON_COUNT = 100;
-	private static final int MIN_LVL = 66;
+	private static final int MIN_LEVEL = 66;
 	// Mobs
 	private static final Map<Integer, Double> MOBS_DROP_CHANCES = new HashMap<>();
 	static
@@ -138,7 +138,7 @@ public class Q00629_CleanUpTheSwampOfScreams extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = ((player.getLevel() >= MIN_LVL) ? "31553-01.htm" : "31553-02.htm");
+			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31553-01.htm" : "31553-02.htm");
 		}
 		else if (qs.isStarted())
 		{

@@ -39,7 +39,7 @@ public class Q00649_ALooterAndARailroadMan extends Quest
 	// Item
 	private static final int THIEF_GUILD_MARK = 8099;
 	// Misc
-	private static final int MIN_LVL = 30;
+	private static final int MIN_LEVEL = 30;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	static
@@ -106,7 +106,7 @@ public class Q00649_ALooterAndARailroadMan extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "32052-01.htm" : "32052-02.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32052-01.htm" : "32052-02.htm";
 				break;
 			}
 			case State.STARTED:

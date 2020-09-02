@@ -27,22 +27,22 @@ public class SkillHolder
 {
 	private final int _skillId;
 	private final int _skillLevel;
-	private final int _skillSubLevel;
+	private final int _skillSubLevel ;
 	private Skill _skill;
 	
 	public SkillHolder(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		_skillSubLevel = 0;
+		_skillSubLevel  = 0;
 		_skill = null;
 	}
 	
-	public SkillHolder(int skillId, int skillLevel, int skillSubLevel)
+	public SkillHolder(int skillId, int skillLevel, int skillSubLevel )
 	{
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		_skillSubLevel = skillSubLevel;
+		_skillSubLevel  = skillSubLevel ;
 		_skill = null;
 	}
 	
@@ -50,7 +50,7 @@ public class SkillHolder
 	{
 		_skillId = skill.getId();
 		_skillLevel = skill.getLevel();
-		_skillSubLevel = skill.getSubLevel();
+		_skillSubLevel  = skill.getSubLevel();
 		_skill = skill;
 	}
 	
@@ -64,16 +64,16 @@ public class SkillHolder
 		return _skillLevel;
 	}
 	
-	public int getSkillSubLevel()
+	public int getSkillSubLevel ()
 	{
-		return _skillSubLevel;
+		return _skillSubLevel ;
 	}
 	
 	public Skill getSkill()
 	{
 		if (_skill == null)
 		{
-			_skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+			_skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel );
 		}
 		return _skill;
 	}
@@ -92,7 +92,7 @@ public class SkillHolder
 		}
 		
 		final SkillHolder holder = (SkillHolder) obj;
-		return (holder.getSkillId() == _skillId) && (holder.getSkillLevel() == _skillLevel) && (holder.getSkillSubLevel() == _skillSubLevel);
+		return (holder.getSkillId() == _skillId) && (holder.getSkillLevel() == _skillLevel) && (holder.getSkillSubLevel () == _skillSubLevel );
 	}
 	
 	@Override
@@ -102,7 +102,7 @@ public class SkillHolder
 		int result = 1;
 		result = (prime * result) + _skillId;
 		result = (prime * result) + _skillLevel;
-		result = (prime * result) + _skillSubLevel;
+		result = (prime * result) + _skillSubLevel ;
 		return result;
 	}
 	

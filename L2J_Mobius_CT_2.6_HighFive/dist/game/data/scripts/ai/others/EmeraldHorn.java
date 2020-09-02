@@ -37,8 +37,8 @@ public class EmeraldHorn extends AbstractNpcAI
 	// Skills
 	private static final SkillHolder REFLECT_ATTACK = new SkillHolder(6823, 1);
 	private static final SkillHolder PIERCING_STORM = new SkillHolder(6824, 1);
-	private static final SkillHolder BLEED_LVL_1 = new SkillHolder(6825, 1);
-	private static final SkillHolder BLEED_LVL_2 = new SkillHolder(6825, 2);
+	private static final SkillHolder BLEED_LEVEL_1 = new SkillHolder(6825, 1);
+	private static final SkillHolder BLEED_LEVEL_2 = new SkillHolder(6825, 2);
 	// Variables
 	private static final String HIGH_DAMAGE_FLAG = "HIGH_DAMAGE_FLAG";
 	private static final String TOTAL_DAMAGE_COUNT = "TOTAL_DAMAGE_COUNT";
@@ -69,7 +69,7 @@ public class EmeraldHorn extends AbstractNpcAI
 		
 		if (npc.getVariables().getInt(TOTAL_DAMAGE_COUNT) > 5000)
 		{
-			addSkillCastDesire(npc, attacker, BLEED_LVL_2, 99999);
+			addSkillCastDesire(npc, attacker, BLEED_LEVEL_2, 99999);
 			npc.getVariables().set(TOTAL_DAMAGE_COUNT, 0);
 			npc.getVariables().set(CAST_FLAG, false);
 			npc.getVariables().set(HIGH_DAMAGE_FLAG, true);
@@ -77,7 +77,7 @@ public class EmeraldHorn extends AbstractNpcAI
 		
 		if (npc.getVariables().getInt(TOTAL_DAMAGE_COUNT) > 10000)
 		{
-			addSkillCastDesire(npc, attacker, BLEED_LVL_1, 99999);
+			addSkillCastDesire(npc, attacker, BLEED_LEVEL_1, 99999);
 			npc.getVariables().set(TOTAL_DAMAGE_COUNT, 0);
 			npc.getVariables().set(CAST_FLAG, false);
 			npc.getVariables().set(HIGH_DAMAGE_FLAG, true);

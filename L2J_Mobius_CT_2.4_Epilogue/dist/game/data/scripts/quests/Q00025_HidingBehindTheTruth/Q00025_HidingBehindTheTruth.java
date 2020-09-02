@@ -64,7 +64,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	private static final int EARING_OF_BLESSING = 874;
 	private static final int RING_OF_BLESSING = 905;
 	// Misc
-	private static final int MIN_LVL = 66;
+	private static final int MIN_LEVEL = 66;
 	private static final HashMap<Integer, Location> TRIOL_PAWN_LOC = new HashMap<>();
 	private static final IPositionable COFFIN_LOC = new Location(60104, -35820, -681);
 	
@@ -117,7 +117,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 			case "31349-03.html":
 			{
 				final QuestState q24 = player.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
-				if (qs.isCreated() && (q24 != null) && q24.isCompleted() && (player.getLevel() >= MIN_LVL))
+				if (qs.isCreated() && (q24 != null) && q24.isCompleted() && (player.getLevel() >= MIN_LEVEL))
 				{
 					qs.setMemoState(1);
 					qs.startQuest();
@@ -463,7 +463,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 				if (npc.getId() == PRIEST_BENEDICT)
 				{
 					final QuestState q24 = talker.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
-					if ((q24 != null) && q24.isCompleted() && (talker.getLevel() >= MIN_LVL))
+					if ((q24 != null) && q24.isCompleted() && (talker.getLevel() >= MIN_LEVEL))
 					{
 						htmltext = "31349-01.htm";
 					}

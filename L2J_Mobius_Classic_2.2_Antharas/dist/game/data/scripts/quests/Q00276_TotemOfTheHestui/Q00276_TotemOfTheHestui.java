@@ -53,7 +53,7 @@ public class Q00276_TotemOfTheHestui extends Quest
 	};
 	// Misc
 	private static final List<ItemHolder> SPAWN_CHANCES = new ArrayList<>();
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	static
 	{
 		SPAWN_CHANCES.add(new ItemHolder(79, 100));
@@ -135,7 +135,7 @@ public class Q00276_TotemOfTheHestui extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LEVEL) ? "30571-02.htm" : "30571-01.htm" : "30571-00.htm";
 				break;
 			}
 			case State.STARTED:

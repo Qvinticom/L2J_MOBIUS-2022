@@ -55,8 +55,8 @@ public class Q11007_NoiseInWoods extends Quest
 	private static final int KABOO_ORC_SOLDIER = 20470;
 	private static final int SPORE_FUNGUS = 20509;
 	// Misc
-	private static final int MIN_LVL = 2;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11007_NoiseInWoods()
 	{
@@ -64,7 +64,7 @@ public class Q11007_NoiseInWoods extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, KENDELL);
 		addKillId(GRAY_WOLF, GOBLIN_RAIDER, KABOO_ORC, KABOO_ORC_ARCHER, KABOO_ORC_SOLDIER, SPORE_FUNGUS);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html");
 		addCondRace(Race.ELF, "no-race.html");
 		registerQuestItems(MARK_OF_SECURITY, TAIL_OF_A_GRAY_WOLF, GOBLINS_PACK_OF_KNICKKNACKS, KABBO_ORC_STURDY_AMULET, MUSHROOM_SPORE_POWDER);
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_NOISE_IN_WOODS);

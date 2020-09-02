@@ -43,7 +43,7 @@ public class Q00621_EggDelivery extends Quest
 	private static final int BOILED_EGG = 7195;
 	private static final int EGG_PRICE = 7196;
 	// Misc
-	private static final int MIN_LVL = 68;
+	private static final int MIN_LEVEL = 68;
 	// Reward
 	private static final int QUICK_STEP_POTION = 734;
 	private static final int SEALED_RING_OF_AURAKYRA = 6849;
@@ -182,7 +182,7 @@ public class Q00621_EggDelivery extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (talker.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-02.htm";
+						htmltext = (talker.getLevel() >= MIN_LEVEL) ? "31521-01.htm" : "31521-02.htm";
 						break;
 					}
 					case State.STARTED:

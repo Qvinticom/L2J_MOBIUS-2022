@@ -27,28 +27,28 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
- * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
+ * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
-	private int _skillLvl;
-	private int _skillSubLvl;
+	private int _skillLevel;
+	private int _skillSubLevel ;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readH();
-		_skillSubLvl = packet.readH();
+		_skillLevel = packet.readH();
+		_skillSubLevel  = packet.readH();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0) || (_skillSubLevel  < 0))
 		{
 			return;
 		}
@@ -64,25 +64,25 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 		// return;
 		// }
 		
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel );
 		if ((skill == null) || (skill.getId() != _skillId))
 		{
 			return;
 		}
-		final Set<Integer> route = EnchantSkillGroupsData.getInstance().getRouteForSkill(_skillId, _skillLvl);
+		final Set<Integer> route = EnchantSkillGroupsData.getInstance().getRouteForSkill(_skillId, _skillLevel);
 		if (route.isEmpty())
 		{
 			return;
 		}
 		
 		final Skill playerSkill = player.getKnownSkill(_skillId);
-		if ((playerSkill.getLevel() != _skillLvl) || (playerSkill.getSubLevel() != _skillSubLvl))
+		if ((playerSkill.getLevel() != _skillLevel) || (playerSkill.getSubLevel() != _skillSubLevel ))
 		{
 			return;
 		}
 		
-		client.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl, _skillSubLvl, playerSkill.getSubLevel()));
+		client.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLevel, _skillSubLevel , playerSkill.getSubLevel()));
 		// ExEnchantSkillInfoDetail - not really necessary I think
-		// client.sendPacket(new ExEnchantSkillInfoDetail(SkillEnchantType.NORMAL, _skillId, _skillLvl, _skillSubLvl, activeChar));
+		// client.sendPacket(new ExEnchantSkillInfoDetail(SkillEnchantType.NORMAL, _skillId, _skillLevel, _skillSubLevel , activeChar));
 	}
 }

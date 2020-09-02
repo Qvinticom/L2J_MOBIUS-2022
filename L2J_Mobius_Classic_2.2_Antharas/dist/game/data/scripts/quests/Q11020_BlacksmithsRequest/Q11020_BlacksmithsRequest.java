@@ -53,8 +53,8 @@ public class Q11020_BlacksmithsRequest extends Quest
 	private static final int GREYSTONE_GOLEM = 20333;
 	private static final int EVIL_EYE_PATROL = 20428;
 	// Misc
-	private static final int MIN_LVL = 11;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 11;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11020_BlacksmithsRequest()
 	{
@@ -62,7 +62,7 @@ public class Q11020_BlacksmithsRequest extends Quest
 		addStartNpc(TIKU);
 		addTalkId(SUMARI, TIKU);
 		addKillId(BLACKWING_BAT, TOMB_RAIDER_LEADER, GREYSTONE_GOLEM, EVIL_EYE_PATROL);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
 		registerQuestItems(REQUIRED_MATERIALS, BLACKWING_BAT_WING, GRAVE_ROBBERS_BELT, GOLEM_ORE, EVIL_EYE_PATROL_HIDE);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_BLACKSMITH_S_REQUEST);

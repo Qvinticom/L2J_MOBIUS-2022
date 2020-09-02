@@ -44,7 +44,7 @@ public class Q00168_DeliverSupplies extends Quest
 	private static final int SENTRY_BLADE3 = 1156;
 	private static final int OLD_BRONZE_SWORD = 1157;
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	private static final Map<Integer, Integer> SENTRIES = new HashMap<>();
 	static
 	{
@@ -86,7 +86,7 @@ public class Q00168_DeliverSupplies extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
+						htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30349-02.htm" : "30349-01.htm" : "30349-00.htm";
 						break;
 					}
 					case State.STARTED:

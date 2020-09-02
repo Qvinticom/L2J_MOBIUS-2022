@@ -778,7 +778,7 @@ public abstract class Summon extends Playable
 		{
 			if (petLevel > 77)
 			{
-				skillLevel = (petLevel - 77) + 3; // max buff lvl 11 with pet lvl 85
+				skillLevel = (petLevel - 77) + 3; // max buff level 11 with pet level 85
 			}
 			else if (petLevel >= 70)
 			{

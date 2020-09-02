@@ -35,8 +35,8 @@ public class RequestPartyMatchList extends GameClientPacket
 	
 	private int _roomid;
 	private int _membersmax;
-	private int _lvlmin;
-	private int _lvlmax;
+	private int _minLevel;
+	private int _maxLevel;
 	private int _loot;
 	private String _roomtitle;
 	
@@ -45,8 +45,8 @@ public class RequestPartyMatchList extends GameClientPacket
 	{
 		_roomid = readD();
 		_membersmax = readD();
-		_lvlmin = readD();
-		_lvlmax = readD();
+		_minLevel = readD();
+		_maxLevel = readD();
 		_loot = readD();
 		_roomtitle = readS();
 	}
@@ -67,8 +67,8 @@ public class RequestPartyMatchList extends GameClientPacket
 			{
 				LOGGER.info("PartyMatchRoom #" + room.getId() + " changed by " + player.getName());
 				room.setMaxMembers(_membersmax);
-				room.setMinLvl(_lvlmin);
-				room.setMaxLvl(_lvlmax);
+				room.setMinLevel(_minLevel);
+				room.setMaxLevel(_maxLevel);
 				room.setLootType(_loot);
 				room.setTitle(_roomtitle);
 				
@@ -87,7 +87,7 @@ public class RequestPartyMatchList extends GameClientPacket
 		else
 		{
 			final int maxId = PartyMatchRoomList.getInstance().getMaxId();
-			final PartyMatchRoom room = new PartyMatchRoom(maxId, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, player);
+			final PartyMatchRoom room = new PartyMatchRoom(maxId, _roomtitle, _loot, _minLevel, _maxLevel, _membersmax, player);
 			
 			LOGGER.info("PartyMatchRoom #" + maxId + " created by " + player.getName());
 			

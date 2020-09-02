@@ -38,7 +38,7 @@ public class Q00295_DreamingOfTheSkies extends Quest
 	// Reward
 	private static final int RING_OF_FIREFLY = 1509;
 	// Misc
-	private static final int MIN_LVL = 11;
+	private static final int MIN_LEVEL = 11;
 	
 	public Q00295_DreamingOfTheSkies()
 	{
@@ -79,7 +79,7 @@ public class Q00295_DreamingOfTheSkies extends Quest
 		String html = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			html = (talker.getLevel() >= MIN_LVL) ? "30536-02.htm" : "30536-01.htm";
+			html = (talker.getLevel() >= MIN_LEVEL) ? "30536-02.htm" : "30536-01.htm";
 		}
 		else if (qs.isStarted())
 		{

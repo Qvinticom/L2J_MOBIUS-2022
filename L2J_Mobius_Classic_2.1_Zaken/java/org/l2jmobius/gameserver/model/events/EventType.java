@@ -224,7 +224,7 @@ public enum EventType
 	ON_PLAYER_CLAN_JOIN(OnPlayerClanJoin.class, void.class),
 	ON_PLAYER_CLAN_LEADER_CHANGE(OnPlayerClanLeaderChange.class, void.class),
 	ON_PLAYER_CLAN_LEFT(OnPlayerClanLeft.class, void.class),
-	ON_PLAYER_CLAN_LVLUP(OnPlayerClanLvlUp.class, void.class),
+	ON_PLAYER_CLAN_LEVELUP(OnPlayerClanLvlUp.class, void.class),
 	// Clan warehouse events
 	ON_PLAYER_CLAN_WH_ITEM_ADD(OnPlayerClanWHItemAdd.class, void.class),
 	ON_PLAYER_CLAN_WH_ITEM_DESTROY(OnPlayerClanWHItemDestroy.class, void.class),

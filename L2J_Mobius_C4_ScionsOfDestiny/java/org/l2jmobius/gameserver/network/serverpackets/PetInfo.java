@@ -129,7 +129,7 @@ public class PetInfo extends GameServerPacket
 		writeD((int) _summon.getCurrentMp()); // current mp
 		writeD(_maxMp); // max mp
 		writeD(_summon.getStat().getSp()); // sp
-		writeD(_summon.getLevel()); // lvl
+		writeD(_summon.getLevel()); // level
 		writeQ(_summon.getStat().getExp());
 		writeQ(_summon.getExpForThisLevel()); // 0% absolute value
 		writeQ(_summon.getExpForNextLevel()); // 100% absoulte value

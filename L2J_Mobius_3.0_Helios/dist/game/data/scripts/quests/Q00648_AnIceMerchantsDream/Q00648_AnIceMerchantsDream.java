@@ -63,7 +63,7 @@ public class Q00648_AnIceMerchantsDream extends Quest
 	private static final int SILVER_ICE_CRYSTAL = 8077;
 	private static final int BLACK_ICE_CRYSTAL = 8078;
 	// Misc
-	private static final int MIN_LVL = 53;
+	private static final int MIN_LEVEL = 53;
 	// Monsters
 	private static final Map<Integer, DropInfo> MONSTERS = new HashMap<>();
 	static
@@ -313,7 +313,7 @@ public class Q00648_AnIceMerchantsDream extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (player.getLevel() < MIN_LVL)
+					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "32020-01.htm";
 					}

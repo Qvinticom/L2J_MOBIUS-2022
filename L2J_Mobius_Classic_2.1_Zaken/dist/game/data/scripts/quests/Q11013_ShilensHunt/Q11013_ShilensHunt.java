@@ -57,8 +57,8 @@ public class Q11013_ShilensHunt extends Quest
 	private static final int BALOR_ORC_CAPTAIN = 20387;
 	private static final int BALOR_ORC_LIEUTENANTS = 20388;
 	// Misc
-	private static final int MIN_LVL = 2;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11013_ShilensHunt()
 	{
@@ -66,7 +66,7 @@ public class Q11013_ShilensHunt extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, TALOS);
 		addKillId(ASHEN_WOLVES, GOBLIN, IMP, IMP_ELDER, GREN_FUNGUS, BALOR_ORC_WARRIOR, BALOR_ORC_CAPTAIN, BALOR_ORC_LIEUTENANTS);
-		addCondLevel(MIN_LVL, MAX_LVL, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "");
 		addCondRace(Race.DARK_ELF, "");
 		registerQuestItems(HUNTING_PLAN, WOLF_TAIL, GOBLIN_POISONOUS_DART, IMP_WING, FUNGUS_JUICE, BALOR_ORC_FANG);
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_SHILEN_S_HUNT);

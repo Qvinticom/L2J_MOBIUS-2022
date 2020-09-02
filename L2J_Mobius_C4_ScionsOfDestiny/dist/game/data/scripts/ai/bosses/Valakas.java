@@ -155,7 +155,7 @@ public class Valakas extends Quest
 			long temp = 0;
 			if (event.equals("check_activity_and_do_actions"))
 			{
-				int lvl = 0;
+				int level = 0;
 				int sk4691 = 0;
 				final Effect[] effects = npc.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
@@ -165,7 +165,7 @@ public class Valakas extends Quest
 						if (e.getSkill().getId() == 4629)
 						{
 							sk4691 = 1;
-							lvl = e.getSkill().getLevel();
+							level = e.getSkill().getLevel();
 							break;
 						}
 					}
@@ -190,7 +190,7 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))
 				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 4)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 4)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getSkill(4691, 4));
@@ -198,7 +198,7 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 2) / 4.0))
 				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 3)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 3)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getSkill(4691, 3));
@@ -206,13 +206,13 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
 				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 2)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 2)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getSkill(4691, 2));
 					}
 				}
-				else if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 1)))
+				else if ((sk4691 == 0) || ((sk4691 == 1) && (level != 1)))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4691, 1));

@@ -27,25 +27,25 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
- * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
+ * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillInfo extends GameClientPacket
 {
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	protected void readImpl()
 	{
 		_skillId = readD();
-		_skillLvl = readD();
+		_skillLevel = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -74,7 +74,7 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		
 		boolean canteach = false;
 		
-		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLevel);
 		if ((skill == null) || (skill.getId() != _skillId))
 		{
 			return;
@@ -88,7 +88,7 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		for (EnchantSkillLearn s : skills)
 		{
-			if ((s.getId() == _skillId) && (s.getLevel() == _skillLvl))
+			if ((s.getId() == _skillId) && (s.getLevel() == _skillLevel))
 			{
 				canteach = true;
 				break;
@@ -104,7 +104,7 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		final int requiredExp = SkillTreeTable.getInstance().getSkillExpCost(player, skill);
 		final byte rate = SkillTreeTable.getInstance().getSkillRate(player, skill);
 		final ExEnchantSkillInfo asi = new ExEnchantSkillInfo(skill.getId(), skill.getLevel(), requiredSp, requiredExp, rate);
-		if (Config.ES_SP_BOOK_NEEDED && ((skill.getLevel() == 101) || (skill.getLevel() == 141))) // only first lvl requires book
+		if (Config.ES_SP_BOOK_NEEDED && ((skill.getLevel() == 101) || (skill.getLevel() == 141))) // only first level requires book
 		{
 			final int spbId = 6622;
 			asi.addRequirement(4, spbId, 1, 0);

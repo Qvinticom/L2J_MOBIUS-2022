@@ -93,11 +93,11 @@ public class Daichir extends AbstractNpcAI
 				}
 				for (PlayerInstance member : members)
 				{
-					if (member.getLevel() < Config.TRASKEN_MIN_PLAYER_LVL)
+					if (member.getLevel() < Config.TRASKEN_MIN_PLAYER_LEVEL)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 						packet.setHtml(getHtm(player, "30537-5.html"));
-						packet.replace("%minlvl%", Integer.toString(Config.TRASKEN_MIN_PLAYER_LVL));
+						packet.replace("%minLevel%", Integer.toString(Config.TRASKEN_MIN_PLAYER_LEVEL));
 						player.sendPacket(packet);
 						return null;
 					}

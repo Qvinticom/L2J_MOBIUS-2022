@@ -41,7 +41,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 	private static final int CRACKED_SKULL = 1030;
 	private static final int PERFECT_SKULL = 1031;
 	// Misc
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	
 	public Q00169_OffspringOfNightmares()
 	{
@@ -114,7 +114,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
 				break;
 			}
 			case State.STARTED:

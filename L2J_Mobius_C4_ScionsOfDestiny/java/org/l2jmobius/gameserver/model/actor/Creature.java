@@ -3102,8 +3102,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					
 					if (_effects.get(i) != null)
 					{
-						final int skillid = _effects.get(i).getSkill().getId();
-						if (!_effects.get(i).getSkill().isToggle() && ((skillid <= 4360) || (skillid >= 4367)))
+						final int skillId = _effects.get(i).getSkill().getId();
+						if (!_effects.get(i).getSkill().isToggle() && ((skillId <= 4360) || (skillId >= 4367)))
 						{
 							pos++;
 						}

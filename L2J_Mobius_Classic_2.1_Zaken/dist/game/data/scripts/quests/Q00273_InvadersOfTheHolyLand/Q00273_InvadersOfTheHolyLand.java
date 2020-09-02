@@ -47,7 +47,7 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 		MONSTERS.put(20313, 77); // Rakeclaw Imp Chieftain
 	}
 	// Misc
-	private static final int MIN_LVL = 6;
+	private static final int MIN_LEVEL = 6;
 	
 	public Q00273_InvadersOfTheHolyLand()
 	{
@@ -117,7 +117,7 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LEVEL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
 				break;
 			}
 			case State.STARTED:

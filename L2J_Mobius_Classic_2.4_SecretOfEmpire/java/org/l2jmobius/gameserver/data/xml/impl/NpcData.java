@@ -754,22 +754,22 @@ public class NpcData implements IXmlReader
 	
 	/**
 	 * Gets the all of level.
-	 * @param lvls of all the templates to get.
+	 * @param levels of all the templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<NpcTemplate> getAllOfLevel(int... lvls)
+	public List<NpcTemplate> getAllOfLevel(int... levels)
 	{
-		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
+		return getTemplates(template -> CommonUtil.contains(levels, template.getLevel()));
 	}
 	
 	/**
 	 * Gets the all monsters of level.
-	 * @param lvls of all the monster templates to get.
+	 * @param levels of all the monster templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<NpcTemplate> getAllMonstersOfLevel(int... lvls)
+	public List<NpcTemplate> getAllMonstersOfLevel(int... levels)
 	{
-		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("Monster"));
+		return getTemplates(template -> CommonUtil.contains(levels, template.getLevel()) && template.isType("Monster"));
 	}
 	
 	/**

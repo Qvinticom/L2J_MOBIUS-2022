@@ -60,8 +60,8 @@ public class SkillData
 		for (Skill skill : _skills.values())
 		{
 			final int skillId = skill.getId();
-			final int skillLvl = skill.getLevel();
-			if (skillLvl > 99)
+			final int skillLevel = skill.getLevel();
+			if (skillLevel > 99)
 			{
 				if (!_enchantable.contains(skillId))
 				{
@@ -71,10 +71,10 @@ public class SkillData
 			}
 			
 			// only non-enchanted skills
-			final int maxLvl = getMaxLevel(skillId);
-			if (skillLvl > maxLvl)
+			final int maxLevel = getMaxLevel(skillId);
+			if (skillLevel > maxLevel)
 			{
-				_skillMaxLevel.put(skillId, skillLvl);
+				_skillMaxLevel.put(skillId, skillLevel);
 			}
 		}
 	}
@@ -109,11 +109,11 @@ public class SkillData
 		}
 		
 		// skill/level not found, fix for transformation scripts
-		final int maxLvl = getMaxLevel(skillId);
+		final int maxLevel = getMaxLevel(skillId);
 		// requested level too high
-		if ((maxLvl > 0) && (level > maxLvl))
+		if ((maxLevel > 0) && (level > maxLevel))
 		{
-			return _skills.get(getSkillHashCode(skillId, maxLvl));
+			return _skills.get(getSkillHashCode(skillId, maxLevel));
 		}
 		
 		LOGGER.warning(getClass().getSimpleName() + ": No skill info found for skill id " + skillId + " and skill level " + level + ".");

@@ -44,7 +44,7 @@ public class Q00032_AnObviousLie extends Quest
 	private static final ItemHolder THREAD = new ItemHolder(1868, 1000);
 	private static final ItemHolder SUEDE = new ItemHolder(1866, 500);
 	// Misc
-	private static final int MIN_LVL = 45;
+	private static final int MIN_LEVEL = 45;
 	// Reward
 	private static final Map<String, Integer> EARS = new HashMap<>();
 	static
@@ -189,7 +189,7 @@ public class Q00032_AnObviousLie extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (player.getLevel() >= MIN_LVL) ? "30120-01.htm" : "30120-03.htm";
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30120-01.htm" : "30120-03.htm";
 				}
 				else if (qs.isStarted())
 				{

@@ -41,7 +41,7 @@ public class Q00042_HelpTheUncle extends Quest
 	private static final int MAP = 7549;
 	private static final int PET_TICKET = 7583;
 	// Misc
-	private static final int MIN_LVL = 25;
+	private static final int MIN_LEVEL = 25;
 	
 	public Q00042_HelpTheUncle()
 	{
@@ -50,7 +50,7 @@ public class Q00042_HelpTheUncle extends Quest
 		addTalkId(WATERS, SOPHYA);
 		addKillId(MONSTER_EYE_DESTROYER, MONSTER_EYE_GAZER);
 		registerQuestItems(MAP, MAP_PIECE);
-		addCondMinLevel(MIN_LVL, "30828-00a.html");
+		addCondMinLevel(MIN_LEVEL, "30828-00a.html");
 	}
 	
 	@Override

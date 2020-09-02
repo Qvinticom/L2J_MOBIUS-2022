@@ -31,8 +31,8 @@ public class AdminDMEngine implements IAdminCommandHandler
 		"admin_dmevent_name",
 		"admin_dmevent_desc",
 		"admin_dmevent_join_loc",
-		"admin_dmevent_minlvl",
-		"admin_dmevent_maxlvl",
+		"admin_dmevent_minLevel",
+		"admin_dmevent_maxLevel",
 		"admin_dmevent_npc",
 		"admin_dmevent_npc_pos",
 		"admin_dmevent_reward",
@@ -80,7 +80,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
-		else if (command.startsWith("admin_dmevent_minlvl "))
+		else if (command.startsWith("admin_dmevent_minLevel "))
 		{
 			if (!DM.checkMinLevel(Integer.parseInt(command.substring(21))))
 			{
@@ -96,7 +96,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
-		else if (command.startsWith("admin_dmevent_maxlvl "))
+		else if (command.startsWith("admin_dmevent_maxLevel "))
 		{
 			if (!DM.checkMaxLevel(Integer.parseInt(command.substring(21))))
 			{
@@ -262,8 +262,8 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("<td width=\"100\"><button value=\"Join Location\" action=\"bypass -h admin_dmevent_join_loc $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("</tr></table><br><table><tr>");
-		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_dmevent_maxlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_dmevent_minlvl $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Max lvl\" action=\"bypass -h admin_dmevent_maxLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+		replyMSG.append("<td width=\"100\"><button value=\"Min lvl\" action=\"bypass -h admin_dmevent_minLevel $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"NPC\" action=\"bypass -h admin_dmevent_npc $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"NPC Pos\" action=\"bypass -h admin_dmevent_npc_pos\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -299,8 +299,8 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + DM.getRewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + DM.getRewardAmount() + "</font><br><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + DM.getMinlvl() + "</font><br>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + DM.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + DM.getMinLevel() + "</font><br>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + DM.getMaxLevel() + "</font><br><br>");
 		replyMSG.append("Death Match Color:&nbsp;<font color=\"00FF00\">" + DM.getPlayerColors() + "</font><br>");
 		
 		final Location playerLoc = DM.getPlayersSpawnLocation();

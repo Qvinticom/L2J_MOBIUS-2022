@@ -170,7 +170,7 @@ public class InitialShortcutData implements IXmlReader
 							case SKILL:
 							{
 								d1 = parseInteger(attrs, "skillId"); // Skill ID
-								d2 = parseInteger(attrs, "skillLvl", 0); // Skill level
+								d2 = parseInteger(attrs, "skillLevel", 0); // Skill level
 								break;
 							}
 							case ACTION:

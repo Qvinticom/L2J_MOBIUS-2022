@@ -307,7 +307,7 @@ public class CharSelectInfo extends GameServerPacket
 		final int baseClassId = chardata.getInt("base_class");
 		final int activeClassId = chardata.getInt("classid");
 		
-		// if is in subclass, load subclass exp, sp, lvl info
+		// if is in subclass, load subclass exp, sp, level info
 		if (baseClassId != activeClassId)
 		{
 			loadCharacterSubclassInfo(charInfopackage, objectId, activeClassId);

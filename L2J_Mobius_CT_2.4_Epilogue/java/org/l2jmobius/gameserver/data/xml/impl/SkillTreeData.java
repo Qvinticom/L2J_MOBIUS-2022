@@ -1265,8 +1265,8 @@ public class SkillTreeData implements IXmlReader
 			return true;
 		}
 		
-		final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
-		final int hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
+		final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
+		final int hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLevel));
 		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0)
 		{
 			return true;
@@ -1283,7 +1283,7 @@ public class SkillTreeData implements IXmlReader
 		}
 		
 		// Exclude Transfer Skills from this check.
-		return getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null;
+		return getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLevel), player.getClassId()) != null;
 	}
 	
 	/**

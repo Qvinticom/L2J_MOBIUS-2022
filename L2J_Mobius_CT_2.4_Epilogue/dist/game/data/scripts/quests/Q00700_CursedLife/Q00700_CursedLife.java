@@ -55,7 +55,7 @@ public class Q00700_CursedLife extends Quest
 	private static final int SWALLOWED_STERNUM = 13873;
 	private static final int SWALLOWED_SKULL = 13872;
 	// Misc
-	private static final int MIN_LVL = 75;
+	private static final int MIN_LEVEL = 75;
 	private static final int SWALLOWED_BONES_ADENA = 500;
 	private static final int SWALLOWED_STERNUM_ADENA = 5000;
 	private static final int SWALLOWED_SKULL_ADENA = 50000;
@@ -83,7 +83,7 @@ public class Q00700_CursedLife extends Quest
 				case "32560-02.htm":
 				{
 					qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((player.getLevel() < MIN_LVL) || (qs == null) || (!qs.isCompleted())) ? "32560-03.htm" : event;
+					htmltext = ((player.getLevel() < MIN_LEVEL) || (qs == null) || (!qs.isCompleted())) ? "32560-03.htm" : event;
 					break;
 				}
 				case "32560-04.htm":

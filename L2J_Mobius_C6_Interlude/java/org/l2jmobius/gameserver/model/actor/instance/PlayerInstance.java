@@ -6086,7 +6086,7 @@ public class PlayerInstance extends Playable
 		{
 			// this formula seems to work relatively well:
 			// baseKarma * thisLVL * (thisLVL/100)
-			// Calculate the new Karma of the attacker : newKarma = baseKarma*pkCountMulti*lvlDiffMulti
+			// Calculate the new Karma of the attacker : newKarma = baseKarma*pkCountMulti*levelDiffMulti
 			double karmaLost = Config.KARMA_LOST_BASE;
 			karmaLost *= getLevel(); // multiply by char lvl
 			karmaLost *= getLevel() / 100.0; // divide by 0.charLVL
@@ -6277,7 +6277,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Anti FARM level player < 40
-			if (Config.ANTI_FARM_LVL_DIFF_ENABLED && (targetPlayer.getLevel() < Config.ANTI_FARM_MAX_LVL_DIFF))
+			if (Config.ANTI_FARM_LEVEL_DIFF_ENABLED && (targetPlayer.getLevel() < Config.ANTI_FARM_MAX_LEVEL_DIFF))
 			{
 				sendMessage("Farm is punishable with Ban! Don't kill new players! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". LVL DIFF.");
@@ -6669,7 +6669,7 @@ public class PlayerInstance extends Playable
 		final int karmaLimit = Config.KARMA_MAX_KARMA;
 		final int pkLVL = getLevel();
 		final int pkPKCount = getPkKills();
-		int lvlDiffMulti = 0;
+		int levelDiffMulti = 0;
 		int pkCountMulti = 0;
 		
 		// Check if the attacker has a PK counter greater than 0
@@ -6690,21 +6690,21 @@ public class PlayerInstance extends Playable
 		// Calculate the level difference Multiplier between attacker and killed PlayerInstance
 		if (pkLVL > targLVL)
 		{
-			lvlDiffMulti = pkLVL / targLVL;
+			levelDiffMulti = pkLVL / targLVL;
 		}
 		else
 		{
-			lvlDiffMulti = 1;
+			levelDiffMulti = 1;
 		}
 		
-		if (lvlDiffMulti < 1)
+		if (levelDiffMulti < 1)
 		{
-			lvlDiffMulti = 1;
+			levelDiffMulti = 1;
 		}
 		
-		// Calculate the new Karma of the attacker : newKarma = baseKarma*pkCountMulti*lvlDiffMulti
+		// Calculate the new Karma of the attacker : newKarma = baseKarma*pkCountMulti*levelDiffMulti
 		newKarma *= pkCountMulti;
-		newKarma *= lvlDiffMulti;
+		newKarma *= levelDiffMulti;
 		
 		// Make sure newKarma is less than karmaLimit and higher than baseKarma
 		if (newKarma < baseKarma)
@@ -6927,14 +6927,14 @@ public class PlayerInstance extends Playable
 		long lostExp = 0;
 		if (!atEvent && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started))
 		{
-			final byte maxLvl = ExperienceData.getInstance().getMaxLevel();
-			if (lvl < maxLvl)
+			final byte maxLevel = ExperienceData.getInstance().getMaxLevel();
+			if (lvl < maxLevel)
 			{
 				lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
 			}
 			else
 			{
-				lostExp = Math.round(((getStat().getExpForLevel(maxLvl) - getStat().getExpForLevel(maxLvl - 1)) * percentLost) / 100);
+				lostExp = Math.round(((getStat().getExpForLevel(maxLevel) - getStat().getExpForLevel(maxLevel - 1)) * percentLost) / 100);
 			}
 		}
 		// Get the Experience before applying penalty
@@ -8791,7 +8791,7 @@ public class PlayerInstance extends Playable
 				if (currentTime < t.getStamp())
 				{
 					final int skillId = t.getSkillId();
-					final int skillLvl = t.getSkillLevel();
+					final int skillLevel = t.getSkillLevel();
 					if (storedSkills.contains(skillId))
 					{
 						continue;
@@ -8800,7 +8800,7 @@ public class PlayerInstance extends Playable
 					
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, skillId);
-					statement.setInt(3, skillLvl);
+					statement.setInt(3, skillLevel);
 					statement.setInt(4, -1);
 					statement.setInt(5, -1);
 					statement.setLong(6, t.getReuse());
@@ -8994,78 +8994,78 @@ public class PlayerInstance extends Playable
 			// loop through all skills of player
 			for (Skill skill : getAllSkills())
 			{
-				final int skillid = skill.getId();
+				final int skillId = skill.getId();
 				// int skilllevel = skill.getLevel();
 				foundskill = false;
 				// loop through all skills in players skilltree
 				for (SkillLearn temp : skillTree)
 				{
 					// if the skill was found and the level is possible to obtain for his class everything is ok
-					if (temp.getId() == skillid)
+					if (temp.getId() == skillId)
 					{
 						foundskill = true;
 					}
 				}
 				
 				// exclude noble skills
-				if (isNoble() && (skillid >= 325) && (skillid <= 397))
+				if (isNoble() && (skillId >= 325) && (skillId <= 397))
 				{
 					foundskill = true;
 				}
 				
-				if (isNoble() && (skillid >= 1323) && (skillid <= 1327))
+				if (isNoble() && (skillId >= 1323) && (skillId <= 1327))
 				{
 					foundskill = true;
 				}
 				
 				// exclude hero skills
-				if (isHero() && (skillid >= 395) && (skillid <= 396))
+				if (isHero() && (skillId >= 395) && (skillId <= 396))
 				{
 					foundskill = true;
 				}
 				
-				if (isHero() && (skillid >= 1374) && (skillid <= 1376))
+				if (isHero() && (skillId >= 1374) && (skillId <= 1376))
 				{
 					foundskill = true;
 				}
 				
 				// exclude cursed weapon skills
-				if (isCursedWeaponEquiped() && (skillid == CursedWeaponsManager.getInstance().getCursedWeapon(_cursedWeaponEquipedId).getSkillId()))
+				if (isCursedWeaponEquiped() && (skillId == CursedWeaponsManager.getInstance().getCursedWeapon(_cursedWeaponEquipedId).getSkillId()))
 				{
 					foundskill = true;
 				}
 				
 				// exclude clan skills
-				if ((getClan() != null) && (skillid >= 370) && (skillid <= 391))
+				if ((getClan() != null) && (skillId >= 370) && (skillId <= 391))
 				{
 					foundskill = true;
 				}
 				
 				// exclude seal of ruler / build siege hq
-				if ((getClan() != null) && ((skillid == 246) || (skillid == 247)) && (getClan().getLeaderId() == getObjectId()))
+				if ((getClan() != null) && ((skillId == 246) || (skillId == 247)) && (getClan().getLeaderId() == getObjectId()))
 				{
 					foundskill = true;
 				}
 				
 				// exclude fishing skills and common skills + dwarfen craft
-				if ((skillid >= 1312) && (skillid <= 1322))
+				if ((skillId >= 1312) && (skillId <= 1322))
 				{
 					foundskill = true;
 				}
 				
-				if ((skillid >= 1368) && (skillid <= 1373))
+				if ((skillId >= 1368) && (skillId <= 1373))
 				{
 					foundskill = true;
 				}
 				
 				// exclude sa / enchant bonus / penality etc. skills
-				if ((skillid >= 3000) && (skillid < 7000))
+				if ((skillId >= 3000) && (skillId < 7000))
 				{
 					foundskill = true;
 				}
 				
 				// exclude Skills from AllowedSkills in options.ini
-				if (Config.ALLOWED_SKILLS_LIST.contains(skillid))
+				if (Config.ALLOWED_SKILLS_LIST.contains(skillId))
 				{
 					foundskill = true;
 				}
@@ -9188,7 +9188,7 @@ public class PlayerInstance extends Playable
 			while (rset.next())
 			{
 				final int skillId = rset.getInt("skill_id");
-				final int skillLvl = rset.getInt("skill_level");
+				final int skillLevel = rset.getInt("skill_level");
 				final int effectCount = rset.getInt("effect_count");
 				final int effectCurTime = rset.getInt("effect_cur_time");
 				final long reuseDelay = rset.getLong("reuse_delay");
@@ -9202,7 +9202,7 @@ public class PlayerInstance extends Playable
 				
 				if (activateEffects)
 				{
-					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLvl);
+					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 					skill.getEffects(this, this, false, false, false);
 					for (Effect effect : getAllEffects())
 					{
@@ -9217,7 +9217,7 @@ public class PlayerInstance extends Playable
 				final long remainingTime = systime - currentTime;
 				if (remainingTime > 10)
 				{
-					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLvl);
+					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 					if (skill == null)
 					{
 						continue;
@@ -9240,13 +9240,13 @@ public class PlayerInstance extends Playable
 			while (rset.next())
 			{
 				final int skillId = rset.getInt("skill_id");
-				final int skillLvl = rset.getInt("skill_level");
+				final int skillLevel = rset.getInt("skill_level");
 				final long reuseDelay = rset.getLong("reuse_delay");
 				final long systime = rset.getLong("systime");
 				final long remainingTime = systime - currentTime;
 				if (remainingTime > 0)
 				{
-					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLvl);
+					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 					if (skill == null)
 					{
 						continue;
@@ -14412,15 +14412,15 @@ public class PlayerInstance extends Playable
 	private int getRandomFishLvl()
 	{
 		final Effect[] effects = getAllEffects();
-		int skilllvl = getSkillLevel(1315);
+		int skillLevel = getSkillLevel(1315);
 		for (Effect e : effects)
 		{
 			if (e.getSkill().getId() == 2274)
 			{
-				skilllvl = (int) e.getSkill().getPower(this);
+				skillLevel = (int) e.getSkill().getPower(this);
 			}
 		}
-		if (skilllvl <= 0)
+		if (skillLevel <= 0)
 		{
 			return 1;
 		}
@@ -14428,11 +14428,11 @@ public class PlayerInstance extends Playable
 		final int check = Rnd.get(100);
 		if (check <= 50)
 		{
-			randomlvl = skilllvl;
+			randomlvl = skillLevel;
 		}
 		else if (check <= 85)
 		{
-			randomlvl = skilllvl - 1;
+			randomlvl = skillLevel - 1;
 			if (randomlvl <= 0)
 			{
 				randomlvl = 1;
@@ -14440,7 +14440,7 @@ public class PlayerInstance extends Playable
 		}
 		else
 		{
-			randomlvl = skilllvl + 1;
+			randomlvl = skillLevel + 1;
 			if (randomlvl > 27)
 			{
 				randomlvl = 27;
@@ -15611,10 +15611,10 @@ public class PlayerInstance extends Playable
 	public void rewardAioSkills()
 	{
 		Skill skill;
-		for (Integer skillid : Config.AIO_SKILLS.keySet())
+		for (Integer skillId : Config.AIO_SKILLS.keySet())
 		{
-			final int skilllvl = Config.AIO_SKILLS.get(skillid);
-			skill = SkillTable.getInstance().getSkill(skillid, skilllvl);
+			final int skillLevel = Config.AIO_SKILLS.get(skillId);
+			skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 			if (skill != null)
 			{
 				addSkill(skill, true);
@@ -15629,10 +15629,10 @@ public class PlayerInstance extends Playable
 	public void lostAioSkills()
 	{
 		Skill skill;
-		for (Integer skillid : Config.AIO_SKILLS.keySet())
+		for (Integer skillId : Config.AIO_SKILLS.keySet())
 		{
-			final int skilllvl = Config.AIO_SKILLS.get(skillid);
-			skill = SkillTable.getInstance().getSkill(skillid, skilllvl);
+			final int skillLevel = Config.AIO_SKILLS.get(skillId);
+			skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 			removeSkill(skill);
 		}
 	}

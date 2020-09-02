@@ -93,7 +93,7 @@ public class PetManagerInstance extends MerchantInstance
 			boolean ok = false;
 			switch (val)
 			{
-				// Info evolve(player, "curent pet summon item", "new pet summon item", "lvl required to evolve")
+				// Info evolve(player, "curent pet summon item", "new pet summon item", "level required to evolve")
 				// To ignore evolve just put value 0 where do you like example: evolve(player, 0, 9882, 55);
 				case 1:
 				{
@@ -135,7 +135,7 @@ public class PetManagerInstance extends MerchantInstance
 			boolean ok = false;
 			switch (val)
 			{
-				// Info evolve(player, "curent pet summon item", "new pet summon item", "lvl required to evolve")
+				// Info evolve(player, "curent pet summon item", "new pet summon item", "level required to evolve")
 				case 1:
 				{
 					ok = Evolve.doRestore(player, this, 10307, 9882, 55);

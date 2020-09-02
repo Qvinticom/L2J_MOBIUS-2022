@@ -53,8 +53,8 @@ public class Q11015_PrepareForTrade1 extends Quest
 	private static final int GIANT_VENOMOUS_SPIDER = 20038;
 	private static final int ARACHNID_TRACKER = 20043;
 	// Misc
-	private static final int MIN_LVL = 15;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11015_PrepareForTrade1()
 	{
@@ -62,7 +62,7 @@ public class Q11015_PrepareForTrade1 extends Quest
 		addStartNpc(PAYNE);
 		addTalkId(PAYNE, VOLLODOS);
 		addKillId(STONE_GIANT_GUARDIANS, CRYSTALLINE_BEAST, PROWLER, GIANT_VENOMOUS_SPIDER, ARACHNID_TRACKER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DARK_ELF, "no-race.html"); // Custom
 		registerQuestItems(SUPPLIES_CERTIFICATE, STONE_GIANTS_GUARDIANS_CORE, CRYSTALLINE_BEASTS_SHINEDUST, GIANT_SPIDER_SKIN_FRAGMENT);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_PREPARE_FOR_TRADE_1_3);

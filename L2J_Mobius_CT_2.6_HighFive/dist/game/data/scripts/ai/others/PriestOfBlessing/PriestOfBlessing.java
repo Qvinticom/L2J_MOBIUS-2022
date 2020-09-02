@@ -173,34 +173,34 @@ public class PriestOfBlessing extends AbstractNpcAI
 		return content;
 	}
 	
-	private int getHGIndex(int lvl)
+	private int getHGIndex(int level)
 	{
 		int index = 0;
-		if (lvl < 20)
+		if (level < 20)
 		{
 			index = 0;
 		}
-		else if (lvl < 40)
+		else if (level < 40)
 		{
 			index = 1;
 		}
-		else if (lvl < 52)
+		else if (level < 52)
 		{
 			index = 2;
 		}
-		else if (lvl < 61)
+		else if (level < 61)
 		{
 			index = 3;
 		}
-		else if (lvl < 76)
+		else if (level < 76)
 		{
 			index = 4;
 		}
-		else if (lvl < 80)
+		else if (level < 80)
 		{
 			index = 5;
 		}
-		else if (lvl < 86)
+		else if (level < 86)
 		{
 			index = 6;
 		}

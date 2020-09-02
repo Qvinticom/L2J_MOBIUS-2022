@@ -72,17 +72,17 @@ public class AdminLevel implements IAdminCommandHandler
 				}
 				
 				final Playable targetPlayer = (Playable) targetChar;
-				final byte lvl = Byte.parseByte(val);
+				final byte level = Byte.parseByte(val);
 				int maxLevel = ExperienceData.getInstance().getMaxLevel();
 				if ((targetChar instanceof PlayerInstance) && ((PlayerInstance) targetPlayer).isSubClassActive())
 				{
 					maxLevel = Config.MAX_SUBCLASS_LEVEL;
 				}
 				
-				if ((lvl >= 1) && (lvl <= maxLevel))
+				if ((level >= 1) && (level <= maxLevel))
 				{
 					final long pXp = targetPlayer.getStat().getExp();
-					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
+					final long tXp = ExperienceData.getInstance().getExpForLevel(level);
 					if (pXp > tXp)
 					{
 						targetPlayer.getStat().removeExpAndSp(pXp - tXp, 0);

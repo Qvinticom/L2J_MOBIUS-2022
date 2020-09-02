@@ -37,7 +37,7 @@ public class Q00902_ReclaimOurEra extends Quest
 	// Npc
 	private static final int MATHIAS = 31340;
 	// Misc
-	private static final int MIN_LVL = 80;
+	private static final int MIN_LEVEL = 80;
 	// Items
 	private static final int SHATTERED_BONES = 21997;
 	private static final int CANNIBALISTIC_STAKATO_LDR_CLAW = 21998;
@@ -183,7 +183,7 @@ public class Q00902_ReclaimOurEra extends Quest
 			}
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "31340-01.htm" : "31340-03.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "31340-01.htm" : "31340-03.htm";
 				break;
 			}
 			case State.STARTED:

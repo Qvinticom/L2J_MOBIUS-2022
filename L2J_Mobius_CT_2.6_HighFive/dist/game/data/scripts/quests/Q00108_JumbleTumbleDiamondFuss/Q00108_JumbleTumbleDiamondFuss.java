@@ -77,7 +77,7 @@ public class Q00108_JumbleTumbleDiamondFuss extends Quest
 	};
 	private static final int SILVERSMITH_HAMMER = 1511;
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	private static final int MAX_GEM_COUNT = 10;
 	private static final Map<Integer, Double> GOBLIN_DROP_CHANCES = new HashMap<>();
 	static
@@ -160,7 +160,7 @@ public class Q00108_JumbleTumbleDiamondFuss extends Quest
 						{
 							htmltext = "30523-01.htm";
 						}
-						else if (talker.getLevel() < MIN_LVL)
+						else if (talker.getLevel() < MIN_LEVEL)
 						{
 							htmltext = "30523-02.htm";
 						}

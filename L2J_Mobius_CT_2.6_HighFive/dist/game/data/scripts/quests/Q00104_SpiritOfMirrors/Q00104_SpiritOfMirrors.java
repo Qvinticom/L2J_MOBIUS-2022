@@ -67,7 +67,7 @@ public class Q00104_SpiritOfMirrors extends Quest
 		new ItemHolder(747, 1), // Wand of Adept
 	};
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	
 	public Q00104_SpiritOfMirrors()
 	{
@@ -124,7 +124,7 @@ public class Q00104_SpiritOfMirrors extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
+						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LEVEL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
 						break;
 					}
 					case State.STARTED:

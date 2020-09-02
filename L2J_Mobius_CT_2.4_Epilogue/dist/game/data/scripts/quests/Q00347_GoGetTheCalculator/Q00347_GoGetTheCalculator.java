@@ -43,7 +43,7 @@ public class Q00347_GoGetTheCalculator extends Quest
 	private static final int CALCULATOR = 4393;
 	private static final int ADENA = 1500;
 	// Misc
-	private static final int MIN_LVL = 12;
+	private static final int MIN_LEVEL = 12;
 	
 	public Q00347_GoGetTheCalculator()
 	{
@@ -146,7 +146,7 @@ public class Q00347_GoGetTheCalculator extends Quest
 			{
 				if (npc.getId() == BRUNON)
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30526-01.htm" : "30526-02.html";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30526-01.htm" : "30526-02.html";
 				}
 				break;
 			}

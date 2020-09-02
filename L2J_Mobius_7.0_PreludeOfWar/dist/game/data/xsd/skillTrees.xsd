@@ -107,7 +107,7 @@
 									<xs:attribute name="levelUpSp" type="xs:long" />
 									<xs:attribute name="residenceSkill" type="xs:boolean" />
 									<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="skillLevel" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
 									<xs:attribute name="treeId" type="xs:positiveInteger" />
 									<xs:attribute name="row" type="xs:positiveInteger" />

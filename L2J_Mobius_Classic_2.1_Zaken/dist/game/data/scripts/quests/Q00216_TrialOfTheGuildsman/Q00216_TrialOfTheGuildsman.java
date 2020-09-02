@@ -82,7 +82,7 @@ public class Q00216_TrialOfTheGuildsman extends Quest
 	private static final int BREKA_ORC_OVERLORD = 20270;
 	private static final int BREKA_ORC_WARRIOR = 20271;
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	
 	public Q00216_TrialOfTheGuildsman()
 	{
@@ -399,7 +399,7 @@ public class Q00216_TrialOfTheGuildsman extends Quest
 			{
 				if ((player.getClassId() == ClassId.ARTISAN) || (player.getClassId() == ClassId.SCAVENGER))
 				{
-					if (player.getLevel() < MIN_LVL)
+					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30103-02.html";
 					}

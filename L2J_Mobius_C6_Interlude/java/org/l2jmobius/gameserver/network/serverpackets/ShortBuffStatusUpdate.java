@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 public class ShortBuffStatusUpdate extends GameServerPacket
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	private final int _duration;
 	
-	public ShortBuffStatusUpdate(int skillId, int skillLvl, int duration)
+	public ShortBuffStatusUpdate(int skillId, int skillLevel, int duration)
 	{
 		_skillId = skillId;
-		_skillLvl = skillLvl;
+		_skillLevel = skillLevel;
 		_duration = duration;
 	}
 	
@@ -34,7 +34,7 @@ public class ShortBuffStatusUpdate extends GameServerPacket
 	{
 		writeC(0xF4);
 		writeD(_skillId);
-		writeD(_skillLvl);
+		writeD(_skillLevel);
 		writeD(_duration);
 	}
 }

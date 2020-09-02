@@ -59,7 +59,7 @@ public class Q00266_PleasOfPixies extends Quest
 		REWARDS.put(3, Arrays.asList(new ItemHolder(1337, 1), new ItemHolder(57, 5000))); // Emerald , Adena
 	}
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	
 	public Q00266_PleasOfPixies()
 	{
@@ -117,7 +117,7 @@ public class Q00266_PleasOfPixies extends Quest
 				{
 					htmltext = "31852-01.htm";
 				}
-				else if (player.getLevel() < MIN_LVL)
+				else if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "31852-02.htm";
 				}

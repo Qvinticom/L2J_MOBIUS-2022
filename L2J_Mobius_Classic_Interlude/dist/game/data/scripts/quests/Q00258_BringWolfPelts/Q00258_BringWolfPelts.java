@@ -51,7 +51,7 @@ public class Q00258_BringWolfPelts extends Quest
 		REWARDS.put(462, 9); // Stockings
 	}
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	private static final int WOLF_PELT_COUNT = 40;
 	
 	public Q00258_BringWolfPelts()
@@ -103,7 +103,7 @@ public class Q00258_BringWolfPelts extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30001-02.htm" : "30001-01.html";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30001-02.htm" : "30001-01.html";
 				break;
 			}
 			case State.STARTED:

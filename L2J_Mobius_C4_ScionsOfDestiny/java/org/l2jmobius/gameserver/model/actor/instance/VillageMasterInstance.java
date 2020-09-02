@@ -711,7 +711,7 @@ public class VillageMasterInstance extends FolkInstance
 	 * @param clanName the clan name
 	 * @param leaderName the leader name
 	 * @param pledgeType the pledge type
-	 * @param minClanLvl the min clan lvl
+	 * @param minClanLvl the min clan level
 	 */
 	public void createSubPledge(PlayerInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
 	{

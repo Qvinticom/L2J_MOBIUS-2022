@@ -200,11 +200,11 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			final String[] split = command.split(" ");
 			final int id = Integer.parseInt(split[1]);
-			final int lvl = Integer.parseInt(split[2]);
-			final Skill skill = SkillData.getInstance().getSkill(id, lvl);
+			final int level = Integer.parseInt(split[2]);
+			final Skill skill = SkillData.getInstance().getSkill(id, level);
 			activeChar.addSkill(skill);
 			activeChar.sendSkillList();
-			BuilderUtil.sendSysMessage(activeChar, "You added yourself skill " + skill.getName() + "(" + id + ") level " + lvl);
+			BuilderUtil.sendSysMessage(activeChar, "You added yourself skill " + skill.getName() + "(" + id + ") level " + level);
 		}
 		return true;
 	}

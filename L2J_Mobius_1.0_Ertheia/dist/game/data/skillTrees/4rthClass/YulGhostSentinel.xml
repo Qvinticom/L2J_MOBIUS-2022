@@ -2,261 +2,261 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Yul Ghost Sentinel -->
 	<skillTree type="classSkillTree" classId="164" parentClassId="109">
-		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
-		<skill skillName="Yul Aura" skillId="1933" skillLvl="1" getLevel="85" autoGet="true" />
-		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Crystallize" skillId="248" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLevel="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLevel="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLevel="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
+		<skill skillName="Yul Aura" skillId="1933" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="334" /> <!-- Focus Skill Mastery -->
 			<removeSkill id="312" /> <!-- Vicious Stance -->
 			<removeSkill id="626" /> <!-- Critical Sense -->
 		</skill>
-		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="169" /> <!-- Quick Step -->
 			<removeSkill id="418" /> <!-- Quiver of Holding -->
 		</skill>
-		<skill skillName="Superior Skill Mastery" skillId="10904" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Superior Hawkeye Mastery" skillId="10753" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Skill Mastery" skillId="10904" skillLevel="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Superior Hawkeye Mastery" skillId="10753" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="113" /> <!-- Long Shot -->
 			<removeSkill id="303" /> <!-- Soul of Sagittarius -->
 			<removeSkill id="415" /> <!-- Spirit of Sagittarius -->
 			<removeSkill id="486" /> <!-- Increase Range -->
 		</skill>
-		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="233" /> <!-- Light Armor Mastery -->
 			<removeSkill id="171" /> <!-- Esprit -->
 			<removeSkill id="148" /> <!-- Vital Force -->
 			<removeSkill id="465" /> <!-- Light Armor Mastery -->
 			<removeSkill id="832" /> <!-- Fast Recovery -->
 		</skill>
-		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="208" /> <!-- Bow Mastery -->
 			<removeSkill id="330" /> <!-- Skill Mastery -->
 			<removeSkill id="473" /> <!-- Crossbow Mastery -->
 		</skill>
-		<skill skillName="Superior M. Def." skillId="10799" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior M. Def." skillId="10799" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="466" /> <!-- Magic Immunity -->
 		</skill>
-		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="328" /> <!-- Wisdom -->
 			<removeSkill id="329" /> <!-- Health -->
 		</skill>
-		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="481" /> <!-- Dark Armor -->
 		</skill>
-		<skill skillName="Flash" skillId="10793" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Flash" skillId="10793" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="939" /> <!-- Soul Rage -->
 		</skill>
-		<skill skillName="Lure Shot" skillId="10777" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Lure Shot" skillId="10777" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="511" /> <!-- Temptation -->
 		</skill>
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="19" /> <!-- Double Shot -->
 			<removeSkill id="507" /> <!-- Twin Shot -->
 		</skill>
-		<skill skillName="Gravity Trap" skillId="10792" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Gravity Trap" skillId="10792" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="518" /> <!-- Binding Trap -->
 		</skill>
-		<skill skillName="Flare" skillId="10785" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Flare" skillId="10785" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="933" /> <!-- Detection -->
 		</skill>
-		<skill skillName="Impact Shot" skillId="10769" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Impact Shot" skillId="10769" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="101" /> <!-- Stun Shot -->
 			<removeSkill id="509" /> <!-- Bleeding Shot -->
 		</skill>
-		<skill skillName="Frost Trap" skillId="10791" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Frost Trap" skillId="10791" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="516" /> <!-- Slow Trap -->
 		</skill>
-		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
-		<skill skillName="Final Ultimate Escape" skillId="10776" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
+		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="129" /> <!-- Poison -->
 			<removeSkill id="21" /> <!-- Poison Recovery -->
 			<removeSkill id="61" /> <!-- Cure Bleeding -->
 			<removeSkill id="622" /> <!-- Ultimate Escape -->
 		</skill>
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="354" /> <!-- Hamstring Shot -->
 		</skill>
-		<skill skillName="Quick Fire" skillId="10779" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Quick Fire" skillId="10779" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="99" /> <!-- Rapid Shot -->
 			<removeSkill id="490" /> <!-- Fast Shot -->
 		</skill>
-		<skill skillName="Bullseye" skillId="10801" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Bullseye" skillId="10801" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="122" /> <!-- Hex -->
 			<removeSkill id="522" /> <!-- Real Target -->
 		</skill>
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="990" /> <!-- Death Sting -->
 		</skill>
-		<skill skillName="Quick Evasion" skillId="10774" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Diversion" skillId="10778" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Quick Evasion" skillId="10774" skillLevel="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Diversion" skillId="10778" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="2" /> <!-- Confusion -->
 			<removeSkill id="15" /> <!-- Charm -->
 			<removeSkill id="489" /> <!-- Shift Target -->
 		</skill>
-		<skill skillName="Hawk Eye" skillId="10903" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Hawk Eye" skillId="10903" skillLevel="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="115" /> <!-- Power Break -->
 		</skill>
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="223" /> <!-- Sting -->
 			<removeSkill id="24" /> <!-- Burst Shot -->
 			<removeSkill id="508" /> <!-- Rising Shot -->
 		</skill>
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="105" /> <!-- Freezing Strike -->
 			<removeSkill id="369" /> <!-- Evade Shot -->
 		</skill>
-		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
-		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Create Common Item" skillId="1320" skillLevel="10" getLevel="85" autoGet="true" />
+		<skill skillName="Rapid Fire Stance" skillId="10758" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="131" /> <!-- Hawk Eye -->
 			<removeSkill id="835" /> <!-- Imbue Seed of Destruction -->
 		</skill>
-		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Dead Eye Stance" skillId="10757" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="131" /> <!-- Hawk Eye -->
 			<removeSkill id="524" /> <!-- Cure Dark Seed -->
 		</skill>
-		<skill skillName="Sniper Stance" skillId="10759" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Sniper Stance" skillId="10759" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="131" /> <!-- Hawk Eye -->
 			<removeSkill id="523" /> <!-- Imbue Dark Seed -->
 		</skill>
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="343" /> <!-- Lethal Shot -->
 			<removeSkill id="627" /> <!-- Soul Shock -->
 		</skill>
-		<skill skillName="Mind's Eye" skillId="10783" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Mind's Eye" skillId="10783" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="414" /> <!-- Dead Eye -->
 			<removeSkill id="413" /> <!-- Rapid Fire -->
 			<removeSkill id="313" /> <!-- Snipe -->
 			<removeSkill id="521" /> <!-- Sharpshooting -->
 		</skill>
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="1" getLevel="85" levelUpSp="10000">
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="987" /> <!-- Multiple Shot -->
 		</skill>
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="2" getLevel="86" levelUpSp="50000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="2" getLevel="87" levelUpSp="60000" />
-		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="1" getLevel="87" levelUpSp="60000">
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="2" getLevel="86" levelUpSp="50000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="2" getLevel="86" levelUpSp="50000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="2" getLevel="86" levelUpSp="50000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="2" getLevel="86" levelUpSp="50000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="2" getLevel="86" levelUpSp="50000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="2" getLevel="87" levelUpSp="60000" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLevel="1" getLevel="87" levelUpSp="60000">
 			<removeSkill id="525" /> <!-- Decoy -->
 		</skill>
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="2" getLevel="87" levelUpSp="60000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="2" getLevel="87" levelUpSp="60000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="2" getLevel="87" levelUpSp="60000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Impact Shot" skillId="10769" skillLvl="2" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Bullseye" skillId="10801" skillLvl="2" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="3" getLevel="88" levelUpSp="80000" />
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Quick Charge" skillId="10805" skillLvl="1" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="3" getLevel="89" levelUpSp="100000" />
-		<skill skillName="Superior Skill Mastery" skillId="10904" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Final Ultimate Escape" skillId="10776" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Quick Fire" skillId="10779" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Quick Evasion" skillId="10774" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Hawk Eye" skillId="10903" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="12" getLevel="90" autoGet="true" />
-		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Sniper Stance" skillId="10759" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Mind's Eye" skillId="10783" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Remote Control" skillId="10788" skillLvl="1" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Impact Shot" skillId="10769" skillLvl="3" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Bullseye" skillId="10801" skillLvl="3" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="4" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="4" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="4" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="4" getLevel="91" levelUpSp="400000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="4" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Quick Charge" skillId="10805" skillLvl="2" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="5" getLevel="92" levelUpSp="420000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="5" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="2" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Time Bomb" skillId="10786" skillLvl="1" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="5" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="5" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="5" getLevel="93" levelUpSp="440000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Impact Shot" skillId="10769" skillLvl="4" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Bullseye" skillId="10801" skillLvl="4" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="6" getLevel="94" levelUpSp="480000" />
-		<skill skillName="Superior Skill Mastery" skillId="10904" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Final Ultimate Escape" skillId="10776" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="5" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Quick Charge" skillId="10805" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Quick Fire" skillId="10779" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Phoenix Arrow" skillId="10781" skillLvl="1" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Quick Evasion" skillId="10774" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Hawk Eye" skillId="10903" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="13" getLevel="95" autoGet="true" />
-		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Sniper Stance" skillId="10759" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Mind's Eye" skillId="10783" skillLvl="3" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Time Bomb" skillId="10786" skillLvl="2" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="7" getLevel="96" levelUpSp="4970000" />
-		<skill skillName="Impact Shot" skillId="10769" skillLvl="5" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Camouflage" skillId="10784" skillLvl="1" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Bullseye" skillId="10801" skillLvl="5" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="7" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="7" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="7" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="7" getLevel="97" levelUpSp="4980000" />
-		<skill skillName="Tornado Shot" skillId="10760" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Slow Shot" skillId="10780" skillLvl="6" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Quick Charge" skillId="10805" skillLvl="4" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Bow Strike" skillId="10761" skillLvl="8" getLevel="98" levelUpSp="4990000" />
-		<skill skillName="Superior Skill Mastery" skillId="10904" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Final Ultimate Escape" skillId="10776" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Quick Fire" skillId="10779" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Recoil Shot" skillId="10770" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="3" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Quick Evasion" skillId="10774" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Hawk Eye" skillId="10903" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Time Bomb" skillId="10786" skillLvl="3" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Quick Shot" skillId="10762" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
-		<skill skillName="Mass Bullseye" skillId="10802" skillLvl="1" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Sniper Stance" skillId="10759" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Mind's Eye" skillId="10783" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="2" getLevel="87" levelUpSp="60000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="2" getLevel="87" levelUpSp="60000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="2" getLevel="87" levelUpSp="60000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="3" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLevel="2" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Bullseye" skillId="10801" skillLevel="2" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="3" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="3" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="3" getLevel="88" levelUpSp="80000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="3" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Quick Charge" skillId="10805" skillLevel="1" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="3" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="3" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="3" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="3" getLevel="89" levelUpSp="100000" />
+		<skill skillName="Superior Skill Mastery" skillId="10904" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="4" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Quick Fire" skillId="10779" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Quick Evasion" skillId="10774" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Hawk Eye" skillId="10903" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="4" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Create Item" skillId="172" skillLevel="12" getLevel="90" autoGet="true" />
+		<skill skillName="Rapid Fire Stance" skillId="10758" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Dead Eye Stance" skillId="10757" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Sniper Stance" skillId="10759" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="4" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Mind's Eye" skillId="10783" skillLevel="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="4" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Remote Control" skillId="10788" skillLevel="1" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLevel="3" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Bullseye" skillId="10801" skillLevel="3" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="4" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="4" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="4" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="4" getLevel="91" levelUpSp="400000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="5" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="4" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Quick Charge" skillId="10805" skillLevel="2" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="5" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="5" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="5" getLevel="92" levelUpSp="420000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="5" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLevel="2" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Time Bomb" skillId="10786" skillLevel="1" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="5" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="5" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="5" getLevel="93" levelUpSp="440000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="6" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLevel="4" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Bullseye" skillId="10801" skillLevel="4" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="6" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="6" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="6" getLevel="94" levelUpSp="480000" />
+		<skill skillName="Superior Skill Mastery" skillId="10904" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="5" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Quick Charge" skillId="10805" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Quick Fire" skillId="10779" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Phoenix Arrow" skillId="10781" skillLevel="1" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="6" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Quick Evasion" skillId="10774" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Hawk Eye" skillId="10903" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="6" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="6" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Create Item" skillId="172" skillLevel="13" getLevel="95" autoGet="true" />
+		<skill skillName="Rapid Fire Stance" skillId="10758" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Dead Eye Stance" skillId="10757" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Sniper Stance" skillId="10759" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Mind's Eye" skillId="10783" skillLevel="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="6" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="7" getLevel="96" levelUpSp="4970000" />
+		<skill skillName="Time Bomb" skillId="10786" skillLevel="2" getLevel="96" levelUpSp="4970000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="7" getLevel="96" levelUpSp="4970000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="7" getLevel="96" levelUpSp="4970000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="7" getLevel="96" levelUpSp="4970000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLevel="5" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Camouflage" skillId="10784" skillLevel="1" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Bullseye" skillId="10801" skillLevel="5" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="7" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="7" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="7" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="7" getLevel="97" levelUpSp="4980000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLevel="8" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLevel="6" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Quick Charge" skillId="10805" skillLevel="4" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLevel="8" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLevel="8" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLevel="8" getLevel="98" levelUpSp="4990000" />
+		<skill skillName="Superior Skill Mastery" skillId="10904" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Quick Fire" skillId="10779" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLevel="8" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLevel="3" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Quick Evasion" skillId="10774" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Hawk Eye" skillId="10903" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Time Bomb" skillId="10786" skillLevel="3" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLevel="8" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLevel="8" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Create Item" skillId="172" skillLevel="14" getLevel="99" autoGet="true" />
+		<skill skillName="Mass Bullseye" skillId="10802" skillLevel="1" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Rapid Fire Stance" skillId="10758" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Dead Eye Stance" skillId="10757" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Sniper Stance" skillId="10759" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Mind's Eye" skillId="10783" skillLevel="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLevel="8" getLevel="99" levelUpSp="5000000" />
 
 		<!-- Dual Maximum HP -->
-		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="10000" />
-		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="370000" />
-		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="3" getLevel="95" getDualClassLevel="95" levelUpSp="1000000" />
-		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="4" getLevel="99" getDualClassLevel="99" levelUpSp="5000000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="1" getLevel="85" getDualClassLevel="85" levelUpSp="10000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="2" getLevel="90" getDualClassLevel="90" levelUpSp="370000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="3" getLevel="95" getDualClassLevel="95" levelUpSp="1000000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="4" getLevel="99" getDualClassLevel="99" levelUpSp="5000000" />
 	</skillTree>
 </list>

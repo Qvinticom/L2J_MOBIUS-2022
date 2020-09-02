@@ -48,7 +48,7 @@ public class Q00165_ShilensHunt extends Quest
 	private static final int LESSER_HEALING_POTION = 1060;
 	private static final int DARK_BEZOAR = 1160;
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	private static final int REQUIRED_COUNT = 13;
 	
 	public Q00165_ShilensHunt()
@@ -100,7 +100,7 @@ public class Q00165_ShilensHunt extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
 				break;
 			}
 			case State.STARTED:

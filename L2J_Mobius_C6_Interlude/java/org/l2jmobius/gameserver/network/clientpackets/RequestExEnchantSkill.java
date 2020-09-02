@@ -37,19 +37,19 @@ import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
+ * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkill extends GameClientPacket
 {
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	protected void readImpl()
 	{
 		_skillId = readD();
-		_skillLvl = readD();
+		_skillLevel = readD();
 	}
 	
 	@Override
@@ -73,7 +73,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 			return;
 		}
 		
-		if (player.getSkillLevel(_skillId) >= _skillLvl)
+		if (player.getSkillLevel(_skillId) >= _skillLevel)
 		{
 			return;
 		}
@@ -88,12 +88,12 @@ public class RequestExEnchantSkill extends GameClientPacket
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLevel);
 		int counts = 0;
 		int requiredSp = 10000000;
 		int requiredExp = 100000;
 		byte rate = 0;
-		int baseLvl = 1;
+		int baseLevel = 1;
 		
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		for (EnchantSkillLearn s : skills)
@@ -108,7 +108,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 			requiredSp = s.getSpCost();
 			requiredExp = s.getExp();
 			rate = s.getRate(player);
-			baseLvl = s.getBaseLevel();
+			baseLevel = s.getBaseLevel();
 		}
 		
 		if ((counts == 0) && !Config.ALT_GAME_SKILL_LEARN)
@@ -124,7 +124,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 			final long expAfter = player.getExp() - requiredExp;
 			if ((player.getExp() >= requiredExp) && (expAfter >= ExperienceData.getInstance().getExpForLevel(player.getLevel())))
 			{
-				if (Config.ES_SP_BOOK_NEEDED && ((_skillLvl == 101) || (_skillLvl == 141))) // only first lvl requires book
+				if (Config.ES_SP_BOOK_NEEDED && ((_skillLevel == 101) || (_skillLevel == 141))) // only first level requires book
 				{
 					final int spbId = 6622;
 					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
@@ -173,8 +173,8 @@ public class RequestExEnchantSkill extends GameClientPacket
 		{
 			if (skill.getLevel() > 100)
 			{
-				_skillLvl = baseLvl;
-				player.addSkill(SkillTable.getInstance().getSkill(_skillId, _skillLvl), true);
+				_skillLevel = baseLevel;
+				player.addSkill(SkillTable.getInstance().getSkill(_skillId, _skillLevel), true);
 				player.sendSkillList();
 			}
 			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
@@ -191,7 +191,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 		{
 			if ((sc.getId() == _skillId) && (sc.getType() == ShortCut.TYPE_SKILL))
 			{
-				final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLvl);
+				final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLevel);
 				player.sendPacket(new ShortCutRegister(newsc));
 				player.registerShortCut(newsc);
 			}

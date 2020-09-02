@@ -66,7 +66,7 @@ public class Q00215_TrialOfThePilgrim extends Quest
 	private static final int NAHIR = 27117;
 	private static final int BLACK_WILLOW = 27118;
 	// Misc
-	private static final int MIN_LVL = 35;
+	private static final int MIN_LEVEL = 35;
 	
 	public Q00215_TrialOfThePilgrim()
 	{
@@ -250,7 +250,7 @@ public class Q00215_TrialOfThePilgrim extends Quest
 				{
 					htmltext = "30648-02.html";
 				}
-				else if (player.getLevel() < MIN_LVL)
+				else if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "30648-01.html";
 				}

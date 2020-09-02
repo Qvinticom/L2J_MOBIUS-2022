@@ -81,14 +81,14 @@ public class FishingMonstersData implements IXmlReader
 	
 	/**
 	 * Gets the fishing monster.
-	 * @param lvl the fisherman level
+	 * @param level the fisherman level
 	 * @return a fishing monster given the fisherman level
 	 */
-	public FishingMonster getFishingMonster(int lvl)
+	public FishingMonster getFishingMonster(int level)
 	{
 		for (FishingMonster fishingMonster : _fishingMonstersData.values())
 		{
-			if ((lvl >= fishingMonster.getUserMinLevel()) && (lvl <= fishingMonster.getUserMaxLevel()))
+			if ((level >= fishingMonster.getUserMinLevel()) && (level <= fishingMonster.getUserMaxLevel()))
 			{
 				return fishingMonster;
 			}

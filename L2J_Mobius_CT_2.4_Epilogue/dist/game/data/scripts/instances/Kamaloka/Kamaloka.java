@@ -133,7 +133,7 @@ public class Kamaloka extends AbstractInstance
 	 * First room information, null if room not spawned.<br>
 	 * Skill is casted on the boss when shaman is defeated and mobs respawn stopped<br>
 	 * Default: 5699 (decrease pdef)<br>
-	 * shaman npcId, minions npcId, skillId, skillLvl
+	 * shaman npcId, minions npcId, skillId, skillLevel
 	 */
 	private static final int[][] FIRST_ROOM =
 	{
@@ -235,7 +235,7 @@ public class Kamaloka extends AbstractInstance
 	};
 	
 	/*
-	 * Second room information, null if room not spawned Skill is casted on the boss when all mobs are defeated Default: 5700 (decrease mdef) npcId, skillId, skillLvl
+	 * Second room information, null if room not spawned Skill is casted on the boss when all mobs are defeated Default: 5700 (decrease mdef) npcId, skillId, skillLevel
 	 */
 	private static final int[][] SECOND_ROOM =
 	{
@@ -308,7 +308,7 @@ public class Kamaloka extends AbstractInstance
 	// skill is casted on the boss when miniboss is defeated
 	// npcId, x, y, z, skill id, skill level
 	/*
-	 * Miniboss information, null if miniboss not spawned Skill is casted on the boss when miniboss is defeated Default: 5701 (decrease patk) npcId, x, y, z, skillId, skillLvl
+	 * Miniboss information, null if miniboss not spawned Skill is casted on the boss when miniboss is defeated Default: 5701 (decrease patk) npcId, x, y, z, skillId, skillLevel
 	 */
 	private static final int[][] MINIBOSS =
 	{
@@ -826,10 +826,10 @@ public class Kamaloka extends AbstractInstance
 				if (world.boss != null)
 				{
 					final int skillId = FIRST_ROOM[world.index][2];
-					final int skillLvl = FIRST_ROOM[world.index][3];
-					if ((skillId != 0) && (skillLvl != 0))
+					final int skillLevel = FIRST_ROOM[world.index][3];
+					if ((skillId != 0) && (skillLevel != 0))
 					{
-						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 						if (skill != null)
 						{
 							skill.applyEffects(world.boss, world.boss);
@@ -864,10 +864,10 @@ public class Kamaloka extends AbstractInstance
 					if (world.boss != null)
 					{
 						final int skillId = SECOND_ROOM[world.index][1];
-						final int skillLvl = SECOND_ROOM[world.index][2];
-						if ((skillId != 0) && (skillLvl != 0))
+						final int skillLevel = SECOND_ROOM[world.index][2];
+						if ((skillId != 0) && (skillLevel != 0))
 						{
-							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
+							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 							if (skill != null)
 							{
 								skill.applyEffects(world.boss, world.boss);
@@ -886,10 +886,10 @@ public class Kamaloka extends AbstractInstance
 				if (world.boss != null)
 				{
 					final int skillId = MINIBOSS[world.index][4];
-					final int skillLvl = MINIBOSS[world.index][5];
-					if ((skillId != 0) && (skillLvl != 0))
+					final int skillLevel = MINIBOSS[world.index][5];
+					if ((skillId != 0) && (skillLevel != 0))
 					{
-						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 						if (skill != null)
 						{
 							skill.applyEffects(world.boss, world.boss);

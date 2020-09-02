@@ -59,7 +59,7 @@ public class PartyMatchList extends GameServerPacket
 				continue;
 			}
 			
-			if ((_lim == 0) && ((_player.getLevel() < room.getMinLvl()) || (_player.getLevel() > room.getMaxLvl())))
+			if ((_lim == 0) && ((_player.getLevel() < room.getMinLevel()) || (_player.getLevel() > room.getMaxLevel())))
 			{
 				continue;
 			}
@@ -85,8 +85,8 @@ public class PartyMatchList extends GameServerPacket
 			writeD(_rooms.get(count).getId());
 			writeS(_rooms.get(count).getTitle());
 			writeD(_rooms.get(count).getLocation());
-			writeD(_rooms.get(count).getMinLvl());
-			writeD(_rooms.get(count).getMaxLvl());
+			writeD(_rooms.get(count).getMinLevel());
+			writeD(_rooms.get(count).getMaxLevel());
 			writeD(_rooms.get(count).getMembers());
 			writeD(_rooms.get(count).getMaxMembers());
 			writeS(_rooms.get(count).getOwner().getName());

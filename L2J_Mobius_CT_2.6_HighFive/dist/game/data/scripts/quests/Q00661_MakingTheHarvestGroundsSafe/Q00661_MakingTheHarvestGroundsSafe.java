@@ -47,7 +47,7 @@ public class Q00661_MakingTheHarvestGroundsSafe extends Quest
 		MONSTER_CHANCES.put(21097, new ItemChanceHolder(YOUNG_ARANEID_CLAW, 0.516)); // Young Araneid
 	}
 	// Misc
-	private static final int MIN_LVL = 21;
+	private static final int MIN_LEVEL = 21;
 	
 	public Q00661_MakingTheHarvestGroundsSafe()
 	{
@@ -123,7 +123,7 @@ public class Q00661_MakingTheHarvestGroundsSafe extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (talker.getLevel() >= MIN_LVL) ? "30210-01.htm" : "30210-02.htm";
+				htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30210-01.htm" : "30210-02.htm";
 				break;
 			}
 			case State.STARTED:

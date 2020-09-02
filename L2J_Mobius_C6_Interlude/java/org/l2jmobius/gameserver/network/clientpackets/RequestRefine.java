@@ -62,7 +62,7 @@ public class RequestRefine extends GameClientPacket
 		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null) || (targetItem.getOwnerId() != player.getObjectId()) || (refinerItem.getOwnerId() != player.getObjectId()) || (gemstoneItem.getOwnerId() != player.getObjectId()) || (player.getLevel() < 46)) // must
 																																																																					// be
-																																																																					// lvl
+																																																																					// level
 																																																																					// 46
 		{
 			player.sendPacket(new ExVariationResult(0, 0, 0));

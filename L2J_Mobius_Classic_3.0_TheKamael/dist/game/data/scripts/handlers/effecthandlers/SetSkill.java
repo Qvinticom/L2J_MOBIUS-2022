@@ -30,12 +30,12 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class SetSkill extends AbstractEffect
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	
 	public SetSkill(StatSet params)
 	{
 		_skillId = params.getInt("skillId", 0);
-		_skillLvl = params.getInt("skillLvl", 1);
+		_skillLevel = params.getInt("skillLevel", 1);
 	}
 	
 	@Override
@@ -52,7 +52,7 @@ public class SetSkill extends AbstractEffect
 			return;
 		}
 		
-		final Skill setSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		final Skill setSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		if (setSkill == null)
 		{
 			return;

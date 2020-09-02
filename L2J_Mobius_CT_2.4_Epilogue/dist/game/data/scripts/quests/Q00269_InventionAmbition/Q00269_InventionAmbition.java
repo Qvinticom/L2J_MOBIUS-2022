@@ -48,7 +48,7 @@ public class Q00269_InventionAmbition extends Quest
 		MONSTERS.put(21131, 0.78); // Enchanted Spine Golem
 	}
 	// Misc
-	private static final int MIN_LVL = 18;
+	private static final int MIN_LEVEL = 18;
 	
 	public Q00269_InventionAmbition()
 	{
@@ -73,7 +73,7 @@ public class Q00269_InventionAmbition extends Quest
 		{
 			case "32486-03.htm":
 			{
-				if (player.getLevel() >= MIN_LVL)
+				if (player.getLevel() >= MIN_LEVEL)
 				{
 					htmltext = event;
 				}
@@ -81,7 +81,7 @@ public class Q00269_InventionAmbition extends Quest
 			}
 			case "32486-04.htm":
 			{
-				if (player.getLevel() >= MIN_LVL)
+				if (player.getLevel() >= MIN_LEVEL)
 				{
 					qs.startQuest();
 					htmltext = event;
@@ -121,7 +121,7 @@ public class Q00269_InventionAmbition extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = (player.getLevel() >= MIN_LVL) ? "32486-01.htm" : "32486-02.html";
+			htmltext = (player.getLevel() >= MIN_LEVEL) ? "32486-01.htm" : "32486-02.html";
 		}
 		else if (qs.isStarted())
 		{

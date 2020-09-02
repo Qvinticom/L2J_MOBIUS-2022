@@ -82,8 +82,8 @@ public class PlayerInstanceAction implements IActionHandler
 				// Check if this PlayerInstance is autoAttackable
 				if (target.isAutoAttackable(player))
 				{
-					// Player with lvl < 21 can't attack a cursed weapon holder
-					// And a cursed weapon holder can't attack players with lvl < 21
+					// Player with level < 21 can't attack a cursed weapon holder
+					// And a cursed weapon holder can't attack players with level < 21
 					if ((targetPlayer.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
 						|| (player.isCursedWeaponEquipped() && (targetPlayer.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
 					{

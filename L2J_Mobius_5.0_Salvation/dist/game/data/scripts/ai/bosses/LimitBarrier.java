@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
 /**
  * Limit Barrier AI
  * @author RobikBobik<br>
- *         OK - Raid Bosses lvl 100 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
+ *         OK - Raid Bosses level 100 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
  *         OK - 600 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
  *         OK - If barrier destruction is failed, Boss restores full HP.<br>
  *         OK - Epic Bosses Orfen, Queen Ant and Core also use Limit Barrier.<br>

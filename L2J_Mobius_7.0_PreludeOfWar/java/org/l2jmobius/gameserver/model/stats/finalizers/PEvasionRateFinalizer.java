@@ -39,7 +39,7 @@ public class PEvasionRateFinalizer implements IStatFunction
 		final int level = creature.getLevel();
 		if (creature.isPlayer())
 		{
-			// [Square(DEX)] * 5 + lvl;
+			// [Square(DEX)] * 5 + level;
 			baseValue += (Math.sqrt(creature.getDEX()) * 5) + level;
 			if (level > 69)
 			{
@@ -71,7 +71,7 @@ public class PEvasionRateFinalizer implements IStatFunction
 		}
 		else
 		{
-			// [Square(DEX)] * 5 + lvl;
+			// [Square(DEX)] * 5 + level;
 			baseValue += (Math.sqrt(creature.getDEX()) * 5) + level;
 			if (level > 69)
 			{

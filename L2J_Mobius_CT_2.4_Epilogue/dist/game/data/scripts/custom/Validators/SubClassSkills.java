@@ -120,7 +120,7 @@ public class SubClassSkills extends AbstractNpcAI
 			return null;
 		}
 		
-		final int[][] cSkills = new int[certSkills.size()][2]; // skillId/skillLvl
+		final int[][] cSkills = new int[certSkills.size()][2]; // skillId/skillLevel
 		for (int i = certSkills.size(); --i >= 0;)
 		{
 			final Skill skill = certSkills.get(i);

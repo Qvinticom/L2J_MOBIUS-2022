@@ -46,7 +46,7 @@ public class Q00623_TheFinestFood extends Quest
 	private static final ItemHolder SEALED_SANDDRAGONS_EARING = new ItemHolder(6847, 1);
 	private static final ItemHolder DRAGON_NECKLACE = new ItemHolder(6851, 1);
 	// Misc
-	private static final int MIN_LVL = 71;
+	private static final int MIN_LEVEL = 71;
 	
 	private static final Map<Integer, ItemHolder> MONSTER_DROPS = new HashMap<>();
 	static
@@ -137,7 +137,7 @@ public class Q00623_TheFinestFood extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-02.htm";
+					htmltext = (talker.getLevel() >= MIN_LEVEL) ? "31521-01.htm" : "31521-02.htm";
 				}
 				else if (qs.isStarted())
 				{

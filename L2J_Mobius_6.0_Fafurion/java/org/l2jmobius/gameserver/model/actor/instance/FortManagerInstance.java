@@ -720,8 +720,8 @@ public class FortManagerInstance extends MerchantInstance
 											return;
 										}
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -740,7 +740,7 @@ public class FortManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getFort().updateFunctions(player, Fort.FUNC_TELEPORT, lvl, fee, Config.FS_TELE_FEE_RATIO, (getFort().getFortFunction(Fort.FUNC_TELEPORT) == null)))
+									if (!getFort().updateFunctions(player, Fort.FUNC_TELEPORT, level, fee, Config.FS_TELE_FEE_RATIO, (getFort().getFortFunction(Fort.FUNC_TELEPORT) == null)))
 									{
 										html.setFile(player, "data/html/fortress/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -767,8 +767,8 @@ public class FortManagerInstance extends MerchantInstance
 											return;
 										}
 									}
-									final int lvl = Integer.parseInt(val);
-									switch (lvl)
+									final int level = Integer.parseInt(val);
+									switch (level)
 									{
 										case 0:
 										{
@@ -787,7 +787,7 @@ public class FortManagerInstance extends MerchantInstance
 											break;
 										}
 									}
-									if (!getFort().updateFunctions(player, Fort.FUNC_SUPPORT, lvl, fee, Config.FS_SUPPORT_FEE_RATIO, (getFort().getFortFunction(Fort.FUNC_SUPPORT) == null)))
+									if (!getFort().updateFunctions(player, Fort.FUNC_SUPPORT, level, fee, Config.FS_SUPPORT_FEE_RATIO, (getFort().getFortFunction(Fort.FUNC_SUPPORT) == null)))
 									{
 										html.setFile(player, "data/html/fortress/low_adena.htm");
 										sendHtmlMessage(player, html);
@@ -872,12 +872,12 @@ public class FortManagerInstance extends MerchantInstance
 							return;
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-						int skillLvl = 0;
+						int skillLevel = 0;
 						if (st.countTokens() >= 1)
 						{
-							skillLvl = Integer.parseInt(st.nextToken());
+							skillLevel = Integer.parseInt(st.nextToken());
 						}
-						skill = SkillData.getInstance().getSkill(skillId, skillLvl);
+						skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 						if (skill.hasEffectType(EffectType.SUMMON))
 						{
 							player.doCast(skill);

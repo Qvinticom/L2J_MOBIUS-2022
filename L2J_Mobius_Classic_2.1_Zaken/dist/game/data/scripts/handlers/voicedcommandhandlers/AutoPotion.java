@@ -51,9 +51,9 @@ public class AutoPotion implements IVoicedCommandHandler
 		{
 			return false;
 		}
-		if (activeChar.getLevel() < Config.AUTO_POTION_MIN_LVL)
+		if (activeChar.getLevel() < Config.AUTO_POTION_MIN_LEVEL)
 		{
-			activeChar.sendMessage("You need to be at least " + Config.AUTO_POTION_MIN_LVL + " to use auto potions.");
+			activeChar.sendMessage("You need to be at least " + Config.AUTO_POTION_MIN_LEVEL + " to use auto potions.");
 			return false;
 		}
 		

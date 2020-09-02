@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class EffectDurationHolder
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
 	private final int _duration;
 	
 	/**
@@ -36,7 +36,7 @@ public class EffectDurationHolder
 	public EffectDurationHolder(Skill skill, int duration)
 	{
 		_skillId = skill.getDisplayId();
-		_skillLvl = skill.getDisplayLevel();
+		_skillLevel = skill.getDisplayLevel();
 		_duration = duration;
 	}
 	
@@ -53,9 +53,9 @@ public class EffectDurationHolder
 	 * Get the effect's skill level.
 	 * @return the skill level
 	 */
-	public int getSkillLvl()
+	public int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
 	}
 	
 	/**

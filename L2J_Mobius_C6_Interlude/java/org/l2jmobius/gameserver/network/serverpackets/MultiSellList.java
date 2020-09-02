@@ -67,7 +67,7 @@ public class MultiSellList extends GameServerPacket
 					writeD(ItemTable.getInstance().getTemplate(i.getItemId()).getBodyPart());
 					writeH(ItemTable.getInstance().getTemplate(i.getItemId()).getType2());
 					writeD(i.getItemCount());
-					writeH(i.getEnchantmentLevel()); // enchtant lvl
+					writeH(i.getEnchantmentLevel()); // enchtant level
 					writeD(0x00); // C6
 					writeD(0x00); // C6
 				}

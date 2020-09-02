@@ -601,15 +601,15 @@ public class Config
 	public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
 	public static boolean ALT_ATTACKABLE_NPCS;
 	public static boolean ALT_GAME_VIEWNPC;
-	public static boolean SHOW_NPC_LVL;
+	public static boolean SHOW_NPC_LEVEL;
 	public static boolean SHOW_NPC_AGGRESSION;
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
 	public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
-	public static int MIN_NPC_LVL_DMG_PENALTY;
+	public static int MIN_NPC_LEVEL_DMG_PENALTY;
 	public static float[] NPC_DMG_PENALTY;
 	public static float[] NPC_CRIT_DMG_PENALTY;
 	public static float[] NPC_SKILL_DMG_PENALTY;
-	public static int MIN_NPC_LVL_MAGIC_PENALTY;
+	public static int MIN_NPC_LEVEL_MAGIC_PENALTY;
 	public static float[] NPC_SKILL_CHANCE_PENALTY;
 	public static int DEFAULT_CORPSE_TIME;
 	public static int SPOILED_CORPSE_EXTEND_TIME;
@@ -880,33 +880,33 @@ public class Config
 	public static int TRASKEN_SPAWN_RANDOM;
 	public static int TRASKEN_MIN_PLAYERS;
 	public static int TRASKEN_MAX_PLAYERS;
-	public static int TRASKEN_MIN_PLAYER_LVL;
+	public static int TRASKEN_MIN_PLAYER_LEVEL;
 	
 	// Lindvior
 	public static int LINDVIOR_SPAWN_INTERVAL;
 	public static int LINDVIOR_SPAWN_RANDOM;
 	public static int LINDVIOR_MIN_PLAYERS;
 	public static int LINDVIOR_MAX_PLAYERS;
-	public static int LINDVIOR_MIN_PLAYER_LVL;
+	public static int LINDVIOR_MIN_PLAYER_LEVEL;
 	
 	// Anakim
 	public static int ANAKIM_MIN_PLAYERS;
 	public static int ANAKIM_MAX_PLAYERS;
-	public static int ANAKIM_MIN_PLAYER_LVL;
-	public static int ANAKIM_MAX_PLAYER_LVL;
+	public static int ANAKIM_MIN_PLAYER_LEVEL;
+	public static int ANAKIM_MAX_PLAYER_LEVEL;
 	
 	// Lilith
 	public static int LILITH_MIN_PLAYERS;
 	public static int LILITH_MAX_PLAYERS;
-	public static int LILITH_MIN_PLAYER_LVL;
-	public static int LILITH_MAX_PLAYER_LVL;
+	public static int LILITH_MIN_PLAYER_LEVEL;
+	public static int LILITH_MAX_PLAYER_LEVEL;
 	
 	// Helios
 	public static int HELIOS_WAIT_TIME;
 	public static int HELIOS_SPAWN_INTERVAL;
 	public static int HELIOS_SPAWN_RANDOM;
 	public static int HELIOS_MIN_PLAYER;
-	public static int HELIOS_MIN_PLAYER_LVL;
+	public static int HELIOS_MIN_PLAYER_LEVEL;
 	
 	// Ramona
 	public static int RAMONA_SPAWN_INTERVAL;
@@ -1020,8 +1020,8 @@ public class Config
 	public static int CHAMPION_FREQUENCY;
 	public static String CHAMP_TITLE;
 	public static boolean SHOW_CHAMPION_AURA;
-	public static int CHAMP_MIN_LVL;
-	public static int CHAMP_MAX_LVL;
+	public static int CHAMP_MIN_LEVEL;
+	public static int CHAMP_MAX_LEVEL;
 	public static int CHAMPION_HP;
 	public static float CHAMPION_REWARDS_EXP_SP;
 	public static float CHAMPION_REWARDS_CHANCE;
@@ -1031,8 +1031,8 @@ public class Config
 	public static float CHAMPION_HP_REGEN;
 	public static float CHAMPION_ATK;
 	public static float CHAMPION_SPD_ATK;
-	public static int CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE;
-	public static int CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE;
+	public static int CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE;
+	public static int CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE;
 	public static int CHAMPION_REWARD_ID;
 	public static int CHAMPION_REWARD_QTY;
 	public static boolean CHAMPION_ENABLE_VITALITY;
@@ -1180,7 +1180,7 @@ public class Config
 	public static boolean ALLOW_ERTHEIA;
 	public static boolean AUTO_POTIONS_ENABLED;
 	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
-	public static int AUTO_POTION_MIN_LVL;
+	public static int AUTO_POTION_MIN_LEVEL;
 	public static boolean AUTO_CP_ENABLED;
 	public static boolean AUTO_HP_ENABLED;
 	public static boolean AUTO_MP_ENABLED;
@@ -2088,15 +2088,15 @@ public class Config
 			ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
 			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
 			ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
-			SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
+			SHOW_NPC_LEVEL = NPC.getBoolean("ShowNpcLevel", false);
 			SHOW_NPC_AGGRESSION = NPC.getBoolean("ShowNpcAggression", false);
 			SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
 			ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
-			MIN_NPC_LVL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);
+			MIN_NPC_LEVEL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);
 			NPC_DMG_PENALTY = parseConfigLine(NPC.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
 			NPC_CRIT_DMG_PENALTY = parseConfigLine(NPC.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
 			NPC_SKILL_DMG_PENALTY = parseConfigLine(NPC.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
-			MIN_NPC_LVL_MAGIC_PENALTY = NPC.getInt("MinNPCLevelForMagicPenalty", 78);
+			MIN_NPC_LEVEL_MAGIC_PENALTY = NPC.getInt("MinNPCLevelForMagicPenalty", 78);
 			NPC_SKILL_CHANCE_PENALTY = parseConfigLine(NPC.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
 			DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
 			SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
@@ -2422,27 +2422,27 @@ public class Config
 			KELBIM_MAX_PLAYERS = GrandBossSettings.getInt("KelbimMaxPlayers", 350);
 			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
 			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
-			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
-			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
+			ANAKIM_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
+			ANAKIM_MAX_PLAYER_LEVEL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
 			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
 			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
-			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
-			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
+			LILITH_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
+			LILITH_MAX_PLAYER_LEVEL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
 			TRASKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfTraskenSpawn", 264);
 			TRASKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfTraskenSpawn", 72);
 			TRASKEN_MIN_PLAYERS = GrandBossSettings.getInt("TraskenMinPlayers", 49);
 			TRASKEN_MAX_PLAYERS = GrandBossSettings.getInt("TraskenMaxPlayers", 112);
-			TRASKEN_MIN_PLAYER_LVL = GrandBossSettings.getInt("TraskenMinPlayerLvl", 85);
+			TRASKEN_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("TraskenMinPlayerLvl", 85);
 			LINDVIOR_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLindviorSpawn", 264);
 			LINDVIOR_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLindviorSpawn", 72);
 			LINDVIOR_MIN_PLAYERS = GrandBossSettings.getInt("LindviorMinPlayers", 49);
 			LINDVIOR_MAX_PLAYERS = GrandBossSettings.getInt("LindviorMaxPlayers", 112);
-			LINDVIOR_MIN_PLAYER_LVL = GrandBossSettings.getInt("LindviorMinPlayerLvl", 99);
+			LINDVIOR_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("LindviorMinPlayerLvl", 99);
 			HELIOS_WAIT_TIME = GrandBossSettings.getInt("HeliosWaitTime", 10);
 			HELIOS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfHeliosSpawn", 264);
 			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
 			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
-			HELIOS_MIN_PLAYER_LVL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
+			HELIOS_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
 			RAMONA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfRamonaSpawn", 72);
 			RAMONA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfRamonaSpawn", 48);
 			RAMONA_MIN_PLAYER = GrandBossSettings.getInt("RamonaMinPlayers", 7);
@@ -2494,7 +2494,7 @@ public class Config
 			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
 			AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
 			AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
-			AUTO_POTION_MIN_LVL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
+			AUTO_POTION_MIN_LEVEL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
 			AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
 			AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
 			AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
@@ -2566,8 +2566,8 @@ public class Config
 			CHAMPION_FREQUENCY = ChampionMonster.getInt("ChampionFrequency", 0);
 			CHAMP_TITLE = ChampionMonster.getString("ChampionTitle", "Champion");
 			SHOW_CHAMPION_AURA = ChampionMonster.getBoolean("ChampionAura", true);
-			CHAMP_MIN_LVL = ChampionMonster.getInt("ChampionMinLevel", 20);
-			CHAMP_MAX_LVL = ChampionMonster.getInt("ChampionMaxLevel", 60);
+			CHAMP_MIN_LEVEL = ChampionMonster.getInt("ChampionMinLevel", 20);
+			CHAMP_MAX_LEVEL = ChampionMonster.getInt("ChampionMaxLevel", 60);
 			CHAMPION_HP = ChampionMonster.getInt("ChampionHp", 7);
 			CHAMPION_HP_REGEN = ChampionMonster.getFloat("ChampionHpRegen", 1);
 			CHAMPION_REWARDS_EXP_SP = ChampionMonster.getFloat("ChampionRewardsExpSp", 8);
@@ -2577,8 +2577,8 @@ public class Config
 			CHAMPION_ADENAS_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionAdenasRewardsAmount", 1);
 			CHAMPION_ATK = ChampionMonster.getFloat("ChampionAtk", 1);
 			CHAMPION_SPD_ATK = ChampionMonster.getFloat("ChampionSpdAtk", 1);
-			CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardLowerLvlItemChance", 0);
-			CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
+			CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardLowerLvlItemChance", 0);
+			CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
 			CHAMPION_REWARD_ID = ChampionMonster.getInt("ChampionRewardItemID", 6393);
 			CHAMPION_REWARD_QTY = ChampionMonster.getInt("ChampionRewardItemQty", 1);
 			CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);

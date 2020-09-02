@@ -223,7 +223,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 								if ((item != null) && (item.getObjectId() == st.getInt("summonOid")))
 								{
 									st.takeItems(i, 1);
-									st.giveItems(i + 922, 1, item.getEnchantLevel()); // TODO rebuild entirely pet system in order enchant is given a fuck. Supposed to give an item lvl XX for a flute level XX.
+									st.giveItems(i + 922, 1, item.getEnchantLevel()); // TODO rebuild entirely pet system in order enchant is given a fuck. Supposed to give an item level XX for a flute level XX.
 									st.playSound(QuestState.SOUND_FINISH);
 									st.exitQuest(true);
 									return "30747-16.htm";

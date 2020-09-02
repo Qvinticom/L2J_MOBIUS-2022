@@ -48,7 +48,7 @@ public class Q00106_ForgottenTruth extends Quest
 	private static final int ANCIENT_CLAY_TABLET = 987;
 	private static final int KARTAS_TRANSLATION = 988;
 	// Misc
-	private static final int MIN_LVL = 10;
+	private static final int MIN_LEVEL = 10;
 	// Rewards
 	private static final int ELDRITCH_DAGGER = 989;
 	private static final int ELDRITCH_STAFF = 2373;
@@ -137,7 +137,7 @@ public class Q00106_ForgottenTruth extends Quest
 					{
 						if (talker.getRace() == Race.DARK_ELF)
 						{
-							htmltext = talker.getLevel() >= MIN_LVL ? "30358-03.htm" : "30358-02.htm";
+							htmltext = talker.getLevel() >= MIN_LEVEL ? "30358-03.htm" : "30358-02.htm";
 						}
 						else
 						{

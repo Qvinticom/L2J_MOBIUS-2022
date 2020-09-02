@@ -1546,7 +1546,7 @@ public class Attackable extends Npc
 			}
 		}
 		
-		// hi-lvl mobs bonus
+		// hi-level mobs bonus
 		final int diff = getLevel() - _seed.getLevel() - 5;
 		if (diff > 0)
 		{

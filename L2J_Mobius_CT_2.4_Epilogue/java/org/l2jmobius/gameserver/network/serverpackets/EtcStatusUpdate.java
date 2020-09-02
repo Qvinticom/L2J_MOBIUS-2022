@@ -37,14 +37,14 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ETC_STATUS_UPDATE.writeId(packet);
-		packet.writeD(_player.getCharges()); // 1-7 increase force, lvl
-		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		packet.writeD(_player.getCharges()); // 1-7 increase force, level
+		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, level (1=50%, 2=66.6%, 3=80%, 4=100%)
 		packet.writeD((_player.getMessageRefusal() || _player.isChatBanned() || _player.isSilenceMode()) ? 1 : 0); // 1 = block all chat
 		packet.writeD(_player.isInsideZone(ZoneId.DANGER_AREA) ? 1 : 0); // 1 = danger area
 		packet.writeD(_player.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
 		packet.writeD(_player.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
 		packet.writeD(_player.hasCharmOfCourage() ? 1 : 0); // 1 = charm of courage (allows resurrection on the same spot upon death on the siege battlefield)
-		packet.writeD(_player.getDeathPenaltyBuffLevel()); // 1-15 death penalty, lvl (combat ability decreased due to death)
+		packet.writeD(_player.getDeathPenaltyBuffLevel()); // 1-15 death penalty, level (combat ability decreased due to death)
 		packet.writeD(_player.getChargedSouls());
 		return true;
 	}

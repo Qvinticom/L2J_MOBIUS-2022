@@ -56,8 +56,8 @@ public class Q11008_PreparationForDungeon extends Quest
 	private static final int CRIMSON_SPIDER = 20460;
 	private static final int PINCER_SPIDER = 20466;
 	// Misc
-	private static final int MIN_LVL = 11;
-	private static final int MAX_LVL = 20;
+	private static final int MIN_LEVEL = 11;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q11008_PreparationForDungeon()
 	{
@@ -65,7 +65,7 @@ public class Q11008_PreparationForDungeon extends Quest
 		addStartNpc(KENDELL);
 		addTalkId(KENDELL, STARDEN);
 		addKillId(KABOO_ORC_WARRIOR, KABOO_ORC_WARRIOR_CAPTAIN, KABOO_ORC_WARRIOR_LIEUTENANT, DRYAD, DRYAD_ELDER, HOOK_SPIDER, CRIMSON_SPIDER, PINCER_SPIDER);
-		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ELF, "no-race.html"); // Custom
 		registerQuestItems(NOTE_ABOUT_REQUIRED_INGREDIENTS, ORCS_BANDAGE, DRYADS_CRIMSON_HERB, SPIDER_VENOM);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_PREPARATION_FOR_DUNGEON);

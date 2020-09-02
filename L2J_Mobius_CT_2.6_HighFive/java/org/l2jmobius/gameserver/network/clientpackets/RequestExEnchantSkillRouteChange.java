@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
- * Format (ch) dd c: (id) 0xD0 h: (subid) 0x34 d: skill id d: skill lvl
+ * Format (ch) dd c: (id) 0xD0 h: (subid) 0x34 d: skill id d: skill level
  * @author -Wooden-
  */
 public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
@@ -48,20 +48,20 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	
 	private int _skillId;
-	private int _skillLvl;
+	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_skillLevel = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLvl <= 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
@@ -90,7 +90,7 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			return;
 		}
 		
-		Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 		if (skill == null)
 		{
 			return;
@@ -112,16 +112,16 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 		
 		final int currentEnchantLevel = beforeEnchantSkillLevel % 100;
 		// is the requested level valid?
-		if (currentEnchantLevel != (_skillLvl % 100))
+		if (currentEnchantLevel != (_skillLevel % 100))
 		{
 			return;
 		}
-		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLevel);
 		final int requiredSp = esd.getSpCost();
 		final int requireditems = esd.getAdenaCost();
 		if (player.getSp() >= requiredSp)
 		{
-			// only first lvl requires book
+			// only first level requires book
 			final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 			// does not have spellbook
 			if (Config.ES_SP_BOOK_NEEDED && (spb == null))
@@ -151,13 +151,13 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			}
 			
 			final int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
-			_skillLvl -= levelPenalty;
-			if ((_skillLvl % 100) == 0)
+			_skillLevel -= levelPenalty;
+			if ((_skillLevel % 100) == 0)
 			{
-				_skillLvl = s.getBaseLevel();
+				_skillLevel = s.getBaseLevel();
 			}
 			
-			skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+			skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 			if (skill != null)
 			{
 				if (Config.LOG_SKILL_ENCHANTS)

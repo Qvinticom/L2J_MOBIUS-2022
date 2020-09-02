@@ -93,14 +93,14 @@ public class SkillTreeTable
 					final int id = skilltree.getInt("skill_id");
 					final int lvl = skilltree.getInt("level");
 					final String name = skilltree.getString("name");
-					final int minLvl = skilltree.getInt("min_level");
+					final int minLevel = skilltree.getInt("min_level");
 					final int cost = skilltree.getInt("sp");
 					if (prevSkillId != id)
 					{
 						prevSkillId = id;
 					}
 					
-					map.put(SkillTable.getSkillHashCode(id, lvl), new SkillLearn(id, lvl, minLvl, name, cost, 0, 0));
+					map.put(SkillTable.getSkillHashCode(id, lvl), new SkillLearn(id, lvl, minLevel, name, cost, 0, 0));
 				}
 				
 				_skillTrees.put(classId, map);
@@ -129,7 +129,7 @@ public class SkillTreeTable
 				final int id = skilltree.getInt("skill_id");
 				final int lvl = skilltree.getInt("level");
 				final String name = skilltree.getString("name");
-				final int minLvl = skilltree.getInt("min_level");
+				final int minLevel = skilltree.getInt("min_level");
 				final int cost = skilltree.getInt("sp");
 				final int costId = skilltree.getInt("costid");
 				final int costCount = skilltree.getInt("cost");
@@ -139,7 +139,7 @@ public class SkillTreeTable
 					prevSkillId = id;
 				}
 				
-				final SkillLearn skill = new SkillLearn(id, lvl, minLvl, name, cost, costId, costCount);
+				final SkillLearn skill = new SkillLearn(id, lvl, minLevel, name, cost, costId, costCount);
 				if (isDwarven == 0)
 				{
 					_fishingSkillTrees.add(skill);
@@ -169,8 +169,8 @@ public class SkillTreeTable
 				final int id = skilltree.getInt("skill_id");
 				final int lvl = skilltree.getInt("level");
 				final String name = skilltree.getString("name");
-				final int baseLvl = skilltree.getInt("base_lvl");
-				final int minSkillLvl = skilltree.getInt("min_skill_lvl");
+				final int baseLevel = skilltree.getInt("base_lvl");
+				final int minskillLevel = skilltree.getInt("min_skill_lvl");
 				final int sp = skilltree.getInt("sp");
 				final int exp = skilltree.getInt("exp");
 				final byte rate76 = skilltree.getByte("success_rate76");
@@ -183,7 +183,7 @@ public class SkillTreeTable
 					prevSkillId = id;
 				}
 				
-				_enchantSkillTrees.add(new EnchantSkillLearn(id, lvl, minSkillLvl, baseLvl, name, sp, exp, rate76, rate77, rate78, rate79, rate80));
+				_enchantSkillTrees.add(new EnchantSkillLearn(id, lvl, minskillLevel, baseLevel, name, sp, exp, rate76, rate77, rate78, rate79, rate80));
 			}
 			
 			skilltree.close();
@@ -205,7 +205,7 @@ public class SkillTreeTable
 				final int id = skilltree.getInt("skill_id");
 				final int lvl = skilltree.getInt("level");
 				final String name = skilltree.getString("name");
-				final int baseLvl = skilltree.getInt("clan_lvl");
+				final int baseLevel = skilltree.getInt("clan_lvl");
 				final int sp = skilltree.getInt("repCost");
 				final int itemId = skilltree.getInt("itemId");
 				if (prevSkillId != id)
@@ -213,7 +213,7 @@ public class SkillTreeTable
 					prevSkillId = id;
 				}
 				
-				_pledgeSkillTrees.add(new PledgeSkillLearn(id, lvl, baseLvl, name, sp, itemId));
+				_pledgeSkillTrees.add(new PledgeSkillLearn(id, lvl, baseLevel, name, sp, itemId));
 			}
 			
 			skilltree.close();
@@ -257,13 +257,13 @@ public class SkillTreeTable
 	 * Each class receives new skill on certain levels, this methods allow the retrieval of the minimum character level of given class required to learn a given skill
 	 * @param skillId The iD of the skill
 	 * @param classId The classId of the character
-	 * @param skillLvl The SkillLvl
+	 * @param skillLevel The skillLevel
 	 * @return The min level
 	 */
-	public int getMinSkillLevel(int skillId, ClassId classId, int skillLvl)
+	public int getMinSkillLevel(int skillId, ClassId classId, int skillLevel)
 	{
 		final Map<Integer, SkillLearn> map = _skillTrees.get(classId);
-		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLvl);
+		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLevel);
 		if (map.containsKey(skillHashCode))
 		{
 			return map.get(skillHashCode).getMinLevel();
@@ -271,9 +271,9 @@ public class SkillTreeTable
 		return 0;
 	}
 	
-	public int getMinSkillLevel(int skillId, int skillLvl)
+	public int getMinSkillLevel(int skillId, int skillLevel)
 	{
-		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLvl);
+		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLevel);
 		
 		// Look on all classes for this skill (takes the first one found)
 		for (Map<Integer, SkillLearn> map : _skillTrees.values())

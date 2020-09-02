@@ -57,7 +57,7 @@ public class ListPartyWating implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			if ((_lim == 0) && ((_player.getLevel() < room.getMinLvl()) || (_player.getLevel() > room.getMaxLvl())))
+			if ((_lim == 0) && ((_player.getLevel() < room.getMinLevel()) || (_player.getLevel() > room.getMaxLevel())))
 			{
 				continue;
 			}
@@ -80,8 +80,8 @@ public class ListPartyWating implements IClientOutgoingPacket
 			packet.writeD(room.getId());
 			packet.writeS(room.getTitle());
 			packet.writeD(room.getLocation());
-			packet.writeD(room.getMinLvl());
-			packet.writeD(room.getMaxLvl());
+			packet.writeD(room.getMinLevel());
+			packet.writeD(room.getMaxLevel());
 			packet.writeD(room.getMaxMembers());
 			packet.writeS(room.getOwner().getName());
 			packet.writeD(room.getMembers());

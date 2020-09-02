@@ -53,7 +53,7 @@ public class SkillCoolTime implements IClientOutgoingPacket
 		for (TimeStamp ts : _skillReuseTimeStamps)
 		{
 			packet.writeD(ts.getSkillId());
-			packet.writeD(ts.getSkillLvl());
+			packet.writeD(ts.getSkillLevel());
 			packet.writeD((int) ts.getReuse() / 1000);
 			packet.writeD((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
 		}

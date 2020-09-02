@@ -36,7 +36,7 @@ public class Q00167_DwarvenKinship extends Quest
 	private static final int CARLONS_LETTER = 1076;
 	private static final int NORMANS_LETTER = 1106;
 	// Misc
-	private static final int MIN_LVL = 15;
+	private static final int MIN_LEVEL = 15;
 	
 	public Q00167_DwarvenKinship()
 	{
@@ -117,7 +117,7 @@ public class Q00167_DwarvenKinship extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "30350-02.htm" : "30350-01.htm";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30350-02.htm" : "30350-01.htm";
 						break;
 					}
 					case State.STARTED:

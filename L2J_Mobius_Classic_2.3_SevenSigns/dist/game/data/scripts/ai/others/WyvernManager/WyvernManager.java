@@ -44,7 +44,7 @@ public class WyvernManager extends AbstractNpcAI
 	private static final int CRYSTAL_B_GRADE = 1460;
 	private static final int WYVERN = 12621;
 	private static final int WYVERN_FEE = 25;
-	private static final int STRIDER_LVL = 55;
+	private static final int STRIDER_LEVEL = 55;
 	private static final int[] STRIDERS =
 	{
 		12526,
@@ -82,7 +82,7 @@ public class WyvernManager extends AbstractNpcAI
 	
 	private String mountWyvern(Npc npc, PlayerInstance player)
 	{
-		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
+		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LEVEL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
 		{
 			if (isOwnerClan(npc, player) && (getQuestItemsCount(player, CRYSTAL_B_GRADE) >= WYVERN_FEE))
 			{
@@ -181,7 +181,7 @@ public class WyvernManager extends AbstractNpcAI
 	
 	private String replacePart(PlayerInstance player, String htmlFile)
 	{
-		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
+		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LEVEL));
 	}
 	
 	@Override

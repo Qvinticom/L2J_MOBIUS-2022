@@ -82,11 +82,11 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 				{
 					htmltext = getHtm(player, "Karma.html");
 				}
-				else if ((playerLevel < Config.TVT_EVENT_MIN_LVL) || (playerLevel > Config.TVT_EVENT_MAX_LVL))
+				else if ((playerLevel < Config.TVT_EVENT_MIN_LEVEL) || (playerLevel > Config.TVT_EVENT_MAX_LEVEL))
 				{
 					htmltext = getHtm(player, "Level.html");
-					htmltext = htmltext.replace("%min%", String.valueOf(Config.TVT_EVENT_MIN_LVL));
-					htmltext = htmltext.replace("%max%", String.valueOf(Config.TVT_EVENT_MAX_LVL));
+					htmltext = htmltext.replace("%min%", String.valueOf(Config.TVT_EVENT_MIN_LEVEL));
+					htmltext = htmltext.replace("%max%", String.valueOf(Config.TVT_EVENT_MAX_LEVEL));
 				}
 				else if ((team1Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS) && (team2Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS))
 				{

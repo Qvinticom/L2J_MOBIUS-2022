@@ -74,7 +74,7 @@ public class Q00638_SeekersOfTheHolyGrail extends Quest
 	private static final int CHAPEL_KEY = 8274;
 	private static final int KEY_OF_DARKNESS = 8275;
 	// Misc
-	private static final int MIN_LVL = 73;
+	private static final int MIN_LEVEL = 73;
 	private static final int TOTEMS_REQUIRED_COUNT = 2000;
 	// Rewards
 	private static final int SCROLL_ENCHANT_W_S = 959;
@@ -231,7 +231,7 @@ public class Q00638_SeekersOfTheHolyGrail extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = ((player.getLevel() >= MIN_LVL) ? "31328-01.htm" : "31328-02.htm");
+			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31328-01.htm" : "31328-02.htm");
 		}
 		else if (qs.isStarted())
 		{

@@ -110,7 +110,7 @@ public class MatchingRoomManager
 			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
 			{
 				if (((location < 0) || (room.getLocation() == location)) //
-					&& ((type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel))))
+					&& ((type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLevel() >= requestorLevel) && (room.getMaxLevel() <= requestorLevel))))
 				{
 					result.add(room);
 				}
@@ -132,7 +132,7 @@ public class MatchingRoomManager
 			for (MatchingRoom room : _rooms.get(MatchingRoomType.COMMAND_CHANNEL).values())
 			{
 				if ((room.getLocation() == location) //
-					&& ((room.getMinLvl() <= level) && (room.getMaxLvl() >= level)))
+					&& ((room.getMinLevel() <= level) && (room.getMaxLevel() >= level)))
 				{
 					result.add(room);
 				}
@@ -153,7 +153,7 @@ public class MatchingRoomManager
 			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
 			{
 				if ((room.getLocation() == location) //
-					&& ((room.getMinLvl() <= level) && (room.getMaxLvl() >= level)))
+					&& ((room.getMinLevel() <= level) && (room.getMaxLevel() >= level)))
 				{
 					return room;
 				}

@@ -216,7 +216,7 @@ public class PlayerStat extends PlayableStat
 		
 		if (getActiveChar().isInFunEvent())
 		{
-			if (getActiveChar()._inEventTvT && (TvT.getMaxlvl() == getLevel()) && !TvT.isStarted())
+			if (getActiveChar()._inEventTvT && (TvT.getMaxLevel() == getLevel()) && !TvT.isStarted())
 			{
 				TvT.removePlayer(getActiveChar());
 			}

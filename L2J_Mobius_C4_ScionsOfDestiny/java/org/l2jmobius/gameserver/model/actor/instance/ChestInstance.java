@@ -190,16 +190,16 @@ public class ChestInstance extends MonsterInstance
 	private boolean handleCast(Creature creature, int skillId)
 	{
 		int skillLevel = 1;
-		final byte lvl = getTemplate().getLevel();
-		if ((lvl > 20) && (lvl <= 40))
+		final byte level = getTemplate().getLevel();
+		if ((level > 20) && (level <= 40))
 		{
 			skillLevel = 3;
 		}
-		else if ((lvl > 40) && (lvl <= 60))
+		else if ((level > 40) && (level <= 60))
 		{
 			skillLevel = 5;
 		}
-		else if (lvl > 60)
+		else if (level > 60)
 		{
 			skillLevel = 6;
 		}

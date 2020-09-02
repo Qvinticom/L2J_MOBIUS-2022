@@ -39,7 +39,7 @@ public class MEvasionRateFinalizer implements IStatFunction
 		final int level = creature.getLevel();
 		if (creature.isPlayer())
 		{
-			// [Square(WIT)] * 3 + lvl;
+			// [Square(WIT)] * 3 + level;
 			baseValue += (Math.sqrt(creature.getWIT()) * 3) + (level * 2);
 			
 			// Enchanted helm bonus
@@ -47,7 +47,7 @@ public class MEvasionRateFinalizer implements IStatFunction
 		}
 		else
 		{
-			// [Square(DEX)] * 6 + lvl;
+			// [Square(DEX)] * 6 + level;
 			baseValue += (Math.sqrt(creature.getWIT()) * 3) + (level * 2);
 			if (level > 69)
 			{

@@ -205,18 +205,18 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			final String[] split = command.split(" ");
 			final int id = Integer.parseInt(split[1]);
-			final int lvl = Integer.parseInt(split[2]);
-			final Skill skill = SkillData.getInstance().getSkill(id, lvl);
+			final int level = Integer.parseInt(split[2]);
+			final Skill skill = SkillData.getInstance().getSkill(id, level);
 			if (skill != null)
 			{
 				activeChar.addSkill(skill);
 				activeChar.sendSkillList();
-				BuilderUtil.sendSysMessage(activeChar, "You added yourself skill " + skill.getName() + "(" + id + ") level " + lvl);
+				BuilderUtil.sendSysMessage(activeChar, "You added yourself skill " + skill.getName() + "(" + id + ") level " + level);
 				activeChar.sendPacket(new AcquireSkillList(activeChar));
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "No such skill found. Id: " + id + " Level: " + lvl);
+				BuilderUtil.sendSysMessage(activeChar, "No such skill found. Id: " + id + " Level: " + level);
 			}
 		}
 		else if (command.startsWith("admin_cast"))
@@ -237,7 +237,7 @@ public class AdminSkill implements IAdminCommandHandler
 				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
+					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", level: " + skillLevel + " not found.");
 					return false;
 				}
 				

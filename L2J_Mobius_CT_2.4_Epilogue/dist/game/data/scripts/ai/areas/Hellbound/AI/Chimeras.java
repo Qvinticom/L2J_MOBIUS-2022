@@ -69,7 +69,7 @@ public class Chimeras extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		if (HellboundEngine.getInstance().getLevel() == 7) // Have random spawn points only in 7 lvl
+		if (HellboundEngine.getInstance().getLevel() == 7) // Have random spawn points only in 7 level
 		{
 			final Location loc = LOCATIONS[getRandom(LOCATIONS.length)];
 			if (!npc.isInsideRadius2D(loc, 200))

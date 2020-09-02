@@ -120,7 +120,7 @@ public class AugmentationData
 							int skillId = 0;
 							final int augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 							String type = "blue";
-							int skillLvL = 0;
+							int skillLevel = 0;
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{
 								if ("skillId".equalsIgnoreCase(cd.getNodeName()))
@@ -131,7 +131,7 @@ public class AugmentationData
 								else if ("skillLevel".equalsIgnoreCase(cd.getNodeName()))
 								{
 									attrs = cd.getAttributes();
-									skillLvL = Integer.parseInt(attrs.getNamedItem("val").getNodeValue());
+									skillLevel = Integer.parseInt(attrs.getNamedItem("val").getNodeValue());
 								}
 								else if ("type".equalsIgnoreCase(cd.getNodeName()))
 								{
@@ -145,7 +145,7 @@ public class AugmentationData
 								badAugmantData++;
 								continue;
 							}
-							if (skillLvL == 0)
+							if (skillLevel == 0)
 							{
 								badAugmantData++;
 								continue;
@@ -159,15 +159,15 @@ public class AugmentationData
 							
 							if (type.equalsIgnoreCase("blue"))
 							{
-								_blueSkills.get(k).add(new augmentationSkill(skillId, skillLvL, augmentationId));
+								_blueSkills.get(k).add(new augmentationSkill(skillId, skillLevel, augmentationId));
 							}
 							else if (type.equalsIgnoreCase("purple"))
 							{
-								_purpleSkills.get(k).add(new augmentationSkill(skillId, skillLvL, augmentationId));
+								_purpleSkills.get(k).add(new augmentationSkill(skillId, skillLevel, augmentationId));
 							}
 							else
 							{
-								_redSkills.get(k).add(new augmentationSkill(skillId, skillLvL, augmentationId));
+								_redSkills.get(k).add(new augmentationSkill(skillId, skillLevel, augmentationId));
 							}
 						}
 					}

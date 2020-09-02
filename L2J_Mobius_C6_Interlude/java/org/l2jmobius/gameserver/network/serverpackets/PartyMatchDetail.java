@@ -39,8 +39,8 @@ public class PartyMatchDetail extends GameServerPacket
 		writeC(0x97);
 		writeD(_room.getId()); // Room ID
 		writeD(_room.getMaxMembers()); // Max Members
-		writeD(_room.getMinLvl()); // Level Min
-		writeD(_room.getMaxLvl()); // Level Max
+		writeD(_room.getMinLevel()); // Level Min
+		writeD(_room.getMaxLevel()); // Level Max
 		writeD(_room.getLootType()); // Loot Type
 		writeD(_room.getLocation()); // Room Location
 		writeS(_room.getTitle()); // Room title

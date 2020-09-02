@@ -44,7 +44,7 @@ public class Q00264_KeenClaws extends Quest
 	// Rewards
 	private static final Map<Integer, List<ItemHolder>> REWARDS = new HashMap<>();
 	// Misc
-	private static final int MIN_LVL = 3;
+	private static final int MIN_LEVEL = 3;
 	private static final int WOLF_CLAW_COUNT = 50;
 	static
 	{
@@ -108,7 +108,7 @@ public class Q00264_KeenClaws extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30136-02.htm" : "30136-01.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30136-02.htm" : "30136-01.htm";
 				break;
 			}
 			case State.STARTED:

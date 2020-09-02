@@ -37,7 +37,7 @@ public class Q00360_PlunderTheirSupplies extends Quest
 	// Npc
 	private static final int COLEMAN = 30873;
 	// Misc
-	private static final int MIN_LVL = 52;
+	private static final int MIN_LEVEL = 52;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
 	// Item
@@ -118,7 +118,7 @@ public class Q00360_PlunderTheirSupplies extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30873-02.htm" : "30873-01.html";
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30873-02.htm" : "30873-01.html";
 				break;
 			}
 			case State.STARTED:

@@ -44,7 +44,7 @@ public class Q00291_RevengeOfTheRedbonnet extends Quest
 	private static final int GRANDMAS_NECKLACE = 1504;
 	private static final int GRANDMAS_HAIRPIN = 1505;
 	// Misc
-	private static final int MIN_LVL = 4;
+	private static final int MIN_LEVEL = 4;
 	
 	public Q00291_RevengeOfTheRedbonnet()
 	{
@@ -85,7 +85,7 @@ public class Q00291_RevengeOfTheRedbonnet extends Quest
 		String html = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			html = ((player.getLevel() >= MIN_LVL) ? "30553-02.htm" : "30553-01.htm");
+			html = ((player.getLevel() >= MIN_LEVEL) ? "30553-02.htm" : "30553-01.htm");
 		}
 		else if (qs.isStarted())
 		{

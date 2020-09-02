@@ -49,7 +49,7 @@ public class Q00298_LizardmensConspiracy extends Quest
 		MONSTERS.put(20927, new ItemChanceHolder(SHINING_RED_GEM, 0.64, 1)); // King Araneid
 	}
 	// Misc
-	private static final int MIN_LVL = 25;
+	private static final int MIN_LEVEL = 25;
 	
 	public Q00298_LizardmensConspiracy()
 	{
@@ -134,7 +134,7 @@ public class Q00298_LizardmensConspiracy extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated() && (npc.getId() == GUARD_PRAGA))
 		{
-			htmltext = (talker.getLevel() >= MIN_LVL) ? "30333-01.htm" : "30333-02.htm";
+			htmltext = (talker.getLevel() >= MIN_LEVEL) ? "30333-01.htm" : "30333-02.htm";
 		}
 		else if (qs.isStarted())
 		{
