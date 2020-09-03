@@ -55,7 +55,6 @@ public class ProtectorInstance extends NpcInstance
 			{
 				if (((player.getKarma() > 0) && Config.PROTECTOR_PLAYER_PK) || ((player.getPvpFlag() != 0) && Config.PROTECTOR_PLAYER_PVP))
 				{
-					LOGGER.warning("player: " + player);
 					handleCast(player, Config.PROTECTOR_SKILLID, Config.PROTECTOR_SKILLLEVEL);
 				}
 				final Summon activePet = player.getPet();
@@ -66,7 +65,6 @@ public class ProtectorInstance extends NpcInstance
 				
 				if (((activePet.getKarma() > 0) && Config.PROTECTOR_PLAYER_PK) || ((activePet.getPvpFlag() != 0) && Config.PROTECTOR_PLAYER_PVP))
 				{
-					LOGGER.warning("activePet: " + activePet);
 					handleCastonPet(activePet, Config.PROTECTOR_SKILLID, Config.PROTECTOR_SKILLLEVEL);
 				}
 			}
