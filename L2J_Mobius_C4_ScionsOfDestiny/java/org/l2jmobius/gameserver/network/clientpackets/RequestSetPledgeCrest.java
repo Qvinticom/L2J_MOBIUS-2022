@@ -93,6 +93,18 @@ public class RequestSetPledgeCrest extends GameClientPacket
 				member.broadcastUserInfo();
 			}
 			
+			try (Connection con = DatabaseFactory.getConnection())
+			{
+				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
+				statement.setInt(1, 0);
+				statement.setInt(2, clan.getClanId());
+				statement.executeUpdate();
+				statement.close();
+			}
+			catch (SQLException e)
+			{
+				LOGGER.warning("Could not update the crest id: " + e.getMessage());
+			}
 			return;
 		}
 		
@@ -127,7 +139,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 			}
 			catch (SQLException e)
 			{
-				LOGGER.warning("could not update the crest id:" + e.getMessage());
+				LOGGER.warning("Could not update the crest id: " + e.getMessage());
 			}
 			
 			clan.setCrestId(newId);
