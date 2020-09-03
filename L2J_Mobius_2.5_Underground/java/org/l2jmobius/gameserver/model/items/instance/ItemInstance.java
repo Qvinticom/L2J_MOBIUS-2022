@@ -926,10 +926,13 @@ public class ItemInstance extends WorldObject
 		{
 			return;
 		}
+		
 		clearEnchantStats();
 		_enchantLevel = enchantLevel;
 		applyEnchantStats();
 		_storedInDb = false;
+		
+		getActingPlayer().getInventory().getPaperdollCache().clearMaxSetEnchant();
 	}
 	
 	/**

@@ -84,13 +84,12 @@ public final class PaperdollCache
 	
 	public int getMaxSetEnchant(PlayerInstance player)
 	{
-		int maxSetEnchant = _maxSetEnchant;
-		if (maxSetEnchant >= 0)
+		if (_maxSetEnchant >= 0)
 		{
-			return maxSetEnchant;
+			return _maxSetEnchant;
 		}
 		
-		maxSetEnchant = 0;
+		int maxSetEnchant = 0;
 		for (ItemInstance item : _paperdollItems)
 		{
 			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))

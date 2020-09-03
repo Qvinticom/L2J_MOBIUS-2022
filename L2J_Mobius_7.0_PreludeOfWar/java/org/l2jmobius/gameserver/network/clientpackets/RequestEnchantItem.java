@@ -257,7 +257,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								}
 							});
 						}
-						player.getInventory().getPaperdollCache().clearMaxSetEnchant();
 						player.broadcastUserInfo(); // update user info
 					}
 					break;

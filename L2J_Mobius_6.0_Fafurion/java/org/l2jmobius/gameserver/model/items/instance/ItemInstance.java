@@ -934,6 +934,8 @@ public class ItemInstance extends WorldObject
 		applyEnchantStats();
 		_storedInDb = false;
 		
+		getActingPlayer().getInventory().getPaperdollCache().clearMaxSetEnchant();
+		
 		// Notify to Scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnItemEnchantAdd(getActingPlayer(), this));
 	}
