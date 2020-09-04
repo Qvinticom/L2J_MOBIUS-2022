@@ -300,6 +300,10 @@ public class World
 			for (int i = 0; i < visibleObjects.size(); i++)
 			{
 				final WorldObject wo = visibleObjects.get(i);
+				if (wo == null)
+				{
+					continue;
+				}
 				
 				// Add the object in WorldObjectHashSet(WorldObject) _knownObjects of the visible Creature according to conditions :
 				// - Creature is visible
@@ -332,6 +336,10 @@ public class World
 		for (int i = 0; i < visibleObjects.size(); i++)
 		{
 			final WorldObject wo = visibleObjects.get(i);
+			if (wo == null)
+			{
+				continue;
+			}
 			
 			// Add the object in WorldObjectHashSet(WorldObject) _knownObjects of the visible Creature according to conditions :
 			// - Creature is visible
@@ -413,11 +421,15 @@ public class World
 			for (int j = 0; j < visibleObjects.size(); j++)
 			{
 				final WorldObject wo = visibleObjects.get(j);
+				if (wo == null)
+				{
+					continue;
+				}
 				
 				// Remove the WorldObject from the WorldObjectHashSet(WorldObject) _knownObjects of the surrounding WorldRegion Creatures
 				// If object is a PlayerInstance, remove the WorldObject from the WorldObjectHashSet(PlayerInstance) _knownPlayer of the surrounding WorldRegion Creatures
 				// If object is targeted by one of the surrounding WorldRegion Creatures, cancel ATTACK and cast
-				if ((wo != null) && (wo.getKnownList() != null))
+				if (wo.getKnownList() != null)
 				{
 					wo.getKnownList().removeKnownObject(object);
 				}

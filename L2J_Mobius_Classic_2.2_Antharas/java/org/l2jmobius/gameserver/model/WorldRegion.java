@@ -55,6 +55,11 @@ public class WorldRegion
 			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
 				final WorldObject wo = _visibleObjects.get(i);
+				if (wo == null)
+				{
+					continue;
+				}
+				
 				if (wo.isAttackable())
 				{
 					final Attackable mob = (Attackable) wo;
@@ -91,6 +96,11 @@ public class WorldRegion
 			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
 				final WorldObject wo = _visibleObjects.get(i);
+				if (wo == null)
+				{
+					continue;
+				}
+				
 				if (wo.isAttackable())
 				{
 					// Start HP/MP/CP regeneration task.
@@ -120,7 +130,8 @@ public class WorldRegion
 				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
 				for (int j = 0; j < regionObjects.size(); j++)
 				{
-					if (regionObjects.get(j).isPlayable())
+					final WorldObject wo = regionObjects.get(j);
+					if ((wo != null) && wo.isPlayable())
 					{
 						return false;
 					}

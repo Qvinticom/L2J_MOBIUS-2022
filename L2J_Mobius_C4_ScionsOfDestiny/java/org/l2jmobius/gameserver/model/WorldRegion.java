@@ -125,6 +125,11 @@ public class WorldRegion
 			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
 				final WorldObject wo = _visibleObjects.get(i);
+				if (wo == null)
+				{
+					continue;
+				}
+				
 				if (wo instanceof Attackable)
 				{
 					final Attackable mob = (Attackable) wo;
@@ -173,6 +178,11 @@ public class WorldRegion
 			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
 				final WorldObject wo = _visibleObjects.get(i);
+				if (wo == null)
+				{
+					continue;
+				}
+				
 				if (wo instanceof Attackable)
 				{
 					// Start HP/MP/CP Regeneration task
@@ -204,7 +214,8 @@ public class WorldRegion
 				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
 				for (int j = 0; j < regionObjects.size(); j++)
 				{
-					if (regionObjects.get(j).isPlayable())
+					final WorldObject wo = regionObjects.get(j);
+					if ((wo != null) && wo.isPlayable())
 					{
 						return false;
 					}
@@ -382,10 +393,15 @@ public class WorldRegion
 		LOGGER.info("Deleting all visible NPCs in Region: " + getName());
 		for (int i = 0; i < _visibleObjects.size(); i++)
 		{
-			final WorldObject obj = _visibleObjects.get(i);
-			if (obj instanceof NpcInstance)
+			final WorldObject wo = _visibleObjects.get(i);
+			if (wo == null)
 			{
-				final NpcInstance target = (NpcInstance) obj;
+				continue;
+			}
+			
+			if (wo instanceof NpcInstance)
+			{
+				final NpcInstance target = (NpcInstance) wo;
 				target.deleteMe();
 				final Spawn spawn = target.getSpawn();
 				if (spawn != null)

@@ -413,7 +413,7 @@ public class World
 			for (int j = 0; j < visibleObjects.size(); j++)
 			{
 				final WorldObject wo = visibleObjects.get(j);
-				if (wo == object)
+				if ((wo == null) || (wo == object))
 				{
 					continue;
 				}
@@ -482,7 +482,7 @@ public class World
 			for (int j = 0; j < visibleObjects.size(); j++)
 			{
 				final WorldObject wo = visibleObjects.get(j);
-				if (wo == object)
+				if ((wo == null) || (wo == object))
 				{
 					continue;
 				}
@@ -542,7 +542,7 @@ public class World
 			for (int j = 0; j < visibleObjects.size(); j++)
 			{
 				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld()))
+				if ((wo == null) || (wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld()))
 				{
 					continue;
 				}
