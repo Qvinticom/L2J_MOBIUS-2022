@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
@@ -25,11 +24,12 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
+import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 public class WorldRegion
 {
 	/** List containing visible objects in this world region. */
-	private final List<WorldObject> _visibleObjects = new ArrayList<>();
+	private final List<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -217,12 +217,9 @@ public class WorldRegion
 			return;
 		}
 		
-		synchronized (_visibleObjects)
+		if (!_visibleObjects.contains(object))
 		{
-			if (!_visibleObjects.contains(object))
-			{
-				_visibleObjects.add(object);
-			}
+			_visibleObjects.add(object);
 		}
 		
 		// If this is the first player to enter the region, activate self and neighbors.
@@ -248,10 +245,7 @@ public class WorldRegion
 			return;
 		}
 		
-		synchronized (_visibleObjects)
-		{
-			_visibleObjects.remove(object);
-		}
+		_visibleObjects.remove(object);
 		
 		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
 		{

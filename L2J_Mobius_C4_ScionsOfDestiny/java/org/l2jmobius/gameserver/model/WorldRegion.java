@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -36,12 +35,13 @@ import org.l2jmobius.gameserver.model.zone.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
+import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 public class WorldRegion
 {
 	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	
-	private final List<WorldObject> _visibleObjects = new ArrayList<>();
+	private final List<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
@@ -302,12 +302,9 @@ public class WorldRegion
 			return;
 		}
 		
-		synchronized (_visibleObjects)
+		if (!_visibleObjects.contains(object))
 		{
-			if (!_visibleObjects.contains(object))
-			{
-				_visibleObjects.add(object);
-			}
+			_visibleObjects.add(object);
 		}
 		
 		// If this is the first player to enter the region, activate self and neighbors.
@@ -335,10 +332,7 @@ public class WorldRegion
 			return;
 		}
 		
-		synchronized (_visibleObjects)
-		{
-			_visibleObjects.remove(object);
-		}
+		_visibleObjects.remove(object);
 		
 		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
 		{
