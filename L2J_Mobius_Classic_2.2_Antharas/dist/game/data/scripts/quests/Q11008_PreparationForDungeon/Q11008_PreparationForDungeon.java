@@ -45,7 +45,7 @@ public class Q11008_PreparationForDungeon extends Quest
 	private static final int WARRIORS_GAITERS = 90307;
 	private static final int MEDIUMS_TUNIC = 90308;
 	private static final int MEDIUMS_STOCKINGS = 90309;
-	private static final int RING_NOVICE = 29497;
+	private static final int EARRING_NOVICE = 29486;
 	// Monsters
 	private static final int KABOO_ORC_WARRIOR_CAPTAIN = 20472;
 	private static final int KABOO_ORC_WARRIOR_LIEUTENANT = 20473;
@@ -99,7 +99,7 @@ public class Q11008_PreparationForDungeon extends Quest
 					takeItems(player, SPIDER_VENOM, 20);
 					giveItems(player, WARRIORS_ARMOR, 1);
 					giveItems(player, WARRIORS_GAITERS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30220-03.html";
@@ -116,7 +116,7 @@ public class Q11008_PreparationForDungeon extends Quest
 					takeItems(player, SPIDER_VENOM, 20);
 					giveItems(player, MEDIUMS_TUNIC, 1);
 					giveItems(player, MEDIUMS_STOCKINGS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30220-04.html"; // Custom
@@ -202,11 +202,15 @@ public class Q11008_PreparationForDungeon extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, ORCS_BANDAGE) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, ORCS_BANDAGE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ORCS_BANDAGE) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KABOO_ORC_WARRIOR_LIEUTENANTS_AND_KABOO_ORC_WARRIOR_CAPTAINS_N_GO_HUNTING_AND_KILL_DRYADS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -217,11 +221,15 @@ public class Q11008_PreparationForDungeon extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, DRYADS_CRIMSON_HERB, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DRYADS_N_GO_HUNTING_AND_KILL_CRIMSON_SPIDERS_HOOK_SPIDERS_AND_PINCER_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -233,11 +241,15 @@ public class Q11008_PreparationForDungeon extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, SPIDER_VENOM) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, SPIDER_VENOM, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, SPIDER_VENOM) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.RETURN_TO_SENTINEL_STARDEN, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

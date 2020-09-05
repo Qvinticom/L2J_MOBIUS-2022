@@ -46,7 +46,7 @@ public class Q11014_SurpriseGift extends Quest
 	private static final int WARRIORS_GAITERS = 90307;
 	private static final int MEDIUMS_TUNIC = 90308;
 	private static final int MEDIUMS_STOCKINGS = 90309;
-	private static final int RING_NOVICE = 29497;
+	private static final int EARRING_NOVICE = 29486;
 	// Monsters
 	private static final int ZOMBIE_FOREST_ELF = 20015;
 	private static final int ZOMBIE_FOREST_ELF_RESEARCHER = 20020;
@@ -100,7 +100,7 @@ public class Q11014_SurpriseGift extends Quest
 					takeItems(player, OLD_BONE_FRAGMENT, 20);
 					giveItems(player, WARRIORS_ARMOR, 1);
 					giveItems(player, WARRIORS_GAITERS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30136-03.html";
@@ -118,7 +118,7 @@ public class Q11014_SurpriseGift extends Quest
 					takeItems(player, OLD_BONE_FRAGMENT, 20);
 					giveItems(player, MEDIUMS_TUNIC, 1);
 					giveItems(player, MEDIUMS_STOCKINGS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30136-04.html";
@@ -203,11 +203,15 @@ public class Q11014_SurpriseGift extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) < 10) && (getRandom(100) < 85))
 					{
 						giveItems(killer, ZOMBIE_FOREST_ELF_TOOTH, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ZOMBIE_FOREST_ELVES_AND_ZOMBIE_FOREST_ELF_RESEARCHERS_N_GO_HUNTING_AND_KILL_FESTERING_BATS_AND_RED_EYE_BATS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -218,11 +222,15 @@ public class Q11014_SurpriseGift extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, BAT_SKIN) < 10) && (getRandom(100) < 85))
 					{
 						giveItems(killer, BAT_SKIN, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, BAT_SKIN) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_FESTERING_BATS_AND_RED_EYE_BATS_N_GO_HUNTING_AND_KILL_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -233,11 +241,15 @@ public class Q11014_SurpriseGift extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) < 10) && (getRandom(100) < 85))
 					{
 						giveItems(killer, STONE_GIANTS_SHINY_ROCK, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS_N_GO_HUNTING_AND_KILL_DARK_HORRORS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -247,11 +259,15 @@ public class Q11014_SurpriseGift extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, OLD_BONE_FRAGMENT) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, OLD_BONE_FRAGMENT, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, OLD_BONE_FRAGMENT) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DARK_HORRORS_NRETURN_TO_ARMOR_MERCHANT_PAYNE, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

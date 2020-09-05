@@ -195,11 +195,15 @@ public class Q11021_RedGemNecklace1 extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, BEARS_SHIN_BONE) < 20) && (getRandom(100) < 92))
 					{
 						giveItems(killer, BEARS_SHIN_BONE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, BEARS_SHIN_BONE) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_BEARS_N_GO_HUNTING_AND_KILL_KASHA_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -211,11 +215,15 @@ public class Q11021_RedGemNecklace1 extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, SHARP_SPIDER_LEG) < 30) && (getRandom(100) < 89))
 					{
 						giveItems(killer, SHARP_SPIDER_LEG, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, SHARP_SPIDER_LEG) >= 30)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_SPIDERS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

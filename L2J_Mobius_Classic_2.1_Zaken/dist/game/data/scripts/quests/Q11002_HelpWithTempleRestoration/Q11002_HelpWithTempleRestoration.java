@@ -45,7 +45,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 	private static final int WARRIORS_GAITERS = 90307;
 	private static final int MEDIUMS_TUNIC = 90308;
 	private static final int MEDIUMS_STOCKINGS = 90309;
-	private static final int RING_NOVICE = 29497;
+	private static final int EARRING_NOVICE = 29486;
 	// Monsters
 	private static final int ORC_LIEUTENANT = 20096;
 	private static final int ORC_CAPTAIN = 20098;
@@ -97,7 +97,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 					takeItems(player, STONE_POWDER, 20);
 					giveItems(player, WARRIORS_ARMOR, 1);
 					giveItems(player, WARRIORS_GAITERS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30035-03.html";
@@ -114,7 +114,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 					takeItems(player, STONE_POWDER, 20);
 					giveItems(player, MEDIUMS_TUNIC, 1);
 					giveItems(player, MEDIUMS_STOCKINGS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30035-04.html";
@@ -199,11 +199,15 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, WOODEN_POLE) < 20) && (getRandom(100) < 84))
 					{
 						giveItems(killer, WOODEN_POLE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, WOODEN_POLE) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORC_LIEUTENANTS_AND_ORC_CAPTAINS_N_GO_HUNTING_AND_KILL_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -214,11 +218,15 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) < 25) && (getRandom(100) < 87))
 					{
 						giveItems(killer, WOODEN_DOOR_PANEL, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) >= 25)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS_N_GO_HUNTING_AND_KILL_STONE_GOLEMS_AND_CRASHERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -229,11 +237,15 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_POWDER) < 20) && (getRandom(100) < 84))
 					{
 						giveItems(killer, STONE_POWDER, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, STONE_POWDER) >= 20) && (getQuestItemsCount(killer, STONE_POWDER) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_ALL_OF_THE_ITEMS_HARRYS_REQUESTED_RETURN_TO_HIM, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

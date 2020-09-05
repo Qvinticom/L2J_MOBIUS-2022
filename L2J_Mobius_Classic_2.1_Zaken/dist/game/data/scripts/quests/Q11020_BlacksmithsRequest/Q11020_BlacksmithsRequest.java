@@ -46,7 +46,7 @@ public class Q11020_BlacksmithsRequest extends Quest
 	private static final int WARRIORS_GAITERS = 90307;
 	private static final int MEDIUMS_TUNIC = 90308;
 	private static final int MEDIUMS_STOCKINGS = 90309;
-	private static final int EARRING_NOVICE = 49040;
+	private static final int EARRING_NOVICE = 29486;
 	// Monsters
 	private static final int BLACKWING_BAT = 20316;
 	private static final int TOMB_RAIDER_LEADER = 20320;
@@ -199,11 +199,15 @@ public class Q11020_BlacksmithsRequest extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, BLACKWING_BAT_WING) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, BLACKWING_BAT_WING, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, BLACKWING_BAT_WING) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BLACKWING_BATS_N_GO_HUNTING_AND_KILL_GOBLIN_TOMB_RAIDER_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -213,11 +217,15 @@ public class Q11020_BlacksmithsRequest extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, GRAVE_ROBBERS_BELT, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_TOMB_RAIDER_LEADERS_N_GO_HUNTING_AND_KILL_GREYSTONE_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -227,11 +235,15 @@ public class Q11020_BlacksmithsRequest extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, GOLEM_ORE) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, GOLEM_ORE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GREYSTONE_GOLEMS_N_GO_HUNTING_AND_KILL_EVIL_EYE_PATROLS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -241,11 +253,15 @@ public class Q11020_BlacksmithsRequest extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, EVIL_EYE_PATROL_HIDE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EVIL_EYE_PATROLS_NRETURN_TO_BLACKSMITH_SUMARI, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

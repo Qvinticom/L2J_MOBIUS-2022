@@ -46,7 +46,7 @@ public class Q10996_TemplesDecorations extends Quest
 	private static final int WARRIORS_GAITERS = 90307;
 	private static final int MEDIUMS_TUNIC = 90308;
 	private static final int MEDIUMS_STOCKINGS = 90309;
-	private static final int RING_NOVICE = 29497;
+	private static final int EARRING_NOVICE = 29486;
 	// Monsters
 	private static final int BARBED_BATS = 20370;
 	private static final int CRYSTAL_PUMA = 20510;
@@ -99,7 +99,7 @@ public class Q10996_TemplesDecorations extends Quest
 					takeItems(player, GOLEM_ORE, 20);
 					giveItems(player, WARRIORS_ARMOR, 1);
 					giveItems(player, WARRIORS_GAITERS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30538-03.html";
@@ -117,7 +117,7 @@ public class Q10996_TemplesDecorations extends Quest
 					takeItems(player, GOLEM_ORE, 20);
 					giveItems(player, MEDIUMS_TUNIC, 1);
 					giveItems(player, MEDIUMS_STOCKINGS, 1);
-					giveItems(player, RING_NOVICE, 2);
+					giveItems(player, EARRING_NOVICE, 2);
 					addExpAndSp(player, 80000, 0);
 					qs.exitQuest(false, true);
 					htmltext = "30538-04.html";
@@ -201,11 +201,15 @@ public class Q10996_TemplesDecorations extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, BARBED_BAT_WING_SAC, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BARBED_BATS_N_GO_HUNTING_AND_KILL_CRYSTAL_PUMAS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -215,11 +219,15 @@ public class Q10996_TemplesDecorations extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, PUMA_FUR) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, PUMA_FUR, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, PUMA_FUR) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_CRYSTAL_PUMAS_N_GO_HUNTING_AND_KILL_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -230,11 +238,15 @@ public class Q10996_TemplesDecorations extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, GOBLIN_JEWEL) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, GOBLIN_JEWEL, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, GOBLIN_JEWEL) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS_N_GO_HUNTING_AND_KILL_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -245,11 +257,15 @@ public class Q10996_TemplesDecorations extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, GOLEM_ORE) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, GOLEM_ORE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS_NRETURN_TO_PRIEST_OF_THE_EARTH_ZIMENF, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

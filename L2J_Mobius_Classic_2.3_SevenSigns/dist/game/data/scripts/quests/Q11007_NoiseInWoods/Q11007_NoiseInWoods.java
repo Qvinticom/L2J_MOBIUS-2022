@@ -141,11 +141,15 @@ public class Q11007_NoiseInWoods extends Quest
 					if ((qs.isCond(2) && (getQuestItemsCount(killer, TAIL_OF_A_GRAY_WOLF) < 10)))
 					{
 						giveItems(killer, TAIL_OF_A_GRAY_WOLF, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, TAIL_OF_A_GRAY_WOLF) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GRAY_WOLVES_N_GO_HUNTING_AND_KILL_GOBLIN_RAIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -155,11 +159,15 @@ public class Q11007_NoiseInWoods extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, GOBLINS_PACK_OF_KNICKKNACKS) < 10))
 					{
 						giveItems(killer, GOBLINS_PACK_OF_KNICKKNACKS, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GOBLINS_PACK_OF_KNICKKNACKS) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_RAIDERS_N_GO_HUNTING_AND_KILL_KABOO_ORCS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -171,11 +179,15 @@ public class Q11007_NoiseInWoods extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, KABBO_ORC_STURDY_AMULET) < 10))
 					{
 						giveItems(killer, KABBO_ORC_STURDY_AMULET, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, KABBO_ORC_STURDY_AMULET) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KABOO_ORCS_N_GO_HUNTING_AND_KILL_SPORE_FUNGUS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -185,11 +197,15 @@ public class Q11007_NoiseInWoods extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, MUSHROOM_SPORE_POWDER) < 20))
 					{
 						giveItems(killer, MUSHROOM_SPORE_POWDER, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, MUSHROOM_SPORE_POWDER) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_SPORE_FUNGUS_N_RETURN_TO_SENTINEL_KENDELL, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

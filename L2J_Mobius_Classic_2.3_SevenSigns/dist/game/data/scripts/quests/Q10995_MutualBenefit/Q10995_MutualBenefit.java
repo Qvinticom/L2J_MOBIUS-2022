@@ -126,11 +126,15 @@ public class Q10995_MutualBenefit extends Quest
 					if ((qs.isCond(2) && (getQuestItemsCount(killer, BALCK_WOLF_TOOTH) < 10)))
 					{
 						giveItems(killer, BALCK_WOLF_TOOTH, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, BALCK_WOLF_TOOTH) >= 10) && (getQuestItemsCount(killer, GOBLINS_NAVIGATION_DEVICE) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BLACK_WOLVES_AND_GOBLIN_SNOOPERS_NGO_HUNTING_AND_KILL_UTUKU_ORCS_AND_UTUKU_ORC_ARCHERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -140,11 +144,15 @@ public class Q10995_MutualBenefit extends Quest
 					if ((qs.isCond(2) && (getQuestItemsCount(killer, GOBLINS_NAVIGATION_DEVICE) < 10)))
 					{
 						giveItems(killer, GOBLINS_NAVIGATION_DEVICE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, BALCK_WOLF_TOOTH) >= 10) && (getQuestItemsCount(killer, GOBLINS_NAVIGATION_DEVICE) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BLACK_WOLVES_AND_GOBLIN_SNOOPERS_NGO_HUNTING_AND_KILL_UTUKU_ORCS_AND_UTUKU_ORC_ARCHERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -155,11 +163,15 @@ public class Q10995_MutualBenefit extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, UTUKU_ORC_AMULET) < 10))
 					{
 						giveItems(killer, UTUKU_ORC_AMULET, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, UTUKU_ORC_AMULET) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_UTUKU_ORCS_AND_UTUKU_ORC_ARCHERS_NGO_HUNTING_AND_KILL_GOBLIN_BRIGANDS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -169,11 +181,15 @@ public class Q10995_MutualBenefit extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, GOBLIN_BRIGANDS_OLD_SWORD) < 10))
 					{
 						giveItems(killer, GOBLIN_BRIGANDS_OLD_SWORD, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GOBLIN_BRIGANDS_OLD_SWORD) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_BRIGANDS_N_GO_HUNTING_AND_KILL_GARUM_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -183,11 +199,15 @@ public class Q10995_MutualBenefit extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, GARUM_WEREWOLF_TAIL) < 10))
 					{
 						giveItems(killer, GARUM_WEREWOLF_TAIL, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GARUM_WEREWOLF_TAIL) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GARUM_WEREWOLVES_N_GO_HUNTING_AND_KILL_GOBLIN_BRIGAND_LIEUTENANTS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -197,11 +217,15 @@ public class Q10995_MutualBenefit extends Quest
 					if (qs.isCond(6) && (getQuestItemsCount(killer, GOBLIN_BRIGAND_LIEUTENANT_NECKLACE) < 10))
 					{
 						giveItems(killer, GOBLIN_BRIGAND_LIEUTENANT_NECKLACE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GOBLIN_BRIGAND_LIEUTENANT_NECKLACE) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_BRIGAND_LIEUTENANTS_NRETURN_TO_WEAPON_MERCHANT_REEP, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(7);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

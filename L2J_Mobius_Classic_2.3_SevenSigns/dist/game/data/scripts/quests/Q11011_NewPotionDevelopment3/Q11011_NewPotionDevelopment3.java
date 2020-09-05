@@ -177,11 +177,15 @@ public class Q11011_NewPotionDevelopment3 extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, ANTIDOTE) < 20) && (getRandom(100) < 95))
 					{
 						giveItems(killer, ANTIDOTE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ANTIDOTE) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_RATMAN_SCAVENGERS_N_GO_HUNTING_AND_KILL_ARACHNID_TRACKERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -191,11 +195,15 @@ public class Q11011_NewPotionDevelopment3 extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, ARACHNID_TRACKER_THORN) < 20) && (getRandom(100) < 90))
 					{
 						giveItems(killer, ARACHNID_TRACKER_THORN, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ARACHNID_TRACKER_THORN) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.RETURN_TO_GROCER_HERBIEL_3, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

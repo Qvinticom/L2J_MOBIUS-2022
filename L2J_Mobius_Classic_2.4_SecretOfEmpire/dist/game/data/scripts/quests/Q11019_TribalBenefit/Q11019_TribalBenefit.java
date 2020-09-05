@@ -126,11 +126,15 @@ public class Q11019_TribalBenefit extends Quest
 					if ((qs.isCond(2) && (getQuestItemsCount(killer, KASHA_WOLF_FUR) < 10)))
 					{
 						giveItems(killer, KASHA_WOLF_FUR, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, KASHA_WOLF_FUR) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_WOLVES_AND_KASHA_BEARS_N_GO_HUNTING_AND_KILL_GOBLIN_TOMB_RAIDERS_AND_RAKECLAW_IMP_HUNTERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -140,11 +144,15 @@ public class Q11019_TribalBenefit extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, ASHES_OF_ANCESTORS) < 10))
 					{
 						giveItems(killer, ASHES_OF_ANCESTORS, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, ASHES_OF_ANCESTORS) >= 10) && (getQuestItemsCount(killer, IMP_NECKLACE) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_TOMB_RAIDERS_AND_RAKECLAW_IMP_HUNTERS_N_GO_HUNTING_AND_KILL_MOUNTAIN_FUNGUS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -154,11 +162,15 @@ public class Q11019_TribalBenefit extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, IMP_NECKLACE) < 10))
 					{
 						giveItems(killer, IMP_NECKLACE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, ASHES_OF_ANCESTORS) >= 10) && (getQuestItemsCount(killer, IMP_NECKLACE) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_TOMB_RAIDERS_AND_RAKECLAW_IMP_HUNTERS_N_GO_HUNTING_AND_KILL_MOUNTAIN_FUNGUS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -168,11 +180,15 @@ public class Q11019_TribalBenefit extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, MOUNTAIN_FUNGUS_SPORES) < 10))
 					{
 						giveItems(killer, MOUNTAIN_FUNGUS_SPORES, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, MOUNTAIN_FUNGUS_SPORES) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_MOUNTAIN_FUNGUS_N_GO_HUNTING_AND_KILL_MARAKU_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -182,11 +198,15 @@ public class Q11019_TribalBenefit extends Quest
 					if (qs.isCond(5) && (getQuestItemsCount(killer, MARAKU_WEREWOLF_CLAW) < 10))
 					{
 						giveItems(killer, MARAKU_WEREWOLF_CLAW, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, MARAKU_WEREWOLF_CLAW) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_MARAKU_WEREWOLVES_N_GO_HUNTING_AND_KILL_EYES_OF_SEER, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -196,11 +216,15 @@ public class Q11019_TribalBenefit extends Quest
 					if (qs.isCond(6) && (getQuestItemsCount(killer, EYE_OF_SEER_TEARS) < 10))
 					{
 						giveItems(killer, EYE_OF_SEER_TEARS, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, EYE_OF_SEER_TEARS) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EYES_OF_SEER_NRETURN_TO_CENTURION_TIKU, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(7);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

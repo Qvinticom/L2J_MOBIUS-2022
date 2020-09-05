@@ -200,11 +200,15 @@ public class Q11001_TombsOfAncestors extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, WOLF_PELT) < 10) && (getRandom(100) < 93))
 					{
 						giveItems(killer, WOLF_PELT, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, WOLF_PELT) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WOLVES_N_GO_HUNTING_AND_KILL_ORCS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -216,11 +220,15 @@ public class Q11001_TombsOfAncestors extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, ORC_AMULET) < 10) && (getRandom(100) < 93))
 					{
 						giveItems(killer, ORC_AMULET, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ORC_AMULET) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORCS_NGO_HUNTING_AND_KILL_ORC_WARRIORS_AND_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -230,11 +238,15 @@ public class Q11001_TombsOfAncestors extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, BROKEN_SWORD) < 10) && (getRandom(100) < 89))
 					{
 						giveItems(killer, BROKEN_SWORD, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, BROKEN_SWORD) >= 10) && (getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -244,11 +256,15 @@ public class Q11001_TombsOfAncestors extends Quest
 					if (qs.isCond(4) && (getQuestItemsCount(killer, WEREWOLFS_FANG) < 10) && (getRandom(100) < 100))
 					{
 						giveItems(killer, WEREWOLFS_FANG, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if ((getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10) && (getQuestItemsCount(killer, BROKEN_SWORD) >= 10))
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

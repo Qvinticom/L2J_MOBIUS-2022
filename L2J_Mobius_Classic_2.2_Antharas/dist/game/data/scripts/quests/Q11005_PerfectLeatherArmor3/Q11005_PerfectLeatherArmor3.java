@@ -183,11 +183,15 @@ public class Q11005_PerfectLeatherArmor3 extends Quest
 					if (qs.isCond(2) && (getQuestItemsCount(killer, COBWEB) < 25) && (getRandom(100) < 87))
 					{
 						giveItems(killer, COBWEB, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, COBWEB) >= 25)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GIANT_SPIDERS_N_GO_HUNTING_AND_KILL_UNDINES, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -199,11 +203,15 @@ public class Q11005_PerfectLeatherArmor3 extends Quest
 					if (qs.isCond(3) && (getQuestItemsCount(killer, ESSENCE_OF_WATER) < 20) && (getRandom(100) < 100))
 					{
 						giveItems(killer, ESSENCE_OF_WATER, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, ESSENCE_OF_WATER) >= 20)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_ALL_OF_THE_ITEMS_LECTOR_REQUESTED_RETURN_TO_HIM, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

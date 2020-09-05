@@ -205,11 +205,15 @@ public class Q11013_ShilensHunt extends Quest
 					if (qs.isCond(2))
 					{
 						giveItems(killer, WOLF_TAIL, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, WOLF_TAIL) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ASHEN_WOLVES_N_GO_HUNTING_AND_KILL_GOBLINS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(3);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -219,11 +223,15 @@ public class Q11013_ShilensHunt extends Quest
 					if (qs.isCond(3))
 					{
 						giveItems(killer, GOBLIN_POISONOUS_DART, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, GOBLIN_POISONOUS_DART) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLINS_N_GO_HUNTING_AND_KILL_IMPS_AND_IMP_ELDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(4);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -234,11 +242,15 @@ public class Q11013_ShilensHunt extends Quest
 					if (qs.isCond(4))
 					{
 						giveItems(killer, IMP_WING, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, IMP_WING) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_IMPS_AND_IMP_ELDERS_N_GO_HUNTING_AND_KILL_GREEN_FUNGUS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(5);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -248,11 +260,15 @@ public class Q11013_ShilensHunt extends Quest
 					if (qs.isCond(5))
 					{
 						giveItems(killer, FUNGUS_JUICE, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, FUNGUS_JUICE) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GREEN_FUNGUS_N_GO_HUNTING_AND_KILL_BALOR_ORC_WARRIORS_BALOR_ORC_WARRIOR_CAPTAINS_AND_BALOR_ORC_WARRIOR_LIEUTENANTS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(6);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -264,11 +280,15 @@ public class Q11013_ShilensHunt extends Quest
 					if (qs.isCond(6))
 					{
 						giveItems(killer, BALOR_ORC_FANG, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						if (getQuestItemsCount(killer, BALOR_ORC_FANG) >= 10)
 						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BALOR_ORC_WARRIORS_BALOR_ORC_WARRIOR_CAPTAINS_AND_BALOR_ORC_WARRIOR_LIEUTENANTS_NRETURN_TO_HIERARCH_TALOS, ExShowScreenMessage.TOP_CENTER, 10000);
 							qs.setCond(7);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
