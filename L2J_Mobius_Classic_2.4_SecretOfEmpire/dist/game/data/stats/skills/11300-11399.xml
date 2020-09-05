@@ -4,7 +4,7 @@
 		<!-- With a 100% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
 		<icon>icon.skill11316</icon>
 		<itemConsumeCount>4</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<operateType>A1</operateType>
 		<mpInitialConsume>10</mpInitialConsume>
 		<hitTime>1000</hitTime>
@@ -24,18 +24,37 @@
 		<effects>
 			<effect name="Restoration">
 				<itemId>6645</itemId> <!-- Beast Soulshot -->
-				<itemCount>20</itemCount>
+				<itemCount>30</itemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11317" toLevel="1" name="Mass Summon Soulshots">
 		<!-- With a 100% probability summons 300 Beast Soulshots. Consumes 40 Soulstone(s). -->
 		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
+		<itemConsumeCount>40</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpInitialConsume>50</mpInitialConsume>
 		<hitTime>1000</hitTime>
 		<reuseDelay>3000</reuseDelay>
-		<mpConsume>50</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>40</magicLevel>
+		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>6645</itemId> <!-- Beast Soulshot -->
+				<itemCount>300</itemCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11318" toLevel="1" name="Summon Spiritshots">
 		<!-- With a 100% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
@@ -61,17 +80,36 @@
 		<effects>
 			<effect name="Restoration">
 				<itemId>6646</itemId> <!-- Beast Spiritshot -->
-				<itemCount>16</itemCount>
+				<itemCount>24</itemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11319" toLevel="1" name="Mass Summon Spiritshots">
 		<!-- With a 100% probability summons 240 Beast Spiritshots. Consumes 40 Spirit Ore. -->
 		<icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
+		<itemConsumeCount>40</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpInitialConsume>50</mpInitialConsume>
 		<hitTime>1000</hitTime>
 		<reuseDelay>3000</reuseDelay>
-		<mpConsume>50</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>40</magicLevel>
+		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>6646</itemId> <!-- Beast Spiritshot -->
+				<itemCount>240</itemCount>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -4,7 +4,7 @@
 		<!-- With a 100% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
 		<icon>icon.skill11316</icon>
 		<itemConsumeCount>4</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<operateType>A1</operateType>
 		<mpInitialConsume>10</mpInitialConsume>
 		<hitTime>1000</hitTime>
@@ -24,7 +24,7 @@
 		<effects>
 			<effect name="Restoration">
 				<itemId>6645</itemId> <!-- Beast Soulshot -->
-				<itemCount>20</itemCount>
+				<itemCount>30</itemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -52,7 +52,7 @@
 		<effects>
 			<effect name="Restoration">
 				<itemId>6646</itemId> <!-- Beast Spiritshot -->
-				<itemCount>16</itemCount>
+				<itemCount>24</itemCount>
 			</effect>
 		</effects>
 	</skill>
