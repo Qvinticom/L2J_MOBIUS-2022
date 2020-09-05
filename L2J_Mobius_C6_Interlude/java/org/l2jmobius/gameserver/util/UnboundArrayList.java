@@ -124,6 +124,23 @@ public class UnboundArrayList<E>extends ArrayList<E>
 	}
 	
 	/**
+	 * Appends the specified element to the end of this list if this list does not contain the specified element.
+	 * @param e element to be appended to this list
+	 * @return {@code true} (as specified by {@link Collection#add})
+	 */
+	public boolean addIfAbsent(E e)
+	{
+		synchronized (this)
+		{
+			if (!contains(e))
+			{
+				return super.add(e);
+			}
+			return false;
+		}
+	}
+	
+	/**
 	 * Removes the first occurrence of the specified element from this list, if it is present. If the list does not contain the element, it is unchanged. More formally, removes the element with the lowest index {@code i} such that {@code Objects.equals(o, get(i))} (if such an element exists).
 	 * Returns {@code true} if this list contained the specified element (or equivalently, if this list changed as a result of the call).
 	 * @param o element to be removed from this list, if present

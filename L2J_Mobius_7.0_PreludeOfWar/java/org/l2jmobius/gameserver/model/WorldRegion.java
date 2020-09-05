@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.UnboundArrayList;
 public class WorldRegion
 {
 	/** List containing visible objects in this world region. */
-	private final List<WorldObject> _visibleObjects = new UnboundArrayList<>();
+	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -228,10 +228,7 @@ public class WorldRegion
 			return;
 		}
 		
-		if (!_visibleObjects.contains(object))
-		{
-			_visibleObjects.add(object);
-		}
+		_visibleObjects.addIfAbsent(object);
 		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)

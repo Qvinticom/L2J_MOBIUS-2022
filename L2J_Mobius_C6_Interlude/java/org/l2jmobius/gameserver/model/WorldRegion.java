@@ -41,7 +41,7 @@ public class WorldRegion
 {
 	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	
-	private final List<WorldObject> _visibleObjects = new UnboundArrayList<>();
+	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
@@ -313,10 +313,7 @@ public class WorldRegion
 			return;
 		}
 		
-		if (!_visibleObjects.contains(object))
-		{
-			_visibleObjects.add(object);
-		}
+		_visibleObjects.addIfAbsent(object);
 		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
