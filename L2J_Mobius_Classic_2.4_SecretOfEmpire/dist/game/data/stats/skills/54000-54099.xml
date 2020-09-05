@@ -470,7 +470,74 @@
 			<value level="3">icon.accessory_necklace_of_frintessa_i04</value>
 			<value level="4">icon.accessory_necklace_of_frintessa_i05</value>
 		</icon>
+		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="AttackTrait">
+				<SLEEP>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SLEEP>
+				<PARALYZE>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</PARALYZE>
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SLEEP>
+				<PARALYZE>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</PARALYZE>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">10</value>
+				</amount>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>
+					<value level="3">-10</value>
+					<value level="4">-20</value>
+				</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54042" toLevel="1" name="Immortal Frintezza's Necklace - Special Ability">
 		<!-- Nearby enemies' P./ M. Skill Cooldown -100% for 2 min. -->
