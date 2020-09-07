@@ -2080,88 +2080,35 @@ public abstract class Skill
 							return targetList;
 						}
 					}
-					PlayerInstance src = null;
-					if (creature instanceof PlayerInstance)
-					{
-						src = (PlayerInstance) creature;
-					}
-					else if (creature instanceof Summon)
-					{
-						src = ((Summon) creature).getOwner();
-					}
 					if (clan != null)
 					{
 						// Get all visible objects in a spheric area near the Creature
-						// Get Clan Members
-						for (WorldObject newTarget : creature.getKnownList().getKnownObjects().values())
+						for (WorldObject newTarget : player.getKnownList().getKnownCharactersInRadius(radius))
 						{
-							if (!(newTarget instanceof PlayerInstance))
+							final PlayerInstance newPlayer = newTarget.getActingPlayer();
+							if (newPlayer == null)
 							{
 								continue;
 							}
-							final PlayerInstance playerTarget = (PlayerInstance) newTarget;
-							if (playerTarget.isDead() && (_targetType != SkillTargetType.TARGET_CORPSE_ALLY))
+							if (newPlayer.isDead())
 							{
 								continue;
 							}
-							// if ally is different --> clan is different too, so --> continue
-							if (player.getAllyId() != 0)
-							{
-								if (playerTarget.getAllyId() != player.getAllyId())
-								{
-									continue;
-								}
-							}
-							else if (player.getClanId() != playerTarget.getClanId())
+							if (player.isInDuel() && (player.getDuelId() != newPlayer.getDuelId()))
 							{
 								continue;
 							}
-							// check for Events
-							if (src != null)
-							{
-								if (playerTarget == src)
-								{
-									continue;
-								}
-								// if src is in event and trg not OR viceversa:
-								// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-								if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!playerTarget._inEvent && !playerTarget._inEventCTF && !playerTarget._inEventDM && !playerTarget._inEventTvT && !playerTarget._inEventVIP)) || ((playerTarget._inEvent || playerTarget._inEventCTF || playerTarget._inEventDM || playerTarget._inEventTvT || playerTarget._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
-								{
-									continue;
-								}
-							}
-							final Summon pet = ((PlayerInstance) newTarget).getPet();
-							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_ALLY) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_ALLY) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
-							{
-								targetList.add(pet);
-							}
-							if (_targetType == SkillTargetType.TARGET_CORPSE_ALLY)
-							{
-								if (!((PlayerInstance) newTarget).isDead())
-								{
-									continue;
-								}
-								if ((_skillType == SkillType.RESURRECT) && ((PlayerInstance) newTarget).isInsideZone(ZoneId.SIEGE))
-								{
-									continue;
-								}
-							}
-							if (!Util.checkIfInRange(radius, creature, newTarget, true))
+							if (((player.getAllyId() == 0) && (newPlayer.getClanId() != player.getClanId())) || (player.getAllyId() != newPlayer.getAllyId()))
 							{
 								continue;
 							}
-							// Don't add this target if this is a Pc->Pc pvp casting and pvp condition not met
-							if (!player.checkPvpSkill(newTarget, this))
-							{
-								continue;
-							}
-							
-							targetList.add((Creature) newTarget);
+							targetList.add(newPlayer);
 							if (onlyFirst)
 							{
 								return targetList;
 							}
 						}
+						return targetList;
 					}
 				}
 				return targetList;
