@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.OptionalLong;
@@ -236,7 +237,25 @@ public class MultiSellChoose implements IClientIncomingPacket
 			}
 			
 			// Check for enchanted level and ingredient count requirements.
+			final List<ItemChanceHolder> summedIngredients = new ArrayList<>();
 			for (ItemChanceHolder ingredient : entry.getIngredients())
+			{
+				boolean added = false;
+				for (ItemChanceHolder summedIngredient : summedIngredients)
+				{
+					if ((summedIngredient.getId() == ingredient.getId()) && (summedIngredient.getEnchantmentLevel() == ingredient.getEnchantmentLevel()))
+					{
+						summedIngredients.add(new ItemChanceHolder(ingredient.getId(), ingredient.getChance(), ingredient.getCount() + summedIngredient.getCount(), ingredient.getEnchantmentLevel(), ingredient.isMaintainIngredient()));
+						summedIngredients.remove(summedIngredient);
+						added = true;
+					}
+				}
+				if (!added)
+				{
+					summedIngredients.add(ingredient);
+				}
+			}
+			for (ItemChanceHolder ingredient : summedIngredients)
 			{
 				if (ingredient.getEnchantmentLevel() > 0)
 				{
