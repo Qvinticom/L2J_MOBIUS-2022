@@ -1006,7 +1006,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	{
 		if (_clanHallId < 0)
 		{
-			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
+			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 1500);
 			if (temp != null)
 			{
 				_clanHallId = temp.getId();
