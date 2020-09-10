@@ -226,6 +226,7 @@ import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -14216,14 +14217,14 @@ public class PlayerInstance extends Playable
 		
 		_autoUseTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
-			if (hasBlockActions() || isControlBlocked() || isAlikeDead())
+			if (hasBlockActions() || isControlBlocked() || isAlikeDead() || isInsideZone(ZoneId.PEACE))
 			{
 				return;
 			}
 			
 			if (Config.ENABLE_AUTO_ITEM)
 			{
-				for (int itemId : _autoSupplyItems)
+				ITEMS: for (int itemId : _autoSupplyItems)
 				{
 					final ItemInstance item = _inventory.getItemByItemId(itemId);
 					if (item == null)
@@ -14231,6 +14232,16 @@ public class PlayerInstance extends Playable
 						removeAutoSupplyItem(itemId);
 						continue;
 					}
+					
+					for (ItemSkillHolder itemSkillHolder : item.getItem().getAllSkills())
+					{
+						final Skill skill = itemSkillHolder.getSkill();
+						if (isAffectedBySkill(skill.getId()) || hasSkillReuse(skill.getReuseHashCode()) || !skill.checkCondition(this, this, false))
+						{
+							continue ITEMS;
+						}
+					}
+					
 					final int reuseDelay = item.getReuseDelay();
 					if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
 					{
@@ -14277,7 +14288,7 @@ public class PlayerInstance extends Playable
 						removeAutoSkill(skillId);
 						continue;
 					}
-					if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
+					if (!isAffectedBySkill(skillId) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
 					{
 						// Summon check.
 						if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
