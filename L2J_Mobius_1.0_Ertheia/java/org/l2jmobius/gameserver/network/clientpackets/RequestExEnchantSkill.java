@@ -50,7 +50,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 	private SkillEnchantType _type;
 	private int _skillId;
 	private int _skillLevel;
-	private int _skillSubLevel ;
+	private int _skillSubLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -62,12 +62,12 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		if (level < 100)
 		{
 			_skillLevel = level;
-			_skillSubLevel  = 0;
+			_skillSubLevel = 0;
 		}
 		else
 		{
 			_skillLevel = client.getPlayer().getKnownSkill(_skillId).getLevel();
-			_skillSubLevel  = SkillEnchantConverter.levelToUnderground(level);
+			_skillSubLevel = SkillEnchantConverter.levelToUnderground(level);
 		}
 		return true;
 	}
@@ -75,7 +75,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((_skillId <= 0) || (_skillLevel <= 0) || (_skillSubLevel  < 0))
+		if ((_skillId <= 0) || (_skillLevel <= 0) || (_skillSubLevel < 0))
 		{
 			return;
 		}
@@ -131,7 +131,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		{
 			if (_type == SkillEnchantType.CHANGE)
 			{
-				final int group1 = (_skillSubLevel  % 1000);
+				final int group1 = (_skillSubLevel % 1000);
 				final int group2 = (skill.getSubLevel() % 1000);
 				if (group1 != group2)
 				{
@@ -139,14 +139,14 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if ((_type != SkillEnchantType.UNTRAIN) && ((skill.getSubLevel() + 1) != _skillSubLevel ))
+			else if ((_type != SkillEnchantType.UNTRAIN) && ((skill.getSubLevel() + 1) != _skillSubLevel))
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLevel  + " expected: " + (skill.getSubLevel() + 1));
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLevel + " expected: " + (skill.getSubLevel() + 1));
 				return;
 			}
 		}
 		
-		final EnchantSkillHolder enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(_skillSubLevel  % 1000);
+		final EnchantSkillHolder enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(_skillSubLevel % 1000);
 		if (_type != SkillEnchantType.UNTRAIN) // TODO: Fix properly
 		{
 			// Verify if player has all the ingredients
@@ -185,7 +185,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			{
 				if (Rnd.get(100) <= enchantSkillHolder.getChance(_type))
 				{
-					final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel );
+					final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 					if (Config.LOG_SKILL_ENCHANTS)
 					{
 						LOGGER_ENCHANT.log(Level.INFO, "Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
@@ -224,7 +224,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			{
 				if (Rnd.get(100) <= enchantSkillHolder.getChance(_type))
 				{
-					final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel );
+					final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 					if (Config.LOG_SKILL_ENCHANTS)
 					{
 						LOGGER_ENCHANT.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
@@ -256,14 +256,14 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 				// TODO: Fix properly
 				final Skill enchantedSkill;
 				final SystemMessage sm;
-				if ((_skillSubLevel  % 1000) < 1)
+				if ((_skillSubLevel % 1000) < 1)
 				{
 					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
 					sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
 				}
 				else
 				{
-					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel );
+					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 					sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
 				}
 				player.removeSkill(enchantedSkill);

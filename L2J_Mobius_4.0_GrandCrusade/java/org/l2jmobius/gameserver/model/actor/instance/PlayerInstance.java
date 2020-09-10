@@ -1595,11 +1595,11 @@ public class PlayerInstance extends Playable
 	 * Updates the shortcut bars with the new skill.
 	 * @param skillId the skill Id to search and update.
 	 * @param skillLevel the skill level to update.
-	 * @param skillSubLevel  the skill sub level to update.
+	 * @param skillSubLevel the skill sub level to update.
 	 */
-	public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel )
+	public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel)
 	{
-		_shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel );
+		_shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
 	}
 	
 	/**
@@ -7257,7 +7257,7 @@ public class PlayerInstance extends Playable
 						statement.setInt(1, getObjectId());
 						statement.setInt(2, t.getSkillId());
 						statement.setInt(3, t.getSkillLevel());
-						statement.setInt(4, t.getSkillSubLevel ());
+						statement.setInt(4, t.getSkillSubLevel());
 						statement.setInt(5, -1);
 						statement.setLong(6, t.getReuse());
 						statement.setDouble(7, t.getStamp());

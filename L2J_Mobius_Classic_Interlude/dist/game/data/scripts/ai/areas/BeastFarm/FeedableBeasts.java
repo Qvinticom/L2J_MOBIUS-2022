@@ -469,7 +469,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				{
 					_feedInfo.remove(npc.getObjectId());
 				}
-
+				
 				// spawn the new mob
 				final Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
 				

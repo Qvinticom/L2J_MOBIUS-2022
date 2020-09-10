@@ -121,7 +121,7 @@ public class TimeStamp
 	 * Gets the skill sub level.
 	 * @return the skill level
 	 */
-	public int getSkillSubLevel ()
+	public int getSkillSubLevel()
 	{
 		return _id3;
 	}

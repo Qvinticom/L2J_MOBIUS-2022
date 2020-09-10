@@ -33,7 +33,7 @@ public class RequestDispel implements IClientIncomingPacket
 	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
-	private int _skillSubLevel ;
+	private int _skillSubLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -41,7 +41,7 @@ public class RequestDispel implements IClientIncomingPacket
 		_objectId = packet.readD();
 		_skillId = packet.readD();
 		_skillLevel = packet.readH();
-		_skillSubLevel  = packet.readH();
+		_skillSubLevel = packet.readH();
 		return true;
 	}
 	
@@ -57,7 +57,7 @@ public class RequestDispel implements IClientIncomingPacket
 		{
 			return;
 		}
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel );
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 		if (skill == null)
 		{
 			return;

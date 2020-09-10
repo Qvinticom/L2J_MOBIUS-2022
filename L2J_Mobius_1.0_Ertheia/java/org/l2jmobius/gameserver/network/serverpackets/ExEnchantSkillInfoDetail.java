@@ -34,12 +34,12 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private final int _skillLevel;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
-	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel , PlayerInstance player)
+	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel, PlayerInstance player)
 	{
 		_type = type;
 		_skillId = skillId;
-		_skillLevel = skillSubLevel  > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLevel ) : skillLevel;
-		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLevel  % 1000);
+		_skillLevel = skillSubLevel > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLevel) : skillLevel;
+		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLevel % 1000);
 	}
 	
 	@Override

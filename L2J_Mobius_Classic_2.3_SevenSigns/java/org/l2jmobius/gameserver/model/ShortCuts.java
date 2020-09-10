@@ -219,16 +219,16 @@ public class ShortCuts implements IRestorable
 	 * Updates the shortcut bars with the new skill.
 	 * @param skillId the skill Id to search and update.
 	 * @param skillLevel the skill level to update.
-	 * @param skillSubLevel  the skill sub level to update.
+	 * @param skillSubLevel the skill sub level to update.
 	 */
-	public synchronized void updateShortCuts(int skillId, int skillLevel, int skillSubLevel )
+	public synchronized void updateShortCuts(int skillId, int skillLevel, int skillSubLevel)
 	{
 		// Update all the shortcuts for this skill
 		for (Shortcut sc : _shortCuts.values())
 		{
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
-				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel , 1);
+				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel, 1);
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

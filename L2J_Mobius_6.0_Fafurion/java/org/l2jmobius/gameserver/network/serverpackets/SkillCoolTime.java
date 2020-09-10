@@ -39,7 +39,7 @@ public class SkillCoolTime implements IClientOutgoingPacket
 		_currentTime = System.currentTimeMillis();
 		for (TimeStamp ts : player.getSkillReuseTimeStamps().values())
 		{
-			if ((_currentTime < ts.getStamp()) && !SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLevel(), ts.getSkillSubLevel ()).isNotBroadcastable())
+			if ((_currentTime < ts.getStamp()) && !SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLevel(), ts.getSkillSubLevel()).isNotBroadcastable())
 			{
 				_skillReuseTimeStamps.add(ts);
 			}

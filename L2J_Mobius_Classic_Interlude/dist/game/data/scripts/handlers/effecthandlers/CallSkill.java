@@ -59,7 +59,7 @@ public class CallSkill extends AbstractEffect
 				final int knownLevel = effector.getSkillLevel(_skill.getSkillId());
 				if (knownLevel > 0)
 				{
-					triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), knownLevel, _skill.getSkillSubLevel ());
+					triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), knownLevel, _skill.getSkillSubLevel());
 				}
 				else
 				{
