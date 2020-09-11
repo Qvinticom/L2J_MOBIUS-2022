@@ -19,33 +19,26 @@ package org.l2jmobius.commons.database;
 import java.sql.Connection;
 import java.util.logging.Logger;
 
-import com.zaxxer.hikari.HikariDataSource;
+import org.mariadb.jdbc.MariaDbPoolDataSource;
 
 import org.l2jmobius.Config;
 
 /**
  * @author Mobius
+ * @version November 10th 2018
  */
 public class DatabaseFactory
 {
 	private static final Logger LOGGER = Logger.getLogger(DatabaseFactory.class.getName());
 	
-	private static final HikariDataSource _hds = new HikariDataSource();
+	private static final MariaDbPoolDataSource DATABASE_POOL = new MariaDbPoolDataSource(Config.DATABASE_URL + "&user=" + Config.DATABASE_LOGIN + "&password=" + Config.DATABASE_PASSWORD + "&minPoolSize=" + Config.DATABASE_MAX_CONNECTIONS + "&maxPoolSize=" + Config.DATABASE_MAX_CONNECTIONS + "&maxIdleTime=60");
 	
 	public static void init()
 	{
-		_hds.setDriverClassName(Config.DATABASE_DRIVER);
-		_hds.setJdbcUrl(Config.DATABASE_URL);
-		_hds.setUsername(Config.DATABASE_LOGIN);
-		_hds.setPassword(Config.DATABASE_PASSWORD);
-		_hds.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
-		_hds.setConnectionTimeout(600000);
-		_hds.setMaxLifetime(1200000);
-		
 		// Test if connection is valid.
 		try
 		{
-			_hds.getConnection().close();
+			DATABASE_POOL.getConnection().close();
 			LOGGER.info("Database: Initialized.");
 		}
 		catch (Exception e)
@@ -61,7 +54,7 @@ public class DatabaseFactory
 		{
 			try
 			{
-				con = _hds.getConnection();
+				con = DATABASE_POOL.getConnection();
 			}
 			catch (Exception e)
 			{
@@ -75,7 +68,7 @@ public class DatabaseFactory
 	{
 		try
 		{
-			_hds.close();
+			DATABASE_POOL.close();
 		}
 		catch (Exception e)
 		{
