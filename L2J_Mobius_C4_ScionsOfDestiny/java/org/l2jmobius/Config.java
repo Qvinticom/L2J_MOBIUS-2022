@@ -454,6 +454,7 @@ public class Config
 	public static int CHAMPION_REWARD_ID;
 	public static int CHAMPION_REWARD_QTY;
 	public static String CHAMP_TITLE;
+	public static int CHAMPION_AURA;
 	
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
@@ -1624,6 +1625,11 @@ public class Config
 		CHAMPION_REWARD_ID = championConfig.getInt("ChampionRewardItemID", 6393);
 		CHAMPION_REWARD_QTY = championConfig.getInt("ChampionRewardItemQty", 1);
 		CHAMP_TITLE = championConfig.getString("ChampionTitle", "Champion");
+		CHAMPION_AURA = championConfig.getInt("ChampionAura", 0);
+		if ((CHAMPION_AURA < 0) || (CHAMPION_AURA > 2))
+		{
+			CHAMPION_AURA = 0;
+		}
 	}
 	
 	public static void loadCustomMailManagerConfig()

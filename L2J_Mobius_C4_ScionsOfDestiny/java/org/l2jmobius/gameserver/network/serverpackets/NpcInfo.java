@@ -266,7 +266,15 @@ public class NpcInfo extends GameServerPacket
 		writeD(_allyCrest); // C2
 		writeC(0x00); // C2
 		
-		writeC(0x00); // C3 team circle 1-blue, 2-red
+		if (Config.CHAMPION_ENABLE)
+		{
+			writeC(_creature.isChampion() ? Config.CHAMPION_AURA : 0);
+		}
+		else
+		{
+			writeC(0x00); // C3 team circle 1-blue, 2-red
+		}
+		
 		writeF(_collisionRadius);
 		writeF(_collisionHeight);
 		writeD(0x00); // C4
