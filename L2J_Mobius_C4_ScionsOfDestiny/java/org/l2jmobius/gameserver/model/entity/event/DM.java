@@ -532,7 +532,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMinPlayers(int players)
 	{
-		return _minPlayers > players;
+		return _minPlayers <= players;
 	}
 	
 	/**
@@ -542,7 +542,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMaxPlayers(int players)
 	{
-		return _maxPlayers <= players;
+		return _maxPlayers > players;
 	}
 	
 	/**
