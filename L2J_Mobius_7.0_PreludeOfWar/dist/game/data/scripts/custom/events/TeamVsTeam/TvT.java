@@ -320,7 +320,7 @@ public class TvT extends Event
 				BLUE_SCORE = 0;
 				RED_SCORE = 0;
 				// Initialize scoreboard.
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.INITIALIZE, Util.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.INITIALIZE, Util.sortByValue(PLAYER_SCORES, true)));
 				// Schedule start.
 				startQuestTimer("5", (WAIT_TIME * 60000) - 5000, null, null);
 				startQuestTimer("4", (WAIT_TIME * 60000) - 4000, null, null);
@@ -422,7 +422,7 @@ public class TvT extends Event
 			}
 			case "ScoreBoard":
 			{
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.FINISH, Util.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.FINISH, Util.sortByValue(PLAYER_SCORES, true)));
 				break;
 			}
 			case "TeleportOut":
@@ -785,7 +785,7 @@ public class TvT extends Event
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
 				BLUE_SCORE++;
 				broadcastScoreMessage();
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, Util.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, Util.sortByValue(PLAYER_SCORES, true)));
 			}
 			// Confirm Red team kill.
 			if ((killer.getTeam() == Team.RED) && (killedPlayer.getTeam() == Team.BLUE))
@@ -793,7 +793,7 @@ public class TvT extends Event
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
 				RED_SCORE++;
 				broadcastScoreMessage();
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, Util.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, Util.sortByValue(PLAYER_SCORES, true)));
 			}
 			// Auto release after 10 seconds.
 			startQuestTimer("ResurrectPlayer", 10000, null, killedPlayer);
