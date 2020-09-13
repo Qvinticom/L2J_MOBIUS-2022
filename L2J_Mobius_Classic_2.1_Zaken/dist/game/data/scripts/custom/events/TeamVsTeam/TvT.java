@@ -22,8 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.Team;
+import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
@@ -143,11 +145,18 @@ public class TvT extends Event
 			{
 				if (canRegister(player))
 				{
-					PLAYER_LIST.add(player);
-					PLAYER_SCORES.put(player, 0);
-					player.setOnCustomEvent(true);
-					addLogoutListener(player);
-					htmltext = "registration-success.html";
+					if ((Config.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP == 0) || AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.L2EVENT_ID, player, Config.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP))
+					{
+						PLAYER_LIST.add(player);
+						PLAYER_SCORES.put(player, 0);
+						player.setOnCustomEvent(true);
+						addLogoutListener(player);
+						htmltext = "registration-success.html";
+					}
+					else
+					{
+						htmltext = "registration-ip.html";
+					}
 				}
 				else
 				{
@@ -157,6 +166,11 @@ public class TvT extends Event
 			}
 			case "CancelParticipation":
 			{
+				// Remove the player from the IP count
+				if (Config.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP > 0)
+				{
+					AntiFeedManager.getInstance().removePlayer(AntiFeedManager.L2EVENT_ID, player);
+				}
 				PLAYER_LIST.remove(player);
 				PLAYER_SCORES.remove(player);
 				removeListeners(player);
@@ -820,6 +834,12 @@ public class TvT extends Event
 			{
 				timer.cancel();
 			}
+		}
+		// Register the event at AntiFeedManager and clean it for just in case if the event is already registered
+		if (Config.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP > 0)
+		{
+			AntiFeedManager.getInstance().registerEvent(AntiFeedManager.L2EVENT_ID);
+			AntiFeedManager.getInstance().clear(AntiFeedManager.L2EVENT_ID);
 		}
 		// Clear player lists.
 		PLAYER_LIST.clear();
