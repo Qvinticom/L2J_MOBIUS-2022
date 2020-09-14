@@ -46,9 +46,15 @@ public class ExPVPMatchCCRecord implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PVP_MATCH_CCRECORD.writeId(packet);
 		packet.writeD(_state); // 0 - initialize, 1 - update, 2 - finish
-		packet.writeD(_players.size());
+		packet.writeD(Math.min(_players.size(), 25));
+		int counter = 0;
 		for (Entry<PlayerInstance, Integer> entry : _players.entrySet())
 		{
+			counter++;
+			if (counter > 25)
+			{
+				break;
+			}
 			packet.writeS(entry.getKey().getName());
 			packet.writeD(entry.getValue());
 		}
