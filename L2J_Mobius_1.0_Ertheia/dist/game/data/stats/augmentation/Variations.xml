@@ -5133,6 +5133,34 @@
 		</variation>
 		<!-- Life Stone Instilled with Giants' Power -->
 		<variation mineralId="36731">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<option id="30268" chance="4.8" /> <!-- Passive: When equipped, returns 20% of received damage back to the enemy. -->
+					<option id="30269" chance="8.4" /> <!-- Active: When used, increases P. Critical Damage by 15% for 5 minutes. -->
+					<option id="30270" chance="4.4" /> <!-- Passive: When equipped, increases Damage Reflect Resistance by 50%. -->
+					<option id="30271" chance="10.2" /> <!-- Active: When used, increases Max HP and Max CP by 10% for 5 minutes. -->
+					<option id="30272" chance="10.2" /> <!-- Active: When used, makes invincible for 30 seconds. The effect will be cancelled when you attack. -->
+					<option id="30273" chance="10.4" /> <!-- Active: When used, prevents you dying for 10 seconds. Can be used when HP is 20% or below. -->
+					<option id="30274" chance="16.2" /> <!-- Active: Prevents the target using physical/magical skills for 5 seconds. -->
+					<option id="30275" chance="14.6" /> <!-- Active: Inflicts Sleep on the target for 5 seconds. -->
+					<option id="30276" chance="10.8" /> <!-- Active: Decreases the target's Atk. Spd. And Casting Spd. By 50% for 10 seconds. -->
+					<option id="30277" chance="10.0" /> <!-- Active: Increases the target's Critical Damage received and the chance of receiving critical attacks by 90% for 10 seconds. -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<option id="30268" chance="4.8" /> <!-- Passive: When equipped, returns 20% of received damage back -> the enemy. -->
+					<option id="30269" chance="8.4" /> <!-- Active: When used, increases P. Critical Damage by 15% for 5 minutes. -->
+					<option id="30270" chance="4.4" /> <!-- Passive: When equipped, increases Damage Reflect Resistance by 50%. -->
+					<option id="30271" chance="10.2" /> <!-- Active: When used, increases Max HP and Max CP by 10% for 5 minutes. -->
+					<option id="30272" chance="10.2" /> <!-- Active: When used, makes invincible for 30 seconds. The effect will be cancelled when you attack. -->
+					<option id="30273" chance="10.4" /> <!-- Active: When used, prevents you dying for 10 seconds. Can be used when HP is 20% or below. -->
+					<option id="30274" chance="16.2" /> <!-- Active: Prevents the target using physical/magical skills for 5 seconds. -->
+					<option id="30275" chance="14.6" /> <!-- Active: Inflicts Sleep on the target for 5 seconds. -->
+					<option id="30276" chance="10.8" /> <!-- Active: Decreases the target's Atk. Spd. And Casting Spd. By 50% for 10 seconds. -->
+					<option id="30277" chance="10.0" /> <!-- Active: Increases the target's Critical Damage received and the chance of receiving critical attacks by 90% for 10 seconds. -->
+				</optionCategory>
+			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="100.0">
 					<option id="30268" chance="4.8" /> <!-- Passive: When equipped, returns 20% of received damage back to the enemy. -->
