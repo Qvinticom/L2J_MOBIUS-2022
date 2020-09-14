@@ -318,7 +318,7 @@ public class Q334_TheWishingPotion extends Quest
 		final int npcId = npc.getNpcId();
 		final int id = st.getState();
 		int cond = 0;
-		if (id != 1)
+		if (id != 0)
 		{
 			cond = st.getInt("cond");
 		}
@@ -458,7 +458,7 @@ public class Q334_TheWishingPotion extends Quest
 				}
 				else if ((Rnd.get(100) < element[6]) && (st.getQuestItemsCount(element[4]) < element[5]))
 				{
-					st.giveItems(element[4], Rnd.get(element[7], element[7]));
+					st.giveItems(element[4], element[7]);
 					if (cond == 3)
 					{
 						checkIngr(st);
