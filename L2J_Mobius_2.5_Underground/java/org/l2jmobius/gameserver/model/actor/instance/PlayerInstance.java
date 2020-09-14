@@ -10096,10 +10096,29 @@ public class PlayerInstance extends Playable
 	public void doRevive()
 	{
 		super.doRevive();
+		
 		sendPacket(new EtcStatusUpdate(this));
 		_revivePet = false;
 		_reviveRequested = 0;
 		_revivePower = 0;
+		
+		// Teleport summons to player.
+		if (isInsideZone(ZoneId.PEACE) && hasSummon())
+		{
+			final PetInstance pet = getPet();
+			if (pet != null)
+			{
+				pet.teleToLocation(this, true);
+			}
+			for (Summon summon : getServitors().values())
+			{
+				if (!summon.isInsideZone(ZoneId.SIEGE))
+				{
+					summon.teleToLocation(this, true);
+				}
+			}
+		}
+		
 		if (isMounted())
 		{
 			startFeed(_mountNpcId);

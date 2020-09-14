@@ -10510,19 +10510,29 @@ public class PlayerInstance extends Playable
 	public void doRevive()
 	{
 		super.doRevive();
+		
 		updateEffectIcons();
 		sendPacket(new EtcStatusUpdate(this));
 		_revivePet = false;
 		_reviveRequested = 0;
 		_revivePower = 0;
+		
+		// Teleport summon to player.
+		if (isInsideZone(ZoneId.PEACE) && (_summon != null) && !_summon.isInsideZone(ZoneId.SIEGE))
+		{
+			_summon.teleToLocation(getLocation(), true);
+		}
+		
 		if (isMounted())
 		{
 			startFeed(_mountNpcId);
 		}
+		
 		if (isInParty() && _party.isInDimensionalRift() && !DimensionalRiftManager.getInstance().checkIfInPeaceZone(getX(), getY(), getZ()))
 		{
 			_party.getDimensionalRift().memberRessurected(this);
 		}
+		
 		if (getInstanceId() > 0)
 		{
 			final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
