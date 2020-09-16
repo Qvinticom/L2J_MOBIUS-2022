@@ -41,6 +41,10 @@ public class GuardKnownList extends AttackableKnownList
 	@Override
 	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
+		if (!Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
+		{
+			return false;
+		}
 		if (!super.addKnownObject(object, dropper))
 		{
 			return false;
