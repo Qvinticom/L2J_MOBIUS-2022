@@ -67,15 +67,26 @@ public class RequestBuyItem extends GameClientPacket
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = readD();
-			_items[(i * 2) + 0] = itemId;
-			final long cnt = readD();
-			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
+			if (itemId < 1)
 			{
 				_count = 0;
 				return;
 			}
+			_items[(i * 2) + 0] = itemId;
 			
-			_items[(i * 2) + 1] = (int) cnt;
+			final int count = readD();
+			if ((count > Integer.MAX_VALUE) || (count < 1))
+			{
+				_count = 0;
+				return;
+			}
+			if (count > 10000) // Count check.
+			{
+				getClient().getPlayer().sendMessage("You cannot buy more than 10.000 items.");
+				_count = 0;
+				return;
+			}
+			_items[(i * 2) + 1] = count;
 		}
 	}
 	
