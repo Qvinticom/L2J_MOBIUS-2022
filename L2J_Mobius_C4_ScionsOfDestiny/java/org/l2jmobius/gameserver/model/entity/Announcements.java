@@ -138,7 +138,10 @@ public class Announcements
 			String line = null;
 			reader = new FileReader(file);
 			lnr = new LineNumberReader(reader);
-			
+			if (lnr.read() == -1)
+			{
+				return;
+			}
 			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, "\n\r");
