@@ -18,10 +18,13 @@ package org.l2jmobius.gameserver.network.clientpackets.dailymission;
 
 import java.util.Collection;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
@@ -56,6 +59,14 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			return;
 		}
 		
+		if (player.hasRequest(RewardRequest.class))
+		{
+			LOGGER.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
+			Disconnection.of(player).defaultSequence(true);
+			return;
+		}
+		player.addRequest(new RewardRequest(player));
+		
 		for (DailyMissionDataHolder holder : rewards)
 		{
 			if (holder.isDisplayable(player))
@@ -66,5 +77,10 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 		
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+		
+		ThreadPool.schedule(() ->
+		{
+			player.removeRequest(RewardRequest.class);
+		}, 50);
 	}
 }
