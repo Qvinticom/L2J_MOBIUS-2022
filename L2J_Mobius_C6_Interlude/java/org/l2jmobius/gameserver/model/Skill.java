@@ -2066,7 +2066,7 @@ public abstract class Skill
 					final int radius = _skillRadius;
 					final PlayerInstance player = (PlayerInstance) creature;
 					final Clan clan = player.getClan();
-					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpose, the caster is not included
+					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpse, the caster is not included
 					{
 						if (player.isInOlympiadMode())
 						{
@@ -2090,7 +2090,7 @@ public abstract class Skill
 							{
 								continue;
 							}
-							if (newPlayer.isDead())
+							if (newPlayer.isDead() && (_targetType != SkillTargetType.TARGET_CORPSE_ALLY))
 							{
 								continue;
 							}
