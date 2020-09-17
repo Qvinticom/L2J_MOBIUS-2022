@@ -973,6 +973,10 @@ public class Party extends AbstractPlayerGroup
 	@Override
 	public PlayerInstance getLeader()
 	{
+		if (_members.isEmpty())
+		{
+			return null;
+		}
 		return _members.get(0);
 	}
 	
