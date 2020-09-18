@@ -228,6 +228,10 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 		}
 		
 		st = partyMember.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(SEALED_MYSTERIOUS_STONE, 1, 1, 1000))
 		{

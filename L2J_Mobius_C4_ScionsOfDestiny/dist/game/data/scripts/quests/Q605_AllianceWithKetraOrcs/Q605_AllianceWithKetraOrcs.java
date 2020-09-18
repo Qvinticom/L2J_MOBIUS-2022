@@ -353,6 +353,10 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 		}
 		
 		st = partyMember.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
 		
 		final int cond = st.getInt("cond");
 		if (cond == 6)

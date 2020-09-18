@@ -214,6 +214,10 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 		}
 		
 		st = partyMember.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(MYSTERIOUS_BOOK, 1, 1, 1000))
 		{
