@@ -73,7 +73,7 @@ public abstract class AbstractPlayerGroup
 		{
 			return 0;
 		}
-		return getLeader().getObjectId();
+		return leader.getObjectId();
 	}
 	
 	/**
