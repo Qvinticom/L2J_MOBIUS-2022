@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.model.skills;
  */
 public enum AbnormalType
 {
+	ABILITY_CHANGE,
 	ABNORMAL_INVINCIBILITY,
 	ABNORMAL_ITEM,
 	AB_HAWK_EYE,

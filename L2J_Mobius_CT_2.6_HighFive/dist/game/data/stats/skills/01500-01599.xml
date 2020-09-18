@@ -1721,35 +1721,31 @@
 	</skill>
 	<skill id="1557" levels="1" name="Servitor Share">
 		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./P. Def. by 50%, M. Atk./M. Def. by 25%, Max HP/MP by 10%, Critical Rate by 20%, Atk. Spd. by 10%, and Casting Spd. by 3%. -->
+		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="castRange" val="400" />
+		<set name="abnormalType" val="ABILITY_CHANGE" />
 		<set name="effectPoint" val="669" />
-		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1557" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLevel" val="83" />
 		<set name="mpConsume" val="35" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
-		<set name="targetType" val="SERVITOR" />
+		<set name="targetType" val="SELF" />
+		<set name="canBeDispeled" val="false" />
 		<for>
-			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.5" />
-				<share stat="pDef" val="0.5" />
-				<share stat="mAtk" val="0.25" />
-				<share stat="mDef" val="0.25" />
-				<share stat="maxHp" val="0.1" />
-				<share stat="maxMp" val="0.1" />
-				<share stat="critRate" val="0.2" />
-				<share stat="pAtkSpd" val="0.1" />
-				<share stat="mAtkSpd" val="0.03" />
+				<param pAtk="1.5" />
+				<param mAtk="1.25" />
+				<param pDef="1.5" />
+				<param mDef="1.25" />
+				<param maxHp="1.1" />
+				<param maxMp="1.1" />
+				<param pAtkSpd="1.1" />
+				<param mAtkSpd="1.03" />
+				<param critRate="1.2" />
 			</effect>
 		</for>
-		<selfEffects>
-			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
-		</selfEffects>
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
 		<!-- Creates a tear in the dimension to inflict damage on the enemy with 57 Power added to M. Atk. Over-hit is possible. -->

@@ -16,14 +16,16 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Servitor Share effect implementation.<br>
@@ -33,27 +35,16 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public class ServitorShare extends AbstractEffect
 {
-	private static final class ScheduledEffectExitTask implements Runnable
-	{
-		private final Creature _effected;
-		private final int _skillId;
-		
-		public ScheduledEffectExitTask(Creature effected, int skillId)
-		{
-			_effected = effected;
-			_skillId = skillId;
-		}
-		
-		@Override
-		public void run()
-		{
-			_effected.stopSkillEffects(false, _skillId);
-		}
-	}
+	private final Map<Stat, Double> _stats = new HashMap<>(9);
 	
 	public ServitorShare(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
+		
+		for (String key : params.getSet().keySet())
+		{
+			_stats.put(Stat.valueOfXml(key), params.getDouble(key, 1.));
+		}
 	}
 	
 	@Override
@@ -69,12 +60,33 @@ public class ServitorShare extends AbstractEffect
 	}
 	
 	@Override
+	public void onStart(BuffInfo info)
+	{
+		super.onStart(info);
+		
+		info.getEffected().getActingPlayer().setServitorShare(_stats);
+		if (info.getEffected().getActingPlayer().getSummon() != null)
+		{
+			info.getEffected().getActingPlayer().getSummon().broadcastInfo();
+			info.getEffected().getActingPlayer().getSummon().getStatus().startHpMpRegeneration();
+		}
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
-		final Creature effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
-		if (effected != null)
+		info.getEffected().getActingPlayer().setServitorShare(null);
+		if (info.getEffected().getSummon() != null)
 		{
-			ThreadPool.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			if (info.getEffected().getSummon().getCurrentHp() > info.getEffected().getSummon().getMaxHp())
+			{
+				info.getEffected().getSummon().setCurrentHp(info.getEffected().getSummon().getMaxHp());
+			}
+			if (info.getEffected().getSummon().getCurrentMp() > info.getEffected().getSummon().getMaxMp())
+			{
+				info.getEffected().getSummon().setCurrentMp(info.getEffected().getSummon().getMaxMp());
+			}
+			info.getEffected().getSummon().broadcastInfo();
 		}
 	}
 }

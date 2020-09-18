@@ -827,6 +827,8 @@ public class PlayerInstance extends Playable
 	
 	private Future<?> _autoSaveTask = null;
 	
+	private Map<Stat, Double> _servitorShare;
+	
 	/**
 	 * Creates a player.
 	 * @param objectId the object ID
@@ -14549,5 +14551,27 @@ public class PlayerInstance extends Playable
 		{
 			_questTimers.remove(questTimer);
 		}
+	}
+	
+	public void setServitorShare(Map<Stat, Double> map)
+	{
+		_servitorShare = map;
+	}
+	
+	public double getServitorShareBonus(Stat stat)
+	{
+		final Map<Stat, Double> stats = _servitorShare;
+		if (stats == null)
+		{
+			return 1.0d;
+		}
+		
+		final Double val = stats.get(stat);
+		if (val == null)
+		{
+			return 1.0d;
+		}
+		
+		return val;
 	}
 }

@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.EffectScope;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -443,5 +444,59 @@ public class ServitorInstance extends Summon implements Runnable
 		
 		sendPacket(new SetSummonRemainTime(_lifeTime, _lifeTimeRemaining));
 		updateEffectIcons();
+	}
+	
+	@Override
+	public double getMAtk(Creature target, Skill skill)
+	{
+		return super.getMAtk(target, skill) + (getActingPlayer().getMAtk(target, skill) * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_ATTACK) - 1.0));
+	}
+	
+	@Override
+	public double getMDef(Creature target, Skill skill)
+	{
+		return super.getMDef(target, skill) + (getActingPlayer().getMDef(target, skill) * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_DEFENCE) - 1.0));
+	}
+	
+	@Override
+	public double getPAtk(Creature target)
+	{
+		return super.getPAtk(target) + (getActingPlayer().getPAtk(target) * (getActingPlayer().getServitorShareBonus(Stat.POWER_ATTACK) - 1.0));
+	}
+	
+	@Override
+	public double getPDef(Creature target)
+	{
+		return super.getPDef(target) + (getActingPlayer().getPDef(target) * (getActingPlayer().getServitorShareBonus(Stat.POWER_DEFENCE) - 1.0));
+	}
+	
+	@Override
+	public int getMAtkSpd()
+	{
+		return (int) (super.getMAtkSpd() + (getActingPlayer().getMAtkSpd() * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_ATTACK_SPEED) - 1.0)));
+	}
+	
+	@Override
+	public int getMaxHp()
+	{
+		return (int) (super.getMaxHp() + (getActingPlayer().getMaxHp() * (getActingPlayer().getServitorShareBonus(Stat.MAX_HP) - 1.0)));
+	}
+	
+	@Override
+	public int getMaxMp()
+	{
+		return (int) (super.getMaxMp() + (getActingPlayer().getMaxMp() * (getActingPlayer().getServitorShareBonus(Stat.MAX_MP) - 1.0)));
+	}
+	
+	@Override
+	public int getCriticalHit(Creature target, Skill skill)
+	{
+		return (int) (super.getCriticalHit(target, skill) + ((getActingPlayer().getCriticalHit(target, skill)) * (getActingPlayer().getServitorShareBonus(Stat.CRITICAL_RATE) - 1.0)));
+	}
+	
+	@Override
+	public double getPAtkSpd()
+	{
+		return super.getPAtkSpd() + (getActingPlayer().getPAtkSpd() * (getActingPlayer().getServitorShareBonus(Stat.POWER_ATTACK_SPEED) - 1.0));
 	}
 }
