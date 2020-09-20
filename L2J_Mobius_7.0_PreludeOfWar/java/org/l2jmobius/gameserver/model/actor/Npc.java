@@ -85,6 +85,8 @@ import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.variables.NpcVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import org.l2jmobius.gameserver.model.zone.type.TaxZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -552,6 +554,20 @@ public class Npc extends Creature
 	
 	public ClanHall getClanHall()
 	{
+		if (getId() == 33360) // Provisional Hall Manager
+		{
+			for (ZoneType zone : ZoneManager.getInstance().getZones(this))
+			{
+				if (zone instanceof ClanHallZone)
+				{
+					final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(((ClanHallZone) zone).getResidenceId());
+					if (clanHall != null)
+					{
+						return clanHall;
+					}
+				}
+			}
+		}
 		return ClanHallData.getInstance().getClanHallByNpcId(getId());
 	}
 	

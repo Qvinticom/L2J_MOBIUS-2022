@@ -70,7 +70,7 @@
 								<xs:restriction base="xs:token">
 									<xs:enumeration value="AUCTIONABLE" />
 									<xs:enumeration value="SIEGEABLE" />
-									<xs:enumeration value="INSTANCED" />
+									<xs:enumeration value="OTHER" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

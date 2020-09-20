@@ -82,6 +82,3 @@ Customs:
 -Newbie Helper buff support until 40 level
 -Test Server Helper NPCs
 -Fake players engine
-
-TODO:
--Provisional Clan Halls

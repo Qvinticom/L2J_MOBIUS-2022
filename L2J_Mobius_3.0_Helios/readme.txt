@@ -141,5 +141,4 @@ Others:
 -GeoEngine from aCis
 
 TODO:
--Provisional Clan Halls
 -Mystic Tavern instanced zones

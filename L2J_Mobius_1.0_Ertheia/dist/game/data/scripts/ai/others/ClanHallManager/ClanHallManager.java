@@ -62,6 +62,7 @@ public class ClanHallManager extends AbstractNpcAI
 		36721, 36723, 36725, 36727, // Gludio Outskirts
 		36729, 36731, 36733, 36735, // Dion Outskirts
 		36737, 36739, // Floran Village
+		33360, // Talking Island
 	};
 	// @formatter:on
 	// Misc
@@ -118,7 +119,21 @@ public class ClanHallManager extends AbstractNpcAI
 			{
 				case "index":
 				{
-					htmltext = isOwningClan(player, npc) ? "ClanHallManager-01.html" : "ClanHallManager-03.html";
+					if (isOwningClan(player, npc))
+					{
+						if (npc.getId() == 33360) // Provisional Hall Manager
+						{
+							htmltext = "ClanHallManager-01b.html";
+						}
+						else if (clanHall.getCostFailDay() == 0)
+						{
+							htmltext = "ClanHallManager-01.html";
+						}
+					}
+					else
+					{
+						htmltext = "ClanHallManager-03.html";
+					}
 					break;
 				}
 				case "manageDoors":
@@ -257,7 +272,14 @@ public class ClanHallManager extends AbstractNpcAI
 										case 2:
 										case 3:
 										{
-											((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
+											if (npc.getId() == 33360) // Provisional Hall Manager
+											{
+												((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(clanHall.getResidenceId() + "0" + (itemLevel - 1)));
+											}
+											else
+											{
+												((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
+											}
 											break;
 										}
 										default:
@@ -289,7 +311,14 @@ public class ClanHallManager extends AbstractNpcAI
 					{
 						if (!st.hasMoreTokens())
 						{
-							htmltext = "ClanHallManager-11.html";
+							if (npc.getId() == 33360) // Provisional Hall Manager
+							{
+								htmltext = "ClanHallManager-11b.html";
+							}
+							else
+							{
+								htmltext = "ClanHallManager-11.html";
+							}
 						}
 						else
 						{
@@ -435,7 +464,11 @@ public class ClanHallManager extends AbstractNpcAI
 		final ClanHall clanHall = npc.getClanHall();
 		if (isOwningClan(player, npc))
 		{
-			if (clanHall.getCostFailDay() == 0)
+			if (npc.getId() == 33360) // Provisional Hall Manager
+			{
+				htmltext = "ClanHallManager-01b.html";
+			}
+			else if (clanHall.getCostFailDay() == 0)
 			{
 				htmltext = "ClanHallManager-01.html";
 			}

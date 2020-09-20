@@ -120,4 +120,3 @@ Others:
 
 TODO:
 -Modify all skill levels/sublevels based on client
--Provisional Clan Halls
