@@ -189,7 +189,13 @@ public class ProvisionalHalls extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		return npc.getId() + "-01.html";
+		final Calendar calendar = Calendar.getInstance();
+		final int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+		if ((dayOfWeek != Calendar.SATURDAY) && (dayOfWeek != Calendar.SUNDAY))
+		{
+			return "33359-01.html";
+		}
+		return "33359-01b.html";
 	}
 	
 	public static void main(String[] args)
