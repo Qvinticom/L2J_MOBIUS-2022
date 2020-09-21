@@ -14199,9 +14199,19 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Skip thinking.
-			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
+			final WorldObject target = getTarget();
+			if ((target != null) && target.isMonster())
 			{
-				return;
+				final MonsterInstance monster = (MonsterInstance) target;
+				if ((monster.getTarget() == this) && !monster.isAlikeDead())
+				{
+					// Check if actually attacking.
+					if (hasAI() && getAI().isAutoAttacking() && !isAttackingNow() && !isCastingNow())
+					{
+						doAutoAttack(monster);
+					}
+					return;
+				}
 			}
 			
 			// Pickup.
