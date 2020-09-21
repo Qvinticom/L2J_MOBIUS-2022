@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 /**
  * @author JoeAlisson, Mobius
@@ -75,17 +76,17 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 				// auto supply
 				if (_room > 263)
 				{
-					player.removeAutoSupplyItem(item.getId());
+					AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
 				}
 				else // auto potion
 				{
-					player.removeAutoPotionItem(item.getId());
+					AutoUseTaskManager.getInstance().removeAutoPotionItem(player, item.getId());
 				}
 			}
 			// auto skill
 			if (skill != null)
 			{
-				player.removeAutoSkill(skill.getId());
+				AutoUseTaskManager.getInstance().removeAutoSkill(player, skill.getId());
 			}
 			return;
 		}
@@ -96,7 +97,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			// auto supply
 			if (Config.ENABLE_AUTO_ITEM && (item != null))
 			{
-				player.addAutoSupplyItem(item.getId());
+				AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
 			}
 		}
 		else
@@ -106,14 +107,14 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			{
 				if (Config.ENABLE_AUTO_POTION && (item != null) && item.isPotion())
 				{
-					player.addAutoPotionItem(item.getId());
+					AutoUseTaskManager.getInstance().addAutoPotionItem(player, item.getId());
 					return;
 				}
 			}
 			// auto skill
 			if (Config.ENABLE_AUTO_BUFF && (skill != null))
 			{
-				player.addAutoSkill(skill.getId());
+				AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
 			}
 		}
 	}

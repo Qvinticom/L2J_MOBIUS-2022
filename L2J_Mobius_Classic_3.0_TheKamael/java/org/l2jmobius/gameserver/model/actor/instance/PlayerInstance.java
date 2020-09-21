@@ -40,7 +40,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
@@ -223,10 +222,11 @@ import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.model.holders.AutoPlaySettingsHolder;
+import org.l2jmobius.gameserver.model.holders.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -267,7 +267,6 @@ import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
-import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -348,7 +347,6 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOtherDone;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -866,15 +864,8 @@ public class PlayerInstance extends Playable
 	private ElementalSpirit[] _spirits;
 	private ElementalType _activeElementalSpiritType;
 	
-	private ScheduledFuture<?> _autoPlayTask = null;
-	private ScheduledFuture<?> _autoUseTask = null;
-	private final AtomicBoolean _pickup = new AtomicBoolean();
-	private final AtomicBoolean _longRange = new AtomicBoolean();
-	private final AtomicBoolean _respectfulHunting = new AtomicBoolean();
-	private final AtomicInteger _autoPotionPercent = new AtomicInteger();
-	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
-	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
-	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
+	private final AutoPlaySettingsHolder _autoPlaySettings = new AutoPlaySettingsHolder();
+	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 	
 	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
 	
@@ -13714,16 +13705,6 @@ public class PlayerInstance extends Playable
 			_autoSaveTask.cancel(false);
 			_autoSaveTask = null;
 		}
-		if ((_autoPlayTask != null) && !_autoPlayTask.isDone() && !_autoPlayTask.isCancelled())
-		{
-			_autoPlayTask.cancel(false);
-			_autoPlayTask = null;
-		}
-		if ((_autoUseTask != null) && !_autoUseTask.isDone() && !_autoUseTask.isCancelled())
-		{
-			_autoUseTask.cancel(false);
-			_autoUseTask = null;
-		}
 		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isDone() && !_timedHuntingZoneFinishTask.isCancelled())
 		{
 			_timedHuntingZoneFinishTask.cancel(false);
@@ -14117,274 +14098,14 @@ public class PlayerInstance extends Playable
 		return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
 	}
 	
-	public void stopAutoPlayTask()
+	public AutoPlaySettingsHolder getAutoPlaySettings()
 	{
-		if ((_autoPlayTask != null) && !_autoPlayTask.isCancelled() && !_autoPlayTask.isDone())
-		{
-			_autoPlayTask.cancel(true);
-			_autoPlayTask = null;
-		}
+		return _autoPlaySettings;
 	}
 	
-	public void startAutoPlayTask(boolean pickup, boolean longRange, boolean respectfulHunting)
+	public AutoUseSettingsHolder getAutoUseSettings()
 	{
-		_pickup.set(pickup);
-		_longRange.set(longRange);
-		_respectfulHunting.set(respectfulHunting);
-		
-		if (_autoPlayTask != null)
-		{
-			return;
-		}
-		
-		_autoPlayTask = ThreadPool.scheduleAtFixedRate(() ->
-		{
-			if (!Config.ENABLE_AUTO_PLAY)
-			{
-				stopAutoPlayTask();
-				return;
-			}
-			
-			// Skip thinking.
-			final WorldObject target = getTarget();
-			if ((target != null) && target.isMonster())
-			{
-				final MonsterInstance monster = (MonsterInstance) target;
-				if ((monster.getTarget() == this) && !monster.isAlikeDead())
-				{
-					// Check if actually attacking.
-					if (hasAI() && getAI().isAutoAttacking() && !isAttackingNow() && !isCastingNow())
-					{
-						doAutoAttack(monster);
-					}
-					return;
-				}
-			}
-			
-			// Pickup.
-			if (_pickup.get())
-			{
-				for (ItemInstance droppedItem : World.getInstance().getVisibleObjectsInRange(this, ItemInstance.class, 200))
-				{
-					// Check if item is reachable.
-					if ((droppedItem == null) //
-						|| (!droppedItem.isSpawned()) //
-						|| !GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), droppedItem.getX(), droppedItem.getY(), droppedItem.getZ(), getInstanceWorld()))
-					{
-						continue;
-					}
-					
-					// Move to item.
-					if (calculateDistance2D(droppedItem) > 50)
-					{
-						moveToLocation(droppedItem.getX(), droppedItem.getY(), droppedItem.getZ(), 0);
-						return;
-					}
-					
-					// Try to pick it up.
-					if (!droppedItem.isProtected() || (droppedItem.getOwnerId() == getObjectId()))
-					{
-						doPickupItem(droppedItem);
-						return; // Avoid pickup being skipped.
-					}
-				}
-			}
-			
-			// Find target.
-			MonsterInstance monster = null;
-			double closestDistance = Double.MAX_VALUE;
-			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, _longRange.get() ? 1400 : 600))
-			{
-				// Skip unavailable monsters.
-				if ((nearby == null) || nearby.isAlikeDead())
-				{
-					continue;
-				}
-				// Check monster target.
-				if (_respectfulHunting.get() && (nearby.getTarget() != null) && (nearby.getTarget() != this))
-				{
-					continue;
-				}
-				// Check if monster is reachable.
-				if (nearby.isAutoAttackable(this) //
-					&& GeoEngine.getInstance().canSeeTarget(this, nearby)//
-					&& GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), nearby.getX(), nearby.getY(), nearby.getZ(), getInstanceWorld()))
-				{
-					final double monsterDistance = calculateDistance2D(nearby);
-					if (monsterDistance < closestDistance)
-					{
-						monster = nearby;
-						closestDistance = monsterDistance;
-					}
-				}
-			}
-			
-			// New target was assigned.
-			if (monster != null)
-			{
-				setTarget(monster);
-				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
-			}
-		}, 0, 1000);
-	}
-	
-	public void stopAutoUseTask()
-	{
-		if ((_autoUseTask != null) && !_autoUseTask.isCancelled() && !_autoUseTask.isDone())
-		{
-			_autoUseTask.cancel(true);
-			_autoUseTask = null;
-		}
-	}
-	
-	private void startAutoUseTask()
-	{
-		if (_autoUseTask != null)
-		{
-			return;
-		}
-		
-		_autoUseTask = ThreadPool.scheduleAtFixedRate(() ->
-		{
-			if (hasBlockActions() || isControlBlocked() || isAlikeDead() || isInsideZone(ZoneId.PEACE))
-			{
-				return;
-			}
-			
-			if (Config.ENABLE_AUTO_ITEM)
-			{
-				ITEMS: for (int itemId : _autoSupplyItems)
-				{
-					final ItemInstance item = _inventory.getItemByItemId(itemId);
-					if (item == null)
-					{
-						removeAutoSupplyItem(itemId);
-						continue;
-					}
-					
-					for (ItemSkillHolder itemSkillHolder : item.getItem().getAllSkills())
-					{
-						final Skill skill = itemSkillHolder.getSkill();
-						if (isAffectedBySkill(skill.getId()) || hasSkillReuse(skill.getReuseHashCode()) || !skill.checkCondition(this, this, false))
-						{
-							continue ITEMS;
-						}
-					}
-					
-					final int reuseDelay = item.getReuseDelay();
-					if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
-					{
-						final EtcItem etcItem = item.getEtcItem();
-						final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
-						if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
-						{
-							addTimeStampItem(item, reuseDelay);
-						}
-					}
-				}
-			}
-			
-			if (Config.ENABLE_AUTO_POTION && (getCurrentHpPercent() <= _autoPotionPercent.get()))
-			{
-				for (int itemId : _autoPotionItems)
-				{
-					final ItemInstance item = _inventory.getItemByItemId(itemId);
-					if (item == null)
-					{
-						removeAutoPotionItem(itemId);
-						continue;
-					}
-					final int reuseDelay = item.getReuseDelay();
-					if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
-					{
-						final EtcItem etcItem = item.getEtcItem();
-						final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
-						if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
-						{
-							addTimeStampItem(item, reuseDelay);
-						}
-					}
-				}
-			}
-			
-			if (Config.ENABLE_AUTO_BUFF)
-			{
-				for (int skillId : _autoSkills)
-				{
-					final Skill skill = getKnownSkill(skillId);
-					if (skill == null)
-					{
-						removeAutoSkill(skillId);
-						continue;
-					}
-					if (!isAffectedBySkill(skillId) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
-					{
-						// Summon check.
-						if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
-						{
-							if (!hasServitors()) // Is this check truly needed?
-							{
-								continue;
-							}
-							int occurrences = 0;
-							for (Summon servitor : _servitors.values())
-							{
-								if (servitor.isAffectedBySkill(skillId))
-								{
-									occurrences++;
-								}
-							}
-							if (occurrences == _servitors.size())
-							{
-								continue;
-							}
-						}
-						doCast(skill);
-					}
-				}
-			}
-		}, 0, 1000);
-	}
-	
-	public void setAutoPotionPercent(int value)
-	{
-		_autoPotionPercent.set(value);
-	}
-	
-	public void addAutoSupplyItem(int itemId)
-	{
-		_autoSupplyItems.add(itemId);
-		startAutoUseTask();
-	}
-	
-	public void removeAutoSupplyItem(int itemId)
-	{
-		_autoSupplyItems.remove(itemId);
-		stopAutoUseTask();
-	}
-	
-	public void addAutoPotionItem(int itemId)
-	{
-		_autoPotionItems.add(itemId);
-		startAutoUseTask();
-	}
-	
-	public void removeAutoPotionItem(int itemId)
-	{
-		_autoPotionItems.remove(itemId);
-		stopAutoUseTask();
-	}
-	
-	public void addAutoSkill(int skillId)
-	{
-		_autoSkills.add(skillId);
-		startAutoUseTask();
-	}
-	
-	public void removeAutoSkill(int skillId)
-	{
-		_autoSkills.remove(skillId);
-		stopAutoUseTask();
+		return _autoUseSettings;
 	}
 	
 	public boolean isInTimedHuntingZone()

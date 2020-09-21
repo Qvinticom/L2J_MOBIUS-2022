@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
@@ -57,11 +58,11 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		// Remove auto used ids.
 		if (_slot > 263)
 		{
-			player.removeAutoSupplyItem(_id);
+			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, _id);
 		}
 		else
 		{
-			player.removeAutoSkill(_id);
+			AutoUseTaskManager.getInstance().removeAutoSkill(player, _id);
 		}
 	}
 }

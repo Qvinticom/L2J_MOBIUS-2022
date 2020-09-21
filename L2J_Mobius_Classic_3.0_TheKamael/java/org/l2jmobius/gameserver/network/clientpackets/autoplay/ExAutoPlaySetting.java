@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
+import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 
 /**
  * @author Mobius
@@ -59,7 +60,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _longRange, _potionPercent, _respectfulHunting));
-		player.setAutoPotionPercent(_potionPercent);
+		player.getAutoPlaySettings().setAutoPotionPercent(_potionPercent);
 		
 		if (!Config.ENABLE_AUTO_PLAY)
 		{
@@ -68,11 +69,11 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		
 		if (_active)
 		{
-			player.startAutoPlayTask(_pickUp, _longRange, _respectfulHunting);
+			AutoPlayTaskManager.getInstance().doAutoPlay(player, _pickUp, _longRange, _respectfulHunting);
 		}
 		else
 		{
-			player.stopAutoPlayTask();
+			AutoPlayTaskManager.getInstance().stopAutoPlay(player);
 		}
 	}
 }
