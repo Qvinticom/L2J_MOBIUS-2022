@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
@@ -107,9 +108,9 @@ public class TvT extends Event
 	private static final ItemHolder REWARD = new ItemHolder(57, 1000000); // Adena
 	// Misc
 	private static final Map<PlayerInstance, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
-	private static final List<PlayerInstance> PLAYER_LIST = new ArrayList<>();
-	private static final List<PlayerInstance> BLUE_TEAM = new ArrayList<>();
-	private static final List<PlayerInstance> RED_TEAM = new ArrayList<>();
+	private static final Set<PlayerInstance> PLAYER_LIST = ConcurrentHashMap.newKeySet();
+	private static final Set<PlayerInstance> BLUE_TEAM = ConcurrentHashMap.newKeySet();
+	private static final Set<PlayerInstance> RED_TEAM = ConcurrentHashMap.newKeySet();
 	private static volatile int BLUE_SCORE;
 	private static volatile int RED_SCORE;
 	private static Instance PVP_WORLD = null;
@@ -233,7 +234,11 @@ public class TvT extends Event
 				final InstanceTemplate template = manager.getInstanceTemplate(INSTANCE_ID);
 				PVP_WORLD = manager.createInstance(template, null);
 				// Randomize player list and separate teams.
-				Collections.shuffle(PLAYER_LIST);
+				final List<PlayerInstance> playerList = new ArrayList<>(PLAYER_LIST.size());
+				playerList.addAll(PLAYER_LIST);
+				Collections.shuffle(playerList);
+				PLAYER_LIST.clear();
+				PLAYER_LIST.addAll(playerList);
 				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
 				for (PlayerInstance participant : PLAYER_LIST)
 				{
