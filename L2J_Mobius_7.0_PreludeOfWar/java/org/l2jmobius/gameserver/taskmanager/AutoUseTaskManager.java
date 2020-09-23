@@ -65,9 +65,9 @@ public class AutoUseTaskManager
 				
 				if (Config.ENABLE_AUTO_ITEM)
 				{
-					ITEMS: for (int itemId : player.getAutoUseSettings().getAutoSupplyItems())
+					ITEMS: for (Integer itemId : player.getAutoUseSettings().getAutoSupplyItems())
 					{
-						final ItemInstance item = player.getInventory().getItemByItemId(itemId);
+						final ItemInstance item = player.getInventory().getItemByItemId(itemId.intValue());
 						if (item == null)
 						{
 							player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
@@ -98,9 +98,9 @@ public class AutoUseTaskManager
 				
 				if (Config.ENABLE_AUTO_POTION && (player.getCurrentHpPercent() <= player.getAutoPlaySettings().getAutoPotionPercent()))
 				{
-					POTIONS: for (int itemId : player.getAutoUseSettings().getAutoPotionItems())
+					POTIONS: for (Integer itemId : player.getAutoUseSettings().getAutoPotionItems())
 					{
-						final ItemInstance item = player.getInventory().getItemByItemId(itemId);
+						final ItemInstance item = player.getInventory().getItemByItemId(itemId.intValue());
 						if (item == null)
 						{
 							player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
@@ -121,15 +121,15 @@ public class AutoUseTaskManager
 				
 				if (Config.ENABLE_AUTO_BUFF)
 				{
-					BUFFS: for (int skillId : player.getAutoUseSettings().getAutoSkills())
+					BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
-						final Skill skill = player.getKnownSkill(skillId);
+						final Skill skill = player.getKnownSkill(skillId.intValue());
 						if (skill == null)
 						{
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
 							continue BUFFS; // TODO: break?
 						}
-						if (!player.isAffectedBySkill(skillId) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
+						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
 						{
 							// Summon check.
 							if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
@@ -141,7 +141,7 @@ public class AutoUseTaskManager
 								int occurrences = 0;
 								for (Summon servitor : player.getServitors().values())
 								{
-									if (servitor.isAffectedBySkill(skillId))
+									if (servitor.isAffectedBySkill(skillId.intValue()))
 									{
 										occurrences++;
 									}
