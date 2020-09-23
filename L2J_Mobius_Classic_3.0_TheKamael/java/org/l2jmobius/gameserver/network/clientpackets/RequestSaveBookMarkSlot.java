@@ -47,6 +47,13 @@ public class RequestSaveBookMarkSlot implements IClientIncomingPacket
 		{
 			return;
 		}
+		
+		if (player.isInTimedHuntingZone())
+		{
+			player.sendMessage("You cannot bookmark this location.");
+			return;
+		}
+		
 		player.teleportBookmarkAdd(player.getX(), player.getY(), player.getZ(), icon, tag, name);
 	}
 }

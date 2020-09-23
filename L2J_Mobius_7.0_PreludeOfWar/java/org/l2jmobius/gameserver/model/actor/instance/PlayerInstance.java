@@ -11981,6 +11981,7 @@ public class PlayerInstance extends Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
 			return;
 		}
+		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(13016);
 		sendPacket(sm);
@@ -11988,6 +11989,12 @@ public class PlayerInstance extends Playable
 		final TeleportBookmark bookmark = _tpbookmarks.get(id);
 		if (bookmark != null)
 		{
+			if (isInTimedHuntingZone(bookmark.getX(), bookmark.getY()))
+			{
+				sendMessage("You cannot teleport at this location.");
+				return;
+			}
+			
 			destroyItem("Consume", _inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
 			teleToLocation(bookmark, false);
 		}
@@ -14163,14 +14170,24 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone()
 	{
-		return isInTimedHuntingZone(1) // Storm Isle
-			|| isInTimedHuntingZone(6); // Primeval Isle
+		return isInTimedHuntingZone(getX(), getY());
+	}
+	
+	public boolean isInTimedHuntingZone(int x, int y)
+	{
+		return isInTimedHuntingZone(1, x, y) // Storm Isle
+			|| isInTimedHuntingZone(6, x, y); // Primeval Isle
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)
 	{
-		final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-		final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+		return isInTimedHuntingZone(zoneId, getX(), getY());
+	}
+	
+	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
+	{
+		final int x = ((locX - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+		final int y = ((locY - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 		
 		switch (zoneId)
 		{
