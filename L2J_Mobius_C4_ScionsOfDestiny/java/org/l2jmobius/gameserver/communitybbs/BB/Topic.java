@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 public class Topic
 {
 	private static final Logger LOGGER = Logger.getLogger(Topic.class.getName());
-	public static final int MORMAL = 0;
+	public static final int NORMAL = 0;
 	public static final int MEMO = 1;
 	
 	private final int _id;
