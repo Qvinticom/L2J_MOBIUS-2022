@@ -1385,7 +1385,16 @@ public class Quest extends ManagedScript
 		final List<PlayerInstance> members = getPartyMembers(player, npc, var, value);
 		if (members.isEmpty())
 		{
-			return player;
+			final QuestState qs = player.getQuestState(getName());
+			if (qs != null)
+			{
+				final Object sVar = qs.get(var);
+				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value))
+				{
+					return player; // match
+				}
+			}
+			return null; // no match
 		}
 		return members.get(Rnd.get(members.size()));
 	}
@@ -1424,19 +1433,21 @@ public class Quest extends ManagedScript
 			return getRandomPartyMember(player);
 		}
 		
-		// normal cases...if the player is not in a party, check the player's state
-		QuestState temp = null;
+		// Normal cases, if the player is not in a party, check the player's state.
 		final Party party = player.getParty();
 		
-		// if this player is not in a party, just check if this player instance matches the conditions itself
+		// If this player is not in a party, just check if this player instance matches the conditions itself.
 		if ((party == null) || party.getPartyMembers().isEmpty())
 		{
-			temp = player.getQuestState(getName());
-			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value))
+			final QuestState qs = player.getQuestState(getName());
+			if (qs != null)
 			{
-				return player; // match
+				final Object sVar = qs.get(var);
+				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value))
+				{
+					return player; // match
+				}
 			}
-			
 			return null; // no match
 		}
 		
@@ -1452,10 +1463,14 @@ public class Quest extends ManagedScript
 		
 		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
-			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
+			final QuestState qs = partyMember.getQuestState(getName());
+			if (qs != null)
 			{
-				candidates.add(partyMember);
+				final Object sVar = qs.get(var);
+				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
+				{
+					candidates.add(partyMember);
+				}
 			}
 		}
 		
