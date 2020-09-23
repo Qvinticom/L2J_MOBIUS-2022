@@ -340,7 +340,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		_hall.updateSiegeStatus(SiegeStatus.RUNNING);
 		onSiegeStarts();
-		_siegeTask = ThreadPool.schedule(new SiegeEnds(), _hall.getSiegeLenght());
+		_siegeTask = ThreadPool.schedule(new SiegeEnds(), _hall.getSiegeLength());
 	}
 	
 	@Override

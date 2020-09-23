@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class RequestMakeMacro implements IClientIncomingPacket
 {
 	private Macro _macro;
-	private int _commandsLenght = 0;
+	private int _commandsLength = 0;
 	
 	private static final int MAX_MACRO_LENGTH = 12;
 	
@@ -56,7 +56,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 			final int d1 = packet.readD(); // skill or page number for shortcuts
 			final int d2 = packet.readC();
 			final String command = packet.readS();
-			_commandsLenght += command.length();
+			_commandsLength += command.length();
 			commands.add(new MacroCmd(entry, MacroType.values()[(type < 1) || (type > 6) ? 0 : type], d1, d2, command));
 		}
 		_macro = new Macro(id, icon, name, desc, acronym, commands);
@@ -71,7 +71,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (_commandsLenght > 255)
+		if (_commandsLength > 255)
 		{
 			// Invalid macro. Refer to the Help file for instructions.
 			player.sendPacket(SystemMessageId.INVALID_MACRO_REFER_TO_THE_HELP_FILE_FOR_INSTRUCTIONS);

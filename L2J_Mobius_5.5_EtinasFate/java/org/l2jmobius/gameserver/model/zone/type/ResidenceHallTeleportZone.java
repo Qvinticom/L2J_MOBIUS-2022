@@ -58,7 +58,7 @@ public class ResidenceHallTeleportZone extends ResidenceTeleportZone
 		return _id;
 	}
 	
-	public synchronized void checkTeleporTask()
+	public synchronized void checkTeleportTask()
 	{
 		if ((_teleTask == null) || _teleTask.isDone())
 		{

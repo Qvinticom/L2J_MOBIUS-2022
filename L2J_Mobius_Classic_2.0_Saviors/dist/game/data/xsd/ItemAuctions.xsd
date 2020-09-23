@@ -19,7 +19,7 @@
 									</xs:sequence>
 									<xs:attribute name="auctionInitBid" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="auctionItemId" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="auctionLenght" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="auctionLength" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="itemCount" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
 								</xs:complexType>

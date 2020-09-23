@@ -105,19 +105,19 @@ public class ItemAuctionInstance
 				{
 					final NamedNodeMap naa = na.getAttributes();
 					final int auctionItemId = Integer.parseInt(naa.getNamedItem("auctionItemId").getNodeValue());
-					final int auctionLenght = Integer.parseInt(naa.getNamedItem("auctionLenght").getNodeValue());
+					final int auctionLength = Integer.parseInt(naa.getNamedItem("auctionLength").getNodeValue());
 					final long auctionInitBid = Integer.parseInt(naa.getNamedItem("auctionInitBid").getNodeValue());
 					
 					final int itemId = Integer.parseInt(naa.getNamedItem("itemId").getNodeValue());
 					final int itemCount = Integer.parseInt(naa.getNamedItem("itemCount").getNodeValue());
 					
-					if (auctionLenght < 1)
+					if (auctionLength < 1)
 					{
-						throw new IllegalArgumentException("auctionLenght < 1 for instanceId: " + _instanceId + ", itemId " + itemId);
+						throw new IllegalArgumentException("auctionLength < 1 for instanceId: " + _instanceId + ", itemId " + itemId);
 					}
 					
 					final StatSet itemExtra = new StatSet();
-					final AuctionItem item = new AuctionItem(auctionItemId, auctionLenght, auctionInitBid, itemId, itemCount, itemExtra);
+					final AuctionItem item = new AuctionItem(auctionItemId, auctionLength, auctionInitBid, itemId, itemCount, itemExtra);
 					
 					if (!item.checkItemExists())
 					{

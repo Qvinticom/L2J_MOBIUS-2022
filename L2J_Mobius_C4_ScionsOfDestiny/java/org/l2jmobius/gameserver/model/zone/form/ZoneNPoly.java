@@ -148,11 +148,11 @@ public class ZoneNPoly extends ZoneForm
 			}
 			int vx = _x[nextIndex] - _x[i];
 			int vy = _y[nextIndex] - _y[i];
-			float lenght = (float) Math.sqrt((vx * vx) + (vy * vy));
-			lenght /= STEP;
-			for (int o = 1; o <= lenght; o++)
+			float length = (float) Math.sqrt((vx * vx) + (vy * vy));
+			length /= STEP;
+			for (int o = 1; o <= length; o++)
 			{
-				float k = o / lenght;
+				float k = o / length;
 				dropDebugItem(id, (int) (_x[i] + (k * vx)), (int) (_y[i] + (k * vy)), z);
 			}
 		}

@@ -59,7 +59,7 @@ public class SiegableHall extends ClanHall
 	public SiegableHall(StatSet set)
 	{
 		super(set);
-		_siegeLength = set.getLong("siegeLenght");
+		_siegeLength = set.getLong("siegeLength");
 		final String[] rawSchConfig = set.getString("scheduleConfig").split(";");
 		if (rawSchConfig.length == 5)
 		{
@@ -165,7 +165,7 @@ public class SiegableHall extends ClanHall
 		return _nextSiege.getTimeInMillis();
 	}
 	
-	public long getSiegeLenght()
+	public long getSiegeLength()
 	{
 		return _siegeLength;
 	}

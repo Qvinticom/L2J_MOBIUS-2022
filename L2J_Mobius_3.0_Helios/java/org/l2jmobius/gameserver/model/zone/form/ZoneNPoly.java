@@ -101,10 +101,10 @@ public class ZoneNPoly extends ZoneForm
 			final int nextIndex = (i + 1) == _p.xpoints.length ? 0 : i + 1;
 			final int vx = _p.xpoints[nextIndex] - _p.xpoints[i];
 			final int vy = _p.ypoints[nextIndex] - _p.ypoints[i];
-			final float lenght = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
-			for (int o = 1; o <= lenght; o++)
+			final float length = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
+			for (int o = 1; o <= length; o++)
 			{
-				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_p.xpoints[i] + ((o / lenght) * vx)), (int) (_p.ypoints[i] + ((o / lenght) * vy)), z);
+				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_p.xpoints[i] + ((o / length) * vx)), (int) (_p.ypoints[i] + ((o / length) * vy)), z);
 			}
 		}
 	}

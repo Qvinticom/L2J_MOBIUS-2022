@@ -68,7 +68,7 @@ public class CHSiegeManager
 				set.set("desc", rs.getString("desc"));
 				set.set("location", rs.getString("location"));
 				set.set("nextSiege", rs.getLong("nextSiege"));
-				set.set("siegeLenght", rs.getLong("siegeLenght"));
+				set.set("siegeLength", rs.getLong("siegeLength"));
 				set.set("scheduleConfig", rs.getString("schedule_config"));
 				final SiegableHall hall = new SiegableHall(set);
 				_siegableHalls.put(id, hall);
