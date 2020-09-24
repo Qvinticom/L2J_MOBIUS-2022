@@ -1080,6 +1080,25 @@ public class SkillCaster implements Runnable
 				caster.sendPacket(sm);
 				return false;
 			}
+			
+			// Events.
+			if (player.isOnCustomEvent())
+			{
+				if (skill.hasEffectType(EffectType.TELEPORT)) // Disable teleport skills.
+				{
+					player.sendMessage("You cannot use " + skill.getName() + " while attending an event.");
+					return false;
+				}
+				
+				if (skill.isBad())
+				{
+					final WorldObject target = player.getTarget();
+					if ((target != null) && target.isPlayable() && (player.getTeam() == target.getActingPlayer().getTeam()))
+					{
+						return false;
+					}
+				}
+			}
 		}
 		return true;
 	}

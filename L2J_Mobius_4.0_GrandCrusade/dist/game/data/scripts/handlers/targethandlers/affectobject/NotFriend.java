@@ -78,6 +78,12 @@ public class NotFriend implements IAffectObjectHandler
 				return false;
 			}
 			
+			// Events.
+			if (player.isOnCustomEvent() && (player.getTeam() == target.getTeam()))
+			{
+				return false;
+			}
+			
 			// Arena.
 			if (creature.isInsideZone(ZoneId.PVP) && target.isInsideZone(ZoneId.PVP))
 			{
