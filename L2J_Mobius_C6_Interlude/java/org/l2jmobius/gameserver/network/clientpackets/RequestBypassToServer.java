@@ -111,11 +111,31 @@ public class RequestBypassToServer extends GameClientPacket
 			}
 			else if (_command.equals("come_here") && player.isGM())
 			{
-				comeHere(player);
+				final WorldObject obj = player.getTarget();
+				if (obj == null)
+				{
+					return;
+				}
+				
+				if (obj instanceof NpcInstance)
+				{
+					final NpcInstance npc = (NpcInstance) obj;
+					npc.setTarget(player);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(player.getX(), player.getY(), player.getZ(), 0));
+				}
 			}
 			else if (_command.startsWith("player_help "))
 			{
-				playerHelp(player, _command.substring(12));
+				final String path = _command.substring(12);
+				if (path.contains(".."))
+				{
+					return;
+				}
+				
+				final String filename = "data/html/help/" + path;
+				final NpcHtmlMessage html = new NpcHtmlMessage(1);
+				html.setFile(filename);
+				player.sendPacket(html);
 			}
 			else if (_command.startsWith("npc_"))
 			{
@@ -321,38 +341,5 @@ public class RequestBypassToServer extends GameClientPacket
 		{
 			LOGGER.warning("Bad RequestBypassToServer: " + e);
 		}
-	}
-	
-	/**
-	 * @param player
-	 */
-	private void comeHere(PlayerInstance player)
-	{
-		final WorldObject obj = player.getTarget();
-		if (obj == null)
-		{
-			return;
-		}
-		
-		if (obj instanceof NpcInstance)
-		{
-			final NpcInstance temp = (NpcInstance) obj;
-			temp.setTarget(player);
-			temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(player.getX(), player.getY(), player.getZ(), 0));
-			// temp.moveTo(player.getX(),player.getY(), player.getZ(), 0 );
-		}
-	}
-	
-	private void playerHelp(PlayerInstance player, String path)
-	{
-		if (path.contains(".."))
-		{
-			return;
-		}
-		
-		final String filename = "data/html/help/" + path;
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setFile(filename);
-		player.sendPacket(html);
 	}
 }

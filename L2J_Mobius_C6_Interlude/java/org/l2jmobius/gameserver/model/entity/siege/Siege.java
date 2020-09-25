@@ -22,8 +22,10 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -271,9 +273,11 @@ public class Siege
 		}
 	}
 	
-	private final List<SiegeClan> _attackerClans = new ArrayList<>(); // SiegeClan
-	private final List<SiegeClan> _defenderClans = new ArrayList<>(); // SiegeClan
-	private final List<SiegeClan> _defenderWaitingClans = new ArrayList<>(); // SiegeClan
+	// Must support Concurrent Modifications
+	private final Collection<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
+	private final Collection<SiegeClan> _defenderClans = ConcurrentHashMap.newKeySet();
+	private final Collection<SiegeClan> _defenderWaitingClans = ConcurrentHashMap.newKeySet();
+	
 	private int _defenderRespawnDelayPenalty;
 	private List<ArtefactInstance> _artifacts = new ArrayList<>();
 	private List<ControlTowerInstance> _controlTowers = new ArrayList<>();
@@ -416,7 +420,7 @@ public class Siege
 	}
 	
 	/**
-	 * When control of castle changed during siege
+	 * When control of castle changed during siege.
 	 */
 	public void midVictory()
 	{
@@ -427,22 +431,20 @@ public class Siege
 				_siegeGuardManager.removeMercs(); // Remove all merc entry from db
 			}
 			
-			if ((getDefenderClans().isEmpty()) && // If defender doesn't exist (Pc vs Npc)
+			if (getDefenderClans().isEmpty() && // If defender doesn't exist (Pc vs Npc)
 				(getAttackerClans().size() == 1)) // Only 1 attacker
 			{
 				final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
 				removeAttacker(scNewOwner);
 				addDefender(scNewOwner, SiegeClanType.OWNER);
 				endSiege();
-				
 				return;
 			}
 			
 			if (getCastle().getOwnerId() > 0)
 			{
 				final int allyId = ClanTable.getInstance().getClan(getCastle().getOwnerId()).getAllyId();
-				// If defender doesn't exist (Pc vs Npc) and only an alliance attacks
-				// The player's clan is in an alliance
+				// If defender doesn't exist (Pc vs Npc) and only an alliance attacks and the player's clan is in an alliance
 				if (getDefenderClans().isEmpty() && (allyId != 0))
 				{
 					boolean allinsamealliance = true;
@@ -1640,7 +1642,7 @@ public class Siege
 	 * Gets the attacker clans.
 	 * @return the attacker clans
 	 */
-	public List<SiegeClan> getAttackerClans()
+	public Collection<SiegeClan> getAttackerClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1706,7 +1708,7 @@ public class Siege
 	 * Gets the defender clans.
 	 * @return the defender clans
 	 */
-	public List<SiegeClan> getDefenderClans()
+	public Collection<SiegeClan> getDefenderClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1750,7 +1752,7 @@ public class Siege
 	 * Gets the defender waiting clans.
 	 * @return the defender waiting clans
 	 */
-	public List<SiegeClan> getDefenderWaitingClans()
+	public Collection<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}

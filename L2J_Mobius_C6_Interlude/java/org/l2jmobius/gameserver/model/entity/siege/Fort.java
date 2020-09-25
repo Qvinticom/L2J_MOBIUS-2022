@@ -66,12 +66,12 @@ public class Fort
 		loadDoor();
 	}
 	
-	public void EndOfSiege(Clan clan)
+	public void endOfSiege(Clan clan)
 	{
 		ThreadPool.schedule(new endFortressSiege(this, clan), 1000);
 	}
 	
-	public void Engrave(Clan clan, int objId)
+	public void engrave(Clan clan, int objId)
 	{
 		getSiege().announceToPlayer("Clan " + clan.getName() + " has finished to raise the flag.", true);
 		setOwner(clan);
@@ -628,7 +628,7 @@ public class Fort
 		@Override
 		public void run()
 		{
-			_f.Engrave(_clan, 0);
+			_f.engrave(_clan, 0);
 		}
 	}
 }

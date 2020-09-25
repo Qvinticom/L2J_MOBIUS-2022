@@ -80,11 +80,11 @@ public class TakeCastle implements ISkillHandler
 		{
 			if ((castle != null) && (targets.get(0) instanceof ArtefactInstance))
 			{
-				castle.Engrave(player.getClan(), targets.get(0).getObjectId());
+				castle.engrave(player.getClan(), targets.get(0).getObjectId());
 			}
 			else if (fort != null)
 			{
-				fort.EndOfSiege(player.getClan());
+				fort.endOfSiege(player.getClan());
 			}
 		}
 		catch (Exception e)

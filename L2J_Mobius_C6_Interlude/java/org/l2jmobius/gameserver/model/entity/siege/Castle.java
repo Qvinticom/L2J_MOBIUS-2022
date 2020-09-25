@@ -101,7 +101,7 @@ public class Castle
 		loadDoor();
 	}
 	
-	public void Engrave(Clan clan, int objId)
+	public void engrave(Clan clan, int objId)
 	{
 		_engrave.put(objId, clan.getClanId());
 		
