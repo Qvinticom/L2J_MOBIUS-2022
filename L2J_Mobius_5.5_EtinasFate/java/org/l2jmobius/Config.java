@@ -534,7 +534,8 @@ public class Config
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
 	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>();
-	public static int ALT_OLY_ENCHANT_LIMIT;
+	public static int ALT_OLY_WEAPON_ENCHANT_LIMIT;
+	public static int ALT_OLY_ARMOR_ENCHANT_LIMIT;
 	public static int ALT_OLY_WAIT_TIME;
 	public static String ALT_OLY_PERIOD;
 	public static int ALT_OLY_PERIOD_MULTIPLIER;
@@ -2369,7 +2370,8 @@ public class Config
 			{
 				LIST_OLY_RESTRICTED_ITEMS.clear();
 			}
-			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
+			ALT_OLY_WEAPON_ENCHANT_LIMIT = Olympiad.getInt("AltOlyWeaponEnchantLimit", -1);
+			ALT_OLY_ARMOR_ENCHANT_LIMIT = Olympiad.getInt("AltOlyArmorEnchantLimit", -1);
 			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
 			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
 			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);

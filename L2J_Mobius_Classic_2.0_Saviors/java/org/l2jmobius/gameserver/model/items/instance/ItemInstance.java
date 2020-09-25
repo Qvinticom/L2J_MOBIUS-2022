@@ -2009,9 +2009,22 @@ public class ItemInstance extends WorldObject
 			return enchant;
 		}
 		
-		if (player.isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT))
+		if (player.isInOlympiadMode())
 		{
-			enchant = Config.ALT_OLY_ENCHANT_LIMIT;
+			if (_item.isWeapon())
+			{
+				if ((Config.ALT_OLY_WEAPON_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_WEAPON_ENCHANT_LIMIT))
+				{
+					enchant = Config.ALT_OLY_WEAPON_ENCHANT_LIMIT;
+				}
+			}
+			else
+			{
+				if ((Config.ALT_OLY_ARMOR_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ARMOR_ENCHANT_LIMIT))
+				{
+					enchant = Config.ALT_OLY_ARMOR_ENCHANT_LIMIT;
+				}
+			}
 		}
 		
 		return enchant;

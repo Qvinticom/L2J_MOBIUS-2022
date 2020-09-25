@@ -129,9 +129,22 @@ public interface IStatFunction
 			final double blessedBonus = item.isBlessed() ? 1.5 : 1;
 			int enchant = equippedItem.getEnchantLevel();
 			
-			if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT))
+			if (creature.getActingPlayer().isInOlympiadMode())
 			{
-				enchant = Config.ALT_OLY_ENCHANT_LIMIT;
+				if (item.isWeapon())
+				{
+					if ((Config.ALT_OLY_WEAPON_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_WEAPON_ENCHANT_LIMIT))
+					{
+						enchant = Config.ALT_OLY_WEAPON_ENCHANT_LIMIT;
+					}
+				}
+				else
+				{
+					if ((Config.ALT_OLY_ARMOR_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ARMOR_ENCHANT_LIMIT))
+					{
+						enchant = Config.ALT_OLY_ARMOR_ENCHANT_LIMIT;
+					}
+				}
 			}
 			
 			if ((stat == Stat.MAGICAL_DEFENCE) || (stat == Stat.PHYSICAL_DEFENCE))
