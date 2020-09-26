@@ -92,6 +92,7 @@ public class SkillCaster implements Runnable
 	private final Skill _skill;
 	private final ItemInstance _item;
 	private final SkillCastingType _castingType;
+	private final boolean _shiftPressed;
 	private int _hitTime;
 	private int _cancelTime;
 	private int _coolTime;
@@ -110,6 +111,7 @@ public class SkillCaster implements Runnable
 		_skill = skill;
 		_item = item;
 		_castingType = castingType;
+		_shiftPressed = shiftPressed;
 		
 		calcSkillTiming(caster, skill, castTime);
 	}
@@ -747,7 +749,7 @@ public class SkillCaster implements Runnable
 		// Attack target after skill use.
 		if ((_skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null))
 		{
-			if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
+			if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster) && !_shiftPressed)
 			{
 				caster.getAI().setIntention(AI_INTENTION_ATTACK, target);
 			}
