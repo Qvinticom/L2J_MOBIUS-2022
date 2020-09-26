@@ -5511,7 +5511,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			final IntentionCommand nextIntention = getAI().getNextIntention();
 			if ((nextIntention == null) || (nextIntention.getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
-				getAI().setIntention(AI_INTENTION_ATTACK, target);
+				if (isPlayer())
+				{
+					final PlayerInstance currPlayer = getActingPlayer();
+					final SkillUseHolder currSkill = currPlayer.getCurrentSkill();
+					if ((currSkill == null) || !currSkill.isShiftPressed())
+					{
+						getAI().setIntention(AI_INTENTION_ATTACK, target);
+					}
+				}
+				else
+				{
+					getAI().setIntention(AI_INTENTION_ATTACK, target);
+				}
 			}
 		}
 		
