@@ -138,7 +138,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 				}
 				else if (getQuestItemsCount(player, CHAOS_FRAGMENT) >= 1000)
 				{
-					giveItems(player, LEONAS_REWARD_BOX, 900);
+					giveItems(player, LEONAS_REWARD_BOX, 9);
 				}
 				if (getRandom(100) < 50)
 				{
