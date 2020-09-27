@@ -8,6 +8,8 @@
 		<skill skillName="Crystallize" skillId="248" skillLevel="4" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
+		<skill skillName="Block Iss Force" skillId="1951" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Swift Melody" skillId="8606" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1245" /> <!-- Steal Essence -->
 			<removeSkill id="1209" /> <!-- Seal of Poison -->
@@ -274,7 +276,6 @@
 			<removeSkill id="1099" /> <!-- Seal of Slow -->
 			<removeSkill id="986" /> <!-- Deadly Strike -->
 		</skill>
-		<skill skillName="Summon Swift Melody" skillId="8606" skillLevel="1" getLevel="85" autoGet="true" />
 		<!-- Hidden alter skill triggers -->
 		<skill skillName="Heavy Hit" skillId="11750" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Heavy Hit" skillId="11749" skillLevel="1" getLevel="85" autoGet="true" />

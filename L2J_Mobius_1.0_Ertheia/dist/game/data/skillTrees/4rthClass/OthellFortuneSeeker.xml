@@ -3,6 +3,8 @@
 	<!-- Othell Fortune Seeker -->
 	<skillTree type="classSkillTree" classId="161" parentClassId="117">
 		<skill skillName="Othell Aura" skillId="1931" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Block Othell Force" skillId="1948" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Blood Tail" skillId="8602" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Angel of Death" skillId="10531" skillLevel="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Silent Step" skillId="10543" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="221" /> <!-- Silent Move -->

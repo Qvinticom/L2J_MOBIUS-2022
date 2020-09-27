@@ -3,6 +3,8 @@
 	<!-- Feoh Storm Screamer -->
 	<skillTree type="classSkillTree" classId="169" parentClassId="110">
 		<skill skillName="Feoh Aura" skillId="1935" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Block Feoh Force" skillId="1950" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Blue Phantom" skillId="8604" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Hell Binding" skillId="11050" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1069" /> <!-- Sleep -->
 			<removeSkill id="1447" /> <!-- Voice Bind -->

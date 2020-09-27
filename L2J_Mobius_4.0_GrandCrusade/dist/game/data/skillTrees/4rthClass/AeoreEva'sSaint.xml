@@ -9,6 +9,8 @@
 		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Aeore Aura" skillId="1939" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Block Aeore Force" skillId="1953" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Silver Saint" skillId="8607" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Blessing of Saha" skillId="11830" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1311" /> <!-- Body of Avatar -->
 			<removeSkill id="1355" /> <!-- Prophecy of Water -->
@@ -171,7 +173,6 @@
 		<skill skillName="Emblem of Salvation" skillId="11826" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1410" /> <!-- Salvation -->
 		</skill>
-		<skill skillName="Summon Silver Saint" skillId="8607" skillLevel="1" getLevel="85" autoGet="true" />
 		<!-- Hidden alter skill triggers -->
 		<skill skillName="Heavy Hit" skillId="12000" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Heavy Hit" skillId="11999" skillLevel="1" getLevel="85" autoGet="true" />

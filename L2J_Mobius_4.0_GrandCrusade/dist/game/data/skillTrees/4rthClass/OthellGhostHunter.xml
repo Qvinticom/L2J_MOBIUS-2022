@@ -9,6 +9,8 @@
 		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Othell Aura" skillId="1931" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Block Othell Force" skillId="1948" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Blood Tail" skillId="8602" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Angel of Death" skillId="10531" skillLevel="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Silent Step" skillId="10543" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="221" /> <!-- Silent Move -->
@@ -128,7 +130,6 @@
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="129" /> <!-- Poison -->
 		</skill>
-		<skill skillName="Summon Blood Tail" skillId="8602" skillLevel="1" getLevel="85" autoGet="true" />
 		<!-- Hidden alter skill triggers -->
 		<skill skillName="Heavy Hit" skillId="10750" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Heavy Hit" skillId="10749" skillLevel="1" getLevel="85" autoGet="true" />

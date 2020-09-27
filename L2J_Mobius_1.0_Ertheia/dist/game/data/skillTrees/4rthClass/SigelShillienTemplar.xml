@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
-	<!-- Sigil Shilien Templar -->
+	<!-- Sigel Shillien Templar -->
 	<skillTree type="classSkillTree" classId="151" parentClassId="106">
 		<skill skillName="Crystallize" skillId="248" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="2" getLevel="85" autoGet="true" />
@@ -9,6 +9,8 @@
 		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Sigel Aura" skillId="1927" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Block Sigel Force" skillId="1946" skillLevel="1" getLevel="85" autoGet="true" />
+		<skill skillName="Summon Royal Aegis" skillId="8600" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Challenge Aura" skillId="10030" skillLevel="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="982" /> <!-- Combat Aura -->
 		</skill>
