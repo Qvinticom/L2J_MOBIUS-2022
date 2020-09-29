@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.handler.voicedcommandhandlers.AutoPotion;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.BankingCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.CTFCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.DMCmd;
@@ -89,6 +90,11 @@ public class VoicedCommandHandler
 		if (Config.ENABLE_EXP_GAIN_COMMANDS)
 		{
 			registerVoicedCommandHandler(new ExperienceGain());
+		}
+		
+		if (Config.AUTO_POTIONS_ENABLED)
+		{
+			registerVoicedCommandHandler(new AutoPotion());
 		}
 		
 		LOGGER.info("VoicedCommandHandler: Loaded " + _datatable.size() + " handlers.");

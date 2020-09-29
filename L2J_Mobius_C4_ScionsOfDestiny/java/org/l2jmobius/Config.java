@@ -89,6 +89,7 @@ public class Config
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
 	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
+	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/custom/AutoPotions.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/custom/CustomMailManager.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
@@ -455,6 +456,19 @@ public class Config
 	public static int CHAMPION_REWARD_QTY;
 	public static String CHAMP_TITLE;
 	public static int CHAMPION_AURA;
+	
+	public static boolean AUTO_POTIONS_ENABLED;
+	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
+	public static int AUTO_POTION_MIN_LEVEL;
+	public static boolean AUTO_CP_ENABLED;
+	public static boolean AUTO_HP_ENABLED;
+	public static boolean AUTO_MP_ENABLED;
+	public static int AUTO_CP_PERCENTAGE;
+	public static int AUTO_HP_PERCENTAGE;
+	public static int AUTO_MP_PERCENTAGE;
+	public static List<Integer> AUTO_CP_ITEM_IDS;
+	public static List<Integer> AUTO_HP_ITEM_IDS;
+	public static List<Integer> AUTO_MP_ITEM_IDS;
 	
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
@@ -1629,6 +1643,35 @@ public class Config
 		if ((CHAMPION_AURA < 0) || (CHAMPION_AURA > 2))
 		{
 			CHAMPION_AURA = 0;
+		}
+	}
+	
+	public static void loadAutoPotionsConfig()
+	{
+		final PropertiesParser autoPotionsConfig = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
+		AUTO_POTIONS_ENABLED = autoPotionsConfig.getBoolean("AutoPotionsEnabled", false);
+		AUTO_POTIONS_IN_OLYMPIAD = autoPotionsConfig.getBoolean("AutoPotionsInOlympiad", false);
+		AUTO_POTION_MIN_LEVEL = autoPotionsConfig.getInt("AutoPotionMinimumLevel", 1);
+		AUTO_CP_ENABLED = autoPotionsConfig.getBoolean("AutoCpEnabled", true);
+		AUTO_HP_ENABLED = autoPotionsConfig.getBoolean("AutoHpEnabled", true);
+		AUTO_MP_ENABLED = autoPotionsConfig.getBoolean("AutoMpEnabled", true);
+		AUTO_CP_PERCENTAGE = autoPotionsConfig.getInt("AutoCpPercentage", 70);
+		AUTO_HP_PERCENTAGE = autoPotionsConfig.getInt("AutoHpPercentage", 70);
+		AUTO_MP_PERCENTAGE = autoPotionsConfig.getInt("AutoMpPercentage", 70);
+		AUTO_CP_ITEM_IDS = new ArrayList<>();
+		for (String s : autoPotionsConfig.getString("AutoCpItemIds", "0").split(","))
+		{
+			AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+		}
+		AUTO_HP_ITEM_IDS = new ArrayList<>();
+		for (String s : autoPotionsConfig.getString("AutoHpItemIds", "0").split(","))
+		{
+			AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+		}
+		AUTO_MP_ITEM_IDS = new ArrayList<>();
+		for (String s : autoPotionsConfig.getString("AutoMpItemIds", "0").split(","))
+		{
+			AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
 		}
 	}
 	
@@ -3073,6 +3116,7 @@ public class Config
 			// Custom
 			loadCancelSkillRestoreBuffsConfig();
 			loadChampionConfig();
+			loadAutoPotionsConfig();
 			loadCustomMailManagerConfig();
 			loadMerchantZeroPriceConfig();
 			loadWeddingConfig();
