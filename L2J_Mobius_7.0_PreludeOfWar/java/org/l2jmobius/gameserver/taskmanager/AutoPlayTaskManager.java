@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -60,7 +61,11 @@ public class AutoPlayTaskManager
 				if ((target != null) && target.isMonster())
 				{
 					final MonsterInstance monster = (MonsterInstance) target;
-					if ((monster.getTarget() == player) && !monster.isAlikeDead())
+					if (monster.isAlikeDead())
+					{
+						player.setTarget(null);
+					}
+					else if (monster.getTarget() == player)
 					{
 						// Check if actually attacking.
 						if (player.hasAI() && player.getAI().isAutoAttacking() && !player.isAttackingNow() && !player.isCastingNow())
@@ -87,7 +92,7 @@ public class AutoPlayTaskManager
 						// Move to item.
 						if (player.calculateDistance2D(droppedItem) > 50)
 						{
-							player.moveToLocation(droppedItem.getX(), droppedItem.getY(), droppedItem.getZ(), 0);
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, droppedItem);
 							continue PLAY;
 						}
 						
