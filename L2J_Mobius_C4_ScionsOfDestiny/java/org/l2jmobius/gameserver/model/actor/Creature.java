@@ -23,8 +23,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
@@ -4337,7 +4337,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		public int geoPathGty;
 	}
 	
-	protected List<Skill> _disabledSkills = new CopyOnWriteArrayList<>();
+	protected Set<Skill> _disabledSkills = ConcurrentHashMap.newKeySet();
 	private boolean _allSkillsDisabled;
 	protected MoveData _move;
 	private boolean _cursorKeyMovement = false;

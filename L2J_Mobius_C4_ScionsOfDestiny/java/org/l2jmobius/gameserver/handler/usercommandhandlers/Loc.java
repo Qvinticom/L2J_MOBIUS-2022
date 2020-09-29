@@ -32,10 +32,8 @@ public class Loc implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		final int _nearestTown = MapRegionData.getInstance().getClosestTownNumber(player);
-		SystemMessageId msg;
-		
-		switch (_nearestTown)
+		final SystemMessageId msg;
+		switch (MapRegionData.getInstance().getClosestTownNumber(player))
 		{
 			case 0:
 			{

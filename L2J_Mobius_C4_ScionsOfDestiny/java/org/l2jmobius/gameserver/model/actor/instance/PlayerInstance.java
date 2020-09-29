@@ -700,7 +700,6 @@ public class PlayerInstance extends Playable
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
-				
 			}
 			
 			// during teleport phase, players cant do any attack
