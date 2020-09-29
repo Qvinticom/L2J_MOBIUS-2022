@@ -49,14 +49,14 @@ public class AutoPotion implements IVoicedCommandHandler
 		{
 			AutoPotionTaskManager.getInstance().add(activeChar);
 			activeChar.sendMessage("Auto potions is enabled.");
-			return true;
 		}
 		else if (command.equals("apoff"))
 		{
 			AutoPotionTaskManager.getInstance().remove(activeChar);
 			activeChar.sendMessage("Auto potions is disabled.");
 		}
-		return false;
+		
+		return true;
 	}
 	
 	@Override
