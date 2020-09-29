@@ -154,6 +154,7 @@ public class AutoPlayTaskManager
 		
 		if (!PLAYERS.contains(player))
 		{
+			player.onActionRequest();
 			PLAYERS.add(player);
 		}
 	}
