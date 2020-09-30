@@ -29,7 +29,9 @@ public class AutoPotion implements IVoicedCommandHandler
 	private static final String[] VOICED_COMMANDS =
 	{
 		"apon",
-		"apoff"
+		"apoff",
+		"potionon",
+		"potionoff"
 	};
 	
 	@Override
@@ -45,15 +47,22 @@ public class AutoPotion implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (command.equals("apon"))
+		switch (command)
 		{
-			AutoPotionTaskManager.getInstance().add(activeChar);
-			activeChar.sendMessage("Auto potions is enabled.");
-		}
-		else if (command.equals("apoff"))
-		{
-			AutoPotionTaskManager.getInstance().remove(activeChar);
-			activeChar.sendMessage("Auto potions is disabled.");
+			case "apon":
+			case "potionon":
+			{
+				AutoPotionTaskManager.getInstance().add(activeChar);
+				activeChar.sendMessage("Auto potions is enabled.");
+				break;
+			}
+			case "apoff":
+			case "potionoff":
+			{
+				AutoPotionTaskManager.getInstance().remove(activeChar);
+				activeChar.sendMessage("Auto potions is disabled.");
+				break;
+			}
 		}
 		
 		return true;
