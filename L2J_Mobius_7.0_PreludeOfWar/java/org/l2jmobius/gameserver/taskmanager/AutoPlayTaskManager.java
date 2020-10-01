@@ -90,9 +90,12 @@ public class AutoPlayTaskManager
 						}
 						
 						// Move to item.
-						if (player.calculateDistance2D(droppedItem) > 50)
+						if (player.calculateDistance2D(droppedItem) > 70)
 						{
-							player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, droppedItem);
+							if (!player.isMoving())
+							{
+								player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, droppedItem);
+							}
 							continue PLAY;
 						}
 						
