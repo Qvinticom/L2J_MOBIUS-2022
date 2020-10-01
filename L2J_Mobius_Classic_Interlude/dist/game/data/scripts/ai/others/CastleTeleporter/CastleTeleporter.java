@@ -90,7 +90,7 @@ public class CastleTeleporter extends AbstractNpcAI
 				if (npc.isScriptValue(0))
 				{
 					final Siege siege = npc.getCastle().getSiege();
-					final int time = (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? 180000 : 30000;
+					final int time = (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? 480000 : 30000;
 					startQuestTimer("MASS_TELEPORT", time, npc, null);
 					npc.setScriptValue(1);
 				}
@@ -178,7 +178,7 @@ public class CastleTeleporter extends AbstractNpcAI
 		if (CommonUtil.contains(MASS_TELEPORTERS, npc.getId()))
 		{
 			final Siege siege = npc.getCastle().getSiege();
-			htmltext = (npc.isScriptValue(0)) ? (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? "CastleTeleporter-05.html" : "CastleTeleporter-04.html" : "CastleTeleporter-06.html";
+			htmltext = npc.isScriptValue(0) ? (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? "CastleTeleporter-05.html" : "CastleTeleporter-04.html" : "CastleTeleporter-06.html";
 		}
 		else if ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0) && (player.getSiegeState() == 2)) // Deffender
 		{
