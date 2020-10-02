@@ -3,7 +3,7 @@
 	<event name="Rabbits" class="org.l2jmobius.gameserver.instancemanager.events.RabbitsManager">
 		<scheduler>
 			<!-- Schedule every day at 16:50 -->
-			<schedule name="start" hour="16" minute="50">
+			<schedule name="start" hour="16" minute="50" dayOfMonth="*" month="*" dayOfWeek="*" repeat="true">
 				<event name="#startEvent" />
 			</schedule>
 
