@@ -354,7 +354,7 @@ public class EnterWorld implements IClientIncomingPacket
 			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 			player.sendPacket(new PledgeSkillList(clan));
 			final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
-			if ((ch != null) && (ch.getCostFailDay() > 0))
+			if ((ch != null) && (ch.getCostFailDay() > 0) && (ch.getResidenceId() < 186))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 				sm.addInt(ch.getLease());
