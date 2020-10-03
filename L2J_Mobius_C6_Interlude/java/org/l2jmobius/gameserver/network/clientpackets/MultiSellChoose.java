@@ -267,6 +267,28 @@ public class MultiSellChoose extends GameClientPacket
 					return;
 				}
 				
+				final long totalAmount = (long) e.getItemCount() * (long) _amount;
+				if (totalAmount > Integer.MAX_VALUE)
+				{
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+					ingredientsList.clear();
+					return;
+				}
+				
+				for (MultiSellIngredient e2 : entry.getProducts())
+				{
+					if (e2.getItemId() == 57)
+					{
+						final long adenaAmount = (long) e2.getItemCount() + player.getAdena();
+						if (adenaAmount > Integer.MAX_VALUE)
+						{
+							player.sendMessage("You cannot carry more than 2.147.483.647 adena.");
+							ingredientsList.clear();
+							return;
+						}
+					}
+				}
+				
 				if (Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMantainIngredient())
 				{
 					// if it's a stackable item, just reduce the amount from the first (only) instance that is found in the inventory
