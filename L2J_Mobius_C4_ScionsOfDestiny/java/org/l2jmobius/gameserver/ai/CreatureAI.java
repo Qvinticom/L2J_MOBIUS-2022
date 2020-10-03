@@ -977,11 +977,10 @@ public class CreatureAI extends AbstractAI
 					return true;
 				}
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius(target, offsetWithCollision + 100, false, false))
+				if (!_actor.isInsideRadius(target, offsetWithCollision + 30, false, false))
 				{
 					return true;
 				}
-				
 				stopFollow();
 				return false;
 			}
@@ -1009,7 +1008,6 @@ public class CreatureAI extends AbstractAI
 				{
 					offset = 5;
 				}
-				
 				startFollow((Creature) target, offset);
 			}
 			else

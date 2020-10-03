@@ -973,7 +973,7 @@ public class CreatureAI extends AbstractAI
 			if (isFollowing())
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
+				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 30))
 				{
 					return true;
 				}
@@ -989,7 +989,6 @@ public class CreatureAI extends AbstractAI
 				{
 					_actor.getAI().setIntention(AI_INTENTION_IDLE);
 				}
-				
 				return true;
 			}
 			
@@ -1019,7 +1018,6 @@ public class CreatureAI extends AbstractAI
 				{
 					offset = 5;
 				}
-				
 				startFollow((Creature) target, offset);
 			}
 			else
