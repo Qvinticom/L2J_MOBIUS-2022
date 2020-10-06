@@ -81,11 +81,6 @@ public class ProvisionalHalls extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if ((npc.getId() != KERRY) && (npc.getId() != MAID))
-		{
-			return null;
-		}
-		
 		String htmltext = null;
 		if (event.equals("33359-01.html") || event.equals("33359-02.html") || event.equals("33359-03.html"))
 		{
@@ -93,6 +88,11 @@ public class ProvisionalHalls extends AbstractNpcAI
 		}
 		else if (event.equals("buy"))
 		{
+			if ((npc == null) || (npc.getId() != KERRY))
+			{
+				return null;
+			}
+			
 			synchronized (LOCK)
 			{
 				final Calendar calendar = Calendar.getInstance();
@@ -147,6 +147,11 @@ public class ProvisionalHalls extends AbstractNpcAI
 		}
 		else if (event.equals("enter"))
 		{
+			if ((npc == null) || (npc.getId() != KERRY))
+			{
+				return null;
+			}
+			
 			final int playerClanId = player.getClanId();
 			for (Entry<Integer, Location> hall : CLAN_HALLS.entrySet())
 			{
@@ -161,6 +166,11 @@ public class ProvisionalHalls extends AbstractNpcAI
 		}
 		else if (event.equals("leave"))
 		{
+			if ((npc == null) || (npc.getId() != MAID))
+			{
+				return null;
+			}
+			
 			final String[] location = player.getVariables().getString(HALL_RETURN_VAR, "-83246,242118,-3730,-1").split(",");
 			player.teleToLocation(Integer.parseInt(location[0]), Integer.parseInt(location[1]), Integer.parseInt(location[2]), Integer.parseInt(location[3]));
 		}
