@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
@@ -50,23 +51,41 @@ public class MaxHpFinalizer implements IStatFunction
 			if (player != null)
 			{
 				baseValue = player.getTemplate().getBaseHpMax(player.getLevel());
+			}
+		}
+		
+		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
+		baseValue *= conBonus;
+		
+		return defaultValue(creature, stat, baseValue);
+	}
+	
+	private static double defaultValue(Creature creature, Stat stat, double baseValue)
+	{
+		final double mul = creature.getStat().getMul(stat);
+		final double add = creature.getStat().getAdd(stat);
+		double addItem = 0;
+		
+		final Inventory inv = creature.getInventory();
+		if (inv != null)
+		{
+			// Add maxHP bonus from items
+			for (ItemInstance item : inv.getPaperdollItems())
+			{
+				addItem += item.getItem().getStats(stat, 0);
 				
-				// Apply enchanted item's bonus HP
-				for (ItemInstance item : player.getInventory().getPaperdollItems(ItemInstance::isEnchanted))
+				// Apply enchanted item bonus HP
+				if (item.isArmor() && item.isEnchanted())
 				{
-					if (item.isArmor())
+					final long bodyPart = item.getItem().getBodyPart();
+					if ((bodyPart != Item.SLOT_NECK) && (bodyPart != Item.SLOT_LR_EAR) && (bodyPart != Item.SLOT_LR_FINGER))
 					{
-						final long bodyPart = item.getItem().getBodyPart();
-						if ((bodyPart != Item.SLOT_NECK) && (bodyPart != Item.SLOT_LR_EAR) && (bodyPart != Item.SLOT_LR_FINGER))
-						{
-							baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
-						}
+						addItem += EnchantItemHPBonusData.getInstance().getHPBonus(item);
 					}
 				}
 			}
 		}
-		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
-		baseValue *= conBonus;
-		return Stat.defaultValue(creature, stat, baseValue);
+		
+		return (mul * baseValue) + add + addItem + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
 	}
 }

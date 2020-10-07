@@ -21,6 +21,8 @@ import java.util.OptionalDouble;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -49,8 +51,29 @@ public class MaxMpFinalizer implements IStatFunction
 				baseValue = player.getTemplate().getBaseMpMax(player.getLevel());
 			}
 		}
+		
 		final double menBonus = creature.getMEN() > 0 ? BaseStat.MEN.calcBonus(creature) : 1.;
 		baseValue *= menBonus;
-		return Stat.defaultValue(creature, stat, baseValue);
+		
+		return defaultValue(creature, stat, baseValue);
+	}
+	
+	private static double defaultValue(Creature creature, Stat stat, double baseValue)
+	{
+		final double mul = creature.getStat().getMul(stat);
+		final double add = creature.getStat().getAdd(stat);
+		double addItem = 0;
+		
+		final Inventory inv = creature.getInventory();
+		if (inv != null)
+		{
+			// Add maxMP bonus from items
+			for (ItemInstance item : inv.getPaperdollItems())
+			{
+				addItem += item.getItem().getStats(stat, 0);
+			}
+		}
+		
+		return (mul * baseValue) + add + addItem + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
 	}
 }
