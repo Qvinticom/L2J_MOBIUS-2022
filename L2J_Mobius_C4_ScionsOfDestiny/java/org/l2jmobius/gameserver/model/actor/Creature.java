@@ -686,7 +686,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -695,7 +694,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -704,7 +702,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -713,7 +710,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -722,7 +718,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			// If PlayerInstance is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -774,7 +769,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// You can't make an attack with a fishing pole.
 			((PlayerInstance) this).sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -804,7 +798,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				// Cancel the action because the PlayerInstance have no arrow
 				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				
 				sendPacket(ActionFailed.STATIC_PACKET);
 				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS));
 				return;

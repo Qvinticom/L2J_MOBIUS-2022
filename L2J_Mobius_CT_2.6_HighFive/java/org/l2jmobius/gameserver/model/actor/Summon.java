@@ -986,15 +986,6 @@ public abstract class Summon extends Playable
 			return false;
 		}
 		
-		if (isAttackingDisabled())
-		{
-			if (!isAttackingNow())
-			{
-				return false;
-			}
-			getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-		}
-		
 		if (isPet() && ((getLevel() - _owner.getLevel()) > 20))
 		{
 			sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
