@@ -739,16 +739,21 @@ public abstract class Inventory extends ItemContainer
 			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
 			boolean remove = false;
 			
-			// verify and remove normal set bonus
+			// Verify and remove normal set bonus
 			if (verifyAndRemove(player, item, ItemInstance::getId))
 			{
 				remove = true;
 			}
 			
-			// verify and remove visual set bonus
-			if (verifyAndRemove(player, item, ItemInstance::getVisualId))
+			// Verify and remove visual set bonus
+			final int itemVisualId = item.getVisualId();
+			if (itemVisualId > 0)
 			{
-				remove = true;
+				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(itemVisualId);
+				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndRemove(player, item, ItemInstance::getVisualId))
+				{
+					remove = true;
+				}
 			}
 			
 			if (remove)
