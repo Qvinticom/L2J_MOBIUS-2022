@@ -30,7 +30,7 @@ public class ProtocolVersion extends GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_version = readH();
+		_version = readD();
 	}
 	
 	@Override
