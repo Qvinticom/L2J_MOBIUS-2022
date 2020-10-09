@@ -129,6 +129,10 @@ public class AutoUseTaskManager
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
 							continue BUFFS; // TODO: break?
 						}
+						if ((skill.isBad() && (player.getTarget() == null)) || (player.getTarget() == player))
+						{
+							continue BUFFS;
+						}
 						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
 						{
 							// Summon check.
