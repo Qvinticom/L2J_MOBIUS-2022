@@ -23,6 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
@@ -129,10 +130,14 @@ public class AutoUseTaskManager
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
 							continue BUFFS; // TODO: break?
 						}
-						if ((skill.isBad() && (player.getTarget() == null)) || (player.getTarget() == player))
+						
+						// Check bad skill target.
+						final WorldObject target = player.getTarget();
+						if ((skill.isBad() && (target == null)) || (target == player))
 						{
 							continue BUFFS;
 						}
+						
 						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
 						{
 							// Summon check.
@@ -155,7 +160,19 @@ public class AutoUseTaskManager
 									continue BUFFS;
 								}
 							}
-							player.doCast(skill);
+							
+							// Check non bad skill target.
+							if (!skill.isBad() && ((target == null) || !target.isPlayable()))
+							{
+								final WorldObject savedTarget = target;
+								player.setTarget(player);
+								player.doCast(skill);
+								player.setTarget(savedTarget);
+							}
+							else
+							{
+								player.doCast(skill);
+							}
 						}
 					}
 				}
