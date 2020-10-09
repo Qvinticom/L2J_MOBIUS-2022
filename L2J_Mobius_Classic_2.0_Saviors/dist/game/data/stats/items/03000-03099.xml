@@ -341,6 +341,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3024" name="Recipe: Journeyman Ring" type="EtcItem">
@@ -362,7 +363,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3025" name="Recipe: Amber Bead" type="EtcItem">
@@ -384,7 +385,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3026" name="Talin's Spear" type="Weapon">
