@@ -149,6 +149,9 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
 import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 import quests.Q10303_CrossroadsBetweenLightAndDarkness.Q10303_CrossroadsBetweenLightAndDarkness;
+import quests.Q10355_BlacksmithsSoul1.Q10355_BlacksmithsSoul1;
+import quests.Q10356_BlacksmithsSoul2.Q10356_BlacksmithsSoul2;
+import quests.Q10373_ExploringTheDimensionSealingTheDimension.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
 import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
@@ -168,6 +171,7 @@ import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
+import quests.Q10535_BlacksmithsSoul3.Q10535_BlacksmithsSoul3;
 import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
 import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
 import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
@@ -298,12 +302,8 @@ import quests.not_done.Q00989_AdventureGuildsSpecialRequestLv5;
 import quests.not_done.Q01900_StormIsleSecretSpot;
 import quests.not_done.Q01901_StormIsleFurtiveDeal;
 import quests.not_done.Q10298_WastelandQueen;
-import quests.not_done.Q10355_BlacksmithsSoul1;
-import quests.not_done.Q10356_BlacksmithsSoul2;
-import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10514_NewPathToGlory;
 import quests.not_done.Q10515_NewWayForPride;
-import quests.not_done.Q10535_BlacksmithsSoul3;
 import quests.not_done.Q10570_HurrahForKamaelsIndependence;
 import quests.not_done.Q10572_ToExpelTheEmbryosForces;
 import quests.not_done.Q10594_FergasonsScheme;
@@ -497,9 +497,9 @@ public class QuestMasterHandler
 		Q10297_GrandOpeningComeToOurPub.class,
 		Q10298_WastelandQueen.class, // TODO: Not done.
 		Q10303_CrossroadsBetweenLightAndDarkness.class,
-		Q10355_BlacksmithsSoul1.class, // TODO: Not done.
-		Q10356_BlacksmithsSoul2.class, // TODO: Not done.
-		Q10373_ExploringTheDimensionSealingTheDimension.class, // TODO: Not done.
+		Q10355_BlacksmithsSoul1.class,
+		Q10356_BlacksmithsSoul2.class,
+		Q10373_ExploringTheDimensionSealingTheDimension.class,
 		Q10381_ToTheSeedOfHellfire.class,
 		Q10383_FergasonsOffer.class,
 		Q10386_MysteriousJourney.class,
@@ -528,7 +528,7 @@ public class QuestMasterHandler
 		Q10520_TempleGuardians.class, // FIXME: Custom.
 		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // FIXME: Custom.
 		Q10533_OrfensAmbition.class, // FIXME: Custom.
-		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
+		Q10535_BlacksmithsSoul3.class,
 		Q10537_KamaelDisarray.class,
 		Q10538_GiantsEvolution.class,
 		Q10539_EnergySupplyCutoffPlan.class,

@@ -283,6 +283,7 @@ import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
 import quests.Q10370_MenacingTimes.Q10370_MenacingTimes;
 import quests.Q10371_GraspThyPower.Q10371_GraspThyPower;
 import quests.Q10372_PurgatoryVolvere.Q10372_PurgatoryVolvere;
+import quests.Q10373_ExploringTheDimensionSealingTheDimension.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.Q10374_ThatPlaceSuccubus.Q10374_ThatPlaceSuccubus;
 import quests.Q10375_SuccubusDisciples.Q10375_SuccubusDisciples;
 import quests.Q10376_BloodyGoodTime.Q10376_BloodyGoodTime;
@@ -518,7 +519,6 @@ import quests.not_done.Q00929_SeekerRescue;
 import quests.not_done.Q00938_TheFishermansOtherHobby;
 import quests.not_done.Q10298_WastelandQueen;
 import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
-import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10396_WitchOfSpores;
 import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10748_MysteriousSuggestion1;
@@ -835,7 +835,7 @@ public class QuestMasterHandler
 		Q10370_MenacingTimes.class,
 		Q10371_GraspThyPower.class,
 		Q10372_PurgatoryVolvere.class,
-		Q10373_ExploringTheDimensionSealingTheDimension.class, // TODO: Not done.
+		Q10373_ExploringTheDimensionSealingTheDimension.class,
 		Q10374_ThatPlaceSuccubus.class,
 		Q10375_SuccubusDisciples.class,
 		Q10376_BloodyGoodTime.class,

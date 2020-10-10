@@ -274,6 +274,8 @@ import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
 import quests.Q10351_OwnerOfHall.Q10351_OwnerOfHall;
 import quests.Q10353_CertificationOfValue.Q10353_CertificationOfValue;
 import quests.Q10354_ResurrectedOwnerOfHall.Q10354_ResurrectedOwnerOfHall;
+import quests.Q10355_BlacksmithsSoul1.Q10355_BlacksmithsSoul1;
+import quests.Q10356_BlacksmithsSoul2.Q10356_BlacksmithsSoul2;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10359_TracesOfEvil.Q10359_TracesOfEvil;
 import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
@@ -283,6 +285,7 @@ import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
 import quests.Q10366_ReportOnTheSituationAtTheRuins.Q10366_ReportOnTheSituationAtTheRuins;
 import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
+import quests.Q10373_ExploringTheDimensionSealingTheDimension.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.Q10377_TheInvadedExecutionGrounds.Q10377_TheInvadedExecutionGrounds;
 import quests.Q10378_WeedingWork.Q10378_WeedingWork;
 import quests.Q10379_AnUninvitedGuest.Q10379_AnUninvitedGuest;
@@ -357,6 +360,7 @@ import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterThe
 import quests.Q10531_OddHappeningsAtDragonValley.Q10531_OddHappeningsAtDragonValley;
 import quests.Q10532_UncoveringTheConspiracy.Q10532_UncoveringTheConspiracy;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
+import quests.Q10535_BlacksmithsSoul3.Q10535_BlacksmithsSoul3;
 import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
 import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
 import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
@@ -541,10 +545,6 @@ import quests.not_done.Q00987_AdventureGuildsSpecialRequestLv3;
 import quests.not_done.Q00988_AdventureGuildsSpecialRequestLv4;
 import quests.not_done.Q00989_AdventureGuildsSpecialRequestLv5;
 import quests.not_done.Q10298_WastelandQueen;
-import quests.not_done.Q10355_BlacksmithsSoul1;
-import quests.not_done.Q10356_BlacksmithsSoul2;
-import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
-import quests.not_done.Q10535_BlacksmithsSoul3;
 import quests.not_done.Q10552_ChallengeBalthusKnight;
 import quests.not_done.Q10553_WhatMattersMoreThanAbility;
 import quests.not_done.Q10554_GiftForYou;
@@ -885,8 +885,8 @@ public class QuestMasterHandler
 		Q10351_OwnerOfHall.class,
 		Q10353_CertificationOfValue.class,
 		Q10354_ResurrectedOwnerOfHall.class,
-		Q10355_BlacksmithsSoul1.class, // TODO: Not done.
-		Q10356_BlacksmithsSoul2.class, // TODO: Not done.
+		Q10355_BlacksmithsSoul1.class,
+		Q10356_BlacksmithsSoul2.class,
 		Q10358_DividedSakumPoslof.class,
 		Q10359_TracesOfEvil.class,
 		Q10360_CertificationOfFate.class,
@@ -896,7 +896,7 @@ public class QuestMasterHandler
 		Q10365_ForTheSearchdogKing.class,
 		Q10366_ReportOnTheSituationAtTheRuins.class,
 		Q10369_NoblesseSoulTesting.class,
-		Q10373_ExploringTheDimensionSealingTheDimension.class, // TODO: Not done.
+		Q10373_ExploringTheDimensionSealingTheDimension.class,
 		Q10377_TheInvadedExecutionGrounds.class,
 		Q10378_WeedingWork.class,
 		Q10379_AnUninvitedGuest.class,
@@ -978,7 +978,7 @@ public class QuestMasterHandler
 		Q10532_UncoveringTheConspiracy.class,
 		Q10533_OrfensAmbition.class, // FIXME: Custom.
 		Q10534_HatchlingResearch.class,
-		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
+		Q10535_BlacksmithsSoul3.class,
 		Q10537_KamaelDisarray.class,
 		Q10538_GiantsEvolution.class,
 		Q10539_EnergySupplyCutoffPlan.class,
