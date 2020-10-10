@@ -460,6 +460,9 @@ public class Config
 	public static boolean ORDER_QUEST_LIST_BY_QUESTID;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
 	public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
+	public static ItemHolder EXALTED_FOR_GLORY_ITEM_MAX;
+	public static ItemHolder EXALTED_FOR_HONOR_ITEM_MAX;
+	public static ItemHolder EXALTED_FOR_VICTORY_ITEM_MAX;
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
@@ -2044,6 +2047,9 @@ public class Config
 			ORDER_QUEST_LIST_BY_QUESTID = General.getBoolean("OrderQuestListByQuestId", true);
 			AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
 			ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
+			EXALTED_FOR_GLORY_ITEM_MAX = new ItemHolder(Integer.parseInt(General.getString("ExaltedForGloryItemMax", "45872,10").split(",")[0]), Integer.parseInt(General.getString("ExaltedForGloryItemMax", "45872,10").split(",")[1]));
+			EXALTED_FOR_HONOR_ITEM_MAX = new ItemHolder(Integer.parseInt(General.getString("ExaltedForHonorItemMax", "45873,20").split(",")[0]), Integer.parseInt(General.getString("ExaltedForHonorItemMax", "45873,20").split(",")[1]));
+			EXALTED_FOR_VICTORY_ITEM_MAX = new ItemHolder(Integer.parseInt(General.getString("ExaltedForVictoryItemMax", "80825,30").split(",")[0]), Integer.parseInt(General.getString("ExaltedForVictoryItemMax", "80825,30").split(",")[1]));
 			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);

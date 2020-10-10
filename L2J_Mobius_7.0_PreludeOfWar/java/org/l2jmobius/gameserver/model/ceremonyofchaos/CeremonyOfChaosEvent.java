@@ -26,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.enums.QuestSound;
@@ -76,10 +77,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousH
 public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 {
 	private static final Logger LOGGER = Logger.getLogger(CeremonyOfChaosEvent.class.getName());
-	
-	private static final int PROOF_OF_BATTLE_1 = 45872;
-	private static final int PROOF_OF_BATTLE_2 = 45873;
-	private static final int PROOF_OF_SETTLEMENT = 80825;
 	
 	private final int _id;
 	private final Instance _instance;
@@ -424,27 +421,27 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			final QuestState qs2 = member.getPlayer().getQuestState("Q10825_ForVictory");
 			if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
 			{
-				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_BATTLE_1, 1);
+				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_GLORY_ITEM_MAX.getId(), 1);
 				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_BATTLE_1) >= 10)
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_GLORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_GLORY_ITEM_MAX.getCount())
 				{
 					qs.setCond(2, true);
 				}
 			}
 			else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
 			{
-				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_BATTLE_2, 1);
+				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_HONOR_ITEM_MAX.getId(), 1);
 				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_BATTLE_2) >= 20)
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_HONOR_ITEM_MAX.getId()) >= Config.EXALTED_FOR_HONOR_ITEM_MAX.getCount())
 				{
 					qs1.setCond(2, true);
 				}
 			}
 			else if ((qs2 != null) && !qs2.isCompleted() && qs2.isCond(3))
 			{
-				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_SETTLEMENT, 1);
+				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId(), 1);
 				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_SETTLEMENT) >= 30)
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_VICTORY_ITEM_MAX.getCount())
 				{
 					qs2.setCond(4, true);
 				}

@@ -63,10 +63,6 @@ public abstract class AbstractOlympiadGame
 	protected static final String COMP_DONE_WEEK_NON_CLASSED = "competitions_done_week_non_classed";
 	protected static final String COMP_DONE_WEEK_TEAM = "competitions_done_week_team";
 	
-	private static final int PROOF_OF_BATTLE_1 = 45872;
-	private static final int PROOF_OF_BATTLE_2 = 45873;
-	private static final int PROOF_OF_SETTLEMENT = 80825;
-	
 	protected long _startTime = 0;
 	protected boolean _aborted = false;
 	protected final int _stadiumId;
@@ -423,27 +419,27 @@ public abstract class AbstractOlympiadGame
 		final QuestState qs2 = player.getQuestState("Q10825_ForVictory");
 		if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
 		{
-			AbstractScript.giveItems(player, PROOF_OF_BATTLE_1, 1);
+			AbstractScript.giveItems(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId(), 1);
 			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, PROOF_OF_BATTLE_1) >= 10)
+			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_GLORY_ITEM_MAX.getCount())
 			{
 				qs.setCond(2, true);
 			}
 		}
 		else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
 		{
-			AbstractScript.giveItems(player, PROOF_OF_BATTLE_2, 1);
+			AbstractScript.giveItems(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId(), 1);
 			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= 20)
+			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId()) >= Config.EXALTED_FOR_HONOR_ITEM_MAX.getCount())
 			{
 				qs1.setCond(2, true);
 			}
 		}
 		else if ((qs2 != null) && !qs2.isCompleted() && qs2.isCond(3))
 		{
-			AbstractScript.giveItems(player, PROOF_OF_SETTLEMENT, 1);
+			AbstractScript.giveItems(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId(), 1);
 			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, PROOF_OF_SETTLEMENT) >= 30)
+			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_VICTORY_ITEM_MAX.getCount())
 			{
 				qs2.setCond(4, true);
 			}
