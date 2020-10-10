@@ -458,6 +458,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					winside = 1;
 					
 					rewardParticipant(_playerOne.getPlayer(), getReward());
+					rewardQuests(_playerOne.getPlayer());
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
@@ -484,6 +485,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					winside = 2;
 					
 					rewardParticipant(_playerTwo.getPlayer(), getReward());
+					rewardQuests(_playerTwo.getPlayer());
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
@@ -600,6 +602,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 1, _startTime, _fightTime, getType());
 				rewardParticipant(_playerOne.getPlayer(), getReward());
+				rewardQuests(_playerOne.getPlayer());
+				rewardQuests(_playerTwo.getPlayer());
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
@@ -625,6 +629,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 2, _startTime, _fightTime, getType());
 				rewardParticipant(_playerTwo.getPlayer(), getReward());
+				rewardQuests(_playerOne.getPlayer());
+				rewardQuests(_playerTwo.getPlayer());
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());

@@ -28,6 +28,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -40,6 +41,7 @@ import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
+import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -51,6 +53,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -73,6 +76,10 @@ import org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos.ExCuriousH
 public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 {
 	private static final Logger LOGGER = Logger.getLogger(CeremonyOfChaosEvent.class.getName());
+	
+	private static final int PROOF_OF_BATTLE_1 = 45872;
+	private static final int PROOF_OF_BATTLE_2 = 45873;
+	private static final int PROOF_OF_SETTLEMENT = 80825;
 	
 	private final int _id;
 	private final Instance _instance;
@@ -408,6 +415,41 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		params.set("time", 30);
 		getTimers().addTimer("match_end_countdown", params, 30 * 1000, null, null);
 		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
+		
+		// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
+		for (CeremonyOfChaosMember member : getMembers().values())
+		{
+			final QuestState qs = member.getPlayer().getQuestState("Q10813_ForGlory");
+			final QuestState qs1 = member.getPlayer().getQuestState("Q10819_ForHonor");
+			final QuestState qs2 = member.getPlayer().getQuestState("Q10825_ForVictory");
+			if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
+			{
+				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_BATTLE_1, 1);
+				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_BATTLE_1) >= 10)
+				{
+					qs.setCond(2, true);
+				}
+			}
+			else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
+			{
+				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_BATTLE_2, 1);
+				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_BATTLE_2) >= 20)
+				{
+					qs1.setCond(2, true);
+				}
+			}
+			else if ((qs2 != null) && !qs2.isCompleted() && qs2.isCond(3))
+			{
+				AbstractScript.giveItems(member.getPlayer(), PROOF_OF_SETTLEMENT, 1);
+				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(member.getPlayer(), PROOF_OF_SETTLEMENT) >= 30)
+				{
+					qs2.setCond(4, true);
+				}
+			}
+		}
 	}
 	
 	private void teleportPlayersOut()

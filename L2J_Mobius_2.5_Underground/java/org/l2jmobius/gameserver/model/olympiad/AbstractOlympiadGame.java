@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -31,9 +32,11 @@ import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
@@ -59,6 +62,9 @@ public abstract class AbstractOlympiadGame
 	protected static final String COMP_DONE_WEEK_CLASSED = "competitions_done_week_classed";
 	protected static final String COMP_DONE_WEEK_NON_CLASSED = "competitions_done_week_non_classed";
 	protected static final String COMP_DONE_WEEK_TEAM = "competitions_done_week_team";
+	
+	private static final int PROOF_OF_BATTLE_1 = 45872;
+	private static final int PROOF_OF_BATTLE_2 = 45873;
 	
 	protected long _startTime = 0;
 	protected boolean _aborted = false;
@@ -405,6 +411,31 @@ public abstract class AbstractOlympiadGame
 			player.setIsPendingRevive(false);
 			player.teleToLocation(loc, null);
 			player.unsetLastLocation();
+		}
+	}
+	
+	// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
+	public static void rewardQuests(PlayerInstance player)
+	{
+		final QuestState qs = player.getQuestState("Q10813_ForGlory");
+		final QuestState qs1 = player.getQuestState("Q10819_ForHonor");
+		if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
+		{
+			AbstractScript.giveItems(player, PROOF_OF_BATTLE_1, 1);
+			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if (AbstractScript.getQuestItemsCount(player, PROOF_OF_BATTLE_1) >= 10)
+			{
+				qs.setCond(2, true);
+			}
+		}
+		else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
+		{
+			AbstractScript.giveItems(player, PROOF_OF_BATTLE_2, 1);
+			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if (AbstractScript.getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= 20)
+			{
+				qs1.setCond(2, true);
+			}
 		}
 	}
 	
