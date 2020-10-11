@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.enums.SiegeClanType;
 import org.l2jmobius.gameserver.enums.SiegeTeleportWhoType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.instancemanager.SiegeFlagOfProtectionManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -329,6 +330,7 @@ public class Siege implements Siegable
 			saveCastleSiege(); // Save castle specific data
 			clearSiegeClan(); // Clear siege clan from db
 			removeTowers(); // Remove all towers from this castle
+			SiegeFlagOfProtectionManager.getInstance().unspawnFlag(getCastle()); // Remove spawned flag of protection
 			SiegeGuardManager.getInstance().unspawnSiegeGuard(getCastle()); // Remove all spawned siege guard from this castle
 			if (_castle.getOwnerId() > 0)
 			{
@@ -503,6 +505,7 @@ public class Siege implements Siegable
 			spawnControlTower(); // Spawn control tower
 			spawnFlameTower(); // Spawn control tower
 			_castle.spawnDoor(); // Spawn door
+			SiegeFlagOfProtectionManager.getInstance().spawnFlag(getCastle()); // Spawn flag of protection
 			spawnSiegeGuard(); // Spawn siege guard
 			SiegeGuardManager.getInstance().deleteTickets(getCastle().getResidenceId()); // remove the tickets from the ground
 			_castle.getZone().setSiegeInstance(this);
