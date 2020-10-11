@@ -38,22 +38,22 @@ public class Q10879_ExaltedGuideToPower extends Quest
 	private static final int DINFORD_CERTIFICATE = 47836;
 	private static final int SETTLEN_SERTIFICATE = 47837;
 	private static final int ADMIRAL_KEUCEREUS_CERTIFICATE = 47838;
+	private static final int SERESIN_CERTIFICATE = 80829;
 	private static final int LIONEL_MISSION_LIST_5 = 47834;
 	// Rewards
-	private static final int VITALITY_OF_THE_EXALTED = 47855;
 	private static final int DIGNITY_OF_THE_EXALTED = 47853;
 	// Misc
-	private static final int MIN_LEVEL = 105;
-	private static final int MIN_COMPLETE_LEVEL = 104;
+	private static final int MIN_LEVEL = 104;
+	private static final int MIN_COMPLETE_LEVEL = 105;
 	
 	public Q10879_ExaltedGuideToPower()
 	{
 		super(10879);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
-		addCondMinLevel(MIN_LEVEL, "33907-00.htm");
-		addCondCompletedQuest(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName(), "33907-00.htm");
-		registerQuestItems(LIONEL_MISSION_LIST_5, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE);
+		addCondMinLevel(MIN_LEVEL, "33907-00.html");
+		addCondCompletedQuest(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName(), "33907-00.html");
+		registerQuestItems(LIONEL_MISSION_LIST_5, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE, SERESIN_CERTIFICATE);
 	}
 	
 	@Override
@@ -83,12 +83,18 @@ public class Q10879_ExaltedGuideToPower extends Quest
 				}
 				break;
 			}
+			case "33907-05a.html":
+			{
+				qs.setCond(3);
+				htmltext = event;
+				break;
+			}
 			case "33907-08.html":
 			{
-				if (hasQuestItems(player, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				if ((hasQuestItems(player, SERESIN_CERTIFICATE) || (hasQuestItems(player, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE))) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
 					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
+					addExpAndSp(player, 2217691008000L, (int) 2217691008L);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -112,13 +118,32 @@ public class Q10879_ExaltedGuideToPower extends Quest
 			}
 			case State.STARTED:
 			{
-				if (hasQuestItems(player, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				switch (qs.getCond())
 				{
-					htmltext = "33907-07.html";
-				}
-				else
-				{
-					htmltext = "33907-06.html";
+					case 1:
+					{
+						if (hasQuestItems(player, MASTER_CYPHONA_CERTIFICATE, DINFORD_CERTIFICATE, SETTLEN_SERTIFICATE, ADMIRAL_KEUCEREUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+						{
+							htmltext = "33907-07.html";
+						}
+						else
+						{
+							htmltext = "33907-06.html";
+						}
+						break;
+					}
+					case 3:
+					{
+						if (hasQuestItems(player, SERESIN_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+						{
+							htmltext = "33907-07a.html";
+						}
+						else
+						{
+							htmltext = "33907-06a.html";
+						}
+						break;
+					}
 				}
 				break;
 			}

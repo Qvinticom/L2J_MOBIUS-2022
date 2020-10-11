@@ -84,7 +84,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 				}
 				break;
 			}
-			case "33907-08.html":
+			case "33907-09.html":
 			{
 				if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
@@ -116,7 +116,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			{
 				if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					htmltext = "33907-07.html";
+					htmltext = "33907-08.html";
 				}
 				else
 				{

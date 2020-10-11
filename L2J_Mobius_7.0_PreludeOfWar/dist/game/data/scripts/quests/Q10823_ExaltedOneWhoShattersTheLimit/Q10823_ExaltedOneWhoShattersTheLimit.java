@@ -34,7 +34,7 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 	// NPC
 	private static final int LIONEL = 33907;
 	// Items
-	private static final int MERLOT_SERTIFICATE = 46056;
+	private static final int MERLOT_CERTIFICATE = 46056;
 	private static final int KURTIZ_CERTIFICATE = 46057;
 	private static final int MAMMON_CERTIFICATE = 45635;
 	private static final int GUSTAV_CERTIFICATE = 45636;
@@ -53,9 +53,9 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 		super(10823);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
-		addCondMinLevel(MIN_LEVEL, "");
+		addCondMinLevel(MIN_LEVEL, "33907-07.html");
 		addCondCompletedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "33907-02.html");
-		registerQuestItems(LIONEL_MISSION_LIST_3, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE);
+		registerQuestItems(LIONEL_MISSION_LIST_3, MERLOT_CERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE);
 	}
 	
 	@Override
@@ -86,14 +86,18 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 				}
 				break;
 			}
-			case "33907-08.html":
+			case "33907-09.html":
 			{
-				if (hasQuestItems(player, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
+				if (hasQuestItems(player, MERLOT_CERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
 				{
 					giveItems(player, EXALTED_CLOAK, 1);
 					giveItems(player, OBTAIN_EXALTED_STATUS, 1);
 					giveItems(player, EXALTED_TIARA, 1);
 					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
+					// Give Exalted status here?
+					// https://l2wiki.com/Noblesse
+					player.setNobleLevel(2);
+					player.broadcastUserInfo();
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -118,9 +122,9 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 			}
 			case State.STARTED:
 			{
-				if (hasQuestItems(player, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
+				if (hasQuestItems(player, MERLOT_CERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
 				{
-					htmltext = "33907-07.html";
+					htmltext = "33907-08.html";
 				}
 				else
 				{

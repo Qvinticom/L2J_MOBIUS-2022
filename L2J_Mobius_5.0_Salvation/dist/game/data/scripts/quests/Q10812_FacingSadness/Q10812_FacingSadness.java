@@ -30,7 +30,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
 
 /**
  * Facing Sadness (10812)
- * @author Stayway
+ * @author Stayway, CostyKiller
  */
 public class Q10812_FacingSadness extends Quest
 {
@@ -100,6 +100,7 @@ public class Q10812_FacingSadness extends Quest
 	
 	// Misc
 	private static final int MIN_LEVEL = 99;
+	private static final int PROOF_OF_DISPOSAL_NEEDED = 8000;
 	
 	public Q10812_FacingSadness()
 	{
@@ -145,7 +146,7 @@ public class Q10812_FacingSadness extends Quest
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
-						takeItems(player, PROOF_OF_DISPOSAL, -1);
+						takeItems(player, PROOF_OF_DISPOSAL, PROOF_OF_DISPOSAL_NEEDED);
 						giveItems(player, ELIKIA_CERTIFICATE, 1);
 						addExpAndSp(player, 0, 498204432);
 						qs.exitQuest(false, true);
@@ -193,7 +194,7 @@ public class Q10812_FacingSadness extends Quest
 				{
 					htmltext = "31620-05.html";
 				}
-				else if (qs.isCond(2))
+				else if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= PROOF_OF_DISPOSAL_NEEDED))
 				{
 					htmltext = "31620-07.html";
 				}
@@ -221,12 +222,12 @@ public class Q10812_FacingSadness extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) < 8000)
+			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) < PROOF_OF_DISPOSAL_NEEDED)
 			{
 				giveItems(player, PROOF_OF_DISPOSAL, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= 8000)
+			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= PROOF_OF_DISPOSAL_NEEDED)
 			{
 				qs.setCond(2, true);
 			}

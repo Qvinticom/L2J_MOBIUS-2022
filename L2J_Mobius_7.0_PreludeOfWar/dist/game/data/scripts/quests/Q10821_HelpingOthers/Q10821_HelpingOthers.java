@@ -18,6 +18,11 @@ package quests.Q10821_HelpingOthers;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -32,10 +37,10 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
 public class Q10821_HelpingOthers extends Quest
 {
 	// NPC
-	private static final int SIR_ERIC_RODEMAI = 30756;
+	private static final int SIR_KRISTOF_RODEMAI = 30756;
 	// Items
 	private static final int MENTEE_MARK = 33804;
-	private static final int DAICHIR_SERTIFICATE = 45628;
+	private static final int DAICHIR_CERTIFICATE = 45628;
 	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
 	private static final int ISHUMA_CERTIFICATE = 45630;
 	// Rewards
@@ -43,12 +48,13 @@ public class Q10821_HelpingOthers extends Quest
 	private static final int SPELLBOOK_FAVOR_OF_THE_EXALTED = 45928;
 	// Misc
 	private static final int MIN_LEVEL = 99;
+	private static final int MENTEE_MARKS_NEEDED = 45000;
 	
 	public Q10821_HelpingOthers()
 	{
 		super(10821);
-		addStartNpc(SIR_ERIC_RODEMAI);
-		addTalkId(SIR_ERIC_RODEMAI);
+		addStartNpc(SIR_KRISTOF_RODEMAI);
+		addTalkId(SIR_KRISTOF_RODEMAI);
 		addCondMinLevel(MIN_LEVEL, "30756-02.html");
 		addCondStartedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "30756-03.html");
 		// registerQuestItems(MENTEE_MARK); Should they be removed when abandoning quest?
@@ -78,13 +84,19 @@ public class Q10821_HelpingOthers extends Quest
 				htmltext = event;
 				break;
 			}
+			case "30756-06a.html":
+			{
+				qs.setCond(2);
+				htmltext = event;
+				break;
+			}
 			case "30756-09.html":
 			{
-				if (qs.isCond(1) && (getQuestItemsCount(player, MENTEE_MARK) >= 45000))
+				if ((qs.isCond(1) && (getQuestItemsCount(player, MENTEE_MARK) >= MENTEE_MARKS_NEEDED)) || qs.isCond(3))
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
-						if (hasQuestItems(player, DAICHIR_SERTIFICATE, ISHUMA_CERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE))
+						if (hasQuestItems(player, DAICHIR_CERTIFICATE, ISHUMA_CERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE))
 						{
 							htmltext = "30756-10.html";
 						}
@@ -92,7 +104,10 @@ public class Q10821_HelpingOthers extends Quest
 						{
 							htmltext = event;
 						}
-						takeItems(player, MENTEE_MARK, 45000);
+						if (qs.isCond(1))
+						{
+							takeItems(player, MENTEE_MARK, MENTEE_MARKS_NEEDED);
+						}
 						giveItems(player, SIR_KRISTOF_RODEMAI_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED, 1);
 						qs.exitQuest(false, true);
@@ -122,15 +137,33 @@ public class Q10821_HelpingOthers extends Quest
 			}
 			case State.STARTED:
 			{
-				if (getQuestItemsCount(player, MENTEE_MARK) >= 45000)
+				switch (qs.getCond())
 				{
-					htmltext = "30756-08.html";
+					case 1:
+					{
+						if (getQuestItemsCount(player, MENTEE_MARK) >= MENTEE_MARKS_NEEDED)
+						{
+							htmltext = "30756-08.html";
+						}
+						else
+						{
+							htmltext = "30756-07.html";
+						}
+						break;
+					}
+					case 2:
+					{
+						if (qs.isMemoState(2))
+						{
+							htmltext = "30756-08a.html";
+						}
+						else
+						{
+							htmltext = "30756-07a.html";
+						}
+						break;
+					}
 				}
-				else
-				{
-					htmltext = "30756-07.html";
-				}
-				break;
 			}
 			case State.COMPLETED:
 			{
@@ -139,5 +172,49 @@ public class Q10821_HelpingOthers extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
+	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
+	public void onAttackableKill(OnAttackableKill event)
+	{
+		final PlayerInstance player = event.getAttacker();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
+		{
+			return;
+		}
+		if (player.getParty() == null)
+		{
+			return;
+		}
+		if (player.getParty().getLeader() != player)
+		{
+			return;
+		}
+		if (!event.getTarget().isRaid())
+		{
+			return;
+		}
+		if (event.getTarget().isRaidMinion())
+		{
+			return;
+		}
+		
+		if (qs.isCond(2))
+		{
+			final int memo = qs.getMemoState() + 1;
+			qs.setMemoState(memo);
+			// sendNpcLogList(player);
+			
+			if (memo >= 2)
+			{
+				qs.setCond(3, true);
+			}
+		}
 	}
 }

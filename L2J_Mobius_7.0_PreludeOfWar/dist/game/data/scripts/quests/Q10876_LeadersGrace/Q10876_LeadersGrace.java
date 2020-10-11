@@ -40,7 +40,7 @@ public class Q10876_LeadersGrace extends Quest
 	private static final int R_GRADE_GEMSTONE = 19440;
 	private static final ItemHolder LIONEL_HUNTERS_LIST_PART_4 = new ItemHolder(47829, 1);
 	// Rewards
-	private static final int SANTIAGO_SERTIFICATE = 47832;
+	private static final int SANTIAGO_CERTIFICATE = 47832;
 	private static final int ELCYUM_CRYSTAL = 36514;
 	// Misc
 	private static final int MIN_LEVEL = 103;
@@ -88,7 +88,7 @@ public class Q10876_LeadersGrace extends Quest
 					takeItems(player, SPECIAL_FISH_STEW, -50);
 					takeItems(player, R_GRADE_GEMSTONE, -80);
 					giveItems(player, ELCYUM_CRYSTAL, 1);
-					giveItems(player, SANTIAGO_SERTIFICATE, 1);
+					giveItems(player, SANTIAGO_CERTIFICATE, 1);
 					qs.exitQuest(false, true);
 					
 					final Quest mainQ = QuestManager.getInstance().getQuest(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName());

@@ -171,6 +171,8 @@ import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
+import quests.Q10514_NewPathToGlory.Q10514_NewPathToGlory;
+import quests.Q10515_NewWayForPride.Q10515_NewWayForPride;
 import quests.Q10535_BlacksmithsSoul3.Q10535_BlacksmithsSoul3;
 import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
 import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
@@ -236,9 +238,15 @@ import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProj
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
+import quests.Q10874_AgainstTheNewEnemy.Q10874_AgainstTheNewEnemy;
+import quests.Q10875_ForReputation.Q10875_ForReputation;
 import quests.Q10876_LeadersGrace.Q10876_LeadersGrace;
+import quests.Q10877_BreakThroughCrisis.Q10877_BreakThroughCrisis;
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 import quests.Q10880_TheLastOneStanding.Q10880_TheLastOneStanding;
+import quests.Q10881_ForThePride.Q10881_ForThePride;
+import quests.Q10882_VictoryCollection.Q10882_VictoryCollection;
+import quests.Q10883_ImmortalHonor.Q10883_ImmortalHonor;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
@@ -302,8 +310,6 @@ import quests.not_done.Q00989_AdventureGuildsSpecialRequestLv5;
 import quests.not_done.Q01900_StormIsleSecretSpot;
 import quests.not_done.Q01901_StormIsleFurtiveDeal;
 import quests.not_done.Q10298_WastelandQueen;
-import quests.not_done.Q10514_NewPathToGlory;
-import quests.not_done.Q10515_NewWayForPride;
 import quests.not_done.Q10570_HurrahForKamaelsIndependence;
 import quests.not_done.Q10572_ToExpelTheEmbryosForces;
 import quests.not_done.Q10594_FergasonsScheme;
@@ -316,12 +322,6 @@ import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
-import quests.not_done.Q10874_AgainstTheNewEnemy;
-import quests.not_done.Q10875_ForReputation;
-import quests.not_done.Q10877_BreakThroughCrisis;
-import quests.not_done.Q10881_ForThePride;
-import quests.not_done.Q10882_VictoryCollection;
-import quests.not_done.Q10883_ImmortalHonor;
 import quests.not_done.Q10886_SaviorsPathSearchTheRefinery;
 import quests.not_done.Q10887_SaviorsPathDemonsAndAtelia;
 import quests.not_done.Q10888_SaviorsPathDefeatTheEmbryo;
@@ -519,8 +519,8 @@ public class QuestMasterHandler
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
-		Q10514_NewPathToGlory.class, // TODO: Not done.
-		Q10515_NewWayForPride.class, // TODO: Not done.
+		Q10514_NewPathToGlory.class,
+		Q10515_NewWayForPride.class,
 		Q10516_UnveiledFafurionTemple.class, // FIXME: Custom.
 		Q10517_FafurionsMinions.class, // FIXME: Custom.
 		Q10518_SucceedingThePriestess.class, // FIXME: Custom.
@@ -605,15 +605,15 @@ public class QuestMasterHandler
 		Q10856_SuperionAppears.class,
 		Q10857_SecretTeleport.class,
 		Q10873_ExaltedReachingAnotherLevel.class,
-		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.
-		Q10875_ForReputation.class, // TODO: Not done.
+		Q10874_AgainstTheNewEnemy.class,
+		Q10875_ForReputation.class,
 		Q10876_LeadersGrace.class,
-		Q10877_BreakThroughCrisis.class, // TODO: Not done.
+		Q10877_BreakThroughCrisis.class,
 		Q10879_ExaltedGuideToPower.class,
 		Q10880_TheLastOneStanding.class,
-		Q10881_ForThePride.class, // TODO: Not done.
-		Q10882_VictoryCollection.class, // TODO: Not done.
-		Q10883_ImmortalHonor.class, // TODO: Not done.
+		Q10881_ForThePride.class,
+		Q10882_VictoryCollection.class,
+		Q10883_ImmortalHonor.class,
 		Q10886_SaviorsPathSearchTheRefinery.class, // TODO: Not done.
 		Q10887_SaviorsPathDemonsAndAtelia.class, // TODO: Not done.
 		Q10888_SaviorsPathDefeatTheEmbryo.class, // TODO: Not done.

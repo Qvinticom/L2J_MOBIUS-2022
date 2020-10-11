@@ -41,15 +41,16 @@ public class Q10819_ForHonor extends Quest
 	// NPC
 	private static final int OLYMPIAD_MANAGER = 31688;
 	// Items
-	private static final int PROOF_OF_BATTLE = 45872;
+	private static final int PROOF_OF_BATTLE_2 = 45873;
 	private static final int ISHUMA_CERTIFICATE = 45630;
 	private static final int SIR_KRISTOF_RODEMAI_CERTIFICATE = 45631;
-	private static final int DAICHIR_SERTIFICATE = 45628;
+	private static final int DAICHIR_CERTIFICATE = 45628;
 	// Rewards
 	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
 	private static final int BATTLE_QUICK_HEALING_POTION = 45945;
 	// Misc
 	private static final int MIN_LEVEL = 99;
+	private static final int PROOF_OF_BATTLE_2_NEEDED = 20;
 	
 	public Q10819_ForHonor()
 	{
@@ -58,7 +59,7 @@ public class Q10819_ForHonor extends Quest
 		addTalkId(OLYMPIAD_MANAGER);
 		addCondMinLevel(MIN_LEVEL, "31688-02.html");
 		addCondStartedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "31688-03.html");
-		registerQuestItems(PROOF_OF_BATTLE);
+		registerQuestItems(PROOF_OF_BATTLE_2);
 	}
 	
 	@Override
@@ -87,11 +88,11 @@ public class Q10819_ForHonor extends Quest
 			}
 			case "31688-09.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= PROOF_OF_BATTLE_2_NEEDED))
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
-						if (hasQuestItems(player, DAICHIR_SERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE))
+						if (hasQuestItems(player, DAICHIR_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE))
 						{
 							htmltext = "31688-10.html";
 						}
@@ -99,7 +100,7 @@ public class Q10819_ForHonor extends Quest
 						{
 							htmltext = event;
 						}
-						takeItems(player, PROOF_OF_BATTLE, -1);
+						takeItems(player, PROOF_OF_BATTLE_2, PROOF_OF_BATTLE_2_NEEDED);
 						giveItems(player, BATTLE_QUICK_HEALING_POTION, 180);
 						giveItems(player, OLYMPIAD_MANAGER_CERTIFICATE, 1);
 						qs.exitQuest(false, true);
@@ -133,7 +134,12 @@ public class Q10819_ForHonor extends Quest
 				{
 					htmltext = "31688-07.html";
 				}
-				else if (qs.isCond(2))
+				else if (qs.isCond(1) && (getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= PROOF_OF_BATTLE_2_NEEDED))
+				{
+					qs.setCond(2);
+					htmltext = "31688-07a.html";
+				}
+				else if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= PROOF_OF_BATTLE_2_NEEDED))
 				{
 					htmltext = "31688-08.html";
 				}
@@ -155,9 +161,9 @@ public class Q10819_ForHonor extends Quest
 			final QuestState qs = getQuestState(player, false);
 			if ((qs != null) && qs.isCond(1))
 			{
-				giveItems(player, PROOF_OF_BATTLE, 1);
+				giveItems(player, PROOF_OF_BATTLE_2, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (getQuestItemsCount(player, PROOF_OF_BATTLE) >= 100)
+				if (getQuestItemsCount(player, PROOF_OF_BATTLE_2) >= PROOF_OF_BATTLE_2_NEEDED)
 				{
 					qs.setCond(2, true);
 				}

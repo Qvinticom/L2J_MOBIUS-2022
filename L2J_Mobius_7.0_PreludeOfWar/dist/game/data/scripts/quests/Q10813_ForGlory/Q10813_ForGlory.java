@@ -38,14 +38,15 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  */
 public class Q10813_ForGlory extends Quest
 {
-	// Npc
+	// NPC
 	private static final int MYSTERIOUS_BUTLER = 33685;
 	// Items
-	private static final int PROOF_OF_BATTLE = 45872;
+	private static final int PROOF_OF_BATTLE_1 = 45872;
 	private static final int MYSTERIOUS_BUTLER_CERTIFICATE = 45624;
-	private static final int BATTLE_QUIKCK_HEALING_POTION = 45945;
+	private static final int BATTLE_QUICK_HEALING_POTION = 45945;
 	// Misc
 	private static final int MIN_LEVEL = 99;
+	private static final int PROOF_OF_BATTLE_1_NEEDED = 10;
 	
 	public Q10813_ForGlory()
 	{
@@ -54,7 +55,7 @@ public class Q10813_ForGlory extends Quest
 		addTalkId(MYSTERIOUS_BUTLER);
 		addCondMinLevel(MIN_LEVEL, "33685-09.htm");
 		addCondStartedQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName(), "33685-07.htm");
-		registerQuestItems(PROOF_OF_BATTLE);
+		registerQuestItems(PROOF_OF_BATTLE_1);
 	}
 	
 	@Override
@@ -85,10 +86,10 @@ public class Q10813_ForGlory extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if ((player.getLevel() >= MIN_LEVEL))
+					if ((player.getLevel() >= MIN_LEVEL) && (getQuestItemsCount(player, PROOF_OF_BATTLE_1) >= PROOF_OF_BATTLE_1_NEEDED))
 					{
-						takeItems(player, PROOF_OF_BATTLE, -1);
-						giveItems(player, BATTLE_QUIKCK_HEALING_POTION, 120);
+						takeItems(player, PROOF_OF_BATTLE_1, PROOF_OF_BATTLE_1_NEEDED);
+						giveItems(player, BATTLE_QUICK_HEALING_POTION, 120);
 						giveItems(player, MYSTERIOUS_BUTLER_CERTIFICATE, 1);
 						qs.exitQuest(false, true);
 						
@@ -126,7 +127,7 @@ public class Q10813_ForGlory extends Quest
 				{
 					htmltext = "33685-08.html";
 				}
-				else if (qs.isCond(2))
+				else if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_BATTLE_1) >= PROOF_OF_BATTLE_1_NEEDED))
 				{
 					htmltext = "33685-05.html";
 				}
@@ -148,9 +149,9 @@ public class Q10813_ForGlory extends Quest
 			final QuestState qs = getQuestState(player, false);
 			if ((qs != null) && qs.isCond(1))
 			{
-				giveItems(player, PROOF_OF_BATTLE, 1);
+				giveItems(player, PROOF_OF_BATTLE_1, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (getQuestItemsCount(player, PROOF_OF_BATTLE) >= 80)
+				if (getQuestItemsCount(player, PROOF_OF_BATTLE_1) >= PROOF_OF_BATTLE_1_NEEDED)
 				{
 					qs.setCond(2, true);
 				}

@@ -35,12 +35,12 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 	private static final int LIONEL = 33907;
 	// Items
 	private static final int SPORCHA_CERTIFICATE = 47830;
-	private static final int KRENAHT_CERTIFICATE = 47831;
-	private static final int SANTIAGO_SERTIFICATE = 47832;
+	private static final int KEKROPUS_CERTIFICATE = 47831;
+	private static final int SANTIAGO_CERTIFICATE = 47832;
 	private static final int ARCTURUS_CERTIFICATE = 47833;
+	private static final int SYLVAIN_CERTIFICATE = 80828;
 	private static final int LIONEL_MISSION_LIST_4 = 47829;
 	// Rewards
-	private static final int VITALITY_OF_THE_EXALTED = 47854;
 	private static final int DIGNITY_OF_THE_EXALTED = 47852;
 	// Misc
 	private static final int MIN_LEVEL = 103;
@@ -53,7 +53,7 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 		addTalkId(LIONEL);
 		addCondMinLevel(MIN_LEVEL, "33907-00.htm");
 		addCondCompletedQuest(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName(), "33907-00.htm");
-		registerQuestItems(LIONEL_MISSION_LIST_4, SPORCHA_CERTIFICATE, KRENAHT_CERTIFICATE, SANTIAGO_SERTIFICATE, ARCTURUS_CERTIFICATE);
+		registerQuestItems(LIONEL_MISSION_LIST_4, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE, SYLVAIN_CERTIFICATE);
 	}
 	
 	@Override
@@ -83,12 +83,18 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 				}
 				break;
 			}
+			case "33907-05a.html":
+			{
+				qs.setCond(3);
+				htmltext = event;
+				break;
+			}
 			case "33907-08.html":
 			{
-				if (hasQuestItems(player, SPORCHA_CERTIFICATE, KRENAHT_CERTIFICATE, SANTIAGO_SERTIFICATE, ARCTURUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				if ((hasQuestItems(player, SYLVAIN_CERTIFICATE) || hasQuestItems(player, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE)) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
 					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
+					addExpAndSp(player, 1178303740714L, 1178303740);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -112,13 +118,32 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 			}
 			case State.STARTED:
 			{
-				if (hasQuestItems(player, SPORCHA_CERTIFICATE, KRENAHT_CERTIFICATE, SANTIAGO_SERTIFICATE, ARCTURUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				switch (qs.getCond())
 				{
-					htmltext = "33907-07.html";
-				}
-				else
-				{
-					htmltext = "33907-06.html";
+					case 1:
+					{
+						if (hasQuestItems(player, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+						{
+							htmltext = "33907-07.html";
+						}
+						else
+						{
+							htmltext = "33907-06.html";
+						}
+						break;
+					}
+					case 3:
+					{
+						if (hasQuestItems(player, SYLVAIN_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+						{
+							htmltext = "33907-07a.html";
+						}
+						else
+						{
+							htmltext = "33907-06a.html";
+						}
+						break;
+					}
 				}
 				break;
 			}

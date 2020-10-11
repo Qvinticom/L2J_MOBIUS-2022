@@ -41,7 +41,7 @@ public class Q10880_TheLastOneStanding extends Quest
 	private static final int CYPHONA = 34055;
 	private static final int FERIN = 34054;
 	// Items
-	private static final int MASTER_CYPHONA_CERTIFICATE = 47835;
+	private static final int FERIN_CERTIFICATE = 47835;
 	private static final int PROOF_OF_STRENGTH = 47843;
 	private static final ItemHolder LIONEL_HUNTERS_LIST_PART_5 = new ItemHolder(47834, 1);
 	// Monsters
@@ -57,6 +57,7 @@ public class Q10880_TheLastOneStanding extends Quest
 		23572, // Nymph Cosmos
 		23573, // Nymph Cosmos
 		23578, // Nymph Guardian
+		
 		// Garden of Spirits
 		23541, // Kerberos Lager
 		23550, // Kerberos Lager (night)
@@ -74,6 +75,7 @@ public class Q10880_TheLastOneStanding extends Quest
 		23557, // Fury Kerberos Leger (night)
 		23549, // Fury Kerberos Nero
 		23558, // Fury Kerberos Nero (night)
+		
 		// Atelia Fortress
 		23505, // Fortress Raider 101
 		23506, // Fortress Guardian Captain 101
@@ -89,6 +91,7 @@ public class Q10880_TheLastOneStanding extends Quest
 		23510, // Atelia Flame Master 102
 		23511, // Fortress Archon 102
 		23512, // Atelia High Priest 102
+		
 		// Shadow of the Mother Tree
 		24117, // Crystal Reep
 		24118, // Crystal Reep
@@ -108,6 +111,8 @@ public class Q10880_TheLastOneStanding extends Quest
 	
 	// Misc
 	private static final int MIN_LEVEL = 104;
+	private static final int FP = 4500; // Faction Points
+	private static final int PROOF_OF_STRENGTH_NEEDED = 10000;
 	
 	public Q10880_TheLastOneStanding()
 	{
@@ -155,8 +160,8 @@ public class Q10880_TheLastOneStanding extends Quest
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
 						takeItems(player, PROOF_OF_STRENGTH, -1);
-						giveItems(player, MASTER_CYPHONA_CERTIFICATE, 1);
-						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 4500);
+						giveItems(player, FERIN_CERTIFICATE, 1);
+						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, FP);
 						qs.exitQuest(false, true);
 						
 						final Quest mainQ = QuestManager.getInstance().getQuest(Q10879_ExaltedGuideToPower.class.getSimpleName());
@@ -180,8 +185,8 @@ public class Q10880_TheLastOneStanding extends Quest
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
 						takeItems(player, PROOF_OF_STRENGTH, -1);
-						giveItems(player, MASTER_CYPHONA_CERTIFICATE, 1);
-						addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 4500);
+						giveItems(player, FERIN_CERTIFICATE, 1);
+						addFactionPoints(player, Faction.UNWORLDLY_VISITORS, FP);
 						qs.exitQuest(false, true);
 						
 						final Quest mainQ = QuestManager.getInstance().getQuest(Q10879_ExaltedGuideToPower.class.getSimpleName());
@@ -200,13 +205,13 @@ public class Q10880_TheLastOneStanding extends Quest
 			}
 			case "34054-07b.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_STRENGTH) >= PROOF_OF_STRENGTH_NEEDED))
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
-						takeItems(player, PROOF_OF_STRENGTH, -1);
-						giveItems(player, MASTER_CYPHONA_CERTIFICATE, 1);
-						addFactionPoints(player, Faction.KINGDOM_ROYAL_GUARDS, 4500);
+						takeItems(player, PROOF_OF_STRENGTH, PROOF_OF_STRENGTH_NEEDED);
+						giveItems(player, FERIN_CERTIFICATE, 1);
+						addFactionPoints(player, Faction.KINGDOM_ROYAL_GUARDS, FP);
 						qs.exitQuest(false, true);
 						
 						final Quest mainQ = QuestManager.getInstance().getQuest(Q10879_ExaltedGuideToPower.class.getSimpleName());
@@ -260,7 +265,7 @@ public class Q10880_TheLastOneStanding extends Quest
 					}
 					case FERIN:
 					{
-						if (qs.isCond(2))
+						if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_STRENGTH) >= PROOF_OF_STRENGTH_NEEDED))
 						{
 							htmltext = "34054-06.html";
 						}
@@ -294,7 +299,7 @@ public class Q10880_TheLastOneStanding extends Quest
 			giveItems(player, PROOF_OF_STRENGTH, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			
-			if (getQuestItemsCount(player, PROOF_OF_STRENGTH) >= 10000)
+			if (getQuestItemsCount(player, PROOF_OF_STRENGTH) >= PROOF_OF_STRENGTH_NEEDED)
 			{
 				qs.setCond(2, true);
 			}

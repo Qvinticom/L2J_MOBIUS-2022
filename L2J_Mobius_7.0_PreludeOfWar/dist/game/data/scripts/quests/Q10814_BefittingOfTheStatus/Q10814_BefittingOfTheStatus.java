@@ -148,7 +148,8 @@ public class Q10814_BefittingOfTheStatus extends Quest
 							takeItems(player, itemId, 1);
 							if (qs.getCond() < 6)
 							{
-								qs.setCond(qs.getCond() + 1);
+								// qs.setCond(qs.getCond() + 1);
+								qs.setCond(6);
 							}
 							
 							switch (qs.getCond())

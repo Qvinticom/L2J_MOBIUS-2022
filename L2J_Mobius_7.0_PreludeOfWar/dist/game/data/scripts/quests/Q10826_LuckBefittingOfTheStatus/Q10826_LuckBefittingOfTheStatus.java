@@ -38,7 +38,7 @@ public class Q10826_LuckBefittingOfTheStatus extends Quest
 	private static final int BLACKSMITH_OF_MAMMON = 31126;
 	// Items
 	private static final int LADY_KNIFE = 45645;
-	private static final int MERLOT_SERTIFICATE = 46056;
+	private static final int MERLOT_CERTIFICATE = 46056;
 	private static final int KURTIZ_CERTIFICATE = 46057;
 	private static final int GUSTAV_CERTIFICATE = 45636;
 	// Rewards
@@ -118,7 +118,7 @@ public class Q10826_LuckBefittingOfTheStatus extends Quest
 		{
 			if ((player.getLevel() >= MIN_LEVEL))
 			{
-				if (hasQuestItems(player, KURTIZ_CERTIFICATE, MERLOT_SERTIFICATE, GUSTAV_CERTIFICATE))
+				if (hasQuestItems(player, KURTIZ_CERTIFICATE, MERLOT_CERTIFICATE, GUSTAV_CERTIFICATE))
 				{
 					htmltext = "31126-15.html";
 				}

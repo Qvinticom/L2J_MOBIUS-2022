@@ -496,9 +496,15 @@ import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProj
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
+import quests.Q10874_AgainstTheNewEnemy.Q10874_AgainstTheNewEnemy;
+import quests.Q10875_ForReputation.Q10875_ForReputation;
 import quests.Q10876_LeadersGrace.Q10876_LeadersGrace;
+import quests.Q10877_BreakThroughCrisis.Q10877_BreakThroughCrisis;
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 import quests.Q10880_TheLastOneStanding.Q10880_TheLastOneStanding;
+import quests.Q10881_ForThePride.Q10881_ForThePride;
+import quests.Q10882_VictoryCollection.Q10882_VictoryCollection;
+import quests.Q10883_ImmortalHonor.Q10883_ImmortalHonor;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00667_HowToCoverShilensEyes;
@@ -541,12 +547,6 @@ import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
 import quests.not_done.Q10858_QueenRamonaControllerOfTheVessel;
 import quests.not_done.Q10859_OwnTheEarthAndTheHeavens;
-import quests.not_done.Q10874_AgainstTheNewEnemy;
-import quests.not_done.Q10875_ForReputation;
-import quests.not_done.Q10877_BreakThroughCrisis;
-import quests.not_done.Q10881_ForThePride;
-import quests.not_done.Q10882_VictoryCollection;
-import quests.not_done.Q10883_ImmortalHonor;
 
 /**
  * @author NosBit
@@ -1076,15 +1076,15 @@ public class QuestMasterHandler
 		Q10858_QueenRamonaControllerOfTheVessel.class, // TODO: Not done.
 		Q10859_OwnTheEarthAndTheHeavens.class, // TODO: Not done.
 		Q10873_ExaltedReachingAnotherLevel.class,
-		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.
-		Q10875_ForReputation.class, // TODO: Not done.
+		Q10874_AgainstTheNewEnemy.class,
+		Q10875_ForReputation.class,
 		Q10876_LeadersGrace.class,
-		Q10877_BreakThroughCrisis.class, // TODO: Not done.
+		Q10877_BreakThroughCrisis.class,
 		Q10879_ExaltedGuideToPower.class,
 		Q10880_TheLastOneStanding.class,
-		Q10881_ForThePride.class, // TODO: Not done.
-		Q10882_VictoryCollection.class, // TODO: Not done.
-		Q10883_ImmortalHonor.class, // TODO: Not done.
+		Q10881_ForThePride.class,
+		Q10882_VictoryCollection.class,
+		Q10883_ImmortalHonor.class,
 	};
 	
 	public static void main(String[] args)

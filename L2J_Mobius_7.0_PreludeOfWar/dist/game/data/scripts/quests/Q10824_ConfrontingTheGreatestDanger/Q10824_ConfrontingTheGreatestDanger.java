@@ -45,44 +45,67 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 	private static final int PROOF_OF_PREPARATION = 80824;
 	private static final ItemHolder LIONEL_HUNTERS_LIST_PART_3 = new ItemHolder(45637, 1);
 	// Boss
-	private static final int[] BOSS =
+	private static final int[] DIM_RAID_RBS =
 	{
-		25745, // test
-		25747 // test
+		29283, // Vengeful Lerazia (Gludin - South gate)
+		29284, // Vengeful Edaire (Gludin - West gate)
+		29285, // Vengeful Agonia (Gludin - North gate)
+		29278, // Vengeful Agarez (Gludio - North Gate)
+		29279, // Vengeful Oretross (Gludio - West Gate)
+		29280, // Vengeful Eligos (Gludio - South Gate)
+		29268, // Crook The Mad (Giran - North Gate)
+		29269, // Houpon The Warden (Giran - West Gate)
+		29270, // Guillotine Of Death (Giran - South Gate)
+		29263, // Harp (Aden - West Gate)
+		29260, // Maliss (Aden - East Gate)
+		29261, // Isadora (Aden - South Gate)
+		29298, // Varbasion (Oren - North Gate)
+		29299, // Varmonia (Oren - East Gate)
+		29300, // Varkaron (Oren - South Gate)
+		29273, // Lindvior Herald Numa (Goddard - East Gate)
+		29274, // Valakas Herald Potigia (Goddard - North Gate)
+		29275, // Antharas Herald Komabor (Goddard - West Gate)
+		29288, // Nerva Orc Nergatt (Schuttgart - West Gate)
+		29289, // Amden Orc Turation (Schuttgart - South Gate)
+		29290, // Nerva Chief Turakan (Schuttgart - East Gate)
+		29293, // Theor (Gainak - South West Gate)
+		29294, // Tebird (Gainak - West Gate)
+		29295 // Tegaffe (Gainak - North Gate)
 	};
 	// Mobs
 	private static final int[] MONSTERS =
 	{
 		// Atelia Refinery
-		24150, // Devil Warrior
-		24149, // Devil Nightmare
-		24153, // Devil Varos
-		24152, // Devil Sinist
-		24151, // Devil Guardian
 		24144, // Death Rogue
 		24145, // Death Shooter
 		24146, // Death Warrior
 		24147, // Death Sorcerer
 		24148, // Death Pondus
-		24155, // Demonic Warrior
+		24149, // Devil Nightmare
+		24150, // Devil Warrior
+		24151, // Devil Guardian
+		24152, // Devil Sinist
+		24153, // Devil Varos
 		24154, // Demonic Wizard
-		24158, // Demonic Weiss
-		24157, // Demonic Keras
+		24155, // Demonic Warrior
 		24156, // Demonic Archer
-		// Raider's Crossroads Mobs
-		23572, // Nymph Astra
-		23573, // Nymph Astra
-		23568, // Nymph Lily
-		23569, // Nymph Lily
+		24157, // Demonic Keras
+		24158, // Demonic Weiss
+		
+		// Enchanted Valley
 		23566, // Nymph rose
 		23567, // Nymph rose
+		23568, // Nymph Lily
+		23569, // Nymph Lily
 		23570, // Nymph Tulip
 		23571, // Nymph Tulip
-		23581, // Afros
-		23578 // Nymph Sentinel
+		23572, // Nymph Astra
+		23573, // Nymph Astra
+		23578, // Nymph Sentinel
+		23581 // Afros
 	};
 	// Rewards
-	private static final int MERLOT_SERTIFICATE = 46056;
+	private static final int MERLOT_CERTIFICATE = 46056;
 	private static final int SPELLBOOK_BLESSING_OF_THE_EXALTED = 45926;
 	// Misc
 	private static final int MIN_LEVEL = 100;
@@ -146,7 +169,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 							htmltext = event;
 						}
 						takeItems(player, MARK_OF_ADVANCE, -3);
-						giveItems(player, MERLOT_SERTIFICATE, 1);
+						giveItems(player, MERLOT_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_BLESSING_OF_THE_EXALTED, 1);
 						qs.exitQuest(false, true);
 					}
@@ -172,7 +195,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 							htmltext = event;
 						}
 						takeItems(player, PROOF_OF_PREPARATION, -20000);
-						giveItems(player, MERLOT_SERTIFICATE, 1);
+						giveItems(player, MERLOT_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_BLESSING_OF_THE_EXALTED, 1);
 						qs.exitQuest(false, true);
 					}
@@ -255,7 +278,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 				qs.setCond(4, true);
 			}
 		}
-		else if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && CommonUtil.contains(BOSS, npc.getId()))
+		else if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && CommonUtil.contains(DIM_RAID_RBS, npc.getId()))
 		{
 			giveItems(player, MARK_OF_ADVANCE, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
