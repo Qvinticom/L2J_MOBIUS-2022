@@ -462,7 +462,7 @@ public class TradeController
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("TradeController: Could not update Timer save in Buylist");
+			LOGGER.warning("TradeController: Could not update Timer save in Buylist. " + e);
 		}
 	}
 	
