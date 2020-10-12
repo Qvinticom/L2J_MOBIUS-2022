@@ -45,7 +45,7 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		if (event.equals("31092-01.html") || event.equals("31092-05.html"))
+		if (event.equals("31092-01.html"))
 		{
 			return event;
 		}
