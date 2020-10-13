@@ -1885,6 +1885,7 @@
 			<value level="5">1500000</value>
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -1927,12 +1928,27 @@
 			<value level="4">1500000</value>
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
 			</effect>
 			<effect name="DamageBlock">
 				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
 			</effect>
 		</effects>
 	</skill>

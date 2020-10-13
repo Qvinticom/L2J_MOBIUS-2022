@@ -295,6 +295,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="39534" level="1" /> <!-- Vitality Maintaining Rune (30-day) -->
+		</skills>
 	</item>
 	<item id="80713" name="Zariche Shaper" type="Weapon">
 		<!-- Warrior dagger for Zariche appearance modification -->
@@ -1153,14 +1158,21 @@
 		<!-- PA-only item 2-hour item A shining magic T-shirt imbued with Einhasad's Energy. <Item Skill> M. Def. +15. Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water/Fire/Wind/Earth/Holy/Dark Attack Resistance +24. STR +3. DEX +3. CON +3. INT +3. WIT +3. MEN +3 <Active Skill> Einhasad's Wrath/Einsahad's Protection Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="13562" level="7" /> <!-- Enchant Effect: Shiny Elemental Shirt Lv. 7 -->
+			<skill id="13563" level="2" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="1" /> <!-- Einhasad's Protection -->
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
