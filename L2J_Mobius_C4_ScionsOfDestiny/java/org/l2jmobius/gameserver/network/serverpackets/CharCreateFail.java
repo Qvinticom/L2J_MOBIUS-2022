@@ -25,6 +25,7 @@ public class CharCreateFail extends GameServerPacket
 	public static final int REASON_TOO_MANY_CHARACTERS = 0x01;
 	public static final int REASON_NAME_ALREADY_EXISTS = 0x02;
 	public static final int REASON_16_ENG_CHARS = 0x03;
+	public static final int REASON_INCORRECT_NAME = 0x04;
 	
 	private final int _error;
 	

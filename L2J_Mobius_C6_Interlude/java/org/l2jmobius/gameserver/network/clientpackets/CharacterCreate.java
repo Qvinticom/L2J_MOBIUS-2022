@@ -98,6 +98,18 @@ public class CharacterCreate extends GameClientPacket
 			return;
 		}
 		
+		if (Config.FORBIDDEN_NAMES.length > 0)
+		{
+			for (String st : Config.FORBIDDEN_NAMES)
+			{
+				if (_name.toLowerCase().contains(st.toLowerCase()))
+				{
+					getClient().sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+					return;
+				}
+			}
+		}
+		
 		PlayerInstance newChar = null;
 		PlayerTemplate template = null;
 		

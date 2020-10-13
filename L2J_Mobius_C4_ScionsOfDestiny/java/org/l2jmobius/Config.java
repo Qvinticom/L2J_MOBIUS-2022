@@ -1077,6 +1077,7 @@ public class Config
 	public static int DEATH_PENALTY_CHANCE;
 	public static boolean EFFECT_CANCELING;
 	public static boolean STORE_SKILL_COOLTIME;
+	public static String[] FORBIDDEN_NAMES;
 	public static byte BUFFS_MAX_AMOUNT;
 	public static byte DEBUFFS_MAX_AMOUNT;
 	public static boolean ENABLE_MODIFY_SKILL_DURATION;
@@ -2776,6 +2777,7 @@ public class Config
 		DEATH_PENALTY_CHANCE = characterConfig.getInt("DeathPenaltyChance", 20);
 		EFFECT_CANCELING = characterConfig.getBoolean("CancelLesserEffect", true);
 		STORE_SKILL_COOLTIME = characterConfig.getBoolean("StoreSkillCooltime", true);
+		FORBIDDEN_NAMES = characterConfig.getString("ForbiddenNames", "").split(",");
 		BUFFS_MAX_AMOUNT = characterConfig.getByte("MaxBuffAmount", (byte) 24);
 		DEBUFFS_MAX_AMOUNT = characterConfig.getByte("MaxDebuffAmount", (byte) 6);
 		ENABLE_MODIFY_SKILL_DURATION = characterConfig.getBoolean("EnableModifySkillDuration", false);
