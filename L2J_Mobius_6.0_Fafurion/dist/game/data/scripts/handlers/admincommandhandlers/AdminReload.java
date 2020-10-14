@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import org.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.impl.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.impl.FishingData;
@@ -256,6 +257,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "enchant":
 				{
+					EnchantItemOptionsData.getInstance().load();
 					EnchantItemGroupsData.getInstance().load();
 					EnchantItemData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
