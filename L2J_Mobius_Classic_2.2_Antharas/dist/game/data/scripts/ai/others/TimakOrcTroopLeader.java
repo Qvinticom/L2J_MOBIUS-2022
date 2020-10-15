@@ -51,13 +51,26 @@ public class TimakOrcTroopLeader extends AbstractNpcAI
 		if (npc.isMonster())
 		{
 			final MonsterInstance monster = (MonsterInstance) npc;
-			if (!monster.isTeleporting() && (getRandom(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0)))
+			if (!monster.isTeleporting() && (getRandom(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0)) && (monster.getMinionList().countSpawnedMinions() < 3))
 			{
 				for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
 				{
-					addMinion((MonsterInstance) npc, is.getId());
+					boolean found = false;
+					for (MonsterInstance minion : monster.getMinionList().getSpawnedMinions())
+					{
+						if (minion.getId() == is.getId())
+						{
+							found = true;
+							break;
+						}
+					}
+					if (!found)
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG));
+						addMinion(monster, is.getId());
+						break;
+					}
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
