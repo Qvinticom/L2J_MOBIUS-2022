@@ -47,10 +47,10 @@ public class ClanHallZone extends ZoneRespawn
 			{
 				_clanHallId = Integer.parseInt(value);
 				// Register self to the correct clan hall
-				final ClanHall ch = ClanHallManager.getInstance().getClanHallById(_clanHallId);
-				if (ch != null)
+				final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+				if (clanHall != null)
 				{
-					ClanHallManager.getInstance().getClanHallById(_clanHallId).setZone(this);
+					clanHall.setZone(this);
 				}
 				break;
 			}

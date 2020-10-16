@@ -51,7 +51,10 @@ public class CastleZone extends ZoneRespawn
 				final int castleId = Integer.parseInt(value);
 				// Register self to the correct castle
 				_castle = CastleManager.getInstance().getCastleById(castleId);
-				_castle.setZone(this);
+				if (_castle != null)
+				{
+					_castle.setZone(this);
+				}
 				break;
 			}
 			default:
