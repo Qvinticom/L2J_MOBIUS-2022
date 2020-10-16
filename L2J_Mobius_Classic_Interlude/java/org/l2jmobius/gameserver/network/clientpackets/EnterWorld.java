@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
@@ -50,10 +53,12 @@ import org.l2jmobius.gameserver.model.entity.FortSiege;
 import org.l2jmobius.gameserver.model.entity.GameEvent;
 import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
@@ -111,7 +116,9 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class EnterWorld implements IClientIncomingPacket
 {
-	private final int[][] tracert = new int[5][4];
+	private static final Map<String, ClientHardwareInfoHolder> TRACE_HWINFO = new ConcurrentHashMap<>();
+	
+	private final int[][] _tracert = new int[5][4];
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -120,7 +127,7 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			for (int o = 0; o < 4; o++)
 			{
-				tracert[i][o] = packet.readC();
+				_tracert[i][o] = packet.readC();
 			}
 		}
 		packet.readD(); // Unknown Value
@@ -148,11 +155,11 @@ public class EnterWorld implements IClientIncomingPacket
 		final String[] adress = new String[5];
 		for (int i = 0; i < 5; i++)
 		{
-			adress[i] = tracert[i][0] + "." + tracert[i][1] + "." + tracert[i][2] + "." + tracert[i][3];
+			adress[i] = _tracert[i][0] + "." + _tracert[i][1] + "." + _tracert[i][2] + "." + _tracert[i][3];
 		}
 		
 		LoginServerThread.getInstance().sendClientTracert(player.getAccountName(), adress);
-		client.setClientTracert(tracert);
+		client.setClientTracert(_tracert);
 		
 		player.broadcastUserInfo();
 		
@@ -647,10 +654,69 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			ThreadPool.schedule(() ->
 			{
-				if (client.getHardwareInfo() == null)
+				// Generate trace string.
+				final StringBuilder sb = new StringBuilder();
+				for (int[] i : _tracert)
 				{
-					Disconnection.of(client).defaultSequence(false);
-					return;
+					for (int j : i)
+					{
+						sb.append(j);
+						sb.append(".");
+					}
+				}
+				final String trace = sb.toString();
+				
+				// Get hardware info from client.
+				ClientHardwareInfoHolder hwInfo = client.getHardwareInfo();
+				if (hwInfo != null)
+				{
+					hwInfo.store(player);
+					TRACE_HWINFO.put(trace, hwInfo);
+				}
+				else
+				{
+					// Get hardware info from stored tracert map.
+					hwInfo = TRACE_HWINFO.get(trace);
+					if (hwInfo != null)
+					{
+						hwInfo.store(player);
+						client.setHardwareInfo(hwInfo);
+					}
+					// Get hardware info from account variables.
+					else
+					{
+						final String storedInfo = player.getAccountVariables().getString(AccountVariables.HWID, "");
+						if (!storedInfo.isEmpty())
+						{
+							hwInfo = new ClientHardwareInfoHolder(storedInfo);
+							TRACE_HWINFO.put(trace, hwInfo);
+							client.setHardwareInfo(hwInfo);
+						}
+					}
+				}
+				
+				// Check max players.
+				if (Config.MAX_PLAYERS_PER_HWID > 0)
+				{
+					if (hwInfo == null)
+					{
+						Disconnection.of(client).defaultSequence(false);
+					}
+					else
+					{
+						int count = 0;
+						for (PlayerInstance plr : World.getInstance().getPlayers())
+						{
+							if ((plr.isOnlineInt() == 1) && (plr.getClient().getHardwareInfo().equals(hwInfo)))
+							{
+								count++;
+							}
+						}
+						if (count >= Config.MAX_PLAYERS_PER_HWID)
+						{
+							Disconnection.of(client).defaultSequence(false);
+						}
+					}
 				}
 			}, 5000);
 		}

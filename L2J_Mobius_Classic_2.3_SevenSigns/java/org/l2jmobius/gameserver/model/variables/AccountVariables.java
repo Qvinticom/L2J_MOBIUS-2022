@@ -38,6 +38,10 @@ public class AccountVariables extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM account_gsdata WHERE account_name = ?";
 	private static final String INSERT_QUERY = "INSERT INTO account_gsdata (account_name, var, value) VALUES (?, ?, ?)";
 	
+	// Public variable names
+	public static final String HWID = "HWID";
+	public static final String HWIDSLIT_VAR = "	";
+	
 	private final String _accountName;
 	
 	public AccountVariables(String accountName)

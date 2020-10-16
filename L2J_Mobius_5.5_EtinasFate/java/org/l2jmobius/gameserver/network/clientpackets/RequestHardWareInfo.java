@@ -16,12 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
-import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -82,20 +78,5 @@ public class RequestHardWareInfo implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
-		if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0))
-		{
-			int count = 0;
-			for (PlayerInstance player : World.getInstance().getPlayers())
-			{
-				if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo())))
-				{
-					count++;
-				}
-			}
-			if (count >= Config.MAX_PLAYERS_PER_HWID)
-			{
-				Disconnection.of(client).defaultSequence(false);
-			}
-		}
 	}
 }

@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
+
 /**
  * @author Mobius
  */
@@ -62,6 +65,77 @@ public class ClientHardwareInfoHolder
 		_vgaVersion = vgaVersion;
 		_vgaName = vgaName;
 		_vgaDriverVersion = vgaDriverVersion;
+	}
+	
+	public ClientHardwareInfoHolder(String info)
+	{
+		final String[] split = info.split(AccountVariables.HWIDSLIT_VAR);
+		_macAddress = split[0];
+		_windowsPlatformId = Integer.valueOf(split[1]);
+		_windowsMajorVersion = Integer.valueOf(split[2]);
+		_windowsMinorVersion = Integer.valueOf(split[3]);
+		_windowsBuildNumber = Integer.valueOf(split[4]);
+		_directxVersion = Integer.valueOf(split[5]);
+		_directxRevision = Integer.valueOf(split[6]);
+		_cpuName = split[7];
+		_cpuSpeed = Integer.valueOf(split[8]);
+		_cpuCoreCount = Integer.valueOf(split[9]);
+		_vgaCount = Integer.valueOf(split[10]);
+		_vgaPcxSpeed = Integer.valueOf(split[11]);
+		_physMemorySlot1 = Integer.valueOf(split[12]);
+		_physMemorySlot2 = Integer.valueOf(split[13]);
+		_physMemorySlot3 = Integer.valueOf(split[14]);
+		_videoMemory = Integer.valueOf(split[15]);
+		_vgaVersion = Integer.valueOf(split[16]);
+		_vgaName = split[17];
+		_vgaDriverVersion = split[18];
+	}
+	
+	/**
+	 * Save hardware info to account variables for later use.
+	 * @param player The PlayerInstance related with this hardware info.
+	 */
+	public void store(PlayerInstance player)
+	{
+		final StringBuilder sb = new StringBuilder();
+		sb.append(_macAddress);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_windowsPlatformId);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_windowsMajorVersion);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_windowsMinorVersion);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_windowsBuildNumber);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_directxVersion);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_directxRevision);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_cpuName);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_cpuSpeed);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_cpuCoreCount);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_vgaCount);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_vgaPcxSpeed);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_physMemorySlot1);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_physMemorySlot2);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_physMemorySlot3);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_videoMemory);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_vgaVersion);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_vgaName);
+		sb.append(AccountVariables.HWIDSLIT_VAR);
+		sb.append(_vgaDriverVersion);
+		player.getAccountVariables().set(AccountVariables.HWID, sb.toString());
 	}
 	
 	/**
@@ -214,5 +288,37 @@ public class ClientHardwareInfoHolder
 	public String getVgaDriverVersion()
 	{
 		return _vgaDriverVersion;
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (obj instanceof ClientHardwareInfoHolder)
+		{
+			final ClientHardwareInfoHolder info = (ClientHardwareInfoHolder) obj;
+			if ((_macAddress.equals(info.getMacAddress())) && //
+				(_windowsPlatformId == info.getWindowsPlatformId()) && //
+				(_windowsMajorVersion == info.getWindowsMajorVersion()) && //
+				(_windowsMinorVersion == info.getWindowsMinorVersion()) && //
+				(_windowsBuildNumber == info.getWindowsBuildNumber()) && //
+				(_directxVersion == info.getDirectxVersion()) && //
+				(_directxRevision == info.getDirectxRevision()) && //
+				(_cpuName.equals(info.getCpuName())) && //
+				(_cpuSpeed == info.getCpuSpeed()) && //
+				(_cpuCoreCount == info.getCpuCoreCount()) && //
+				(_vgaCount == info.getVgaCount()) && //
+				(_vgaPcxSpeed == info.getVgaPcxSpeed()) && //
+				(_physMemorySlot1 == info.getPhysMemorySlot1()) && //
+				(_physMemorySlot2 == info.getPhysMemorySlot2()) && //
+				(_physMemorySlot3 == info.getPhysMemorySlot3()) && //
+				(_videoMemory == info.getVideoMemory()) && //
+				(_vgaVersion == info.getVgaVersion()) && //
+				(_vgaName.equals(info.getVgaName())) && //
+				(_vgaDriverVersion.equals(info.getVgaDriverVersion())))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }
