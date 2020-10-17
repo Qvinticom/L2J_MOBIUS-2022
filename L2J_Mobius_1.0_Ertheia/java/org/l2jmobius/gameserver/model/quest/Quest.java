@@ -592,6 +592,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 		String res = null;
 		try
 		{
+			// Simulated talk should not exist when killing.
+			final QuestState qs = getQuestState(killer, false);
+			if (qs != null)
+			{
+				qs.setSimulated(false);
+			}
+			
 			res = onKill(npc, killer, isSummon);
 		}
 		catch (Exception e)
