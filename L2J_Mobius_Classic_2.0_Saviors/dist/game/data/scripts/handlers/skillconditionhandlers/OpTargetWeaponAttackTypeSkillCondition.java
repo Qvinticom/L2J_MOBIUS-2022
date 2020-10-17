@@ -50,8 +50,23 @@ public class OpTargetWeaponAttackTypeSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
+		
 		final Creature targetCreature = (Creature) target;
 		final Weapon weapon = targetCreature.getActiveWeaponItem();
-		return _weaponTypes.stream().anyMatch(weaponType -> weaponType == weapon.getItemType());
+		if (weapon == null)
+		{
+			return false;
+		}
+		
+		final WeaponType equippedType = weapon.getItemType();
+		for (WeaponType weaponType : _weaponTypes)
+		{
+			if (weaponType == equippedType)
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }
