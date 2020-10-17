@@ -1232,17 +1232,31 @@
 		<!-- Scroll: 2000 SP. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39118" level="1" /> <!-- Scroll: 2000 SP -->
+		</skills>
 	</item>
 	<item id="49596" name="Scroll: 10000 SP" type="EtcItem">
 		<!-- Scroll: 10000 SP. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39119" level="1" /> <!-- Scroll: 10,000 SP -->
+		</skills>
 	</item>
 	<item id="49597" name="Golden Boots" type="EtcItem">
 		<!-- Double-click on the Golden Boot to get one of its treasures. Cannot be dropped. -->

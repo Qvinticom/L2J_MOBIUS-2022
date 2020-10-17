@@ -175,13 +175,41 @@
 	</skill>
 	<skill id="39118" toLevel="1" name="Scroll: 2000 SP">
 		<icon>icon.etc_sp_scroll1_i00</icon>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49595</itemConsumeId> <!-- 2000 SP scroll -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveSp">
+				<sp>2000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39119" toLevel="1" name="Scroll: 10,000 SP">
 		<icon>icon.etc_sp_scroll2_i00</icon>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49596</itemConsumeId> <!-- 10,000 SP scroll -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveSp">
+				<sp>10000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39120" toLevel="1" name="Teleport: Giran Harbor">
 		<!-- Teleports to Giran Harbor. -->
