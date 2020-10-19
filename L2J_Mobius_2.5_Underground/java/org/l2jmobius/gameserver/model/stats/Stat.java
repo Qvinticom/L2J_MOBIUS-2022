@@ -125,6 +125,7 @@ public enum Stat
 	SHIELD_DEFENCE_RATE("rShld", new ShieldDefenceRateFinalizer()),
 	CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, 0, 1),
 	CRITICAL_RATE_SKILL("rCritSkill", Stat::defaultValue, MathUtil::add, MathUtil::add, 0, 1),
+	MAX_MAGIC_CRITICAL_RATE("maxMagicCritRate"),
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
 	BLOW_RATE("blowRate"),
 	BLOW_RATE_DEFENCE("blowRateDefence"),
