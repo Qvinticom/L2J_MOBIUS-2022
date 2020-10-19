@@ -344,8 +344,6 @@ public class Castle
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
 		}
-		
-		updateClansReputation();
 	}
 	
 	public void removeOwner(Clan clan)
@@ -370,8 +368,6 @@ public class Castle
 		{
 			getSiege().midVictory();
 		}
-		
-		updateClansReputation();
 	}
 	
 	// This method updates the castle tax rate

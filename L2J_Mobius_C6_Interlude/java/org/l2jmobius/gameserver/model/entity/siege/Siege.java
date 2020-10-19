@@ -358,6 +358,8 @@ public class Siege
 				_siegeGuardManager.removeMercs();
 			}
 			
+			getCastle().updateClansReputation();
+			
 			// Respawn door to castle
 			getCastle().spawnDoor();
 			getCastle().getZone().updateZoneStatusForCharactersInside();
