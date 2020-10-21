@@ -74,7 +74,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			if (item != null)
 			{
 				// auto supply
-				if (_room > 263)
+				if (!item.isPotion())
 				{
 					AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
 				}
@@ -92,10 +92,10 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		}
 		
 		// start
-		if (_room > 263)
+		if ((item != null) && !item.isPotion())
 		{
 			// auto supply
-			if (Config.ENABLE_AUTO_ITEM && (item != null))
+			if (Config.ENABLE_AUTO_ITEM)
 			{
 				AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
 			}
