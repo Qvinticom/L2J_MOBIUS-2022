@@ -680,26 +680,23 @@ public class EnterWorld implements IClientIncomingPacket
 				}
 				
 				// Check max players.
-				if (Config.MAX_PLAYERS_PER_HWID > 0)
+				if (Config.KICK_MISSING_HWID && (hwInfo == null))
 				{
-					if (hwInfo == null)
+					Disconnection.of(client).defaultSequence(false);
+				}
+				else if (Config.MAX_PLAYERS_PER_HWID > 0)
+				{
+					int count = 0;
+					for (PlayerInstance plr : World.getInstance().getPlayers())
+					{
+						if ((plr.isOnlineInt() == 1) && (plr.getClient().getHardwareInfo().equals(hwInfo)))
+						{
+							count++;
+						}
+					}
+					if (count >= Config.MAX_PLAYERS_PER_HWID)
 					{
 						Disconnection.of(client).defaultSequence(false);
-					}
-					else
-					{
-						int count = 0;
-						for (PlayerInstance plr : World.getInstance().getPlayers())
-						{
-							if ((plr.isOnlineInt() == 1) && (plr.getClient().getHardwareInfo().equals(hwInfo)))
-							{
-								count++;
-							}
-						}
-						if (count >= Config.MAX_PLAYERS_PER_HWID)
-						{
-							Disconnection.of(client).defaultSequence(false);
-						}
 					}
 				}
 			}, 5000);
