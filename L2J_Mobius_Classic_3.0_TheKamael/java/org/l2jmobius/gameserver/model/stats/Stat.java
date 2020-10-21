@@ -160,6 +160,7 @@ public enum Stat
 	EXPSP_RATE("rExp"),
 	BONUS_EXP("bonusExp"),
 	BONUS_SP("bonusSp"),
+	BONUS_DROP_ADENA("bonusDropAdena"),
 	BONUS_DROP_AMOUNT("bonusDropAmount"),
 	BONUS_DROP_RATE("bonusDropRate"),
 	BONUS_SPOIL_RATE("bonusSpoilRate"),

@@ -906,6 +906,10 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					
 					// bonus drop amount effect
 					rateAmount *= killer.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+					if (itemId == Inventory.ADENA_ID)
+					{
+						rateAmount *= killer.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
+					}
 					
 					// finally
 					return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));

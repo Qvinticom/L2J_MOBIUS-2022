@@ -66,6 +66,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("BlockSkill", BlockSkill::new);
 		EffectHandler.getInstance().registerHandler("BlockTarget", BlockTarget::new);
 		EffectHandler.getInstance().registerHandler("Bluff", Bluff::new);
+		EffectHandler.getInstance().registerHandler("BonusDropAdena", BonusDropAdena::new);
 		EffectHandler.getInstance().registerHandler("BonusDropAmount", BonusDropAmount::new);
 		EffectHandler.getInstance().registerHandler("BonusDropRate", BonusDropRate::new);
 		EffectHandler.getInstance().registerHandler("BonusSpoilRate", BonusSpoilRate::new);

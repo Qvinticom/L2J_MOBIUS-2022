@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -385,6 +386,7 @@ public class NpcViewMod implements IBypassHandler
 		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
 		int leftHeight = 0;
 		int rightHeight = 0;
+		final double dropAmountAdenaEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
 		final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
 		final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
 		final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
@@ -492,6 +494,10 @@ public class NpcViewMod implements IBypassHandler
 				
 				// bonus drop amount effect
 				rateAmount *= dropAmountEffectBonus;
+				if (item.getId() == Inventory.ADENA_ID)
+				{
+					rateAmount *= dropAmountAdenaEffectBonus;
+				}
 				// bonus drop rate effect
 				rateChance *= dropRateEffectBonus;
 			}

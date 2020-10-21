@@ -169,6 +169,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				final int start = (page - 1) * 14;
 				final int end = Math.min(list.size() - 1, start + 14);
 				final StringBuilder builder = new StringBuilder();
+				final double dropAmountAdenaEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
 				final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
 				final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
 				final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
@@ -271,6 +272,10 @@ public class DropSearchBoard implements IParseBoardHandler
 						
 						// bonus drop amount effect
 						rateAmount *= dropAmountEffectBonus;
+						if (item.getId() == Inventory.ADENA_ID)
+						{
+							rateAmount *= dropAmountAdenaEffectBonus;
+						}
 						// bonus drop rate effect
 						rateChance *= dropRateEffectBonus;
 					}
