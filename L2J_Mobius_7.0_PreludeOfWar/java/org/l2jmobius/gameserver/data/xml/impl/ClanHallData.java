@@ -202,7 +202,8 @@ public class ClanHallData implements IXmlReader
 		final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 		for (ClanHall ch : _clanHalls.values())
 		{
-			if (ch.getDoors().contains(door))
+			final List<DoorInstance> doors = ch.getDoors();
+			if ((doors != null) && doors.contains(door))
 			{
 				return ch;
 			}
