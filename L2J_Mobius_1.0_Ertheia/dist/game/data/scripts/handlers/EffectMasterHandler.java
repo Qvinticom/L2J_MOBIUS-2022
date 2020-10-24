@@ -114,6 +114,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DefenceCriticalRate", DefenceCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("DefenceMagicCriticalDamage", DefenceMagicCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("DefenceMagicCriticalRate", DefenceMagicCriticalRate::new);
+		EffectHandler.getInstance().registerHandler("DefenceSkillCriticalDamage", DefenceSkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("DefenceTrait", DefenceTrait::new);
 		EffectHandler.getInstance().registerHandler("DeleteHate", DeleteHate::new);
 		EffectHandler.getInstance().registerHandler("DeleteHateOfMe", DeleteHateOfMe::new);
