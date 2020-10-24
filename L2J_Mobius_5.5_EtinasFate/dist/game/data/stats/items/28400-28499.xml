@@ -320,10 +320,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46193" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Physical Reflect Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28414" name="+10 Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -333,10 +337,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46194" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Magical Reflect Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28415" name="+10 Pa'agrio's Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Pa'agrio's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -346,10 +354,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23240" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Pa'agrio's Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28416" name="+10 Sayha's Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Sayha's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -359,10 +371,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23301" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Sayha's Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28417" name="+10 Eva's Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Eva's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -372,10 +388,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23304" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Eva's Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28418" name="+10 Maphr's Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Maphr's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -385,10 +405,14 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23307" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Maphr's Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28419" name="Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -1150,6 +1174,7 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -1166,6 +1191,7 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="2" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -1182,6 +1208,7 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="3" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>

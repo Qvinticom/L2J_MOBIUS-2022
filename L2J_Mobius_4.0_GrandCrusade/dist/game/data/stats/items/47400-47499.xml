@@ -767,6 +767,22 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46317" min="1" max="1" chance="10" /> <!-- Shadow Shaper -->
+			<item id="46318" min="1" max="1" chance="10" /> <!-- Shadow Cutter -->
+			<item id="46319" min="1" max="1" chance="10" /> <!-- Shadow Slasher -->
+			<item id="46320" min="1" max="1" chance="10" /> <!-- Shadow Fighter -->
+			<item id="46321" min="1" max="1" chance="10" /> <!-- Shadow Stormer -->
+			<item id="46322" min="1" max="1" chance="10" /> <!-- Shadow Thrower -->
+			<item id="46323" min="1" max="1" chance="10" /> <!-- Shadow Shooter -->
+			<item id="46324" min="1" max="1" chance="10" /> <!-- Shadow Buster -->
+			<item id="46325" min="1" max="1" chance="10" /> <!-- Shadow Retributer -->
+			<item id="46326" min="1" max="1" chance="10" /> <!-- Shadow Dual Sword -->
+		</capsuled_items>
 	</item>
 	<item id="47459" name="Tauti Weapon Pack" type="EtcItem">
 		<!-- Double click to obtain a Tauti Weapon. -->
@@ -774,6 +790,15 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="34998" min="1" max="1" chance="33.33" /> <!-- Tauti's One-handed Axe -->
+			<item id="34999" min="1" max="1" chance="33.33" /> <!-- Tauti's Two-handed Axe -->
+			<item id="35001" min="1" max="1" chance="33.33" /> <!-- Tauti's Dual Axe -->
+		</capsuled_items>
 	</item>
 	<item id="47460" name="Kelbim Weapon Pack" type="EtcItem">
 		<!-- Double click to obtain a Kelbim Weapon. -->
@@ -781,6 +806,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46060" min="1" max="1" chance="25" /> <!-- Kelbim Dagger -->
+			<item id="46061" min="1" max="1" chance="25" /> <!-- Kelbim Dual Daggers -->
+			<item id="46062" min="1" max="1" chance="25" /> <!-- Kelbim Bow -->
+			<item id="46063" min="1" max="1" chance="25" /> <!-- Kelbim Crossbow -->
+		</capsuled_items>
 	</item>
 	<item id="47461" name="Red Pirate Garment Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Red Pirate Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Pirate Outfit. -->

@@ -935,6 +935,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23783" min="1" max="1" chance="100" /> <!-- Blessed Giant's Lucky Enchant Stone: R-grade Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="24342" name="Blessed Giant's Lucky Enchant Stone: Armor Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Blessed Giant's Lucky Enchant Stone: Armor (R-grade). -->
@@ -942,6 +947,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23784" min="1" max="1" chance="100" /> <!-- Blessed Giant's Lucky Enchant Stone: R-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="24343" name="Blessed Lucky Enchant Stone: Weapon Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Blessed Lucky Enchant Stone: Weapon (R-grade). -->
@@ -949,6 +959,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37566" min="1" max="1" chance="100" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="24344" name="Lesser Giant's Lucky Enchant Stone: Weapon Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Lesser Giant's Lucky Enchant Stone: Weapon (R-grade). -->
@@ -956,6 +971,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23785" min="1" max="1" chance="100" /> <!-- Lesser Giant's Lucky Enchant Stone: R-grade Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="24345" name="Blessed Lucky Enchant Stone: Armor Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Blessed Lucky Enchant Stone: Armor (R-grade). -->
@@ -963,6 +983,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37567" min="1" max="1" chance="100" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="24346" name="Lesser Giant's Lucky Enchant Stone: Armor Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Lesser Giant's Lucky Enchant Stone: Armor (R-grade). -->
@@ -970,6 +995,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23786" min="1" max="1" chance="100" /> <!-- Lesser Giant's Lucky Enchant Stone: R-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="24347" name="Scroll: Enchant Weapon Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing a Scroll: Enchant Weapon (R-grade) with 10% increase in enchant success rate. -->
@@ -991,6 +1021,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23256" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="24350" name="Prestige Rune 100% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing a Prestige Rune 100% (30-day). -->
@@ -998,7 +1034,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23809" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="24351" name="Talisman - Hunter" additionalName="Abundance / 3-day" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Extra defense against skill damage in PvP. Note: Equipping 2 will give the effect of 1. -->

@@ -41,45 +41,65 @@
 	<item id="28605" name="+10 Elmoreden Cloak - Legendary Box" type="EtcItem">
 		<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28589" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Elmoreden Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="28606" name="+10 Aden Cloak - Legendary Box" type="EtcItem">
 		<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28590" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Aden Cloak - Legendary -->
+		</capsuled_items>
 	</item>
 	<item id="28607" name="+10 Elmore Cloak - Legendary Box" type="EtcItem">
 		<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28591" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Elmore Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="28608" name="+10 Ferios Cloak - Legendary Box" type="EtcItem">
 		<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28592" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Legendary Ferios Cloak -->
+		</capsuled_items>
 	</item>
 </list>

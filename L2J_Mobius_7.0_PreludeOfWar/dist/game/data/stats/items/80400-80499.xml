@@ -469,18 +469,26 @@
 		<!-- Quiver containing arrows made of Orichalcum. Used with an R-grade Bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_infinite" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80434" name="Infinite Orichalcum Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of Orichalcum. Used with an R-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_infinite" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80435" name="Emperor's Special Cocktail - Attack" additionalName="4-hour" type="EtcItem">
@@ -574,24 +582,46 @@
 	<item id="80443" name="Stage 4 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 4 Soul Crystals. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46447" min="1" max="1" chance="20" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			<item id="46462" min="1" max="1" chance="20" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			<item id="46477" min="1" max="1" chance="20" /> <!-- Leona's Soul Crystal Lv. 4 -->
+			<item id="46492" min="1" max="1" chance="20" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+			<item id="46507" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="80444" name="Stage 5 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 5 Soul Crystals. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46448" min="1" max="1" chance="20" /> <!-- Kain's Soul Crystal Lv. 5 -->
+			<item id="46463" min="1" max="1" chance="20" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
+			<item id="46478" min="1" max="1" chance="20" /> <!-- Leona's Soul Crystal Lv. 5 -->
+			<item id="46493" min="1" max="1" chance="20" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
+			<item id="46508" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="80445" name="Bait" additionalName="R108" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 108. Fishing with this bait has a low chance of yielding a Reddish Box. -->
@@ -718,20 +748,46 @@
 	<item id="80457" name="Stage 3 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 3 Soul Crystals. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46446" min="1" max="1" chance="20" /> <!-- Kain's Soul Crystal Lv. 3 -->
+			<item id="46461" min="1" max="1" chance="20" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+			<item id="46476" min="1" max="1" chance="20" /> <!-- Leona's Soul Crystal Lv. 3 -->
+			<item id="46491" min="1" max="1" chance="20" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+			<item id="46506" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="80458" name="Stage 4 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 4 Soul Crystals. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46447" min="1" max="1" chance="20" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			<item id="46462" min="1" max="1" chance="20" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			<item id="46477" min="1" max="1" chance="20" /> <!-- Leona's Soul Crystal Lv. 4 -->
+			<item id="46492" min="1" max="1" chance="20" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+			<item id="46507" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="80459" name="+7 Agathion Charm Box" type="EtcItem">
 		<!-- Double-click to obtain one +7 Enchanted Agathion Charm. -->

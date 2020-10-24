@@ -206,6 +206,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39634" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="26320" name="Venir's Talisman Stage 2 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 2. -->
@@ -214,6 +219,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39635" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="26321" name="Venir's Talisman Stage 3 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 8 Venir's Talismans Stage 3. -->
@@ -222,6 +232,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39636" min="8" max="8" chance="100" /> <!-- Venir's Talisman Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="26322" name="Venir's Talisman Stage 4 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 6 Venir's Talismans Stage 4. -->
@@ -230,6 +245,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39637" min="6" max="6" chance="100" /> <!-- Venir's Talisman Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="26323" name="Venir's Talisman Stage 5 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 4 Venir's Talismans Stage 5. -->
@@ -238,6 +258,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39638" min="4" max="4" chance="100" /> <!-- Venir's Talisman Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="26324" name="Venir's Talisman Stage 6 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Venir's Talismans Stage 6. -->
@@ -246,6 +271,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39639" min="2" max="2" chance="100" /> <!-- Venir's Talisman Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="26325" name="Santa Cloak" type="Armor">
 		<!-- Santa's warm cloak. -->

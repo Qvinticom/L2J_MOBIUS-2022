@@ -94,26 +94,35 @@
 	<item id="48408" name="Blackish Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Blackish Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="48411" name="Release Seal Scroll (15-min) Box" additionalName="15-min." type="EtcItem">
 		<!-- Double-click to obtain 10 Release Seal Scrolls (15-min). -->
@@ -504,7 +513,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -522,7 +531,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -540,7 +549,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -557,7 +566,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -575,7 +584,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -593,7 +602,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -611,7 +620,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -629,7 +638,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -647,7 +656,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -665,7 +674,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -683,7 +692,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -701,7 +710,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -719,7 +728,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -737,7 +746,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -755,7 +764,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -766,129 +775,210 @@
 	<item id="48454" name="Fortress Talisman Box" type="EtcItem">
 		<!-- Double-click to obtain a box containing a Fortress Talisman (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48455" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman- Vitality Box -->
+			<item id="48456" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - P. Skill Power Pack -->
+			<item id="48457" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - M. Skill Power Pack -->
+			<item id="48458" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - P. Atk. Pack -->
+			<item id="48459" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - M. Atk. Pack -->
+			<item id="48460" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - P. Def. Pack -->
+			<item id="48461" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - M. Def. Pack -->
+			<item id="48462" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Atk. Spd. Pack -->
+			<item id="48463" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Casting Spd. Pack -->
+			<item id="48464" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - P. Accuracy Pack -->
+			<item id="48465" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - M. Accuracy Pack -->
+			<item id="48466" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Shield Defense Pack -->
+			<item id="48467" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Max HP Pack -->
+			<item id="48468" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Max MP Pack -->
+			<item id="48469" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - Speed Pack -->
+		</capsuled_items>
 	</item>
 	<item id="48455" name="Fortress Talisman- Vitality Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Vitality (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48439" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Vitality - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48456" name="Fortress Talisman - P. Skill Power Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman- P. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48440" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Skill Power - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48457" name="Fortress Talisman - M. Skill Power Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - M. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48441" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Skill Power - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48458" name="Fortress Talisman - P. Atk. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - P. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48442" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Atk. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48459" name="Fortress Talisman - M. Atk. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - M. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48443" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Atk. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48460" name="Fortress Talisman - P. Def. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - P. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48444" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Def. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48461" name="Fortress Talisman - M. Def. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - M. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48445" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Def. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48462" name="Fortress Talisman - Atk. Spd. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Atk. Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48446" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Atk. Spd. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48463" name="Fortress Talisman - Casting Spd. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Casting Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48447" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Casting Spd. - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48464" name="Fortress Talisman - P. Accuracy Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - P. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48448" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Accuracy - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48465" name="Fortress Talisman - M. Accuracy Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - M. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48449" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Accuracy - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48466" name="Fortress Talisman - Shield Def. Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Shield Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48450" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Shield Defense - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48467" name="Fortress Talisman - Max HP Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Max HP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48451" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max HP - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48468" name="Fortress Talisman - Max MP Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Max MP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48452" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max MP - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48469" name="Fortress Talisman - Movement Speed Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Movement Speed (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48453" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Speed - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="48470" name="Adventure Guild Supply Box" type="EtcItem">
 		<!-- A supply box received from Herphah for completing the Adventure Guild missions. Double-click to obtain a variety of supply items. -->

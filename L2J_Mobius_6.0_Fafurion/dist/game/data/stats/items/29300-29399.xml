@@ -1359,56 +1359,108 @@
 	<item id="29371" name="Seraph Armor Pack (Heavy)" type="EtcItem">
 		<!-- Double-click to acquire one Heavy Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17396" min="1" max="1" chance="100" /> <!-- Seraph Helmet - Heavy armor -->
+			<item id="17397" min="1" max="1" chance="100" /> <!-- Seraph Breastplate - Heavy armor -->
+			<item id="17398" min="1" max="1" chance="100" /> <!-- Seraph Gaiters - Heavy armor -->
+			<item id="17398" min="1" max="1" chance="100" /> <!-- Seraph Gaiters - Heavy armor -->
+			<item id="17400" min="1" max="1" chance="100" /> <!-- Seraph Boots - Heavy armor -->
+			<item id="17401" min="1" max="1" chance="100" /> <!-- Seraph Shield -->
+		</capsuled_items>
 	</item>
 	<item id="29372" name="Seraph Armor Pack (Light)" type="EtcItem">
 		<!-- Double-click to acquire one Light Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17402" min="1" max="1" chance="100" /> <!-- Seraph Leather Helmet - Light armor -->
+			<item id="17403" min="1" max="1" chance="100" /> <!-- Seraph Leather Armor - Light armor -->
+			<item id="17404" min="1" max="1" chance="100" /> <!-- Seraph Leather Leggings - Light armor -->
+			<item id="17405" min="1" max="1" chance="100" /> <!-- Seraph Leather Gloves - Light armor -->
+			<item id="17406" min="1" max="1" chance="100" /> <!-- Seraph Leather Boots - Light armor -->
+		</capsuled_items>
 	</item>
 	<item id="29373" name="Seraph Armor Pack (Robe)" type="EtcItem">
 		<!-- Double-click to acquire one Robe Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17407" min="1" max="1" chance="100" /> <!-- Seraph Circlet - Robe -->
+			<item id="17408" min="1" max="1" chance="100" /> <!-- Seraph Tunic - Robe -->
+			<item id="17409" min="1" max="1" chance="100" /> <!-- Seraph Stockings - Robe -->
+			<item id="17410" min="1" max="1" chance="100" /> <!-- Seraph Gloves - Robe -->
+			<item id="17411" min="1" max="1" chance="100" /> <!-- Seraph Shoes - Robe -->
+			<item id="17412" min="1" max="1" chance="100" /> <!-- Seraph Sigil -->
+		</capsuled_items>
 	</item>
 	<item id="29374" name="Eternal Armor Pack (Heavy)" type="EtcItem">
 		<!-- Double-click to acquire one Heavy Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17430" min="1" max="1" chance="100" /> <!-- Eternal Helmet - Heavy armor -->
+			<item id="17431" min="1" max="1" chance="100" /> <!-- Eternal Breastplate - Heavy armor -->
+			<item id="17432" min="1" max="1" chance="100" /> <!-- Eternal Gaiters - Heavy armor -->
+			<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets - Heavy armor -->
+			<item id="17434" min="1" max="1" chance="100" /> <!-- Eternal Boots - Heavy armor -->
+			<item id="17435" min="1" max="1" chance="100" /> <!-- Eternal Shield -->
+		</capsuled_items>
 	</item>
 	<item id="29375" name="Eternal Armor Pack (Light)" type="EtcItem">
 		<!-- Double-click to acquire one Light Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17436" min="1" max="1" chance="100" /> <!-- Eternal Leather Helmet - Light armor -->
+			<item id="17437" min="1" max="1" chance="100" /> <!-- Eternal Leather Armor - Light armor -->
+			<item id="17438" min="1" max="1" chance="100" /> <!-- Eternal Leather Leggings - Light armor -->
+			<item id="17439" min="1" max="1" chance="100" /> <!-- Eternal Leather Gloves - Light armor -->
+			<item id="17440" min="1" max="1" chance="100" /> <!-- Eternal Leather Boots - Light armor -->
+		</capsuled_items>
 	</item>
 	<item id="29376" name="Eternal Armor Pack (Robe)" type="EtcItem">
 		<!-- Double-click to acquire one Robe Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet - Robe -->
+			<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic - Robe -->
+			<item id="17443" min="1" max="1" chance="100" /> <!-- Eternal Stockings - Robe -->
+			<item id="17444" min="1" max="1" chance="100" /> <!-- Eternal Gloves - Robe -->
+			<item id="17445" min="1" max="1" chance="100" /> <!-- Eternal Shoes - Robe -->
+			<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil -->
+		</capsuled_items>
 	</item>
 	<item id="29377" name="Deton's Red Potion" type="EtcItem">
 		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. -->
@@ -1603,14 +1655,23 @@
 	<item id="29396" name="Attendance Rare Accessory Box" type="EtcItem">
 		<!-- Double-click to obtain Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, Ruler's Authority Belt, all with 7-day limit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37732" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring - 7-day -->
+			<item id="37733" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace - 7-day -->
+			<item id="37734" min="1" max="1" chance="100" /> <!-- Tauti's Ring - 7-day -->
+			<item id="37735" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Heart Ring - 7-day -->
+			<item id="37736" min="1" max="1" chance="100" /> <!-- Blessed Zaken's Earring - 7-day -->
+			<item id="37737" min="1" max="1" chance="100" /> <!-- Ruler's Authority - 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="29397" name="Ancient Relic" type="EtcItem">
 		<!-- Double-click to obtain an Ancient Relic Box or Shining Ancient Relic Box at a certain rate. Additionally, there is a chance to obtain Artifact Fragment. -->

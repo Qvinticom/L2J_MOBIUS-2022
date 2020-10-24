@@ -314,6 +314,10 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48626" min="1" max="1" chance="100" /> <!-- Hero's Rune - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="48626" name="Hero's Rune" additionalName="1-hour" type="EtcItem">
 		<!-- Warrior's Rune purchased with the Mark of Battle. If stored in the inventory, increases Hunting Acquired XP/ SP by 20%. -->
@@ -323,6 +327,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="60" />
+		<skills>
+			<skill id="39243" level="1" /> <!-- Hero's Rune -->
+		</skills>
 	</item>
 	<item id="48627" name="Shining Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain 30 Secret Embryo Bait Coupons. There is also a chance to obtain 1 Archangel's Fortune Box or Nevit's Fortune Box. -->
@@ -654,7 +664,15 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring - 30-day -->
+			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace - 30-day -->
+			<item id="37669" min="1" max="1" chance="100" /> <!-- Tauti's Ring - 30-day -->
+			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Heart Ring - 30-day -->
+			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="48659" name="Greater Red and Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Red Cat's Eye Lv. 1 and Greater Blue Cat's Eye Lv. 1 (30-day). -->
@@ -720,17 +738,91 @@
 		<!-- Use it to obtain an Antharas, Valakas, or Lindvior Fragment weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="36417" min="1" max="1" chance="3.2258" /> <!-- Antharas Shaper - Fragment -->
+			<item id="36418" min="1" max="1" chance="3.2258" /> <!-- Antharas Slasher - Fragment -->
+			<item id="36419" min="1" max="1" chance="3.2258" /> <!-- Antharas Thrower - Fragment -->
+			<item id="36420" min="1" max="1" chance="3.2258" /> <!-- Antharas Buster - Fragment -->
+			<item id="36421" min="1" max="1" chance="3.2258" /> <!-- Antharas Cutter - Fragment -->
+			<item id="36422" min="1" max="1" chance="3.2258" /> <!-- Antharas Stormer - Fragment -->
+			<item id="36423" min="1" max="1" chance="3.2258" /> <!-- Antharas Fighter - Fragment -->
+			<item id="36424" min="1" max="1" chance="3.2258" /> <!-- Antharas Avenger - Fragment -->
+			<item id="36425" min="1" max="1" chance="3.2258" /> <!-- Antharas Dual Blunt Weapon - Fragment -->
+			<item id="36426" min="1" max="1" chance="3.2258" /> <!-- Antharas Dual Swords - Fragment -->
+			<item id="36427" min="1" max="1" chance="3.2258" /> <!-- Valakas Shaper - Fragment -->
+			<item id="36428" min="1" max="1" chance="3.2258" /> <!-- Valakas Cutter - Fragment -->
+			<item id="36429" min="1" max="1" chance="3.2258" /> <!-- Valakas Slasher - Fragment -->
+			<item id="36430" min="1" max="1" chance="3.2258" /> <!-- Valakas Thrower - Fragment -->
+			<item id="36431" min="1" max="1" chance="3.2258" /> <!-- Valakas Buster - Fragment -->
+			<item id="36432" min="1" max="1" chance="3.2258" /> <!-- Valakas Caster - Fragment -->
+			<item id="36433" min="1" max="1" chance="3.2258" /> <!-- Valakas Retributer - Fragment -->
+			<item id="36434" min="1" max="1" chance="3.2258" /> <!-- Lindvior Shaper - Fragment -->
+			<item id="36435" min="1" max="1" chance="3.2258" /> <!-- Lindvior Thrower - Fragment -->
+			<item id="36436" min="1" max="1" chance="3.2258" /> <!-- Lindvior Slasher - Fragment -->
+			<item id="36437" min="1" max="1" chance="3.2258" /> <!-- Lindvior Caster - Fragment -->
+			<item id="36438" min="1" max="1" chance="3.2258" /> <!-- Lindvior Cutter - Fragment -->
+			<item id="36439" min="1" max="1" chance="3.2258" /> <!-- Lindvior Shooter - Fragment -->
+			<item id="36440" min="1" max="1" chance="3.2258" /> <!-- Lindvior Dual Daggers - Fragment -->
+			<item id="80066" min="1" max="1" chance="3.2258" /> <!-- Fafurion Avenger - Fragment -->
+			<item id="80067" min="1" max="1" chance="3.2258" /> <!-- Fafurion Fighter - Fragment -->
+			<item id="80068" min="1" max="1" chance="3.2258" /> <!-- Fafurion Stormer - Fragment -->
+			<item id="80069" min="1" max="1" chance="3.2258" /> <!-- Fafurion Retributer - Fragment -->
+			<item id="80070" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Blunt Weapon - Fragment -->
+			<item id="80071" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Swords - Fragment -->
+			<item id="80315" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Daggers - Fragment -->
+		</capsuled_items>
 	</item>
 	<item id="48667" name="Dragon Weapon Box (Standard)" type="EtcItem">
 		<!-- Use it to obtain an Antharas, Valakas, or Lindvior Standard weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="36441" min="1" max="1" chance="3.2258" /> <!-- Antharas Shaper - Standard -->
+			<item id="36442" min="1" max="1" chance="3.2258" /> <!-- Antharas Slasher - Standard -->
+			<item id="36443" min="1" max="1" chance="3.2258" /> <!-- Antharas Thrower - Standard -->
+			<item id="36444" min="1" max="1" chance="3.2258" /> <!-- Antharas Buster - Standard -->
+			<item id="36445" min="1" max="1" chance="3.2258" /> <!-- Antharas Cutter - Standard -->
+			<item id="36446" min="1" max="1" chance="3.2258" /> <!-- Antharas Stormer - Standard -->
+			<item id="36447" min="1" max="1" chance="3.2258" /> <!-- Antharas Fighter - Standard -->
+			<item id="36448" min="1" max="1" chance="3.2258" /> <!-- Antharas Avenger - Standard -->
+			<item id="36449" min="1" max="1" chance="3.2258" /> <!-- Antharas Dual Blunt Weapon - Standard -->
+			<item id="36450" min="1" max="1" chance="3.2258" /> <!-- Antharas Dual Swords - Standard -->
+			<item id="36451" min="1" max="1" chance="3.2258" /> <!-- Valakas Shaper - Standard -->
+			<item id="36452" min="1" max="1" chance="3.2258" /> <!-- Valakas Cutter - Standard -->
+			<item id="36453" min="1" max="1" chance="3.2258" /> <!-- Valakas Slasher - Standard -->
+			<item id="36454" min="1" max="1" chance="3.2258" /> <!-- Valakas Thrower - Standard -->
+			<item id="36455" min="1" max="1" chance="3.2258" /> <!-- Valakas Buster - Standard -->
+			<item id="36456" min="1" max="1" chance="3.2258" /> <!-- Valakas Caster - Standard -->
+			<item id="36457" min="1" max="1" chance="3.2258" /> <!-- Valakas Retributer - Standard -->
+			<item id="36458" min="1" max="1" chance="3.2258" /> <!-- Lindvior Shaper - Standard -->
+			<item id="36459" min="1" max="1" chance="3.2258" /> <!-- Lindvior Thrower - Standard -->
+			<item id="36460" min="1" max="1" chance="3.2258" /> <!-- Lindvior Slasher - Standard -->
+			<item id="36461" min="1" max="1" chance="3.2258" /> <!-- Lindvior Caster - Standard -->
+			<item id="36462" min="1" max="1" chance="3.2258" /> <!-- Lindvior Cutter - Standard -->
+			<item id="36463" min="1" max="1" chance="3.2258" /> <!-- Lindvior Shooter - Standard -->
+			<item id="36464" min="1" max="1" chance="3.2258" /> <!-- Lindvior Dual Daggers - Standard -->
+			<item id="80072" min="1" max="1" chance="3.2258" /> <!-- Fafurion Avenger - Standard -->
+			<item id="80073" min="1" max="1" chance="3.2258" /> <!-- Fafurion Fighter - Standard -->
+			<item id="80074" min="1" max="1" chance="3.2258" /> <!-- Fafurion Stormer - Standard -->
+			<item id="80075" min="1" max="1" chance="3.2258" /> <!-- Fafurion Retributer - Standard -->
+			<item id="80076" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Blunt Weapon - Standard -->
+			<item id="80077" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Swords - Standard -->
+			<item id="80316" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Daggers - Standard -->
+		</capsuled_items>
 	</item>
 	<item id="48668" name="Scroll: Enchant Angel Accessory" type="EtcItem">
 		<!-- Enchant scroll exclusively for Angel and Dragon accessories. The scroll can enchant an accessory up to +10.. <Warning>. The Angel Accessory may fail to enchant starting from +1, and it will be destroyed if it fails. -->
@@ -866,7 +958,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48683" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Skill Power -->
+		</capsuled_items>
 	</item>
 	<item id="48678" name="Advanced Mammon's Talisman Box - Attack Attribute" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon's Talisman - Attack Attribute (30-day). -->
@@ -877,7 +973,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48684" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Attribute Attack -->
+		</capsuled_items>
 	</item>
 	<item id="48679" name="Advanced Mammon's Talisman Box - Skill Cooldown" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon's Talisman - Skill Cooldown (30-day). -->
@@ -888,7 +988,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48685" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Skill Cooldown -->
+		</capsuled_items>
 	</item>
 	<item id="48680" name="Freya's Dark Rune" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, PvP Damage +15%. Cannot be used in Olympiad. -->
@@ -947,40 +1051,55 @@
 		<!-- When equipped, increases Skill Power by 5% and Skill Critical Damage by 10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
+		</skills>
 	</item>
 	<item id="48684" name="Advanced Mammon's Talisman (30-day)" additionalName="Attack Attribute" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 70 and Normal Critical Damage by 10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
+		</skills>
 	</item>
 	<item id="48685" name="Advanced Mammon's Talisman (30-day)" additionalName="Skill Cooldown" type="Armor">
 		<!-- When equipped, decreases Skill Cooldown by 5% and increases P. Def./ M. Def. by 10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
+		</skills>
 	</item>
 	<item id="48686" name="Dimensional Bracelet (30-day) Stage 6 Box" type="EtcItem">
 		<!-- Use it to obtain the Dimensional Bracelet - Stage 6 (CHA +5). -->

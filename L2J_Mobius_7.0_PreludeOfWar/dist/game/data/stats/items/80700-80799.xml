@@ -1077,49 +1077,53 @@
 		<!-- PA-only item 2-hour item An artifact that increases P. Atk. Equipping it in the artifact balance slot increases P. Atk. by 4%. Cannot be enchanted. -->
 		<set name="icon" val="icon.artifact_a_pa" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="artifact" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="240" />
 	</item>
 	<item id="80750" name="PA Artifact - M. Atk. (Balance)" type="Armor">
 		<!-- PA-only item 2-hour item An artifact that increases M. Atk. Equipping it in the artifact balance slot increases M. Atk. by 4%. Cannot be enchanted. -->
 		<set name="icon" val="icon.artifact_a_ma" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="artifact" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="240" />
 	</item>
 	<item id="80751" name="PA Artifact - P. Def. (Balance)" type="Armor">
 		<!-- PA-only item 2-hour item An artifact that increases P. Def. Equipping it in the artifact balance slot increases P. Def. by 5%. Cannot be enchanted. -->
 		<set name="icon" val="icon.artifact_a_phy_def" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="artifact" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="240" />
 	</item>
 	<item id="80752" name="PA Artifact - M. Def. (Balance)" type="Armor">
 		<!-- PA-only item 2-hour item An artifact that increases M. Def. Equipping it in the artifact balance slot increases M. Def. by 5%. Cannot be enchanted. -->
 		<set name="icon" val="icon.artifact_a_mag_def" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="artifact" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="240" />
 	</item>
 	<item id="80753" name="PA Emperor's Special Cocktail" additionalName="P. Atk." type="EtcItem">
 		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Warrior's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
@@ -1320,15 +1324,17 @@
 		<!-- Armor for Zariche appearance modification -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
+		<set name="bodypart" val="chest" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -1337,15 +1343,17 @@
 		<!-- Armor for Akamanah appearance modification -->
 		<set name="icon" val="icon.weapon_aka_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
+		<set name="bodypart" val="chest" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -1634,9 +1642,15 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40231" min="1" max="1" chance="100" /> <!-- Freya's Frozen Scroll - Event -->
+			<item id="48848" min="1" max="1" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="48857" min="1" max="1" chance="100" /> <!-- Glowing Dragon's Attribute Potion (XP) - Event -->
+		</capsuled_items>
 	</item>
 	<item id="80795" name="For NPC - Santa Hat" type="Armor">
 		<!-- For NPC - Santa Hat -->

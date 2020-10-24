@@ -88,6 +88,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48899" min="1" max="1" chance="100" /> <!-- Shillien's Soul Crystal Lv. 1 -->
+			<item id="48909" min="10" max="10" chance="100" /> <!-- Shillien's Soul -->
+		</capsuled_items>
 	</item>
 	<item id="48911" name="Scattered Soul Fragment" type="EtcItem">
 		<!-- Soul fragments that have been rendered useless from a strong clash of powers. Can be sold to NPC Shop. -->
@@ -584,11 +589,24 @@
 	<item id="48949" name="Stage 5 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 5 Soul Crystals. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="46448" min="1" max="1" chance="20" /> <!-- Kain's Soul Crystal Lv. 5 -->
+			<item id="46463" min="1" max="1" chance="20" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
+			<item id="46478" min="1" max="1" chance="20" /> <!-- Leona's Soul Crystal Lv. 5 -->
+			<item id="46493" min="1" max="1" chance="20" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
+			<item id="46508" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="48950" name="Elysium Fried Fish" additionalName="P. Atk." type="EtcItem">
 		<!-- When used, P. Atk. +3% or +4% for 30 min. Even if different types of fish dishes are used, only one effect applies. -->
@@ -974,6 +992,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48572" min="1" max="1" minEnchant="7" maxEnchant="7" chance="33.3" /> <!-- Masia's Guard Agathion Charm -->
+			<item id="48573" min="1" max="1" minEnchant="7" maxEnchant="7" chance="33.3" /> <!-- Paulina's Guard Agathion Charm -->
+			<item id="48574" min="1" max="1" minEnchant="7" maxEnchant="7" chance="33.3" /> <!-- Tersi's Guard Agathion Charm -->
+		</capsuled_items>
 	</item>
 	<item id="48991" name="Artifact - Fortune Box" additionalName="Event" type="EtcItem">
 		<!-- Can obtain 1 of the following: Artifact - Received Damage Reduction When Immobilized, Artifact - P. Skill Power, Artifact - M. Skill Power. -->

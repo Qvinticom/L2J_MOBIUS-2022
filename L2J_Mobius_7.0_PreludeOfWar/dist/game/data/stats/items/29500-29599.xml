@@ -246,8 +246,16 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80334" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="29525" name="+3 Dragon Ring Box" type="EtcItem">
 		<!-- Double-click to obtain a +3 enchanted Dragon Ring. -->
@@ -255,8 +263,16 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80335" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="29526" name="+3 Dragon Necklace Box" type="EtcItem">
 		<!-- Double-click to obtain a +3 enchanted Dragon Necklace. -->
@@ -266,6 +282,19 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80333" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="29527" name="Golden Mermaid Bait (102)" type="EtcItem">
 		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 102. -->

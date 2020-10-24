@@ -643,46 +643,66 @@
 	<item id="29244" name="+7 Elmoreden Cloak Box" type="EtcItem">
 		<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28585" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Elmoreden Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="29245" name="+7 Aden Cloak Box" type="EtcItem">
 		<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28586" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Aden Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="29246" name="+7 Elmore Cloak Box" type="EtcItem">
 		<!-- Double-click to obtain a +7 Elmore Cloak. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28587" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Elmore Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="29247" name="+7 Ferios Cloak Box" type="EtcItem">
 		<!-- Double-click to obtain a +7 Ferios Cloak. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28588" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Ferios Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="29248" name="Reconstruction Society's Enchantment Pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Circlet Enchant Scroll. Has a chance to obtain Circlet Spirit Stone, Noble Circlet Upgrade Stone or Radiant Circlet Upgrade Stone. -->

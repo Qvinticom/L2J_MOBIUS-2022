@@ -1032,20 +1032,30 @@
 	<item id="46271" name="Ninja Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Ninja Outfit. Works on one-piece armor. It changes everything, making the appearance of all armor into that of a Ninja's outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<skills>
+			<skill id="18486" level="1" /> <!-- Ninja Outfit Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46272" name="Metal Suit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Metal Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Metal suit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<skills>
+			<skill id="22768" level="1" /> <!-- Metal Suit Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46273" name="Freya's Kindness" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, Metal Suit, or Vampiric Style. -->
@@ -1080,6 +1090,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46271" min="1" max="1" chance="100" /> <!-- Ninja Outfit Appearance Stone -->
+			<item id="46279" min="1" max="1" chance="100" /> <!-- Ninja Hair Accessory Appearance Stone -->
+		</capsuled_items>
 	</item>
 	<item id="46277" name="Metal Suit Appearance Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Metal Suit Appearance Stone and a Metal Suit Hair Accessory Appearance Stone. -->
@@ -1088,6 +1104,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46272" min="1" max="1" chance="100" /> <!-- Metal Suit Appearance Stone -->
+			<item id="46280" min="1" max="1" chance="100" /> <!-- Metal Suit Hair Accessory Appearance Stone -->
+		</capsuled_items>
 	</item>
 	<item id="46278" name="Vampiric Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Vamparic style. Can be used only on hair accessories that take up 2 slots. -->
@@ -1101,20 +1123,30 @@
 	<item id="46279" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja style. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<skills>
+			<skill id="22643" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46280" name="Metal Suit Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17209" level="1" /> <!-- Metal Suit Hair Accessory Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46281" name="Freya Agathion Pack" type="EtcItem">
 		<!-- Double-click to get Agathion - Freya (30-day). Cannot be used in the Olympiad. Will be deleted once the event ends. -->

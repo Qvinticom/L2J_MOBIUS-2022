@@ -1098,7 +1098,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1106,6 +1105,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="13959" level="1" /> <!-- Mammon's Talisman - Skill Power -->
 		</skills>
@@ -1117,7 +1117,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1125,6 +1124,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="13960" level="1" /> <!-- Mammon's Talisman - Attack Attribute -->
 		</skills>
@@ -1136,7 +1136,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1144,6 +1143,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="13961" level="1" /> <!-- Mammon's Talisman - Skill Cooldown -->
 		</skills>
@@ -1151,29 +1151,47 @@
 	<item id="47375" name="Mammon's Talisman Box - Skill Power" additionalName="30-day" type="EtcItem">
 		<!-- Double click to obtain Mammon's Talisman - Skill Power 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="47372" min="1" max="1" chance="100" /> <!-- Mammon's Talisman (30-day) - Skill Power -->
+		</capsuled_items>
 	</item>
 	<item id="47376" name="Mammon's Talisman Box - Atk. Attribute" additionalName="30-day" type="EtcItem">
 		<!-- Double click to obtain Mammon's Talisman Box - Atk. Attribute 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="47373" min="1" max="1" chance="100" /> <!-- Mammon's Talisman (30-day) - Attribute Attack -->
+		</capsuled_items>
 	</item>
 	<item id="47377" name="Mammon's Talisman Box - Skill Cooldown" additionalName="30-day" type="EtcItem">
 		<!-- Double click to obtain Mammon's Talisman Box - Skill Cooldown 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="47374" min="1" max="1" chance="100" /> <!-- Mammon's Talisman (30-day) - Skill Cooldown -->
+		</capsuled_items>
 	</item>
 	<item id="47378" name="Red R99 Coupon" additionalName="Event" type="EtcItem">
 		<!-- Red Libra-only Item. Craftsman Black no longer deals with this exchange, but the merchants of the continent of Aden, wondering about the weapon exchange ability of Craftsman Black, are buying the secrets of the exchange. You can get up to 50 million Adena when you sell it in the store. It will be deleted when the Red Libra merchants leave. -->

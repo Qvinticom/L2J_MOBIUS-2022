@@ -512,70 +512,100 @@
 		<!-- When equipped, Skill Power +5% and Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
+		</skills>
 	</item>
 	<item id="80125" name="Advanced Mammon's Talisman" additionalName="Attack Attribute" type="Armor">
 		<!-- When equipped, Attack Attribute +70 and Normal Critical Damage +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
+		</skills>
 	</item>
 	<item id="80126" name="Advanced Mammon's Talisman" additionalName="Skill Cooldown" type="Armor">
 		<!-- When equipped, Skill Cooldown -5% and P. Def./ M. Def. +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
+		</skills>
 	</item>
 	<item id="80127" name="Advanced Mammon's Talisman Box - Skill Power" additionalName="2-hour" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon s Talisman - Skill Power (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80124" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Skill Power -->
+		</capsuled_items>
 	</item>
 	<item id="80128" name="Advanced Mammon's Talisman Box - Attack Attribute" additionalName="2-hour" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon s Talisman Box - Attack Attribute (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80125" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Attribute Attack -->
+		</capsuled_items>
 	</item>
 	<item id="80129" name="Advanced Mammon's Talisman Box - Skill Cooldown" additionalName="2-hour" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon s Talisman - Skill Cooldown (2-hour). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80126" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Skill Cooldown -->
+		</capsuled_items>
 	</item>
 	<item id="80130" name="Super Advanced Spirit Stones" type="EtcItem">
 		<!-- A rare mineral stone that is made from a stone inside a monster, solidified by shock from physical and magic strikes and dimensional abnormality. Can be used to augment R110 weapons. Only for Lv. 110+characters. -->

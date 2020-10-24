@@ -206,6 +206,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39634" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="26320" name="Venir's Talisman Stage 2 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 2. -->
@@ -214,6 +219,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39635" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="26321" name="Venir's Talisman Stage 3 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 8 Venir's Talismans Stage 3. -->
@@ -222,6 +232,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39636" min="8" max="8" chance="100" /> <!-- Venir's Talisman Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="26322" name="Venir's Talisman Stage 4 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 6 Venir's Talismans Stage 4. -->
@@ -230,6 +245,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39637" min="6" max="6" chance="100" /> <!-- Venir's Talisman Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="26323" name="Venir's Talisman Stage 5 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 4 Venir's Talismans Stage 5. -->
@@ -238,6 +258,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39638" min="4" max="4" chance="100" /> <!-- Venir's Talisman Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="26324" name="Venir's Talisman Stage 6 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Venir's Talismans Stage 6. -->
@@ -246,6 +271,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39639" min="2" max="2" chance="100" /> <!-- Venir's Talisman Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="26325" name="Santa's Cloak" type="Armor">
 		<!-- Santa's warm cloak. -->
@@ -1107,23 +1137,42 @@
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26392" min="1" max="1" chance="100" /> <!-- Rune of Feather -->
+		</capsuled_items>
 	</item>
 	<item id="26392" name="Rune of Feather" additionalName="7-day" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases the weight limit by 20%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="for_npc" val="true" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="26049" level="1" /> <!-- Rune of Feather -->
+		</skills>
 	</item>
 	<item id="26393" name="Transformation Scroll: Rose (F)" type="EtcItem">
 		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 30 min. -->

@@ -409,6 +409,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36329" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze (1-hour) -->
+		</capsuled_items>
 	</item>
 	<item id="23833" name="Talisman - Abundance" additionalName="War" type="Armor">
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->

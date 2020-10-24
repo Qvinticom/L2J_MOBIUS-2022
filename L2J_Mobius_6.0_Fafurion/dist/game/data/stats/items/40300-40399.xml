@@ -966,7 +966,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
-		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48133" min="1" max="1" chance="100" /> <!-- Agathion Joon Charm (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="40362" name="Agathion - Joon (30-day)" type="Armor">
 		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., Acquired XP/ SP +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 h. -->

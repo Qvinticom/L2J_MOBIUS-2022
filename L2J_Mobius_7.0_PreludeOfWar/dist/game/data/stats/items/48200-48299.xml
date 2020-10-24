@@ -261,11 +261,11 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="35103" level="1" /> <!-- Blessed Circlet Enchant Scroll -->
 		</skills>
@@ -498,7 +498,7 @@
 		<!-- NPC only costume -->
 		<set name="icon" val="icon.valkyrie_chest_change_0" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
