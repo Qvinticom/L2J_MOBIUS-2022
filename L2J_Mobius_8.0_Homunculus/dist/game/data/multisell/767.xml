@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30298</npc> <!-- Pinter -->
+		<npc>30300</npc> <!-- Pushkin -->
+		<npc>30317</npc> <!-- Kluto -->
+		<npc>30458</npc> <!-- Poitan -->
+		<npc>30471</npc> <!-- Rupio -->
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>30898</npc> <!-- Morning -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31316</npc> <!-- Vincenz -->
+		<npc>31583</npc> <!-- Feynn -->
+		<npc>31960</npc> <!-- Buryun -->
+		<npc>31990</npc> <!-- Siger -->
+		<npc>33998</npc> <!-- Momet -->
+		<npc>30283</npc> <!-- Altran -->
+		<npc>34208</npc> <!-- Bartman (Blacksmith) -->
+	</npcs>
+	<item>
+		<ingredient id="17306" count="1" /> <!-- Immortal Gaiters - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19524" count="1" /> <!-- Immortal Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33891" count="1" /> <!-- Immortal Gaiters - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33953" count="1" /> <!-- Immortal Gaiters - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17307" count="1" /> <!-- Immortal Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19525" count="1" /> <!-- Immortal Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33892" count="1" /> <!-- Immortal Gauntlets - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33954" count="1" /> <!-- Immortal Gauntlets - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17304" count="1" /> <!-- Immortal Helmet - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19522" count="1" /> <!-- Immortal Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33889" count="1" /> <!-- Immortal Helmet - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33951" count="1" /> <!-- Immortal Helmet - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17309" count="1" /> <!-- Immortal Shield - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19527" count="1" /> <!-- Immortal Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33894" count="1" /> <!-- Immortal Shield - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33956" count="1" /> <!-- Immortal Shield - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17308" count="1" /> <!-- Immortal Boots - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19526" count="1" /> <!-- Immortal Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33893" count="1" /> <!-- Immortal Boots - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33955" count="1" /> <!-- Immortal Boots - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17305" count="1" /> <!-- Immortal Breastplate - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19523" count="1" /> <!-- Immortal Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="33890" count="1" /> <!-- Immortal Breastplate - Heavy (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33952" count="1" /> <!-- Immortal Breastplate - Attack Type / Heavy (Event) -->
+	</item>
+	<item>
+		<ingredient id="17312" count="1" /> <!-- Immortal Leather Leggings - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19738" count="1" /> <!-- Immortal Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="33897" count="1" /> <!-- Immortal Leather Leggings - Light Armor (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33975" count="1" /> <!-- Immortal Leather Leggings - Enchant Type / Light (Event) -->
+	</item>
+	<item>
+		<ingredient id="17313" count="1" /> <!-- Immortal Leather Gloves - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19739" count="1" /> <!-- Immortal Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="33898" count="1" /> <!-- Immortal Leather Gloves - Light Armor (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33976" count="1" /> <!-- Immortal Leather Gloves - Enchant Type / Light (Event) -->
+	</item>
+	<item>
+		<ingredient id="17310" count="1" /> <!-- Immortal Leather Helmet - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19736" count="1" /> <!-- Immortal Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="33895" count="1" /> <!-- Immortal Leather Helmet - Light Armor (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33973" count="1" /> <!-- Immortal Leather Helmet - Enchant Type / Light (Event) -->
+	</item>
+	<item>
+		<ingredient id="17314" count="1" /> <!-- Immortal Leather Boots - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19740" count="1" /> <!-- Immortal Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="33899" count="1" /> <!-- Immortal Leather Boots - Light Armor (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33977" count="1" /> <!-- Immortal Leather Boots - Enchant Type / Light (Event) -->
+	</item>
+	<item>
+		<ingredient id="17311" count="1" /> <!-- Immortal Leather Armor - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19737" count="1" /> <!-- Immortal Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="33896" count="1" /> <!-- Immortal Leather Armor - Light Armor (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33974" count="1" /> <!-- Immortal Leather Armor - Enchant Type / Light (Event) -->
+	</item>
+	<item>
+		<ingredient id="17317" count="1" /> <!-- Immortal Stockings - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19535" count="1" /> <!-- Immortal Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="33902" count="1" /> <!-- Immortal Stockings - Robe (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33964" count="1" /> <!-- Immortal Stockings - Magic Type / Robe (Event) -->
+	</item>
+	<item>
+		<ingredient id="17318" count="1" /> <!-- Immortal Gloves - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19536" count="1" /> <!-- Immortal Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="33903" count="1" /> <!-- Immortal Gloves - Robe (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33965" count="1" /> <!-- Immortal Gloves - Magic Type / Robe (Event) -->
+	</item>
+	<item>
+		<ingredient id="17315" count="1" /> <!-- Immortal Circlet - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19533" count="1" /> <!-- Immortal Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="33900" count="1" /> <!-- Immortal Circlet - Robe (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33962" count="1" /> <!-- Immortal Circlet - Magic Type / Robe (Event) -->
+	</item>
+	<item>
+		<ingredient id="17319" count="1" /> <!-- Immortal Shoes - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19537" count="1" /> <!-- Immortal Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="33904" count="1" /> <!-- Immortal Shoes - Robe (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33966" count="1" /> <!-- Immortal Shoes - Magic Type / Robe (Event) -->
+	</item>
+	<item>
+		<ingredient id="17316" count="1" /> <!-- Immortal Tunic - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19534" count="1" /> <!-- Immortal Tunic - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="33901" count="1" /> <!-- Immortal Tunic - Robe (Event) -->
+		<ingredient id="57" count="38400" /> <!-- Adena -->
+		<production id="33963" count="1" /> <!-- Immortal Tunic - Magic Type / Robe (Event) -->
+	</item>
+	<item>
+		<ingredient id="17340" count="1" /> <!-- Twilight Gaiters - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19540" count="1" /> <!-- Twilight Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17341" count="1" /> <!-- Twilight Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19541" count="1" /> <!-- Twilight Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17338" count="1" /> <!-- Twilight Helmet - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19538" count="1" /> <!-- Twilight Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17343" count="1" /> <!-- Twilight Shield - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19543" count="1" /> <!-- Twilight Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17342" count="1" /> <!-- Twilight Boots - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19542" count="1" /> <!-- Twilight Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17339" count="1" /> <!-- Twilight Breastplate - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19539" count="1" /> <!-- Twilight Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17346" count="1" /> <!-- Twilight Leather Leggings - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19754" count="1" /> <!-- Twilight Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17347" count="1" /> <!-- Twilight Leather Gloves - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19755" count="1" /> <!-- Twilight Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17344" count="1" /> <!-- Twilight Leather Helmet - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19752" count="1" /> <!-- Twilight Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17348" count="1" /> <!-- Twilight Leather Boots - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19756" count="1" /> <!-- Twilight Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17345" count="1" /> <!-- Twilight Leather Armor - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19753" count="1" /> <!-- Twilight Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17351" count="1" /> <!-- Twilight Stockings - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19551" count="1" /> <!-- Twilight Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17352" count="1" /> <!-- Twilight Gloves - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19552" count="1" /> <!-- Twilight Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17349" count="1" /> <!-- Twilight Circlet - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19549" count="1" /> <!-- Twilight Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17353" count="1" /> <!-- Twilight Shoes - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19553" count="1" /> <!-- Twilight Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17350" count="1" /> <!-- Twilight Tunic - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19550" count="1" /> <!-- Twilight Tunic - Magic Type / Robe -->
+	</item>
+	<!-- Blessed -->
+	<item>
+		<ingredient id="17983" count="1" /> <!-- Blessed Immortal Gaiters - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19652" count="1" /> <!-- Blessed Immortal Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17984" count="1" /> <!-- Blessed Immortal Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19653" count="1" /> <!-- Blessed Immortal Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17981" count="1" /> <!-- Blessed Immortal Helmet - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19650" count="1" /> <!-- Blessed Immortal Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17986" count="1" /> <!-- Blessed Immortal Shield - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19655" count="1" /> <!-- Blessed Immortal Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17985" count="1" /> <!-- Blessed Immortal Boots - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19654" count="1" /> <!-- Blessed Immortal Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17982" count="1" /> <!-- Blessed Immortal Breastplate - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19651" count="1" /> <!-- Blessed Immortal Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17989" count="1" /> <!-- Blessed Immortal Leather Leggings - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19866" count="1" /> <!-- Blessed Immortal Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17990" count="1" /> <!-- Blessed Immortal Leather Gloves - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19867" count="1" /> <!-- Blessed Immortal Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17987" count="1" /> <!-- Blessed Immortal Leather Helmet - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19864" count="1" /> <!-- Blessed Immortal Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17991" count="1" /> <!-- Blessed Immortal Leather Boots - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19868" count="1" /> <!-- Blessed Immortal Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17988" count="1" /> <!-- Blessed Immortal Leather Armor - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19865" count="1" /> <!-- Blessed Immortal Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17994" count="1" /> <!-- Blessed Immortal Stockings - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19663" count="1" /> <!-- Blessed Immortal Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17995" count="1" /> <!-- Blessed Immortal Gloves - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19664" count="1" /> <!-- Blessed Immortal Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17992" count="1" /> <!-- Blessed Immortal Circlet - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19661" count="1" /> <!-- Blessed Immortal Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17996" count="1" /> <!-- Blessed Immortal Shoes - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19665" count="1" /> <!-- Blessed Immortal Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17993" count="1" /> <!-- Blessed Immortal Tunic - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19662" count="1" /> <!-- Blessed Immortal Tunic - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="18017" count="1" /> <!-- Blessed Twilight Gaiters - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19668" count="1" /> <!-- Blessed Twilight Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18018" count="1" /> <!-- Blessed Twilight Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19669" count="1" /> <!-- Blessed Twilight Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18015" count="1" /> <!-- Blessed Twilight Helmet - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19666" count="1" /> <!-- Blessed Twilight Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18020" count="1" /> <!-- Blessed Twilight Shield - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19671" count="1" /> <!-- Blessed Twilight Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18019" count="1" /> <!-- Blessed Twilight Boots - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19670" count="1" /> <!-- Blessed Twilight Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18016" count="1" /> <!-- Blessed Twilight Breastplate - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19667" count="1" /> <!-- Blessed Twilight Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="18023" count="1" /> <!-- Blessed Twilight Leather Leggings - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19882" count="1" /> <!-- Blessed Twilight Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="18024" count="1" /> <!-- Blessed Twilight Leather Gloves - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19883" count="1" /> <!-- Blessed Twilight Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="18021" count="1" /> <!-- Blessed Twilight Leather Helmet - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19880" count="1" /> <!-- Blessed Twilight Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="18025" count="1" /> <!-- Blessed Twilight Leather Boots - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19884" count="1" /> <!-- Blessed Twilight Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="18022" count="1" /> <!-- Blessed Twilight Leather Armor - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19881" count="1" /> <!-- Blessed Twilight Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="18028" count="1" /> <!-- Blessed Twilight Stockings - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19679" count="1" /> <!-- Blessed Twilight Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="18029" count="1" /> <!-- Blessed Twilight Gloves - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19680" count="1" /> <!-- Blessed Twilight Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="18026" count="1" /> <!-- Blessed Twilight Circlet - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19677" count="1" /> <!-- Blessed Twilight Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="18030" count="1" /> <!-- Blessed Twilight Shoes - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19681" count="1" /> <!-- Blessed Twilight Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="18027" count="1" /> <!-- Blessed Twilight Tunic - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19678" count="1" /> <!-- Blessed Twilight Tunic - Magic Type / Robe -->
+	</item>
+	<!-- Bound -->
+	<item>
+		<ingredient id="17847" count="1" /> <!-- Bound Immortal Gaiters - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19588" count="1" /> <!-- Bound Immortal Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17848" count="1" /> <!-- Bound Immortal Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19589" count="1" /> <!-- Bound Immortal Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17845" count="1" /> <!-- Bound Immortal Helmet - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19586" count="1" /> <!-- Bound Immortal Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17850" count="1" /> <!-- Bound Immortal Shield - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19591" count="1" /> <!-- Bound Immortal Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17849" count="1" /> <!-- Bound Immortal Boots - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19590" count="1" /> <!-- Bound Immortal Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17846" count="1" /> <!-- Bound Immortal Breastplate - Heavy Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19587" count="1" /> <!-- Bound Immortal Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17853" count="1" /> <!-- Bound Immortal Leather Leggings - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19802" count="1" /> <!-- Bound Immortal Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17854" count="1" /> <!-- Bound Immortal Leather Gloves - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19803" count="1" /> <!-- Bound Immortal Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17851" count="1" /> <!-- Bound Immortal Leather Helmet - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19800" count="1" /> <!-- Bound Immortal Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17855" count="1" /> <!-- Bound Immortal Leather Boots - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19804" count="1" /> <!-- Bound Immortal Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17852" count="1" /> <!-- Bound Immortal Leather Armor - Light Armor -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19801" count="1" /> <!-- Bound Immortal Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17858" count="1" /> <!-- Bound Immortal Stockings - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19599" count="1" /> <!-- Bound Immortal Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17859" count="1" /> <!-- Bound Immortal Gloves - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19600" count="1" /> <!-- Bound Immortal Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17856" count="1" /> <!-- Bound Immortal Circlet - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19597" count="1" /> <!-- Bound Immortal Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17860" count="1" /> <!-- Bound Immortal Shoes - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19601" count="1" /> <!-- Bound Immortal Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17857" count="1" /> <!-- Bound Immortal Tunic - Robe -->
+		<ingredient id="57" count="384000" /> <!-- Adena -->
+		<production id="19598" count="1" /> <!-- Bound Immortal Tunic - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17881" count="1" /> <!-- Bound Twilight Gaiters - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19604" count="1" /> <!-- Bound Twilight Gaiters - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17882" count="1" /> <!-- Bound Twilight Gauntlets - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19605" count="1" /> <!-- Bound Twilight Gauntlets - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17879" count="1" /> <!-- Bound Twilight Helmet - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19602" count="1" /> <!-- Bound Twilight Helmet - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17884" count="1" /> <!-- Bound Twilight Shield - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19607" count="1" /> <!-- Bound Twilight Shield - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17883" count="1" /> <!-- Bound Twilight Boots - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19606" count="1" /> <!-- Bound Twilight Boots - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17880" count="1" /> <!-- Bound Twilight Breastplate - Heavy Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19603" count="1" /> <!-- Bound Twilight Breastplate - Attack Type / Heavy -->
+	</item>
+	<item>
+		<ingredient id="17887" count="1" /> <!-- Bound Twilight Leather Leggings - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19818" count="1" /> <!-- Bound Twilight Leather Leggings - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17888" count="1" /> <!-- Bound Twilight Leather Gloves - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19819" count="1" /> <!-- Bound Twilight Leather Gloves - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17885" count="1" /> <!-- Bound Twilight Leather Helmet - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19816" count="1" /> <!-- Bound Twilight Leather Helmet - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17889" count="1" /> <!-- Bound Twilight Leather Boots - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19820" count="1" /> <!-- Bound Twilight Leather Boots - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17886" count="1" /> <!-- Bound Twilight Leather Armor - Light Armor -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19817" count="1" /> <!-- Bound Twilight Leather Armor - Enchant Type / Light -->
+	</item>
+	<item>
+		<ingredient id="17892" count="1" /> <!-- Bound Twilight Stockings - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19615" count="1" /> <!-- Bound Twilight Stockings - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17893" count="1" /> <!-- Bound Twilight Gloves - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19616" count="1" /> <!-- Bound Twilight Gloves - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17890" count="1" /> <!-- Bound Twilight Circlet - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19613" count="1" /> <!-- Bound Twilight Circlet - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17894" count="1" /> <!-- Bound Twilight Shoes - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19617" count="1" /> <!-- Bound Twilight Shoes - Magic Type / Robe -->
+	</item>
+	<item>
+		<ingredient id="17891" count="1" /> <!-- Bound Twilight Tunic - Robe -->
+		<ingredient id="57" count="1146000" /> <!-- Adena -->
+		<production id="19614" count="1" /> <!-- Bound Twilight Tunic - Magic Type / Robe -->
+	</item>
+</list>

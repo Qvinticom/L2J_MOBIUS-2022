@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="135" parentClassId="126">
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+	</skillTree>
+</list>
