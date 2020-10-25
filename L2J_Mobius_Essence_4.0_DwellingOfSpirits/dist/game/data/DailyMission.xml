@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/DailyMission.xsd">
+	<reward id="1001" reward_id="101" name="Daily Hunting I (Lv. 1-20)" requiredCompletion="30" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 30 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1002" reward_id="102" name="Daily Hunting I (Lv. 21-40)" requiredCompletion="30" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 30 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="49779" count="1" />
+			<item id="49595" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1003" reward_id="103" name="Daily Hunting I (Lv. 41-50)" requiredCompletion="40" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 40 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1004" reward_id="104" name="Daily Hunting I (Lv. 51-60)" requiredCompletion="50" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 50 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1005" reward_id="105" name="Daily Hunting I (Lv. 61-70)" requiredCompletion="60" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 60 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1006" reward_id="106" name="Daily Hunting I (Lv. 71-75)" requiredCompletion="80" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 80 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<reward id="1007" reward_id="107" name="Daily Hunting I (Lv. 76+)" requiredCompletion="100" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 100 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+			<item id="71438" count="5" />
+		</items>
+	</reward>
+	<!-- TODO: Weekly fishing handler
+	<reward id="1015" reward_id="115" name="Fishing" requiredCompletion="100" isOneTime="false">
+		Weekly quest. A reward is given for 100 successful catches.
+		<handler name="fishing">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="90139" count="360" />
+		</items>
+	</reward>
+	-->
+	<reward id="1017" reward_id="117" name="In-game Weekend" requiredCompletion="1" isOneTime="false">
+		<!-- Weekly quest. A reward is given for playing the game on Saturday or Sunday. -->
+		<handler name="loginweekend" />
+		<items>
+			<item id="91781" count="1" />
+		</items>
+	</reward>
+	<reward id="1021" reward_id="121" name="Siege Participation" requiredCompletion="1" isOneTime="false">
+		<!-- Weekly quest. A reward is given for participating in 1 siege (the character must be on the battlefield when the siege starts). Required level: 40. -->
+		<handler name="siege">
+			<param name="minLevel">40</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="70000" count="1" />
+		</items>
+	</reward>
+	<!-- TODO: Clan handler
+	<reward id="1023" reward_id="501" name="Joining a Clan" requiredCompletion="1">
+		One-time quest. A reward is given when joining a clan for the first time.
+		<handler name="siege">
+			<param name="minLevel">40</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="29978" count="1" />
+		</items>
+	</reward>
+	-->
+	<reward id="1095" reward_id="803" name="Clan Raid Attack" requiredCompletion="1" isOneTime="false">
+		<!-- Weekly quest. A reward is given for defeating 1 enemy in the Clan Arena. Required level: 40. -->
+		<handler name="monster">
+			<param name="ids">25794,25795,25796,25797,25798,25799,25800,25801,25802,25803,25804,25805,25806,25807,25808,25809,25810,25811,25812,25813</param>
+			<param name="minLevel">40</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91781" count="3" />
+		</items>
+	</reward>
+	<reward id="1096" reward_id="804" name="Clan Raid Suppression" requiredCompletion="20" isOneTime="true" dailyReset="false">
+		<!-- One-time quest. A reward is given for defeating 20 enemies in the Clan Arena. Required level: 40. -->
+		<handler name="monster">
+			<param name="ids">25794,25795,25796,25797,25798,25799,25800,25801,25802,25803,25804,25805,25806,25807,25808,25809,25810,25811,25812,25813</param>
+			<param name="minLevel">40</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91781" count="10" />
+		</items>
+	</reward>
+	<!-- FIXME: Add ids.
+	<reward id="1102" reward_id="806" name="Exploring the Alligator Island (Lv. 35-50)" requiredCompletion="100" isOneTime="false">
+		Daily quest. A reward is given for killing 100 Noses on the Alligator Island.
+		<handler name="monster">
+			<param name="minLevel">35</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49781" count="3" />
+		</items>
+	</reward>
+	-->
+	<reward id="1103" reward_id="807" name="Exploring the Forest of Mirrors (Lv. 45-60)" requiredCompletion="30" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing 30 Harit Earth Guardians in the Forest of Mirrors. -->
+		<handler name="monster">
+			<param name="ids">21658</param>
+			<param name="minLevel">45</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49781" count="7" />
+		</items>
+	</reward>
+	<reward id="1104" reward_id="808" name="Exploring the Seal of Shilen (Lv. 55-70)" requiredCompletion="30" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing 30 Palibati Earth Guardians near the Seal of Shilen. -->
+		<handler name="monster">
+			<param name="ids">21660</param>
+			<param name="minLevel">55</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49781" count="9" />
+		</items>
+	</reward>
+	<reward id="1105" reward_id="809" name="Exploring the Forsaken Plains (Lv. 65-75)" requiredCompletion="30" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing 30 Sharp Talon Tigers in the Forsaken Plains. -->
+		<handler name="monster">
+			<param name="ids">21021</param>
+			<param name="minLevel">65</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49781" count="11" />
+		</items>
+	</reward>
+	<reward id="1106" reward_id="810" name="Exploring the Hot Springs (Lv. 76+)" requiredCompletion="100" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing 100 monsters in the Hot Springs: Hot Springs Yeti, Hot Springs Buffalo, Hot Springs Grendel. -->
+		<handler name="monster">
+			<param name="ids">21839,21834,21834</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="90917" count="3" />
+		</items>
+	</reward>
+	<!-- TODO: spiritevolve handler
+	<reward id="1112" reward_id="508" name="Fire Spirit Lv. 3" requiredCompletion="3">
+		One-time quest. A reward is given when evolving the Fire Spirit up to Lv. 3.
+		<handler name="spiritevolve">
+			<param name="element">FIRE</param>
+		</handler>
+		<items>
+			<item id="91185" count="30" />
+		</items>
+	</reward>
+	<reward id="1113" reward_id="509" name="Water Spirit Lv. 3" requiredCompletion="3">
+		One-time quest. A reward is given when evolving the Water Spirit up to Lv. 3.
+		<handler name="spiritevolve">
+			<param name="element">WATER</param>
+		</handler>
+		<items>
+			<item id="91185" count="30" />
+		</items>
+	</reward>
+	<reward id="1114" reward_id="510" name="Wind Spirit Lv. 3" requiredCompletion="3">
+		One-time quest. A reward is given when evolving the Wind Spirit up to Lv. 3.
+		<handler name="spiritevolve">
+			<param name="element">WIND</param>
+		</handler>
+		<items>
+			<item id="91185" count="30" />
+		</items>
+	</reward>
+	<reward id="1115" reward_id="511" name="Earth Spirit Lv. 3" requiredCompletion="3">
+		<handler name="spiritevolve">
+			<param name="element">EARTH</param>
+		</handler>
+		One-time quest. A reward is given when evolving the Earth Spirit up to Lv. 3.
+		<items>
+			<item id="91185" count="30" />
+		</items>
+	</reward>
+	-->
+	<!-- TODO: Weekly monster handler
+	<reward id="1116" reward_id="118" name="Attribute monsters hunting" requiredCompletion="1800">
+		Receive it once a week for Attribute monster hunting.
+		<handler name="monster">
+			<param name="ids">20792,20794,20795,20796,20797,20798,20799,20800,20801,20802,20803,20849,20995,21661,21662,21663,21664,21665,21666,21667,21668,21669,21670,21671,21672,21673,21674,21675,21676,21678,21685,21686,21761,21762,21763,21764,21765,21766,21767,21768,21769,21770,21771,21772,21773,21774,21775,21776,21777,21778,21779,21780,21781,21782,21783,21784,21785,21786,21787,21788,21789,21790,21791,21792,21793,21813,21814,21815,21816,21817,21818,21819,21820,21821,21822,21823,21824,21825,21826,21827,21828,21829,21830,21831,21832</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91030" count="10" />
+		</items>
+	</reward>
+	-->
+	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200" isOneTime="false" dailyReset="false">
+		<!-- Receive it when you kill 200 monsters at the top and lower levels of the Giant's Cave except the Giant's Cave entrance. (For characters that reached Lv. 76 or higher.) -->
+		<handler name="monster">
+			<param name="ids">20651,20652,20654,20656,20657,20658,24015,24016,24021,24022,20655,20771</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91030" count="2" />
+			<item id="90917" count="3" />
+		</items>
+	</reward>
+	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200" isOneTime="false" dailyReset="false">
+		<!-- Receive it when you kill 200 monsters in inner part of Forgotten Island. (For characters that reached Lv. 78 or higher.) -->
+		<handler name="monster">
+			<param name="ids">21737,21738,21739,21740,21741,21746,21747,21748,21749,21750,21752,21753</param>
+			<param name="minLevel">78</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91030" count="2" />
+			<item id="90917" count="3" />
+		</items>
+	</reward>
+	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300" isOneTime="false" dailyReset="false">
+		<!-- Receive it when you kill 300 monsters in Varka Silenos Barracks. (For characters that reached Lv. 78 or higher.) -->
+		<handler name="monster">
+			<param name="ids">21869,21870,21871,21876,21877,21878,21879,21888</param>
+			<param name="minLevel">78</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91030" count="2" />
+			<item id="90917" count="3" />
+		</items>
+	</reward>
+	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300" isOneTime="false" dailyReset="false">
+		<!-- Receive it when you kill 300 monsters in Ketra Orc Outpost. (For characters that reached Lv. 78 or higher.) -->
+		<handler name="monster">
+			<param name="ids">21854,21855,81856,21857,21866,21867</param>
+			<param name="minLevel">78</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91030" count="2" />
+			<item id="90917" count="3" />
+		</items>
+	</reward>
+	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10" isOneTime="true" dailyReset="false">
+		<!-- You can get a reward once for killing of Spirit King Ignis in his residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
+		<handler name="monster">
+			<param name="ids">29105</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91125" count="1" />
+		</items>
+	</reward>
+	<reward id="1122" reward_id="816" name="Killing Queen Nebula" requiredCompletion="10" isOneTime="true" dailyReset="false">
+		<!-- One-time quest. A reward is given for killing Queen Nebula in her residence 10 times. Required level: 76. -->
+		<handler name="monster">
+			<param name="ids">29106</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91126" count="1" />
+		</items>
+	</reward>
+	<reward id="1123" reward_id="817" name="Killing King Procella" requiredCompletion="10" isOneTime="true" dailyReset="false">
+		<!-- One-time quest. A reward is given for killing King Procella in his residence 10 times. Required level: 76. -->
+		<handler name="monster">
+			<param name="ids">29107</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91127" count="1" />
+		</items>
+	</reward>
+	<reward id="1124" reward_id="818" name="Killing King Petram" requiredCompletion="10" isOneTime="true" dailyReset="false">
+		<!-- One-time quest. A reward is given for killing King Petram in his residence 10 times. Required level: 76. -->
+		<handler name="monster">
+			<param name="ids">29108</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91128" count="1" />
+		</items>
+	</reward>
+	<reward id="1126" reward_id="2001" name="Daily Hunting II (Lv. 1-20)" requiredCompletion="50" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 50 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+		</items>
+	</reward>
+	<reward id="1127" reward_id="2002" name="Daily Hunting II (Lv. 21-40)" requiredCompletion="60" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 60 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="49779" count="1" />
+			<item id="49595" count="1" />
+			<item id="49674" count="1" />
+		</items>
+	</reward>
+	<reward id="1128" reward_id="2003" name="Daily Hunting II (Lv. 41-50)" requiredCompletion="80" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 80 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1129" reward_id="2004" name="Daily Hunting II (Lv. 51-60)" requiredCompletion="100" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 100 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1130" reward_id="2005" name="Daily Hunting II (Lv. 61-70)" requiredCompletion="120" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 120 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1131" reward_id="2006" name="Daily Hunting II (Lv. 71-75)" requiredCompletion="150" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 150 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1132" reward_id="2007" name="Daily Hunting II (Lv. 76+)" requiredCompletion="200" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 200 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1133" reward_id="2008" name="Daily Hunting III (Lv. 1-20)" requiredCompletion="80" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 80 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+		</items>
+	</reward>
+	<reward id="1134" reward_id="2009" name="Daily Hunting III (Lv. 21-40)" requiredCompletion="100" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 100 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="49779" count="1" />
+			<item id="49595" count="1" />
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1135" reward_id="2010" name="Daily Hunting III (Lv. 41-50)" requiredCompletion="120" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 120 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1136" reward_id="2011" name="Daily Hunting III (Lv. 51-60)" requiredCompletion="150" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 150 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1137" reward_id="2012" name="Daily Hunting III (Lv. 61-70)" requiredCompletion="180" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 180 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1138" reward_id="2013" name="Daily Hunting III (Lv. 71-75)" requiredCompletion="200" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 200 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1139" reward_id="2014" name="Daily Hunting III (Lv. 76+)" requiredCompletion="300" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 300 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500" isOneTime="false" dailyReset="false">
+		<!-- Receive it when you kill 500 monsters in Imperial Tomb. (For characters that reached Lv. 78 or higher.) -->
+		<handler name="monster">
+			<param name="ids">21396,21397,21398,21399,21400,21401,21402,21403,21404,21405,21406,21407,21408,21409,21410,21411,21412,21413,21414,21415,21416,21417,21418,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21436,21437,21438,21439,21440</param>
+			<param name="minLevel">78</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91406" count="3" />
+		</items>
+	</reward>
+	<reward id="1141" reward_id="827" name="Adventurer's Journey I (Lv. 20-30)" requiredCompletion="100" isOneTime="false" dailyReset="false">
+		<!-- Kill 100 monsters in the following hunting zones: Windmill Hill, Ruins of Agony, Abandoned Camp. -->
+		<handler name="monster">
+			<param name="ids">20017,20026,20029,20030,20035,20038,20042,20043,20045,20050,20051,20053,20054,20055,20058,20059,20060,20061,20062,20063,20064,20066,20076,20310,20359,20436,20437,20438,20439,20548,20782</param>
+			<param name="minLevel">20</param>
+			<param name="maxLevel">30</param>
+		</handler>
+		<items>
+			<item id="91654" count="1" />
+		</items>
+	</reward>
+	<reward id="1142" reward_id="828" name="Adventurer's Journey II (Lv. 31-40)" requiredCompletion="200" isOneTime="false" dailyReset="false">
+		<!-- Kill 200 monsters in the following hunting zones: Gorgon Flower Garden, Ant Nest, Cruma Marshlands, Execution Grounds, Death Pass. -->
+		<handler name="monster">
+			<param name="ids">20075,20079,20080,20081,20082,20083,20084,20086,20087,20088,20089,20090,20144,20145,20156,20157,20158,20160,20171,20176,20197,20198,20199,20200,20201,20202,20199,20225,20226,20227,20228,20229,20230,20231,20232,20233,20234,20248,20249,20550,20551,20552,20553,20554</param>
+			<param name="minLevel">31</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="91655" count="1" />
+		</items>
+	</reward>
+	<reward id="1143" reward_id="829" name="Adventurer's Journey III (Lv. 41-60)" requiredCompletion="500" isOneTime="false" dailyReset="false">
+		<!-- Kill 500 monsters in the following hunting zones: Ivory Tower Crater, Sea of Spores, Cemetery, Enchanted Valley, Fields of Massacre. -->
+		<handler name="monster">
+			<param name="ids">20555,20556,20557,20558,20559,20560,20561,20562,20563,20564,20565,20566,20567,20589,20590,20591,20592,20593,20594,20595,20596,20597,20598,20599,20666,20668,20669,20674,20675,20678,20974,20975,20976,20996,20997,20998,20999,21000,21001,21002,21003,21004,21005,21006,21007,21008,21009,21010</param>
+			<param name="minLevel">41</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="91656" count="1" />
+		</items>
+	</reward>
+	<reward id="1144" reward_id="830" name="Adventurer's Journey IV (Lv. 61-75)" requiredCompletion="700" isOneTime="false" dailyReset="false">
+		<!-- Kill Kill 700 monsters in the following hunting zones: Plains of Glory, War-Torn Plains, Patriot's Necropolis, Necropolis of Devotion, Silent Valley. -->
+		<handler name="monster">
+			<param name="ids">20659,20660,20661,20662,20663,20664,20665,20667,20681,20682,20683,20684,20685,20686,20965,20966,20967,20968,20969,20970,20971,20972,20973,21620,21621,21622,21623,21624,21625,21626,21627,21628,21629,21630,21631,21632,21633,21634,21635,21636,21637</param>
+			<param name="minLevel">61</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="91657" count="1" />
+		</items>
+	</reward>
+	<reward id="1145" reward_id="831" name="Adventurer's Journey V (Lv. 76+)" requiredCompletion="1000" isOneTime="false" dailyReset="false">
+		<!-- Kill 1000 monsters in the following hunting zones: Land of Winds, Forge of the Gods, Wall of Argos, Garden of Eva. -->
+		<handler name="monster">
+			<param name="ids">20110,20792,20794,20795,20796,20797,20798,20799,20800,20801,20802,20803,20849,20994,20995,21661,21662,21663,21664,21665,21666,21667,21668,21669,21670,21671,21672,21673,21674,21675,21676,21678,21686,21761,21762,21763,21764,21765,21766,21768,21769,21774,21775,21777,21778,21779,21780,21781,21782,21783,21784,21813,21814,21815,21816,21817,21818,21819,21820,21821,21822,21823,21824,21825,21826,21827,21828,21829,21830,21831</param>
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="91931" count="1" />
+		</items>
+	</reward>
+	<reward id="1146" reward_id="2015" name="Daily Hunting IV (Lv. 1-20)" requiredCompletion="100" isOneTime="false" dailyReset="false">
+		<!-- Daily quest. A reward is given for killing any 100 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+		</items>
+	</reward>
+	<reward id="1147" reward_id="2016" name="Daily Hunting IV (Lv. 21-40)" requiredCompletion="130" isOneTime="false" dailyReset="false">
+		<!-- Daily quest. A reward is given for killing any 130 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="49779" count="1" />
+			<item id="49595" count="1" />
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1148" reward_id="2017" name="Daily Hunting IV (Lv. 41-50)" requiredCompletion="160" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 160 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1149" reward_id="2018" name="Daily Hunting IV (Lv. 51-60)" requiredCompletion="200" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 200 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1150" reward_id="2019" name="Daily Hunting IV (Lv. 61-70)" requiredCompletion="240" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 240 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1151" reward_id="2020" name="Daily Hunting IV (Lv. 71-75)" requiredCompletion="300" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 300 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1152" reward_id="2021" name="Daily Hunting IV (Lv. 76+)" requiredCompletion="400" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 400 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1153" reward_id="2022" name="Daily Hunting V (Lv. 1-20)" requiredCompletion="130" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 130 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="49674" count="1" />
+		</items>
+	</reward>
+	<reward id="1154" reward_id="2023" name="Daily Hunting V (Lv. 21-40)" requiredCompletion="160" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 160 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="49779" count="1" />
+			<item id="49595" count="1" />
+			<item id="49674" count="2" />
+		</items>
+	</reward>
+	<reward id="1155" reward_id="2024" name="Daily Hunting V (Lv. 41-50)" requiredCompletion="200" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 200 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1156" reward_id="2025" name="Daily Hunting V (Lv. 51-60)" requiredCompletion="250" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 250 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1157" reward_id="2026" name="Daily Hunting V (Lv. 61-70)" requiredCompletion="300" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 300 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1158" reward_id="2027" name="Daily Hunting V (Lv. 71-75)" requiredCompletion="400" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 400 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<reward id="1159" reward_id="2028" name="Daily Hunting V (Lv. 76+)" requiredCompletion="500" isOneTime="false">
+		<!-- Daily quest. A reward is given for killing any 500 monsters. Monsters below character for 5 or more levels are not counted. -->
+		<handler name="monster">
+			<param name="minLevel">76</param>
+			<param name="maxLevel">99</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+		</items>
+	</reward>
+	<!-- TODO: spiritevolve handler
+	<reward id="1162" reward_id="2031" name="Fire Spirit Lv. 5" requiredCompletion="5">
+		One-time quest. A reward is given when evolving the Fire Spirit up to Lv. 5.
+		<handler name="spiritevolve">
+			<param name="element">FIRE</param>
+		</handler>
+		<items>
+			<item id="91186" count="30" />
+		</items>
+	</reward>
+	<reward id="1163" reward_id="2032" name="Water Spirit Lv. 5" requiredCompletion="5">
+		One-time quest. A reward is given when evolving the Water Spirit up to Lv. 5.
+		<handler name="spiritevolve">
+			<param name="element">WATER</param>
+		</handler>
+		<items>
+			<item id="91186" count="30" />
+		</items>
+	</reward>
+	<reward id="1164" reward_id="2033" name="Wind Spirit Lv. 5" requiredCompletion="5">
+		One-time quest. A reward is given when evolving the Wind Spirit up to Lv. 5.
+		<handler name="spiritevolve">
+			<param name="element">WIND</param>
+		</handler>
+		<items>
+			<item id="91186" count="30" />
+		</items>
+	</reward>
+	<reward id="1165" reward_id="2034" name="Earth Spirit Lv. 5" requiredCompletion="5">
+		One-time quest. A reward is given when evolving the Earth Spirit up to Lv. 5.
+		<handler name="spiritevolve">
+			<param name="element">EARTH</param>
+		</handler>
+		<items>
+			<item id="91186" count="30" />
+		</items>
+	</reward>
+	-->
+	<reward id="4000" reward_id="1077" name="Reaching Level 10" requiredCompletion="10">
+		<!-- One-time quest. A reward is given for reaching character level 10. -->
+		<handler name="level">
+			<param name="level">10</param>
+		</handler>
+		<items>
+			<item id="49778" count="1" />
+			<item id="49495" count="1" />
+			<item id="90907" count="5" />
+		</items>
+	</reward>
+	<reward id="4001" reward_id="1078" name="Reaching Level 20" requiredCompletion="20">
+		<!-- One-time quest. A reward is given for reaching character level 20. -->
+		<handler name="level">
+			<param name="level">20</param>
+		</handler>
+		<items>
+			<item id="49488" count="10" />
+			<item id="49778" count="8" />
+			<item id="90907" count="5" />
+		</items>
+	</reward>
+	<reward id="4002" reward_id="1079" name="Reaching Level 30" requiredCompletion="30">
+		<!-- One-time quest. A reward is given for reaching character level 30. -->
+		<handler name="level">
+			<param name="level">30</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="49779" count="9" />
+			<item id="90907" count="15" />
+		</items>
+	</reward>
+	<reward id="4003" reward_id="1080" name="Reaching Level 40" requiredCompletion="40">
+		<!-- One-time quest. A reward is given for reaching character level 40. -->
+		<handler name="level">
+			<param name="level">40</param>
+		</handler>
+		<items>
+			<item id="49488" count="30" />
+			<item id="90907" count="20" />
+		</items>
+	</reward>
+	<reward id="4004" reward_id="1081" name="Reaching Level 45" requiredCompletion="45">
+		<!-- One-time quest. A reward is given for reaching character level 45. -->
+		<handler name="level">
+			<param name="level">45</param>
+		</handler>
+		<items>
+			<item id="49674" count="3" />
+			<item id="49781" count="4" />
+		</items>
+	</reward>
+	<reward id="4005" reward_id="1082" name="Reaching Level 50" requiredCompletion="50">
+		<!-- One-time quest. A reward is given for reaching character level 50. -->
+		<handler name="level">
+			<param name="level">50</param>
+		</handler>
+		<items>
+			<item id="49674" count="6" />
+			<item id="49781" count="8" />
+		</items>
+	</reward>
+	<reward id="4006" reward_id="1083" name="Reaching level 55" requiredCompletion="55">
+		<!-- One-time quest. A reward is given for reaching character level 55. -->
+		<handler name="level">
+			<param name="level">55</param>
+		</handler>
+		<items>
+			<item id="49674" count="9" />
+			<item id="49781" count="14" />
+		</items>
+	</reward>
+	<reward id="4007" reward_id="1084" name="Reaching Level 60" requiredCompletion="60">
+		<!-- One-time quest. A reward is given for reaching character level 60. -->
+		<handler name="level">
+			<param name="level">60</param>
+		</handler>
+		<items>
+			<item id="49674" count="9" />
+			<item id="49781" count="25" />
+		</items>
+	</reward>
+	<reward id="4008" reward_id="1085" name="Reaching Level 65" requiredCompletion="65">
+		<!-- One-time quest. A reward is given for reaching character level 65. -->
+		<handler name="level">
+			<param name="level">65</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="3" />
+			<item id="90917" count="4" />
+		</items>
+	</reward>
+	<reward id="4009" reward_id="1086" name="Reaching Level 68" requiredCompletion="68">
+		<!-- One-time quest. A reward is given for reaching character level 68. -->
+		<handler name="level">
+			<param name="level">68</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="6" />
+			<item id="90917" count="6" />
+		</items>
+	</reward>
+	<reward id="4010" reward_id="1087" name="Reaching Level 71" requiredCompletion="71">
+		<!-- One-time quest. A reward is given for reaching character level 71. -->
+		<handler name="level">
+			<param name="level">71</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="9" />
+			<item id="90917" count="8" />
+		</items>
+	</reward>
+	<reward id="4011" reward_id="1088" name="Reaching Level 74" requiredCompletion="74">
+		<!-- One-time quest. A reward is given for reaching character level 74. -->
+		<handler name="level">
+			<param name="level">74</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="12" />
+			<item id="90917" count="12" />
+		</items>
+	</reward>
+	<reward id="4012" reward_id="1089" name="Reaching Level 76" requiredCompletion="76">
+		<!-- One-time quest. A reward is given for reaching character level 76. -->
+		<handler name="level">
+			<param name="level">76</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="12" />
+			<item id="91780" count="12" />
+		</items>
+	</reward>
+	<reward id="4013" reward_id="1090" name="Reaching Level 78" requiredCompletion="78">
+		<!-- One-time quest. A reward is given for reaching character level 78. -->
+		<handler name="level">
+			<param name="level">78</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="12" />
+			<item id="91780" count="12" />
+		</items>
+	</reward>
+	<reward id="4014" reward_id="1091" name="Reaching Level 79" requiredCompletion="79">
+		<!-- One-time quest. A reward is given for reaching character level 79. -->
+		<handler name="level">
+			<param name="level">79</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="12" />
+			<item id="91780" count="12" />
+		</items>
+	</reward>
+	<reward id="4015" reward_id="1092" name="Reaching Level 80" requiredCompletion="80">
+		<!-- One-time quest. A reward is given for reaching character level 80. -->
+		<handler name="level">
+			<param name="level">80</param>
+		</handler>
+		<items>
+			<item id="49674" count="12" />
+			<item id="91781" count="15" />
+			<item id="91780" count="12" />
+		</items>
+	</reward>
+	<reward id="4016" reward_id="1093" name="Reaching Level 81" requiredCompletion="81">
+		<!-- One-time quest. A reward is given for reaching character level 81. -->
+		<handler name="level">
+			<param name="level">81</param>
+		</handler>
+		<items>
+			<item id="49674" count="15" />
+			<item id="91781" count="15" />
+			<item id="91780" count="12" />
+		</items>
+	</reward>
+	<reward id="4017" reward_id="1094" name="Reaching Level 82" requiredCompletion="82">
+		<!-- One-time quest. A reward is given for reaching character level 82. -->
+		<handler name="level">
+			<param name="level">82</param>
+		</handler>
+		<items>
+			<item id="49674" count="15" />
+			<item id="91781" count="15" />
+			<item id="91780" count="15" />
+		</items>
+	</reward>
+	<reward id="4018" reward_id="1095" name="Reaching Level 83" requiredCompletion="83">
+		<!-- One-time quest. A reward is given for reaching character level 83. -->
+		<handler name="level">
+			<param name="level">83</param>
+		</handler>
+		<items>
+			<item id="49674" count="15" />
+			<item id="91781" count="18" />
+			<item id="91780" count="15" />
+		</items>
+	</reward>
+	<reward id="4019" reward_id="1096" name="Reaching Level 84" requiredCompletion="84">
+		<!-- One-time quest. A reward is given for reaching character level 84. -->
+		<handler name="level">
+			<param name="level">84</param>
+		</handler>
+		<items>
+			<item id="49674" count="18" />
+			<item id="91781" count="18" />
+			<item id="91780" count="15" />
+		</items>
+	</reward>
+	<reward id="4020" reward_id="1097" name="Reaching Level 85" requiredCompletion="85">
+		<!-- One-time quest. A reward is given for reaching character level 85. -->
+		<handler name="level">
+			<param name="level">85</param>
+		</handler>
+		<items>
+			<item id="49674" count="18" />
+			<item id="91781" count="18" />
+			<item id="91780" count="18" />
+		</items>
+	</reward>
+	<reward id="4021" reward_id="1098" name="Reaching Level 86" requiredCompletion="86">
+		<!-- One-time quest. A reward is given for reaching character level 86. -->
+		<handler name="level">
+			<param name="level">86</param>
+		</handler>
+		<items>
+			<item id="49674" count="20" />
+			<item id="91781" count="20" />
+			<item id="91780" count="20" />
+		</items>
+	</reward>
+</list>

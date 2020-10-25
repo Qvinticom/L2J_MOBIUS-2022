@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30936</npc> <!-- Pona -->
+	</npcs>
+	<item>
+		<ingredient count="2000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="71438" /> <!-- Jewel Coin -->
+		<production count="1" id="71437" /> <!-- Jewel Box -->
+	</item>
+	<item>
+		<ingredient count="1" id="71438" /> <!-- Jewel Coin -->
+		<production count="1" id="90311" /> <!-- Brooch lvl 1 -->
+	</item>
+	<item>
+		<ingredient count="30000000" id="57" /> <!-- Adena -->
+		<ingredient count="50" id="71438" /> <!-- Jewel Coin -->
+		<ingredient count="1" id="90311" /> <!-- Brooch lvl 1 -->
+		<production count="1" id="90312" /> <!-- Brooch lvl 2 -->
+	</item>
+</list>
